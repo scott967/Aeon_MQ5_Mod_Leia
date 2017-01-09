@@ -1,0 +1,4 @@
+[B][COLOR=FFFF8C00]BUILD 9.1.15 - RELEASE DATE 02/03/2016[/COLOR][/B]
+
+New:  GUI navigation sounds have been removed from skin and now are in a separate resource addon
+

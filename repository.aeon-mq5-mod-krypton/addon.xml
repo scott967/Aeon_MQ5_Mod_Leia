@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.aeon-mq5-mod-leia" name="Aeon MQ5 Kryptonmod Skin Repository" version="10.0.0" provider-name="scott967">
+	<extension point="xbmc.addon.repository" name="Aeon MQ5 Leiamod Skin Repository">
+		<info compressed="false">https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Leia/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Leia/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Leia/master/Downloads</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Install Aeon MQ 5 Leiamod skin from Add-on Repository</summary>
+		<description>Leiamod is a mod of skin Aeon MQ5 developed by Marcos Qui for XBMC Gotham intended for use in Kodi Leia (ver 18.+)</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvis 8.1.13 -->
+<!-- Krypton 9.1.19 -->
+
+<window>
+	<!-- <allowoverlay>no</allowoverlay> -->
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<include condition="String.IsEqual(skin.string(vis_layout),default)">LyricsDefault</include>
+		<include condition="String.IsEqual(skin.string(vis_layout),karaoke)">LyricsKaraoke</include>
+	</controls>
+</window>

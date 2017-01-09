@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ5 Krypton 9.1.16/9.2.1/9.2.2 -->
+<window>
+	<include>Animation_DialogPopup</include>
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+		<control type="group">
+			<posx>217</posx>
+			<posy>100</posy>
+			<width>847</width>
+			<height>520</height>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>847</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>519</posy>
+				<width>847</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>847</width>
+				<height>520</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>F0FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-30</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>520</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>499</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>520</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>680</width>
+				<height>520</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>680</width>
+				<height>32</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label"><!-- header -->
+				<posx>30</posx>
+				<posy>0</posy>
+				<width>680</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label>$LOCALIZE[35058]</label>
+			</control>
+			
+
+			<control type="grouplist" id="3">
+				<description>controller profiles</description>
+				<posx>0</posx>
+				<posy>83</posy>
+				<width>150</width>
+				<height>437</height>
+				<itemgap>0</itemgap>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>9000</onleft>
+				<onright>5</onright>
+			</control>
+			<control type="grouplist" id="5">
+				<description>buttons</description>
+				<posx>500</posx>
+				<posy>83</posy>
+				<width>150</width>
+				<height>437</height>
+				<itemgap>0</itemgap>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
+			</control>
+			<control type="button" id="10">
+				<width>150</width>
+				<!-- <textoffset>20</textoffset> -->
+			</control>
+			<control type="button" id="7">
+				<width>150</width>
+				<!-- <textoffset>20</textoffset> -->
+			</control>
+			<control type="label" id="8">
+				<width>150</width>
+				<height>30</height>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="image" id="9">
+				<height>2</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="gamecontroller" id="31">
+				<posx>155</posx>
+				<posy>120</posy>
+				<width>330</width>
+				<height>250</height>
+			</control>
+			
+			<control type="label"><!-- Heading label Controller config-->
+				<posx>30</posx>
+				<posy>40</posy>
+				<width>150</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label>$LOCALIZE[35050]</label>
+			</control>
+			
+			<control type="label">
+				<posx>530</posx>
+				<posy>40</posy>
+				<width>150</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[35059]</label>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="label">
+				<posx>500</posx>
+				<posy>40</posy>
+				<width>320</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<!-- <textoffset>20</textoffset> -->
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="image">
+				<posx>846</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>520</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>680</posx>
+				<posy>0</posy>
+				<width>163</width>
+				<height>520</height>
+				<texture>grey.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="scrollbar" id="61">
+				<include>ScrollBar_Vertical</include>
+				<posx>650</posx>
+				<posy>83</posy>
+				<height>400</height>
+				<onleft>5</onleft>
+				<onright>9000</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+			<control type="grouplist" id="9000">
+				<posx>680</posx>
+				<posy>42</posy>
+				<onleft>61</onleft>
+				<onright>3</onright>
+				<control type="button" id="18"><!-- OK -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[186]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="19"><!-- Reset -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[10035]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="20"><!-- Get More -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[21452]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

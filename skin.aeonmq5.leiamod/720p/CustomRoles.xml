@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Krypton 9.2.2 -->
+
+<window id="1104" type="dialog">
+	<defaultcontrol always="true">9030</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>110</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>720</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1140</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>720</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>720</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>80</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>215</posx>
+				<posy>5</posy>
+				<width>852</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>38045</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<!-- 	<control type="label">
+				<posx>215</posx>
+				<posy>45</posy>
+				<width>852</width>
+				<height>30</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31140</label>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control> -->
+			<control type="group">
+				<posx>140</posx>
+				<posy>100</posy>
+				<width>1000</width>
+				<height>600</height>
+				<control type="button" id="9030">
+					<include>InvisibleButton</include>
+					<onclick>Action(Close)</onclick>
+					<onleft>Dialog.Close(1104)</onleft>
+					<onright>Dialog.Close(1104)</onright>
+				</control>
+				<control type="textbox" id="9001">
+					<posx>140</posx>
+					<posy>100</posy>
+					<width>1000</width>
+					<height>600</height>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<label>$INFO[ListItem.ContributorAndRole]</label>
+					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,529 @@
+	<!-- Aeon MQ 5 Helix 6.1.1/6.1.3 Isengard 7.1.8 -->
+
+<window>
+	<defaultcontrol always="true">6</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(FileBrowser)</visible>
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>110</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>720</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1140</posx>
+				<posy>0</posy>
+				<width>30</width>
+				<height>720</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>720</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+
+				<animation effect="fade" end="85" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>0</posy>
+				<width>1000</width>
+				<height>80</height>
+				<texture>black.png</texture>
+				<colordiffuse>E0FFFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<description>header label Group management</description>
+				<posx>215</posx>
+				<posy>23</posy>
+				<width>852</width>
+				<height>30</height>
+				<label>$LOCALIZE[19143]</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<include>Animation_Fade</include>
+			</control>
+<!--			<control type="image">
+				<posx>390</posx>
+				<posy>100</posy>
+				<width>35</width>
+				<height>440</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>  -->
+			<control type="group">
+				<description>Chan Group list</description>
+				<posx>140</posx>
+				<posy>70</posy>
+				<control type="label">
+					<description>name label Avail Groups</description>
+					<left>0</left>
+					<top>0</top>
+					<height>30</height>
+					<font>Font_18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+					<label>31996</label>
+				</control>
+				<control type="list" id="13">
+					<left>0</left>
+					<top>50</top>
+					<width>250</width>
+					<height>350</height>
+					<onleft>73</onleft>
+					<onup>13</onup>
+					<ondown>13</ondown>
+					<onright>71</onright>
+					<pagecontrol>73</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemgap>0</itemgap>
+					<itemlayout height="30" width="250">
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<include>PVRSearchButtonSmall</include>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout height="30" width="250">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>30</height>
+							<texture>settings_button_focus.png</texture>
+							<visible>Control.HasFocus(13)</visible>
+							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(20)">conditional</animation>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<include>PVRSearchButtonList</include>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="73">
+					<include>ScrollBar_Vertical</include>
+					<posx>0</posx>
+					<posy>50</posy>
+					<height>350</height>
+					<onleft>9002</onleft>
+					<onright>13</onright>
+					<ondown>73</ondown>
+					<onup>73</onup>
+				</control>
+			</control>
+			<control type="group">
+				<description>Ungrouped Channels list</description>
+				<left>430</left>
+				<top>70</top>
+				<control type="label" id="21">
+					<description>name label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>30</height>
+					<font>Font_18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+				</control>
+				<control type="list" id="11">
+					<left>0</left>
+					<top>50</top>
+					<width>250</width>
+					<height>350</height>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<onleft>71</onleft>
+					<onright>72</onright>
+					<pagecontrol>71</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemgap>0</itemgap>
+					<itemlayout height="30" width="250">
+						<control type="image">
+							<posx>30</posx>
+							<posy>2</posy>
+							<width>26</width>
+							<height>26</height>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_18</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FFFFFAF0</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+						</control>
+						<!--				<control type="image">
+							<posx>468</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<texture>OverlayWatched.png</texture>
+							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>  -->
+					</itemlayout>
+					<focusedlayout height="50" width="250">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>50</height>
+							<texture>settings_button_focus.png</texture>
+							<visible>Control.HasFocus(11)</visible>
+							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(20)">conditional</animation>
+						</control>
+						<control type="image">
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>black.png</texture>
+							<visible>Control.HasFocus(11)</visible>
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<posx>35</posx>
+							<posy>5</posy>
+							<width>40</width>
+							<height>40</height>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>1</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_22</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FF101010</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>1</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_22</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FFFFFAF0</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+							<visible>!Control.HasFocus(11)</visible>
+						</control>
+						<!--						<control type="label">
+							<posx>90</posx>
+							<posy>22</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_18A</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FF101010</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+						</control>
+						<control type="image">
+							<posx>468</posx>
+							<posy>5</posy>
+							<width>22</width>
+							<height>22</height>
+							<texture>OverlayWatched.png</texture>
+							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>   -->
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="71">
+					<include>ScrollBar_Vertical</include>
+					<posx>0</posx>
+					<posy>50</posy>
+					<height>350</height>
+					<onleft>13</onleft>
+					<onright>11</onright>
+					<ondown>71</ondown>
+					<onup>71</onup>
+				</control>
+			</control>
+			<control type="group">
+				<description>Grouped Channels list</description>
+				<left>730</left>
+				<top>70</top>
+				<control type="label" id="22">
+					<description>name label</description>
+					<left>0</left>
+					<top>0</top>
+					<height>30</height>
+					<font>Font_18</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<textcolor>$VAR[value_headercolor]</textcolor>
+				</control>
+				<control type="list" id="12">
+					<left>0</left>
+					<top>50</top>
+					<width>250</width>
+					<height>350</height>
+					<onup>12</onup>
+					<ondown>12</ondown>
+					<onleft>72</onleft>
+					<onright>9002</onright>
+					<pagecontrol>72</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemgap>0</itemgap>
+					<itemlayout height="30" width="250">
+						<control type="image">
+							<posx>30</posx>
+							<posy>2</posy>
+							<width>26</width>
+							<height>26</height>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>65</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_18</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FFFFFAF0</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="250">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>250</width>
+							<height>50</height>
+							<texture>settings_button_focus.png</texture>
+							<visible>Control.HasFocus(12)</visible>
+							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(20)">conditional</animation>
+						</control>
+						<control type="image">
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>black.png</texture>
+							<visible>Control.HasFocus(12)</visible>
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<posx>35</posx>
+							<posy>5</posy>
+							<width>40</width>
+							<height>40</height>
+							<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>1</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_22</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FF101010</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+							<visible>Control.HasFocus(12)</visible>
+							</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>1</posy>
+							<width>250</width>
+							<height>30</height>
+							<font>Font_22</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FFFFFAF0</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
+							<visible>!Control.HasFocus(12)</visible>
+							</control>
+						<!--						<control type="label">
+							<posx>90</posx>
+							<posy>22</posy>
+							<width>365</width>
+							<height>30</height>
+							<font>Font_18A</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>FF101010</textcolor>
+							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+							<label>$LOCALIZE[19210]: $INFO[ListItem.ClientName]</label>
+						</control>  -->
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="72">
+					<include>ScrollBar_Vertical</include>
+					<posx>0</posx>
+					<posy>50</posy>
+					<height>350</height>
+					<onleft>11</onleft>
+					<onright>12</onright>
+					<ondown>72</ondown>
+					<onup>72</onup>
+				</control>
+			</control>
+<!--			<control type="label">
+				<posx>150</posx>
+				<posy>555</posy>
+				<width>400</width>
+				<height>20</height>
+				<font>Font_18</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<label>$INFO[Container(13).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages]</label>
+			</control> -->
+			<control type="group" id="9002">
+				<control type="group">
+					<posx>640</posx>
+					<posy>100</posy>
+				</control>
+				<control type="group">
+					<posx>640</posx>
+					<posy>500</posy>
+					<control type="label">
+						<posx>30</posx>
+						<posy>5</posy>
+						<width>380</width>
+						<height>20</height>
+						<font>Font_18</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<label>$LOCALIZE[31375]</label>
+					</control>
+					<control type="button" id="26"><!-- add grp -->
+						<textoffsetx>40</textoffsetx>
+						<include>PVRSearchButtonSmall</include>
+						<posx>0</posx>
+						<posy>30</posy>
+						<label>31993</label>
+						<onleft>12</onleft>
+						<onright>27</onright>
+						<onup>25</onup>
+						<ondown>25</ondown>
+					</control>
+					<control type="button" id="27"><!-- rename grp -->
+						<textoffsetx>40</textoffsetx>
+						<include>PVRSearchButtonSmall</include>
+						<posx>223</posx>
+						<posy>30</posy>
+						<label>31994</label>
+						<onleft>26</onleft>
+						<onright>13</onright>
+						<onup>28</onup>
+						<ondown>28</ondown>
+					</control>
+					<control type="button" id="28"><!-- delete grp -->
+						<textoffsetx>40</textoffsetx>
+						<include>PVRSearchButtonSmall</include>
+						<posx>223</posx>
+						<posy>60</posy>
+						<label>31995</label>
+						<onleft>25</onleft>
+						<onright>13</onright>
+						<onup>27</onup>
+						<ondown>9000</ondown>
+					</control>
+					<control type="radiobutton" id="25"><!-- hide group -->
+						<textoffsetx>40</textoffsetx>
+						<radioposx>130</radioposx>
+						<include>PVRSearchButtonSmall</include>
+						<include>Animation_Fade</include>
+						<posx>0</posx>
+						<posy>60</posy>
+						<label>19289</label>
+						<onleft>12</onleft>
+						<onright>28</onright>
+						<onup>26</onup>
+						<ondown>9000</ondown>
+					</control>
+				</control>
+			</control>
+			<control type="image">
+				<posx>410</posx>
+				<posy>82</posy>
+				<width>2</width>
+				<height>380</height>
+				<texture>separator_v.png</texture>
+			</control>
+			<control type="image">
+				<posx>710</posx>
+				<posy>82</posy>
+				<width>2</width>
+				<height>380</height>
+				<texture>separator_v.png</texture>
+			</control>
+			<control type="image">
+				<posx>140</posx>
+				<posy>600</posy>
+				<height>40</height>
+				<width>1000</width>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="9000">
+				<posx>140</posx>
+				<posy>600</posy>
+				<onup>13</onup>
+				<ondown>13</ondown>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<control type="button" id="29"><!-- OK -->
+					<width>333</width>
+					<include>SettingsBottomButton</include>
+					<!-- <onclick>PreviousMenu</onclick>  -->
+					<label>186</label>
+				</control>
+				<control type="button" id="5"><!-- Aplicar -->
+					<width>333</width>
+					<include>SettingsBottomButton</include>
+					<label>14070</label>
+				</control>
+				<control type="button" id="6"><!-- Cancelar -->
+					<width>333</width>
+					<include>SettingsBottomButton</include>
+					<label>222</label>
+				</control>
+			</control>
+		</control>
+		<control type="label" id="20">
+			<description>Fake Label used to pass on name label</description>
+			<visible>false</visible>
+		</control>
+	</controls>
+</window>

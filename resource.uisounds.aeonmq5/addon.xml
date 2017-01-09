@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="resource.uisounds.aeonmq5" version="10.2.3" name="Aeon MQ5 Leia UI Sounds" provider-name="Marcos Qui">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Aeon MQ5 Leia GUI sounds</summary>
+    <description lang="en">Aeon MQ5 Leia GUI sounds</description>
+    <platform>all</platform>
+	<news>[B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE01/09/2017 for Kodi LEIA ALPHA5+[/COLOR][/B]
+Update sound for opening/closing notification window (was infodialog)
+		</news>
+  </extension>
+</addon>
