@@ -2521,102 +2521,102 @@
 				<item>
 					<label>$VAR[value_menu1.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu1.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu1.master)) | SubString(skin.string(menu1.visible),off) | String.IsEqual(skin.string(menu1.master),movies) | String.IsEqual(skin.string(menu1.master),tvshows) | String.IsEqual(skin.string(menu1.master),concerts) | String.IsEqual(skin.string(menu1.master),music) | !IsEmpty(skin.string(menu1.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu1.master)) | String.Contains(skin.string(menu1.visible),off) | String.IsEqual(skin.string(menu1.master),movies) | String.IsEqual(skin.string(menu1.master),tvshows) | String.IsEqual(skin.string(menu1.master),concerts) | String.IsEqual(skin.string(menu1.master),music) | !String.IsEmpty(skin.string(menu1.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu2.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu2.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu2.master)) | SubString(skin.string(menu2.visible),off) | String.IsEqual(skin.string(menu2.master),movies) | String.IsEqual(skin.string(menu2.master),tvshows) | String.IsEqual(skin.string(menu2.master),concerts) | String.IsEqual(skin.string(menu2.master),music) | !IsEmpty(skin.string(menu2.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu2.master)) | String.Contains(skin.string(menu2.visible),off) | String.IsEqual(skin.string(menu2.master),movies) | String.IsEqual(skin.string(menu2.master),tvshows) | String.IsEqual(skin.string(menu2.master),concerts) | String.IsEqual(skin.string(menu2.master),music) | !String.IsEmpty(skin.string(menu2.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu3.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu3.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu3.master)) | SubString(skin.string(menu3.visible),off) | String.IsEqual(skin.string(menu3.master),movies) | String.IsEqual(skin.string(menu3.master),tvshows) | String.IsEqual(skin.string(menu3.master),concerts) | String.IsEqual(skin.string(menu3.master),music) | !IsEmpty(skin.string(menu3.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu3.master)) | String.Contains(skin.string(menu3.visible),off) | String.IsEqual(skin.string(menu3.master),movies) | String.IsEqual(skin.string(menu3.master),tvshows) | String.IsEqual(skin.string(menu3.master),concerts) | String.IsEqual(skin.string(menu3.master),music) | !String.IsEmpty(skin.string(menu3.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu4.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu4.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu4.master)) | SubString(skin.string(menu4.visible),off) | String.IsEqual(skin.string(menu4.master),movies) | String.IsEqual(skin.string(menu4.master),tvshows) | String.IsEqual(skin.string(menu4.master),concerts) | String.IsEqual(skin.string(menu4.master),music) | !IsEmpty(skin.string(menu4.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu4.master)) | String.Contains(skin.string(menu4.visible),off) | String.IsEqual(skin.string(menu4.master),movies) | String.IsEqual(skin.string(menu4.master),tvshows) | String.IsEqual(skin.string(menu4.master),concerts) | String.IsEqual(skin.string(menu4.master),music) | !String.IsEmpty(skin.string(menu4.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu5.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu5.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu5.master)) | SubString(skin.string(menu5.visible),off) | String.IsEqual(skin.string(menu5.master),movies) | String.IsEqual(skin.string(menu5.master),tvshows) | String.IsEqual(skin.string(menu5.master),concerts) | String.IsEqual(skin.string(menu5.master),music) | !IsEmpty(skin.string(menu5.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu5.master)) | String.Contains(skin.string(menu5.visible),off) | String.IsEqual(skin.string(menu5.master),movies) | String.IsEqual(skin.string(menu5.master),tvshows) | String.IsEqual(skin.string(menu5.master),concerts) | String.IsEqual(skin.string(menu5.master),music) | !String.IsEmpty(skin.string(menu5.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu6.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu6.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu6.master)) | SubString(skin.string(menu6.visible),off) | String.IsEqual(skin.string(menu6.master),movies) | String.IsEqual(skin.string(menu6.master),tvshows) | String.IsEqual(skin.string(menu6.master),concerts) | String.IsEqual(skin.string(menu6.master),music) | !IsEmpty(skin.string(menu6.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu6.master)) | String.Contains(skin.string(menu6.visible),off) | String.IsEqual(skin.string(menu6.master),movies) | String.IsEqual(skin.string(menu6.master),tvshows) | String.IsEqual(skin.string(menu6.master),concerts) | String.IsEqual(skin.string(menu6.master),music) | !String.IsEmpty(skin.string(menu6.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu7.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu7.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu7.master)) | SubString(skin.string(menu7.visible),off) | String.IsEqual(skin.string(menu7.master),movies) | String.IsEqual(skin.string(menu7.master),tvshows) | String.IsEqual(skin.string(menu7.master),concerts) | String.IsEqual(skin.string(menu7.master),music) | !IsEmpty(skin.string(menu7.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu7.master)) | String.Contains(skin.string(menu7.visible),off) | String.IsEqual(skin.string(menu7.master),movies) | String.IsEqual(skin.string(menu7.master),tvshows) | String.IsEqual(skin.string(menu7.master),concerts) | String.IsEqual(skin.string(menu7.master),music) | !String.IsEmpty(skin.string(menu7.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu8.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu8.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu8.master)) | SubString(skin.string(menu8.visible),off) | String.IsEqual(skin.string(menu8.master),movies) | String.IsEqual(skin.string(menu8.master),tvshows) | String.IsEqual(skin.string(menu8.master),concerts) | String.IsEqual(skin.string(menu8.master),music) | !IsEmpty(skin.string(menu8.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu8.master)) | String.Contains(skin.string(menu8.visible),off) | String.IsEqual(skin.string(menu8.master),movies) | String.IsEqual(skin.string(menu8.master),tvshows) | String.IsEqual(skin.string(menu8.master),concerts) | String.IsEqual(skin.string(menu8.master),music) | !String.IsEmpty(skin.string(menu8.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu9.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu9.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu9.master)) | SubString(skin.string(menu9.visible),off) | String.IsEqual(skin.string(menu9.master),movies) | String.IsEqual(skin.string(menu9.master),tvshows) | String.IsEqual(skin.string(menu9.master),concerts) | String.IsEqual(skin.string(menu9.master),music) | !IsEmpty(skin.string(menu9.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu9.master)) | String.Contains(skin.string(menu9.visible),off) | String.IsEqual(skin.string(menu9.master),movies) | String.IsEqual(skin.string(menu9.master),tvshows) | String.IsEqual(skin.string(menu9.master),concerts) | String.IsEqual(skin.string(menu9.master),music) | !String.IsEmpty(skin.string(menu9.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu10.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu10.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu10.master)) | SubString(skin.string(menu10.visible),off) | String.IsEqual(skin.string(menu10.master),movies) | String.IsEqual(skin.string(menu10.master),tvshows) | String.IsEqual(skin.string(menu10.master),concerts) | String.IsEqual(skin.string(menu10.master),music) | !IsEmpty(skin.string(menu10.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu10.master)) | String.Contains(skin.string(menu10.visible),off) | String.IsEqual(skin.string(menu10.master),movies) | String.IsEqual(skin.string(menu10.master),tvshows) | String.IsEqual(skin.string(menu10.master),concerts) | String.IsEqual(skin.string(menu10.master),music) | !String.IsEmpty(skin.string(menu10.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu11.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu11.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu11.master)) | SubString(skin.string(menu11.visible),off) | String.IsEqual(skin.string(menu11.master),movies) | String.IsEqual(skin.string(menu11.master),tvshows) | String.IsEqual(skin.string(menu11.master),concerts) | String.IsEqual(skin.string(menu11.master),music) | !IsEmpty(skin.string(menu11.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu11.master)) | String.Contains(skin.string(menu11.visible),off) | String.IsEqual(skin.string(menu11.master),movies) | String.IsEqual(skin.string(menu11.master),tvshows) | String.IsEqual(skin.string(menu11.master),concerts) | String.IsEqual(skin.string(menu11.master),music) | !String.IsEmpty(skin.string(menu11.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu12.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu12.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu12.master)) | SubString(skin.string(menu12.visible),off) | String.IsEqual(skin.string(menu12.master),movies) | String.IsEqual(skin.string(menu12.master),tvshows) | String.IsEqual(skin.string(menu12.master),concerts) | String.IsEqual(skin.string(menu12.master),music) | !IsEmpty(skin.string(menu12.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu12.master)) | String.Contains(skin.string(menu12.visible),off) | String.IsEqual(skin.string(menu12.master),movies) | String.IsEqual(skin.string(menu12.master),tvshows) | String.IsEqual(skin.string(menu12.master),concerts) | String.IsEqual(skin.string(menu12.master),music) | !String.IsEmpty(skin.string(menu12.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu13.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu13.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu13.master)) | SubString(skin.string(menu13.visible),off) | String.IsEqual(skin.string(menu13.master),movies) | String.IsEqual(skin.string(menu13.master),tvshows) | String.IsEqual(skin.string(menu13.master),concerts) | String.IsEqual(skin.string(menu13.master),music) | !IsEmpty(skin.string(menu13.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu13.master)) | String.Contains(skin.string(menu13.visible),off) | String.IsEqual(skin.string(menu13.master),movies) | String.IsEqual(skin.string(menu13.master),tvshows) | String.IsEqual(skin.string(menu13.master),concerts) | String.IsEqual(skin.string(menu13.master),music) | !String.IsEmpty(skin.string(menu13.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu14.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu14.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu14.master)) | SubString(skin.string(menu14.visible),off) | String.IsEqual(skin.string(menu14.master),movies) | String.IsEqual(skin.string(menu14.master),tvshows) | String.IsEqual(skin.string(menu14.master),concerts) | String.IsEqual(skin.string(menu14.master),music) | !IsEmpty(skin.string(menu14.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu14.master)) | String.Contains(skin.string(menu14.visible),off) | String.IsEqual(skin.string(menu14.master),movies) | String.IsEqual(skin.string(menu14.master),tvshows) | String.IsEqual(skin.string(menu14.master),concerts) | String.IsEqual(skin.string(menu14.master),music) | !String.IsEmpty(skin.string(menu14.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu15.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu15.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu15.master)) | SubString(skin.string(menu15.visible),off) | String.IsEqual(skin.string(menu15.master),movies) | String.IsEqual(skin.string(menu15.master),tvshows) | String.IsEqual(skin.string(menu15.master),concerts) | String.IsEqual(skin.string(menu15.master),music) | !IsEmpty(skin.string(menu15.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu15.master)) | String.Contains(skin.string(menu15.visible),off) | String.IsEqual(skin.string(menu15.master),movies) | String.IsEqual(skin.string(menu15.master),tvshows) | String.IsEqual(skin.string(menu15.master),concerts) | String.IsEqual(skin.string(menu15.master),music) | !String.IsEmpty(skin.string(menu15.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu16.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu16.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu16.master)) | SubString(skin.string(menu16.visible),off) | String.IsEqual(skin.string(menu16.master),movies) | String.IsEqual(skin.string(menu16.master),tvshows) | String.IsEqual(skin.string(menu16.master),concerts) | String.IsEqual(skin.string(menu16.master),music) | !IsEmpty(skin.string(menu16.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu16.master)) | String.Contains(skin.string(menu16.visible),off) | String.IsEqual(skin.string(menu16.master),movies) | String.IsEqual(skin.string(menu16.master),tvshows) | String.IsEqual(skin.string(menu16.master),concerts) | String.IsEqual(skin.string(menu16.master),music) | !String.IsEmpty(skin.string(menu16.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu17.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu17.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu17.master)) | SubString(skin.string(menu17.visible),off) | String.IsEqual(skin.string(menu17.master),movies) | String.IsEqual(skin.string(menu17.master),tvshows) | String.IsEqual(skin.string(menu17.master),concerts) | String.IsEqual(skin.string(menu17.master),music) | !IsEmpty(skin.string(menu17.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu17.master)) | String.Contains(skin.string(menu17.visible),off) | String.IsEqual(skin.string(menu17.master),movies) | String.IsEqual(skin.string(menu17.master),tvshows) | String.IsEqual(skin.string(menu17.master),concerts) | String.IsEqual(skin.string(menu17.master),music) | !String.IsEmpty(skin.string(menu17.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu18.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu18.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu18.master)) | SubString(skin.string(menu18.visible),off) | String.IsEqual(skin.string(menu18.master),movies) | String.IsEqual(skin.string(menu18.master),tvshows) | String.IsEqual(skin.string(menu18.master),concerts) | String.IsEqual(skin.string(menu18.master),music) | !IsEmpty(skin.string(menu18.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu18.master)) | String.Contains(skin.string(menu18.visible),off) | String.IsEqual(skin.string(menu18.master),movies) | String.IsEqual(skin.string(menu18.master),tvshows) | String.IsEqual(skin.string(menu18.master),concerts) | String.IsEqual(skin.string(menu18.master),music) | !String.IsEmpty(skin.string(menu18.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu19.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu19.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu19.master)) | SubString(skin.string(menu19.visible),off) | String.IsEqual(skin.string(menu19.master),movies) | String.IsEqual(skin.string(menu19.master),tvshows) | String.IsEqual(skin.string(menu19.master),concerts) | String.IsEqual(skin.string(menu19.master),music) | !IsEmpty(skin.string(menu19.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu19.master)) | String.Contains(skin.string(menu19.visible),off) | String.IsEqual(skin.string(menu19.master),movies) | String.IsEqual(skin.string(menu19.master),tvshows) | String.IsEqual(skin.string(menu19.master),concerts) | String.IsEqual(skin.string(menu19.master),music) | !String.IsEmpty(skin.string(menu19.subid))]</visible>
 				</item>
 				<item>
 					<label>$VAR[value_menu20.label]</label>
 					<onclick>Skin.SetString($INFO[skin.string(custom_subid)],$VAR[value_menu20.id])</onclick>
-					<visible>![IsEmpty(skin.string(menu20.master)) | SubString(skin.string(menu20.visible),off) | String.IsEqual(skin.string(menu20.master),movies) | String.IsEqual(skin.string(menu20.master),tvshows) | String.IsEqual(skin.string(menu20.master),concerts) | String.IsEqual(skin.string(menu20.master),music) | !IsEmpty(skin.string(menu20.subid))]</visible>
+					<visible>![String.IsEmpty(skin.string(menu20.master)) | String.Contains(skin.string(menu20.visible),off) | String.IsEqual(skin.string(menu20.master),movies) | String.IsEqual(skin.string(menu20.master),tvshows) | String.IsEqual(skin.string(menu20.master),concerts) | String.IsEqual(skin.string(menu20.master),music) | !String.IsEmpty(skin.string(menu20.subid))]</visible>
 				</item>
 			</content>
 		</control>
@@ -2932,7 +2932,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy1.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy1.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy1.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy1.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy1.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy2.label)]</label>
@@ -2940,7 +2940,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy2.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy2.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy2.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy2.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy2.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy3.label)]</label>
@@ -2948,7 +2948,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy3.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy3.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy3.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy3.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy3.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy4.label)]</label>
@@ -2956,7 +2956,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy4.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy4.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy4.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy4.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy4.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy5.label)]</label>
@@ -2964,7 +2964,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy5.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy5.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy5.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy5.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy5.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy6.label)]</label>
@@ -2972,7 +2972,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy6.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy6.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy6.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy6.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy6.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy7.label)]</label>
@@ -2980,7 +2980,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy7.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy7.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy7.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy7.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy7.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy8.label)]</label>
@@ -2988,7 +2988,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy8.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy8.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy8.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy8.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy8.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy9.label)]</label>
@@ -2996,7 +2996,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy9.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy9.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy9.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy9.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy9.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy10.label)]</label>
@@ -3004,7 +3004,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy10.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy10.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy10.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy10.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy10.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy11.label)]</label>
@@ -3012,7 +3012,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy11.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy11.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy11.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy11.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy11.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy12.label)]</label>
@@ -3020,7 +3020,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy12.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy12.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy12.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy12.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy12.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy13.label)]</label>
@@ -3028,7 +3028,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy13.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy13.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy13.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy13.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy13.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy14.label)]</label>
@@ -3036,7 +3036,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy14.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy14.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy14.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy14.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy14.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy15.label)]</label>
@@ -3044,7 +3044,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy15.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy15.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy15.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy15.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy15.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy16.label)]</label>
@@ -3052,7 +3052,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy16.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy16.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy16.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy16.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy16.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy17.label)]</label>
@@ -3060,7 +3060,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy17.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy17.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy17.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy17.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy17.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy18.label)]</label>
@@ -3068,7 +3068,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy18.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy18.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy18.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy18.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy18.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy19.label)]</label>
@@ -3076,7 +3076,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy19.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy19.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy19.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy19.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy19.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy20.label)]</label>
@@ -3084,7 +3084,7 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy20.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy20.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy20.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy20.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy20.label))</visible>
 				</item>
 				<item>
 					<label>$INFO[skin.string(menucopy20.label)]</label>
@@ -3092,12 +3092,12 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_bg)],$INFO[skin.string(menucopy20.bg)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],$INFO[skin.string(menucopy20.master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],$INFO[skin.string(menucopy20.action)])</onclick>
-					<visible>!IsEmpty(skin.string(menucopy20.label))</visible>
+					<visible>!String.IsEmpty(skin.string(menucopy20.label))</visible>
 				</item>
 				<item>
 					<label>31172</label>
 					<onclick>noop</onclick>
-					<visible>IsEmpty(skin.string(menucopy1.label)) + IsEmpty(skin.string(menucopy2.label)) + IsEmpty(skin.string(menucopy3.label)) + IsEmpty(skin.string(menucopy4.label)) + IsEmpty(skin.string(menucopy5.label)) + IsEmpty(skin.string(menucopy6.label)) + IsEmpty(skin.string(menucopy7.label)) + IsEmpty(skin.string(menucopy8.label)) + IsEmpty(skin.string(menucopy9.label)) + IsEmpty(skin.string(menucopy10.label)) + IsEmpty(skin.string(menucopy11.label)) + IsEmpty(skin.string(menucopy12.label)) + IsEmpty(skin.string(menucopy13.label)) + IsEmpty(skin.string(menucopy14.label)) + IsEmpty(skin.string(menucopy15.label)) + IsEmpty(skin.string(menucopy16.label)) + IsEmpty(skin.string(menucopy17.label)) + IsEmpty(skin.string(menucopy18.label)) + IsEmpty(skin.string(menucopy19.label)) + IsEmpty(skin.string(menucopy20.label))</visible>
+					<visible>String.IsEmpty(skin.string(menucopy1.label)) + String.IsEmpty(skin.string(menucopy2.label)) + String.IsEmpty(skin.string(menucopy3.label)) + String.IsEmpty(skin.string(menucopy4.label)) + String.IsEmpty(skin.string(menucopy5.label)) + String.IsEmpty(skin.string(menucopy6.label)) + String.IsEmpty(skin.string(menucopy7.label)) + String.IsEmpty(skin.string(menucopy8.label)) + String.IsEmpty(skin.string(menucopy9.label)) + String.IsEmpty(skin.string(menucopy10.label)) + String.IsEmpty(skin.string(menucopy11.label)) + String.IsEmpty(skin.string(menucopy12.label)) + String.IsEmpty(skin.string(menucopy13.label)) + String.IsEmpty(skin.string(menucopy14.label)) + String.IsEmpty(skin.string(menucopy15.label)) + String.IsEmpty(skin.string(menucopy16.label)) + String.IsEmpty(skin.string(menucopy17.label)) + String.IsEmpty(skin.string(menucopy18.label)) + String.IsEmpty(skin.string(menucopy19.label)) + String.IsEmpty(skin.string(menucopy20.label))</visible>
 				</item>
 			</content>
 		</control>
@@ -4519,48 +4519,48 @@
 			<content>
 				<item>
 					<include>Preset1_Apply</include>
-					<visible>!IsEmpty(skin.string(preset1.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset1.on))</visible>
 				</item>
 				<item>
 					<include>Preset2_Apply</include>
-					<visible>!IsEmpty(skin.string(preset2.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset2.on))</visible>
 				</item>
 				<item>
 					<include>Preset3_Apply</include>
-					<visible>!IsEmpty(skin.string(preset3.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset3.on))</visible>
 				</item>
 				<item>
 					<include>Preset4_Apply</include>
-					<visible>!IsEmpty(skin.string(preset4.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset4.on))</visible>
 				</item>
 				<item>
 					<include>Preset5_Apply</include>
-					<visible>!IsEmpty(skin.string(preset5.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset5.on))</visible>
 				</item>
 				<item>
 					<include>Preset6_Apply</include>
-					<visible>!IsEmpty(skin.string(preset6.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset6.on))</visible>
 				</item>
 				<item>
 					<include>Preset7_Apply</include>
-					<visible>!IsEmpty(skin.string(preset7.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset7.on))</visible>
 				</item>
 				<item>
 					<include>Preset8_Apply</include>
-					<visible>!IsEmpty(skin.string(preset8.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset8.on))</visible>
 				</item>
 				<item>
 					<include>Preset9_Apply</include>
-					<visible>!IsEmpty(skin.string(preset9.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset9.on))</visible>
 				</item>
 				<item>
 					<include>Preset10_Apply</include>
-					<visible>!IsEmpty(skin.string(preset10.on))</visible>
+					<visible>!String.IsEmpty(skin.string(preset10.on))</visible>
 				</item>
 				<item>
 					<label>31168</label>
 					<onclick>noop</onclick>
-					<visible>IsEmpty(skin.string(preset1.on)) + IsEmpty(skin.string(preset2.on)) + IsEmpty(skin.string(preset3.on)) + IsEmpty(skin.string(preset4.on)) + IsEmpty(skin.string(preset5.on)) + IsEmpty(skin.string(preset6.on)) + IsEmpty(skin.string(preset7.on)) + IsEmpty(skin.string(preset8.on)) + IsEmpty(skin.string(preset9.on)) + IsEmpty(skin.string(preset10.on))</visible>
+					<visible>String.IsEmpty(skin.string(preset1.on)) + String.IsEmpty(skin.string(preset2.on)) + String.IsEmpty(skin.string(preset3.on)) + String.IsEmpty(skin.string(preset4.on)) + String.IsEmpty(skin.string(preset5.on)) + String.IsEmpty(skin.string(preset6.on)) + String.IsEmpty(skin.string(preset7.on)) + String.IsEmpty(skin.string(preset8.on)) + String.IsEmpty(skin.string(preset9.on)) + String.IsEmpty(skin.string(preset10.on))</visible>
 				</item>
 			</content>
 		</control>
@@ -4585,10 +4585,10 @@
 			<control type="radiobutton" id="112"><!-- Ativar/desativar menu -->
 				<include>CustomMenuRadioButton</include>
 				<label>31242</label>
-				<onclick condition="IsEmpty(Container(9000).ListItem.Property(condition))">Skin.SetString($INFO[skin.string(custom_on)],off)</onclick>
-				<onclick condition="!IsEmpty(Container(9000).ListItem.Property(condition))">Skin.Reset($INFO[skin.string(custom_on)])</onclick>
-				<selected>IsEmpty(Container(9000).ListItem.Property(condition))</selected>
-				<enable>!IsEmpty(Container(9000).ListItem.Property(id))</enable>
+				<onclick condition="String.IsEmpty(Container(9000).ListItem.Property(condition))">Skin.SetString($INFO[skin.string(custom_on)],off)</onclick>
+				<onclick condition="!String.IsEmpty(Container(9000).ListItem.Property(condition))">Skin.Reset($INFO[skin.string(custom_on)])</onclick>
+				<selected>String.IsEmpty(Container(9000).ListItem.Property(condition))</selected>
+				<enable>!String.IsEmpty(Container(9000).ListItem.Property(id))</enable>
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="113"><!-- Alterar/definir Acao -->
@@ -4610,7 +4610,7 @@
 				<label>31160</label>
 				<onclick>SetFocus(454)</onclick>
 				<onright>SetFocus(454)</onright>
-				<enable>![SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)]</enable>
+				<enable>![String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)]</enable>
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="116"><!-- Aplicar propriedades -->
@@ -4618,7 +4618,7 @@
 				<label>31161</label>
 				<onclick>SetFocus(455)</onclick>
 				<onright>SetFocus(455)</onright>
-				<enable>![SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)]</enable>
+				<enable>![String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)]</enable>
 				<visible>!String.IsEqual(Container(9000).ListItem.Property(id),virtual)</visible>
 			</control>
 			<control type="button" id="118"><!-- Pre definicoes - criar -->
@@ -4681,13 +4681,13 @@
 				<label>$LOCALIZE[31702] $LOCALIZE[31009] $LOCALIZE[536] / $LOCALIZE[33069]</label>
 				<onclick>ActivateWindowAndFocus(SkinSettings,9100,10)</onclick>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
-				<!-- <enable>Skin.HasSetting(custom_wxicons.multi) | SubString(skin.string(weatherconditionbg),weathercondition)</enable> -->
+				<!-- <enable>Skin.HasSetting(custom_wxicons.multi) | String.Contains(skin.string(weatherconditionbg),weathercondition)</enable> -->
 			</control>
 			<!-- <control type="button" id="128">
 				<label>31923</label>
 				<onclick>RunScript(script.aeonmq5.extrapack,mode=forcerefresh)</onclick>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
-				<enable>Skin.HasSetting(custom_wxicons.multi) | SubString(skin.string(weatherconditionbg),weathercondition)</enable>
+				<enable>Skin.HasSetting(custom_wxicons.multi) | String.Contains(skin.string(weatherconditionbg),weathercondition)</enable>
 			</control> -->
 			<!-- <control type="radiobutton" id="129">
 				<include>CustomMenuRadioButton</include>
@@ -4718,22 +4718,22 @@
 				<onunfocus condition="Skin.HasSetting(wx_bg_southamerica)">Skin.SetString(weatherconditionbg,southamerica)</onunfocus>
 				<onunfocus condition="Skin.HasSetting(wx_bg_northamerica)">Skin.SetString(weatherconditionbg,northamerica)</onunfocus>
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
-				<enable>IsEmpty(skin.string(weather.bg))</enable>  <!-- never set -->
+				<enable>String.IsEmpty(skin.string(weather.bg))</enable>  <!-- never set -->
 			</control>
 			<control type="radiobutton" id="133"><!-- Fundo Clima Externo -->
 				<include>CustomMenuRadioButton</include>
 				<label>31901</label>
 				<onclick>Skin.ToggleSetting(weathercondition_external)</onclick>
 				<selected>Skin.HasSetting(weathercondition_external)</selected>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + SubString(skin.string(weatherconditionbg),weathercondition)</visible>
-				<enable>IsEmpty(skin.string(weather.bg))</enable>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + String.Contains(skin.string(weatherconditionbg),weathercondition)</visible>
+				<enable>String.IsEmpty(skin.string(weather.bg))</enable>
 			</control>
 			<control type="button" id="134"><!-- Fundo Clima/Pasta -->
 				<include>CustomMenuButton</include>
 				<label>$VAR[value_weatherconditionfolder]</label>
 				<onclick>Skin.SetPath(CustomWeatherConditionFolder)</onclick>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + SubString(skin.string(weatherconditionbg),weathercondition) + Skin.HasSetting(weathercondition_external)</visible>
-				<enable>IsEmpty(skin.string(weather.bg))</enable>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + String.Contains(skin.string(weatherconditionbg),weathercondition) + Skin.HasSetting(weathercondition_external)</visible>
+				<enable>String.IsEmpty(skin.string(weather.bg))</enable>
 			</control>
 			<control type="button" id="136"><!-- Ajustes de desligamento -->
 				<include>CustomMenuButton</include>
@@ -4803,9 +4803,9 @@
 		<control type="button" id="4094"> <!-- weather background selector -->
 			<include>InvisibleButton</include>
 			<onfocus>SetFocus(450)</onfocus>
-			<onfocus condition="SubString(skin.string(weatherconditionbg),northamerica)">Skin.SetString(weatherconditionbg,southamerica)</onfocus>
-			<onfocus condition="SubString(skin.string(weatherconditionbg),southamerica)">Skin.SetString(weatherconditionbg,weathercondition)</onfocus>
-			<onfocus condition="SubString(skin.string(weatherconditionbg),weathercondition)">Skin.SetString(weatherconditionbg,northamerica)</onfocus>
+			<onfocus condition="String.Contains(skin.string(weatherconditionbg),northamerica)">Skin.SetString(weatherconditionbg,southamerica)</onfocus>
+			<onfocus condition="String.Contains(skin.string(weatherconditionbg),southamerica)">Skin.SetString(weatherconditionbg,weathercondition)</onfocus>
+			<onfocus condition="String.Contains(skin.string(weatherconditionbg),weathercondition)">Skin.SetString(weatherconditionbg,northamerica)</onfocus>
 		</control>
 	</include>
 </includes>

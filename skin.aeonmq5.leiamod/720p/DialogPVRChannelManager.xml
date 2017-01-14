@@ -53,7 +53,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
-				<visible>IsEmpty(Window.Property(IsRadio))</visible>
+				<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
 			</control>
 			<control type="label">
 				<posx>215</posx>
@@ -66,7 +66,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
-				<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+				<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 			</control>
 			<control type="image">
 				<posx>600</posx>
@@ -367,7 +367,7 @@
 						<onright>4</onright>
 						<onup>13</onup>
 						<ondown>31</ondown>
-						<visible>IsEmpty(Window.Property(IsRadio)) + Pvr.HasRadioChannels</visible>
+						<visible>String.IsEmpty(Window.Property(IsRadio)) + Pvr.HasRadioChannels</visible>
 					</control>
 					<control type="button" id="34"><!-- TV/Radio -->
 						<textoffsetx>40</textoffsetx>
@@ -379,7 +379,7 @@
 						<onright>4</onright>
 						<onup>13</onup>
 						<ondown>31</ondown>
-						<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+						<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 					</control>
 					<control type="button" id="31"><!-- Edit channel -->
 						<textoffsetx>40</textoffsetx>

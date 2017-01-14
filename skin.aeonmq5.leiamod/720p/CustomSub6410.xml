@@ -22,7 +22,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41001.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41001.master)) | SubString(skin.string(menu41001.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41001.master)) | String.Contains(skin.string(menu41001.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41002.label]</label>
@@ -32,7 +32,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41002.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41002.master)) | SubString(skin.string(menu41002.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41002.master)) | String.Contains(skin.string(menu41002.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41003.label]</label>
@@ -42,7 +42,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41003.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41003.master)) | SubString(skin.string(menu41003.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41003.master)) | String.Contains(skin.string(menu41003.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41004.label]</label>
@@ -52,7 +52,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41004.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41004.master)) | SubString(skin.string(menu41004.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41004.master)) | String.Contains(skin.string(menu41004.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41005.label]</label>
@@ -62,7 +62,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41005.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41005.master)) | SubString(skin.string(menu41005.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41005.master)) | String.Contains(skin.string(menu41005.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41006.label]</label>
@@ -72,7 +72,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41006.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41006.master)) | SubString(skin.string(menu41006.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41006.master)) | String.Contains(skin.string(menu41006.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41007.label]</label>
@@ -82,7 +82,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41007.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41007.master)) | SubString(skin.string(menu41007.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41007.master)) | String.Contains(skin.string(menu41007.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41008.label]</label>
@@ -92,7 +92,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41008.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41008.master)) | SubString(skin.string(menu41008.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41008.master)) | String.Contains(skin.string(menu41008.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41009.label]</label>
@@ -102,7 +102,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41009.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41009.master)) | SubString(skin.string(menu41009.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41009.master)) | String.Contains(skin.string(menu41009.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41010.label]</label>
@@ -112,7 +112,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41010.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41010.master)) | SubString(skin.string(menu41010.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41010.master)) | String.Contains(skin.string(menu41010.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41011.label]</label>
@@ -122,7 +122,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41011.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41011.master)) | SubString(skin.string(menu41011.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41011.master)) | String.Contains(skin.string(menu41011.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41012.label]</label>
@@ -132,7 +132,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41012.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41012.master)) | SubString(skin.string(menu41012.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41012.master)) | String.Contains(skin.string(menu41012.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41013.label]</label>
@@ -142,7 +142,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41013.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41013.master)) | SubString(skin.string(menu41013.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41013.master)) | String.Contains(skin.string(menu41013.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41014.label]</label>
@@ -152,7 +152,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41014.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41014.master)) | SubString(skin.string(menu41014.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41014.master)) | String.Contains(skin.string(menu41014.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	<item>
 	<label fallback="31014">$VAR[value_menu41015.label]</label>
@@ -162,7 +162,7 @@
 	<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Dialog.Close(6410)</onclick>
 	<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu41015.action])</onclick>
-	<visible>![IsEmpty(skin.string(menu41015.master)) | SubString(skin.string(menu41015.visible),off)] | Window.IsVisible(6000)</visible>
+	<visible>![String.IsEmpty(skin.string(menu41015.master)) | String.Contains(skin.string(menu41015.visible),off)] | Window.IsVisible(6000)</visible>
 	</item>
 	</content>
 	</control>

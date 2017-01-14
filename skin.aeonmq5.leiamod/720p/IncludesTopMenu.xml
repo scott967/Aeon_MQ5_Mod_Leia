@@ -341,8 +341,8 @@
 				<include>InvisibleButton</include>
 				<onleft>SetFocus(9231)</onleft> <!-- was 9941 -->
 				<onright>SetFocus(9231)</onright> <!-- was 9942 -->
-				<onup condition="Window.IsActive(tvguide) + ![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">ActivateWindow(1101)</onup>
-				<ondown condition="Window.IsActive(tvguide) + [IntegerGreaterThan(Container(13).NumItems,0) + Control.IsVisible(13) | !Control.IsVisible(13)]">SetFocus(50)</ondown>
+				<onup condition="Window.IsActive(tvguide) + ![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">ActivateWindow(1101)</onup>
+				<ondown condition="Window.IsActive(tvguide) + [Integer.IsGreater(Container(13).NumItems,0) + Control.IsVisible(13) | !Control.IsVisible(13)]">SetFocus(50)</ondown>
 			</control>
 			<control type="button" id="9940">
 				<visible>Window.IsActive(tvrecordings)</visible>
@@ -392,9 +392,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -454,34 +454,34 @@
 					<include>TopMenuButton</include>
 					<label>31024</label>
 					<onclick>ActivateWindow(videos,addons,return)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)] + [Window.IsActive(Videos) | Window.IsActive(videoplaylist)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)] + [Window.IsActive(Videos) | Window.IsActive(videoplaylist)]</visible>
 				</control>
 				<control type="button" id="9113"><!-- Programs addons -->
 					<include>TopMenuButton</include>
 					<label>31027</label>
 					<onclick>ActivateWindow(programs,addons,return)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9115">
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[291] $LOCALIZE[14203]</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(librarysettings)</onclick>  <!-- videosettings -->
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9117">
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[291] $LOCALIZE[14201]</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(playersettings)</onclick>  <!-- videosettings -->
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9116">
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -504,7 +504,7 @@
 					<label>31486</label>
 					<onclick>Skin.ToggleSetting(nowidevideocase)</onclick>
 					<selected>!Skin.HasSetting(nowidevideocase)</selected>
-					<visible>Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>Control.IsVisible(51) + [Container.Content(movies) + String.Contains(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>	
 				<control type="button" id="9203"> <!-- customize case -->
 					<include>TopMenuButton</include>
@@ -512,7 +512,7 @@
 					<onclick>SetFocus(51)</onclick>
 					<onclick>Skin.SetString(customwindow,video)</onclick>
 					<onclick>ActivateWindowAndFocus(SkinSettings, 9100,3 ,403,0)</onclick>
-					<visible>!Skin.HasSetting(nowidevideocase) + Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					<visible>!Skin.HasSetting(nowidevideocase) + Control.IsVisible(51) + [Container.Content(movies) + String.Contains(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
 				<control type="radiobutton" id="9204"> <!-- disk art if avail -->
 					<include>TopMenuRadioButton</include>
@@ -532,28 +532,28 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31320]: $LOCALIZE[31808]</label>
 					<onclick>Skin.SetString(widemovies.art,poster)</onclick>
-					<selected>SubString(skin.string(widemovies.art),poster)</selected>
+					<selected>String.Contains(skin.string(widemovies.art),poster)</selected>
 					<visible>Control.IsVisible(51) + Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9207"><!-- Filmes Banner -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31320]: $LOCALIZE[31114]</label>
 					<onclick>Skin.SetString(widemovies.art,banner)</onclick>
-					<selected>SubString(skin.string(widemovies.art),banner)</selected>
+					<selected>String.Contains(skin.string(widemovies.art),banner)</selected>
 					<visible>Control.IsVisible(51) + Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9208"><!-- Seriados Poster -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31320]: $LOCALIZE[31808]</label>
 					<onclick>Skin.SetString(widetvshows.art,poster)</onclick>
-					<selected>SubString(skin.string(widetvshows.art),poster)</selected>
+					<selected>String.Contains(skin.string(widetvshows.art),poster)</selected>
 					<visible>Control.IsVisible(51) + Container.Content(tvshows)</visible>
 				</control>
 				<control type="radiobutton" id="9209"><!-- Seriados Banner -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31320]: $LOCALIZE[31114]</label>
 					<onclick>Skin.SetString(widetvshows.art,banner)</onclick>
-					<selected>SubString(skin.string(widetvshows.art),banner)</selected>
+					<selected>String.Contains(skin.string(widetvshows.art),banner)</selected>
 					<visible>Control.IsVisible(51) + Container.Content(tvshows)</visible>
 				</control>	
 				<control type="radiobutton" id="9210">
@@ -576,21 +576,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>31473</label>
 					<onclick>Skin.SetString(bannervideopanel,off)</onclick>
-					<selected>SubString(skin.string(bannervideopanel),off)</selected>
+					<selected>String.Contains(skin.string(bannervideopanel),off)</selected>
 					<visible>Control.IsVisible(52)</visible>
 				</control>
 				<control type="radiobutton" id="9217">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(bannervideopanel,auto)</onclick>
-					<selected>SubString(skin.string(bannervideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(bannervideopanel),auto)</selected>
 					<visible>Control.IsVisible(52)</visible>
 				</control>
 				<control type="button" id="9218"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(52) + SubString(skin.string(bannervideopanel),auto)</visible>
+					<visible>Control.IsVisible(52) + String.Contains(skin.string(bannervideopanel),auto)</visible>
 				</control>
 				<control type="button" id="9219"><!-- nivel de glass -->
 					<include>TopMenuRadioButton</include>
@@ -598,7 +598,7 @@
 					<onclick>Skin.SetString(view_glass,bannerglass)</onclick>
 					<onclick>SetFocus(260)</onclick>
 					<onclick>ActivateWindow(636)</onclick> <!-- custom menu glass -->
-					<visible>Control.IsVisible(52) + SubString(skin.string(bannervideopanel),auto)</visible>
+					<visible>Control.IsVisible(52) + String.Contains(skin.string(bannervideopanel),auto)</visible>
 				</control>
 
 				<!-- Banner Info -->
@@ -753,42 +753,42 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31513]</label>
 					<onclick>Skin.SetString(wallvideogrid,default)</onclick>
-					<selected>SubString(skin.string(wallvideogrid),default)</selected>
+					<selected>String.Contains(skin.string(wallvideogrid),default)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9239">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31512]</label>
 					<onclick>Skin.SetString(wallvideogrid,mid)</onclick>
-					<selected>SubString(skin.string(wallvideogrid),mid)</selected>
+					<selected>String.Contains(skin.string(wallvideogrid),mid)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9240">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31514]</label>
 					<onclick>Skin.SetString(wallvideogrid,big)</onclick>
-					<selected>SubString(skin.string(wallvideogrid),big)</selected>
+					<selected>String.Contains(skin.string(wallvideogrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9241">
 					<include>TopMenuRadioButton</include>
 					<label>31473</label>
 					<onclick>Skin.SetString(wallvideopanel,off)</onclick>
-					<selected>SubString(skin.string(wallvideopanel),off)</selected>
+					<selected>String.Contains(skin.string(wallvideopanel),off)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9242">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(wallvideopanel,auto)</onclick>
-					<selected>SubString(skin.string(wallvideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(wallvideopanel),auto)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="button" id="9243"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(56) + SubString(skin.string(wallvideopanel),auto)</visible>
+					<visible>Control.IsVisible(56) + String.Contains(skin.string(wallvideopanel),auto)</visible>
 				</control>
 				<control type="button" id="9244"><!-- nivel de glass -->
 					<include>TopMenuRadioButton</include>
@@ -796,7 +796,7 @@
 					<onclick>Skin.SetString(view_glass,wallglass)</onclick>
 					<onclick>SetFocus(260)</onclick>
 					<onclick>ActivateWindow(636)</onclick> <!-- custom views glass -->
-					<visible>Control.IsVisible(56) + SubString(skin.string(wallvideopanel),auto)</visible>
+					<visible>Control.IsVisible(56) + String.Contains(skin.string(wallvideopanel),auto)</visible>
 				</control>
 
 				<!-- Glass List -->
@@ -840,28 +840,28 @@
 					<include>TopMenuRadioButton</include>
 					<label>31471</label>
 					<onclick>Skin.SetString(glasslistvideopanel,manual)</onclick>
-					<selected>SubString(skin.string(glasslistvideopanel),manual)</selected>
+					<selected>String.Contains(skin.string(glasslistvideopanel),manual)</selected>
 					<visible>Control.IsVisible(57)</visible>
 				</control>
 				<control type="radiobutton" id="9256">
 					<include>TopMenuRadioButton</include>
 					<label>31472</label>
 					<onclick>Skin.SetString(glasslistvideopanel,alwayson)</onclick>
-					<selected>SubString(skin.string(glasslistvideopanel),alwayson)</selected>
+					<selected>String.Contains(skin.string(glasslistvideopanel),alwayson)</selected>
 					<visible>Control.IsVisible(57)</visible>
 				</control>
 				<control type="radiobutton" id="9257">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(glasslistvideopanel,auto)</onclick>
-					<selected>SubString(skin.string(glasslistvideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(glasslistvideopanel),auto)</selected>
 					<visible>Control.IsVisible(57)</visible>
 				</control>
 				<control type="button" id="9258"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(57) + SubString(skin.string(glasslistvideopanel),auto)</visible>
+					<visible>Control.IsVisible(57) + String.Contains(skin.string(glasslistvideopanel),auto)</visible>
 				</control>
 
 				<!-- CoverFlow -->
@@ -925,28 +925,28 @@
 					<include>TopMenuRadioButton</include>
 					<label>31471</label>
 					<onclick>Skin.SetString(showartvideopanel,manual)</onclick>
-					<selected>SubString(skin.string(showartvideopanel),manual)</selected>
+					<selected>String.Contains(skin.string(showartvideopanel),manual)</selected>
 					<visible>Control.IsVisible(60)</visible>
 				</control>
 				<control type="radiobutton" id="9272">
 					<include>TopMenuRadioButton</include>
 					<label>31472</label>
 					<onclick>Skin.SetString(showartvideopanel,alwayson)</onclick>
-					<selected>SubString(skin.string(showartvideopanel),alwayson)</selected>
+					<selected>String.Contains(skin.string(showartvideopanel),alwayson)</selected>
 					<visible>Control.IsVisible(60)</visible>
 				</control>
 				<control type="radiobutton" id="9273">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(showartvideopanel,auto)</onclick>
-					<selected>SubString(skin.string(showartvideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(showartvideopanel),auto)</selected>
 					<visible>Control.IsVisible(60)</visible>
 				</control>
 				<control type="button" id="9274"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(60) + SubString(skin.string(showartvideopanel),auto)</visible>
+					<visible>Control.IsVisible(60) + String.Contains(skin.string(showartvideopanel),auto)</visible>
 				</control>
 
 				<!-- Multiplex -->
@@ -977,41 +977,41 @@
 					<include>TopMenuRadioButton</include>
 					<label>31471</label>
 					<onclick>Skin.SetString(multiplexvideopanel,manual)</onclick>
-					<selected>SubString(skin.string(multiplexvideopanel),manual)</selected>
+					<selected>String.Contains(skin.string(multiplexvideopanel),manual)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
 				<control type="radiobutton" id="9284">
 					<include>TopMenuRadioButton</include>
 					<label>31472</label>
 					<onclick>Skin.SetString(multiplexvideopanel,alwayson)</onclick>
-					<selected>SubString(skin.string(multiplexvideopanel),alwayson)</selected>
+					<selected>String.Contains(skin.string(multiplexvideopanel),alwayson)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
 				<control type="radiobutton" id="9285">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(multiplexvideopanel,auto)</onclick>
-					<selected>SubString(skin.string(multiplexvideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(multiplexvideopanel),auto)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
 				<control type="button" id="9286"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(61) + SubString(skin.string(multiplexvideopanel),auto)</visible>
+					<visible>Control.IsVisible(61) + String.Contains(skin.string(multiplexvideopanel),auto)</visible>
 				</control>
 				<control type="radiobutton" id="9287">
 					<include>TopMenuRadioButton</include>
 					<label>31474</label>
 					<onclick>Skin.SetString(multiplexlayout,fanart)</onclick>
-					<selected>SubString(skin.string(multiplexlayout),fanart)</selected>
+					<selected>String.Contains(skin.string(multiplexlayout),fanart)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
 				<control type="radiobutton" id="9288">
 					<include>TopMenuRadioButton</include>
 					<label>31477</label>
 					<onclick>Skin.SetString(multiplexlayout,extrathumbs)</onclick>
-					<selected>SubString(skin.string(multiplexlayout),extrathumbs)</selected>
+					<selected>String.Contains(skin.string(multiplexlayout),extrathumbs)</selected>
 					<visible>Control.IsVisible(61)</visible>
 				</control>
 
@@ -1106,41 +1106,41 @@
 					<include>TopMenuRadioButton</include>
 					<label>31471</label>
 					<onclick>Skin.SetString(showcasevideopanel,manual)</onclick>
-					<selected>SubString(skin.string(showcasevideopanel),manual)</selected>
+					<selected>String.Contains(skin.string(showcasevideopanel),manual)</selected>
 					<visible>Control.IsVisible(66)</visible>
 				</control>
 				<control type="radiobutton" id="92105">
 					<include>TopMenuRadioButton</include>
 					<label>31472</label>
 					<onclick>Skin.SetString(showcasevideopanel,alwayson)</onclick>
-					<selected>SubString(skin.string(showcasevideopanel),alwayson)</selected>
+					<selected>String.Contains(skin.string(showcasevideopanel),alwayson)</selected>
 					<visible>Control.IsVisible(66)</visible>
 				</control>
 				<control type="radiobutton" id="92106">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(showcasevideopanel,auto)</onclick>
-					<selected>SubString(skin.string(showcasevideopanel),auto)</selected>
+					<selected>String.Contains(skin.string(showcasevideopanel),auto)</selected>
 					<visible>Control.IsVisible(66)</visible>
 				</control>
 				<control type="button" id="92107"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custonm delay -->
-					<visible>Control.IsVisible(66) + SubString(skin.string(showcasevideopanel),auto)</visible>
+					<visible>Control.IsVisible(66) + String.Contains(skin.string(showcasevideopanel),auto)</visible>
 				</control>
 				<control type="radiobutton" id="92108">
 					<include>TopMenuRadioButton</include>
 					<label>31474</label>
 					<onclick>Skin.SetString(showcaselayout,fanart)</onclick>
-					<selected>SubString(skin.string(showcaselayout),fanart)</selected>
+					<selected>String.Contains(skin.string(showcaselayout),fanart)</selected>
 					<visible>Control.IsVisible(66)</visible>
 				</control>
 				<control type="radiobutton" id="92109">
 					<include>TopMenuRadioButton</include>
 					<label>31477</label>
 					<onclick>Skin.SetString(showcaselayout,extrathumbs)</onclick>
-					<selected>SubString(skin.string(showcaselayout),extrathumbs)</selected>
+					<selected>String.Contains(skin.string(showcaselayout),extrathumbs)</selected>
 					<visible>Control.IsVisible(66)</visible>
 				</control>
 
@@ -1215,19 +1215,19 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31709]</label>
 					<onclick>Skin.SetString(mediaflags,on)</onclick>
-					<selected>SubString(skin.string(mediaflags),on)</selected>
+					<selected>String.Contains(skin.string(mediaflags),on)</selected>
 				</control>
 				<control type="radiobutton" id="9308"><!-- Etiquetas modo auto -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31938]</label>
 					<onclick>Skin.SetString(mediaflags,auto)</onclick>
-					<selected>SubString(skin.string(mediaflags),auto)</selected>
+					<selected>String.Contains(skin.string(mediaflags),auto)</selected>
 				</control>
 				<control type="radiobutton" id="9309"><!-- Etiquetas desligadas -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31711]</label>
 					<onclick>Skin.SetString(mediaflags,off)</onclick>
-					<selected>SubString(skin.string(mediaflags),off)</selected>
+					<selected>String.Contains(skin.string(mediaflags),off)</selected>
 				</control>
 				<control type="radiobutton" id="9310">
 					<include>TopMenuRadioButton</include>
@@ -1376,34 +1376,34 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(moviesfanart,fanart)</onclick>
-					<selected>SubString(skin.string(moviesfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(moviesfanart),fanart)</selected>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9407"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(moviesfanart,curtains)</onclick>
-					<selected>SubString(skin.string(moviesfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(moviesfanart),curtains)</selected>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9408"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(moviesfanart,fallback)</onclick>
-					<selected>SubString(skin.string(moviesfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(moviesfanart),fallback)</selected>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="button" id="9409"><!-- Movies Image Fallback -->
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackMoviesBG)</onclick>
-					<visible>Container.Content(movies) + SubString(skin.string(moviesfanart),fallback)</visible>
+					<visible>Container.Content(movies) + String.Contains(skin.string(moviesfanart),fallback)</visible>
 				</control>
 				<control type="radiobutton" id="9410"><!-- Extra Fanart Movies -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(moviesfanart,extra)</onclick>
-					<selected>SubString(skin.string(moviesfanart),extra)</selected>
+					<selected>String.Contains(skin.string(moviesfanart),extra)</selected>
 					<visible>Container.Content(movies) + !Skin.HasSetting(trailers)</visible>
 				</control>
 				<!-- TVShows Fanart  -->
@@ -1411,34 +1411,34 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(tvshowsfanart,fanart)</onclick>
-					<selected>SubString(skin.string(tvshowsfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(tvshowsfanart),fanart)</selected>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="radiobutton" id="9412"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(tvshowsfanart,curtains)</onclick>
-					<selected>SubString(skin.string(tvshowsfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(tvshowsfanart),curtains)</selected>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="radiobutton" id="9413"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(tvshowsfanart,fallback)</onclick>
-					<selected>SubString(skin.string(tvshowsfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(tvshowsfanart),fallback)</selected>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="button" id="9414">
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackTVShowsBG)</onclick>
-					<visible>Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),fallback)</visible>
+					<visible>Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),fallback)</visible>
 				</control>
 				<control type="radiobutton" id="9415"><!-- Extra Fanart TVShows -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(tvshowsfanart,extra)</onclick>
-					<selected>SubString(skin.string(tvshowsfanart),extra)</selected>
+					<selected>String.Contains(skin.string(tvshowsfanart),extra)</selected>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<!-- Seasons Fanart  -->
@@ -1446,42 +1446,42 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(seasonsfanart,fanart)</onclick>
-					<selected>SubString(skin.string(seasonsfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(seasonsfanart),fanart)</selected>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="radiobutton" id="9417"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(seasonsfanart,curtains)</onclick>
-					<selected>SubString(skin.string(seasonsfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(seasonsfanart),curtains)</selected>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="radiobutton" id="9418"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(seasonsfanart,fallback)</onclick>
-					<selected>SubString(skin.string(seasonsfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(seasonsfanart),fallback)</selected>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="button" id="9419">
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackSeasonsBG)</onclick>
-					<visible>SubString(skin.string(seasonsfanart),fallback)</visible>
+					<visible>String.Contains(skin.string(seasonsfanart),fallback)</visible>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="radiobutton" id="9420"><!-- Extra Fanart seasons -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(seasonsfanart,extra)</onclick>
-					<selected>SubString(skin.string(seasonsfanart),extra)</selected>
+					<selected>String.Contains(skin.string(seasonsfanart),extra)</selected>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="radiobutton" id="9421"><!-- Season/Episodes -->
 					<include>TopMenuRadioButton</include>
 					<label>31502</label>
 					<onclick>Skin.SetString(seasonsfanart,seasons)</onclick>
-					<selected>SubString(skin.string(seasonsfanart),seasons)</selected>
+					<selected>String.Contains(skin.string(seasonsfanart),seasons)</selected>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<!-- Episodes Fanart  -->
@@ -1489,42 +1489,42 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(episodesfanart,fanart)</onclick>
-					<selected>SubString(skin.string(episodesfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(episodesfanart),fanart)</selected>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="radiobutton" id="9423"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(episodesfanart,curtains)</onclick>
-					<selected>SubString(skin.string(episodesfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(episodesfanart),curtains)</selected>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="radiobutton" id="9424"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(episodesfanart,fallback)</onclick>
-					<selected>SubString(skin.string(episodesfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(episodesfanart),fallback)</selected>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="button" id="9425">
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackEpisodesBG)</onclick>
-					<visible>SubString(skin.string(episodesfanart),fallback)</visible>
+					<visible>String.Contains(skin.string(episodesfanart),fallback)</visible>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="radiobutton" id="9426"><!-- Extra Fanart seasons -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(episodesfanart,extra)</onclick>
-					<selected>SubString(skin.string(episodesfanart),extra)</selected>
+					<selected>String.Contains(skin.string(episodesfanart),extra)</selected>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="radiobutton" id="9427"><!-- Season/Episodes -->
 					<include>TopMenuRadioButton</include>
 					<label>31502</label>
 					<onclick>Skin.SetString(episodesfanart,seasons)</onclick>
-					<selected>SubString(skin.string(episodesfanart),seasons)</selected>
+					<selected>String.Contains(skin.string(episodesfanart),seasons)</selected>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<!-- MusicVideos Fanart  -->
@@ -1532,21 +1532,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(musicvideosfanart,fanart)</onclick>
-					<selected>SubString(skin.string(musicvideosfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(musicvideosfanart),fanart)</selected>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 				<control type="radiobutton" id="9429"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(musicvideosfanart,curtains)</onclick>
-					<selected>SubString(skin.string(musicvideosfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(musicvideosfanart),curtains)</selected>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 				<control type="radiobutton" id="9430"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(musicvideosfanart,fallback)</onclick>
-					<selected>SubString(skin.string(musicvideosfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(musicvideosfanart),fallback)</selected>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 				<control type="button" id="9431"><!-- Music Videos Image Fallback -->
@@ -1554,14 +1554,14 @@
 					<label>31504</label>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackMusicVideosBG)</onclick>
-					<visible>SubString(skin.string(musicvideosfanart),fallback)</visible>
+					<visible>String.Contains(skin.string(musicvideosfanart),fallback)</visible>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 				<control type="radiobutton" id="9432"><!-- Extra Fanart Music Videos -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(musicvideosfanart,extra)</onclick>
-					<selected>SubString(skin.string(musicvideosfanart),extra)</selected>
+					<selected>String.Contains(skin.string(musicvideosfanart),extra)</selected>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
 				<!-- Sets Fanart  -->
@@ -1569,35 +1569,35 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(setsfanart,fanart)</onclick>
-					<selected>SubString(skin.string(setsfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(setsfanart),fanart)</selected>
 					<visible>Container.Content(sets)</visible>
 				</control>
 				<control type="radiobutton" id="9434"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(setsfanart,curtains)</onclick>
-					<selected>SubString(skin.string(setsfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(setsfanart),curtains)</selected>
 					<visible>Container.Content(sets)</visible>
 				</control>
 				<control type="radiobutton" id="9435"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(setsfanart,fallback)</onclick>
-					<selected>SubString(skin.string(setsfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(setsfanart),fallback)</selected>
 					<visible>Container.Content(sets)</visible>
 				</control>
 				<control type="button" id="9436"><!-- Sets Image Fallback -->
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackSetsBG)</onclick>
-					<visible>Container.Content(sets) + SubString(skin.string(setsfanart),fallback)</visible>
+					<visible>Container.Content(sets) + String.Contains(skin.string(setsfanart),fallback)</visible>
 				</control>
 				<!-- Extra Fanart Sets -->
 				<!--<control type="radiobutton" id="9437">
 	<include>TopMenuRadioButton</include>
 	<label>31498</label>
 	<onclick>Skin.SetString(setsfanart,extra)</onclick>
-	<selected>SubString(skin.string(setsfanart),extra)</selected>
+	<selected>String.Contains(skin.string(setsfanart),extra)</selected>
 	<visible>Container.Content(sets)</visible>
 	</control>-->
 				<!-- Genero Fanart -->
@@ -1605,14 +1605,14 @@
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(videogenrefanart,curtains)</onclick>
-					<selected>SubString(skin.string(videogenrefanart),curtains)</selected>
+					<selected>String.Contains(skin.string(videogenrefanart),curtains)</selected>
 					<visible>Container.Content(genres)</visible>
 				</control>	
 				<control type="radiobutton" id="9453"><!-- Genre -->
 					<include>TopMenuRadioButton</include>
 					<label>31499</label>
 					<onclick>Skin.SetString(videogenrefanart,genre)</onclick>
-					<selected>SubString(skin.string(videogenrefanart),genre)</selected>
+					<selected>String.Contains(skin.string(videogenrefanart),genre)</selected>
 					<visible>Container.Content(genres)</visible>
 				</control>
 				<control type="radiobutton" id="9454"><!-- Movie Genre Fanart from resource -->
@@ -1620,13 +1620,13 @@
 					<label>31674</label>
 					<onclick>Skin.ToggleSetting(externalvideogenrefanart)</onclick>
 					<selected>Skin.HasSetting(externalvideogenrefanart)</selected>
-					<visible>Container.Content(genres) + SubString(skin.string(videogenrefanart),genre)</visible>
+					<visible>Container.Content(genres) + String.Contains(skin.string(videogenrefanart),genre)</visible>
 				</control>
 				<control type="button" id="9455"><!-- Select movie genre fanart resource -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_videogenrefanart]</label>
 					<onclick>RunScript(script.image.resource.select,type=resource.images.moviegenrefanart&amp;property=custom_moviegenrefanart)</onclick>
-					<visible>Container.Content(genres) + SubString(skin.string(videogenrefanart),genre) + Skin.HasSetting(externalvideogenrefanart)</visible>
+					<visible>Container.Content(genres) + String.Contains(skin.string(videogenrefanart),genre) + Skin.HasSetting(externalvideogenrefanart)</visible>
 				</control>
 				<control type="radiobutton" id="9457"><!-- Movie Genre Icons from resource -->
 					<include>TopMenuRadioButton</include>
@@ -1661,7 +1661,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>$LOCALIZE[31134]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>335</posx>
@@ -1692,7 +1692,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>$LOCALIZE[31407]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>655</posx>
@@ -1723,7 +1723,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -1773,9 +1773,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -1833,34 +1833,34 @@
 					<include>TopMenuButton</include>
 					<label>31025</label>
 					<onclick>ActivateWindow(music,addons,return)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="button" id="9112"><!-- Programs addons -->
 					<include>TopMenuButton</include>
 					<label>31027</label>
 					<onclick>ActivateWindow(programs,addons,return)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9115">
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[2] $LOCALIZE[14203]</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(librarysettings)</onclick> <!-- musicsettings -->
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9117">
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[2] $LOCALIZE[14201]</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(playersettings)</onclick> <!-- musicsettings -->
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 				<control type="button" id="9116">
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>SetFocus(51)</onclick>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -1962,21 +1962,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31513]</label>
 					<onclick>Skin.SetString(wallmusicgrid,default)</onclick>
-					<selected>SubString(skin.string(wallmusicgrid),default)</selected>
+					<selected>String.Contains(skin.string(wallmusicgrid),default)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9221">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31512]</label>
 					<onclick>Skin.SetString(wallmusicgrid,mid)</onclick>
-					<selected>SubString(skin.string(wallmusicgrid),mid)</selected>
+					<selected>String.Contains(skin.string(wallmusicgrid),mid)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9222">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31514]</label>
 					<onclick>Skin.SetString(wallmusicgrid,big)</onclick>
-					<selected>SubString(skin.string(wallmusicgrid),big)</selected>
+					<selected>String.Contains(skin.string(wallmusicgrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 
@@ -2056,19 +2056,19 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31709]</label>
 					<onclick>Skin.SetString(mediaflags,on)</onclick>
-					<selected>SubString(skin.string(mediaflags),on)</selected>
+					<selected>String.Contains(skin.string(mediaflags),on)</selected>
 				</control>
 				<control type="radiobutton" id="9357"><!-- Etiquetas modo auto -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31938]</label>
 					<onclick>Skin.SetString(mediaflags,auto)</onclick>
-					<selected>SubString(skin.string(mediaflags),auto)</selected>
+					<selected>String.Contains(skin.string(mediaflags),auto)</selected>
 				</control>
 				<control type="radiobutton" id="9358"><!-- Etiquetas desligadas -->
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31482] - $LOCALIZE[31711]</label>
 					<onclick>Skin.SetString(mediaflags,off)</onclick>
-					<selected>SubString(skin.string(mediaflags),off)</selected>
+					<selected>String.Contains(skin.string(mediaflags),off)</selected>
 				</control>
 				<control type="radiobutton" id="9359">
 					<include>TopMenuRadioButton</include>
@@ -2106,7 +2106,7 @@
 					<label>$VAR[value_musiclogopath]</label>
 					<onclick>Skin.SetString(CustomMusicLogoPath,)</onclick>
 					<onclick>Skin.SetPath(CustomMusicLogoPath)</onclick>
-					<visible>[Skin.HasSetting(musiclogo) | SubString(skin.string(musicfanart),extra)] + ![Container.Content(Genres) | Container.Content(Roles)]</visible>
+					<visible>[Skin.HasSetting(musiclogo) | String.Contains(skin.string(musicfanart),extra)] + ![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<control type="radiobutton" id="9365">
 					<include>TopMenuRadioButton</include>
@@ -2143,34 +2143,34 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(musicfanart,fanart)</onclick>
-					<selected>SubString(skin.string(musicfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(musicfanart),fanart)</selected>
 					<visible>![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<control type="radiobutton" id="9407"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(musicfanart,musiccurtains)</onclick>
-					<selected>SubString(skin.string(musicfanart),musiccurtains)</selected>
+					<selected>String.Contains(skin.string(musicfanart),musiccurtains)</selected>
 					<visible>![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<control type="radiobutton" id="9408"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(musicfanart,fallback)</onclick>
-					<selected>SubString(skin.string(musicfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(musicfanart),fallback)</selected>
 					<visible>![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<control type="button" id="9409"><!-- Music Image Fallback -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_fallbackmusicbg]</label>
 					<onclick>Skin.SetImage(CustomFallbackMusicBG)</onclick>
-					<visible>SubString(skin.string(musicfanart),fallback) + ![Container.Content(Genres) | Container.Content(Roles)]</visible>
+					<visible>String.Contains(skin.string(musicfanart),fallback) + ![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<control type="radiobutton" id="9410"><!-- Extra Fanart Music -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(musicfanart,extra)</onclick>
-					<selected>SubString(skin.string(musicfanart),extra)</selected>
+					<selected>String.Contains(skin.string(musicfanart),extra)</selected>
 					<visible>![Container.Content(Genres) | Container.Content(Roles)]</visible>
 				</control>
 				<!-- Genero Fanart -->
@@ -2178,14 +2178,14 @@
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(musicgenrefanart,curtains)</onclick>
-					<selected>SubString(skin.string(musicgenrefanart),curtains)</selected>
+					<selected>String.Contains(skin.string(musicgenrefanart),curtains)</selected>
 					<visible>Container.Content(genres)</visible>
 				</control>	
 				<control type="radiobutton" id="9453"><!-- Genre -->
 					<include>TopMenuRadioButton</include>
 					<label>31499</label>
 					<onclick>Skin.SetString(musicgenrefanart,genre)</onclick>
-					<selected>SubString(skin.string(musicgenrefanart),genre)</selected>
+					<selected>String.Contains(skin.string(musicgenrefanart),genre)</selected>
 					<visible>Container.Content(genres)</visible>
 				</control>
 				<control type="radiobutton" id="9454"><!-- Fanart from music genre icon resource -->
@@ -2193,13 +2193,13 @@
 					<label>31674</label>
 					<onclick>Skin.ToggleSetting(externalmusicgenrefanart)</onclick>
 					<selected>Skin.HasSetting(externalmusicgenrefanart)</selected>
-					<visible>Container.Content(genres) + SubString(skin.string(musicgenrefanart),genre)</visible>
+					<visible>Container.Content(genres) + String.Contains(skin.string(musicgenrefanart),genre)</visible>
 				</control>
 				<control type="button" id="9455"><!-- Select music genre fanart resource -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_musicgenrefanart]</label>
 					<onclick>RunScript(script.image.resource.select,type=resource.images.musicgenrefanart&amp;property=custom_musicgenrefanart)</onclick>
-					<visible>Container.Content(genres) + SubString(skin.string(musicgenrefanart),genre) + Skin.HasSetting(externalmusicgenrefanart)</visible>
+					<visible>Container.Content(genres) + String.Contains(skin.string(musicgenrefanart),genre) + Skin.HasSetting(externalmusicgenrefanart)</visible>
 				</control>
 				<control type="radiobutton" id="9457"><!-- Icons from music genre icon resource -->
 					<include>TopMenuRadioButton</include>
@@ -2234,7 +2234,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>31134</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>335</posx>
@@ -2265,7 +2265,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>$LOCALIZE[31407]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>655</posx>
@@ -2296,7 +2296,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -2352,9 +2352,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -2402,7 +2402,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -2495,7 +2495,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>31134</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="button" id="9300">
 				<include>TopMenuTopButton</include>
@@ -2505,7 +2505,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>31226</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="button" id="9400">
 				<include>TopMenuTopButton</include>
@@ -2515,7 +2515,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -2565,9 +2565,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom delay -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom delay -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -2615,7 +2615,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -2723,7 +2723,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>31134</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="button" id="9300">
 				<include>TopMenuTopButton</include>
@@ -2733,7 +2733,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>31407</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="button" id="9400">
 				<include>TopMenuTopButton</include>
@@ -2743,7 +2743,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -2793,9 +2793,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom delay -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom delay -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -2840,7 +2840,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -2862,13 +2862,13 @@
 					<label>31574</label>
 					<onclick>Skin.ToggleSetting(fullscreengamevideo)</onclick>
 					<selected>Skin.HasSetting(fullscreengamevideo)</selected>
-					<visible>SubString(skin.string(games_video),auto)</visible>
+					<visible>String.Contains(skin.string(games_video),auto)</visible>
 				</control>
 				<control type="button" id="9212"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_gamevideoseconds]</label>
 					<onclick>ActivateWindow(637)</onclick> <!-- custom delayRCB -->
-					<visible>Control.IsVisible(50) + SubString(skin.string(games_video),auto)</visible>
+					<visible>Control.IsVisible(50) + String.Contains(skin.string(games_video),auto)</visible>
 				</control>
 				<control type="button" id="4001"><!-- Missing info filter -->
 					<include>TopMenuButton</include>
@@ -2894,21 +2894,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31513]</label>
 					<onclick>Skin.SetString(wallgamesgrid,default)</onclick>
-					<selected>SubString(skin.string(wallgamesgrid),default)</selected>
+					<selected>String.Contains(skin.string(wallgamesgrid),default)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9215">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31512]</label>
 					<onclick>Skin.SetString(wallgamesgrid,mid)</onclick>
-					<selected>SubString(skin.string(wallgamesgrid),mid)</selected>
+					<selected>String.Contains(skin.string(wallgamesgrid),mid)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9216">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31514]</label>
 					<onclick>Skin.SetString(wallgamesgrid,big)</onclick>
-					<selected>SubString(skin.string(wallgamesgrid),big)</selected>
+					<selected>String.Contains(skin.string(wallgamesgrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>	
 				<control type="radiobutton" id="9217">
@@ -2928,41 +2928,41 @@
 					<include>TopMenuRadioButton</include>
 					<label>31471</label>
 					<onclick>Skin.SetString(multiplexgamespanel,manual)</onclick>
-					<selected>SubString(skin.string(multiplexgamespanel),manual)</selected>
+					<selected>String.Contains(skin.string(multiplexgamespanel),manual)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
 				<control type="radiobutton" id="9221">
 					<include>TopMenuRadioButton</include>
 					<label>31472</label>
 					<onclick>Skin.SetString(multiplexgamespanel,alwayson)</onclick>
-					<selected>SubString(skin.string(multiplexgamespanel),alwayson)</selected>
+					<selected>String.Contains(skin.string(multiplexgamespanel),alwayson)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
 				<control type="radiobutton" id="9222">
 					<include>TopMenuRadioButton</include>
 					<label>31470</label>
 					<onclick>Skin.SetString(multiplexgamespanel,auto)</onclick>
-					<selected>SubString(skin.string(multiplexgamespanel),auto)</selected>
+					<selected>String.Contains(skin.string(multiplexgamespanel),auto)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
 				<control type="button" id="9223"><!-- Seletor de delay -->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_seconds]</label>
 					<onclick>ActivateWindow(638)</onclick> <!-- custom delay -->
-					<visible>Control.IsVisible(53) + SubString(skin.string(multiplexgamespanel),auto)</visible>
+					<visible>Control.IsVisible(53) + String.Contains(skin.string(multiplexgamespanel),auto)</visible>
 				</control>
 				<control type="radiobutton" id="9224">
 					<include>TopMenuRadioButton</include>
 					<label>31474</label>
 					<onclick>Skin.SetString(multiplexgameslayout,fanart)</onclick>
-					<selected>SubString(skin.string(multiplexgameslayout),fanart)</selected>
+					<selected>String.Contains(skin.string(multiplexgameslayout),fanart)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
 				<control type="radiobutton" id="9225">
 					<include>TopMenuRadioButton</include>
 					<label>31477</label>
 					<onclick>Skin.SetString(multiplexgameslayout,extrathumbs)</onclick>
-					<selected>SubString(skin.string(multiplexgameslayout),extrathumbs)</selected>
+					<selected>String.Contains(skin.string(multiplexgameslayout),extrathumbs)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
 			</control>
@@ -2990,31 +2990,31 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(gamesfanart,fanart)</onclick>
-					<selected>SubString(skin.string(gamesfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(gamesfanart),fanart)</selected>
 				</control>
 				<control type="radiobutton" id="9407"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(gamesfanart,curtains)</onclick>
-					<selected>SubString(skin.string(gamesfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(gamesfanart),curtains)</selected>
 				</control>
 				<control type="radiobutton" id="9408"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(gamesfanart,fallback)</onclick>
-					<selected>SubString(skin.string(gamesfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(gamesfanart),fallback)</selected>
 				</control>
 				<control type="button" id="9409"><!-- Movies Image Fallback -->
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackGamesBG)</onclick>
-					<visible>SubString(skin.string(gamesfanart),fallback)</visible>
+					<visible>String.Contains(skin.string(gamesfanart),fallback)</visible>
 				</control>
 				<control type="radiobutton" id="9410"><!-- Extra Fanart Movies -->
 					<include>TopMenuRadioButton</include>
 					<label>31498</label>
 					<onclick>Skin.SetString(gamesfanart,extra)</onclick>
-					<selected>SubString(skin.string(gamesfanart),extra)</selected>
+					<selected>String.Contains(skin.string(gamesfanart),extra)</selected>
 				</control>
 			</control>
 
@@ -3036,7 +3036,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>$LOCALIZE[31407]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>335</posx>
@@ -3067,7 +3067,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>$LOCALIZE[31745]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>655</posx>
@@ -3098,7 +3098,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(50)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -3148,9 +3148,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custo dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custo dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -3198,7 +3198,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -3220,21 +3220,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31513]</label>
 					<onclick>Skin.SetString(wallpicsgrid,default)</onclick>
-					<selected>SubString(skin.string(wallpicsgrid),default)</selected>
+					<selected>String.Contains(skin.string(wallpicsgrid),default)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9221">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31512]</label>
 					<onclick>Skin.SetString(wallpicsgrid,mid)</onclick>
-					<selected>SubString(skin.string(wallpicsgrid),mid)</selected>
+					<selected>String.Contains(skin.string(wallpicsgrid),mid)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9222">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31514]</label>
 					<onclick>Skin.SetString(wallpicsgrid,big)</onclick>
-					<selected>SubString(skin.string(wallpicsgrid),big)</selected>
+					<selected>String.Contains(skin.string(wallpicsgrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 			</control>
@@ -3338,7 +3338,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>$LOCALIZE[31134]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>335</posx>
@@ -3369,7 +3369,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>$LOCALIZE[31407]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>655</posx>
@@ -3400,7 +3400,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -3451,9 +3451,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -3498,7 +3498,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -3528,21 +3528,21 @@
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31513]</label>
 					<onclick>Skin.SetString(wallprogramsgrid,default)</onclick>
-					<selected>SubString(skin.string(wallprogramsgrid),default)</selected>
+					<selected>String.Contains(skin.string(wallprogramsgrid),default)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9271">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31512]</label>
 					<onclick>Skin.SetString(wallprogramsgrid,mid)</onclick>
-					<selected>SubString(skin.string(wallprogramsgrid),mid)</selected>
+					<selected>String.Contains(skin.string(wallprogramsgrid),mid)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9272">
 					<include>TopMenuRadioButton</include>
 					<label>$LOCALIZE[31511] - $LOCALIZE[31514]</label>
 					<onclick>Skin.SetString(wallprogramsgrid,big)</onclick>
-					<selected>SubString(skin.string(wallprogramsgrid),big)</selected>
+					<selected>String.Contains(skin.string(wallprogramsgrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
 				</control>
 				<control type="radiobutton" id="9335">
@@ -3617,25 +3617,25 @@
 					<include>TopMenuRadioButton</include>
 					<label>31497</label>
 					<onclick>Skin.SetString(programsfanart,fanart)</onclick>
-					<selected>SubString(skin.string(programsfanart),fanart)</selected>
+					<selected>String.Contains(skin.string(programsfanart),fanart)</selected>
 				</control>
 				<control type="radiobutton" id="9407"><!-- Curtains -->
 					<include>TopMenuRadioButton</include>
 					<label>31501</label>
 					<onclick>Skin.SetString(programsfanart,curtains)</onclick>
-					<selected>SubString(skin.string(programsfanart),curtains)</selected>
+					<selected>String.Contains(skin.string(programsfanart),curtains)</selected>
 				</control>
 				<control type="radiobutton" id="9408"><!-- Fanart - Fallback -->
 					<include>TopMenuRadioButton</include>
 					<label>31500</label>
 					<onclick>Skin.SetString(programsfanart,fallback)</onclick>
-					<selected>SubString(skin.string(programsfanart),fallback)</selected>
+					<selected>String.Contains(skin.string(programsfanart),fallback)</selected>
 				</control>
 				<control type="button" id="9409"><!-- programs Image Fallback -->
 					<include>TopMenuButton</include>
 					<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
 					<onclick>Skin.SetImage(CustomFallbackProgramsBG)</onclick>
-					<visible>SubString(skin.string(programsfanart),fallback)</visible>
+					<visible>String.Contains(skin.string(programsfanart),fallback)</visible>
 				</control>
 			</control>
 
@@ -3657,7 +3657,7 @@
 				<onleft>9100</onleft>
 				<onright>9300</onright>
 				<label>31134</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>335</posx>
@@ -3688,7 +3688,7 @@
 				<onleft>9200</onleft>
 				<onright>9400</onright>
 				<label>$LOCALIZE[31407]/$LOCALIZE[31135]</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="group">
 				<posx>655</posx>
@@ -3719,7 +3719,7 @@
 				<onleft>9300</onleft>
 				<onright>SetFocus(51)</onright>
 				<label>31408</label>
-				<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</enable>
+				<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</enable>
 			</control>
 			<control type="image">
 				<posx>320</posx>
@@ -3770,9 +3770,9 @@
 					<include>TopMenuButton</include>
 					<label>$VAR[value_kioskcode]</label>
 					<onclick>Skin.SetString(custom_code,codestep)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(51)</onclick>
-					<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-					<onclick condition="SubString(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(51)</onclick>
+					<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+					<onclick condition="String.Contains(skin.string(codestep),step3) + Control.HasFocus(9102)">Skin.Reset($INFO[skin.string(custom_code)])</onclick>
 					<visible>Skin.HasSetting(kioskcode)</visible>
 				</control>
 				<control type="button" id="9103"><!-- Home -->
@@ -3826,7 +3826,7 @@
 					<include>TopMenuButton</include>
 					<label>31375</label>
 					<onclick>ActivateWindow(settings)</onclick>
-					<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
 			</control>
 
@@ -4041,7 +4041,7 @@
 					<onleft>9100</onleft>
 					<onright>32</onright>
 					<label>$LOCALIZE[31134]/$LOCALIZE[31135]</label>
-					<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)] + !Skin.HasSetting(kiosk)</enable>
+					<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)] + !Skin.HasSetting(kiosk)</enable>
 					<visible>![Window.IsActive(tvguide) | Window.IsActive(tvrecordings)]</visible>
 				</control>
 				<control type="button" id="9233"><!-- Change PVR View for recordings -->
@@ -4052,7 +4052,7 @@
 					<onleft>9100</onleft>
 					<onright>32</onright>
 					<label>$LOCALIZE[31134]/$LOCALIZE[31135]</label>
-					<enable>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)] + !Skin.HasSetting(kiosk)</enable>
+					<enable>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)] + !Skin.HasSetting(kiosk)</enable>
 					<visible>Window.IsActive(tvrecordings)</visible>
 				</control>
 			</control>

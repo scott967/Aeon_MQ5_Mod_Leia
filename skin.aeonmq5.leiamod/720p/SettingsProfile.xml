@@ -65,7 +65,7 @@
 						<font>Font_20</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<posx>50</posx>
@@ -77,7 +77,7 @@
 						<font>Font_20</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Label2)</visible>
+						<visible>String.IsEmpty(ListItem.Label2)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="990" height="40">
@@ -99,7 +99,7 @@
 						<font>Font_20</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
-						<visible>![IsEmpty(ListItem.Label2) | Control.HasFocus(2)]</visible>
+						<visible>![String.IsEmpty(ListItem.Label2) | Control.HasFocus(2)]</visible>
 					</control>
 					<control type="label">
 						<posx>50</posx>
@@ -111,7 +111,7 @@
 						<font>Font_20</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Label2) + !Control.HasFocus(2)</visible>
+						<visible>String.IsEmpty(ListItem.Label2) + !Control.HasFocus(2)</visible>
 					</control>
 					<control type="label">
 						<posx>50</posx>
@@ -123,7 +123,7 @@
 						<font>Font_20</font>
 						<textcolor>FF101010</textcolor>
 						<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
-						<visible>!IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
+						<visible>!String.IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
 					</control>
 					<control type="label">
 						<posx>50</posx>
@@ -135,7 +135,7 @@
 						<font>Font_20</font>
 						<textcolor>FF101010</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
+						<visible>String.IsEmpty(ListItem.Label2) + Control.HasFocus(2)</visible>
 					</control>
 				</focusedlayout>
 			</control>

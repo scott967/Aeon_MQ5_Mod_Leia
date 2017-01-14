@@ -55,7 +55,7 @@
 				<aligny>center</aligny>
 				<texture>star.png</texture>
 				<colordiffuse>FFFFFF40</colordiffuse>
-				<visible>!IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="label">
 				<posx>1106</posx>
@@ -67,7 +67,7 @@
 				<font>Font_18A</font>
 				<label>[B]$INFO[VideoPlayer.UserRating][/B]</label>
 				<textcolor>FF101010</textcolor>
-				<visible>!IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image"><!-- Star -->
 				<posx>1179</posx>
@@ -233,11 +233,11 @@
 				<control type="image"><!-- studio -->
 					<include>FlagImage</include>
 					<texture>$VAR[value_studiosicon]</texture>
-					<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 				</control>
 				<control type="image"><!-- Flags -->
 					<include>FlagImage</include>
@@ -302,7 +302,7 @@
 				<height>180</height>
 				<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_videodisc]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<visible>!IsEmpty(Player.Art(discart))</visible>
+				<visible>!String.IsEmpty(Player.Art(discart))</visible>
 			</control>
 			<control type="image">
 				<posx>8</posx>

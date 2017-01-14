@@ -339,7 +339,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
 				</control>
 				<control type="image">
 					<posx>760</posx>
@@ -351,7 +351,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
 				</control>
 				<control type="image">
 					<posx>870</posx>
@@ -363,7 +363,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
 				</control>
 			</control><!-- END CDART-->
 
@@ -396,7 +396,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="360" center="auto" time="40000" delay="5000" loop="true" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
 				</control>
 				<control type="image">
 					<posx>760</posx>
@@ -409,7 +409,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
 				</control>
 				<control type="image">
 					<posx>870</posx>
@@ -422,7 +422,7 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<animation effect="rotate" start="0" end="360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 					<include>Animation_ViewsCDart</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
 				</control>
 			</control><!-- END MODIF CDART REFLECT-->
 

@@ -68,7 +68,7 @@
 				<texture>$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 			</control>
 			<control type="image">
 				<posx>152</posx>
@@ -78,7 +78,7 @@
 				<texture flipy="true">$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)]</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)]</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout width="240" height="300">
@@ -109,7 +109,7 @@
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation effect="zoom" start="100" end="125" center="100,115" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 			</control>
 			<control type="image">
 				<posx>172</posx>
@@ -120,7 +120,7 @@
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation effect="zoom" start="100" end="125" center="100,115" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)]</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)]</visible>
 			</control>	
 		</focusedlayout>
 	</include>	

@@ -100,7 +100,7 @@
 					<label>31722</label>
 					<onclick>Skin.ToggleSetting(nolyrics_on)</onclick>
 					<selected>!Skin.HasSetting(nolyrics_on)</selected>
-					<enable>![IsEmpty(Skin.String(LyricScript_Path)) | Skin.HasSetting(novisfurniture) | String.IsEqual(skin.string(vis_layout),karaoke)]</enable>
+					<enable>![String.IsEmpty(Skin.String(LyricScript_Path)) | Skin.HasSetting(novisfurniture) | String.IsEqual(skin.string(vis_layout),karaoke)]</enable>
 				</control>
 				<control type="button" id="6"><!-- lyrics set script -->
 					<!-- <radioposx>894</radioposx> -->

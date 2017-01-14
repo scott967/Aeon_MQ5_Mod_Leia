@@ -34,12 +34,12 @@
 		<height>70</height> <!-- was 60 -->
 		<ondown condition="!Skin.HasSetting(highermainmenu)">Skin.SetBool(submode)</ondown>
 		<ondown condition="!Skin.HasSetting(highermainmenu)">ActivateWindow($VAR[Sub_GoTo])</ondown>	
-		<ondown condition="Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]">Skin.SetBool(submode)</ondown>
-		<ondown condition="Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]">ActivateWindow($VAR[Sub_GoTo])</ondown>
-		<ondown condition="Skin.HasSetting(highermainmenu) + Control.IsVisible(604) + ![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)]">SetFocus(603)</ondown>		
+		<ondown condition="Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]">Skin.SetBool(submode)</ondown>
+		<ondown condition="Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]">ActivateWindow($VAR[Sub_GoTo])</ondown>
+		<ondown condition="Skin.HasSetting(highermainmenu) + Control.IsVisible(604) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)]">SetFocus(603)</ondown>		
 		<onup condition="!Player.HasMedia + [!Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">SetFocus($VAR[Top_GoTo])</onup>	
-		<onup condition="!Player.HasMedia + [Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]]">SetFocus($VAR[Top_GoTo])</onup>
-		<onup condition="!Player.HasMedia + [Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu) + Control.IsVisible(604) + ![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)]]">SetFocus(603)</onup>
+		<onup condition="!Player.HasMedia + [Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]]">SetFocus($VAR[Top_GoTo])</onup>
+		<onup condition="!Player.HasMedia + [Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu) + Control.IsVisible(604) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)]]">SetFocus(603)</onup>
 		<onup condition="Player.HasMedia">SetFocus(600)</onup>
 		<orientation>horizontal</orientation>
 		<scrolltime>350</scrolltime>
@@ -316,7 +316,7 @@
 		<onload condition="String.IsEqual(Container(9000).numitems,0)">SetFocus(9101)</onload>
 		<onload>Skin.Reset(submenu_action)</onload>
 		<onunload>Skin.Reset(submode)</onunload>
-		<onunload condition="!IsEmpty(skin.string(submenu_action))">SetFocus(8000)</onunload>
+		<onunload condition="!String.IsEmpty(skin.string(submenu_action))">SetFocus(8000)</onunload>
 	</include>
 	<!-- ######################################################################### Submenu Lista Vertical ######################################################################### -->
 	<include name="SubmenuVList">
@@ -338,7 +338,7 @@
 				<height>33</height>
 				<texture>grey.png</texture>
 				<colordiffuse>40007399</colordiffuse>
-				<visible>Window.IsVisible(6000) + ![IsEmpty(ListItem.Property(id)) | !IsEmpty(ListItem.Property(condition))]</visible>
+				<visible>Window.IsVisible(6000) + ![String.IsEmpty(ListItem.Property(id)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
 			</control>
 			<control type="image"><!-- vermelho -->
 				<posx>0</posx>
@@ -347,7 +347,7 @@
 				<height>33</height>
 				<texture>grey.png</texture>
 				<colordiffuse>50B20000</colordiffuse>
-				<visible>Window.IsVisible(6000) + [IsEmpty(ListItem.Property(id)) | !IsEmpty(ListItem.Property(condition))]</visible>
+				<visible>Window.IsVisible(6000) + [String.IsEmpty(ListItem.Property(id)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
 			</control>
 			<control type="image"><!-- amarelo -->
 				<posx>0</posx>
@@ -356,7 +356,7 @@
 				<height>33</height>
 				<texture>grey.png</texture>
 				<colordiffuse>50C4941D</colordiffuse>
-				<visible>Window.IsVisible(6000) + IsEmpty(ListItem.Property(id))</visible>
+				<visible>Window.IsVisible(6000) + String.IsEmpty(ListItem.Property(id))</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -398,7 +398,7 @@
 				<texture>grey.png</texture>
 				<colordiffuse>FF007399</colordiffuse>
 				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-				<visible>Window.IsVisible(6000) + ![IsEmpty(ListItem.Property(id)) | !IsEmpty(ListItem.Property(condition))]</visible>
+				<visible>Window.IsVisible(6000) + ![String.IsEmpty(ListItem.Property(id)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
 			</control>
 			<control type="image"><!-- vermelho -->
 				<posx>0</posx>
@@ -408,7 +408,7 @@
 				<texture>grey.png</texture>
 				<colordiffuse>FFB20000</colordiffuse>
 				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-				<visible>Window.IsVisible(6000) + [IsEmpty(ListItem.Property(id)) | !IsEmpty(ListItem.Property(condition))]</visible>
+				<visible>Window.IsVisible(6000) + [String.IsEmpty(ListItem.Property(id)) | !String.IsEmpty(ListItem.Property(condition))]</visible>
 			</control>
 			<control type="image"><!-- amarelo -->
 				<posx>0</posx>
@@ -418,7 +418,7 @@
 				<texture>grey.png</texture>
 				<colordiffuse>FFC4941D</colordiffuse>
 				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-				<visible>Window.IsVisible(6000) + IsEmpty(ListItem.Property(id))</visible>
+				<visible>Window.IsVisible(6000) + String.IsEmpty(ListItem.Property(id))</visible>
 			</control>
 			<control type="label">
 				<posx>130</posx>
@@ -555,7 +555,7 @@
 			<property name="action">$VAR[value_menu1.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu1.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu1.master)) | SubString(skin.string(menu1.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu1.master)) | String.Contains(skin.string(menu1.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu2.label]</label>
@@ -568,7 +568,7 @@
 			<property name="action">$VAR[value_menu2.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu2.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu2.master)) | SubString(skin.string(menu2.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu2.master)) | String.Contains(skin.string(menu2.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu3.label]</label>
@@ -581,7 +581,7 @@
 			<property name="action">$VAR[value_menu3.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu3.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu3.master)) | SubString(skin.string(menu3.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu3.master)) | String.Contains(skin.string(menu3.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu4.label]</label>
@@ -594,7 +594,7 @@
 			<property name="action">$VAR[value_menu4.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu4.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu4.master)) | SubString(skin.string(menu4.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu4.master)) | String.Contains(skin.string(menu4.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu5.label]</label>
@@ -607,7 +607,7 @@
 			<property name="action">$VAR[value_menu5.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu5.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu5.master)) | SubString(skin.string(menu5.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu5.master)) | String.Contains(skin.string(menu5.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu6.label]</label>
@@ -620,7 +620,7 @@
 			<property name="action">$VAR[value_menu6.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu6.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu6.master)) | SubString(skin.string(menu6.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu6.master)) | String.Contains(skin.string(menu6.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu7.label]</label>
@@ -633,7 +633,7 @@
 			<property name="action">$VAR[value_menu7.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu7.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu7.master)) | SubString(skin.string(menu7.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu7.master)) | String.Contains(skin.string(menu7.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu8.label]</label>
@@ -646,7 +646,7 @@
 			<property name="action">$VAR[value_menu8.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu8.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu8.master)) | SubString(skin.string(menu8.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu8.master)) | String.Contains(skin.string(menu8.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu9.label]</label>
@@ -659,7 +659,7 @@
 			<property name="action">$VAR[value_menu9.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu9.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu9.master)) | SubString(skin.string(menu9.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu9.master)) | String.Contains(skin.string(menu9.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu10.label]</label>
@@ -672,7 +672,7 @@
 			<property name="action">$VAR[value_menu10.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu10.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu10.master)) | SubString(skin.string(menu10.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu10.master)) | String.Contains(skin.string(menu10.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu11.label]</label>
@@ -685,7 +685,7 @@
 			<property name="action">$VAR[value_menu11.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu11.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu11.master)) | SubString(skin.string(menu11.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu11.master)) | String.Contains(skin.string(menu11.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu12.label]</label>
@@ -698,7 +698,7 @@
 			<property name="action">$VAR[value_menu12.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu12.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu12.master)) | SubString(skin.string(menu12.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu12.master)) | String.Contains(skin.string(menu12.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu13.label]</label>
@@ -711,7 +711,7 @@
 			<property name="action">$VAR[value_menu13.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu13.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu13.master)) | SubString(skin.string(menu13.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu13.master)) | String.Contains(skin.string(menu13.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu14.label]</label>
@@ -724,7 +724,7 @@
 			<property name="action">$VAR[value_menu14.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu14.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu14.master)) | SubString(skin.string(menu14.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu14.master)) | String.Contains(skin.string(menu14.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu15.label]</label>
@@ -737,7 +737,7 @@
 			<property name="action">$VAR[value_menu15.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu15.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu15.master)) | SubString(skin.string(menu15.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu15.master)) | String.Contains(skin.string(menu15.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu16.label]</label>
@@ -750,7 +750,7 @@
 			<property name="action">$VAR[value_menu16.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu16.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu16.master)) | SubString(skin.string(menu16.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu16.master)) | String.Contains(skin.string(menu16.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu17.label]</label>
@@ -763,7 +763,7 @@
 			<property name="action">$VAR[value_menu17.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu17.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu17.master)) | SubString(skin.string(menu17.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu17.master)) | String.Contains(skin.string(menu17.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu18.label]</label>
@@ -776,7 +776,7 @@
 			<property name="action">$VAR[value_menu18.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu18.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu18.master)) | SubString(skin.string(menu18.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu18.master)) | String.Contains(skin.string(menu18.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu19.label]</label>
@@ -789,7 +789,7 @@
 			<property name="action">$VAR[value_menu19.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu19.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu19.master)) | SubString(skin.string(menu19.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu19.master)) | String.Contains(skin.string(menu19.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu20.label]</label>
@@ -802,7 +802,7 @@
 			<property name="action">$VAR[value_menu20.action]</property>
 			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu20.action]</onclick>
 			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
-			<visible>![IsEmpty(skin.string(menu20.master)) | SubString(skin.string(menu20.visible),off)] | Window.IsVisible(6000)</visible>
+			<visible>![String.IsEmpty(skin.string(menu20.master)) | String.Contains(skin.string(menu20.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 	</include>
 </includes>

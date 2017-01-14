@@ -268,7 +268,7 @@
 	<colordiffuse>E4101010</colordiffuse>
 	<include>Animation_Fade</include>
 	<animation effect="fade" start="20" end="80" time="700" condition="true" pulse="true">Conditional</animation>
-	<visible>SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+	<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
 	</control>
 	<control type="label">
 	<posx>20</posx>
@@ -369,7 +369,7 @@
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
-	<visible>!IsEmpty(ListItem.Property(Disc))</visible>
+	<visible>!String.IsEmpty(ListItem.Property(Disc))</visible>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -425,7 +425,7 @@
 	<aspectratio align="center" aligny="center">keep</aspectratio>
 	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 	<include>Animation_ViewsCDart</include>
-	<visible>!IsEmpty(ListItem.Property(Disc))</visible>
+	<visible>!String.IsEmpty(ListItem.Property(Disc))</visible>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -456,7 +456,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.1.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.1.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.1.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.2.Title)]</label>
@@ -466,7 +466,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.2.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.2.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.2.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.3.Title)]</label>
@@ -476,7 +476,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.3.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.3.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.3.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.4.Title)]</label>
@@ -486,7 +486,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.4.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.4.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.4.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.5.Title)]</label>
@@ -496,7 +496,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.5.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.5.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.5.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.6.Title)]</label>
@@ -506,7 +506,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.6.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.6.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.6.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.7.Title)]</label>
@@ -516,7 +516,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.7.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.7.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.7.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.8.Title)]</label>
@@ -526,7 +526,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.8.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.8.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.8.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.9.Title)]</label>
@@ -536,7 +536,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.9.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.9.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.9.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.10.Title)]</label>
@@ -546,7 +546,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.10.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.10.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.10.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.10.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.11.Title)]</label>
@@ -556,7 +556,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.11.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.11.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.11.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.11.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.11.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.12.Title)]</label>
@@ -566,7 +566,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.12.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.12.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.12.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.12.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.12.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.13.Title)]</label>
@@ -576,7 +576,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.13.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.13.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.13.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.13.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.13.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.14.Title)]</label>
@@ -586,7 +586,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.14.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.14.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.14.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.14.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.14.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.15.Title)]</label>
@@ -596,7 +596,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.15.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.15.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.15.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.15.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.15.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.16.Title)]</label>
@@ -606,7 +606,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.16.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.16.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.16.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.16.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.16.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.17.Title)]</label>
@@ -616,7 +616,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.17.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.17.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.17.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.17.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.17.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.18.Title)]</label>
@@ -626,7 +626,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.18.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.18.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.18.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.18.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.18.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.19.Title)]</label>
@@ -636,7 +636,7 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.19.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.19.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.19.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.19.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.19.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(home).Property(Set.Movie.20.Title)]</label>
@@ -646,13 +646,13 @@
 	<property name="Plot">$INFO[Window(home).Property(Set.Movie.20.Plot)]</property>
 	<property name="Year">$INFO[Window(home).Property(Set.Movie.20.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.20.DBID)])</onclick>
-	<visible>!IsEmpty(Window(home).Property(Set.Movie.20.Art(poster)))</visible>
+	<visible>!String.IsEmpty(Window(home).Property(Set.Movie.20.Art(poster)))</visible>
 	</item>
 	</content>
 	</control>
 	<control type="group">
 	<posy>-30</posy>
-	<animation effect="slide" end="0,-40" condition="SubString(skin.string(mediaflags),off)">Conditional</animation>
+	<animation effect="slide" end="0,-40" condition="String.Contains(skin.string(mediaflags),off)">Conditional</animation>
 	<control type="button" id="160">
 	<include>InvisibleButton</include>
 	<onup condition="Skin.HasSetting(moviezoom)">SetFocus(5801)</onup>

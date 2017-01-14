@@ -12,12 +12,12 @@
 	<onload condition="!SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,0)</onload> <!-- default weather icons -->
 	<onload condition="Skin.HasSetting(custom_wxicons.multi)">SetProperty(current_wxicon_multi,true,0)</onload>
 	<onload condition="Player.HasAudio + System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
-	<onload condition="System.HasAddon(script.favourites) + ![IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">RunScript(script.favourites)</onload>
+	<onload condition="System.HasAddon(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">RunScript(script.favourites)</onload>
 	<onload condition="Skin.HasSetting(rcbgames)">RunScript(script.games.rom.collection.browser,limit=12)</onload>
 	<onload condition="Skin.HasSetting(rcbgames)">Skin.Reset(rcbgames)</onload>
 	<onload>Skin.Reset(playlists)</onload>
-	<onunload condition="SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
-	<include condition="System.HasAddon(script.randomandlastitems) + [SubString(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget) | SubString(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget) | SubString(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget) | SubString(skin.string(menu4.master),vpl) + !Skin.HasSetting(novpl4widget) | SubString(skin.string(menu5.master),vpl) + !Skin.HasSetting(novpl5widget) | SubString(skin.string(menu6.master),vpl) + !Skin.HasSetting(novpl6widget) | SubString(skin.string(menu7.master),vpl) + !Skin.HasSetting(novpl7widget) | SubString(skin.string(menu8.master),vpl) + !Skin.HasSetting(novpl8widget) | SubString(skin.string(menu9.master),vpl) + !Skin.HasSetting(novpl9widget) | SubString(skin.string(menu10.master),vpl) + !Skin.HasSetting(novpl10widget) | ubString(skin.string(menu11.master),vpl) + !Skin.HasSetting(novpl11widget) | SubString(skin.string(menu12.master),vpl) + !Skin.HasSetting(novpl12widget) | SubString(skin.string(menu13.master),vpl) + !Skin.HasSetting(novpl13widget) | SubString(skin.string(menu14.master),vpl) + !Skin.HasSetting(novpl14widget) | SubString(skin.string(menu15.master),vpl) + !Skin.HasSetting(novpl15widget) | SubString(skin.string(menu16.master),vpl) + !Skin.HasSetting(novpl16widget) | SubString(skin.string(menu17.master),vpl) + !Skin.HasSetting(novpl17widget) | SubString(skin.string(menu18.master),vpl) + !Skin.HasSetting(novpl18widget) | SubString(skin.string(menu19.master),vpl) + !Skin.HasSetting(novpl19widget) | SubString(skin.string(menu20.master),vpl) + !Skin.HasSetting(novpl20widget) | SubString(skin.string(menu1.master),apl) + !Skin.HasSetting(noapl1widget) | SubString(skin.string(menu2.master),apl) + !Skin.HasSetting(noapl2widget) | SubString(skin.string(menu3.master),apl) + !Skin.HasSetting(noapl3widget) | SubString(skin.string(menu4.master),apl) + !Skin.HasSetting(noapl4widget) | SubString(skin.string(menu5.master),apl) + !Skin.HasSetting(noapl5widget) | SubString(skin.string(menu6.master),apl) + !Skin.HasSetting(noapl6widget) | SubString(skin.string(menu7.master),apl) + !Skin.HasSetting(noapl7widget) | SubString(skin.string(menu8.master),apl) + !Skin.HasSetting(noapl8widget) | SubString(skin.string(menu9.master),apl) + !Skin.HasSetting(noapl9widget) | SubString(skin.string(menu10.master),apl) + !Skin.HasSetting(noapl10widget) | ubString(skin.string(menu11.master),apl) + !Skin.HasSetting(noapl11widget) | SubString(skin.string(menu12.master),apl) + !Skin.HasSetting(noapl12widget) | SubString(skin.string(menu13.master),apl) + !Skin.HasSetting(noapl13widget) | SubString(skin.string(menu14.master),apl) + !Skin.HasSetting(noapl14widget) | SubString(skin.string(menu15.master),apl) + !Skin.HasSetting(noapl15widget) | SubString(skin.string(menu16.master),apl) + !Skin.HasSetting(noapl16widget) | SubString(skin.string(menu17.master),apl) + !Skin.HasSetting(noapl17widget) | SubString(skin.string(menu18.master),apl) + !Skin.HasSetting(noapl18widget) | SubString(skin.string(menu19.master),apl) + !Skin.HasSetting(noapl19widget) | SubString(skin.string(menu20.master),apl) + !Skin.HasSetting(noapl20widget)]">Playlists</include>
+	<onunload condition="String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
+	<include condition="System.HasAddon(script.randomandlastitems) + [String.Contains(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget) | String.Contains(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget) | String.Contains(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget) | String.Contains(skin.string(menu4.master),vpl) + !Skin.HasSetting(novpl4widget) | String.Contains(skin.string(menu5.master),vpl) + !Skin.HasSetting(novpl5widget) | String.Contains(skin.string(menu6.master),vpl) + !Skin.HasSetting(novpl6widget) | String.Contains(skin.string(menu7.master),vpl) + !Skin.HasSetting(novpl7widget) | String.Contains(skin.string(menu8.master),vpl) + !Skin.HasSetting(novpl8widget) | String.Contains(skin.string(menu9.master),vpl) + !Skin.HasSetting(novpl9widget) | String.Contains(skin.string(menu10.master),vpl) + !Skin.HasSetting(novpl10widget) | ubString(skin.string(menu11.master),vpl) + !Skin.HasSetting(novpl11widget) | String.Contains(skin.string(menu12.master),vpl) + !Skin.HasSetting(novpl12widget) | String.Contains(skin.string(menu13.master),vpl) + !Skin.HasSetting(novpl13widget) | String.Contains(skin.string(menu14.master),vpl) + !Skin.HasSetting(novpl14widget) | String.Contains(skin.string(menu15.master),vpl) + !Skin.HasSetting(novpl15widget) | String.Contains(skin.string(menu16.master),vpl) + !Skin.HasSetting(novpl16widget) | String.Contains(skin.string(menu17.master),vpl) + !Skin.HasSetting(novpl17widget) | String.Contains(skin.string(menu18.master),vpl) + !Skin.HasSetting(novpl18widget) | String.Contains(skin.string(menu19.master),vpl) + !Skin.HasSetting(novpl19widget) | String.Contains(skin.string(menu20.master),vpl) + !Skin.HasSetting(novpl20widget) | String.Contains(skin.string(menu1.master),apl) + !Skin.HasSetting(noapl1widget) | String.Contains(skin.string(menu2.master),apl) + !Skin.HasSetting(noapl2widget) | String.Contains(skin.string(menu3.master),apl) + !Skin.HasSetting(noapl3widget) | String.Contains(skin.string(menu4.master),apl) + !Skin.HasSetting(noapl4widget) | String.Contains(skin.string(menu5.master),apl) + !Skin.HasSetting(noapl5widget) | String.Contains(skin.string(menu6.master),apl) + !Skin.HasSetting(noapl6widget) | String.Contains(skin.string(menu7.master),apl) + !Skin.HasSetting(noapl7widget) | String.Contains(skin.string(menu8.master),apl) + !Skin.HasSetting(noapl8widget) | String.Contains(skin.string(menu9.master),apl) + !Skin.HasSetting(noapl9widget) | String.Contains(skin.string(menu10.master),apl) + !Skin.HasSetting(noapl10widget) | ubString(skin.string(menu11.master),apl) + !Skin.HasSetting(noapl11widget) | String.Contains(skin.string(menu12.master),apl) + !Skin.HasSetting(noapl12widget) | String.Contains(skin.string(menu13.master),apl) + !Skin.HasSetting(noapl13widget) | String.Contains(skin.string(menu14.master),apl) + !Skin.HasSetting(noapl14widget) | String.Contains(skin.string(menu15.master),apl) + !Skin.HasSetting(noapl15widget) | String.Contains(skin.string(menu16.master),apl) + !Skin.HasSetting(noapl16widget) | String.Contains(skin.string(menu17.master),apl) + !Skin.HasSetting(noapl17widget) | String.Contains(skin.string(menu18.master),apl) + !Skin.HasSetting(noapl18widget) | String.Contains(skin.string(menu19.master),apl) + !Skin.HasSetting(noapl19widget) | String.Contains(skin.string(menu20.master),apl) + !Skin.HasSetting(noapl20widget)]">Playlists</include>
 	<controls>
 		<control type="button" id="8000">
 			<include>InvisibleButton</include>
@@ -54,19 +54,19 @@
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<texture background="true">$INFO[MusicPlayer.Property(fanart_image)]</texture>
-			<visible>Player.HasAudio + System.IdleTime(8) + IsEmpty(Control.GetLabel(5044))</visible>
+			<visible>Player.HasAudio + System.IdleTime(8) + String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage">
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-			<visible>Player.HasAudio + System.IdleTime(8) + !IsEmpty(Control.GetLabel(5044))</visible>
+			<visible>Player.HasAudio + System.IdleTime(8) + !String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage">
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$INFO[Container(510).ListItem.Property(Fanart)]</imagepath>
-			<visible>Control.HasFocus(510) + !IsEmpty(Container(510).ListItem.Property(Fanart))</visible>
+			<visible>Control.HasFocus(510) + !String.IsEmpty(Container(510).ListItem.Property(Fanart))</visible>
 		</control>
 		<include>LiveBG</include>
 		<control type="group"><!-- default group -->
@@ -308,7 +308,7 @@
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$VAR[value_playertitle]</label>
 						<scroll>true</scroll>
-						<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
+						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
 					</control>
 					<control type="label"><!-- Titulo -->
 						<posx>0</posx>
@@ -320,7 +320,7 @@
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$VAR[value_playertitle]</label>
 						<scroll>true</scroll>
-						<visible>[IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo | Control.HasFocus(603)</visible>
+						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo | Control.HasFocus(603)</visible>
 					</control>
 					<control type="label"><!-- Subtitulo -->
 						<posx>0</posx>
@@ -332,7 +332,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$VAR[value_playersubtitle]</label>
 						<scroll>true</scroll>
-						<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
+						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
 					</control>
 					<control type="label"><!-- Subtitulo -->
 						<posx>0</posx>
@@ -344,7 +344,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$VAR[value_playersubtitle]</label>
 						<scroll>true</scroll>
-						<visible>[IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo | Control.HasFocus(603)</visible>
+						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo | Control.HasFocus(603)</visible>
 					</control>
 					<control type="label"><!-- Detalhes da faixa em reproducao -->
 						<posx>0</posx>
@@ -365,7 +365,7 @@
 						<height>2</height>
 						<align>left</align>
 						<texture flipx="true">divider.png</texture>
-						<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
+						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -374,7 +374,7 @@
 						<height>2</height>
 						<align>left</align>
 						<texture flipx="true">divider.png</texture>
-						<visible>[IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo</visible>
+						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo</visible>
 					</control>
 					<control type="textbox"><!-- Plot -->
 						<posx>0</posx>
@@ -385,7 +385,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
-						<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
+						<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks) | Control.HasFocus(603)] + Player.HasAudio</visible>
 					</control>
 					<control type="textbox"><!-- Plot -->
 						<posx>0</posx>
@@ -396,11 +396,11 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
 						<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
-						<visible>[IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo</visible>
+						<visible>[String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio | Player.HasVideo</visible>
 					</control>
 				</control>
 				<control type="group"><!-- Proximas faixas -->
-					<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
+					<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
 					<control type="label">
 						<posx>870</posx>
 						<posy>85</posy>
@@ -519,7 +519,7 @@
 				<include condition="Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)">Animation_Widgets</include>
 				<animation effect="slide" start="0,0" end="0,470" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,640" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>		
-				<visible>Control.HasFocus(510) + ![String.IsEqual(Container(9000).ListItem.Property(id),favourites) | SubString(Container(9000).ListItem.Property(id),mymenu) | Skin.HasSetting(nodetailspanel)]</visible>
+				<visible>Control.HasFocus(510) + ![String.IsEqual(Container(9000).ListItem.Property(id),favourites) | String.Contains(Container(9000).ListItem.Property(id),mymenu) | Skin.HasSetting(nodetailspanel)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>385</posy>
@@ -558,7 +558,7 @@
 					<texture fallback="DefaultVideoPoster.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">posterframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | SubString(Container(9000).ListItem.Property(id),apl)]</visible>
+					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + ![String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl)]</visible>
 				</control>
 				<control type="image"><!-- Thumb audio -->
 					<posx>40</posx>
@@ -569,7 +569,7 @@
 					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(510).ListItem.Icon]</texture>
 					<bordertexture border="-29">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>IsEmpty(Container(510).ListItem.Property(Thumbnail)) + [String.IsEqual(Container(9000).ListItem.Property(id),music) | SubString(Container(9000).ListItem.Property(id),apl)]</visible>
+					<visible>String.IsEmpty(Container(510).ListItem.Property(Thumbnail)) + [String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl)]</visible>
 				</control>
 				<control type="group"><!-- Miniatura do episodio -->
 					<control type="image">
@@ -578,7 +578,7 @@
 						<width>475</width>
 						<height>278</height>
 						<texture>fanartframe.png</texture>
-						<visible>!IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
+						<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					</control>
 					<control type="multiimage">
 						<posx>35</posx>
@@ -590,13 +590,13 @@
 						<aspectratio>stretch</aspectratio>
 						<imagepath background="true">$INFO[Container(510).ListItem.Property(Thumbnail)]</imagepath>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>!IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
+						<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					</control>
 				</control>
 				<control type="group">
 					<posx>240</posx>
-					<animation effect="slide" end="75,0" condition="String.IsEqual(Container(9000).ListItem.Property(id),music) | SubString(Container(9000).ListItem.Property(id),apl)">Conditional</animation>
-					<animation effect="slide" end="270,0" condition="!IsEmpty(Container(510).ListItem.Property(Thumbnail))">Conditional</animation>
+					<animation effect="slide" end="75,0" condition="String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl)">Conditional</animation>
+					<animation effect="slide" end="270,0" condition="!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))">Conditional</animation>
 					<control type="grouplist"><!-- Etiquetas -->
 						<posx>0</posx>
 						<posy>85</posy>
@@ -612,11 +612,11 @@
 							<texture fallback="flags/mpaa/MPAA_NR_Certificate_US.png">$VAR[value_mfmpaa]</texture>
 							<colordiffuse>FFFFFAF0</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Mpaa))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Mpaa))</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Mpaa))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Mpaa))</visible>
 						</control>
 						<control type="image"><!-- Codec -->
 							<width>60</width>
@@ -627,11 +627,11 @@
 							<texture>$VAR[value_videocodechome]</texture>
 							<colordiffuse>FFFFFAF0</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<visible>!IsEmpty(Container(510).ListItem.Property(File))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(File))</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(File))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(File))</visible>
 						</control>
 						<control type="image"><!-- Video Star -->
 							<width>80</width>
@@ -642,7 +642,7 @@
 							<texture fallback="rating0.png">$VAR[value_mfvideostarrating]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<visible>!IsEmpty(Container(510).ListItem.Property(VideoRating))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(VideoRating))</visible>
 						</control>
 						<control type="image"><!-- Music Star -->
 							<width>80</width>
@@ -653,54 +653,54 @@
 							<texture fallback="rating0.png">$VAR[value_mfmusicstarrating]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<fadetime>FanartCrossFadeTime</fadetime>
-							<visible>!IsEmpty(Container(510).ListItem.Property(MusicRating))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(MusicRating))</visible>
 						</control>
 						<control type="label"><!-- Video Rating -->
 							<width>40</width>
 							<include>HomeFlagLabel</include>
 							<label>$INFO[Container(510).ListItem.Property(VideoRating)]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(VideoRating)) + IntegerGreaterThan(Container(510).ListItem.Property(VideoRating),0)</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(VideoRating)) + Integer.IsGreater(Container(510).ListItem.Property(VideoRating),0)</visible>
 						</control>
 						<control type="label"><!-- Music Rating -->
 							<width>40</width>
 							<include>HomeFlagLabel</include>
 							<label>$INFO[Container(510).ListItem.Property(MusicRating)]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(MusicRating)) + IntegerGreaterThan(Container(510).ListItem.Property(MusicRating),0)</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(MusicRating)) + Integer.IsGreater(Container(510).ListItem.Property(MusicRating),0)</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>![IsEmpty(Container(510).ListItem.Property(VideoRating)) + IsEmpty(Container(510).ListItem.Property(MusicRating))]</visible>
+							<visible>![String.IsEmpty(Container(510).ListItem.Property(VideoRating)) + String.IsEmpty(Container(510).ListItem.Property(MusicRating))]</visible>
 						</control>
 						<control type="label"><!-- Ano -->
 							<width>100</width>
 							<include>HomeFlagLabel</include>
 							<label>$INFO[Container(510).ListItem.Property(Year)]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Year)) + IntegerGreaterThan(Container(510).ListItem.Property(Year),0)</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Year)) + Integer.IsGreater(Container(510).ListItem.Property(Year),0)</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Year)) + IntegerGreaterThan(Container(510).ListItem.Property(Year),0)</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Year)) + Integer.IsGreater(Container(510).ListItem.Property(Year),0)</visible>
 						</control>
 						<control type="label"><!-- Studio -->
 							<width>200</width>
 							<include>HomeFlagLabel</include>
 							<label>$INFO[Container(510).ListItem.Property(Studio)]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Studio))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Studio))</visible>
 						</control>
 						<control type="label">
 							<include>HomeFlagSeparator</include>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Studio))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Studio))</visible>
 						</control>
 						<control type="label"><!-- Duracao -->
 							<width>120</width>
 							<include>HomeFlagLabel</include>
 							<label>$VAR[value_runtime]</label>
 							<scroll>true</scroll>
-							<visible>!IsEmpty(Container(510).ListItem.Property(Runtime))</visible>
+							<visible>!String.IsEmpty(Container(510).ListItem.Property(Runtime))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -752,11 +752,11 @@
 			</control>
 			<control type="image" id="9931"><!-- widgets modo auto -->
 				<include>InvisibleButton</include>
-				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(widgets_seconds),1)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(widgets_seconds),2)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(widgets_seconds),3)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(widgets_seconds),4)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(widgets_seconds),5)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(widgets_seconds),1)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(widgets_seconds),2)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="String.Contains(skin.string(widgets_seconds),3)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="String.Contains(skin.string(widgets_seconds),4)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(widgets_seconds),5)">Visible</animation>
 				<visible>![Container(9000).OnNext | Container(9000).OnPrevious]</visible>
 			</control>
 
@@ -764,58 +764,58 @@
 				<animation effect="slide" start="0,0" end="0,-320" condition="Skin.HasSetting(higherwidgets) + ![Skin.HasSetting(highermainmenu) | String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-110" condition="Skin.HasSetting(higherwidgets) + Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-210" condition="Skin.HasSetting(highermainmenu) + ![String.IsEqual(Container(9000).ListItem.Property(id),settings) | String.IsEqual(Container(9000).ListItem.Property(id),weather)]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="400" easing="out" tween="sine" condition="[SubString(skin.string(widgetsmode),manual) | SubString(skin.string(widgetsmode),auto) + !Control.IsVisible(9931) | Player.HasMedia + System.IdleTime(8)] + ![Control.HasFocus(510) | Control.HasFocus(520) | Control.HasFocus(5100)]">Conditional</animation>
-				<include condition="Library.HasContent(Movies) + ![IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
-				<include condition="Library.HasContent(TVShows) + ![IsEmpty(skin.string(tvshowswidget)) | Skin.HasSetting(notvshowswidget)]">mf_contenttvshows</include>
-				<include condition="Library.HasContent(MusicVideos) + ![IsEmpty(skin.string(concertswidget)) |  Skin.HasSetting(noconcertswidget)]">mf_contentconcerts</include>	
-				<include condition="Library.HasContent(Music) + ![IsEmpty(skin.string(musicwidget)) | Skin.HasSetting(nomusicwidget)]">mf_contentmusic</include>
-				<include condition="System.HasAddon(script.favourites) + ![IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">mf_contentfavourites</include>
-				<include condition="!IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
-				<include condition="!IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget)">mf_contentvpl1</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget)">mf_contentvpl2</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget)">mf_contentvpl3</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu4.master),vpl) + !Skin.HasSetting(novpl4widget)">mf_contentvpl4</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu5.master),vpl) + !Skin.HasSetting(novpl5widget)">mf_contentvpl5</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu6.master),vpl) + !Skin.HasSetting(novpl6widget)">mf_contentvpl6</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu7.master),vpl) + !Skin.HasSetting(novpl7widget)">mf_contentvpl7</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu8.master),vpl) + !Skin.HasSetting(novpl8widget)">mf_contentvpl8</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu9.master),vpl) + !Skin.HasSetting(novpl9widget)">mf_contentvpl9</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu10.master),vpl) + !Skin.HasSetting(novpl10widget)">mf_contentvpl10</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu11.master),vpl) + !Skin.HasSetting(novpl11widget)">mf_contentvpl11</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu12.master),vpl) + !Skin.HasSetting(novpl12widget)">mf_contentvpl12</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu13.master),vpl) + !Skin.HasSetting(novpl13widget)">mf_contentvpl13</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu14.master),vpl) + !Skin.HasSetting(novpl14widget)">mf_contentvpl14</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu15.master),vpl) + !Skin.HasSetting(novpl15widget)">mf_contentvpl15</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu16.master),vpl) + !Skin.HasSetting(novpl16widget)">mf_contentvpl16</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu17.master),vpl) + !Skin.HasSetting(novpl17widget)">mf_contentvpl17</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu18.master),vpl) + !Skin.HasSetting(novpl18widget)">mf_contentvpl18</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu19.master),vpl) + !Skin.HasSetting(novpl19widget)">mf_contentvpl19</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu20.master),vpl) + !Skin.HasSetting(novpl20widget)">mf_contentvpl20</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu1.master),apl) + !Skin.HasSetting(noapl1widget)">mf_contentapl1</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu2.master),apl) + !Skin.HasSetting(noapl2widget)">mf_contentapl2</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu3.master),apl) + !Skin.HasSetting(noapl3widget)">mf_contentapl3</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu4.master),apl) + !Skin.HasSetting(noapl4widget)">mf_contentapl4</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu5.master),apl) + !Skin.HasSetting(noapl5widget)">mf_contentapl5</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu6.master),apl) + !Skin.HasSetting(noapl6widget)">mf_contentapl6</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu7.master),apl) + !Skin.HasSetting(noapl7widget)">mf_contentapl7</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu8.master),apl) + !Skin.HasSetting(noapl8widget)">mf_contentapl8</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu9.master),apl) + !Skin.HasSetting(noapl9widget)">mf_contentapl9</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu10.master),apl) + !Skin.HasSetting(noapl10widget)">mf_contentapl10</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu11.master),apl) + !Skin.HasSetting(noapl11widget)">mf_contentapl11</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu12.master),apl) + !Skin.HasSetting(noapl12widget)">mf_contentapl12</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu13.master),apl) + !Skin.HasSetting(noapl13widget)">mf_contentapl13</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu14.master),apl) + !Skin.HasSetting(noapl14widget)">mf_contentapl14</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu15.master),apl) + !Skin.HasSetting(noapl15widget)">mf_contentapl15</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu16.master),apl) + !Skin.HasSetting(noapl16widget)">mf_contentapl16</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu17.master),apl) + !Skin.HasSetting(noapl17widget)">mf_contentapl17</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu18.master),apl) + !Skin.HasSetting(noapl18widget)">mf_contentapl18</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu19.master),apl) + !Skin.HasSetting(noapl19widget)">mf_contentapl19</include>
-				<include condition="System.HasAddon(script.randomandlastitems) + SubString(skin.string(menu20.master),apl) + !Skin.HasSetting(noapl20widget)">mf_contentapl20</include>
-				<include condition="System.HasAddon(script.games.rom.collection.browser) + ![IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">mf_contentgames</include>
-				<include condition="![IsEmpty(skin.string(livetvwidget)) | Skin.HasSetting(nonextairedwidget)]">mf_contentnextaired</include>
+				<animation effect="fade" start="100" end="0" time="400" easing="out" tween="sine" condition="[String.Contains(skin.string(widgetsmode),manual) | String.Contains(skin.string(widgetsmode),auto) + !Control.IsVisible(9931) | Player.HasMedia + System.IdleTime(8)] + ![Control.HasFocus(510) | Control.HasFocus(520) | Control.HasFocus(5100)]">Conditional</animation>
+				<include condition="Library.HasContent(Movies) + ![String.IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
+				<include condition="Library.HasContent(TVShows) + ![String.IsEmpty(skin.string(tvshowswidget)) | Skin.HasSetting(notvshowswidget)]">mf_contenttvshows</include>
+				<include condition="Library.HasContent(MusicVideos) + ![String.IsEmpty(skin.string(concertswidget)) |  Skin.HasSetting(noconcertswidget)]">mf_contentconcerts</include>	
+				<include condition="Library.HasContent(Music) + ![String.IsEmpty(skin.string(musicwidget)) | Skin.HasSetting(nomusicwidget)]">mf_contentmusic</include>
+				<include condition="System.HasAddon(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">mf_contentfavourites</include>
+				<include condition="!String.IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
+				<include condition="!String.IsEmpty(skin.string(mymenu2widget))">mf_contentmymenu2</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu1.master),vpl) + !Skin.HasSetting(novpl1widget)">mf_contentvpl1</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu2.master),vpl) + !Skin.HasSetting(novpl2widget)">mf_contentvpl2</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu3.master),vpl) + !Skin.HasSetting(novpl3widget)">mf_contentvpl3</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu4.master),vpl) + !Skin.HasSetting(novpl4widget)">mf_contentvpl4</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu5.master),vpl) + !Skin.HasSetting(novpl5widget)">mf_contentvpl5</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu6.master),vpl) + !Skin.HasSetting(novpl6widget)">mf_contentvpl6</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu7.master),vpl) + !Skin.HasSetting(novpl7widget)">mf_contentvpl7</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu8.master),vpl) + !Skin.HasSetting(novpl8widget)">mf_contentvpl8</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu9.master),vpl) + !Skin.HasSetting(novpl9widget)">mf_contentvpl9</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu10.master),vpl) + !Skin.HasSetting(novpl10widget)">mf_contentvpl10</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu11.master),vpl) + !Skin.HasSetting(novpl11widget)">mf_contentvpl11</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu12.master),vpl) + !Skin.HasSetting(novpl12widget)">mf_contentvpl12</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu13.master),vpl) + !Skin.HasSetting(novpl13widget)">mf_contentvpl13</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu14.master),vpl) + !Skin.HasSetting(novpl14widget)">mf_contentvpl14</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu15.master),vpl) + !Skin.HasSetting(novpl15widget)">mf_contentvpl15</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu16.master),vpl) + !Skin.HasSetting(novpl16widget)">mf_contentvpl16</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu17.master),vpl) + !Skin.HasSetting(novpl17widget)">mf_contentvpl17</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu18.master),vpl) + !Skin.HasSetting(novpl18widget)">mf_contentvpl18</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu19.master),vpl) + !Skin.HasSetting(novpl19widget)">mf_contentvpl19</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu20.master),vpl) + !Skin.HasSetting(novpl20widget)">mf_contentvpl20</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu1.master),apl) + !Skin.HasSetting(noapl1widget)">mf_contentapl1</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu2.master),apl) + !Skin.HasSetting(noapl2widget)">mf_contentapl2</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu3.master),apl) + !Skin.HasSetting(noapl3widget)">mf_contentapl3</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu4.master),apl) + !Skin.HasSetting(noapl4widget)">mf_contentapl4</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu5.master),apl) + !Skin.HasSetting(noapl5widget)">mf_contentapl5</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu6.master),apl) + !Skin.HasSetting(noapl6widget)">mf_contentapl6</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu7.master),apl) + !Skin.HasSetting(noapl7widget)">mf_contentapl7</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu8.master),apl) + !Skin.HasSetting(noapl8widget)">mf_contentapl8</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu9.master),apl) + !Skin.HasSetting(noapl9widget)">mf_contentapl9</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu10.master),apl) + !Skin.HasSetting(noapl10widget)">mf_contentapl10</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu11.master),apl) + !Skin.HasSetting(noapl11widget)">mf_contentapl11</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu12.master),apl) + !Skin.HasSetting(noapl12widget)">mf_contentapl12</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu13.master),apl) + !Skin.HasSetting(noapl13widget)">mf_contentapl13</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu14.master),apl) + !Skin.HasSetting(noapl14widget)">mf_contentapl14</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu15.master),apl) + !Skin.HasSetting(noapl15widget)">mf_contentapl15</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu16.master),apl) + !Skin.HasSetting(noapl16widget)">mf_contentapl16</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu17.master),apl) + !Skin.HasSetting(noapl17widget)">mf_contentapl17</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu18.master),apl) + !Skin.HasSetting(noapl18widget)">mf_contentapl18</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu19.master),apl) + !Skin.HasSetting(noapl19widget)">mf_contentapl19</include>
+				<include condition="System.HasAddon(script.randomandlastitems) + String.Contains(skin.string(menu20.master),apl) + !Skin.HasSetting(noapl20widget)">mf_contentapl20</include>
+				<include condition="System.HasAddon(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">mf_contentgames</include>
+				<include condition="![String.IsEmpty(skin.string(livetvwidget)) | Skin.HasSetting(nonextairedwidget)]">mf_contentnextaired</include>
 				<include condition="!Skin.HasSetting(nosystemwidget)">mf_contentsystem</include>
-				<include condition="![IsEmpty(skin.string(weatherwidget)) | Skin.HasSetting(noweatherwidget)]">mf_weather</include>	
+				<include condition="![String.IsEmpty(skin.string(weatherwidget)) | Skin.HasSetting(noweatherwidget)]">mf_weather</include>	
 			</control>	
 
 			<control type="group"><!-- Status da biblioteca -->	
@@ -826,7 +826,7 @@
 				<animation effect="slide" start="0,0" end="0,-605" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-395" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-210" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),movies) + Library.HasContent(Movies) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Library.HasContent(TVShows) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Library.HasContent(MusicVideos) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !IsEmpty(Window(0).Property(Favourite.1.Name)) | SubString(Container(9000).ListItem.Property(id),vpl) | SubString(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + System.IdleTime(8) | Skin.HasSetting(nohometotals) | Control.HasFocus(510) | Skin.HasSetting(highertotals) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible> <!-- 151 was 614 extendedprogress -->
+				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),movies) + Library.HasContent(Movies) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Library.HasContent(TVShows) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Library.HasContent(MusicVideos) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(0).Property(Favourite.1.Name)) | String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + System.IdleTime(8) | Skin.HasSetting(nohometotals) | Control.HasFocus(510) | Skin.HasSetting(highertotals) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible> <!-- 151 was 614 extendedprogress -->
 				<control type="image">
 					<posx>0</posx>
 					<posy>605</posy>
@@ -974,7 +974,7 @@
 							<label>-</label>
 							<icon>osd_menu_plyalist_square.png</icon>
 							<onclick>ActivateWindow(musicplaylist)</onclick>
-							<visible>Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+							<visible>Player.HasAudio + !String.IsEmpty(MusicPlayer.offset(1).Artist)</visible>
 						</item>
 						<item id="5"><!-- stop -->
 							<label>-</label>

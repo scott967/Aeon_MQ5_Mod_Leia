@@ -12,7 +12,7 @@
 		<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 		<animation effect="fade" start="100" end="45" condition="true">Conditional</animation>
 		<include>Animation_Fade</include>
-		<visible>[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + Control.HasFocus(62)</visible>
+		<visible>[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + Control.HasFocus(62)</visible>
 	</include>
 	<include name="ViewPanel">
 		<control type="group"><!-- default group -->
@@ -109,7 +109,7 @@
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 						<control type="image">
 							<posx>206</posx>
@@ -119,7 +119,7 @@
 							<texture flipy="true">$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)]</visible>
+							<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)]</visible>
 						</control>
 						<control type="image">
 							<include>Panel_Dimmer</include>
@@ -328,7 +328,7 @@
 								<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
 							</animation>
-							<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 						<control type="image">
 							<posx>207</posx>
@@ -342,7 +342,7 @@
 								<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
 							</animation>
-							<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)]</visible>
+							<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)]</visible>
 						</control>
 					</focusedlayout>
 					<focusedlayout condition="Window.IsActive(videos) + Container.Content(movies) + !Skin.HasSetting(noviewpanelposter) + !Skin.HasSetting(nopanelvideocase)  | !Skin.HasSetting(nopanelvideocase) + [Container.Content(musicvideos) + !Skin.HasSetting(nopanelbigicon) | Container.Content(sets)]" width="120" height="172"><!-- ESTOJO -->

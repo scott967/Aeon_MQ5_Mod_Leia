@@ -121,7 +121,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
-						<animation effect="slide" start="0,0" end="-17,0" time="0" condition="IntegerGreaterThan(Window.Property(Current.Temperature),-100) + !IntegerGreaterThan(Window.Property(Current.Temperature),9)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-17,0" time="0" condition="Integer.IsGreater(Window.Property(Current.Temperature),-100) + !Integer.IsGreater(Window.Property(Current.Temperature),9)">Conditional</animation>
 					</control>
 					<control type="label"><!-- Local -->
 						<posx>50</posx>
@@ -160,7 +160,7 @@
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
 						<textcolor>$VAR[value_headercolor]</textcolor>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Current.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Current.FeelsLike),9)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Current.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Current.FeelsLike),9)">Conditional</animation>
 					</control>
 				</control>
 				<control type="image">
@@ -212,7 +212,7 @@
 					<description>current UV Index label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[403] :</label>
-					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window.Property(WeatherProvider),Yahoo)]</visible>
+					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)]</visible>
 				</control>
 				<control type="label">
 					<description>current Wind label</description>
@@ -223,31 +223,31 @@
 					<description>current Precipitation label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33021] :</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 				</control>
 				<control type="label">
 					<description>barometric pressure</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31859] :</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>visibility</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31860] :</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33027] :</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunset label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33028] :</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) |SubString(Window.Property(WeatherProvider),Yahoo) </visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) |String.Contains(Window.Property(WeatherProvider),Yahoo) </visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -270,7 +270,7 @@
 					<description>current UV Index Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.HeatIndex)]</label>
-					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window.Property(WeatherProvider),Yahoo)]</visible>
+					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)]</visible>
 				</control>
 				<control type="label">
 					<description>current Wind Value</description>
@@ -281,7 +281,7 @@
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(36Hour.1.ChancePrecipitation)]</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) + ![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window.Property(WeatherProvider),Yahoo)]</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + ![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)]</visible>
 				</control>
 				<control type="label">
 					<description>current Precip Value</description>
@@ -293,32 +293,32 @@
 					<description>current Pressure Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Pressure)]</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>current Visibilty Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Visibility)]</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Today.Sunrise)]</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunset Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Today.Sunset)]</label>
-					<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				</control>
 			</control>
 			<control type="label">
 				<description>Loading label</description>
 				<posy>400</posy>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>[[IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(TWC.ShowCurrentHourly)] | [IsEmpty(Window.Property(Hourly.IsFetched)) + Skin.HasSetting(TWC.ShowCurrentHourly)]] + !SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+				<visible>[[String.IsEmpty(Window.Property(Daily.IsFetched)) + !Skin.HasSetting(TWC.ShowCurrentHourly)] | [String.IsEmpty(Window.Property(Hourly.IsFetched)) + Skin.HasSetting(TWC.ShowCurrentHourly)]] + !String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 			</control>
 			<!-- Daily forecast -->
 			<control type="grouplist">
@@ -327,7 +327,7 @@
 				<width>840</width>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<visible>!Skin.HasSetting(TWC.ShowCurrentHourly) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				<visible>!Skin.HasSetting(TWC.ShowCurrentHourly) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 				<control type="group">
 					<width>120</width>
 					<control type="image">
@@ -366,13 +366,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.1.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.1.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.1.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.1.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.1.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.1.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.1.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.1.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.1.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.1.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -420,13 +420,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.2.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.2.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.2.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.2.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.2.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.2.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.2.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.2.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.2.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.2.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -473,13 +473,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.3.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.3.HighTemperature),-1000) + !IntegerGreaterThan(Window.Property(Daily.3.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.3.HighTemperature),-1000) + !Integer.IsGreater(Window.Property(Daily.3.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.3.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.3.LowTemperature),-1000) + !IntegerGreaterThan(Window.Property(Daily.3.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.3.LowTemperature),-1000) + !Integer.IsGreater(Window.Property(Daily.3.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -526,13 +526,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.4.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.4.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.4.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.4.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.4.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.4.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.4.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.4.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.4.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.4.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -579,13 +579,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.5.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.5.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.5.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.5.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.5.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.5.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.5.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.5.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.5.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.5.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -632,13 +632,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.6.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.6.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.6.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.6.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.6.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.6.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.6.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.6.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.6.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.6.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -685,13 +685,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.7.HighTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.7.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.7.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.7.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.7.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Daily.7.LowTemperature)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.7.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.7.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.7.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.7.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -707,7 +707,7 @@
 				<width>840</width>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<visible>Skin.HasSetting(TWC.ShowCurrentHourly) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				<visible>Skin.HasSetting(TWC.ShowCurrentHourly) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 				<control type="group">
 					<width>120</width>
 					<control type="image">
@@ -740,13 +740,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.1.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.1.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.1.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.1.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.1.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.1.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.1.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.1.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.1.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.1.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -787,13 +787,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.2.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.2.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.2.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.2.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.2.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.2.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.2.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.2.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.2.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.2.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -834,13 +834,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.3.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.3.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.3.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.3.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.3.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.3.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.3.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.3.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.3.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.3.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -881,13 +881,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.4.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.4.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.4.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.4.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.4.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.4.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.4.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.4.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.4.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.4.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -928,13 +928,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.5.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.5.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.5.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.5.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.5.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.5.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.5.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.5.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.5.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.5.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -975,13 +975,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.6.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.6.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.6.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.6.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.6.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.6.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.6.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.6.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.6.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.6.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -1022,13 +1022,13 @@
 						<description>High Temp label</description>
 						<include>TWC.Current.DailyHighLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.7.Temperature)]</label>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.7.Temperature),-100) + !IntegerGreaterThan(Window.Property(Hourly.7.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.7.Temperature),-100) + !Integer.IsGreater(Window.Property(Hourly.7.Temperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>Low Temp label</description>
 						<include>TWC.Current.DailyLowLabelsCommon</include>
 						<label>$INFO[Window.Property(Hourly.7.FeelsLike)]</label>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Hourly.7.FeelsLike),-100) + !IntegerGreaterThan(Window.Property(Hourly.7.FeelsLike),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Hourly.7.FeelsLike),-100) + !Integer.IsGreater(Window.Property(Hourly.7.FeelsLike),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<description>precip label</description>
@@ -1268,13 +1268,13 @@
 			<control type="label">
 				<description>loading label</description>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				<visible>String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 			</control>
 			<!-- brief view -->
 			<control type="group">
 				<posx>-5</posx>
 				<posy>35</posy>
-				<visible>Skin.HasSetting(TWC.ShowDailyDetails) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				<visible>Skin.HasSetting(TWC.ShowDailyDetails) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -1337,13 +1337,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.1.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.1.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.1.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.1.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.1.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.1.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.1.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.1.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.1.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.1.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1402,13 +1402,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.2.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.2.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.2.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.2.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.2.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.2.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.2.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.2.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.2.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.2.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1467,13 +1467,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.3.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.3.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.3.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.3.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.3.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.3.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.3.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.3.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.3.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.3.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1532,13 +1532,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.4.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.4.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.4.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.4.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.4.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.4.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.4.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.4.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.4.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.4.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1597,13 +1597,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.5.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.5.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.5.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.5.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.5.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.5.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.5.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.5.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.5.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.5.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 				</control>
@@ -1611,7 +1611,7 @@
 			<control type="group">
 				<posx>-5</posx>
 				<posy>312</posy>
-				<visible>Skin.HasSetting(TWC.ShowDailyDetails) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				<visible>Skin.HasSetting(TWC.ShowDailyDetails) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 				<control type="grouplist">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -1674,13 +1674,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.6.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.6.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.6.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.6.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.6.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.6.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.6.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.6.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.6.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.6.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1739,13 +1739,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.7.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.7.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.7.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.7.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.7.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.7.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.7.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.7.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.7.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.7.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1804,13 +1804,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.8.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.8.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.8.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.8.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.8.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.8.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.8.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.8.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.8.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.8.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
@@ -1869,18 +1869,18 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.9.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.9.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.9.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.9.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.9.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.9.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.9.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.9.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.9.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.9.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
 						<width>165</width>
-						<visible>!IsEmpty(Window.Property(Daily.10.LongDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.10.LongDay))</visible>
 						<control type="image">
 							<description>weekday image</description>
 							<include>TWC.Daily.DailyWeekdayBG</include>
@@ -1935,13 +1935,13 @@
 							<description>High Temp label</description>
 							<include>TWC.Daily.DailyHighLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.10.HighTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.10.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.10.HighTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.10.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.10.HighTemperature),-1)">Conditional</animation>
 						</control>
 						<control type="label">
 							<description>Low Temp label</description>
 							<include>TWC.Daily.DailyLowLabelsCommon</include>
 							<label>$INFO[Window.Property(Daily.10.LowTemperature)]</label>
-							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Daily.10.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Daily.10.LowTemperature),-1)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Daily.10.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Daily.10.LowTemperature),-1)">Conditional</animation>
 						</control>
 					</control>
 				</control>
@@ -1949,7 +1949,7 @@
 			<!-- details view -->
 			<control type="group">
 				<posy>35</posy>
-				<visible>!Skin.HasSetting(TWC.ShowDailyDetails) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				<visible>!Skin.HasSetting(TWC.ShowDailyDetails) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 				<!-- List Headings -->
 				<control type="group">
 					<control type="label">
@@ -2005,7 +2005,7 @@
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<!-- Day 1 -->
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.1.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.1.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2089,7 +2089,7 @@
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<!-- Day 2 -->
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.2.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.2.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2173,7 +2173,7 @@
 					<!-- Day 3 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.3.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.3.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2257,7 +2257,7 @@
 					<!-- Day 4 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.4.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.4.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2341,7 +2341,7 @@
 					<!-- Day 5 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.5.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.5.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2425,7 +2425,7 @@
 					<!-- Day 6 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.6.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.6.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2509,7 +2509,7 @@
 					<!-- Day 7 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.7.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.7.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2593,7 +2593,7 @@
 					<!-- Day 8 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.8.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.8.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2677,7 +2677,7 @@
 					<!-- Day 9 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.9.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.9.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2761,7 +2761,7 @@
 					<!-- Day 10 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Daily.10.ShortDay))</visible>
+						<visible>!String.IsEmpty(Window.Property(Daily.10.ShortDay))</visible>
 						<height>82</height>
 						<include>TWC.Daily.ListNoFocusTexture</include>
 						<control type="label">
@@ -2983,12 +2983,12 @@
 			<control type="label">
 				<description>loading label</description>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				<visible>String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 			</control>
 			<!-- details view -->
 			<control type="group">
 				<posy>35</posy>
-				<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				<visible>!String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 				<!-- List Headings -->
 				<control type="group">
 					<control type="label">
@@ -3044,7 +3044,7 @@
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<!-- Hour 1 -->
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.1.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.1.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3095,7 +3095,7 @@
 					<!-- Hour 2 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.2.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.2.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3146,7 +3146,7 @@
 					<!-- Hour 3 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.3.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.3.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3197,7 +3197,7 @@
 					<!-- Hour 4 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.4.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.4.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3248,7 +3248,7 @@
 					<!-- Hour 5 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.5.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.5.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3299,7 +3299,7 @@
 					<!-- Hour 6 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.6.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.6.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3350,7 +3350,7 @@
 					<!-- Hour 7 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.7.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.7.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3401,7 +3401,7 @@
 					<!-- Hour 8 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.8.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.8.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3452,7 +3452,7 @@
 					<!-- Hour 9 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.9.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.9.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3503,7 +3503,7 @@
 					<!-- Hour 10 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.10.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.10.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3554,7 +3554,7 @@
 					<!-- Hour 11 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.11.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.11.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3605,7 +3605,7 @@
 					<!-- Hour 12 -->
 					<include>TWC.Daily.DailyHorizontalSeparator</include>
 					<control type="group">
-						<visible>!IsEmpty(Window.Property(Hourly.12.Time))</visible>
+						<visible>!String.IsEmpty(Window.Property(Hourly.12.Time))</visible>
 						<height>82</height>
 						<include>TWC.Hourly.ListNoFocusTexture</include>
 						<control type="label">
@@ -3769,15 +3769,15 @@
 		<control type="group">
 			<posx>290</posx>
 			<posy>60</posy>
-			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + !SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + !String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="label">
 				<description>loading label</description>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>IsEmpty(Window.Property(36Hour.IsFetched)) + !SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 			</control>
 			<control type="grouplist">
-				<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) | SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+				<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 				<posx>0</posx>
 				<posy>40</posy>
 				<width>920</width>
@@ -3817,7 +3817,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.1.Temperature)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.1.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.1.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.36Hour.PeriodPrecipitationHeadingCommon</include>
 					<control type="label">
@@ -3837,7 +3837,7 @@
 						<description>forecast label</description>
 						<include>TWC.36Hour.PeriodForecastCommon</include>
 						<info>Window.Property(36Hour.1.Forecast)</info>
-						<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<description>daylight</description>
@@ -3882,7 +3882,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.2.Temperature)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.2.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.2.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.36Hour.PeriodPrecipitationHeadingCommon</include>
 					<control type="label">
@@ -3902,7 +3902,7 @@
 						<description>forecast label</description>
 						<include>TWC.36Hour.PeriodForecastCommon</include>
 						<info>Window.Property(36Hour.2.Forecast)</info>
-						<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<description>daylight</description>
@@ -3946,7 +3946,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(36Hour.3.Temperature)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.3.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.3.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.36Hour.PeriodPrecipitationHeadingCommon</include>
 					<control type="label">
@@ -3966,7 +3966,7 @@
 						<description>forecast label</description>
 						<include>TWC.36Hour.PeriodForecastCommon</include>
 						<info>Window.Property(36Hour.3.Forecast)</info>
-						<visible>!IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+						<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) +  !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 					</control>
 					<control type="label">
 						<description>daylight</description>
@@ -3981,7 +3981,7 @@
 		<control type="group">  <!-- Yahoo -->
 			<posx>290</posx>
 			<posy>60</posy>
-			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + SubString(Window.Property(WeatherProvider),Yahoo)</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="grouplist">
 				<posx>0</posx>
@@ -4023,7 +4023,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day0.HighTemp)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.1.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.1.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.1.Temperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.36Hour.PeriodSeparator</include>
 
@@ -4062,7 +4062,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day1.HighTemp)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.2.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.2.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.2.Temperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.36Hour.PeriodSeparator</include>
 				</control>
@@ -4100,7 +4100,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<include>TWC.36Hour.PeriodTemperatureCommon</include>
 						<info>Window.Property(Day2.HighTemp)</info>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(36Hour.3.Temperature),-100) + !IntegerGreaterThan(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(36Hour.3.Temperature),-100) + !Integer.IsGreater(Window.Property(36Hour.3.Temperature),-1)">Conditional</animation>
 					</control>
 				</control>
 			</control>
@@ -4316,10 +4316,10 @@
 			<control type="label">
 				<description>loading label</description>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				<visible>String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 			</control>
 			<control type="grouplist">
-				<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 				<posx>0</posx>
 				<posy>25</posy>
 				<width>920</width>
@@ -4364,31 +4364,31 @@
 						<description>temp label</description>
 						<label fallback="N/A">$INFO[Window.Property(Weekend.1.HighTemperature)]</label>
 						<include>TWC.Weekend.HighTemperatureCommon</include>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.1.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.1.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.1.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.1.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.Weekend.LowTempHeadingCommon</include>
 					<control type="label">
 						<description>low temp</description>
 						<info>Window.Property(Weekend.1.LowTemperature)</info>
 						<include>TWC.Weekend.LowTempCommon</include>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.1.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.1.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.1.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.1.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[33029][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>precip</description>
 						<label>$INFO[Window.Property(Weekend.1.ObservedPrecipitation),$LOCALIZE[33021] ,]</label>
 						<posx>130</posx>
 						<include>TWC.Weekend.DayOutlookCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[31861][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>observed</description>
@@ -4396,12 +4396,12 @@
 						<font>Font_15</font>
 						<label>[I][B]($LOCALIZE[33025])[/B][/I]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<!-- details -->
 					<control type="grouplist">
 						<description>details labels</description>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<include>TWC.Weekend.DetailsLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4410,7 +4410,7 @@
 						<orientation>vertical</orientation>
 						<height>150</height>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.1.Humidity)]</label>
@@ -4439,7 +4439,7 @@
 					<!-- observed -->
 					<control type="grouplist">
 						<description>observed labels</description>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<include>TWC.Weekend.ObservedLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4448,7 +4448,7 @@
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.1.ObservedAvgHighTemperature)]</label>
@@ -4484,7 +4484,7 @@
 					</control>
 					<!-- forecast no details-->
 					<control type="group">
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<include>TWC.Weekend.ForecastHeadingCommon</include>
@@ -4493,12 +4493,12 @@
 							<description>forecast</description>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.1.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control>
 					</control>
 					<!-- forecast w/ details-->
 					<control type="group">
-						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<posy>253</posy>
@@ -4510,7 +4510,7 @@
 							<height>236</height>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.1.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 						</control>
 						<control type="label">
 							<description>precip</description>
@@ -4562,31 +4562,31 @@
 						<description>temp label</description>
 						<label fallback="N/A">$INFO[Window.Property(Weekend.2.HighTemperature)]</label>
 						<include>TWC.Weekend.HighTemperatureCommon</include>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.2.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.2.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.2.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.2.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.Weekend.LowTempHeadingCommon</include>
 					<control type="label">
 						<description>low temp</description>
 						<info>Window.Property(Weekend.2.LowTemperature)</info>
 						<include>TWC.Weekend.LowTempCommon</include>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.2.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.2.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.2.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.2.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[33029][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>precip</description>
 						<label>$INFO[Window.Property(Weekend.2.ObservedPrecipitation),$LOCALIZE[33021] ,]</label>
 						<posx>130</posx>
 						<include>TWC.Weekend.DayOutlookCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[31861][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>observed</description>
@@ -4594,12 +4594,12 @@
 						<font>Font_15</font>
 						<label>[I][B]($LOCALIZE[33025])[/B][/I]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<!-- details -->
 					<control type="grouplist">
 						<description>details labels</description>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<include>TWC.Weekend.DetailsLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4608,7 +4608,7 @@
 						<orientation>vertical</orientation>
 						<height>150</height>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.2.Humidity)]</label>
@@ -4637,7 +4637,7 @@
 					<!-- observed -->
 					<control type="grouplist">
 						<description>observed labels</description>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<include>TWC.Weekend.ObservedLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4646,7 +4646,7 @@
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.2.ObservedAvgHighTemperature)]</label>
@@ -4682,7 +4682,7 @@
 					</control>
 					<!-- forecast no details-->
 					<control type="group">
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<include>TWC.Weekend.ForecastHeadingCommon</include>
@@ -4691,12 +4691,12 @@
 							<description>forecast</description>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.2.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 					</control>
 					<!-- forecast w/ details-->
 					<control type="group">
-						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<posy>253</posy>
@@ -4708,7 +4708,7 @@
 							<height>236</height>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.2.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 						<control type="label">
 							<description>precip</description>
@@ -4760,31 +4760,31 @@
 						<description>temp label</description>
 						<label fallback="N/A">$INFO[Window.Property(Weekend.3.HighTemperature)]</label>
 						<include>TWC.Weekend.HighTemperatureCommon</include>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.3.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.3.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.3.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.3.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.Weekend.LowTempHeadingCommon</include>
 					<control type="label">
 						<description>low temp</description>
 						<info>Window.Property(Weekend.3.LowTemperature)</info>
 						<include>TWC.Weekend.LowTempCommon</include>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.3.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.3.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.3.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.3.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[33029][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>precip</description>
 						<label>$INFO[Window.Property(Weekend.3.ObservedPrecipitation),$LOCALIZE[33021] ,]</label>
 						<posx>130</posx>
 						<include>TWC.Weekend.DayOutlookCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[31861][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>observed</description>
@@ -4792,12 +4792,12 @@
 						<font>Font_15</font>
 						<label>[I][B]($LOCALIZE[33025])[/B][/I]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 					</control>
 					<!-- details -->
 					<control type="grouplist">
 						<description>details labels</description>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<include>TWC.Weekend.DetailsLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4806,7 +4806,7 @@
 						<orientation>vertical</orientation>
 						<height>150</height>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.3.Humidity)]</label>
@@ -4835,7 +4835,7 @@
 					<!-- observed -->
 					<control type="grouplist">
 						<description>observed labels</description>
-						<visible>!IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<include>TWC.Weekend.ObservedLabels</include>
 					</control>
 					<control type="grouplist">
@@ -4844,7 +4844,7 @@
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.3.ObservedAvgHighTemperature)]</label>
@@ -4880,7 +4880,7 @@
 					</control>
 					<!-- forecast no details-->
 					<control type="group">
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<include>TWC.Weekend.ForecastHeadingCommon</include>
@@ -4889,12 +4889,12 @@
 							<description>forecast</description>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.3.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 					</control>
 					<!-- forecast w/ details-->
 					<control type="group">
-						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.3.Observed))</visible>
+						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.3.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<posy>253</posy>
@@ -4906,7 +4906,7 @@
 							<height>236</height>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.3.Forecast)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 						<control type="label">
 							<description>precip</description>
@@ -4929,10 +4929,10 @@
 			<control type="label">
 				<description>loading label</description>
 				<include>TWC.LoadingLabelCommon</include>
-				<visible>IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				<visible>String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 			</control>
 			<control type="grouplist">
-				<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 				<posx>0</posx>
 				<posy>25</posy>
 				<width>920</width>
@@ -4977,31 +4977,31 @@
 						<description>temp label</description>
 						<label fallback="N/A">$INFO[Window.Property(Weekend.1.HighTemperature)]</label>
 						<include>TWC.Weekend.HighTemperatureCommon</include>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.1.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.1.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.1.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.1.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.Weekend.LowTempHeadingCommon</include>
 					<control type="label">
 						<description>low temp</description>
 						<info>Window.Property(Weekend.1.LowTemperature)</info>
 						<include>TWC.Weekend.LowTempCommon</include>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.1.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.1.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.1.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.1.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[33029][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>precip</description>
 						<label>$INFO[Window.Property(Weekend.1.Precipitation),$LOCALIZE[33021] ,]</label>
 						<posx>130</posx>
 						<include>TWC.Weekend.DayOutlookCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[31861][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>observed</description>
@@ -5009,12 +5009,12 @@
 						<font>Font_15</font>
 						<label>[I][B]($LOCALIZE[33025])[/B][/I]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 					</control>
 					<!-- details -->
 					<control type="grouplist">
 						<description>details labels</description>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<include>TWC.Weekend.DetailsLabels</include>
 					</control>
 					<control type="grouplist">
@@ -5023,7 +5023,7 @@
 						<orientation>vertical</orientation>
 						<height>150</height>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.1.Humidity)]</label>
@@ -5044,7 +5044,7 @@
 					<!-- observed ??? -->
 					<control type="grouplist">
 						<description>observed labels</description>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<include>TWC.Weekend.ObservedLabels</include>
 					</control>
 					<control type="grouplist">
@@ -5053,7 +5053,7 @@
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.1.ObservedAvgHighTemperature)]</label>
@@ -5089,7 +5089,7 @@
 					</control>
 					<!-- forecast no details-->
 					<control type="group">
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<include>TWC.Weekend.ForecastHeadingCommon</include>
@@ -5098,12 +5098,12 @@
 							<description>forecast</description>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.1.Outlook)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 					</control>
 					<!-- forecast w/ details-->
 					<control type="group">
-						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.1.Observed))</visible>
+						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.1.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<posy>253</posy>
@@ -5115,7 +5115,7 @@
 							<height>236</height>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.1.Outlook)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 						<control type="label">
 							<description>precip</description>
@@ -5167,31 +5167,31 @@
 						<description>temp label</description>
 						<label fallback="N/A">$INFO[Window.Property(Weekend.2.HighTemperature)]</label>
 						<include>TWC.Weekend.HighTemperatureCommon</include>
-						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.2.HighTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.2.HighTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-7,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.2.HighTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.2.HighTemperature),-1)">Conditional</animation>
 					</control>
 					<include>TWC.Weekend.LowTempHeadingCommon</include>
 					<control type="label">
 						<description>low temp</description>
 						<info>Window.Property(Weekend.2.LowTemperature)</info>
 						<include>TWC.Weekend.LowTempCommon</include>
-						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="IntegerGreaterThan(Window.Property(Weekend.2.LowTemperature),-100) + !IntegerGreaterThan(Window.Property(Weekend.2.LowTemperature),-1)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-6,0" time="0" condition="Integer.IsGreater(Window.Property(Weekend.2.LowTemperature),-100) + !Integer.IsGreater(Window.Property(Weekend.2.LowTemperature),-1)">Conditional</animation>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[33029][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>precip</description>
 						<label>$INFO[Window.Property(Weekend.2.Precipitation),$LOCALIZE[33021] ,]</label>
 						<posx>130</posx>
 						<include>TWC.Weekend.DayOutlookCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<label>[B]$LOCALIZE[31861][/B]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<control type="label">
 						<description>observed</description>
@@ -5199,12 +5199,12 @@
 						<font>Font_15</font>
 						<label>[I][B]($LOCALIZE[33025])[/B][/I]</label>
 						<include>TWC.Weekend.DetailsHeadingCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 					</control>
 					<!-- details -->
 					<control type="grouplist">
 						<description>details labels</description>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<include>TWC.Weekend.DetailsLabels</include>
 					</control>
 					<control type="grouplist">
@@ -5213,7 +5213,7 @@
 						<orientation>vertical</orientation>
 						<height>150</height>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.2.Humidity)]</label>
@@ -5234,7 +5234,7 @@
 					<!-- observed -->
 					<control type="grouplist">
 						<description>observed labels</description>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<include>TWC.Weekend.ObservedLabels</include>
 					</control>
 					<control type="grouplist">
@@ -5243,7 +5243,7 @@
 						<itemgap>0</itemgap>
 						<orientation>vertical</orientation>
 						<include>TWC.Weekend.DetailsValuesCommon</include>
-						<visible>!IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<include>TWC.Weekend.DetailsValuesCommon</include>
 							<label>$INFO[Window.Property(Weekend.2.ObservedAvgHighTemperature)]</label>
@@ -5279,7 +5279,7 @@
 					</control>
 					<!-- forecast no details-->
 					<control type="group">
-						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>!Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<include>TWC.Weekend.ForecastHeadingCommon</include>
@@ -5288,12 +5288,12 @@
 							<description>forecast</description>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.2.Outlook)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 					</control>
 					<!-- forecast w/ details-->
 					<control type="group">
-						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + IsEmpty(Window.Property(Weekend.2.Observed))</visible>
+						<visible>Skin.HasSetting(TWC.ShowWeekendDetails) + String.IsEmpty(Window.Property(Weekend.2.Observed))</visible>
 						<control type="label">
 							<description>forecast label</description>
 							<posy>253</posy>
@@ -5305,7 +5305,7 @@
 							<height>236</height>
 							<include>TWC.Weekend.ForecastCommon</include>
 							<info>Window.Property(Weekend.2.Outlook)</info>
-							<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+							<visible>!String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 						</control>
 						<control type="label">
 							<description>precip</description>
@@ -5417,7 +5417,7 @@
 					<onright>5202</onright>
 					<onup>5100</onup>
 					<ondown>5100</ondown>
-					<visible>!IsEmpty(Window.Property(MapList.1.ShortTitle))</visible>
+					<visible>!String.IsEmpty(Window.Property(MapList.1.ShortTitle))</visible>
 					<onfocus>SetProperty(CurrentMapList,1)</onfocus>
 					<selected>String.IsEqual(Window.Property(CurrentMapList),1)</selected>
 				</control>
@@ -5430,7 +5430,7 @@
 					<onright>5203</onright>
 					<onup>5100</onup>
 					<ondown>5100</ondown>
-					<visible>!IsEmpty(Window.Property(MapList.2.ShortTitle))</visible>
+					<visible>!String.IsEmpty(Window.Property(MapList.2.ShortTitle))</visible>
 					<onfocus>SetProperty(CurrentMapList,2)</onfocus>
 					<selected>String.IsEqual(Window.Property(CurrentMapList),2)</selected>
 				</control>
@@ -5443,7 +5443,7 @@
 					<onright>5201</onright>
 					<onup>5100</onup>
 					<ondown>5100</ondown>
-					<visible>!IsEmpty(Window.Property(MapList.3.ShortTitle))</visible>
+					<visible>!String.IsEmpty(Window.Property(MapList.3.ShortTitle))</visible>
 					<onfocus>SetProperty(CurrentMapList,3)</onfocus>
 					<selected>String.IsEqual(Window.Property(CurrentMapList),3)</selected>
 				</control>
@@ -5622,7 +5622,7 @@
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<!-- <include>VisibleFadeEffect</include>  -->
-				<!-- <visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible> -->
+				<!-- <visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible> -->
 				<itemlayout height="470" width="590">
 					<control type="image">
 						<description>area image</description>
@@ -5688,7 +5688,7 @@
 						<icon>$INFO[Window.Property(Map.1.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.1.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.2.Heading)]</label>
@@ -5696,7 +5696,7 @@
 						<icon>$INFO[Window.Property(Map.2.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.2.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.3.Heading)]</label>
@@ -5704,7 +5704,7 @@
 						<icon>$INFO[Window.Property(Map.3.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.3.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.4.Heading)]</label>
@@ -5712,7 +5712,7 @@
 						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.4.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.5.Heading)]</label>
@@ -5720,7 +5720,7 @@
 						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.5.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -5744,7 +5744,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.1)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.1)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.1))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.1))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.2)]</label>
@@ -5753,7 +5753,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.2)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.2)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.2))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.2))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.3)]</label>
@@ -5762,7 +5762,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.3)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.3)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.3))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.3))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.4)]</label>
@@ -5771,7 +5771,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.4)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.4)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.4))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.4))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.5)]</label>
@@ -5780,7 +5780,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.5)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.5)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.5))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.5))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.6)]</label>
@@ -5789,7 +5789,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.6)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.6)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.6))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.6))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.7)]</label>
@@ -5798,7 +5798,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.7)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.7)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.7))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.7))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.8)]</label>
@@ -5807,7 +5807,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.8)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.8)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.8))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.8))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.9)]</label>
@@ -5816,7 +5816,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.9)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.9)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.9))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.9))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.10)]</label>
@@ -5825,7 +5825,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.10)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.10)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.10))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.10))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.11)]</label>
@@ -5834,7 +5834,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.11)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.11)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.11))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.11))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.12)]</label>
@@ -5843,7 +5843,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.12)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.12)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.12))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.12))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.13)]</label>
@@ -5852,7 +5852,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.13)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.13)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.13))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.13))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.14)]</label>
@@ -5861,7 +5861,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.14)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.14)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.14))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.14))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.15)]</label>
@@ -5870,7 +5870,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.15)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.15)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.15))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.15))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.16)]</label>
@@ -5879,7 +5879,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.16)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.16)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.16))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.16))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.17)]</label>
@@ -5888,7 +5888,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.17)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.17)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.17))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.17))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.18)]</label>
@@ -5897,7 +5897,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.18)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.18)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.18))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.18))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.19)]</label>
@@ -5906,7 +5906,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.19)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.19)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.19))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.19))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.20)]</label>
@@ -5915,7 +5915,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.20)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.20)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.20))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.20))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.21)]</label>
@@ -5924,7 +5924,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.21)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.21)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.21))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.21))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.22)]</label>
@@ -5933,7 +5933,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.22)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.22)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.22))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.22))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.23)]</label>
@@ -5942,7 +5942,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.23)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.23)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.23))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.23))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.24)]</label>
@@ -5951,7 +5951,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.24)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.24)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.24))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.24))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.25)]</label>
@@ -5960,7 +5960,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.25)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.25)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.25))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.25))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.26)]</label>
@@ -5969,7 +5969,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.26)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.26)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.26))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.26))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.27)]</label>
@@ -5978,7 +5978,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.27)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.27)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.27))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.27))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.28)]</label>
@@ -5987,7 +5987,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.28)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.28)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.28))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.28))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.29)]</label>
@@ -5996,7 +5996,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.29)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.29)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.29))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.29))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.1.MapLabel.30)]</label>
@@ -6005,7 +6005,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.1.MapLabel.30)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.1.MapOnclick.30)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.1.MapLabel.30))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.1.MapLabel.30))</visible>
 			</item>
 		</content>
 	</include>
@@ -6019,7 +6019,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.1)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.1)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.1))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.1))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.2)]</label>
@@ -6028,7 +6028,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.2)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.2)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.2))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.2))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.3)]</label>
@@ -6037,7 +6037,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.3)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.3)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.3))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.3))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.4)]</label>
@@ -6046,7 +6046,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.4)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.4)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.4))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.4))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.5)]</label>
@@ -6055,7 +6055,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.5)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.5)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.5))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.5))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.6)]</label>
@@ -6064,7 +6064,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.6)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.6)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.6))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.6))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.7)]</label>
@@ -6073,7 +6073,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.7)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.7)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.7))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.7))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.8)]</label>
@@ -6082,7 +6082,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.8)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.8)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.8))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.8))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.9)]</label>
@@ -6091,7 +6091,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.9)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.9)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.9))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.9))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.10)]</label>
@@ -6100,7 +6100,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.10)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.10)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.10))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.10))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.11)]</label>
@@ -6109,7 +6109,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.11)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.11)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.11))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.11))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.12)]</label>
@@ -6118,7 +6118,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.12)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.12)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.12))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.12))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.13)]</label>
@@ -6127,7 +6127,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.13)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.13)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.13))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.13))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.14)]</label>
@@ -6136,7 +6136,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.14)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.14)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.14))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.14))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.15)]</label>
@@ -6145,7 +6145,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.15)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.15)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.15))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.15))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.16)]</label>
@@ -6154,7 +6154,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.16)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.16)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.16))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.16))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.17)]</label>
@@ -6163,7 +6163,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.17)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.17)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.17))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.17))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.18)]</label>
@@ -6172,7 +6172,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.18)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.18)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.18))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.18))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.19)]</label>
@@ -6181,7 +6181,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.19)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.19)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.19))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.19))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.20)]</label>
@@ -6190,7 +6190,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.20)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.20)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.20))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.20))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.21)]</label>
@@ -6199,7 +6199,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.21)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.21)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.21))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.21))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.22)]</label>
@@ -6208,7 +6208,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.22)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.22)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.22))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.22))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.23)]</label>
@@ -6217,7 +6217,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.23)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.23)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.23))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.23))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.24)]</label>
@@ -6226,7 +6226,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.24)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.24)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.24))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.24))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.25)]</label>
@@ -6235,7 +6235,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.25)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.25)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.25))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.25))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.26)]</label>
@@ -6244,7 +6244,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.26)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.26)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.26))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.26))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.27)]</label>
@@ -6253,7 +6253,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.27)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.27)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.27))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.27))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.28)]</label>
@@ -6262,7 +6262,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.28)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.28)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.28))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.28))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.29)]</label>
@@ -6271,7 +6271,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.29)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.29)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.29))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.29))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.2.MapLabel.30)]</label>
@@ -6280,7 +6280,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.2.MapLabel.30)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.2.MapOnclick.30)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.2.MapLabel.30))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.2.MapLabel.30))</visible>
 			</item>
 		</content>
 	</include>
@@ -6294,7 +6294,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.1)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.1)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.1))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.1))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.2)]</label>
@@ -6303,7 +6303,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.2)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.2)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.2))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.2))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.3)]</label>
@@ -6312,7 +6312,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.3)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.3)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.3))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.3))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.4)]</label>
@@ -6321,7 +6321,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.4)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.4)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.4))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.4))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.5)]</label>
@@ -6330,7 +6330,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.5)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.5)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.5))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.5))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.6)]</label>
@@ -6339,7 +6339,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.6)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.6)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.6))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.6))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.7)]</label>
@@ -6348,7 +6348,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.7)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.7)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.7))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.7))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.8)]</label>
@@ -6357,7 +6357,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.8)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.8)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.8))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.8))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.9)]</label>
@@ -6366,7 +6366,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.9)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.9)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.9))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.9))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.10)]</label>
@@ -6375,7 +6375,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.10)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.10)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.10))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.10))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.11)]</label>
@@ -6384,7 +6384,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.11)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.11)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.11))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.11))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.12)]</label>
@@ -6393,7 +6393,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.12)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.12)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.12))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.12))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.13)]</label>
@@ -6402,7 +6402,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.13)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.13)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.13))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.13))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.14)]</label>
@@ -6411,7 +6411,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.14)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.14)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.14))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.14))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.15)]</label>
@@ -6420,7 +6420,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.15)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.15)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.15))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.15))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.16)]</label>
@@ -6429,7 +6429,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.16)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.16)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.16))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.16))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.17)]</label>
@@ -6438,7 +6438,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.17)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.17)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.17))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.17))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.18)]</label>
@@ -6447,7 +6447,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.18)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.18)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.18))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.18))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.19)]</label>
@@ -6456,7 +6456,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.19)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.19)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.19))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.19))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.20)]</label>
@@ -6465,7 +6465,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.20)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.20)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.20))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.20))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.21)]</label>
@@ -6474,7 +6474,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.21)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.21)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.21))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.21))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.22)]</label>
@@ -6483,7 +6483,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.22)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.22)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.22))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.22))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.23)]</label>
@@ -6492,7 +6492,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.23)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.23)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.23))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.23))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.24)]</label>
@@ -6501,7 +6501,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.24)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.24)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.24))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.24))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.25)]</label>
@@ -6510,7 +6510,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.25)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.25)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.25))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.25))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.26)]</label>
@@ -6519,7 +6519,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.26)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.26)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.26))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.26))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.27)]</label>
@@ -6528,7 +6528,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.27)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.27)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.27))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.27))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.28)]</label>
@@ -6537,7 +6537,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.28)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.28)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.28))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.28))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.29)]</label>
@@ -6546,7 +6546,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.29)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.29)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.29))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.29))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window.Property(MapList.3.MapLabel.30)]</label>
@@ -6555,7 +6555,7 @@
 				<onclick>SetProperty(Weather.CurrentMap,$INFO[Window.Property(MapList.3.MapLabel.30)])</onclick>
 				<onclick>$INFO[Window.Property(MapList.3.MapOnclick.30)]</onclick>
 				<onclick>SetFocus(50)</onclick>
-				<visible>!IsEmpty(Window.Property(MapList.3.MapLabel.30))</visible>
+				<visible>!String.IsEmpty(Window.Property(MapList.3.MapLabel.30))</visible>
 			</item>
 		</content>
 	</include>

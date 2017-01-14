@@ -363,45 +363,45 @@
 				<control type="group"><!-- -7 -->
 					<posx>10</posx>
 					<visible>Container.OnNext</visible>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-7).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-7).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="fade" start="100" end="0" time="210" reversible="false">Hidden</animation>
 					<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-7</include>
 				</control>
 				<control type="group"><!-- -6 -->
 					<posx>100</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-6</include>
 				</control>
 				<control type="group"><!-- -5 -->
 					<posx>190</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-5</include>
 				</control>
 				<control type="group"><!-- -4 -->
 					<posx>280</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-4</include>
 				</control>
 				<control type="group"><!-- -3 -->
 					<posx>370</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-3</include>
 				</control>
 				<control type="group"><!-- -2 -->
 					<posx>460</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-2</include>
 				</control>
 				<control type="group"><!-- 9 - fix to load poster -->
 					<posx>1180</posx>
 					<visible>!Container.OnNext</visible>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(9).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(9).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="fade" start="0" end="0" delay="0" time="0" reversible="false">Visible</animation>
 					<control type="group">
 						<visible>[Skin.HasSetting(noshowcasevideocase) | Window.IsActive(programs)]</visible>
@@ -471,7 +471,7 @@
 				</control>
 				<control type="group"><!-- 6 -->
 					<posx>1090</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<visible>!Container.OnNext</visible>
 					<animation effect="fade" start="0" end="100" delay="0" time="210" reversible="false">Visible</animation>
 					<animation effect="rotatey" center="1470" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -479,31 +479,31 @@
 				</control>
 				<control type="group"><!-- 5 -->
 					<posx>1000</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb5</include>
 				</control>
 				<control type="group"><!-- 4 -->
 					<posx>910</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb4</include>
 				</control>
 				<control type="group"><!-- 3 -->
 					<posx>820</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb3</include>
 				</control>
 				<control type="group"><!-- 2 -->
 					<posx>730</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb2</include>
 				</control>
 				<control type="group"><!-- 1 -->
 					<posx>640</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb1</include>
 				</control>
@@ -513,7 +513,7 @@
 					<control type="group">
 						<posx>550</posx>
 						<visible>Container.OnNext</visible>
-						<visible>!IsEmpty(Container(66).ListItemNoWrap(0).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+						<visible>!String.IsEmpty(Container(66).ListItemNoWrap(0).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 						<animation effect="rotatey" center="930" start="0" end="-55" time="210" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 						<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<include>VideoShowCaseThumb0</include>
@@ -521,7 +521,7 @@
 					<control type="group">
 						<posx>505</posx>
 						<visible>Container.OnNext</visible>
-						<visible>!IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+						<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 						<animation effect="rotatey" center="405" start="0" end="-55" time="210" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 						<include>VideoShowCaseThumb-1</include>
 					</control>
@@ -535,38 +535,38 @@
 				<control type="group"><!-- 7 -->
 					<posx>1000</posx>
 					<visible>Container.OnPrevious</visible>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(7).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(7).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="fade" start="100" end="0" time="210" reversible="false">Hidden</animation>
 					<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb7</include>
 				</control>
 				<control type="group"><!-- 6 -->
 					<posx>910</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb6</include>
 				</control>
 				<control type="group"><!-- 5 -->
 					<posx>820</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb5</include>
 				</control>
 				<control type="group"><!-- 4 -->
 					<posx>730</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb4</include>
 				</control>
 				<control type="group"><!-- 3 -->
 					<posx>640</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb3</include>
 				</control>
 				<control type="group"><!-- 2 -->
 					<posx>550</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb2</include>
 				</control>
@@ -600,38 +600,38 @@
 				<control type="group"><!-- -6 -->
 					<posx>-80</posx>
 					<visible>!Container.OnPrevious</visible>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="fade" start="0" end="100" time="210" reversible="false">Visible</animation>
 					<animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-6</include>
 				</control>
 				<control type="group"><!-- -5 -->
 					<posx>10</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-5</include>
 				</control>
 				<control type="group"><!-- -4 -->
 					<posx>100</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-4</include>
 				</control>
 				<control type="group"><!-- -3 -->
 					<posx>190</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-3</include>
 				</control>
 				<control type="group"><!-- -2 -->
 					<posx>280</posx>       
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-2</include>
 				</control>
 				<control type="group"><!-- -1 -->
 					<posx>370</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<include>VideoShowCaseThumb-1</include>
 				</control>
@@ -639,7 +639,7 @@
 					<visible>Container.OnPrevious</visible>
 					<animation effect="slide" end="-50,0" time="210" reversible="false">Hidden</animation>
 					<control type="group">
-						<visible>!IsEmpty(Container(66).ListItemNoWrap(0).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+						<visible>!String.IsEmpty(Container(66).ListItemNoWrap(0).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 						<posx>460</posx>
 						<visible>Container.OnPrevious</visible>
 						<animation effect="rotatey" center="360" start="0" end="55" time="210" reversible="false" tween="quadratic" easing="in">Hidden</animation>
@@ -647,7 +647,7 @@
 						<include>VideoShowCaseThumb0</include>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+						<visible>!String.IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 						<posx>505</posx>
 						<visible>Container.OnPrevious</visible>
 						<animation effect="rotatey" center="885" start="0" end="55" time="210" reversible="false" tween="quadratic" easing="out">Hidden</animation>
@@ -668,7 +668,7 @@
 				<camera x="640" y="540"/>
 				<control type="group"><!-- -6 -->
 					<posx>10</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="-90" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -678,7 +678,7 @@
 				</control>
 				<control type="group"><!-- -5 -->
 					<posx>100</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="0" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -688,7 +688,7 @@
 				</control>
 				<control type="group"><!-- -4 -->
 					<posx>190</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="90" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -698,7 +698,7 @@
 				</control>
 				<control type="group"><!-- -3 -->
 					<posx>280</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="180" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -708,7 +708,7 @@
 				</control>
 				<control type="group"><!-- -2 -->
 					<posx>370</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="270" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -718,7 +718,7 @@
 				</control>
 				<control type="group"><!-- -1 -->
 					<posx>460</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(-1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="360" start="0" end="55" time="800" tween="cubic" easing="inout"/>
@@ -728,7 +728,7 @@
 				</control>
 				<control type="group"><!-- 6 -->
 					<posx>1000</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(6).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="1380" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -738,7 +738,7 @@
 				</control>
 				<control type="group"><!-- 5 -->
 					<posx>910</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(5).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="1290" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -748,7 +748,7 @@
 				</control>
 				<control type="group"><!-- 4 -->
 					<posx>820</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(4).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="1200" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -758,7 +758,7 @@
 				</control>
 				<control type="group"><!-- 3 -->
 					<posx>730</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(3).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="1110" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -768,7 +768,7 @@
 				</control>
 				<control type="group"><!-- 2 -->
 					<posx>640</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(2).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="1020" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -778,7 +778,7 @@
 				</control>
 				<control type="group"><!-- 1 -->
 					<posx>550</posx>
-					<visible>!IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
+					<visible>!String.IsEmpty(Container(66).ListItemNoWrap(1).label) | !Skin.HasSetting(ShowCasefixedlist)</visible>
 					<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
 					<animation type="Conditional" condition="[Skin.HasSetting(flattenshowcase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(programs)]]">
 						<effect type="rotatey" center="930" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
@@ -1497,7 +1497,7 @@
 			<control type="group"><!-- painel de info fanart layout -->
 				<animation effect="slide" start="0,-600" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-600" time="500" tween="sine" easing="out">Hidden</animation>
-				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)] + SubString(skin.string(showcaselayout),fanart) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
+				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)] + String.Contains(skin.string(showcaselayout),fanart) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>56</posy>
@@ -1595,7 +1595,7 @@
 			<control type="group"><!-- painel de info extrathumbs layout -->
 				<animation effect="slide" start="0,-600" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-600" time="500" tween="sine" easing="out">Hidden</animation>
-				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921)] + SubString(skin.string(showcaselayout),extrathumbs) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
+				<visible>[Control.HasFocus(9966) | String.IsEqual(skin.string(showcasevideopanel),alwayson) | String.IsEqual(skin.string(showcasevideopanel),auto) + Control.IsVisible(9921)] + String.Contains(skin.string(showcaselayout),extrathumbs) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>56</posy>

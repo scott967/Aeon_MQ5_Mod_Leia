@@ -80,21 +80,21 @@
 							<height>37</height>
 							<texture>star.png</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="63" width="640">
 						<control type="button">
 							<include>InvisibleButton</include>
-							<animation effect="fade" start="100" end="100" time="0" delay="0" condition="SubString(skin.string(gamevideo_seconds),0)">Focus</animation>
-							<animation effect="fade" start="100" end="100" time="0" delay="1000" condition="SubString(skin.string(gamevideo_seconds),1)">Focus</animation>
-							<animation effect="fade" start="100" end="100" time="0" delay="2000" condition="SubString(skin.string(gamevideo_seconds),2)">Focus</animation>
-							<animation effect="fade" start="100" end="100" time="0" delay="3000" condition="SubString(skin.string(gamevideo_seconds),3)">Focus</animation>
-							<animation effect="fade" start="100" end="100" time="0" delay="4000" condition="SubString(skin.string(gamevideo_seconds),4)">Focus</animation>
-							<animation effect="fade" start="100" end="100" time="0" delay="5000" condition="SubString(skin.string(gamevideo_seconds),5)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="0" condition="String.Contains(skin.string(gamevideo_seconds),0)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="1000" condition="String.Contains(skin.string(gamevideo_seconds),1)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="2000" condition="String.Contains(skin.string(gamevideo_seconds),2)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="3000" condition="String.Contains(skin.string(gamevideo_seconds),3)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="4000" condition="String.Contains(skin.string(gamevideo_seconds),4)">Focus</animation>
+							<animation effect="fade" start="100" end="100" time="0" delay="5000" condition="String.Contains(skin.string(gamevideo_seconds),5)">Focus</animation>
 							<onfocus condition="!Skin.HasSetting(fullscreengamevideo)">PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 							<onfocus condition="Skin.HasSetting(fullscreengamevideo)">PlayMedia($ESCINFO[ListItem.Property(gameplaymain)])</onfocus>
-							<visible>![IsEmpty(ListItem.Property(autoplayvideomain)) | IsEmpty(ListItem.Property(gameplaymain))]</visible>
+							<visible>![String.IsEmpty(ListItem.Property(autoplayvideomain)) | String.IsEmpty(ListItem.Property(gameplaymain))]</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -133,15 +133,15 @@
 							<height>37</height>
 							<texture>star.png</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 						</control>
 						<control type="group">
-							<visible>SubString(skin.string(games_video),trigger)</visible>
+							<visible>String.Contains(skin.string(games_video),trigger)</visible>
 							<control type="button">
 								<include>InvisibleButton</include>
 								<animation effect="fade" start="100" end="100" time="150" delay="500" condition="true">Focus</animation>
 								<onfocus>PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
-								<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							</control>
 						</control>
 					</focusedlayout>
@@ -234,7 +234,7 @@
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<texture fallback="DefaultGame.png" flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
-						<visible>![Player.HasVideo | IsEmpty(ListItem.Property(gameplaymain))]</visible>
+						<visible>![Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))]</visible>
 					</control>
 					<control type="image" id="2001"><!-- gameinfobig -->
 						<posx>20</posx>
@@ -245,7 +245,7 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultGame.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
-						<visible>![Player.HasVideo | IsEmpty(ListItem.Property(gameplaymain))]</visible>
+						<visible>![Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))]</visible>
 					</control>
 					<control type="videowindow" id="2301"><!-- videowindowbig -->
 						<posx>20</posx>
@@ -253,7 +253,7 @@
 						<width>600</width>
 						<height>367</height>
 						<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-						<visible>![IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
+						<visible>![String.IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
 					</control>
 					<control type="button"><!-- click absorber -->
 						<posx>20</posx>
@@ -262,7 +262,7 @@
 						<height>367</height>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
-						<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(videosizebig))</visible>
 					</control>
 					<control type="image" id="2401"><!-- gameinfoupperleft -->
 						<posx>20</posx>
@@ -347,7 +347,7 @@
 						<width>268</width>
 						<height>145</height>
 						<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-						<visible>![IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
+						<visible>![String.IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
 					</control>
 					<control type="button"><!-- video absorber -->
 						<posx>269</posx>
@@ -356,7 +356,7 @@
 						<height>145</height>
 						<texturefocus></texturefocus>
 						<texturenofocus></texturenofocus>
-						<visible>!IsEmpty(ListItem.Property(videosizesmall))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(videosizesmall))</visible>
 					</control>
 				</control>
 			</control>
@@ -503,7 +503,7 @@
 				<texture>star.png</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout width="298" height="360">
@@ -527,7 +527,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
-				<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 			</control>
 		</focusedlayout>
 	</include>
@@ -655,7 +655,7 @@
 							<height>20</height>
 							<texture>star.png</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="120" height="170">
@@ -663,7 +663,7 @@
 							<include>InvisibleButton</include>
 							<animation effect="fade" start="100" end="100" time="150" delay="500" condition="true">Focus</animation>
 							<onfocus>PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 						</control>
 						<control type="image">
 							<posx>8</posx>
@@ -689,7 +689,7 @@
 								<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 								<effect type="fade" start="80" end="100" time="400" />
 							</animation>
-							<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 						</control>
 					</focusedlayout>
 				</control>
@@ -720,7 +720,7 @@
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[ListItem.Property(gameinfobig)]</texture>
 					<bordertexture border="-2">black.png</bordertexture>
-					<visible>!Player.HasVideo | IsEmpty(ListItem.Property(gameplaymain))</visible>
+					<visible>!Player.HasVideo | String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 				</control>
 				<control type="videowindow" id="2301"><!-- videowindowbig -->
 					<posx>10</posx>
@@ -728,7 +728,7 @@
 					<width>387</width>
 					<height>210</height>
 					<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-					<visible>![IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
 				</control>
 				<control type="label">
 					<posx>10</posx>
@@ -781,7 +781,7 @@
 			<control type="group"><!-- painel de info fanart layout -->
 				<animation effect="slide" start="0,-600" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-600" time="500" tween="sine" easing="out">Hidden</animation>
-				<visible>[Control.HasFocus(9953) | String.IsEqual(skin.string(multiplexgamespanel),alwayson) | String.IsEqual(skin.string(multiplexgamespanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)] + IsEmpty(ListItem.Property(gameinfoupperleft)) + !String.IsEqual(ListItem.Label,..)</visible>
+				<visible>[Control.HasFocus(9953) | String.IsEqual(skin.string(multiplexgamespanel),alwayson) | String.IsEqual(skin.string(multiplexgamespanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)] + String.IsEmpty(ListItem.Property(gameinfoupperleft)) + !String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>56</posy>
@@ -947,7 +947,7 @@
 					<width>250</width>
 					<height>117</height>
 					<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-					<visible>![IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
 				</control>
 				<control type="button"><!-- video absorber -->
 					<posx>1040</posx>
@@ -956,7 +956,7 @@
 					<height>117</height>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!IsEmpty(ListItem.Property(videosizesmall))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizesmall))</visible>
 				</control>
 
 				<control type="image" id="2001"><!-- mainviewgameinfobig -->
@@ -975,7 +975,7 @@
 					<width>500</width>
 					<height>235</height>
 					<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
-					<visible>![IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(videosizebig)) | Skin.HasSetting(trailerplay)]</visible>
 				</control>
 				<control type="button"><!-- click absorber -->
 					<posx>0</posx>
@@ -984,13 +984,13 @@
 					<height>292</height>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizebig))</visible>
 				</control>
 			</control>
 			<control type="group"><!-- painel de info extrathumbs layout -->
 				<animation effect="slide" start="0,-600" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-600" time="500" tween="sine" easing="out">Hidden</animation>
-				<visible>[Control.HasFocus(9953) | String.IsEqual(skin.string(multiplexgamespanel),alwayson) | String.IsEqual(skin.string(multiplexgamespanel),auto) + Control.IsVisible(9921)] + !IsEmpty(ListItem.Property(gameinfoupperleft)) + !String.IsEqual(ListItem.Label,..)</visible>
+				<visible>[Control.HasFocus(9953) | String.IsEqual(skin.string(multiplexgamespanel),alwayson) | String.IsEqual(skin.string(multiplexgamespanel),auto) + Control.IsVisible(9921)] + !String.IsEmpty(ListItem.Property(gameinfoupperleft)) + !String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>56</posy>
@@ -1123,7 +1123,7 @@
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
 					<bordersize>5</bordersize>
-					<visible>![IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(videosizesmall)) | Skin.HasSetting(trailerplay)]</visible>
 				</control>
 				<control type="button"><!-- video absorber -->
 					<posx>1029</posx>
@@ -1132,7 +1132,7 @@
 					<height>130</height>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!IsEmpty(ListItem.Property(videosizesmall))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizesmall))</visible>
 				</control>
 				<control type="label"><!-- Developer -->
 					<include>MultiplexLabel_Extrathumbs</include>
@@ -1266,7 +1266,7 @@
 						<height>30</height>
 						<texture>star.png</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="175" height="380">	
@@ -1298,24 +1298,24 @@
 						<texture>star.png</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>	
 						<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 					<control type="button">
 						<include>InvisibleButton</include>
-						<animation effect="fade" start="100" end="100" time="0" delay="1000" condition="SubString(skin.string(panel_seconds),1)">Focus</animation>
-						<animation effect="fade" start="100" end="100" time="0" delay="2000" condition="SubString(skin.string(panel_seconds),2)">Focus</animation>
-						<animation effect="fade" start="100" end="100" time="0" delay="3000" condition="SubString(skin.string(panel_seconds),3)">Focus</animation>
-						<animation effect="fade" start="100" end="100" time="0" delay="4000" condition="SubString(skin.string(panel_seconds),4)">Focus</animation>
-						<animation effect="fade" start="100" end="100" time="0" delay="5000" condition="SubString(skin.string(panel_seconds),5)">Focus</animation>
+						<animation effect="fade" start="100" end="100" time="0" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Focus</animation>
+						<animation effect="fade" start="100" end="100" time="0" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Focus</animation>
+						<animation effect="fade" start="100" end="100" time="0" delay="3000" condition="String.Contains(skin.string(panel_seconds),3)">Focus</animation>
+						<animation effect="fade" start="100" end="100" time="0" delay="4000" condition="String.Contains(skin.string(panel_seconds),4)">Focus</animation>
+						<animation effect="fade" start="100" end="100" time="0" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Focus</animation>
 						<onfocus condition="!Skin.HasSetting(fullscreengamevideo)">PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						<onfocus condition="Skin.HasSetting(fullscreengamevideo)">PlayMedia($ESCINFO[ListItem.Property(gameplaymain)])</onfocus>
-						<visible>![IsEmpty(ListItem.Property(autoplayvideomain)) | IsEmpty(ListItem.Property(gameplaymain))] + String.IsEqual(skin.string(multiplexgamespanel),auto)</visible>
+						<visible>![String.IsEmpty(ListItem.Property(autoplayvideomain)) | String.IsEmpty(ListItem.Property(gameplaymain))] + String.IsEqual(skin.string(multiplexgamespanel),auto)</visible>
 					</control>
 					<control type="button">
 						<include>InvisibleButton</include>
 						<animation effect="fade" start="100" end="100" time="150" delay="500" condition="true">Focus</animation>
 						<onfocus>PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
-						<visible>![IsEmpty(ListItem.Property(autoplayvideomain)) | IsEmpty(ListItem.Property(gameplaymain))] + String.IsEqual(skin.string(multiplexgamespanel),alwayson)</visible>
+						<visible>![String.IsEmpty(ListItem.Property(autoplayvideomain)) | String.IsEmpty(ListItem.Property(gameplaymain))] + String.IsEqual(skin.string(multiplexgamespanel),alwayson)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -1349,7 +1349,7 @@
 				<ondown>9920</ondown>
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
-				<itemlayout condition="SubString(skin.string(wallgamesgrid),default)" width="98.5" height="138"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallgamesgrid),default)" width="98.5" height="138"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1366,10 +1366,10 @@
 						<height>20</height>
 						<texture>star.png</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallgamesgrid),mid)" width="128" height="184"><!-- tamanho medio -->
+				<itemlayout condition="String.Contains(skin.string(wallgamesgrid),mid)" width="128" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1386,10 +1386,10 @@
 						<height>25</height>
 						<texture>star.png</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallgamesgrid),big)" width="210" height="276"><!-- tamanho grande -->
+				<itemlayout condition="String.Contains(skin.string(wallgamesgrid),big)" width="210" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>18</posx>
 						<posy>2</posy>
@@ -1406,10 +1406,10 @@
 						<height>35</height>
 						<texture>star.png</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="SubString(skin.string(wallgamesgrid),default)" width="98.5" height="138"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallgamesgrid),default)" width="98.5" height="138"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1434,10 +1434,10 @@
 							<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallgamesgrid),mid)" width="128" height="184"><!-- tamanho medio -->
+				<focusedlayout condition="String.Contains(skin.string(wallgamesgrid),mid)" width="128" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1462,10 +1462,10 @@
 							<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallgamesgrid),big)" width="210" height="276"><!-- tamanho grande -->
+				<focusedlayout condition="String.Contains(skin.string(wallgamesgrid),big)" width="210" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>18</posx>
 						<posy>2</posy>
@@ -1490,7 +1490,7 @@
 							<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Property(isfavorite))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(isfavorite))</visible>
 					</control>
 				</focusedlayout>
 			</control>

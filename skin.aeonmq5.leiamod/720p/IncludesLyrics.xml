@@ -63,7 +63,7 @@
 	<textcolor>80FFFAF0</textcolor>
 	<focusedcolor>FFFFFAF0</focusedcolor>
 	<texturefocus diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
-	<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]</visible>
+	<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]</visible>
 	</control>
 	<control type="image">
 	<posx>40</posx>
@@ -73,7 +73,7 @@
 	<texture>arrow_left.png</texture>
 	<colordiffuse>80FFFAF0</colordiffuse>
 	<include>Animation_Fade</include>
-	<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]</visible>
+	<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]</visible>
 	</control>
 	<control type="button"><!-- Para Menu -->
 	<posx>1005</posx>
@@ -109,7 +109,7 @@
 	<posy>70</posy>
 	<width>1080</width>
 	<height>270</height>
-	<onleft condition="![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
+	<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
 	<onright>ActivateWindow(musicosd)</onright>
 	<onup>999</onup>
 	<ondown>110</ondown>
@@ -163,7 +163,7 @@
 	<posy>70</posy>
 	<width>1080</width>
 	<height>270</height>
-	<onleft condition="![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
+	<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
 	<onright>ActivateWindow(musicosd)</onright>
 	<onup>120</onup>
 	<ondown>120</ondown>

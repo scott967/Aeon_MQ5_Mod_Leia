@@ -6,31 +6,31 @@
 <includes>
 	<!--##################################################################################   VISTA WALL - ID 56   ##################################################################################-->
 	<include name="Wall_Dimmer">
-		<animation effect="fade" start="100" end="50" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),50)">conditional</animation>	
-		<animation effect="fade" start="100" end="45" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),45)">conditional</animation>	
-		<animation effect="fade" start="100" end="40" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),40)">conditional</animation>	
-		<animation effect="fade" start="100" end="35" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),35)">conditional</animation>	
-		<animation effect="fade" start="100" end="30" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),30)">conditional</animation>	
-		<animation effect="fade" start="100" end="25" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),25)">conditional</animation>	
-		<animation effect="fade" start="100" end="20" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),20)">conditional</animation>	
-		<animation effect="fade" start="100" end="15" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),15)">conditional</animation>	
-		<animation effect="fade" start="100" end="10" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),10)">conditional</animation>	
-		<animation effect="fade" start="100" end="5" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),05)">conditional</animation>	
-		<animation effect="fade" start="100" end="0" time="300" condition="[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + SubString(skin.string(wallglass),00)">conditional</animation>	
-		<animation effect="fade" start="100" end="50" time="0" condition="SubString(skin.string(wallglass),50) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="45" time="0" condition="SubString(skin.string(wallglass),45) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="40" time="0" condition="SubString(skin.string(wallglass),40) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="35" time="0" condition="SubString(skin.string(wallglass),35) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="30" time="0" condition="SubString(skin.string(wallglass),30) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="25" time="0" condition="SubString(skin.string(wallglass),25) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="20" time="0" condition="SubString(skin.string(wallglass),20) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="15" time="0" condition="SubString(skin.string(wallglass),15) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="10" time="0" condition="SubString(skin.string(wallglass),10) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="05" time="0" condition="SubString(skin.string(wallglass),05) + Window.IsVisible(636)">conditional</animation>	
-		<animation effect="fade" start="100" end="0" time="0" condition="SubString(skin.string(wallglass),00) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="50" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),50)">conditional</animation>	
+		<animation effect="fade" start="100" end="45" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),45)">conditional</animation>	
+		<animation effect="fade" start="100" end="40" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),40)">conditional</animation>	
+		<animation effect="fade" start="100" end="35" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),35)">conditional</animation>	
+		<animation effect="fade" start="100" end="30" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),30)">conditional</animation>	
+		<animation effect="fade" start="100" end="25" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),25)">conditional</animation>	
+		<animation effect="fade" start="100" end="20" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),20)">conditional</animation>	
+		<animation effect="fade" start="100" end="15" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),15)">conditional</animation>	
+		<animation effect="fade" start="100" end="10" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),10)">conditional</animation>	
+		<animation effect="fade" start="100" end="5" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),05)">conditional</animation>	
+		<animation effect="fade" start="100" end="0" time="300" condition="[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56) + String.Contains(skin.string(wallglass),00)">conditional</animation>	
+		<animation effect="fade" start="100" end="50" time="0" condition="String.Contains(skin.string(wallglass),50) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="45" time="0" condition="String.Contains(skin.string(wallglass),45) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="40" time="0" condition="String.Contains(skin.string(wallglass),40) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="35" time="0" condition="String.Contains(skin.string(wallglass),35) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="30" time="0" condition="String.Contains(skin.string(wallglass),30) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="25" time="0" condition="String.Contains(skin.string(wallglass),25) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="20" time="0" condition="String.Contains(skin.string(wallglass),20) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="15" time="0" condition="String.Contains(skin.string(wallglass),15) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="10" time="0" condition="String.Contains(skin.string(wallglass),10) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="05" time="0" condition="String.Contains(skin.string(wallglass),05) + Window.IsVisible(636)">conditional</animation>	
+		<animation effect="fade" start="100" end="0" time="0" condition="String.Contains(skin.string(wallglass),00) + Window.IsVisible(636)">conditional</animation>	
 	</include>
 	<include name="Wall_Plot">	
-		<visible>[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + SubString(skin.string(wallvideopanel),auto) + Control.HasFocus(56)</visible>
+		<visible>[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + String.Contains(skin.string(wallvideopanel),auto) + Control.HasFocus(56)</visible>
 	</include>
 	<include name="Wall_ThumbDimmer">
 		<posx>0</posx>
@@ -39,7 +39,7 @@
 		<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 		<animation effect="fade" start="100" end="45" condition="true">Conditional</animation>
 		<include>Animation_Fade</include>
-		<visible>[SubString(skin.string(panel_seconds),1) + System.IdleTime(1) | SubString(skin.string(panel_seconds),2) + System.IdleTime(2) | SubString(skin.string(panel_seconds),3) + System.IdleTime(3) | SubString(skin.string(panel_seconds),4) + System.IdleTime(4) | SubString(skin.string(panel_seconds),5) + System.IdleTime(5)] + Control.HasFocus(56)</visible>
+		<visible>[String.Contains(skin.string(panel_seconds),1) + System.IdleTime(1) | String.Contains(skin.string(panel_seconds),2) + System.IdleTime(2) | String.Contains(skin.string(panel_seconds),3) + System.IdleTime(3) | String.Contains(skin.string(panel_seconds),4) + System.IdleTime(4) | String.Contains(skin.string(panel_seconds),5) + System.IdleTime(5)] + Control.HasFocus(56)</visible>
 	</include>
 	<include name="ViewWallVideo">
 		<control type="group">
@@ -57,12 +57,12 @@
 				<ondown>9920</ondown>
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
-				<animation effect="slide" start="0,0" end="-62,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(12) + Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),default) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-80,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(10) + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),default) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-85,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(9) + SubString(skin.string(wallvideogrid),mid) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-110,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(5) + SubString(skin.string(wallvideogrid),big) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-62,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(12) + Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),default) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-80,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(10) + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),default) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-85,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(9) + String.Contains(skin.string(wallvideogrid),mid) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(5) + String.Contains(skin.string(wallvideogrid),big) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
 				<visible>![Container.Content(episodes) | Container.Content(sets) | Container.Content(years)]</visible>
-				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),default)" width="98.5" height="138"><!-- POSTER SEM ESTOJO - tamanho normal -->
+				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),default)" width="98.5" height="138"><!-- POSTER SEM ESTOJO - tamanho normal -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -85,7 +85,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),mid)" width="128" height="184"><!-- POSTER SEM ESTOJO - tamanho medio -->
+				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),mid)" width="128" height="184"><!-- POSTER SEM ESTOJO - tamanho medio -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -108,7 +108,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER SEM ESTOJO - tamanho grande -->
+				<itemlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER SEM ESTOJO - tamanho grande -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -131,7 +131,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),default)" width="116" height="184"><!-- POSTER ESTOJO - tamanho normal -->
+				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),default)" width="116" height="184"><!-- POSTER ESTOJO - tamanho normal -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -171,7 +171,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),mid)" width="127.2" height="185"><!-- POSTER ESTOJO - tamanho medio -->
+				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),mid)" width="127.2" height="185"><!-- POSTER ESTOJO - tamanho medio -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -211,7 +211,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),big)" width="210" height="278"><!-- POSTER ESTOJO - tamanho grande -->
+				<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),big)" width="210" height="278"><!-- POSTER ESTOJO - tamanho grande -->
 					<control type="group">
 						<include>Wall_Dimmer</include>
 						<control type="image">
@@ -251,7 +251,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),default)" width="98.5" height="138"><!-- POSTER SEM ESTOJO - tamanho normal -->
+				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),default)" width="98.5" height="138"><!-- POSTER SEM ESTOJO - tamanho normal -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-42,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -266,7 +266,7 @@
 							<effect type="slide" start="0,0" end="-42,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>42</posx>
 							<posy>10</posy>
@@ -306,7 +306,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),mid)" width="128" height="184"><!-- POSTER SEM ESTOJO - tamanho medio -->
+				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),mid)" width="128" height="184"><!-- POSTER SEM ESTOJO - tamanho medio -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-54,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -321,7 +321,7 @@
 							<effect type="slide" start="0,0" end="-54,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>54</posx>
 							<posy>10</posy>
@@ -361,7 +361,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + SubString(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER SEM ESTOJO - tamanho grande -->
+				<focusedlayout condition="[[Container.Content(movies) | Container.Content(musicvideos)] + Skin.HasSetting(nowallvideocase) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons)] + String.Contains(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER SEM ESTOJO - tamanho grande -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-93,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -376,7 +376,7 @@
 							<effect type="slide" start="0,0" end="-93,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>93</posx>
 							<posy>20</posy>
@@ -416,7 +416,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),default)" width="116" height="184"><!-- POSTER ESTOJO - tamanho normal -->
+				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),default)" width="116" height="184"><!-- POSTER ESTOJO - tamanho normal -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-37,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -431,7 +431,7 @@
 							<effect type="slide" start="0,0" end="-37,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![[IsEmpty(ListItem.Art(discart)) + IsEmpty(ListItem.Art(poster))] | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(poster))] | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>37</posx>
 							<posy>12</posy>
@@ -442,7 +442,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+							<visible>!String.IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 						<control type="image">
 							<posx>37</posx>
@@ -454,7 +454,7 @@
 							<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>IsEmpty(ListItem.Art(discart))</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -509,7 +509,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),mid)" width="127.2" height="185"><!-- POSTER ESTOJO - tamanho medio -->
+				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),mid)" width="127.2" height="185"><!-- POSTER ESTOJO - tamanho medio -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-45,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -524,7 +524,7 @@
 							<effect type="slide" start="0,0" end="-45,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>45</posx>
 							<posy>8</posy>
@@ -589,7 +589,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + SubString(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER ESTOJO - tamanho grande -->
+				<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(nowallvideocase) + String.Contains(skin.string(wallvideogrid),big)" width="210" height="276"><!-- POSTER ESTOJO - tamanho grande -->
 					<control type="group"><!-- CDART VIDEO -->
 						<animation type="WindowOpen">
 							<effect type="slide" start="-76,0" end="0,0" time="500" delay="500" tween="cubic" easing="out"/>
@@ -604,7 +604,7 @@
 							<effect type="slide" start="0,0" end="-76,0" time="300" tween="cubic" easing="out"/>
 							<effect type="fade" start="100" end="0" time="200"/>
 						</animation>
-						<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
+						<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos)</visible>
 						<control type="image">
 							<posx>76</posx>
 							<posy>13</posy>
@@ -671,8 +671,8 @@
 				</focusedlayout>
 			</control>	
 			<control type="group"><!-- plot tamanho normal sem estojo -->	
-				<animation effect="slide" start="0,0" end="-65,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(12) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="53,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4) | Container(56).Column(5) | Container(56).Column(6)] + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-65,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(12) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="53,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4) | Container(56).Column(5) | Container(56).Column(6)] + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="110,0" time="0" condition="Container(56).Column(0)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="208,0" time="0" condition="Container(56).Column(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="307,0" time="0" condition="Container(56).Column(2)">Conditional</animation>
@@ -691,7 +691,7 @@
 				<animation effect="slide" start="0,0" end="0,361" time="0" condition="Container(56).Row(2)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,499" time="0" condition="Container(56).Row(3)">Conditional</animation>
 				<include>Wall_Plot</include>
-				<visible>[SubString(skin.string(wallvideogrid),default) + Skin.HasSetting(nowallvideocase) + !String.IsEqual(ListItem.Label,..)] + [Container.Content(movies) | Container.Content(musicvideos)] | SubString(skin.string(wallvideogrid),default) + !String.IsEqual(ListItem.Label,..) + ![Container.Content(movies) | Container.Content(musicvideos)]</visible>
+				<visible>[String.Contains(skin.string(wallvideogrid),default) + Skin.HasSetting(nowallvideocase) + !String.IsEqual(ListItem.Label,..)] + [Container.Content(movies) | Container.Content(musicvideos)] | String.Contains(skin.string(wallvideogrid),default) + !String.IsEqual(ListItem.Label,..) + ![Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -730,8 +730,8 @@
 				</control>
 			</control>
 			<control type="group"><!-- plot tamanho normal com estojo -->	
-				<animation effect="slide" start="0,0" end="-80,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(10) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="65,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4) | Container(56).Column(5)] + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-80,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(10) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="65,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4) | Container(56).Column(5)] + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="130,0" time="0" condition="Container(56).Column(0)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="246,0" time="0" condition="Container(56).Column(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="362,0" time="0" condition="Container(56).Column(2)">Conditional</animation>
@@ -747,7 +747,7 @@
 				<animation effect="slide" start="0,0" end="0,274" time="0" condition="Container(56).Row(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,458" time="0" condition="Container(56).Row(2)">Conditional</animation>
 				<include>Wall_Plot</include>
-				<visible>SubString(skin.string(wallvideogrid),default) + ![Skin.HasSetting(nowallvideocase) | String.IsEqual(ListItem.Label,..)] + [Container.Content(movies) | Container.Content(musicvideos)]</visible>
+				<visible>String.Contains(skin.string(wallvideogrid),default) + ![Skin.HasSetting(nowallvideocase) | String.IsEqual(ListItem.Label,..)] + [Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -786,8 +786,8 @@
 				</control>
 			</control>
 			<control type="group"><!-- plot tamanho medio -->
-				<animation effect="slide" start="0,0" end="-85,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(9) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>	
-				<animation effect="slide" start="0,0" end="75,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4)] + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-85,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(9) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>	
+				<animation effect="slide" start="0,0" end="75,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2) | Container(56).Column(3) | Container(56).Column(4)] + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="140,0" time="0" condition="Container(56).Column(0)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="268,0" time="0" condition="Container(56).Column(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="396,0" time="0" condition="Container(56).Column(2)">Conditional</animation>
@@ -802,7 +802,7 @@
 				<animation effect="slide" start="0,0" end="0,271" time="0" condition="Container(56).Row(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,455" time="0" condition="Container(56).Row(2)">Conditional</animation>
 				<include>Wall_Plot</include>
-				<visible>SubString(skin.string(wallvideogrid),mid) + !String.IsEqual(ListItem.Label,..)</visible>
+				<visible>String.Contains(skin.string(wallvideogrid),mid) + !String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -841,8 +841,8 @@
 				</control>
 			</control>
 			<control type="group"><!-- plot tamanho grande -->
-				<animation effect="slide" start="0,0" end="-110,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(5) + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>	
-				<animation effect="slide" start="0,0" end="110,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2)] + Window.IsActive(videos) + ![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | SubString(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="500" delay="500" tween="cubic" easing="out" condition="Container(56).Column(5) + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>	
+				<animation effect="slide" start="0,0" end="110,0" time="500" delay="500" tween="cubic" easing="out" condition="[Container(56).Column(0) | Container(56).Column(1) | Container(56).Column(2)] + Window.IsActive(videos) + ![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nowalldiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="225,0" time="0" condition="Container(56).Column(0)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="435,0" time="0" condition="Container(56).Column(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="645,0" time="0" condition="Container(56).Column(2)">Conditional</animation>
@@ -852,7 +852,7 @@
 				<animation effect="slide" start="0,0" end="0,85" time="0" condition="Container(56).Row(0)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,361" time="0" condition="Container(56).Row(1)">Conditional</animation>
 				<include>Wall_Plot</include>
-				<visible>SubString(skin.string(wallvideogrid),big) + !String.IsEqual(ListItem.Label,..)</visible>
+				<visible>String.Contains(skin.string(wallvideogrid),big) + !String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -908,7 +908,7 @@
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
 				<visible>Window.IsActive(musicplaylist) | Window.IsActive(music)</visible>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -945,7 +945,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -965,7 +965,7 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1002,7 +1002,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1022,7 +1022,7 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -1059,7 +1059,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1079,7 +1079,7 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),default) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1128,7 +1128,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1156,7 +1156,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1205,7 +1205,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="182" height="184"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1233,7 +1233,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),big) + ![Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -1282,7 +1282,7 @@
 							<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
 						</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="321" height="276"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1329,7 +1329,7 @@
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
 				<visible>Window.IsActive(programs)</visible>
-				<itemlayout condition="SubString(skin.string(wallprogramsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallprogramsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1345,7 +1345,7 @@
 						<height>106.5</height>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallprogramsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<itemlayout condition="String.Contains(skin.string(wallprogramsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1361,7 +1361,7 @@
 						<height>184</height>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallprogramsgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<itemlayout condition="String.Contains(skin.string(wallprogramsgrid),big)" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -1377,7 +1377,7 @@
 						<height>276</height>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="SubString(skin.string(wallprogramsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallprogramsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1392,7 +1392,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallprogramsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<focusedlayout condition="String.Contains(skin.string(wallprogramsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1407,7 +1407,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallprogramsgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<focusedlayout condition="String.Contains(skin.string(wallprogramsgrid),big)" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -1441,7 +1441,7 @@
 				<orientation>vertical</orientation>
 				<pagecontrol>-</pagecontrol>
 				<visible>Window.IsActive(pictures)</visible>
-				<itemlayout condition="SubString(skin.string(wallpicsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<itemlayout condition="String.Contains(skin.string(wallpicsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1457,7 +1457,7 @@
 						<height>106.5</height>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallpicsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<itemlayout condition="String.Contains(skin.string(wallpicsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1473,7 +1473,7 @@
 						<height>184</height>
 					</control>
 				</itemlayout>
-				<itemlayout condition="SubString(skin.string(wallpicsgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<itemlayout condition="String.Contains(skin.string(wallpicsgrid),big)" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>
@@ -1489,7 +1489,7 @@
 						<height>276</height>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="SubString(skin.string(wallpicsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
+				<focusedlayout condition="String.Contains(skin.string(wallpicsgrid),default)" width="106.5" height="106.5"><!-- tamanho normal -->
 					<control type="image">
 						<posx>2</posx>
 						<posy>2</posy>
@@ -1504,7 +1504,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallpicsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
+				<focusedlayout condition="String.Contains(skin.string(wallpicsgrid),mid)" width="182" height="184"><!-- tamanho medio -->
 					<control type="image">
 						<posx>5</posx>
 						<posy>2</posy>
@@ -1519,7 +1519,7 @@
 						</animation>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="SubString(skin.string(wallpicsgrid),big)" width="321" height="276"><!-- tamanho grande -->
+				<focusedlayout condition="String.Contains(skin.string(wallpicsgrid),big)" width="321" height="276"><!-- tamanho grande -->
 					<control type="image">
 						<posx>22</posx>
 						<posy>2</posy>

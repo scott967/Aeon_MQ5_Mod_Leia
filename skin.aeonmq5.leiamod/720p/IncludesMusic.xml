@@ -31,12 +31,12 @@
 			<control type="multiimage" id="5032"><!-- Extra Fanart Artist/Album -->
 				<include>WindowBG</include>
 				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-				<visible>[Container.Content(artists) | Container.Content(albums)] + SubString(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+				<visible>[Container.Content(artists) | Container.Content(albums)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="multiimage" id="5033"><!-- Extra Fanart Song -->
 				<include>WindowBG</include>
 				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-				<visible>[Container.Content(songs) | Container.Content(playlists)] + SubString(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+				<visible>[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image" id="9924"><!-- record label control -->
 				<include>InvisibleButton</include>
@@ -46,8 +46,8 @@
 				<include>Animation_Window</include>
 				<control type="button" id="9900"><!-- to menu/kiosk condition -->
 					<include>InvisibleButton</include>
-					<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
-					<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+					<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
+					<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
 					<onfocus condition="Skin.HasSetting(kiosk)">SetFocus(51)</onfocus>
 				</control>
 				<control type="button" id="9920"><!-- hidden colection/view fanart -->
@@ -59,11 +59,11 @@
 				</control>
 				<control type="image" id="9921"><!-- painel de info auto -->
 					<include>InvisibleButton</include>
-					<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(panel_seconds),1)">Visible</animation>
-					<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(panel_seconds),2)">Visible</animation>
-					<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(panel_seconds),3)">Visible</animation>
-					<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(panel_seconds),4)">Visible</animation>
-					<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(panel_seconds),5)">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="String.Contains(skin.string(panel_seconds),3)">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="String.Contains(skin.string(panel_seconds),4)">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Visible</animation>
 					<visible>![Container.OnNext | Container.OnPrevious]</visible>
 				</control>
 				<control type="button" id="9922"><!-- refresh das vistas -->
@@ -135,7 +135,7 @@
 						<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
 						<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">Visible</animation>
 						<animation effect="slide" start="0,0" end="0,300"  time="500" tween="sine" easing="out">Hidden</animation>
-						<visible>[SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + !String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+						<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + !String.IsEqual(ListItem.DBType,MusicVideo)</visible>
 						<control type="grouplist"><!-- Etiquetas -->
 							<posx>20</posx>
 							<posy>645</posy>
@@ -144,42 +144,42 @@
 							<control type="image"><!-- recordlabel -->
 								<include>FlagImage</include>
 								<texture>$VAR[value_recordlabelsicon]</texture>
-								<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 							</control>
 							<control type="label"><!-- Rating -->
 								<include>FlagLabel</include>
 								<label>$INFO[ListItem.Rating]</label>
-								<visible>!IsEmpty(Control.GetLabel(199))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(199))</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(Control.GetLabel(199))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(199))</visible>
 							</control>
 							<control type="image"><!-- Codec -->
 								<include>FlagImage</include>
 								<texture>$VAR[value_musiccodec]</texture>
-								<visible>!IsEmpty(Control.GetLabel(198))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(198))</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(Control.GetLabel(198))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(198))</visible>
 							</control>
 							<control type="label"><!-- Year -->
 								<include>FlagLabel</include>
 								<label>$INFO[ListItem.Year]</label>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.Year) + !IsEmpty(ListItem.Genre)</visible>
+								<visible>!String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Genre)</visible>
 							</control>
 							<control type="group"><!-- Drive Externo -->
 								<width>125</width>
-								<visible>!IsEmpty(Control.GetLabel(556))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(556))</visible>
 								<control type="image">
 									<posx>5</posx>
 									<include>FlagImage</include>
@@ -249,7 +249,7 @@
 						<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
 						<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">Visible</animation>
 						<animation effect="slide" start="0,0" end="0,300"  time="500" tween="sine" easing="out">Hidden</animation>
-						<visible>[SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+						<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
 						<control type="grouplist"><!-- Etiquetas/tags -->
 							<posx>20</posx>
 							<posy>645</posy>
@@ -259,24 +259,24 @@
 							<control type="image"><!-- studio -->
 								<include>FlagImage</include>
 								<texture>$VAR[value_studiosicon]</texture>
-								<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 							</control>
 							<control type="image"><!-- Mpaa -->
 								<include>FlagImage</include>
 								<texture>$VAR[value_mpaa]</texture>
-								<visible>!IsEmpty(ListItem.Mpaa)</visible>
+								<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.Mpaa)</visible>
+								<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 							</control>
 							<control type="group"><!-- Rating -->
 								<width>125</width>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 								<control type="image">
 									<posx>5</posx>
 									<include>FlagImage</include>
@@ -302,51 +302,51 @@
 							<control type="image"><!-- Codec -->
 								<include>FlagImage</include>
 								<texture>$VAR[value_videocodec]</texture>
-								<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 							</control>
 							<control type="image"><!-- Resolution -->
 								<include>FlagImage</include>
 								<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-								<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 							</control>
 							<control type="image"><!-- Aspect -->
 								<include>FlagImage</include>
 								<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-								<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+								<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 							</control>
 							<control type="image"><!-- Audio Codec -->
 								<include>FlagImage</include>
 								<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-								<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+								<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+								<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 							</control>
 							<control type="image"><!-- Channels -->
 								<include>FlagImage</include>
 								<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-								<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+								<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+								<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 							</control>
 							<control type="group"><!-- Drive Externo -->
 								<width>125</width>
-								<visible>!IsEmpty(Control.GetLabel(556))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(556))</visible>
 								<control type="image">
 									<posx>5</posx>
 									<include>FlagImage</include>
@@ -372,11 +372,11 @@
 							<control type="image"><!-- Trailer -->
 								<include>FlagImage</include>
 								<texture>flags/trailer.png</texture>
-								<visible>!IsEmpty(ListItem.Trailer)</visible>
+								<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+								<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 							</control>
 							<control type="group"><!-- % Played -->
 								<width>125</width>
@@ -479,12 +479,12 @@
 		<control type="multiimage" id="5032"><!-- Extra Fanart Artist/Album -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-			<visible>[Container.Content(artists) | Container.Content(albums)] + SubString(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 		</control>
 		<control type="multiimage" id="5033"><!-- Extra Fanart Song -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-			<visible>[Container.Content(songs) | Container.Content(playlists)] + SubString(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 		</control>
 		<control type="image" id="9924"><!-- record label control -->
 			<include>InvisibleButton</include>
@@ -494,8 +494,8 @@
 			<include>Animation_Window</include>
 			<control type="button" id="9900"><!-- to menu/kiosk condition -->
 				<include>InvisibleButton</include>
-				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
-				<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
+				<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
 				<onfocus condition="Skin.HasSetting(kiosk)">SetFocus(51)</onfocus>
 			</control>
 			<control type="button" id="9920"><!-- hidden colection/view fanart -->
@@ -507,11 +507,11 @@
 			</control>
 			<control type="image" id="9921"><!-- painel de info auto -->
 				<include>InvisibleButton</include>
-				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(panel_seconds),1)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(panel_seconds),2)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(panel_seconds),3)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(panel_seconds),4)">Visible</animation>
-				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(panel_seconds),5)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="String.Contains(skin.string(panel_seconds),3)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="String.Contains(skin.string(panel_seconds),4)">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Visible</animation>
 				<visible>![Container.OnNext | Container.OnPrevious]</visible>
 			</control>
 			<control type="button" id="9922"><!-- refresh das vistas -->
@@ -582,7 +582,7 @@
 					<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">Visible</animation>
 					<animation effect="slide" start="0,0" end="0,300"  time="500" tween="sine" easing="out">Hidden</animation>
-					<visible>[SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + !String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+					<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + !String.IsEqual(ListItem.DBType,MusicVideo)</visible>
 					<control type="grouplist"><!-- Etiquetas -->
 						<posx>20</posx>
 						<posy>645</posy>
@@ -591,42 +591,42 @@
 						<control type="image"><!-- recordlabel -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_recordlabelsicon]</texture>
-							<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 						</control>
 						<control type="label"><!-- Rating -->
 							<include>FlagLabel</include>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>!IsEmpty(Control.GetLabel(199))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(199))</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(Control.GetLabel(199))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(199))</visible>
 						</control>
 						<control type="image"><!-- Codec -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_musiccodec]</texture>
-							<visible>!IsEmpty(Control.GetLabel(198))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(198))</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(Control.GetLabel(198))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(198))</visible>
 						</control>
 						<control type="label"><!-- Year -->
 							<include>FlagLabel</include>
 							<label>$INFO[ListItem.Year]</label>
-							<visible>!IsEmpty(ListItem.Year)</visible>
+							<visible>!String.IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Year) + !IsEmpty(ListItem.Genre)</visible>
+							<visible>!String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Genre)</visible>
 						</control>
 						<control type="group"><!-- Drive Externo -->
 							<width>125</width>
-							<visible>!IsEmpty(Control.GetLabel(556))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(556))</visible>
 							<control type="image">
 								<posx>5</posx>
 								<include>FlagImage</include>
@@ -682,7 +682,7 @@
 					<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">Visible</animation>
 					<animation effect="slide" start="0,0" end="0,300"  time="500" tween="sine" easing="out">Hidden</animation>
-					<visible>[SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+					<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
 					<control type="grouplist"><!-- Etiquetas/tags -->
 						<posx>20</posx>
 						<posy>645</posy>
@@ -692,24 +692,24 @@
 						<control type="image"><!-- studio -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_studiosicon]</texture>
-							<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(Control.GetLabel(9924))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(9924))</visible>
 						</control>
 						<control type="image"><!-- Mpaa -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_mpaa]</texture>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="group"><!-- Rating -->
 							<width>125</width>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 							<control type="image">
 								<posx>5</posx>
 								<include>FlagImage</include>
@@ -735,51 +735,51 @@
 						<control type="image"><!-- Codec -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_videocodec]</texture>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image"><!-- Resolution -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image"><!-- Aspect -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image"><!-- Audio Codec -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image"><!-- Channels -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="group"><!-- Drive Externo -->
 							<width>125</width>
-							<visible>!IsEmpty(Control.GetLabel(556))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(556))</visible>
 							<control type="image">
 								<posx>5</posx>
 								<include>FlagImage</include>
@@ -805,11 +805,11 @@
 						<control type="image"><!-- Trailer -->
 							<include>FlagImage</include>
 							<texture>flags/trailer.png</texture>
-							<visible>!IsEmpty(ListItem.Trailer)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="group"><!-- % Played -->
 							<width>125</width>

@@ -49,8 +49,8 @@
 
 			<control type="button" id="9900"><!-- to menu/kiosk condition -->
 				<include>InvisibleButton</include>
-				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9000)</onfocus>
-				<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9000)</onfocus>
+				<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
 				<onfocus condition="Skin.HasSetting(kiosk)">SetFocus(9100)</onfocus>
 			</control>
 			<control type="button" id="9920"><!-- hidden colection/view fanart -->
@@ -123,7 +123,7 @@
 
 			<control type="group"><!-- All views Grupo ocultar flags ou fanart -->
 				<posy>30</posy>
-				<visible>!Control.IsVisible(57) + [SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
+				<visible>!Control.IsVisible(57) + [String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
 				<include>Animation_HiddenView</include>
 				<control type="image"><!-- Barra do rodape -->
 					<posx>0</posx>
@@ -155,14 +155,14 @@
 						<control type="image"><!-- Mpaa -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_mpaa]</texture>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="group"><!-- Rating -->
-							<visible>!IsEmpty(ListItem.Rating)</visible>
+							<visible>!String.IsEmpty(ListItem.Rating)</visible>
 							<control type="image">
 								<posx>5</posx>
 								<include>FlagImage</include>
@@ -188,56 +188,56 @@
 						<control type="image"><!-- Codec -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_videocodec]</texture>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image"><!-- Resolution -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image"><!-- Aspect -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image"><!-- Audio Codec -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image"><!-- Channels -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="image"><!-- Trailer -->
 							<include>FlagImage</include>
 							<texture>flags/trailer.png</texture>
-							<visible>!IsEmpty(ListItem.Trailer)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="group"><!-- % Played -->
 							<visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
@@ -286,7 +286,7 @@
 					<animation effect="fade" end="75" condition="true">Conditional</animation>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<control type="label"><!-- Title -->
 						<posx>30</posx>
 						<posy>48</posy>
@@ -298,7 +298,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
-						<visible>![Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))]</visible>
+						<visible>![Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 					</control>
 					<control type="image"><!-- clearlogo -->
 						<posx>30</posx>
@@ -308,7 +308,7 @@
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="label"><!-- air date -->
 						<posx>30</posx>
@@ -324,7 +324,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+					<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<control type="label"><!-- Title -->
 						<posx>30</posx>
 						<posy>48</posy>
@@ -336,7 +336,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 						<shadowcolor>grey</shadowcolor>
-						<visible>![Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))]</visible>
+						<visible>![Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 					</control>
 					<control type="image"><!-- clearlogo -->
 						<posx>30</posx>
@@ -346,7 +346,7 @@
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="label"><!-- air date -->
 						<posx>30</posx>
@@ -371,7 +371,7 @@
 				<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 				<animation effect="slide" end="0,-20" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | IsEmpty(ListItem.Property(AudioLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation)]</visible>
+				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation)]</visible>
 				<posx>810</posx>
 				<posy>35</posy>
 				<include>AudioandSub</include>
@@ -641,7 +641,7 @@
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_18A</font>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 				<control type="progress">
 					<description>Disk usage bar</description>
@@ -650,7 +650,7 @@
 					<width>290</width>
 					<height>12</height>>
 					<info>PVR.backenddiskspaceprogr</info>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 			</control>
 			<control type="group"><!-- recording disk space left -->
@@ -666,7 +666,7 @@
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_18A</font>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 				<control type="progress">
 					<description>Disk usage bar</description>
@@ -675,7 +675,7 @@
 					<width>290</width>
 					<height>12</height>>
 					<info>PVR.backenddiskspaceprogr</info>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 			</control>
 			<include>TouchScreen</include>

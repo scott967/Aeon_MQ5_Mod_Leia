@@ -396,65 +396,65 @@
 				<control type="image"><!-- Codec -->
 					<include>FlagImage</include>
 					<texture>$VAR[value_videocodec]</texture>
-					<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 				</control>
 				<control type="image"><!-- Resolution -->
 					<include>FlagImage</include>
 					<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 				</control>
 				<control type="image"><!-- Aspect -->
 					<include>FlagImage</include>
 					<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-					<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 				</control>
 				<control type="label"><!-- Audio Language -->
 					<include>FlagLabel</include>
 					<label>$INFO[ListItem.AudioLanguage]</label>
-					<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioLanguage)</visible>
 				</control>
 				<control type="image"><!-- Audio Codec -->
 					<include>FlagImage</include>
 					<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-					<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 				</control>
 				<control type="image"><!-- Channels -->
 					<include>FlagImage</include>
 					<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 				</control>
 				<control type="image"><!-- Trailer -->
 					<include>FlagImage</include>
 					<texture>logo_trailer.png</texture>
-					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 				</control>
 				<control type="image">
 					<include>FlagSeparator</include>
-					<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+					<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 				</control>
 				<control type="label"><!-- % Played -->
 					<include>FlagLabel</include>
@@ -725,7 +725,7 @@
 							<onclick>PlayMedia($INFO[ListItem.FilenameAndPath])</onclick>
 							<onclick>PreviousMenu</onclick><!-- cancel all parent dir of add-on -->
 							<onclick>Dialog.Close(all,true)</onclick>
-							<visible>!IsEmpty(ListItem.FilenameAndPath)</visible>
+							<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 						</item>
 						<item id="30"><!-- Artist Zoom -->
 							<label>31944</label>
@@ -746,17 +746,17 @@
 						<item id="15"><!-- Play Trailer Windowed -->
 							<label>20410</label>
 							<onclick>SetFocus(90000)</onclick>
-							<visible>!IsEmpty(ListItem.Trailer)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 						</item>
 						<item id="31"><!-- Homepage -->
 							<label>$ADDON[script.metadata.actors 32017]</label>
 							<onclick>RunScript(script.metadata.actors,homepage=$INFO[ListItem.Property(Homepage)])</onclick>
-							<visible>!IsEmpty(ListItem.Property(Homepage))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(Homepage))</visible>
 						</item>
 						<item id="32"><!-- Online Info -->
 							<label>$ADDON[script.metadata.actors 32050]</label>
 							<onclick>RunScript(script.metadata.actors,homepage=$INFO[ListItem.Property(onlineinfo)])</onclick>
-							<visible>!IsEmpty(ListItem.Property(onlineinfo))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(onlineinfo))</visible>
 						</item>
 					</content>
 				</control>

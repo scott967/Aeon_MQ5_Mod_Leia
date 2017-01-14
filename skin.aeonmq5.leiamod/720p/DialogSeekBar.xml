@@ -11,7 +11,7 @@
 			<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">Hidden</animation>
-			<visible>![SubString(skin.string(videofurniture),hide) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Player.IsTempo]</visible>
+			<visible>![String.Contains(skin.string(videofurniture),hide) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Player.IsTempo]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -70,7 +70,7 @@
 		<control type="group">
 			<animation effect="slide" time="400" start="0,800" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,800" easing="in" tween="cubic">WindowClose</animation>
-			<visible>![SubString(skin.string(videofurniture),hide) | Player.IsTempo]</visible>
+			<visible>![String.Contains(skin.string(videofurniture),hide) | Player.IsTempo]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>550</posy>
@@ -207,7 +207,7 @@
 			<posy>-35</posy>
 			<animation effect="slide" time="800" start="0,800" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(3)">Conditional</animation>
 			<animation effect="slide" time="800" start="0,0" end="0,800" easing="inout" tween="cubic" condition="!System.IdleTime(3)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,500" time="700" tween="cubic" easing="out" condition="SubString(skin.string(videofurniture),partial) | SubString(skin.string(videofurniture),hide)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,500" time="700" tween="cubic" easing="out" condition="String.Contains(skin.string(videofurniture),partial) | String.Contains(skin.string(videofurniture),hide)">Conditional</animation>
 			<control type="image"><!-- Barra de flags -->
 				<posx>220</posx>
 				<posy>647</posy>
@@ -275,7 +275,7 @@
 			<control type="group"><!-- CDart -->
 				<animation effect="slide" time="800" start="0,85" end="0,0" easing="inout" tween="cubic" condition="System.IdleTime(4)">Conditional</animation>
 				<animation effect="slide" time="800" start="0,0" end="0,85" easing="inout" tween="cubic" condition="!System.IdleTime(4)">Conditional</animation>
-				<visible>!IsEmpty(Player.Art(discart))</visible>
+				<visible>!String.IsEmpty(Player.Art(discart))</visible>
 				<control type="image">
 					<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),2000)">Conditional</animation>
 					<animation effect="rotate" end="-360" center="auto" time="4000" loop="true" reversible="false" condition="String.IsEqual(skin.string(cdart_seconds),4000)">Conditional</animation>
@@ -288,7 +288,7 @@
 					<height>180</height>
 					<texture diffuse="cdart_diffuse.png" background="true">$VAR[value_videodisc]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>!IsEmpty(Player.Art(discart))</visible>
+					<visible>!String.IsEmpty(Player.Art(discart))</visible>
 				</control>
 			</control>
 			<control type="image">

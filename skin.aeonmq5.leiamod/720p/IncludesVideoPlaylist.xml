@@ -28,8 +28,8 @@
 
 			<control type="button" id="9900"><!-- to menu/kiosk condition -->
 				<include>InvisibleButton</include>
-				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
-				<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+				<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
+				<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
 				<onfocus condition="Skin.HasSetting(kiosk)">SetFocus(51)</onfocus>
 			</control>
 			<control type="button" id="9920"><!-- hidden colection/view fanart -->
@@ -55,7 +55,7 @@
 					<colordiffuse>85000000</colordiffuse>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<control type="label"><!-- Title -->
 						<posx>30</posx>
 						<posy>8</posy>
@@ -66,7 +66,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</control>
 					<control type="label">
 						<posx>30</posx>
@@ -78,11 +78,11 @@
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</control>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+					<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<control type="label"><!-- Title -->
 						<posx>30</posx>
 						<posy>8</posy>
@@ -93,7 +93,7 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<visible>IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</control>
 					<control type="label">
 						<posx>30</posx>
@@ -105,7 +105,7 @@
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<visible>IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					</control>
 				</control>
 			</control>	
@@ -117,7 +117,7 @@
 				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 				<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | IsEmpty(ListItem.Property(AudioLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + !Skin.HasSetting(vplaylistinfobar)</visible>
+				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + !Skin.HasSetting(vplaylistinfobar)</visible>
 				<posx>810</posx>
 				<posy>15</posy>
 				<include>AudioandSub</include>
@@ -130,7 +130,7 @@
 				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 				<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | IsEmpty(ListItem.Property(AudioLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + Skin.HasSetting(vplaylistinfobar)</visible>
+				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + Skin.HasSetting(vplaylistinfobar)</visible>
 				<posx>810</posx>
 				<posy>35</posy>
 				<include>AudioandSub</include>
@@ -159,74 +159,74 @@
 						<control type="image"><!-- Mpaa -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_mpaa]</texture>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 						</control>
 						<control type="label"><!-- Rating -->
 							<include>FlagLabel</include>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="image"><!-- Codec -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_videocodec]</texture>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 						</control>
 						<control type="image"><!-- Resolution -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 						</control>
 						<control type="image"><!-- Aspect -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 						</control>
 						<control type="image"><!-- Audio Codec -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 						</control>
 						<control type="image"><!-- Channels -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 						</control>
 						<control type="image"><!-- Trailer -->
 							<include>FlagImage</include>
 							<texture>logo_trailer.png</texture>
-							<visible>!IsEmpty(ListItem.Trailer)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 						</control>
 						<control type="label"><!-- % Played -->
 							<include>FlagLabel</include>

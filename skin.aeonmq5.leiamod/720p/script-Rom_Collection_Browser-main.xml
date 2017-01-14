@@ -23,7 +23,7 @@
 		<control type="multiimage" id="5020"><!-- Extra Fanart -->
 			<include>InvisibleButton</include>
 			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-			<visible>SubString(skin.string(gamesfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>String.Contains(skin.string(gamesfanart),extra) + !ListItem.IsParentFolder</visible>
 		</control>
 
 		<!-- Views Group -->
@@ -36,10 +36,10 @@
 					<control type="button" id="9900"><!-- to menu/kiosk condition -->
 						<include>InvisibleButton</include>
 						<onfocus>PlayerControl(stop)</onfocus>
-						<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
-						<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
-						<onfocus condition="Skin.HasSetting(kiosk) + [IsEmpty(ListItem.Property(gameplaymain)) | SubString(skin.string(games_video),off)]">SetFocus(50)</onfocus>
-						<onfocus condition="Skin.HasSetting(kiosk) + ![IsEmpty(ListItem.Property(gameplaymain)) | SubString(skin.string(games_video),off)]">SetFocus(90000)</onfocus>
+						<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
+						<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+						<onfocus condition="Skin.HasSetting(kiosk) + [String.IsEmpty(ListItem.Property(gameplaymain)) | String.Contains(skin.string(games_video),off)]">SetFocus(50)</onfocus>
+						<onfocus condition="Skin.HasSetting(kiosk) + ![String.IsEmpty(ListItem.Property(gameplaymain)) | String.Contains(skin.string(games_video),off)]">SetFocus(90000)</onfocus>
 					</control>
 					<control type="button" id="9920"><!-- hidden colection/view fanart -->
 						<include>InvisibleButton</include>
@@ -50,11 +50,11 @@
 					</control>
 					<control type="image" id="9921"><!-- painel de info auto -->
 						<include>InvisibleButton</include>
-						<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="SubString(skin.string(panel_seconds),1)">Visible</animation>
-						<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="SubString(skin.string(panel_seconds),2)">Visible</animation>
-						<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="SubString(skin.string(panel_seconds),3)">Visible</animation>
-						<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="SubString(skin.string(panel_seconds),4)">Visible</animation>
-						<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="SubString(skin.string(panel_seconds),5)">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="150" delay="3000" condition="String.Contains(skin.string(panel_seconds),3)">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="150" delay="4000" condition="String.Contains(skin.string(panel_seconds),4)">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Visible</animation>
 						<visible>![Container.OnNext | Container.OnPrevious]</visible>
 					</control>
 					<control type="group">
@@ -119,36 +119,36 @@
 									<description>mainview1</description>
 									<include>FlagImage</include>
 									<texture background="true">$INFO[ListItem.Property(extraImage1)]</texture>
-									<visible>!IsEmpty(ListItem.Property(extraImage1))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage1))</visible>
 								</control>
 								<control type="image">
 									<include>FlagSeparator</include>
-									<visible>!IsEmpty(ListItem.Property(extraImage1))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage1))</visible>
 								</control>
 								<control type="image"><!-- extraImage2 -->
 									<description>mainview2</description>
 									<include>FlagImage</include>
 									<texture background="true">$INFO[ListItem.Property(extraImage2)]</texture>
-									<visible>!IsEmpty(ListItem.Property(extraImage2))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage2))</visible>
 								</control>
 								<control type="image">
 									<include>FlagSeparator</include>
-									<visible>!IsEmpty(ListItem.Property(extraImage2))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage2))</visible>
 								</control>
 								<control type="image"><!-- extraImage3 -->
 									<description>mainview3</description>
 									<include>FlagImage</include>
 									<texture background="true">$INFO[ListItem.Property(extraImage3)]</texture>
-									<visible>!IsEmpty(ListItem.Property(extraImage3))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage3))</visible>
 								</control>
 								<control type="image">
 									<include>FlagSeparator</include>
-									<visible>!IsEmpty(ListItem.Property(extraImage3))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(extraImage3))</visible>
 								</control>
 								<control type="image"><!-- Trailer -->
 									<include>FlagImage</include>
 									<texture>flags/trailer.png</texture>
-									<visible>!IsEmpty(ListItem.Property(gameplaymain))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 								</control>
 							</control>
 							<control type="image">

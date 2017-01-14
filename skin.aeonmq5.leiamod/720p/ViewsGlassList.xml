@@ -45,7 +45,7 @@
 				<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="0,300" end="0,0"  time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<visible>!String.IsEqual(ListItem.Label,..) + [SubString(skin.string(mediaflags),on) | SubString(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
+				<visible>!String.IsEqual(ListItem.Label,..) + [String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)]</visible>
 				<control type="image"><!-- Barra do rodape -->
 					<posx>300</posx>
 					<posy>510</posy>
@@ -61,7 +61,7 @@
 					<itemgap>15</itemgap>
 					<control type="group"><!-- Rating -->
 						<width>110</width>
-						<visible>!IsEmpty(ListItem.Rating)</visible>
+						<visible>!String.IsEmpty(ListItem.Rating)</visible>
 						<control type="image">
 							<posx>5</posx>
 							<include>FlagImage</include>
@@ -87,56 +87,56 @@
 					<control type="image"><!-- Codec -->
 						<include>FlagImage</include>
 						<texture>$VAR[value_videocodec]</texture>
-						<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					</control>
 					<control type="image"><!-- Resolution -->
 						<include>FlagImage</include>
 						<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-						<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image"><!-- Aspect -->
 						<include>FlagImage</include>
 						<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-						<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+						<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
 					</control>
 					<control type="image"><!-- Audio Codec -->
 						<include>FlagImage</include>
 						<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-						<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="image"><!-- Channels -->
 						<include>FlagImage</include>
 						<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-						<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+						<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+						<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
 					</control>
 					<control type="image"><!-- Trailer -->
 						<include>FlagImage</include>
 						<texture>flags/trailer.png</texture>
-						<visible>!IsEmpty(ListItem.Trailer)</visible>
+						<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 					</control>
 					<control type="image">
 						<include>FlagSeparator</include>
-						<visible>!IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+						<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
 					</control>
 					<control type="group"><!-- % Played -->
 						<width>110</width>
@@ -168,7 +168,7 @@
 				</control>
 			</control>
 			<control type="group"><!-- Painel de Info -->
-				<animation effect="slide" end="0,40" time="500" tween="sine" easing="out" condition="SubString(skin.string(mediaflags),off)">Conditional</animation>
+				<animation effect="slide" end="0,40" time="500" tween="sine" easing="out" condition="String.Contains(skin.string(mediaflags),off)">Conditional</animation>
 				<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image"><!-- Fundo -->
 					<posx>300</posx>
@@ -219,7 +219,7 @@
 					<height>20</height>
 					<label>$INFO[ListItem.Rating]</label>
 					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-					<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | IsEmpty(ListItem.Title)]</visible>
+					<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | String.IsEmpty(ListItem.Title)]</visible>
 				</control>
 				<control type="image">
 							<posx>557</posx>
@@ -325,7 +325,7 @@
 						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
-					<visible>![IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(noglasslistdiscart) | SubString(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(noglasslistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<posx>112</posx>
 						<posy>55</posy>
@@ -357,31 +357,31 @@
 						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
-					<visible>![IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + SubString(ListItem.Path,videodb://movies/sets,left) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets,left) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.10.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))</visible>
 					</control>
 				</control>
 
@@ -403,31 +403,31 @@
 						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out"/>
 						<effect type="fade" start="100" end="0" time="200"/>
 					</animation>
-					<visible>![IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + SubString(ListItem.Path,videodb://movies/sets,left) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets,left) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
 					</control>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
-						<visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
 					</control>
 				</control>
 
@@ -711,7 +711,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="IsEmpty(Control.GetLabel(198)) | Window.IsActive(videos) + Skin.HasSetting(slimglasslistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimglasslistmusic)" width="300" height="40">
+				<focusedlayout condition="String.IsEmpty(Control.GetLabel(198)) | Window.IsActive(videos) + Skin.HasSetting(slimglasslistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimglasslistmusic)" width="300" height="40">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -744,7 +744,7 @@
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout condition="![IsEmpty(Control.GetLabel(198)) | Window.IsActive(videos) + Skin.HasSetting(slimglasslistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimglasslistmusic)]" width="300" height="60">
+				<focusedlayout condition="![String.IsEmpty(Control.GetLabel(198)) | Window.IsActive(videos) + Skin.HasSetting(slimglasslistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimglasslistmusic)]" width="300" height="60">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>

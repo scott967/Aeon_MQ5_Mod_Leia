@@ -4,8 +4,8 @@
 
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<onload condition="System.HasAddon(script.games.rom.collection.browser) + ![IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
-	<!-- <onload condition="System.HasAddon(script.tv.show.next.aired) + !IsEmpty(skin.string(livetvwidget))">RunScript(script.tv.show.next.aired,silent=True)</onload> -->
+	<onload condition="System.HasAddon(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
+	<!-- <onload condition="System.HasAddon(script.tv.show.next.aired) + !String.IsEmpty(skin.string(livetvwidget))">RunScript(script.tv.show.next.aired,silent=True)</onload> -->
 	<onload condition="Skin.HasSetting(custommode)">Skin.Reset(custommode)</onload>
 	<onload condition="Skin.HasSetting(submode)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
@@ -19,13 +19,13 @@
 		</control>
 		<control type="button" id="10">
 			<include>InvisibleButton</include>
-			<onfocus condition="SubString(skin.string(theme),coral)">Skin.SetString(theme,modern)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),modern)">Skin.SetString(theme,future)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),future)">Skin.SetString(theme,cold)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),cold)">Skin.SetString(theme,warm)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),warm)">Skin.SetString(theme,darkness)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),darkness)">Skin.SetString(theme,digitalart)</onfocus>
-			<onfocus condition="SubString(skin.string(theme),digitalart)">Skin.SetString(theme,coral)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),coral)">Skin.SetString(theme,modern)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),modern)">Skin.SetString(theme,future)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),future)">Skin.SetString(theme,cold)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),cold)">Skin.SetString(theme,warm)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),warm)">Skin.SetString(theme,darkness)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),darkness)">Skin.SetString(theme,digitalart)</onfocus>
+			<onfocus condition="String.Contains(skin.string(theme),digitalart)">Skin.SetString(theme,coral)</onfocus>
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<visible>Skin.HasSetting(randomthemes)</visible>
 		</control>

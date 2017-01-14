@@ -124,7 +124,7 @@
 			<font>Font_18A</font>
 			<textcolor>$VAR[value_headercolor]</textcolor>
 			<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.Date][/COLOR]</label>
-			<visible>Window.IsVisible(tvtimers) + !IsEmpty(ListItem.Date)</visible>
+			<visible>Window.IsVisible(tvtimers) + !String.IsEmpty(ListItem.Date)</visible>
 		</control>
 		<control type="image">
 			<posx>170</posx>

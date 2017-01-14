@@ -41,106 +41,106 @@
 	<constant name="FanartCrossFadeTime">350</constant>
 
 	<include name="Playlists">
-		<onload condition="SubString(skin.string(menu1.master),vpl) + SubString(skin.string(mfvpl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
-		<onload condition="SubString(skin.string(menu1.master),vpl) + SubString(skin.string(mfvpl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
-		<onload condition="SubString(skin.string(menu1.master),vpl) + SubString(skin.string(mfvpl1_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
-		<onload condition="SubString(skin.string(menu2.master),vpl) + SubString(skin.string(mfvpl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
-		<onload condition="SubString(skin.string(menu2.master),vpl) + SubString(skin.string(mfvpl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
-		<onload condition="SubString(skin.string(menu2.master),vpl) + SubString(skin.string(mfvpl2_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
-		<onload condition="SubString(skin.string(menu3.master),vpl) + SubString(skin.string(mfvpl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
-		<onload condition="SubString(skin.string(menu3.master),vpl) + SubString(skin.string(mfvpl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
-		<onload condition="SubString(skin.string(menu3.master),vpl) + SubString(skin.string(mfvpl3_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
-		<onload condition="SubString(skin.string(menu4.master),vpl) + SubString(skin.string(mfvpl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
-		<onload condition="SubString(skin.string(menu4.master),vpl) + SubString(skin.string(mfvpl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
-		<onload condition="SubString(skin.string(menu4.master),vpl) + SubString(skin.string(mfvpl4_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
-		<onload condition="SubString(skin.string(menu5.master),vpl) + SubString(skin.string(mfvpl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
-		<onload condition="SubString(skin.string(menu5.master),vpl) + SubString(skin.string(mfvpl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
-		<onload condition="SubString(skin.string(menu5.master),vpl) + SubString(skin.string(mfvpl5_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
-		<onload condition="SubString(skin.string(menu6.master),vpl) + SubString(skin.string(mfvpl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
-		<onload condition="SubString(skin.string(menu6.master),vpl) + SubString(skin.string(mfvpl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
-		<onload condition="SubString(skin.string(menu6.master),vpl) + SubString(skin.string(mfvpl6_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
-		<onload condition="SubString(skin.string(menu7.master),vpl) + SubString(skin.string(mfvpl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
-		<onload condition="SubString(skin.string(menu7.master),vpl) + SubString(skin.string(mfvpl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
-		<onload condition="SubString(skin.string(menu7.master),vpl) + SubString(skin.string(mfvpl7_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
-		<onload condition="SubString(skin.string(menu8.master),vpl) + SubString(skin.string(mfvpl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
-		<onload condition="SubString(skin.string(menu8.master),vpl) + SubString(skin.string(mfvpl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
-		<onload condition="SubString(skin.string(menu8.master),vpl) + SubString(skin.string(mfvpl8_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
-		<onload condition="SubString(skin.string(menu9.master),vpl) + SubString(skin.string(mfvpl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
-		<onload condition="SubString(skin.string(menu9.master),vpl) + SubString(skin.string(mfvpl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
-		<onload condition="SubString(skin.string(menu9.master),vpl) + SubString(skin.string(mfvpl9_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
-		<onload condition="SubString(skin.string(menu10.master),vpl) + SubString(skin.string(mfvpl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
-		<onload condition="SubString(skin.string(menu10.master),vpl) + SubString(skin.string(mfvpl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
-		<onload condition="SubString(skin.string(menu10.master),vpl) + SubString(skin.string(mfvpl10_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
-		<onload condition="SubString(skin.string(menu11.master),vpl) + SubString(skin.string(mfvpl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
-		<onload condition="SubString(skin.string(menu11.master),vpl) + SubString(skin.string(mfvpl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
-		<onload condition="SubString(skin.string(menu11.master),vpl) + SubString(skin.string(mfvpl11_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
-		<onload condition="SubString(skin.string(menu12.master),vpl) + SubString(skin.string(mfvpl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
-		<onload condition="SubString(skin.string(menu12.master),vpl) + SubString(skin.string(mfvpl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
-		<onload condition="SubString(skin.string(menu12.master),vpl) + SubString(skin.string(mfvpl12_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
-		<onload condition="SubString(skin.string(menu13.master),vpl) + SubString(skin.string(mfvpl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
-		<onload condition="SubString(skin.string(menu13.master),vpl) + SubString(skin.string(mfvpl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
-		<onload condition="SubString(skin.string(menu13.master),vpl) + SubString(skin.string(mfvpl13_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
-		<onload condition="SubString(skin.string(menu14.master),vpl) + SubString(skin.string(mfvpl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
-		<onload condition="SubString(skin.string(menu14.master),vpl) + SubString(skin.string(mfvpl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
-		<onload condition="SubString(skin.string(menu14.master),vpl) + SubString(skin.string(mfvpl14_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
-		<onload condition="SubString(skin.string(menu15.master),vpl) + SubString(skin.string(mfvpl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
-		<onload condition="SubString(skin.string(menu15.master),vpl) + SubString(skin.string(mfvpl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
-		<onload condition="SubString(skin.string(menu15.master),vpl) + SubString(skin.string(mfvpl15_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
-		<onload condition="SubString(skin.string(menu16.master),vpl) + SubString(skin.string(mfvpl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
-		<onload condition="SubString(skin.string(menu16.master),vpl) + SubString(skin.string(mfvpl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
-		<onload condition="SubString(skin.string(menu16.master),vpl) + SubString(skin.string(mfvpl16_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
-		<onload condition="SubString(skin.string(menu17.master),vpl) + SubString(skin.string(mfvpl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
-		<onload condition="SubString(skin.string(menu17.master),vpl) + SubString(skin.string(mfvpl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
-		<onload condition="SubString(skin.string(menu17.master),vpl) + SubString(skin.string(mfvpl17_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
-		<onload condition="SubString(skin.string(menu18.master),vpl) + SubString(skin.string(mfvpl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
-		<onload condition="SubString(skin.string(menu18.master),vpl) + SubString(skin.string(mfvpl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
-		<onload condition="SubString(skin.string(menu18.master),vpl) + SubString(skin.string(mfvpl18_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
-		<onload condition="SubString(skin.string(menu19.master),vpl) + SubString(skin.string(mfvpl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
-		<onload condition="SubString(skin.string(menu19.master),vpl) + SubString(skin.string(mfvpl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
-		<onload condition="SubString(skin.string(menu19.master),vpl) + SubString(skin.string(mfvpl19_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
-		<onload condition="SubString(skin.string(menu20.master),vpl) + SubString(skin.string(mfvpl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
-		<onload condition="SubString(skin.string(menu20.master),vpl) + SubString(skin.string(mfvpl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
-		<onload condition="SubString(skin.string(menu20.master),vpl) + SubString(skin.string(mfvpl20_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
-		<onload condition="SubString(skin.string(menu1.master),apl) + SubString(skin.string(mfapl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onload>
-		<onload condition="SubString(skin.string(menu1.master),apl) + SubString(skin.string(mfapl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onload>
-		<onload condition="SubString(skin.string(menu2.master),apl) + SubString(skin.string(mfapl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onload>
-		<onload condition="SubString(skin.string(menu2.master),apl) + SubString(skin.string(mfapl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onload>
-		<onload condition="SubString(skin.string(menu3.master),apl) + SubString(skin.string(mfapl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onload>
-		<onload condition="SubString(skin.string(menu3.master),apl) + SubString(skin.string(mfapl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onload>
-		<onload condition="SubString(skin.string(menu4.master),apl) + SubString(skin.string(mfapl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onload>
-		<onload condition="SubString(skin.string(menu4.master),apl) + SubString(skin.string(mfapl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onload>
-		<onload condition="SubString(skin.string(menu5.master),apl) + SubString(skin.string(mfapl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onload>
-		<onload condition="SubString(skin.string(menu5.master),apl) + SubString(skin.string(mfapl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onload>
-		<onload condition="SubString(skin.string(menu6.master),apl) + SubString(skin.string(mfapl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onload>
-		<onload condition="SubString(skin.string(menu6.master),apl) + SubString(skin.string(mfapl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onload>
-		<onload condition="SubString(skin.string(menu7.master),apl) + SubString(skin.string(mfapl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onload>
-		<onload condition="SubString(skin.string(menu7.master),apl) + SubString(skin.string(mfapl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onload>
-		<onload condition="SubString(skin.string(menu8.master),apl) + SubString(skin.string(mfapl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onload>
-		<onload condition="SubString(skin.string(menu8.master),apl) + SubString(skin.string(mfapl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onload>
-		<onload condition="SubString(skin.string(menu9.master),apl) + SubString(skin.string(mfapl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onload>
-		<onload condition="SubString(skin.string(menu9.master),apl) + SubString(skin.string(mfapl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onload>
-		<onload condition="SubString(skin.string(menu10.master),apl) + SubString(skin.string(mfapl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onload>
-		<onload condition="SubString(skin.string(menu10.master),apl) + SubString(skin.string(mfapl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onload>
-		<onload condition="SubString(skin.string(menu11.master),apl) + SubString(skin.string(mfapl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onload>
-		<onload condition="SubString(skin.string(menu11.master),apl) + SubString(skin.string(mfapl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onload>
-		<onload condition="SubString(skin.string(menu12.master),apl) + SubString(skin.string(mfapl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onload>
-		<onload condition="SubString(skin.string(menu12.master),apl) + SubString(skin.string(mfapl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onload>
-		<onload condition="SubString(skin.string(menu13.master),apl) + SubString(skin.string(mfapl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onload>
-		<onload condition="SubString(skin.string(menu13.master),apl) + SubString(skin.string(mfapl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onload>
-		<onload condition="SubString(skin.string(menu14.master),apl) + SubString(skin.string(mfapl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onload>
-		<onload condition="SubString(skin.string(menu14.master),apl) + SubString(skin.string(mfapl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onload>
-		<onload condition="SubString(skin.string(menu15.master),apl) + SubString(skin.string(mfapl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onload>
-		<onload condition="SubString(skin.string(menu15.master),apl) + SubString(skin.string(mfapl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onload>
-		<onload condition="SubString(skin.string(menu16.master),apl) + SubString(skin.string(mfapl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onload>
-		<onload condition="SubString(skin.string(menu16.master),apl) + SubString(skin.string(mfapl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onload>
-		<onload condition="SubString(skin.string(menu17.master),apl) + SubString(skin.string(mfapl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onload>
-		<onload condition="SubString(skin.string(menu17.master),apl) + SubString(skin.string(mfapl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onload>
-		<onload condition="SubString(skin.string(menu18.master),apl) + SubString(skin.string(mfapl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onload>
-		<onload condition="SubString(skin.string(menu18.master),apl) + SubString(skin.string(mfapl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onload>
-		<onload condition="SubString(skin.string(menu19.master),apl) + SubString(skin.string(mfapl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onload>
-		<onload condition="SubString(skin.string(menu19.master),apl) + SubString(skin.string(mfapl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onload>
-		<onload condition="SubString(skin.string(menu20.master),apl) + SubString(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
-		<onload condition="SubString(skin.string(menu20.master),apl) + SubString(skin.string(mfapl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
+		<onload condition="String.Contains(skin.string(menu1.master),vpl) + String.Contains(skin.string(mfvpl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
+		<onload condition="String.Contains(skin.string(menu1.master),vpl) + String.Contains(skin.string(mfvpl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
+		<onload condition="String.Contains(skin.string(menu1.master),vpl) + String.Contains(skin.string(mfvpl1_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
+		<onload condition="String.Contains(skin.string(menu2.master),vpl) + String.Contains(skin.string(mfvpl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
+		<onload condition="String.Contains(skin.string(menu2.master),vpl) + String.Contains(skin.string(mfvpl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
+		<onload condition="String.Contains(skin.string(menu2.master),vpl) + String.Contains(skin.string(mfvpl2_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onload>
+		<onload condition="String.Contains(skin.string(menu3.master),vpl) + String.Contains(skin.string(mfvpl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
+		<onload condition="String.Contains(skin.string(menu3.master),vpl) + String.Contains(skin.string(mfvpl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
+		<onload condition="String.Contains(skin.string(menu3.master),vpl) + String.Contains(skin.string(mfvpl3_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onload>
+		<onload condition="String.Contains(skin.string(menu4.master),vpl) + String.Contains(skin.string(mfvpl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
+		<onload condition="String.Contains(skin.string(menu4.master),vpl) + String.Contains(skin.string(mfvpl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
+		<onload condition="String.Contains(skin.string(menu4.master),vpl) + String.Contains(skin.string(mfvpl4_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onload>
+		<onload condition="String.Contains(skin.string(menu5.master),vpl) + String.Contains(skin.string(mfvpl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
+		<onload condition="String.Contains(skin.string(menu5.master),vpl) + String.Contains(skin.string(mfvpl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
+		<onload condition="String.Contains(skin.string(menu5.master),vpl) + String.Contains(skin.string(mfvpl5_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onload>
+		<onload condition="String.Contains(skin.string(menu6.master),vpl) + String.Contains(skin.string(mfvpl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
+		<onload condition="String.Contains(skin.string(menu6.master),vpl) + String.Contains(skin.string(mfvpl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
+		<onload condition="String.Contains(skin.string(menu6.master),vpl) + String.Contains(skin.string(mfvpl6_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onload>
+		<onload condition="String.Contains(skin.string(menu7.master),vpl) + String.Contains(skin.string(mfvpl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
+		<onload condition="String.Contains(skin.string(menu7.master),vpl) + String.Contains(skin.string(mfvpl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
+		<onload condition="String.Contains(skin.string(menu7.master),vpl) + String.Contains(skin.string(mfvpl7_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onload>
+		<onload condition="String.Contains(skin.string(menu8.master),vpl) + String.Contains(skin.string(mfvpl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
+		<onload condition="String.Contains(skin.string(menu8.master),vpl) + String.Contains(skin.string(mfvpl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
+		<onload condition="String.Contains(skin.string(menu8.master),vpl) + String.Contains(skin.string(mfvpl8_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onload>
+		<onload condition="String.Contains(skin.string(menu9.master),vpl) + String.Contains(skin.string(mfvpl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
+		<onload condition="String.Contains(skin.string(menu9.master),vpl) + String.Contains(skin.string(mfvpl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
+		<onload condition="String.Contains(skin.string(menu9.master),vpl) + String.Contains(skin.string(mfvpl9_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onload>
+		<onload condition="String.Contains(skin.string(menu10.master),vpl) + String.Contains(skin.string(mfvpl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
+		<onload condition="String.Contains(skin.string(menu10.master),vpl) + String.Contains(skin.string(mfvpl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
+		<onload condition="String.Contains(skin.string(menu10.master),vpl) + String.Contains(skin.string(mfvpl10_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onload>
+		<onload condition="String.Contains(skin.string(menu11.master),vpl) + String.Contains(skin.string(mfvpl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
+		<onload condition="String.Contains(skin.string(menu11.master),vpl) + String.Contains(skin.string(mfvpl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
+		<onload condition="String.Contains(skin.string(menu11.master),vpl) + String.Contains(skin.string(mfvpl11_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onload>
+		<onload condition="String.Contains(skin.string(menu12.master),vpl) + String.Contains(skin.string(mfvpl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
+		<onload condition="String.Contains(skin.string(menu12.master),vpl) + String.Contains(skin.string(mfvpl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
+		<onload condition="String.Contains(skin.string(menu12.master),vpl) + String.Contains(skin.string(mfvpl12_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onload>
+		<onload condition="String.Contains(skin.string(menu13.master),vpl) + String.Contains(skin.string(mfvpl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
+		<onload condition="String.Contains(skin.string(menu13.master),vpl) + String.Contains(skin.string(mfvpl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
+		<onload condition="String.Contains(skin.string(menu13.master),vpl) + String.Contains(skin.string(mfvpl13_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onload>
+		<onload condition="String.Contains(skin.string(menu14.master),vpl) + String.Contains(skin.string(mfvpl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
+		<onload condition="String.Contains(skin.string(menu14.master),vpl) + String.Contains(skin.string(mfvpl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
+		<onload condition="String.Contains(skin.string(menu14.master),vpl) + String.Contains(skin.string(mfvpl14_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onload>
+		<onload condition="String.Contains(skin.string(menu15.master),vpl) + String.Contains(skin.string(mfvpl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
+		<onload condition="String.Contains(skin.string(menu15.master),vpl) + String.Contains(skin.string(mfvpl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
+		<onload condition="String.Contains(skin.string(menu15.master),vpl) + String.Contains(skin.string(mfvpl15_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onload>
+		<onload condition="String.Contains(skin.string(menu16.master),vpl) + String.Contains(skin.string(mfvpl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
+		<onload condition="String.Contains(skin.string(menu16.master),vpl) + String.Contains(skin.string(mfvpl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
+		<onload condition="String.Contains(skin.string(menu16.master),vpl) + String.Contains(skin.string(mfvpl16_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onload>
+		<onload condition="String.Contains(skin.string(menu17.master),vpl) + String.Contains(skin.string(mfvpl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
+		<onload condition="String.Contains(skin.string(menu17.master),vpl) + String.Contains(skin.string(mfvpl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
+		<onload condition="String.Contains(skin.string(menu17.master),vpl) + String.Contains(skin.string(mfvpl17_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onload>
+		<onload condition="String.Contains(skin.string(menu18.master),vpl) + String.Contains(skin.string(mfvpl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
+		<onload condition="String.Contains(skin.string(menu18.master),vpl) + String.Contains(skin.string(mfvpl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
+		<onload condition="String.Contains(skin.string(menu18.master),vpl) + String.Contains(skin.string(mfvpl18_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onload>
+		<onload condition="String.Contains(skin.string(menu19.master),vpl) + String.Contains(skin.string(mfvpl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
+		<onload condition="String.Contains(skin.string(menu19.master),vpl) + String.Contains(skin.string(mfvpl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
+		<onload condition="String.Contains(skin.string(menu19.master),vpl) + String.Contains(skin.string(mfvpl19_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onload>
+		<onload condition="String.Contains(skin.string(menu20.master),vpl) + String.Contains(skin.string(mfvpl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
+		<onload condition="String.Contains(skin.string(menu20.master),vpl) + String.Contains(skin.string(mfvpl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
+		<onload condition="String.Contains(skin.string(menu20.master),vpl) + String.Contains(skin.string(mfvpl20_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onload>
+		<onload condition="String.Contains(skin.string(menu1.master),apl) + String.Contains(skin.string(mfapl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onload>
+		<onload condition="String.Contains(skin.string(menu1.master),apl) + String.Contains(skin.string(mfapl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onload>
+		<onload condition="String.Contains(skin.string(menu2.master),apl) + String.Contains(skin.string(mfapl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onload>
+		<onload condition="String.Contains(skin.string(menu2.master),apl) + String.Contains(skin.string(mfapl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onload>
+		<onload condition="String.Contains(skin.string(menu3.master),apl) + String.Contains(skin.string(mfapl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onload>
+		<onload condition="String.Contains(skin.string(menu3.master),apl) + String.Contains(skin.string(mfapl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onload>
+		<onload condition="String.Contains(skin.string(menu4.master),apl) + String.Contains(skin.string(mfapl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onload>
+		<onload condition="String.Contains(skin.string(menu4.master),apl) + String.Contains(skin.string(mfapl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onload>
+		<onload condition="String.Contains(skin.string(menu5.master),apl) + String.Contains(skin.string(mfapl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onload>
+		<onload condition="String.Contains(skin.string(menu5.master),apl) + String.Contains(skin.string(mfapl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onload>
+		<onload condition="String.Contains(skin.string(menu6.master),apl) + String.Contains(skin.string(mfapl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onload>
+		<onload condition="String.Contains(skin.string(menu6.master),apl) + String.Contains(skin.string(mfapl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onload>
+		<onload condition="String.Contains(skin.string(menu7.master),apl) + String.Contains(skin.string(mfapl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onload>
+		<onload condition="String.Contains(skin.string(menu7.master),apl) + String.Contains(skin.string(mfapl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onload>
+		<onload condition="String.Contains(skin.string(menu8.master),apl) + String.Contains(skin.string(mfapl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onload>
+		<onload condition="String.Contains(skin.string(menu8.master),apl) + String.Contains(skin.string(mfapl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onload>
+		<onload condition="String.Contains(skin.string(menu9.master),apl) + String.Contains(skin.string(mfapl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onload>
+		<onload condition="String.Contains(skin.string(menu9.master),apl) + String.Contains(skin.string(mfapl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onload>
+		<onload condition="String.Contains(skin.string(menu10.master),apl) + String.Contains(skin.string(mfapl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onload>
+		<onload condition="String.Contains(skin.string(menu10.master),apl) + String.Contains(skin.string(mfapl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onload>
+		<onload condition="String.Contains(skin.string(menu11.master),apl) + String.Contains(skin.string(mfapl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onload>
+		<onload condition="String.Contains(skin.string(menu11.master),apl) + String.Contains(skin.string(mfapl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onload>
+		<onload condition="String.Contains(skin.string(menu12.master),apl) + String.Contains(skin.string(mfapl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onload>
+		<onload condition="String.Contains(skin.string(menu12.master),apl) + String.Contains(skin.string(mfapl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onload>
+		<onload condition="String.Contains(skin.string(menu13.master),apl) + String.Contains(skin.string(mfapl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onload>
+		<onload condition="String.Contains(skin.string(menu13.master),apl) + String.Contains(skin.string(mfapl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onload>
+		<onload condition="String.Contains(skin.string(menu14.master),apl) + String.Contains(skin.string(mfapl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onload>
+		<onload condition="String.Contains(skin.string(menu14.master),apl) + String.Contains(skin.string(mfapl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onload>
+		<onload condition="String.Contains(skin.string(menu15.master),apl) + String.Contains(skin.string(mfapl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onload>
+		<onload condition="String.Contains(skin.string(menu15.master),apl) + String.Contains(skin.string(mfapl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onload>
+		<onload condition="String.Contains(skin.string(menu16.master),apl) + String.Contains(skin.string(mfapl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onload>
+		<onload condition="String.Contains(skin.string(menu16.master),apl) + String.Contains(skin.string(mfapl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onload>
+		<onload condition="String.Contains(skin.string(menu17.master),apl) + String.Contains(skin.string(mfapl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onload>
+		<onload condition="String.Contains(skin.string(menu17.master),apl) + String.Contains(skin.string(mfapl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onload>
+		<onload condition="String.Contains(skin.string(menu18.master),apl) + String.Contains(skin.string(mfapl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onload>
+		<onload condition="String.Contains(skin.string(menu18.master),apl) + String.Contains(skin.string(mfapl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onload>
+		<onload condition="String.Contains(skin.string(menu19.master),apl) + String.Contains(skin.string(mfapl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onload>
+		<onload condition="String.Contains(skin.string(menu19.master),apl) + String.Contains(skin.string(mfapl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onload>
+		<onload condition="String.Contains(skin.string(menu20.master),apl) + String.Contains(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
+		<onload condition="String.Contains(skin.string(menu20.master),apl) + String.Contains(skin.string(mfapl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
 	</include>
 
 	<!-- ######################################################################### Animations ######################################################################### -->
@@ -190,39 +190,39 @@
 		<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
 	</include>
 	<include name="Animation_HomeGlass">
-		<animation effect="fade" start="100" end="95" time="200" condition="SubString(skin.string(homeglass),95)">Conditional</animation>
-		<animation effect="fade" start="100" end="85" time="200" condition="SubString(skin.string(homeglass),85)">Conditional</animation>
-		<animation effect="fade" start="100" end="75" time="200" condition="SubString(skin.string(homeglass),75)">Conditional</animation>
-		<animation effect="fade" start="100" end="65" time="200" condition="SubString(skin.string(homeglass),65)">Conditional</animation>
-		<animation effect="fade" start="100" end="55" time="200" condition="SubString(skin.string(homeglass),55)">Conditional</animation>
-		<animation effect="fade" start="100" end="45" time="200" condition="SubString(skin.string(homeglass),45)">Conditional</animation>
-		<animation effect="fade" start="100" end="35" time="200" condition="SubString(skin.string(homeglass),35)">Conditional</animation>
-		<animation effect="fade" start="100" end="25" time="200" condition="SubString(skin.string(homeglass),25)">Conditional</animation>
-		<animation effect="fade" start="100" end="15" time="200" condition="SubString(skin.string(homeglass),15)">Conditional</animation>
+		<animation effect="fade" start="100" end="95" time="200" condition="String.Contains(skin.string(homeglass),95)">Conditional</animation>
+		<animation effect="fade" start="100" end="85" time="200" condition="String.Contains(skin.string(homeglass),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="75" time="200" condition="String.Contains(skin.string(homeglass),75)">Conditional</animation>
+		<animation effect="fade" start="100" end="65" time="200" condition="String.Contains(skin.string(homeglass),65)">Conditional</animation>
+		<animation effect="fade" start="100" end="55" time="200" condition="String.Contains(skin.string(homeglass),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="45" time="200" condition="String.Contains(skin.string(homeglass),45)">Conditional</animation>
+		<animation effect="fade" start="100" end="35" time="200" condition="String.Contains(skin.string(homeglass),35)">Conditional</animation>
+		<animation effect="fade" start="100" end="25" time="200" condition="String.Contains(skin.string(homeglass),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="15" time="200" condition="String.Contains(skin.string(homeglass),15)">Conditional</animation>
 	</include>
 	<include name="Animation_HomeGlass2">
-		<animation effect="fade" start="100" end="99" time="200" condition="SubString(skin.string(homeglass),95)">Conditional</animation>
-		<animation effect="fade" start="100" end="95" time="200" condition="SubString(skin.string(homeglass),85)">Conditional</animation>
-		<animation effect="fade" start="100" end="85" time="200" condition="SubString(skin.string(homeglass),75)">Conditional</animation>
-		<animation effect="fade" start="100" end="75" time="200" condition="SubString(skin.string(homeglass),65)">Conditional</animation>
-		<animation effect="fade" start="100" end="65" time="200" condition="SubString(skin.string(homeglass),55)">Conditional</animation>
-		<animation effect="fade" start="100" end="55" time="200" condition="SubString(skin.string(homeglass),45)">Conditional</animation>
-		<animation effect="fade" start="100" end="45" time="200" condition="SubString(skin.string(homeglass),35)">Conditional</animation>
-		<animation effect="fade" start="100" end="35" time="200" condition="SubString(skin.string(homeglass),25)">Conditional</animation>
-		<animation effect="fade" start="100" end="25" time="200" condition="SubString(skin.string(homeglass),15)">Conditional</animation>
+		<animation effect="fade" start="100" end="99" time="200" condition="String.Contains(skin.string(homeglass),95)">Conditional</animation>
+		<animation effect="fade" start="100" end="95" time="200" condition="String.Contains(skin.string(homeglass),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="85" time="200" condition="String.Contains(skin.string(homeglass),75)">Conditional</animation>
+		<animation effect="fade" start="100" end="75" time="200" condition="String.Contains(skin.string(homeglass),65)">Conditional</animation>
+		<animation effect="fade" start="100" end="65" time="200" condition="String.Contains(skin.string(homeglass),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="55" time="200" condition="String.Contains(skin.string(homeglass),45)">Conditional</animation>
+		<animation effect="fade" start="100" end="45" time="200" condition="String.Contains(skin.string(homeglass),35)">Conditional</animation>
+		<animation effect="fade" start="100" end="35" time="200" condition="String.Contains(skin.string(homeglass),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="25" time="200" condition="String.Contains(skin.string(homeglass),15)">Conditional</animation>
 	</include>
 	<include name="Animation_FloorGlass">
-		<animation effect="fade" start="100" end="100" time="200" condition="SubString(skin.string(floorglass),100)">Conditional</animation>
-		<animation effect="fade" start="100" end="95" time="200" condition="SubString(skin.string(floorglass),95)">Conditional</animation>
-		<animation effect="fade" start="100" end="85" time="200" condition="SubString(skin.string(floorglass),85)">Conditional</animation>
-		<animation effect="fade" start="100" end="75" time="200" condition="SubString(skin.string(floorglass),75)">Conditional</animation>
-		<animation effect="fade" start="100" end="65" time="200" condition="SubString(skin.string(floorglass),65)">Conditional</animation>
-		<animation effect="fade" start="100" end="55" time="200" condition="SubString(skin.string(floorglass),55)">Conditional</animation>
-		<animation effect="fade" start="100" end="45" time="200" condition="SubString(skin.string(floorglass),45)">Conditional</animation>
-		<animation effect="fade" start="100" end="35" time="200" condition="SubString(skin.string(floorglass),35)">Conditional</animation>
-		<animation effect="fade" start="100" end="25" time="200" condition="SubString(skin.string(floorglass),25)">Conditional</animation>
-		<animation effect="fade" start="100" end="15" time="200" condition="SubString(skin.string(floorglass),15)">Conditional</animation>
-		<animation effect="fade" start="100" end="5" time="200" condition="SubString(skin.string(floorglass),05)">Conditional</animation>
+		<animation effect="fade" start="100" end="100" time="200" condition="String.Contains(skin.string(floorglass),100)">Conditional</animation>
+		<animation effect="fade" start="100" end="95" time="200" condition="String.Contains(skin.string(floorglass),95)">Conditional</animation>
+		<animation effect="fade" start="100" end="85" time="200" condition="String.Contains(skin.string(floorglass),85)">Conditional</animation>
+		<animation effect="fade" start="100" end="75" time="200" condition="String.Contains(skin.string(floorglass),75)">Conditional</animation>
+		<animation effect="fade" start="100" end="65" time="200" condition="String.Contains(skin.string(floorglass),65)">Conditional</animation>
+		<animation effect="fade" start="100" end="55" time="200" condition="String.Contains(skin.string(floorglass),55)">Conditional</animation>
+		<animation effect="fade" start="100" end="45" time="200" condition="String.Contains(skin.string(floorglass),45)">Conditional</animation>
+		<animation effect="fade" start="100" end="35" time="200" condition="String.Contains(skin.string(floorglass),35)">Conditional</animation>
+		<animation effect="fade" start="100" end="25" time="200" condition="String.Contains(skin.string(floorglass),25)">Conditional</animation>
+		<animation effect="fade" start="100" end="15" time="200" condition="String.Contains(skin.string(floorglass),15)">Conditional</animation>
+		<animation effect="fade" start="100" end="5" time="200" condition="String.Contains(skin.string(floorglass),05)">Conditional</animation>
 	</include>
 	<include name="Animation_Widgets">
 		<animation effect="fade" start="0" end="100" time="500" delay="3000" condition="Window.Previous(Startup)">WindowOpen</animation>
@@ -287,13 +287,13 @@
 	<include name="Animation_SubMenu">
 		<animation effect="slide" start="-300,0" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="-300,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(6000)">WindowClose</animation>
-		<animation effect="slide" start="0,120" end="0,33" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !IntegerGreaterThan(Container(9000).numitems,6)">WindowOpen</animation>
-		<animation effect="slide" start="0,120" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + IntegerGreaterThan(Container(9000).numitems,6)">WindowOpen</animation>
+		<animation effect="slide" start="0,120" end="0,33" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + !Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>
+		<animation effect="slide" start="0,120" end="0,0" time="300" tween="cubic" easing="inout" reversible="false" condition="Window.IsVisible(Home) + Integer.IsGreater(Container(9000).numitems,6)">WindowOpen</animation>
 		<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(Home)">WindowClose</animation>
 	</include>	
 	<include name="Animation_HiddenView">
 		<animation effect="slide" start="0,0" end="0,800" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsActive(songinformation) | Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Control.HasFocus(9930) + Player.HasVideo + !Skin.HasSetting(fullscreentrailer)">Conditional</animation>
-		<animation effect="slide" end="0,40" time="500" tween="sine" easing="out" condition="SubString(skin.string(mediaflags),off) + !Control.IsVisible(57)">Conditional</animation>
+		<animation effect="slide" end="0,40" time="500" tween="sine" easing="out" condition="String.Contains(skin.string(mediaflags),off) + !Control.IsVisible(57)">Conditional</animation>
 	</include>
 	<include name="Animation_Timer1">
 		<timeperimage>5000</timeperimage>
@@ -1538,7 +1538,7 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible>
 		</control>
 		<control type="label">
 			<posx>40</posx>
@@ -1562,8 +1562,8 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible>
+			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible>
 		</control>
 		<control type="label">
 			<posx>40</posx>
@@ -1576,7 +1576,7 @@
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
+			<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
 			<visible>!Control.IsVisible(70)</visible>
 		</control>
 	</include>	
@@ -2603,7 +2603,7 @@
 				<aligny>center</aligny>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>80FF0000</colordiffuse>
-				<visible>Skin.HasSetting(customosd) + !IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="image">
 				<posx>13</posx>
@@ -2613,7 +2613,7 @@
 				<aligny>center</aligny>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>8000BFFF</colordiffuse>
-				<visible>Skin.HasSetting(customosd) + IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout width="75" height="80">
@@ -2648,7 +2648,7 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>FFFF0000</colordiffuse>
 				<animation effect="zoom" center="25,38" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				<visible>Skin.HasSetting(customosd) + !IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="label">
 				<posx>3</posx>
@@ -2660,7 +2660,7 @@
 				<font>Font_18</font>
 				<textcolor>FFFF0000</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Skin.HasSetting(customosd) + !IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="image">
 				<posx>13</posx>
@@ -2671,7 +2671,7 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>FF00BFFF</colordiffuse>
 				<animation effect="zoom" center="25,38" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				<visible>Skin.HasSetting(customosd) + IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="label">
 				<posx>3</posx>
@@ -2683,7 +2683,7 @@
 				<font>Font_18</font>
 				<textcolor>FF00BFFF</textcolor>
 				<label>$INFO[ListItem.Label]</label>
-				<visible>Skin.HasSetting(customosd) + IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 		</focusedlayout>
 		<content>
@@ -2692,18 +2692,18 @@
 				<property name="condition">$INFO[skin.string(osd_video_info),disable)]</property>
 				<icon>osd_menu_info.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(fullscreeninfo)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_info),disable)">Skin.SetString(osd_video_info,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_info),disable)">Skin.Reset(osd_video_info,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_info),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_info),disable)">Skin.SetString(osd_video_info,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_info),disable)">Skin.Reset(osd_video_info,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_info),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="27"><!-- subtitle delay -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_subtitledelay),disable)]</property>
 				<icon>osd_menu_sub.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SubtitleDelay</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_subtitledelay),disable)">Skin.SetString(osd_video_subtitledelay,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_subtitledelay),disable)">Skin.Reset(osd_video_subtitledelay,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_subtitledelay),disable) | Skin.HasSetting(customosd)] + [VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_subtitledelay),disable)">Skin.SetString(osd_video_subtitledelay,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_subtitledelay),disable)">Skin.Reset(osd_video_subtitledelay,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_subtitledelay),disable) | Skin.HasSetting(customosd)] + [VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="9"><!-- subtitle -->
 				<label>-</label>
@@ -2711,144 +2711,144 @@
 				<icon>osd_menu_sub.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(SubtitleSearch)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_subtitle),disable)">Skin.SetString(osd_video_subtitle,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_subtitle),disable)">Skin.Reset(osd_video_subtitle,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_subtitle),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_subtitle),disable)">Skin.SetString(osd_video_subtitle,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_subtitle),disable)">Skin.Reset(osd_video_subtitle,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_subtitle),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="5"><!-- audio -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_audio),disable)]</property>
 				<icon>osd_menu_audio.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdaudiosettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_audio),disable)">Skin.SetString(osd_video_audio,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_audio),disable)">Skin.Reset(osd_video_audio,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_audio),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_audio),disable)">Skin.SetString(osd_video_audio,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_audio),disable)">Skin.Reset(osd_video_audio,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_audio),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="6"><!-- video -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_video),disable)]</property>
 				<icon>osd_menu_video.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdvideosettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_video),disable)">Skin.SetString(osd_video_video,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_video),disable)">Skin.Reset(osd_video_video,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_video),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_video),disable)">Skin.SetString(osd_video_video,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_video),disable)">Skin.Reset(osd_video_video,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_video),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="28"><!-- 3d mode -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_3dmode),disable)]</property>
 				<icon>osd_menu_3d.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">StereoMode</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_3dmode,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_3dmode,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_3dmode),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_3dmode,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_3dmode,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_3dmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="18"><!-- cms control -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_cms),disable)]</property>
 				<icon>osd_menu_cms.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdcmssettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_cms),disable) | Skin.HasSetting(customosd)] + System.HasCMS</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_cms),disable) | Skin.HasSetting(customosd)] + System.HasCMS</visible>
 			</item>
 			<item id="23"><!-- skipbwd -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_skipbwd),disable)]</property>
 				<icon>osd_menu_skipbwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_skipbwd),disable)">Skin.SetString(osd_video_skipbwd,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_skipbwd),disable)">Skin.Reset(osd_video_skipbwd,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_skipbwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_skipbwd),disable)">Skin.SetString(osd_video_skipbwd,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_skipbwd),disable)">Skin.Reset(osd_video_skipbwd,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_skipbwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="23"><!-- - canal -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_menu_channeldown),disable)]</property>
 				<icon>osd_menu_channeldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_channeldown),disable)">Skin.SetString(osd_video_channeldown,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_channeldown),disable)">Skin.Reset(osd_video_channeldown,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_channeldown),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_channeldown),disable)">Skin.SetString(osd_video_channeldown,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_channeldown),disable)">Skin.Reset(osd_video_channeldown,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_channeldown),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="19"><!-- rew -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_rew),disable)]</property>
 				<icon>osd_menu_rew.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Rewind)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_rew),disable)">Skin.SetString(osd_video_rew,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_rew),disable)">Skin.Reset(osd_video_rew,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_rew),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rew),disable)">Skin.SetString(osd_video_rew,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rew),disable)">Skin.Reset(osd_video_rew,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_rew),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="20"><!-- playpause -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_playpause),disable)]</property>
 				<icon>$VAR[value_button_playpause]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Play)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_playpause),disable)">Skin.SetString(osd_video_playpause,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_playpause),disable)">Skin.Reset(osd_video_playpause,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_playpause),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_playpause),disable)">Skin.SetString(osd_video_playpause,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_playpause),disable)">Skin.Reset(osd_video_playpause,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_playpause),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="21"><!-- ff -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_ff),disable)]</property>
 				<icon>osd_menu_ff.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Forward)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_ff),disable)">Skin.SetString(osd_video_ff,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_ff),disable)">Skin.Reset(osd_video_ff,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_ff),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_ff),disable)">Skin.SetString(osd_video_ff,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_ff),disable)">Skin.Reset(osd_video_ff,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_ff),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="17"><!-- skipfwd -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_skipfwd),disable)]</property>
 				<icon>osd_menu_skipfwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_skipfwd),disable)">Skin.SetString(osd_video_skipfwd,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_skipfwd),disable)">Skin.Reset(osd_video_skipfwd,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_skipfwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_skipfwd),disable)">Skin.SetString(osd_video_skipfwd,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_skipfwd),disable)">Skin.Reset(osd_video_skipfwd,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_skipfwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="17"><!-- + canal -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_menu_channelup),disable)]</property>
 				<icon>osd_menu_channelup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_menu_channelup),disable)">Skin.SetString(osd_menu_channelup,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_menu_channelup),disable)">Skin.Reset(osd_menu_channelup,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_menu_channelup),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_channelup),disable)">Skin.SetString(osd_menu_channelup,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_channelup),disable)">Skin.Reset(osd_menu_channelup,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_menu_channelup),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="22"><!-- stop -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_stop),disable)]</property>
 				<icon>osd_menu_stop.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Stop)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_stop),disable)">Skin.SetString(osd_video_stop,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_stop),disable)">Skin.Reset(osd_video_stop,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_stop),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_stop),disable)">Skin.SetString(osd_video_stop,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_stop),disable)">Skin.Reset(osd_video_stop,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_stop),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="24"><!-- rec -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_rec),disable)]</property>
 				<icon>osd_menu_rec.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Record)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_rec),disable)">Skin.SetString(osd_video_rec,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_rec),disable)">Skin.Reset(osd_video_rec,disable)</onclick>
-				<visible>[Player.CanRecord + !SubString(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rec),disable)">Skin.SetString(osd_video_rec,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rec),disable)">Skin.Reset(osd_video_rec,disable)</onclick>
+				<visible>[Player.CanRecord + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="7"><!-- disc -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_disc),disable)]</property>
 				<icon>osd_menu_disc.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(ShowVideoMenu)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_disc),disable)">Skin.SetString(osd_video_disc,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_disc),disable)">Skin.Reset(osd_video_disc,disable)</onclick>
-				<visible>[VideoPlayer.HasMenu + !SubString(skin.string(osd_video_disc),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_disc),disable)">Skin.SetString(osd_video_disc,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_disc),disable)">Skin.Reset(osd_video_disc,disable)</onclick>
+				<visible>[VideoPlayer.HasMenu + !String.Contains(skin.string(osd_video_disc),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="8"><!-- book -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_book),disable)]</property>
 				<icon>osd_menu_book.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(videobookmarks)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_book),disable)">Skin.SetString(osd_video_book,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_book),disable)">Skin.Reset(osd_video_book,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_book),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_book),disable)">Skin.SetString(osd_video_book,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_book),disable)">Skin.Reset(osd_video_book,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_book),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="10"><!-- playlist -->
 				<label>-</label>
@@ -2856,63 +2856,63 @@
 				<icon>osd_menu_playlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(videoplaylist)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_playlist),disable)">Skin.SetString(osd_video_playlist,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_playlist),disable)">Skin.Reset(osd_video_playlist,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_playlist),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_playlist),disable)">Skin.SetString(osd_video_playlist,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_playlist),disable)">Skin.Reset(osd_video_playlist,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_playlist),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="11"><!-- repeat -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_repeat),disable)]</property>
 				<icon>$VAR[value_button_repeat]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Repeat)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_repeat),disable)">Skin.SetString(osd_video_repeat,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_repeat),disable)">Skin.Reset(osd_video_repeat,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_repeat),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_repeat),disable)">Skin.SetString(osd_video_repeat,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_repeat),disable)">Skin.Reset(osd_video_repeat,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_repeat),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="12"><!-- random -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_random),disable)]</property>
 				<icon>$VAR[value_button_random]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Random)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_random),disable)">Skin.SetString(osd_video_random,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_random),disable)">Skin.Reset(osd_video_random,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_random),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_random),disable)">Skin.SetString(osd_video_random,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_random),disable)">Skin.Reset(osd_video_random,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_random),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="2"><!-- teletext -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_teletext),disable)]</property>
 				<icon>osd_menu_teletext.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(Teletext)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_teletext),disable)">Skin.SetString(osd_video_teletext,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_teletext),disable)">Skin.Reset(osd_video_teletext,disable)</onclick>
-				<visible>[VideoPlayer.HasTeletext + !SubString(skin.string(osd_video_teletext),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_teletext),disable)">Skin.SetString(osd_video_teletext,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_teletext),disable)">Skin.Reset(osd_video_teletext,disable)</onclick>
+				<visible>[VideoPlayer.HasTeletext + !String.Contains(skin.string(osd_video_teletext),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="3"><!-- wordpause -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_wordpause),disable)]</property>
 				<icon>osd_menu_wordpause.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(nopausedlabel)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_wordpause),disable)">Skin.SetString(osd_video_wordpause,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_wordpause),disable)">Skin.Reset(osd_video_wordpause,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_wordpause),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_wordpause),disable)">Skin.SetString(osd_video_wordpause,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_wordpause),disable)">Skin.Reset(osd_video_wordpause,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_wordpause),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="1"><!-- furniture -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_furniture),disable)]</property>
 				<icon>osd_menu_furniture.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_video_furniture,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_video_furniture,disable)</onclick>
-				<visible>[!Window.IsActive(142) + !SubString(skin.string(osd_video_furniture),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_video_furniture,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_video_furniture,disable)</onclick>
+				<visible>[!Window.IsActive(142) + !String.Contains(skin.string(osd_video_furniture),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="4"><!-- general settings -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_gsettings),disable)]</property>
 				<icon>osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(settings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_gsettings),disable)">Skin.SetString(osd_video_gsettings,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_gsettings),disable)">Skin.Reset(osd_video_gsettings,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_gsettings),disable)">Skin.SetString(osd_video_gsettings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_gsettings),disable)">Skin.Reset(osd_video_gsettings,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="25"><!-- custom osd -->
 				<label>-</label>
@@ -2928,36 +2928,36 @@
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(videoosdfixedlist)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmode,action(osd),0:01,true)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_listmode),disable)">Skin.SetString(osd_video_listmode,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_listmode),disable)">Skin.Reset(osd_video_listmode,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_listmode),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_listmode),disable)">Skin.SetString(osd_video_listmode,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_listmode),disable)">Skin.Reset(osd_video_listmode,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_listmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="13"><!-- volumeup -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_volumeup),disable)]</property>
 				<icon>osd_menu_volup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_volumeup),disable)">Skin.SetString(osd_video_volumeup,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_volumeup),disable)">Skin.Reset(osd_video_volumeup,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_volumeup),disable)">Skin.SetString(osd_video_volumeup,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_volumeup),disable)">Skin.Reset(osd_video_volumeup,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="14"><!-- volumedown-->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_volumedown),disable)]</property>
 				<icon>osd_menu_voldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_volumedown),disable)">Skin.SetString(osd_video_volumedown,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_volumedown),disable)">Skin.Reset(osd_video_volumedown,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_volumedown),disable)">Skin.SetString(osd_video_volumedown,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_volumedown),disable)">Skin.Reset(osd_video_volumedown,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="15"><!-- mute -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_video_mute),disable)]</property>
 				<icon>osd_menu_mute.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_mute),disable)">Skin.SetString(osd_video_mute,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_mute),disable)">Skin.Reset(osd_video_mute,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_mute),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_mute),disable)">Skin.SetString(osd_video_mute,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_mute),disable)">Skin.Reset(osd_video_mute,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_mute),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="29"><!-- chanOSD -->
 				<label>19019</label>
@@ -2965,9 +2965,9 @@
 				<icon>osd_menu_channels.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(PVROSDChannels)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_chan),disable)">Skin.SetString(osd_video_chan,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_chan),disable)">Skin.Reset(osd_video_chan,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_chan),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_chan),disable)">Skin.SetString(osd_video_chan,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_chan),disable)">Skin.Reset(osd_video_chan,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_chan),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="30"><!-- EPGOSD -->
 				<label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, - ]</label>
@@ -2975,27 +2975,27 @@
 				<icon>osd_menu_epg.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(PVROSDGuide)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_video_epg),disable)">Skin.SetString(osd_video_epg,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_video_epg),disable)">Skin.Reset(osd_video_epg,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_video_epg),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_epg),disable)">Skin.SetString(osd_video_epg,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_epg),disable)">Skin.Reset(osd_video_epg,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_video_epg),disable) | Skin.HasSetting(customosd)] + VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="31"><!-- player tempoup -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_menu_tempoup),disable)]</property>
 				<icon>osd_menu_tempoup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(tempoup)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_menu_tempoup),disable)">Skin.SetString(osd_menu_tempoup,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_menu_tempoup),disable)">Skin.Reset(osd_menu_tempoup,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_menu_tempoup),disable) | Skin.HasSetting(customosd)] + Player.TempoEnabled</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_tempoup),disable)">Skin.SetString(osd_menu_tempoup,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_tempoup),disable)">Skin.Reset(osd_menu_tempoup,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_menu_tempoup),disable) | Skin.HasSetting(customosd)] + Player.TempoEnabled</visible>
 			</item>
 			<item id="32"><!-- player tempodown -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_menu_tempodown),disable)]</property>
 				<icon>osd_menu_tempodown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(tempodown)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_menu_tempodown),disable)">Skin.SetString(osd_menu_tempodown,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_menu_tempodown),disable)">Skin.Reset(osd_menu_tempodown,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_menu_tempodown),disable) | Skin.HasSetting(customosd)] + Player.TempoEnabled</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_tempodown),disable)">Skin.SetString(osd_menu_tempodown,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_tempodown),disable)">Skin.Reset(osd_menu_tempodown,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_menu_tempodown),disable) | Skin.HasSetting(customosd)] + Player.TempoEnabled</visible>
 			</item>
 		</content>
 	</include>
@@ -3043,7 +3043,7 @@
 				<aligny>center</aligny>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>80FF0000</colordiffuse>
-				<visible>Skin.HasSetting(customosd) + !IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="image">
 				<posx>13</posx>
@@ -3053,7 +3053,7 @@
 				<aligny>center</aligny>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>8000BFFF</colordiffuse>
-				<visible>Skin.HasSetting(customosd) + IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 		</itemlayout>
 		<focusedlayout width="75" height="80">
@@ -3077,7 +3077,7 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>FFFF0000</colordiffuse>
 				<animation effect="zoom" center="25,38" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				<visible>Skin.HasSetting(customosd) + !IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 			<control type="image">
 				<posx>13</posx>
@@ -3088,7 +3088,7 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>FF00BFFF</colordiffuse>
 				<animation effect="zoom" center="25,38" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
-				<visible>Skin.HasSetting(customosd) + IsEmpty(ListItem.Property(condition))</visible>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
 			</control>
 		</focusedlayout>
 		<content>
@@ -3097,9 +3097,9 @@
 				<property name="condition">$INFO[skin.string(osd_audio_info),disable)]</property>
 				<icon>osd_menu_info.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(songinformation)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_info),disable)">Skin.SetString(osd_audio_info,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_info),disable)">Skin.Reset(osd_audio_info,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_info),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_info),disable)">Skin.SetString(osd_audio_info,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_info),disable)">Skin.Reset(osd_audio_info,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_info),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="10"><!-- playlist -->
 				<label>-</label>
@@ -3107,126 +3107,126 @@
 				<icon>osd_menu_playlist.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(MusicOSD)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(musicplaylist)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_playlist),disable)">Skin.SetString(osd_audio_playlist,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_playlist),disable)">Skin.Reset(osd_audio_playlist,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_playlist),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_playlist),disable)">Skin.SetString(osd_audio_playlist,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_playlist),disable)">Skin.Reset(osd_audio_playlist,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_playlist),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="11"><!-- repeat -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_repeat),disable)]</property>
 				<icon>$VAR[value_button_repeat]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Repeat)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_repeat),disable)">Skin.SetString(osd_audio_repeat,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_repeat),disable)">Skin.Reset(osd_audio_repeat,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_repeat),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_repeat),disable)">Skin.SetString(osd_audio_repeat,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_repeat),disable)">Skin.Reset(osd_audio_repeat,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_repeat),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="12"><!-- random -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_random),disable)]</property>
 				<icon>$VAR[value_button_random]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Random)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_random),disable)">Skin.SetString(osd_audio_random,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_random),disable)">Skin.Reset(osd_audio_random,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_random),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_random),disable)">Skin.SetString(osd_audio_random,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_random),disable)">Skin.Reset(osd_audio_random,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_random),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="23"><!-- skipbwd -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipbwd),disable)]</property>
 				<icon>osd_menu_skipbwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Previous)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_skipbwd),disable)">Skin.SetString(osd_audio_skipbwd,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_skipbwd),disable)">Skin.Reset(osd_audio_skipbwd,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_skipbwd),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_skipbwd),disable)">Skin.SetString(osd_audio_skipbwd,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_skipbwd),disable)">Skin.Reset(osd_audio_skipbwd,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_skipbwd),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="19"><!-- rew -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_rew),disable)]</property>
 				<icon>osd_menu_rew.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Rewind)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_rew),disable)">Skin.SetString(osd_audio_rew,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_rew),disable)">Skin.Reset(osd_audio_rew,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_rew),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rew),disable)">Skin.SetString(osd_audio_rew,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rew),disable)">Skin.Reset(osd_audio_rew,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_rew),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="20"><!-- playpause -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_playpause),disable)]</property>
 				<icon>$VAR[value_button_playpause]</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Play)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_playpause),disable)">Skin.SetString(osd_audio_playpause,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_playpause),disable)">Skin.Reset(osd_audio_playpause,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_playpause),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_playpause),disable)">Skin.SetString(osd_audio_playpause,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_playpause),disable)">Skin.Reset(osd_audio_playpause,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_playpause),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="21"><!-- ff -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_ff),disable)]</property>
 				<icon>osd_menu_ff.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Forward)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_ff),disable)">Skin.SetString(osd_audio_ff,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_ff),disable)">Skin.Reset(osd_audio_ff,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_ff),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_ff),disable)">Skin.SetString(osd_audio_ff,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_ff),disable)">Skin.Reset(osd_audio_ff,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_ff),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="17"><!-- skipfwd -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_skipfwd),disable)]</property>
 				<icon>osd_menu_skipfwd.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Next)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_skipfwd),disable)">Skin.SetString(osd_audio_skipfwd,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_skipfwd),disable)">Skin.Reset(osd_audio_skipfwd,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_skipfwd),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_skipfwd),disable)">Skin.SetString(osd_audio_skipfwd,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_skipfwd),disable)">Skin.Reset(osd_audio_skipfwd,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_skipfwd),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="22"><!-- stop -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_stop),disable)]</property>
 				<icon>osd_menu_stop.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Stop)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_stop),disable)">Skin.SetString(osd_audio_stop,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_stop),disable)">Skin.Reset(osd_audio_stop,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_stop),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_stop),disable)">Skin.SetString(osd_audio_stop,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_stop),disable)">Skin.Reset(osd_audio_stop,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_stop),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="24"><!-- rec -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_rec),disable)]</property>
 				<icon>osd_menu_rec.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Record)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_rec),disable)">Skin.SetString(osd_audio_rec,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_rec),disable)">Skin.Reset(osd_audio_rec,disable)</onclick>
-				<visible>[Player.CanRecord + !SubString(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rec),disable)">Skin.SetString(osd_audio_rec,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rec),disable)">Skin.Reset(osd_audio_rec,disable)</onclick>
+				<visible>[Player.CanRecord + !String.Contains(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="13"><!-- volumeup -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumeup),disable)]</property>
 				<icon>osd_menu_volup.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_volumeup),disable)">Skin.SetString(osd_audio_volumeup,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_volumeup),disable)">Skin.Reset(osd_audio_volumeup,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_volumeup),disable)">Skin.SetString(osd_audio_volumeup,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_volumeup),disable)">Skin.Reset(osd_audio_volumeup,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="14"><!-- volumedown-->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_volumedown),disable)]</property>
 				<icon>osd_menu_voldown.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_volumedown),disable)">Skin.SetString(osd_audio_volumedown,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_volumedown),disable)">Skin.Reset(osd_audio_volumedown,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_volumedown),disable)">Skin.SetString(osd_audio_volumedown,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_volumedown),disable)">Skin.Reset(osd_audio_volumedown,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="15"><!-- mute -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_mute),disable)]</property>
 				<icon>osd_menu_mute.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_mute),disable)">Skin.SetString(osd_audio_mute,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_mute),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_mute),disable)">Skin.SetString(osd_audio_mute,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_mute),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="27"><!-- Audio DSP -->
 				<label>-</label>
 				<property name="condition">$INFO[skin.string(osd_audio_dsp),disable)]</property>
 				<icon>osd_menu_audio.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdaudiodspsettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_dsp),disable)">Skin.SetString(osd_audio_dsp,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_dsp),disable)">Skin.Reset(osd_audio_mute,dsp)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_dsp),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_dsp),disable)">Skin.SetString(osd_audio_dsp,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_dsp),disable)">Skin.Reset(osd_audio_mute,dsp)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_dsp),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="1"><!-- vis settings -->
 				<label>-</label>
@@ -3234,8 +3234,8 @@
 				<icon>osd_menu_settings.png</icon>
 			<!-- 	<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(all,true)</onclick> -->
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(customosd,ActivateWindow(627),0:01,true)</onclick> <!-- custom osd music -->
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_settings),disable)">Skin.SetString(osd_audio_settings,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_settings),disable)">Skin.Reset(osd_audio_settings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_settings),disable)">Skin.SetString(osd_audio_settings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_settings),disable)">Skin.Reset(osd_audio_settings,disable)</onclick>
 			</item>
 			<item id="4"><!-- general settings -->
 				<label>-</label>
@@ -3243,9 +3243,9 @@
 				<icon>osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(playersettings)</onclick>  <!-- musicsettings -->
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_gsettings),disable)">Skin.SetString(osd_audio_gsettings,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_gsettings),disable)">Skin.Reset(osd_audio_gsettings,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.SetString(osd_audio_gsettings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.Reset(osd_audio_gsettings,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="25"><!-- custom osd -->
 				<label>-</label>
@@ -3261,9 +3261,9 @@
 				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(audioosdfixedlist)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmodeaudio,action(osd),0:01,true)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !SubString(skin.string(osd_audio_listmode),disable)">Skin.SetString(osd_audio_listmode,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + SubString(skin.string(osd_audio_listmode),disable)">Skin.Reset(osd_audio_listmode,disable)</onclick>
-				<visible>[!SubString(skin.string(osd_audio_listmode),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_listmode),disable)">Skin.SetString(osd_audio_listmode,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_listmode),disable)">Skin.Reset(osd_audio_listmode,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_audio_listmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 		</content>
 	</include>
@@ -3276,7 +3276,7 @@
 				<icon>$INFO[MusicPlayer.offset(1).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(1).Album][CR]$INFO[MusicPlayer.offset(1).Duration]</property>
 				<onclick>Playlist.PlayOffset(1)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(1).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(1).Artist)</visible>
 			</item>
 			<item>
 				<label>2:</label>
@@ -3284,7 +3284,7 @@
 				<icon>$INFO[MusicPlayer.offset(2).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(2).Album][CR]$INFO[MusicPlayer.offset(2).Duration]</property>
 				<onclick>Playlist.PlayOffset(2)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(2).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(2).Artist)</visible>
 			</item>
 			<item>
 				<label>3:</label>
@@ -3292,7 +3292,7 @@
 				<icon>$INFO[MusicPlayer.offset(3).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(3).Album][CR]$INFO[MusicPlayer.offset(3).Duration]</property>
 				<onclick>Playlist.PlayOffset(3)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(3).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(3).Artist)</visible>
 			</item>
 			<item>
 				<label>4:</label>
@@ -3300,7 +3300,7 @@
 				<icon>$INFO[MusicPlayer.offset(4).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(4).Album][CR]$INFO[MusicPlayer.offset(4).Duration]</property>
 				<onclick>Playlist.PlayOffset(4)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(4).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(4).Artist)</visible>
 			</item>
 			<item>
 				<label>5:</label>
@@ -3308,7 +3308,7 @@
 				<icon>$INFO[MusicPlayer.offset(5).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(5).Album][CR]$INFO[MusicPlayer.offset(5).Duration]</property>
 				<onclick>Playlist.PlayOffset(5)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(5).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(5).Artist)</visible>
 			</item>
 			<item>
 				<label>6:</label>
@@ -3316,7 +3316,7 @@
 				<icon>$INFO[MusicPlayer.offset(6).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(6).Album][CR]$INFO[MusicPlayer.offset(6).Duration]</property>
 				<onclick>Playlist.PlayOffset(6)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(6).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(6).Artist)</visible>
 			</item>
 			<item>
 				<label>7:</label>
@@ -3324,7 +3324,7 @@
 				<icon>$INFO[MusicPlayer.offset(7).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(7).Album][CR]$INFO[MusicPlayer.offset(7).Duration]</property>
 				<onclick>Playlist.PlayOffset(7)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(7).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(7).Artist)</visible>
 			</item>
 			<item>
 				<label>8:</label>
@@ -3332,7 +3332,7 @@
 				<icon>$INFO[MusicPlayer.offset(8).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(8).Album][CR]$INFO[MusicPlayer.offset(8).Duration]</property>
 				<onclick>Playlist.PlayOffset(8)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(8).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(8).Artist)</visible>
 			</item>
 			<item>
 				<label>9:</label>
@@ -3340,7 +3340,7 @@
 				<icon>$INFO[MusicPlayer.offset(9).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(9).Album][CR]$INFO[MusicPlayer.offset(9).Duration]</property>
 				<onclick>Playlist.PlayOffset(9)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(9).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(9).Artist)</visible>
 			</item>
 			<item>
 				<label>10:</label>
@@ -3348,7 +3348,7 @@
 				<icon>$INFO[MusicPlayer.offset(10).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(10).Album][CR]$INFO[MusicPlayer.offset(10).Duration]</property>
 				<onclick>Playlist.PlayOffset(10)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(10).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(10).Artist)</visible>
 			</item>
 			<item>
 				<label>11:</label>
@@ -3356,7 +3356,7 @@
 				<icon>$INFO[MusicPlayer.offset(11).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(11).Album][CR]$INFO[MusicPlayer.offset(11).Duration]</property>
 				<onclick>Playlist.PlayOffset(11)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(11).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(11).Artist)</visible>
 			</item>
 			<item>
 				<label>12:</label>
@@ -3364,7 +3364,7 @@
 				<icon>$INFO[MusicPlayer.offset(12).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(12).Album][CR]$INFO[MusicPlayer.offset(12).Duration]</property>
 				<onclick>Playlist.PlayOffset(12)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(12).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(12).Artist)</visible>
 			</item>
 			<item>
 				<label>13:</label>
@@ -3372,7 +3372,7 @@
 				<icon>$INFO[MusicPlayer.offset(13).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(13).Album][CR]$INFO[MusicPlayer.offset(13).Duration]</property>
 				<onclick>Playlist.PlayOffset(13)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(13).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(13).Artist)</visible>
 			</item>
 			<item>
 				<label>14:</label>
@@ -3380,7 +3380,7 @@
 				<icon>$INFO[MusicPlayer.offset(14).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(14).Album][CR]$INFO[MusicPlayer.offset(14).Duration]</property>
 				<onclick>Playlist.PlayOffset(14)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(14).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(14).Artist)</visible>
 			</item>
 			<item>
 				<label>15:</label>
@@ -3388,7 +3388,7 @@
 				<icon>$INFO[MusicPlayer.offset(15).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(15).Album][CR]$INFO[MusicPlayer.offset(15).Duration]</property>
 				<onclick>Playlist.PlayOffset(15)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(15).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(15).Artist)</visible>
 			</item>
 			<item>
 				<label>16:</label>
@@ -3396,7 +3396,7 @@
 				<icon>$INFO[MusicPlayer.offset(16).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(16).Album][CR]$INFO[MusicPlayer.offset(16).Duration]</property>
 				<onclick>Playlist.PlayOffset(16)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(16).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(16).Artist)</visible>
 			</item>
 			<item>
 				<label>17:</label>
@@ -3404,7 +3404,7 @@
 				<icon>$INFO[MusicPlayer.offset(17).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(17).Album][CR]$INFO[MusicPlayer.offset(17).Duration]</property>
 				<onclick>Playlist.PlayOffset(17)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(17).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(17).Artist)</visible>
 			</item>
 			<item>
 				<label>18:</label>
@@ -3412,7 +3412,7 @@
 				<icon>$INFO[MusicPlayer.offset(18).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(18).Album][CR]$INFO[MusicPlayer.offset(18).Duration]</property>
 				<onclick>Playlist.PlayOffset(18)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(18).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(18).Artist)</visible>
 			</item>
 			<item>
 				<label>19:</label>
@@ -3420,7 +3420,7 @@
 				<icon>$INFO[MusicPlayer.offset(19).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(19).Album][CR]$INFO[MusicPlayer.offset(19).Duration]</property>
 				<onclick>Playlist.PlayOffset(19)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(19).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(19).Artist)</visible>
 			</item>
 			<item>
 				<label>20:</label>
@@ -3428,7 +3428,7 @@
 				<icon>$INFO[MusicPlayer.offset(20).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(20).Album][CR]$INFO[MusicPlayer.offset(20).Duration]</property>
 				<onclick>Playlist.PlayOffset(20)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(20).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(20).Artist)</visible>
 			</item>
 			<item>
 				<label>21:</label>
@@ -3436,7 +3436,7 @@
 				<icon>$INFO[MusicPlayer.offset(21).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(21).Album][CR]$INFO[MusicPlayer.offset(21).Duration]</property>
 				<onclick>Playlist.PlayOffset(21)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(21).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(21).Artist)</visible>
 			</item>
 			<item>
 				<label>22:</label>
@@ -3444,7 +3444,7 @@
 				<icon>$INFO[MusicPlayer.offset(22).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(22).Album][CR]$INFO[MusicPlayer.offset(22).Duration]</property>
 				<onclick>Playlist.PlayOffset(22)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(22).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(22).Artist)</visible>
 			</item>
 			<item>
 				<label>23:</label>
@@ -3452,7 +3452,7 @@
 				<icon>$INFO[MusicPlayer.offset(23).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(23).Album][CR]$INFO[MusicPlayer.offset(23).Duration]</property>
 				<onclick>Playlist.PlayOffset(23)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(23).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(23).Artist)</visible>
 			</item>
 			<item>
 				<label>24:</label>
@@ -3460,7 +3460,7 @@
 				<icon>$INFO[MusicPlayer.offset(24).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(24).Album][CR]$INFO[MusicPlayer.offset(24).Duration]</property>
 				<onclick>Playlist.PlayOffset(24)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(24).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(24).Artist)</visible>
 			</item>
 			<item>
 				<label>25:</label>
@@ -3468,7 +3468,7 @@
 				<icon>$INFO[MusicPlayer.offset(25).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(25).Album][CR]$INFO[MusicPlayer.offset(25).Duration]</property>
 				<onclick>Playlist.PlayOffset(25)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(25).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(25).Artist)</visible>
 			</item>
 			<item>
 				<label>26:</label>
@@ -3476,7 +3476,7 @@
 				<icon>$INFO[MusicPlayer.offset(26).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(26).Album][CR]$INFO[MusicPlayer.offset(26).Duration]</property>
 				<onclick>Playlist.PlayOffset(26)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(26).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(26).Artist)</visible>
 			</item>
 			<item>
 				<label>27:</label>
@@ -3484,7 +3484,7 @@
 				<icon>$INFO[MusicPlayer.offset(27).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(27).Album][CR]$INFO[MusicPlayer.offset(27).Duration]</property>
 				<onclick>Playlist.PlayOffset(27)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(27).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(27).Artist)</visible>
 			</item>
 			<item>
 				<label>28:</label>
@@ -3492,7 +3492,7 @@
 				<icon>$INFO[MusicPlayer.offset(28).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(28).Album][CR]$INFO[MusicPlayer.offset(28).Duration]</property>
 				<onclick>Playlist.PlayOffset(28)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(28).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(28).Artist)</visible>
 			</item>
 			<item>
 				<label>29:</label>
@@ -3500,7 +3500,7 @@
 				<icon>$INFO[MusicPlayer.offset(29).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(29).Album][CR]$INFO[MusicPlayer.offset(29).Duration]</property>
 				<onclick>Playlist.PlayOffset(29)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(29).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(29).Artist)</visible>
 			</item>
 			<item>
 				<label>30:</label>
@@ -3508,7 +3508,7 @@
 				<icon>$INFO[MusicPlayer.offset(30).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(30).Album][CR]$INFO[MusicPlayer.offset(30).Duration]</property>
 				<onclick>Playlist.PlayOffset(30)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(30).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(30).Artist)</visible>
 			</item>
 			<item>
 				<label>31:</label>
@@ -3516,7 +3516,7 @@
 				<icon>$INFO[MusicPlayer.offset(31).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(31).Album][CR]$INFO[MusicPlayer.offset(31).Duration]</property>
 				<onclick>Playlist.PlayOffset(31)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(31).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(31).Artist)</visible>
 			</item>
 			<item>
 				<label>32:</label>
@@ -3524,7 +3524,7 @@
 				<icon>$INFO[MusicPlayer.offset(32).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(32).Album][CR]$INFO[MusicPlayer.offset(32).Duration]</property>
 				<onclick>Playlist.PlayOffset(32)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(32).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(32).Artist)</visible>
 			</item>
 			<item>
 				<label>33:</label>
@@ -3532,7 +3532,7 @@
 				<icon>$INFO[MusicPlayer.offset(33).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(33).Album][CR]$INFO[MusicPlayer.offset(33).Duration]</property>
 				<onclick>Playlist.PlayOffset(33)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(33).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(33).Artist)</visible>
 			</item>
 			<item>
 				<label>34:</label>
@@ -3540,7 +3540,7 @@
 				<icon>$INFO[MusicPlayer.offset(34).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(34).Album][CR]$INFO[MusicPlayer.offset(34).Duration]</property>
 				<onclick>Playlist.PlayOffset(34)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(34).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(34).Artist)</visible>
 			</item>
 			<item>
 				<label>35:</label>
@@ -3548,7 +3548,7 @@
 				<icon>$INFO[MusicPlayer.offset(35).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(35).Album][CR]$INFO[MusicPlayer.offset(35).Duration]</property>
 				<onclick>Playlist.PlayOffset(35)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(35).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(35).Artist)</visible>
 			</item>
 			<item>
 				<label>36:</label>
@@ -3556,7 +3556,7 @@
 				<icon>$INFO[MusicPlayer.offset(36).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(36).Album][CR]$INFO[MusicPlayer.offset(36).Duration]</property>
 				<onclick>Playlist.PlayOffset(36)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(36).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(36).Artist)</visible>
 			</item>
 			<item>
 				<label>37:</label>
@@ -3564,7 +3564,7 @@
 				<icon>$INFO[MusicPlayer.offset(37).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(37).Album][CR]$INFO[MusicPlayer.offset(37).Duration]</property>
 				<onclick>Playlist.PlayOffset(37)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(37).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(37).Artist)</visible>
 			</item>
 			<item>
 				<label>38:</label>
@@ -3572,7 +3572,7 @@
 				<icon>$INFO[MusicPlayer.offset(38).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(38).Album][CR]$INFO[MusicPlayer.offset(38).Duration]</property>
 				<onclick>Playlist.PlayOffset(38)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(38).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(38).Artist)</visible>
 			</item>
 			<item>
 				<label>39:</label>
@@ -3580,7 +3580,7 @@
 				<icon>$INFO[MusicPlayer.offset(39).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(39).Album][CR]$INFO[MusicPlayer.offset(39).Duration]</property>
 				<onclick>Playlist.PlayOffset(39)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(39).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(39).Artist)</visible>
 			</item>
 			<item>
 				<label>40:</label>
@@ -3588,7 +3588,7 @@
 				<icon>$INFO[MusicPlayer.offset(40).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(40).Album][CR]$INFO[MusicPlayer.offset(40).Duration]</property>
 				<onclick>Playlist.PlayOffset(40)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(40).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(40).Artist)</visible>
 			</item>
 			<item>
 				<label>41:</label>
@@ -3596,7 +3596,7 @@
 				<icon>$INFO[MusicPlayer.offset(41).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(41).Album][CR]$INFO[MusicPlayer.offset(41).Duration]</property>
 				<onclick>Playlist.PlayOffset(41)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(41).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(41).Artist)</visible>
 			</item>
 			<item>
 				<label>42:</label>
@@ -3604,7 +3604,7 @@
 				<icon>$INFO[MusicPlayer.offset(42).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(42).Album][CR]$INFO[MusicPlayer.offset(42).Duration]</property>
 				<onclick>Playlist.PlayOffset(42)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(42).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(42).Artist)</visible>
 			</item>
 			<item>
 				<label>43:</label>
@@ -3612,7 +3612,7 @@
 				<icon>$INFO[MusicPlayer.offset(43).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(43).Album][CR]$INFO[MusicPlayer.offset(43).Duration]</property>
 				<onclick>Playlist.PlayOffset(43)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(43).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(43).Artist)</visible>
 			</item>
 			<item>
 				<label>44:</label>
@@ -3620,7 +3620,7 @@
 				<icon>$INFO[MusicPlayer.offset(44).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(44).Album][CR]$INFO[MusicPlayer.offset(44).Duration]</property>
 				<onclick>Playlist.PlayOffset(44)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(44).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(44).Artist)</visible>
 			</item>
 			<item>
 				<label>45:</label>
@@ -3628,7 +3628,7 @@
 				<icon>$INFO[MusicPlayer.offset(45).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(45).Album][CR]$INFO[MusicPlayer.offset(45).Duration]</property>
 				<onclick>Playlist.PlayOffset(45)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(45).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(45).Artist)</visible>
 			</item>
 			<item>
 				<label>46:</label>
@@ -3636,7 +3636,7 @@
 				<icon>$INFO[MusicPlayer.offset(46).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(46).Album][CR]$INFO[MusicPlayer.offset(46).Duration]</property>
 				<onclick>Playlist.PlayOffset(46)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(46).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(46).Artist)</visible>
 			</item>
 			<item>
 				<label>47:</label>
@@ -3644,7 +3644,7 @@
 				<icon>$INFO[MusicPlayer.offset(47).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(47).Album][CR]$INFO[MusicPlayer.offset(47).Duration]</property>
 				<onclick>Playlist.PlayOffset(47)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(47).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(47).Artist)</visible>
 			</item>
 			<item>
 				<label>48:</label>
@@ -3652,7 +3652,7 @@
 				<icon>$INFO[MusicPlayer.offset(48).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(48).Album][CR]$INFO[MusicPlayer.offset(48).Duration]</property>
 				<onclick>Playlist.PlayOffset(48)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(48).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(48).Artist)</visible>
 			</item>
 			<item>
 				<label>49:</label>
@@ -3660,7 +3660,7 @@
 				<icon>$INFO[MusicPlayer.offset(49).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(49).Album][CR]$INFO[MusicPlayer.offset(49).Duration]</property>
 				<onclick>Playlist.PlayOffset(49)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(49).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(49).Artist)</visible>
 			</item>
 			<item>
 				<label>50:</label>
@@ -3668,7 +3668,7 @@
 				<icon>$INFO[MusicPlayer.offset(50).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(50).Album][CR]$INFO[MusicPlayer.offset(50).Duration]</property>
 				<onclick>Playlist.PlayOffset(50)</onclick>
-				<visible>!IsEmpty(MusicPlayer.offset(50).Artist)</visible>
+				<visible>!String.IsEmpty(MusicPlayer.offset(50).Artist)</visible>
 			</item>
 		</content>
 	</include>
@@ -3679,301 +3679,301 @@
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumThumb)]</icon>
 				<label>1. $INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 			</item>
 			<item id="2">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumThumb)]</icon>
 				<label>2. $INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.2.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.2.AlbumName))</visible>
 			</item>
 			<item id="3">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumThumb)]</icon>
 				<label>3. $INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.3.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.3.AlbumName))</visible>
 			</item>
 			<item id="4">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumThumb)]</icon>
 				<label>4. $INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.4.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.4.AlbumName))</visible>
 			</item>
 			<item id="5">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumThumb)]</icon>
 				<label>5. $INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.5.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.5.AlbumName))</visible>
 			</item>
 			<item id="6">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumThumb)]</icon>
 				<label>6. $INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.6.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.6.AlbumName))</visible>
 			</item>
 			<item id="7">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumThumb)]</icon>
 				<label>7. $INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.7.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.7.AlbumName))</visible>
 			</item>
 			<item id="8">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumThumb)]</icon>
 				<label>8. $INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.8.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.8.AlbumName))</visible>
 			</item>
 			<item id="9">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumThumb)]</icon>
 				<label>9. $INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.9.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.9.AlbumName))</visible>
 			</item>
 			<item id="10">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumThumb)]</icon>
 				<label>10. $INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.10.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.10.AlbumName))</visible>
 			</item>
 			<item id="11">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.11.AlbumThumb)]</icon>
 				<label>11. $INFO[Window(Visualisation).Property(ArtistSlideshow.11.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.11.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.11.AlbumName))</visible>
 			</item>
 			<item id="12">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.12.AlbumThumb)]</icon>
 				<label>12. $INFO[Window(Visualisation).Property(ArtistSlideshow.12.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.12.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.12.AlbumName))</visible>
 			</item>
 			<item id="13">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.13.AlbumThumb)]</icon>
 				<label>13. $INFO[Window(Visualisation).Property(ArtistSlideshow.13.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.13.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.13.AlbumName))</visible>
 			</item>
 			<item id="14">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.14.AlbumThumb)]</icon>
 				<label>14. $INFO[Window(Visualisation).Property(ArtistSlideshow.14.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.14.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.14.AlbumName))</visible>
 			</item>
 			<item id="15">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.15.AlbumThumb)]</icon>
 				<label>15. $INFO[Window(Visualisation).Property(ArtistSlideshow.15.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.15.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.15.AlbumName))</visible>
 			</item>
 			<item id="16">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.16.AlbumThumb)]</icon>
 				<label>16. $INFO[Window(Visualisation).Property(ArtistSlideshow.16.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.16.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.16.AlbumName))</visible>
 			</item>
 			<item id="17">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.17.AlbumThumb)]</icon>
 				<label>17. $INFO[Window(Visualisation).Property(ArtistSlideshow.17.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.17.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.17.AlbumName))</visible>
 			</item>
 			<item id="18">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.18.AlbumThumb)]</icon>
 				<label>18. $INFO[Window(Visualisation).Property(ArtistSlideshow.18.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.18.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.18.AlbumName))</visible>
 			</item>
 			<item id="19">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.19.AlbumThumb)]</icon>
 				<label>19. $INFO[Window(Visualisation).Property(ArtistSlideshow.19.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.19.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.19.AlbumName))</visible>
 			</item>
 			<item id="20">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.20.AlbumThumb)]</icon>
 				<label>20. $INFO[Window(Visualisation).Property(ArtistSlideshow.20.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.20.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.20.AlbumName))</visible>
 			</item>
 			<item id="21">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.21.AlbumThumb)]</icon>
 				<label>21. $INFO[Window(Visualisation).Property(ArtistSlideshow.21.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.21.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.21.AlbumName))</visible>
 			</item>
 			<item id="22">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.22.AlbumThumb)]</icon>
 				<label>22. $INFO[Window(Visualisation).Property(ArtistSlideshow.22.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.22.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.22.AlbumName))</visible>
 			</item>
 			<item id="23">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.23.AlbumThumb)]</icon>
 				<label>23. $INFO[Window(Visualisation).Property(ArtistSlideshow.23.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.23.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.23.AlbumName))</visible>
 			</item>
 			<item id="24">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.24.AlbumThumb)]</icon>
 				<label>24. $INFO[Window(Visualisation).Property(ArtistSlideshow.24.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.24.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.24.AlbumName))</visible>
 			</item>
 			<item id="25">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.25.AlbumThumb)]</icon>
 				<label>25. $INFO[Window(Visualisation).Property(ArtistSlideshow.25.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.25.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.25.AlbumName))</visible>
 			</item>
 			<item id="26">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.26.AlbumThumb)]</icon>
 				<label>26. $INFO[Window(Visualisation).Property(ArtistSlideshow.26.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.26.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.26.AlbumName))</visible>
 			</item>
 			<item id="27">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.27.AlbumThumb)]</icon>
 				<label>27. $INFO[Window(Visualisation).Property(ArtistSlideshow.27.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.27.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.27.AlbumName))</visible>
 			</item>
 			<item id="28">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.28.AlbumThumb)]</icon>
 				<label>28. $INFO[Window(Visualisation).Property(ArtistSlideshow.28.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.28.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.28.AlbumName))</visible>
 			</item>
 			<item id="29">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.29.AlbumThumb)]</icon>
 				<label>29. $INFO[Window(Visualisation).Property(ArtistSlideshow.29.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.29.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.29.AlbumName))</visible>
 			</item>
 			<item id="30">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.30.AlbumThumb)]</icon>
 				<label>30. $INFO[Window(Visualisation).Property(ArtistSlideshow.30.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.30.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.30.AlbumName))</visible>
 			</item>
 			<item id="31">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.31.AlbumThumb)]</icon>
 				<label>31. $INFO[Window(Visualisation).Property(ArtistSlideshow.31.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.31.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.31.AlbumName))</visible>
 			</item>
 			<item id="32">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.32.AlbumThumb)]</icon>
 				<label>32. $INFO[Window(Visualisation).Property(ArtistSlideshow.32.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.32.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.32.AlbumName))</visible>
 			</item>
 			<item id="33">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.33.AlbumThumb)]</icon>
 				<label>33. $INFO[Window(Visualisation).Property(ArtistSlideshow.33.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.33.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.33.AlbumName))</visible>
 			</item>
 			<item id="34">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.34.AlbumThumb)]</icon>
 				<label>34. $INFO[Window(Visualisation).Property(ArtistSlideshow.34.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.34.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.34.AlbumName))</visible>
 			</item>
 			<item id="35">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.35.AlbumThumb)]</icon>
 				<label>35. $INFO[Window(Visualisation).Property(ArtistSlideshow.35.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.35.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.35.AlbumName))</visible>
 			</item>
 			<item id="36">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.36.AlbumThumb)]</icon>
 				<label>36. $INFO[Window(Visualisation).Property(ArtistSlideshow.36.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.36.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.36.AlbumName))</visible>
 			</item>
 			<item id="37">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.37.AlbumThumb)]</icon>
 				<label>37. $INFO[Window(Visualisation).Property(ArtistSlideshow.37.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.37.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.37.AlbumName))</visible>
 			</item>
 			<item id="38">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.38.AlbumThumb)]</icon>
 				<label>38. $INFO[Window(Visualisation).Property(ArtistSlideshow.38.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.38.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.38.AlbumName))</visible>
 			</item>
 			<item id="39">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.39.AlbumThumb)]</icon>
 				<label>39. $INFO[Window(Visualisation).Property(ArtistSlideshow.39.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.39.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.39.AlbumName))</visible>
 			</item>
 			<item id="40">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.40.AlbumThumb)]</icon>
 				<label>40. $INFO[Window(Visualisation).Property(ArtistSlideshow.40.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.40.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.40.AlbumName))</visible>
 			</item>
 			<item id="41">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.41.AlbumThumb)]</icon>
 				<label>41. $INFO[Window(Visualisation).Property(ArtistSlideshow.41.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.41.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.41.AlbumName))</visible>
 			</item>
 			<item id="42">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.42.AlbumThumb)]</icon>
 				<label>42. $INFO[Window(Visualisation).Property(ArtistSlideshow.42.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.42.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.42.AlbumName))</visible>
 			</item>
 			<item id="43">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.43.AlbumThumb)]</icon>
 				<label>43. $INFO[Window(Visualisation).Property(ArtistSlideshow.43.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.43.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.43.AlbumName))</visible>
 			</item>
 			<item id="44">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.44.AlbumThumb)]</icon>
 				<label>44. $INFO[Window(Visualisation).Property(ArtistSlideshow.44.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.44.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.44.AlbumName))</visible>
 			</item>
 			<item id="45">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.45.AlbumThumb)]</icon>
 				<label>45. $INFO[Window(Visualisation).Property(ArtistSlideshow.45.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.45.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.45.AlbumName))</visible>
 			</item>
 			<item id="46">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.46.AlbumThumb)]</icon>
 				<label>46. $INFO[Window(Visualisation).Property(ArtistSlideshow.46.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.46.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.46.AlbumName))</visible>
 			</item>
 			<item id="47">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.47.AlbumThumb)]</icon>
 				<label>47. $INFO[Window(Visualisation).Property(ArtistSlideshow.47.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.47.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.47.AlbumName))</visible>
 			</item>
 			<item id="48">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.48.AlbumThumb)]</icon>
 				<label>48. $INFO[Window(Visualisation).Property(ArtistSlideshow.48.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.48.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.48.AlbumName))</visible>
 			</item>
 			<item id="49">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.49.AlbumThumb)]</icon>
 				<label>49. $INFO[Window(Visualisation).Property(ArtistSlideshow.49.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.49.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.49.AlbumName))</visible>
 			</item>
 			<item id="50">
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.50.AlbumThumb)]</icon>
 				<label>50. $INFO[Window(Visualisation).Property(ArtistSlideshow.50.AlbumName)]</label>
 				<onclick>noop</onclick>
-				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.50.AlbumName))</visible>
+				<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.50.AlbumName))</visible>
 			</item>
 		</content>
 	</include>	

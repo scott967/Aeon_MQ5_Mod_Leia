@@ -110,7 +110,7 @@
 					<font>Font_18A</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>$ADDON[script.metadata.actors 32012]:</label>
-					<visible>IsEmpty(ListItem.Property(Deathday))</visible>
+					<visible>String.IsEmpty(ListItem.Property(Deathday))</visible>
 				</control>
 				<control type="label">
 					<posx>220</posx>
@@ -124,7 +124,7 @@
 					<label fallback="161">$INFO[ListItem.Property(Birthday)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
-					<visible>IsEmpty(ListItem.Property(Deathday))</visible>
+					<visible>String.IsEmpty(ListItem.Property(Deathday))</visible>
 				</control>
 				<control type="label"><!-- Deathday -->
 					<posx>190</posx>
@@ -136,7 +136,7 @@
 					<font>Font_18A</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>$ADDON[script.metadata.actors 32013]:</label>
-					<visible>!IsEmpty(ListItem.Property(Deathday))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Deathday))</visible>
 				</control>
 				<control type="label">
 					<posx>220</posx>
@@ -150,7 +150,7 @@
 					<label fallback="161">$INFO[ListItem.Property(Deathday)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
-					<visible>!IsEmpty(ListItem.Property(Deathday))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Deathday))</visible>
 				</control>
 				<control type="label"><!-- Place of birth -->
 					<posx>190</posx>
@@ -477,7 +477,7 @@
 			</control>
 			<control type="list" id="150"><!-- Movie list -->
 				<animation effect="fade" reversible="true" time="200">VisibleChange</animation>
-				<visible>![[Container(149).HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus]</visible>
+				<visible>![[Container(149).HasFocus(10) + Integer.IsGreater(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus]</visible>
 				<viewtype label="">List Info</viewtype>
 				<posx>30</posx>
 				<posy>492</posy>
@@ -511,7 +511,7 @@
 						<height>30</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+						<visible>!String.IsEmpty(ListItem.Property(LibraryHasMovie)) + Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="170" width="181">
@@ -549,14 +549,14 @@
 						<height>30</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-						<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+						<visible>!String.IsEmpty(ListItem.Property(LibraryHasMovie)) + Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 					</control>
 				</focusedlayout>
 			</control>
 
 			<control type="group" id="2500">
 				<animation effect="fade" reversible="true" time="200">VisibleChange</animation>
-				<visible>[Container(149).HasFocus(10) + IntegerGreaterThan(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus</visible>
+				<visible>[Container(149).HasFocus(10) + Integer.IsGreater(Container(250).NumItems,0)] | ControlGroup(2500).HasFocus</visible>
 				<control type="list" id="250"><!-- Actor thumb -->
 					<viewtype label="">List Info</viewtype>
 					<posx>30</posx>
@@ -774,7 +774,7 @@
 						<item id="8"><!-- Browse to Show -->
 							<label>1024</label>
 							<onclick>SendClick(8)</onclick>
-							<visible>!IsEmpty(Container(150).ListItem.Property(LibraryHasMovie))</visible>
+							<visible>!String.IsEmpty(Container(150).ListItem.Property(LibraryHasMovie))</visible>
 						</item>
 						<item id="30"><!-- Artist Zoom -->
 							<label>31944</label>
@@ -798,7 +798,7 @@
 						<item id="31"><!-- Homepage -->
 							<label>$ADDON[script.metadata.actors 32017]</label>
 							<onclick>RunScript(script.metadata.actors,homepage=$INFO[ListItem.Property(Homepage)])</onclick>
-							<visible>!IsEmpty(ListItem.Property(Homepage))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(Homepage))</visible>
 						</item>
 						<item id="25"><!-- Addon Settings -->
 							<label>24002</label>

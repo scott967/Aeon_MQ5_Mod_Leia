@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Jarvismod 8.1.14 -->
+<!-- Leiamod 10.2.3 -->
 
 <window id="629" type="dialog">  <!-- safe id -->
 	<defaultcontrol always="true">9930</defaultcontrol>
@@ -25,24 +26,24 @@
 		</control>
 		<control type="button" id="9929">
 			<include>InvisibleButton</include>
-			<onfocus condition="!SubString(skin.string(codestep),step2)">SetFocus(9930)</onfocus>
-			<onfocus condition="![SubString(skin.string(codestep),step1) | SubString(skin.string(codestep),step2) | SubString(skin.string(codestep),step3)]">Skin.SetString($INFO[skin.string(custom_code)],step1)</onfocus>
-			<onfocus condition="SubString(skin.string(codestep),step1)">Skin.SetString($INFO[skin.string(custom_code)],step2)</onfocus>
-			<onfocus condition="SubString(skin.string(codestep),step2)">Skin.SetString($INFO[skin.string(custom_code)],step3)</onfocus>
-			<onfocus condition="SubString(skin.string(codestep),step2)">AlarmClock(kioskcode,Dialog.Close(629),0:02,true)</onfocus>
+			<onfocus condition="!String.Contains(skin.string(codestep),step2)">SetFocus(9930)</onfocus>
+			<onfocus condition="![String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)]">Skin.SetString($INFO[skin.string(custom_code)],step1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step1)">Skin.SetString($INFO[skin.string(custom_code)],step2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step2)">Skin.SetString($INFO[skin.string(custom_code)],step3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step2)">AlarmClock(kioskcode,Dialog.Close(629),0:02,true)</onfocus>
 		</control>
 		<control type="button" id="9930"><!-- code -->
 			<include>InvisibleButton</include>
 			<onfocus>SetFocus(9930)</onfocus>
-			<onleft condition="![SubString(skin.string(codestep),step1) | SubString(skin.string(codestep),step2) | SubString(skin.string(codestep),step3)]">SetFocus(9929)</onleft>
-			<onleft condition="SubString(skin.string(codestep),step1) | SubString(skin.string(codestep),step2) | SubString(skin.string(codestep),step3)">Dialog.Close(629)</onleft>
-			<onleft condition="SubString(skin.string(codestep),step1) | SubString(skin.string(codestep),step2) | SubString(skin.string(codestep),step3)">Skin.Reset($INFO[skin.string(custom_code)])</onleft>
-			<onright condition="SubString(skin.string(codestep),step1)">SetFocus(9929)</onright>
-			<onright condition="!SubString(skin.string(codestep),step1)">Dialog.Close(629)</onright>
-			<onright condition="!SubString(skin.string(codestep),step1)">Skin.Reset($INFO[skin.string(custom_code)])</onright>
-			<onup condition="SubString(skin.string(codestep),step2)">SetFocus(9929)</onup>
-			<onup condition="!SubString(skin.string(codestep),step2)">Dialog.Close(629)</onup>
-			<onup condition="!SubString(skin.string(codestep),step2)">Skin.Reset($INFO[skin.string(custom_code)])</onup>
+			<onleft condition="![String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)]">SetFocus(9929)</onleft>
+			<onleft condition="String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)">Dialog.Close(629)</onleft>
+			<onleft condition="String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)">Skin.Reset($INFO[skin.string(custom_code)])</onleft>
+			<onright condition="String.Contains(skin.string(codestep),step1)">SetFocus(9929)</onright>
+			<onright condition="!String.Contains(skin.string(codestep),step1)">Dialog.Close(629)</onright>
+			<onright condition="!String.Contains(skin.string(codestep),step1)">Skin.Reset($INFO[skin.string(custom_code)])</onright>
+			<onup condition="String.Contains(skin.string(codestep),step2)">SetFocus(9929)</onup>
+			<onup condition="!String.Contains(skin.string(codestep),step2)">Dialog.Close(629)</onup>
+			<onup condition="!String.Contains(skin.string(codestep),step2)">Skin.Reset($INFO[skin.string(custom_code)])</onup>
 			<ondown>Dialog.Close(629)</ondown>
 			<ondown>Skin.Reset($INFO[skin.string(custom_code)])</ondown>
 			<visible>true</visible>
@@ -68,7 +69,7 @@
 				<aligny>top</aligny>
 				<texture>logo_kioskcode_open.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="circle" easing="in" condition="SubString(skin.string(codestep),step3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-30" time="400" tween="circle" easing="in" condition="String.Contains(skin.string(codestep),step3)">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>500</posx>

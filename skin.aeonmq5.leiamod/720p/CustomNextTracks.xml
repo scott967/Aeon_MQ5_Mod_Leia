@@ -12,7 +12,7 @@
 			<animation effect="slide" start="-1300,0" end="0,0" time="700" tween="sine" easing="inout" delay="1000">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1300,0" time="400" tween="sine" easing="inout">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="-1300,0" time="400" tween="sine" easing="inout">Hidden</animation>
-			<visible>![IsEmpty(MusicPlayer.offset(1).Artist) | Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)] + String.IsEqual(skin.string(vis_layout),default)</visible>
+			<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)] + String.IsEqual(skin.string(vis_layout),default)</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>385</posy>

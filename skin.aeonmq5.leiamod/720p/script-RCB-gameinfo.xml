@@ -337,7 +337,7 @@
 					<height>386</height>
 					<width>563</width>
 					<aspectratio align="left">keep</aspectratio>
-					<visible>![IsEmpty(ListItem.Property(videosizesmall)) | Control.HasFocus(151)]</visible>
+					<visible>![String.IsEmpty(ListItem.Property(videosizesmall)) | Control.HasFocus(151)]</visible>
 				</control>
 				<control type="button"><!-- click absorber -->
 					<description>click absorber</description>
@@ -347,7 +347,7 @@
 					<width>563</width>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!IsEmpty(ListItem.Property(videosizesmall)) + !Control.HasFocus(151)</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizesmall)) + !Control.HasFocus(151)</visible>
 				</control>
 				<control type="videowindow"><!-- Video Window Big -->
 					<description>video control</description>
@@ -356,7 +356,7 @@
 					<height>386</height>
 					<width>563</width>
 					<aspectratio align="left">keep</aspectratio>
-					<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizebig))</visible>
 				</control>
 				<control type="button"><!-- click absorber -->
 					<posx>687</posx>
@@ -365,7 +365,7 @@
 					<width>563</width>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizebig))</visible>
 				</control>
 				<control type="image">
 					<posx>686</posx>
@@ -654,7 +654,7 @@
 							<item id="2"><!-- Play Video -->
 								<label>31793</label>
 								<onclick>PlayMedia($INFO[ListItem.Property(gameplayinfo)],1)</onclick>
-								<visible>!IsEmpty(ListItem.Property(gameplayinfo))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(gameplayinfo))</visible>
 							</item>
 						</content>
 					</control>

@@ -6,7 +6,7 @@
 
 <window>
 	<defaultcontrol always="true">9100</defaultcontrol>
-	<onunload condition="SubString(skin.string(customwindow),video)">SetFocus(50)</onunload>
+	<onunload condition="String.Contains(skin.string(customwindow),video)">SetFocus(50)</onunload>
 	<onunload>Skin.Reset(customwindow)</onunload>
 	<onunload>Skin.Reset(resetmode)</onunload>
 	<onunload>Skin.Reset(fonte)</onunload>
@@ -218,25 +218,25 @@
 			<control type="button" id="4196">
 				<include>InvisibleButton</include>
 				<onfocus>SetFocus(1151)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsnumber),4)">Skin.SetString(widgetsnumber,8)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsnumber),8)">Skin.SetString(widgetsnumber,12)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsnumber),12)">Skin.SetString(widgetsnumber,4)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsnumber),4)">Skin.SetString(widgetsnumber,8)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsnumber),8)">Skin.SetString(widgetsnumber,12)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsnumber),12)">Skin.SetString(widgetsnumber,4)</onfocus>
 			</control>
 			<control type="button" id="4197">
 				<include>InvisibleButton</include>
 				<onfocus>SetFocus(1152)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsmode),on)">Skin.SetString(widgetsmode,manual)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsmode),manual)">Skin.SetString(widgetsmode,auto)</onfocus>
-				<onfocus condition="SubString(skin.string(widgetsmode),auto)">Skin.SetString(widgetsmode,on)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsmode),on)">Skin.SetString(widgetsmode,manual)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsmode),manual)">Skin.SetString(widgetsmode,auto)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgetsmode),auto)">Skin.SetString(widgetsmode,on)</onfocus>
 			</control>
 			<control type="button" id="4198">
 				<include>InvisibleButton</include>
 				<onfocus>SetFocus(1153)</onfocus>
-				<onfocus condition="SubString(skin.string(widgets_seconds),1)">Skin.SetString(widgets_seconds,2)</onfocus>
-				<onfocus condition="SubString(skin.string(widgets_seconds),2)">Skin.SetString(widgets_seconds,3)</onfocus>
-				<onfocus condition="SubString(skin.string(widgets_seconds),3)">Skin.SetString(widgets_seconds,4)</onfocus>
-				<onfocus condition="SubString(skin.string(widgets_seconds),4)">Skin.SetString(widgets_seconds,5)</onfocus>
-				<onfocus condition="SubString(skin.string(widgets_seconds),5)">Skin.SetString(widgets_seconds,1)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgets_seconds),1)">Skin.SetString(widgets_seconds,2)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgets_seconds),2)">Skin.SetString(widgets_seconds,3)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgets_seconds),3)">Skin.SetString(widgets_seconds,4)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgets_seconds),4)">Skin.SetString(widgets_seconds,5)</onfocus>
+				<onfocus condition="String.Contains(skin.string(widgets_seconds),5)">Skin.SetString(widgets_seconds,1)</onfocus>
 			</control>
 			<control type="button" id="4199">
 				<include>InvisibleButton</include>
@@ -294,7 +294,7 @@
 				<control type="button" id="1153"><!-- Tempo dos Widgets --><!-- nao mudar id -->
 					<label>$VAR[value_widgetsseconds] ($LOCALIZE[31181])</label>
 					<onclick>SetFocus(4198)</onclick>
-					<visible>SubString(skin.string(widgetsmode),auto)</visible>
+					<visible>String.Contains(skin.string(widgetsmode),auto)</visible>
 				</control>
 				<control type="radiobutton" id="1154"><!-- Primeiro item Em Progresso -->
 					<label>31982</label>
@@ -305,295 +305,295 @@
 					<label>$LOCALIZE[31003]</label>
 					<onclick>Skin.ToggleSetting(nomovieswidget)</onclick>
 					<selected>!Skin.HasSetting(nomovieswidget)</selected>
-					<visible>!IsEmpty(skin.string(movieswidget))</visible>
+					<visible>!String.IsEmpty(skin.string(movieswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1101"><!-- Seriados -->
 					<label>$LOCALIZE[31005]</label>
 					<onclick>Skin.ToggleSetting(notvshowswidget)</onclick>
 					<selected>!Skin.HasSetting(notvshowswidget)</selected>
-					<visible>!IsEmpty(skin.string(tvshowswidget))</visible>
+					<visible>!String.IsEmpty(skin.string(tvshowswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1102"><!-- Concertos -->
 					<label>$LOCALIZE[31013]</label>
 					<onclick>Skin.ToggleSetting(noconcertswidget)</onclick>
 					<selected>!Skin.HasSetting(noconcertswidget)</selected>
-					<visible>!IsEmpty(skin.string(concertswidget))</visible>
+					<visible>!String.IsEmpty(skin.string(concertswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1103"><!-- Musicas -->
 					<label>$LOCALIZE[31002]</label>
 					<onclick>Skin.ToggleSetting(nomusicwidget)</onclick>
 					<selected>!Skin.HasSetting(nomusicwidget)</selected>
-					<visible>!IsEmpty(skin.string(musicwidget))</visible>
+					<visible>!String.IsEmpty(skin.string(musicwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1104"><!-- TV -->
 					<label>$LOCALIZE[31006]</label>
 					<onclick>Skin.ToggleSetting(nonextairedwidget)</onclick>
 					<selected>!Skin.HasSetting(nonextairedwidget)</selected>
-					<visible>!IsEmpty(skin.string(livetvwidget))</visible>
+					<visible>!String.IsEmpty(skin.string(livetvwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1105"><!-- Jogos -->
 					<label>$LOCALIZE[31007]</label>
 					<onclick>Skin.ToggleSetting(nogameswidget)</onclick>
 					<selected>!Skin.HasSetting(nogameswidget)</selected>
-					<visible>!IsEmpty(skin.string(gameswidget)) + [System.HasAddon(script.games.rom.collection.browser) + SubString(skin.string(games_link),rcb)]</visible>
+					<visible>!String.IsEmpty(skin.string(gameswidget)) + [System.HasAddon(script.games.rom.collection.browser) + String.Contains(skin.string(games_link),rcb)]</visible>
 				</control>
 				<control type="radiobutton" id="1106"><!-- Clima -->
 					<label>$LOCALIZE[31009]</label>
 					<onclick>Skin.ToggleSetting(noweatherwidget)</onclick>
 					<selected>!Skin.HasSetting(noweatherwidget)</selected>
-					<visible>!IsEmpty(skin.string(weatherwidget))</visible>
+					<visible>!String.IsEmpty(skin.string(weatherwidget))</visible>
 				</control>
 				<control type="radiobutton" id="1107"><!-- Sistema -->
 					<label>$LOCALIZE[31011]</label>
 					<onclick>Skin.ToggleSetting(nosystemwidget)</onclick>
 					<selected>!Skin.HasSetting(nosystemwidget)</selected>
-					<visible>!IsEmpty(skin.string(settingswidget))</visible>
+					<visible>!String.IsEmpty(skin.string(settingswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1108"><!-- Favoritos -->
 					<label>$LOCALIZE[31031]</label>
 					<onclick>Skin.ToggleSetting(nofavouriteswidget)</onclick>
 					<selected>!Skin.HasSetting(nofavouriteswidget)</selected>
-					<visible>!IsEmpty(skin.string(favouriteswidget))</visible>
+					<visible>!String.IsEmpty(skin.string(favouriteswidget))</visible>
 				</control>
 				<control type="radiobutton" id="1111"><!-- Vpl1 -->
 					<label>$LOCALIZE[31072] - 1 $VAR[value_menu1.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl1widget)</onclick>
 					<selected>!Skin.HasSetting(novpl1widget)</selected>
-					<visible>SubString(skin.string(menu1.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu1.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1112"><!-- Vpl2 -->
 					<label>$LOCALIZE[31072] - 2 $VAR[value_menu2.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl2widget)</onclick>
 					<selected>!Skin.HasSetting(novpl2widget)</selected>
-					<visible>SubString(skin.string(menu2.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu2.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1113"><!-- Vpl3 -->
 					<label>$LOCALIZE[31072] - 3 $VAR[value_menu3.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl3widget)</onclick>
 					<selected>!Skin.HasSetting(novpl3widget)</selected>
-					<visible>SubString(skin.string(menu3.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu3.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1114"><!-- Vpl4 -->
 					<label>$LOCALIZE[31072] - 4 $VAR[value_menu4.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl4widget)</onclick>
 					<selected>!Skin.HasSetting(novpl4widget)</selected>
-					<visible>SubString(skin.string(menu4.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu4.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1115"><!-- Vpl5 -->
 					<label>$LOCALIZE[31072] - 5 $VAR[value_menu5.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl5widget)</onclick>
 					<selected>!Skin.HasSetting(novpl5widget)</selected>
-					<visible>SubString(skin.string(menu5.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu5.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1116"><!-- Vpl6 -->
 					<label>$LOCALIZE[31072] - 6 $VAR[value_menu6.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl6widget)</onclick>
 					<selected>!Skin.HasSetting(novpl6widget)</selected>
-					<visible>SubString(skin.string(menu6.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu6.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1117"><!-- Vpl7 -->
 					<label>$LOCALIZE[31072] - 7 $VAR[value_menu7.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl7widget)</onclick>
 					<selected>!Skin.HasSetting(novpl7widget)</selected>
-					<visible>SubString(skin.string(menu7.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu7.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1118"><!-- Vpl8 -->
 					<label>$LOCALIZE[31072] - 8 $VAR[value_menu8.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl8widget)</onclick>
 					<selected>!Skin.HasSetting(novpl8widget)</selected>
-					<visible>SubString(skin.string(menu8.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu8.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1119"><!-- Vpl9 -->
 					<label>$LOCALIZE[31072] - 9 $VAR[value_menu9.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl9widget)</onclick>
 					<selected>!Skin.HasSetting(novpl9widget)</selected>
-					<visible>SubString(skin.string(menu9.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu9.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1120"><!-- Vpl10 -->
 					<label>$LOCALIZE[31072] - 10 $VAR[value_menu10.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl10widget)</onclick>
 					<selected>!Skin.HasSetting(novpl10widget)</selected>
-					<visible>SubString(skin.string(menu10.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu10.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1121"><!-- Vpl11 -->
 					<label>$LOCALIZE[31072] - 11 $VAR[value_menu11.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl11widget)</onclick>
 					<selected>!Skin.HasSetting(novpl11widget)</selected>
-					<visible>SubString(skin.string(menu11.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu11.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1122"><!-- Vpl12 -->
 					<label>$LOCALIZE[31072] - 12 $VAR[value_menu12.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl12widget)</onclick>
 					<selected>!Skin.HasSetting(novpl12widget)</selected>
-					<visible>SubString(skin.string(menu12.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu12.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1123"><!-- Vpl13 -->
 					<label>$LOCALIZE[31072] - 13 $VAR[value_menu13.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl13widget)</onclick>
 					<selected>!Skin.HasSetting(novpl13widget)</selected>
-					<visible>SubString(skin.string(menu13.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu13.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1124"><!-- Vpl14 -->
 					<label>$LOCALIZE[31072] - 14 $VAR[value_menu14.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl14widget)</onclick>
 					<selected>!Skin.HasSetting(novpl14widget)</selected>
-					<visible>SubString(skin.string(menu14.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu14.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1125"><!-- Vpl15 -->
 					<label>$LOCALIZE[31072] - 15 $VAR[value_menu15.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl15widget)</onclick>
 					<selected>!Skin.HasSetting(novpl15widget)</selected>
-					<visible>SubString(skin.string(menu15.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu15.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1126"><!-- Vpl16 -->
 					<label>$LOCALIZE[31072] - 16 $VAR[value_menu16.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl16widget)</onclick>
 					<selected>!Skin.HasSetting(novpl16widget)</selected>
-					<visible>SubString(skin.string(menu16.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu16.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1127"><!-- Vpl17 -->
 					<label>$LOCALIZE[31072] - 17 $VAR[value_menu17.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl17widget)</onclick>
 					<selected>!Skin.HasSetting(novpl17widget)</selected>
-					<visible>SubString(skin.string(menu17.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu17.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1128"><!-- Vpl18 -->
 					<label>$LOCALIZE[31072] - 18 $VAR[value_menu18.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl18widget)</onclick>
 					<selected>!Skin.HasSetting(novpl18widget)</selected>
-					<visible>SubString(skin.string(menu18.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu18.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1129"><!-- Vpl19 -->
 					<label>$LOCALIZE[31072] - 19 $VAR[value_menu19.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl19widget)</onclick>
 					<selected>!Skin.HasSetting(novpl19widget)</selected>
-					<visible>SubString(skin.string(menu19.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu19.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1130"><!-- Vpl20 -->
 					<label>$LOCALIZE[31072] - 20 $VAR[value_menu20.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(novpl20widget)</onclick>
 					<selected>!Skin.HasSetting(novpl20widget)</selected>
-					<visible>SubString(skin.string(menu20.master),vpl)</visible>
+					<visible>String.Contains(skin.string(menu20.master),vpl)</visible>
 				</control>
 				<control type="radiobutton" id="1131"><!-- Apl1 -->
 					<label>$LOCALIZE[31073] - 1 $VAR[value_menu1.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl1widget)</onclick>
 					<selected>!Skin.HasSetting(noapl1widget)</selected>
-					<visible>SubString(skin.string(menu1.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu1.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1132"><!-- Apl2 -->
 					<label>$LOCALIZE[31073] - 2 $VAR[value_menu2.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl2widget)</onclick>
 					<selected>!Skin.HasSetting(noapl2widget)</selected>
-					<visible>SubString(skin.string(menu2.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu2.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1133"><!-- Apl3 -->
 					<label>$LOCALIZE[31073] - 3 $VAR[value_menu3.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl3widget)</onclick>
 					<selected>!Skin.HasSetting(noapl3widget)</selected>
-					<visible>SubString(skin.string(menu3.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu3.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1134"><!-- Apl4 -->
 					<label>$LOCALIZE[31073] - 4 $VAR[value_menu4.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl4widget)</onclick>
 					<selected>!Skin.HasSetting(noapl4widget)</selected>
-					<visible>SubString(skin.string(menu4.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu4.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1135"><!-- Apl5 -->
 					<label>$LOCALIZE[31073] - 5 $VAR[value_menu5.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl5widget)</onclick>
 					<selected>!Skin.HasSetting(noapl5widget)</selected>
-					<visible>SubString(skin.string(menu5.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu5.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1136"><!-- Apl6 -->
 					<label>$LOCALIZE[31073] - 6 $VAR[value_menu6.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl6widget)</onclick>
 					<selected>!Skin.HasSetting(noapl6widget)</selected>
-					<visible>SubString(skin.string(menu6.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu6.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1137"><!-- Apl7 -->
 					<label>$LOCALIZE[31073] - 7 $VAR[value_menu7.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl7widget)</onclick>
 					<selected>!Skin.HasSetting(noapl7widget)</selected>
-					<visible>SubString(skin.string(menu7.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu7.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1138"><!-- Apl8 -->
 					<label>$LOCALIZE[31073] - 8 $VAR[value_menu8.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl8widget)</onclick>
 					<selected>!Skin.HasSetting(noapl8widget)</selected>
-					<visible>SubString(skin.string(menu8.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu8.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1139"><!-- Apl9 -->
 					<label>$LOCALIZE[31073] - 9 $VAR[value_menu9.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl9widget)</onclick>
 					<selected>!Skin.HasSetting(noapl9widget)</selected>
-					<visible>SubString(skin.string(menu9.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu9.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1140"><!-- Apl10 -->
 					<label>$LOCALIZE[31073] - 10 $VAR[value_menu10.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl10widget)</onclick>
 					<selected>!Skin.HasSetting(noapl10widget)</selected>
-					<visible>SubString(skin.string(menu10.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu10.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1141"><!-- Apl11 -->
 					<label>$LOCALIZE[31073] - 11 $VAR[value_menu11.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl11widget)</onclick>
 					<selected>!Skin.HasSetting(noapl11widget)</selected>
-					<visible>SubString(skin.string(menu11.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu11.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1142"><!-- Apl12 -->
 					<label>$LOCALIZE[31073] - 12 $VAR[value_menu12.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl12widget)</onclick>
 					<selected>!Skin.HasSetting(noapl12widget)</selected>
-					<visible>SubString(skin.string(menu12.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu12.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1143"><!-- Apl13 -->
 					<label>$LOCALIZE[31073] - 13 $VAR[value_menu13.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl13widget)</onclick>
 					<selected>!Skin.HasSetting(noapl13widget)</selected>
-					<visible>SubString(skin.string(menu13.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu13.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1144"><!-- Apl14 -->
 					<label>$LOCALIZE[31073] - 14 $VAR[value_menu14.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl14widget)</onclick>
 					<selected>!Skin.HasSetting(noapl14widget)</selected>
-					<visible>SubString(skin.string(menu14.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu14.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1145"><!-- Apl15 -->
 					<label>$LOCALIZE[31073] - 15 $VAR[value_menu15.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl15widget)</onclick>
 					<selected>!Skin.HasSetting(noapl15widget)</selected>
-					<visible>SubString(skin.string(menu15.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu15.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1146"><!-- Apl16 -->
 					<label>$LOCALIZE[31073] - 16 $VAR[value_menu16.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl16widget)</onclick>
 					<selected>!Skin.HasSetting(noapl16widget)</selected>
-					<visible>SubString(skin.string(menu16.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu16.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1147"><!-- Apl17 -->
 					<label>$LOCALIZE[31073] - 17 $VAR[value_menu17.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl17widget)</onclick>
 					<selected>!Skin.HasSetting(noapl17widget)</selected>
-					<visible>SubString(skin.string(menu17.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu17.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1148"><!-- Apl18 -->
 					<label>$LOCALIZE[31073] - 18 $VAR[value_menu18.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl18widget)</onclick>
 					<selected>!Skin.HasSetting(noapl18widget)</selected>
-					<visible>SubString(skin.string(menu18.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu18.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1149"><!-- Apl19 -->
 					<label>$LOCALIZE[31073] - 19 $VAR[value_menu19.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl19widget)</onclick>
 					<selected>!Skin.HasSetting(noapl19widget)</selected>
-					<visible>SubString(skin.string(menu19.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu19.master),apl)</visible>
 				</control>
 				<control type="radiobutton" id="1150"><!-- Apl20 -->
 					<label>$LOCALIZE[31073] - 20 $VAR[value_menu20.label, (,)]</label>
 					<onclick>Skin.ToggleSetting(noapl20widget)</onclick>
 					<selected>!Skin.HasSetting(noapl20widget)</selected>
-					<visible>SubString(skin.string(menu20.master),apl)</visible>
+					<visible>String.Contains(skin.string(menu20.master),apl)</visible>
 				</control>
 			</control>
 
@@ -2157,66 +2157,66 @@
 				<control type="radiobutton" id="1069"><!--Random themes -->
 					<label>31899</label>
 					<onclick>Skin.ToggleSetting(randomthemes)</onclick>
-					<selected>Skin.HasSetting(randomthemes) + !SubString(skin.string(theme),mytheme)</selected>
-					<enable>Skin.String(custom_themes.name) + !SubString(skin.string(theme),mytheme)</enable>
+					<selected>Skin.HasSetting(randomthemes) + !String.Contains(skin.string(theme),mytheme)</selected>
+					<enable>Skin.String(custom_themes.name) + !String.Contains(skin.string(theme),mytheme)</enable>
 				</control>
 				<control type="radiobutton" id="1062"><!-- coral-->
 					<label>$LOCALIZE[31129] ($LOCALIZE[31277])</label>
 					<onclick>Skin.SetString(theme,coral)</onclick>
-					<selected>SubString(skin.string(theme),coral)</selected>
+					<selected>String.Contains(skin.string(theme),coral)</selected>
 				</control>
 				<control type="radiobutton" id="1063"><!-- modern -->
 					<label>$LOCALIZE[31904]</label>
 					<onclick>Skin.SetString(theme,modern)</onclick>
-					<selected>SubString(skin.string(theme),modern)</selected>
+					<selected>String.Contains(skin.string(theme),modern)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1064"><!-- future -->
 					<label>31894</label>
 					<onclick>Skin.SetString(theme,future)</onclick>
-					<selected>SubString(skin.string(theme),future)</selected>
+					<selected>String.Contains(skin.string(theme),future)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1065"><!-- cold -->
 					<label>31895</label>
 					<onclick>Skin.SetString(theme,cold)</onclick>
-					<selected>SubString(skin.string(theme),cold)</selected>
+					<selected>String.Contains(skin.string(theme),cold)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1066"><!-- warm -->
 					<label>31896</label>
 					<onclick>Skin.SetString(theme,warm)</onclick>
-					<selected>SubString(skin.string(theme),warm)</selected>
+					<selected>String.Contains(skin.string(theme),warm)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1067"><!-- dark -->
 					<label>31897</label>
 					<onclick>Skin.SetString(theme,darkness)</onclick>
-					<selected>SubString(skin.string(theme),darkness)</selected>
+					<selected>String.Contains(skin.string(theme),darkness)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1068"><!-- digital -->
 					<label>31898</label>
 					<onclick>Skin.SetString(theme,digitalart)</onclick>
-					<selected>SubString(skin.string(theme),digitalart)</selected>
+					<selected>String.Contains(skin.string(theme),digitalart)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1061"><!-- colors -->
 					<label>COLORS IMAGES THEME</label>
 					<onclick>Skin.SetString(theme,colours)</onclick>
-					<selected>SubString(skin.string(theme),colours)</selected>
+					<selected>String.Contains(skin.string(theme),colours)</selected>
 					<enable>Skin.String(custom_themes.name)</enable>
 				</control>
 				<control type="radiobutton" id="1070"><!-- My theme -->
 					<label>31908</label>
 					<onclick>Skin.SetString(theme,mytheme)</onclick>
 					<onclick>ActivateWindow(640)</onclick>  <!-- custom help -->
-					<selected>SubString(skin.string(theme),mytheme)</selected>
+					<selected>String.Contains(skin.string(theme),mytheme)</selected>
 				</control>
 				<control type="button" id="1071"><!-- my theme path -->
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[15311][/COLOR] $INFO[skin.string(CustomMyTheme)]</label>
 					<onclick>Skin.SetPath(CustomMyTheme)</onclick>
-					<visible>SubString(skin.string(theme),mytheme)</visible>
+					<visible>String.Contains(skin.string(theme),mytheme)</visible>
 				</control>
 			</control>
 			<control type="group"><!-- Theme preview window -->
@@ -2304,7 +2304,7 @@
 					<onclick>Skin.SetString(extrapackstyle,resource://resource.images.skinstyles.aeonmq5/)</onclick>
 					<onclick>Skin.SetFile(extrapackstyle,.jpg | .png,resource://resource.images.skinstyles.aeonmq5/)</onclick>
 					<selected>String.IsEqual(skin.string(style),extrapack)</selected>
-					<enable>!String.IsEmpty(Skin.String(custom_styles.name))</enable>
+					<enable>!String.String.IsEmpty(Skin.String(custom_styles.name))</enable>
 				</control>
 				<control type="radiobutton" id="1087"><!-- Meu estilo -->
 					<label>$LOCALIZE[31615]  ($LOCALIZE[31206])</label>
@@ -2806,8 +2806,8 @@
 					<animation effect="slide" start="0,0" end="0,-270" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-50" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(higherwidgets) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="320,0" condition="SubString(skin.string(widgetsnumber),4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="160,0" condition="SubString(skin.string(widgetsnumber),8)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="320,0" condition="String.Contains(skin.string(widgetsnumber),4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="160,0" condition="String.Contains(skin.string(widgetsnumber),8)">Conditional</animation>
 					<control type="image">
 						<posx>240</posx>
 						<posy>372</posy>
@@ -2838,35 +2838,35 @@
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),8) | SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 						<control type="image">
 							<include>SettingsWidgets</include>
-							<visible>SubString(skin.string(widgetsnumber),12)</visible>
+							<visible>String.Contains(skin.string(widgetsnumber),12)</visible>
 						</control>
 					</control>
 				</control>

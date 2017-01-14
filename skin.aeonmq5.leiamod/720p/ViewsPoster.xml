@@ -63,7 +63,7 @@
 				<texture>$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
 				<posx>211</posx>
@@ -73,7 +73,7 @@
 				<texture flipy="true">$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</itemlayout>
 		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="298" height="360">
@@ -94,7 +94,7 @@
 				<texture>$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
 				<posx>211</posx>
@@ -104,7 +104,7 @@
 				<texture flipy="true">$VAR[value_watchedstyle]</texture>
 				<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</itemlayout>
 		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="298" height="360">
@@ -154,7 +154,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
 				<posx>211</posx>
@@ -166,7 +166,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>	
 		</focusedlayout>
 		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="298" height="360">
@@ -190,7 +190,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
-				<visible>![Skin.HasSetting(nooverlays) | SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
+				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
 				<posx>211</posx>
@@ -202,7 +202,7 @@
 				<aspectratio align="center" aligny="bottom">keep</aspectratio>
 				<animation reversible="false" effect="slide" start="0,0" end="24,36" center="auto" time="200">Focus</animation>
 				<animation reversible="false" effect="zoom" end="120" center="auto" time="200">Focus</animation>
-				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [SubString(skin.string(stylewatched),2) | SubString(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
+				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>	
 		</focusedlayout>
 		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="298" height="360">
@@ -248,7 +248,7 @@
 				</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<animation effect="fade" start="100" end="0" time="50">Hidden</animation>
-				<visible>!IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(noposterdiscart) + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
+				<visible>!String.IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(noposterdiscart) + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
 				<control type="image">
 					<posx>497</posx>
 					<posy>365</posy>
@@ -301,7 +301,7 @@
 				<width>2</width>
 				<height>134</height>
 				<texture>separator_v.png</texture>
-				<visible>![IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
+				<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
 			</control>
 
 			<control type="grouplist"><!-- Painel de info -->
@@ -347,7 +347,7 @@
 				<font>Font_18A</font>
 				<label>$VAR[value_plot]</label>
 				<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-				<visible>![IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
+				<visible>![String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
 			</control>
 			<control type="textbox">
 				<posx>366</posx>
@@ -358,7 +358,7 @@
 				<font>Font_18A</font>
 				<label>$VAR[value_plot]</label>
 				<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-				<visible>IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
+				<visible>String.IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
 			</control>
 			<include condition="Skin.HasSetting(posterfixedlist)">PosterFixedList</include>
 			<include condition="!Skin.HasSetting(posterfixedlist)">PosterWrapList</include>

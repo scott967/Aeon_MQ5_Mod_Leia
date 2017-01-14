@@ -85,7 +85,7 @@
 				<onclick condition="!Skin.HasSetting(fullscreentrailer)">PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 				<onclick condition="Skin.HasSetting(fullscreentrailer)">PlayMedia($INFO[ListItem.Trailer])</onclick>
 				<label>31945</label>
-				<visible>!IsEmpty(ListItem.Trailer)</visible>
+				<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 			</control>
 			<control type="button" id="1032">
 				<include>DialogContext_Button</include>

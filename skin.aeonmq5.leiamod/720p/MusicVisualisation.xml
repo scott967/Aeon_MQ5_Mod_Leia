@@ -6,7 +6,7 @@
 <window>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
-	<onload condition="Skin.HasSetting(nolyrics_on) + ![IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onload>
+	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onload>
 	<onunload>Dialog.Close(5600)</onunload>
 	<controls>
 		<control type="image">
@@ -29,19 +29,19 @@
 			<include>WindowBG</include>
 			<texture background="true">$INFO[MusicPlayer.Property(fanart_image)]</texture>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + IsEmpty(Control.GetLabel(5043)) + IsEmpty(Control.GetLabel(5044)) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + IsEmpty(Control.GetLabel(5046)) + IsEmpty(Control.GetLabel(5047)) + IsEmpty(Control.GetLabel(5048)) + IsEmpty(Control.GetLabel(5049)) + IsEmpty(Control.GetLabel(5050)) + IsEmpty(Control.GetLabel(5051))</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044)) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + String.IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + String.IsEmpty(Control.GetLabel(5046)) + String.IsEmpty(Control.GetLabel(5047)) + String.IsEmpty(Control.GetLabel(5048)) + String.IsEmpty(Control.GetLabel(5049)) + String.IsEmpty(Control.GetLabel(5050)) + String.IsEmpty(Control.GetLabel(5051))</visible>
 		</control>
 		<control type="multiimage" id="5043"><!-- Extra Fanart Song -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra)</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra)</visible>
 		</control>
 		<control type="multiimage" id="5044"><!-- Extra Fanart Artist -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra) + IsEmpty(Control.GetLabel(5043))</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra) + String.IsEmpty(Control.GetLabel(5043))</visible>
 		</control>
 		<control type="multiimage" id="5045"><!-- Artist SlideShow -->
 			<aspectratio>keep</aspectratio>
@@ -102,7 +102,7 @@
 			<control type="group">
 				<posx>0</posx>
 				<posy>773</posy>
-				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-400,0" time="400" tween="cubic" easing="inout" condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,270" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(627)">Conditional</animation>  <!-- custom osd music -->
 				<animation effect="slide" start="0,0" end="0,300" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-900,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>

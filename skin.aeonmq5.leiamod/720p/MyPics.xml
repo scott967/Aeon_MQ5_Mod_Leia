@@ -14,7 +14,7 @@
 			<include>WindowBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$VAR[value_menutheme_pictures]</imagepath>
-			<visible>IsEmpty(Control.GetLabel(555))</visible>
+			<visible>String.IsEmpty(Control.GetLabel(555))</visible>
 		</control>
 		<control type="image" id="555"><!-- Fanart -->
 			<include>WindowBG</include>
@@ -32,10 +32,10 @@
 				</control>
 				<control type="button" id="9900"><!-- to menu/kiosk condition -->
 					<include>InvisibleButton</include>
-					<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
-					<onfocus condition="Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
-					<onfocus condition="Skin.HasSetting(kiosk) + IsEmpty(ListItem.Trailer)">SetFocus(50)</onfocus>
-					<onfocus condition="Skin.HasSetting(kiosk) + !IsEmpty(ListItem.Trailer)">SetFocus(90000)</onfocus>
+					<onfocus condition="![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]">SetFocus(9300)</onfocus>
+					<onfocus condition="Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onfocus>
+					<onfocus condition="Skin.HasSetting(kiosk) + String.IsEmpty(ListItem.Trailer)">SetFocus(50)</onfocus>
+					<onfocus condition="Skin.HasSetting(kiosk) + !String.IsEmpty(ListItem.Trailer)">SetFocus(90000)</onfocus>
 				</control>
 				<control type="button" id="9910"><!-- panel focus -->
 					<include>InvisibleButton</include>
@@ -95,7 +95,7 @@
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<shadowcolor>grey</shadowcolor>
-					<visible>![Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))]</visible>
+					<visible>![Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))]</visible>
 				</control>
 				<control type="image"><!-- clearlogo -->
 					<posx>30</posx>
@@ -105,7 +105,7 @@
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Skin.HasSetting(clearlogotitle) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="label">
 					<posx>30</posx>
@@ -131,7 +131,7 @@
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<shadowcolor>grey</shadowcolor>
-					<animation effect="slide" start="0,0" end="0,-30" condition="IsEmpty(ListItem.Tagline) | Skin.HasSetting(nomoviestagline)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-30" condition="String.IsEmpty(ListItem.Tagline) | Skin.HasSetting(nomoviestagline)">Conditional</animation>
 					<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![String.IsEqual(ListItem.Label,..) | Skin.HasSetting(notvshowstagline)]</visible>
 				</control>
 			</control>

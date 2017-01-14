@@ -36,20 +36,20 @@
 							<onclick>Dialog.Close(5099)</onclick>
 							<onclick>ActivateWindow(6000)</onclick>
 							<onclick>Skin.SetBool(custommode)</onclick>
-							<visible>![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+							<visible>![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 						</item>
 						<item><!-- Ajustes da skin -->
 							<label>31371</label>
 							<onclick>Dialog.Close(5099)</onclick>
 							<onclick>ActivateWindow(skinsettings)</onclick>
-							<visible>![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)]</visible>
+							<visible>![Skin.HasSetting(kiosk) | Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 						</item>
 						<item><!-- Kiosk Code -->
 							<label>$VAR[value_kioskcode]</label>
 							<onclick>Skin.SetString(custom_code,codestep)</onclick>
-							<onclick condition="!SubString(skin.string(codestep),step3)">SetFocus(9100)</onclick>
-							<onclick condition="!SubString(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
-							<visible>Skin.HasSetting(kioskcode) + !SubString(skin.string(codestep),step3)</visible>
+							<onclick condition="!String.Contains(skin.string(codestep),step3)">SetFocus(9100)</onclick>
+							<onclick condition="!String.Contains(skin.string(codestep),step3)">ActivateWindow(629)</onclick> <!-- custom dialog -->
+							<visible>Skin.HasSetting(kioskcode) + !String.Contains(skin.string(codestep),step3)</visible>
 						</item>
 					</content>
 				</control>
