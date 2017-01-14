@@ -3,11 +3,13 @@
 <!-- Aeon MQ 5 Isengard 7.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.19/9.2.1 windowIDs -->
+<!-- Leia 10.2.3 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
-	<onload condition="String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(9000),0:01,true)</onload>
+	<!-- <onload condition="String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(9000),0:01,true)</onload> -->
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:01,true)</onload>
+	<views>55</views>
 	<controls>
 		<control type="multiimage">
 			<include>WindowBG</include>
