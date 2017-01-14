@@ -37,12 +37,12 @@
 				<label>14205</label>
 				<visible>Window.IsActive(pvrsettings) + System.HasPVR</visible> <!-- tvsettings -->
 			</control>
-			<!-- <control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31365</label>
-				<visible>Window.IsActive(picturessettings)</visible>
-			</control>
 			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>15016</label>
+				<visible>Window.IsActive(gamesettings)</visible>  <!-- game settings -->
+			</control>
+			<!-- <control type="label">
 				<include>SettingsContentTitle</include>
 				<label>31367</label>
 				<visible>Window.IsActive(weathersettings)</visible>

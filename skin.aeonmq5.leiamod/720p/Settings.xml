@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8/1/14 -->
 <!-- Krypton 9.1.17/9.1.19/9.2.1 window IDs 4 -->
+<!-- Leai 10.2.3 -->
 
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
@@ -188,7 +189,7 @@
 				<onleft condition="Window.Previous(videos)">ActivateWindow(videos)</onleft>
 				<onright condition="Container(9000).HasFocus(100)">ActivateWindow(AddonBrowser)</onright>
 				<onright condition="Container(9000).HasFocus(101)">ActivateWindow(SystemSettings)</onright>
-				<!-- <onright condition="Container(9000).HasFocus(102)">ActivateWindow(NetworkSettings)</onright> -->
+				<onright condition="Container(9000).HasFocus(102)">ActivateWindow(GameSettings)</onright>
 				<onright condition="Container(9000).HasFocus(103)">ActivateWindow(profiles)</onright>  <!-- profiles -->
 				<onright condition="Container(9000).HasFocus(104)">21</onright>
 				<onright condition="Container(9000).HasFocus(105)">ActivateWindow(InterfaceSettings)</onright>
@@ -337,15 +338,15 @@
 						<icon>special://skin/backgrounds/extras/settings_system.jpg</icon>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 					</item>
-					<!-- Network same as service
+					<!-- Game settings -->
 					<item id="102">
-						<label>31361</label>
-						<label2>31362</label2>
+						<label>15016</label>
+						<label2>35200</label2>
 						<property name="MainLabel">31392</property>
 						<property name="SubLabel">31393</property>
-						<icon>special://skin/backgrounds/extras/settings_network.jpg</icon>
-						<onclick>ActivateWindow(NetworkSettings)</onclick>
-					</item> -->
+						<icon>special://skin/backgrounds/extras/settings_network.jpg</icon>  <!-- need new icon -->
+						<onclick>ActivateWindow(Gamesettings)</onclick>
+					</item>
 					<item id="103"><!-- Profile -->
 						<label>31369</label>
 						<label2>31370</label2>
