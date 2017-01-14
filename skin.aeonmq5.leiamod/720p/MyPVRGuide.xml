@@ -2,13 +2,14 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.4/6.1.5 -->
 <!-- Jarvis 8.1.13/8.1.15  RjSachse EPGTimeLineLow view/8.2.1 -->
 <!-- Krypton 9.1.16 -->
+<!-- Leia 10.2.3 -->
 
 <window>
 	<defaultcontrol always="false">9901</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<!-- <allowoverlay>no</allowoverlay> -->
-	<views>10,11,12,13</views>
+	<views>10</views>
 	<controls>
 		<control type="multiimage"><!-- Fanart -->
 			<include>WindowBG</include>
@@ -132,9 +133,9 @@
 			<control type="group" id="50">
 				<include condition="!Player.HasVideo | Skin.HasSetting(noepggridlow)">ViewEPGTimeline</include>  <!-- view 10 -->
 				<include condition="Player.HasVideo + !Skin.HasSetting(noepggridlow)">ViewEPGTimelineLow</include>  <!-- view 10 -->
-				<include condition="Skin.HasSetting(viewnow_epg)">ViewLiveTVGuideNow</include> <!-- view 11 -->
-				<include condition="Skin.HasSetting(viewnext_epg)">ViewLiveTVGuideNext</include> <!-- view 12 -->
-				<include condition="Skin.HasSetting(viewchannel_epg)">ViewLiveTVGuideChannel</include> <!-- view 13 -->
+				<!-- <include condition="Skin.HasSetting(viewnow_epg)">ViewLiveTVGuideNow</include>  --><!-- view 11 -->
+				<!-- <include condition="Skin.HasSetting(viewnext_epg)">ViewLiveTVGuideNext</include> --> <!-- view 12 -->
+				<!-- <include condition="Skin.HasSetting(viewchannel_epg)">ViewLiveTVGuideChannel</include> --> <!-- view 13 -->
 			</control>
 
 			<!-- Furniture -->

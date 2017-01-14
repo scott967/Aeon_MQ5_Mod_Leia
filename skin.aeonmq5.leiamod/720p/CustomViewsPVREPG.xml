@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 New Helix 6.1.4 -->
 	<!-- Krypton 9.2.1 window IDs -->
+	<!-- Leia 10.2.3 -->
 
 <window id="1101" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
@@ -71,24 +72,24 @@
 				<itemgap>0</itemgap>
 				<onleft>Dialog.Close(1101)</onleft>
 				<onright>Dialog.Close(1101)</onright>
-				<control type="radiobutton" id="19265"><!-- Now--><!-- 11 -->
+				<!-- <control type="radiobutton" id="19265"> (Now - 11) 
 					<radioposx>894</radioposx>
 					<label>31829</label>
 					<onclick>Skin.ToggleSetting(viewnow_epg)</onclick>
 					<selected>Skin.HasSetting(viewnow_epg)</selected>
 				</control>
-				<control type="radiobutton" id="19252"><!-- Next--><!-- 12 -->
+				<control type="radiobutton" id="19252"> (Next - 12) 
 					<radioposx>894</radioposx>
 					<label>31822</label>
 					<onclick>Skin.ToggleSetting(viewnext_epg)</onclick>
 					<selected>Skin.HasSetting(viewnext_epg)</selected>
 				</control>
-				<control type="radiobutton" id="19253"><!-- Channel --><!-- 13 -->
+				<control type="radiobutton" id="19253"> (Channel - 13)
 					<radioposx>894</radioposx>
 					<label>31877</label>
 					<onclick>Skin.ToggleSetting(viewchannel_epg)</onclick>
 					<selected>Skin.HasSetting(viewchannel_epg)</selected>
-				</control>
+				</control> -->
 			</control>
 		</control>
 	</controls>
