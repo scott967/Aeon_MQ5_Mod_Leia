@@ -3,6 +3,7 @@
 	<!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 	<!-- Jarvis 8.1.13/8.1.14 -->
 	<!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2 -->
+	<!-- Leia 10.2.3 -->
 <includes>
 	<include file="Defaults.xml"/>
 	<include file="IncludesVariables.xml"/>
@@ -679,7 +680,8 @@
 				<onfocus>Skin.SetString(menu6.action,ActivateWindow(favourites))</onfocus>
 				<onfocus>Skin.SetString(menu7.master,games)</onfocus>
 				<onfocus>Skin.SetString(gameswidget,true)</onfocus>
-				<onfocus>Skin.SetString(menu7.action,RunScript(script.games.rom.collection.browser))</onfocus>
+				<!-- <onfocus>Skin.SetString(menu7.action,RunScript(script.games.rom.collection.browser))</onfocus> -->
+				<onfocus>Skin.SetString(menu7.action,ActivateWindow(games))</onfocus> <!-- support for games window -->
 				<onfocus>Skin.SetString(menu8.master,programs)</onfocus>
 				<onfocus condition="!System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs,Addons,return))</onfocus>
 				<onfocus condition="System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs))</onfocus>

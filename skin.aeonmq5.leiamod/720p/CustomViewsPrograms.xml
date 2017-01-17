@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<!-- Aeon MQ 5 Helix 6.1.7 -->
 	<!-- Krypton 9.2.1 window IDs -->
+	<!-- Leia 10.2.3 -->
 
 <window id="631" type="dialog"> <!-- safe id -->
 	<defaultcontrol always="true">9030</defaultcontrol>
-	<onunload>AlarmClock(refreshview,ActivateWindowAndFocus(programs, 9940,0),0:01,true)</onunload>
+	<onunload conditon="Container.Content(programs)">AlarmClock(refreshview,ActivateWindowAndFocus(programs, 9940,0),0:01,true)</onunload>
+	<onunload conditon="Container.Content(games)">AlarmClock(refreshview,ActivateWindowAndFocus(games, 9940,0),0:01,true)</onunload>
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>

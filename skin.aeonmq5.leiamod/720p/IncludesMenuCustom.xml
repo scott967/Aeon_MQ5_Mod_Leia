@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.17/9.1.18/9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.2.3 -->
 
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
@@ -2097,7 +2098,8 @@
 					<label2>31007</label2>
 					<property name="id">various</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],games)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.games.rom.collection.browser))</onclick>
+					<!-- <onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.games.rom.collection.browser))</onclick> -->
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(games))</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>

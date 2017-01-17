@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2 -->
+<!-- Leia 10.2.3 -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>21</posy>
@@ -144,7 +145,7 @@
 				<onright>SetFocus(9940)</onright>
 				<onclick condition="Window.IsActive(videoplaylist) | Window.IsActive(videos)">ActivateWindow(641)</onclick>  <!-- custom views videos -->
 				<onclick condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onclick>  <!-- custom views music -->
-				<onclick condition="Window.IsActive(programs)">ActivateWindow(631)</onclick>  <!-- custom views programs -->
+				<onclick condition="Window.IsActive(programs) | Window.IsActive(games)">ActivateWindow(631)</onclick>  <!-- custom views programs -->
 				<ondown>SetFocus(51)</ondown>
 				<visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible>
 			</control>

@@ -3880,6 +3880,7 @@
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),favourite)">$VAR[value_menutheme_favourites]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),game)">$VAR[value_menutheme_games]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),program)">$VAR[value_menutheme_programs]</value>
+		<value condition="String.Contains(Container(9000).ListItem.Property(id),game)">$VAR[value_menutheme_games]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),pictures)">$VAR[value_menutheme_pictures]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),weather)">$VAR[value_menutheme_weather]</value>
 		<value condition="String.Contains(Container(9000).ListItem.Property(id),settings)">$VAR[value_menutheme_settings]</value>
@@ -3974,6 +3975,17 @@
 		<value condition="String.Contains(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,games]</value>
 	</variable>
 	<variable name="value_menutheme_programs">
+		<value condition="String.Contains(skin.string(theme),coral)">special://skin/backgrounds/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),modern)">$INFO[Skin.String(custom_themes.path)]modern/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),future)">$INFO[Skin.String(custom_themes.path)]future/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),cold)">$INFO[Skin.String(custom_themes.path)]cold/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),warm)">$INFO[Skin.String(custom_themes.path)]warm/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),darkness)">$INFO[Skin.String(custom_themes.path)]darkness/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),digitalart)">$INFO[Skin.String(custom_themes.path)]digitalart/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),colours)">$INFO[Skin.String(custom_themes.path)]colours/programs.jpg</value>
+		<value condition="String.Contains(skin.string(theme),mytheme)">$INFO[Skin.String(CustomMyTheme),,programs]</value>
+	</variable>
+		<variable name="value_menutheme_games">
 		<value condition="String.Contains(skin.string(theme),coral)">special://skin/backgrounds/programs.jpg</value>
 		<value condition="String.Contains(skin.string(theme),modern)">$INFO[Skin.String(custom_themes.path)]modern/programs.jpg</value>
 		<value condition="String.Contains(skin.string(theme),future)">$INFO[Skin.String(custom_themes.path)]future/programs.jpg</value>
