@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.2/6.1.7  -->
 <!-- Jarvis 8.1.13 -->
+<!-- Leia 10.2.3 -->
 
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
@@ -10,6 +11,7 @@
 	<onload condition="Skin.HasSetting(submode)">Skin.Reset(submode)</onload>
 	<onload condition="Skin.HasSetting(startplay)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
 	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
+	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user)">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<controls>
 		<control type="button" id="10">
