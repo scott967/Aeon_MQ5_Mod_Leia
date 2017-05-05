@@ -2,6 +2,7 @@
 	<!-- Aeon MQ 5 Helix 6.1.0/6.1.3  -->
 	<!-- Isengard 7.1.13 -->
 	<!-- Jarvis 8.1.13 -->
+	<!-- Krypton 9.2.4 -->
 
 <window id="639" type="dialog"> <!-- safe id -->
 	<defaultcontrol>9006</defaultcontrol>

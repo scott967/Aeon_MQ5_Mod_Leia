@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.0 -->
+<!-- Isengardmod 7.1.12 -->
+<!-- Jarivs 8.1.14 -->
+<!-- Krypton 9.2.1 window IDs 129 -->
+<window>
+	<defaultcontrol>11</defaultcontrol>
+	<!-- <zorder>3</zorder> -->
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<control type="group">
+			<posx>326</posx>
+			<posy>285</posy>
+			<width>1270</width>
+			<height>492</height>
+			<visible>!Window.isVisible(contentsettings)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1270</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>490</posy>
+				<width>1270</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<posx>-45</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>492</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1270</width>
+				<height>492</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>F0FFFFFF</colordiffuse>
+			</control>
+			<control type="list" id="10">
+				<posx>60</posx>
+				<posy>80</posy>
+				<width>908</width>
+				<height>246</height>
+				<onup>12</onup>
+				<ondown>12</ondown>
+				<onleft>noop</onleft>
+				<onright>SetFocus(11)</onright>
+				<scrolltime>0</scrolltime>
+				<itemlayout height="62">
+					<control type="label">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>908</width>
+						<height>48</height>
+						<font>Font_18A</font>
+						<aligny>center</aligny>
+						<textcolor>60FFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="62">
+					<control type="label">
+						<posx>8</posx>
+						<posy>0</posy>
+						<width>908</width>
+						<height>48</height>
+						<font>Font_18A</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>FFFFFAF0</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>58</posy>
+				<width>1023</width>
+				<height>1</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1023</width>
+				<height>60</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label" id="2">
+				<!-- header -->
+				<posx>15</posx>
+				<posy>9</posy>
+				<width>1010</width>
+				<height>42</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label>31348</label>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>388</posy>
+				<width>1023</width>
+				<height>1</height>
+				<texture>black.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>330</posy>
+				<width>1023</width>
+				<height>60</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<posy>338</posy>
+				<width>1010</width>
+				<height>42</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label>[CAPITALIZE]$LOCALIZE[1022][/CAPITALIZE]</label>
+			</control>
+			<control type="image">
+				<!-- Options -->
+				<posx>980</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>492</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1269</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>492</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1024</posx>
+				<posy>0</posy>
+				<width>244</width>
+				<height>492</height>
+				<texture>grey.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="9000">
+				<posx>1024</posx>
+				<posy>63</posy>
+				<control type="button" id="11">
+					<!-- Browse -->
+					<include>SettingsDialogButton</include>
+					<label>1024</label>
+					<onleft>SetFocus(4057)</onleft>
+					<onright>SetFocus(4057)</onright>
+				</control>
+				<control type="button" id="13">
+					<!-- Add -->
+					<include>SettingsDialogButton</include>
+					<label>15019</label>
+					<onleft>10</onleft>
+				</control>
+				<control type="button" id="14">
+					<!-- Remove -->
+					<include>SettingsDialogButton</include>
+					<label>1210</label>
+					<onleft>10</onleft>
+				</control>
+				<control type="button" id="19">
+					<!-- Cancel -->
+					<include>SettingsDialogButton</include>
+					<label>222</label>
+					<align>left</align>
+				</control>
+				<control type="button" id="18">
+					<!-- OK -->
+					<include>SettingsDialogButton</include>
+					<label>186</label>
+					<onleft>SetFocus(4058)</onleft>
+					<onright>SetFocus(4058)</onright>
+				</control>
+			</control>
+			<control type="button" id="4057">
+				<include>InvisibleButton</include>
+				<onfocus>SetFocus(10)</onfocus>
+			</control>
+			<control type="button" id="4058">
+				<include>InvisibleButton</include>
+				<onfocus>SetFocus(12)</onfocus>
+			</control>
+			<control type="edit" id="12">
+				<!-- name -->
+				<posx>27</posx>
+				<posy>398</posy>
+				<width>980</width>
+				<height>66</height>
+				<font>Font_18</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<textcolor>80FFFAF0</textcolor>
+				<focusedcolor>FFFFFAF0</focusedcolor>
+				<!-- <selectedcolor>FFFFFAF0</selectedcolor> -->
+				<label></label>
+				<onup>10</onup>
+				<onleft>18</onleft>
+				<onright>18</onright>
+				<ondown>10</ondown>
+			</control>
+		</control>
+	</controls>
+</window>

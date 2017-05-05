@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Krypton 9.2.1 window IDs 147 -->
+<window>
+	<defaultcontrol>61</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<!-- default group -->
+			<include>Animation_Fade</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>darkgrey.png</texture>
+			</control>
+			<control type="label" id="1">
+				<posx>30</posx>
+				<posy>45</posy>
+				<width>1860</width>
+				<height>74</height>
+				<align>center</align>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="image">
+				<description>separator</description>
+				<posx>210</posx>
+				<posy>120</posy>
+				<width>1500</width>
+				<height>3</height>
+				<texture>common_divider.png</texture>
+			</control>
+			<control type="textbox" id="5">
+				<posx>210</posx>
+				<posy>180</posy>
+				<width>1500</width>
+				<height>795</height>
+				<label></label>
+				<font>Font_18A</font>
+				<align>justify</align>
+				<pagecontrol>61</pagecontrol>
+			</control>
+			<!-- ScrollBar -->
+			<control type="scrollbar" id="61">
+				<include>ScrollBar_Vertical</include>
+				<posx>75</posx>
+				<posy>180</posy>
+				<height>795</height>
+				<onleft>61</onleft>
+				<onright>61</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+		</control>
+	</controls>
+</window>

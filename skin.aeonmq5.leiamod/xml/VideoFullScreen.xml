@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Isengard 7.1.10 -->
+<!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2005/9.2.2 -->
+<window>
+	<controls>
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>188</height>
+			<animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">Visible</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">WindowClose</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">Hidden</animation>
+			<visible>![Window.IsVisible(seekbar) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Skin.HasSetting(customosd)]</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>300</height>
+				<width>1920</width>
+				<texture flipy="true">shadow_mask.png</texture>
+				<colordiffuse>75000000</colordiffuse>
+			</control>
+			<control type="label" id="10">
+				<posx>45</posx>
+				<posy>15</posy>
+				<width>1875</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<label></label>
+			</control>
+			<control type="label" id="11">
+				<posx>45</posx>
+				<posy>82</posy>
+				<width>1875</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<label></label>
+			</control>
+			<control type="label" id="12">
+				<posx>45</posx>
+				<posy>150</posy>
+				<width>1875</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<label></label>
+			</control>
+			<control type="label" id="1">
+				<posx>45</posx>
+				<posy>210</posy>
+				<width>1875</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+			</control>
+		</control>
+		<control type="group">
+			<posx>0</posx>
+			<posy>1040</posy>
+			<width>748</width>
+			<height>42</height>
+			<!-- <visible>Player.IsTempo </visible> -->
+			<!-- <animation type="Visible">
+					<effect type="slide" end="200,0" time="200"/>
+					<effect type="fade" start="100" end="0" delay="2000" time="200"/>
+				</animation> -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>748</width>
+				<height>42</height>
+				<texture flipy="true">osd_button_reverse.png</texture>
+			</control>
+			<control type="label">
+				<include>Objects_OSDSeekForward</include>
+				<label>$VAR[value_seekforward]</label>
+			</control>
+		</control>
+		<!-- Buffering Dialog -->
+		<control type="label" id="24">
+			<description>buffering label</description>
+			<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+			<posx>748</posx>
+			<posy>495</posy>
+			<width>422</width>
+			<height>27</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>Font_23</font>
+			<textcolor>80FFFAF0</textcolor>
+			<include>Animation_Fade</include>
+		</control>
+	</controls>
+</window>

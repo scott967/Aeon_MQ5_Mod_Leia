@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Krypton 9.2.1 window IDs 502 -->
+<window>
+	<include>MusicWindow</include>
+</window>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Isengard 7.1.11 Mid List -->
+<!-- Jarvis 8.1.13/8.1.14 -->
+<!-- Krypton 9.2.1 window IDs -->
+<window id="1103" type="dialog">
+	<!-- was 626 -->
+	<defaultcontrol always="true">9030</defaultcontrol>
+	<onunload condition="Window.IsActive(musicplaylist)">AlarmClock(refreshview,ActivateWindowAndFocus(musicplaylist, 9940,0),0:01,true)</onunload>
+	<onunload condition="Window.IsActive(music)">AlarmClock(refreshview,ActivateWindowAndFocus(music, 9940,0),0:01,true)</onunload>
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>165</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1710</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>1080</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>322</posx>
+				<posy>8</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31479</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="label">
+				<posx>322</posx>
+				<posy>68</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31140</label>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="grouplist" id="9030">
+				<posx>210</posx>
+				<posy>150</posy>
+				<width>1500</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+				<onleft>Dialog.Close(1103)</onleft>
+				<onright>Dialog.Close(1103)</onright>
+				<control type="radiobutton" id="19254">
+					<!-- Poster -->
+					<!-- 54 -->
+					<radioposx>1341</radioposx>
+					<label>31808</label>
+					<onclick>Skin.ToggleSetting(viewposter_music)</onclick>
+					<selected>Skin.HasSetting(viewposter_music)</selected>
+				</control>
+				<control type="radiobutton" id="19255">
+					<!-- Low List -->
+					<!-- 55 -->
+					<radioposx>1341</radioposx>
+					<label>31807</label>
+					<onclick>Skin.ToggleSetting(viewlowlist_music)</onclick>
+					<selected>Skin.HasSetting(viewlowlist_music)</selected>
+				</control>
+				<control type="radiobutton" id="19256">
+					<!-- Wall -->
+					<!-- 56 -->
+					<radioposx>1341</radioposx>
+					<label>31805</label>
+					<onclick>Skin.ToggleSetting(viewwall_music)</onclick>
+					<selected>Skin.HasSetting(viewwall_music)</selected>
+				</control>
+				<control type="radiobutton" id="19258">
+					<!-- CoverFlow -->
+					<!-- 58 -->
+					<radioposx>1341</radioposx>
+					<label>31810</label>
+					<onclick>Skin.ToggleSetting(viewcoverflow_music)</onclick>
+					<selected>Skin.HasSetting(viewcoverflow_music)</selected>
+				</control>
+				<control type="radiobutton" id="19259">
+					<!-- RightList -->
+					<!-- 59 -->
+					<radioposx>1341</radioposx>
+					<label>31828</label>
+					<onclick>Skin.ToggleSetting(viewrightlist_music)</onclick>
+					<selected>Skin.HasSetting(viewrightlist_music)</selected>
+				</control>
+				<control type="radiobutton" id="19262">
+					<!-- Panel -->
+					<!-- 62 -->
+					<radioposx>1341</radioposx>
+					<label>31818</label>
+					<onclick>Skin.ToggleSetting(viewpanel_music)</onclick>
+					<selected>Skin.HasSetting(viewpanel_music)</selected>
+				</control>
+				<control type="radiobutton" id="19270">
+					<!-- Mid List -->
+					<!-- 70 -->
+					<radioposx>1341</radioposx>
+					<label>31448</label>
+					<onclick>Skin.ToggleSetting(viewmidlist_music)</onclick>
+					<selected>Skin.HasSetting(viewmidlist_music)</selected>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

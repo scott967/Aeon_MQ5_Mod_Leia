@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aeon MQ 5 Helix 6.1.5 -->
+<window>
+	<defaultcontrol always="true">11</defaultcontrol>
+	<coordinates>
+		<left>150</left>
+		<top>45</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>165</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>825</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1388</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>825</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1178</width>
+				<height>825</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1178</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>322</posx>
+				<posy>34</posy>
+				<width>978</width>
+				<height>45</height>
+				<label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
+				<font>Font_30</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<include>Animation_Fade</include>
+			</control>
+			<control type="label">
+				<!-- Date -->
+				<posx>322</posx>
+				<posy>80</posy>
+				<width>978</width>
+				<height>38</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<label>[COLOR=FFFFFAF0]$INFO[Container(11).ListItem.StartDate][/COLOR]</label>
+			</control>
+			<control type="list" id="11">
+				<viewtype>list</viewtype>
+				<posx>0</posx>
+				<posy>135</posy>
+				<width>1238</width>
+				<height>660</height>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>76</onleft>
+				<onright>76</onright>
+				<pagecontrol>76</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<itemlayout height="60" width="1238">
+					<control type="image">
+						<posx>360</posx>
+						<posy>0</posy>
+						<width>1050</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1088</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<include>listcolor</include>
+						<info>ListItem.Date</info>
+					</control>
+					<control type="label">
+						<posx>645</posx>
+						<posy>1</posy>
+						<width>555</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1050</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1110</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1095</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="1238">
+					<control type="image">
+						<posx>360</posx>
+						<posy>0</posy>
+						<width>1088</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(15)">conditional</animation>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1088</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>FFFFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<info>ListItem.Date</info>
+					</control>
+					<control type="label">
+						<posx>645</posx>
+						<posy>1</posy>
+						<width>555</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1050</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1110</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1095</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="76">
+				<include>ScrollBar_Vertical</include>
+				<posx>1222</posx>
+				<posy>150</posy>
+				<height>645</height>
+				<onleft>11</onleft>
+				<onright>11</onright>
+				<ondown>76</ondown>
+				<onup>76</onup>
+			</control>
+			<!-- <include>PVRCommonInfo</include> -->
+		</control>
+	</controls>
+</window>

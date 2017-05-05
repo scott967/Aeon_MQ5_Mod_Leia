@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>WindowBG</include>
+			<include>Animation_Fade</include>
+			<texture fallback="special://skin/backgrounds/livetv.jpg" background="true">$INFO[skin.string(livetv.bg)]</texture>
+		</control>
+		<control type="group">
+			<!-- Visualizacao de fundo -->
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<texture>black.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+				<include>Animation_Fade</include>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="videowindow">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
+			</control>
+			<control type="visualisation">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<visible>Player.HasAudio</visible>
+				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
+			</control>
+		</control>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>165</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1710</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>1080</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<!-- Heading label -->
+				<posx>322</posx>
+				<posy>34</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[pvr.wmc 30120]</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<include>Animation_Fade</include>
+			</control>
+			<control type="label" id="20">
+				<!-- Nome do programa -->
+				<posx>322</posx>
+				<posy>135</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>Font_30</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="grouplist">
+				<posx>210</posx>
+				<posy>225</posy>
+				<width>1500</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<control type="radiobutton" id="10">
+					<label>$ADDON[pvr.wmc 30121]</label>
+					<radioposx>1341</radioposx>
+				</control>
+				<control type="radiobutton" id="11">
+					<label>$ADDON[pvr.wmc 30122]</label>
+					<radioposx>1341</radioposx>
+				</control>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>900</posy>
+				<height>60</height>
+				<width>1500</width>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="9000">
+				<posx>210</posx>
+				<posy>900</posy>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<control type="button" id="1">
+					<!-- OK -->
+					<width>750</width>
+					<include>SettingsBottomButton</include>
+					<label>186</label>
+				</control>
+				<control type="button" id="2">
+					<!-- Cancel -->
+					<width>750</width>
+					<include>SettingsBottomButton</include>
+					<label>222</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

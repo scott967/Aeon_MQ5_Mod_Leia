@@ -4183,7 +4183,7 @@
 		<value condition="String.IsEqual(ListItem.UserRating,10)">rating5.png</value>
 	</variable> -->
 		<variable name="User_Rating_Stars">
-			<value condition="String.String.IsEmpty(ListItem.UserRating)">hrating0.png</value>
+			<value condition="String.IsEmpty(ListItem.UserRating)">hrating0.png</value>
 			<value>$INFO[ListItem.UserRating,hrating,.png]</value>
 		</variable>
 </includes>

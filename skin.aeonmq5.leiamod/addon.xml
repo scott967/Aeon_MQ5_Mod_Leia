@@ -16,7 +16,13 @@
 		<import addon="script.playalbum" version="0.0.2"/>
 	</requires>
 	<extension point="xbmc.gui.skin"  effectslowdown="0.75" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
 		<res width="1280" height="720" aspect="16:9" default="true" folder="720p"/>
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Aeon MQ 5 Leiamod, improved, more light and more powerful than ever.</summary>
@@ -60,7 +66,7 @@
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE 01/09/2017 for Kodi LEIA ALPHA5+[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE 05/01/2017 for Kodi LEIA ALPHA1+[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
 New:  First release for Kodi Leia
 		</news>

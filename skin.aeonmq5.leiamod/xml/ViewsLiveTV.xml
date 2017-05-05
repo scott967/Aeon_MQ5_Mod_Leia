@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.4/6.1.5 -->
+<!-- Jarvis 8.1.15 RjSachse EPGTimeLineLow view -->
+<!-- Krypton 9.1.16/9.2.1 window IDs/9.2.2  -->
+<includes>
+	<include name="EPGMenu">
+		<control type="image">
+			<posx>0</posx>
+			<posy>46</posy>
+			<width>1920</width>
+			<height>45</height>
+			<texture>shadow_h.png</texture>
+			<colordiffuse>C3FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>360</posx>
+			<posy>90</posy>
+			<width>1560</width>
+			<height>765</height>
+			<texture>darkgrey.png</texture>
+			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+			<animation effect="fade" end="85" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>855</posy>
+			<width>1920</width>
+			<height>225</height>
+			<texture>darkgrey.png</texture>
+			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+			<animation effect="fade" end="99" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>360</posx>
+			<posy>90</posy>
+			<width>45</width>
+			<height>765</height>
+			<texture>shadow.png</texture>
+			<colordiffuse>C3FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>360</width>
+			<height>765</height>
+			<texture>grey.png</texture>
+			<colordiffuse>90FFFFFF</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>357</posx>
+			<posy>90</posy>
+			<width>3</width>
+			<height>765</height>
+			<texture>separator_v.png</texture>
+		</control>
+		<control type="label">
+			<!-- Titulo da esquerda Channels-->
+			<include>SettingsSectionTitle</include>
+			<label>31333</label>
+			<visible>!Control.IsVisible(13)</visible>
+		</control>
+		<control type="label">
+			<!-- Titulo da esquerda EPG:Channel-->
+			<include>SettingsSectionTitle</include>
+			<label>31763</label>
+			<visible>Control.IsVisible(13)</visible>
+		</control>
+		<!-- Titulo da direita -->
+		<control type="label">
+			<!-- Titulo da direita -->
+			<posx>412</posx>
+			<include>SettingsContentTitle</include>
+			<label>$INFO[Control.GetLabel(29)] $INFO[Control.GetLabel(30)]</label>
+			<visible>Pvr.IsPlayingTv + Control.IsVisible(13) | !Control.IsVisible(13)</visible>
+		</control>
+		<control type="label">
+			<!-- Titulo da direita -->
+			<posx>412</posx>
+			<include>SettingsContentTitle</include>
+			<label>[UPPERCASE]$LOCALIZE[19136][/UPPERCASE]</label>
+			<visible>!Pvr.IsPlayingTv + Control.IsVisible(13)</visible>
+		</control>
+	</include>
+	<include name="PVRCommonInfo">
+		<control type="image">
+			<posx>30</posx>
+			<posy>878</posy>
+			<width>180</width>
+			<height>180</height>
+			<texture fallback="DefaultVideoCover.png" background="true">$VAR[value_pvrchannelicon]</texture>
+			<bordertexture border="-12">musicframe.png</bordertexture>
+			<fadetime>FanartCrossFadeTime</fadetime>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="label">
+			<!-- Nome do programa -->
+			<posx>255</posx>
+			<posy>870</posy>
+			<width>1635</width>
+			<height>45</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[value_headercolor]</textcolor>
+			<font>Font_20A</font>
+			<label>$INFO[ListItem.Title]</label>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<!-- Hora/Data/Genero -->
+			<posx>255</posx>
+			<posy>908</posy>
+			<width>1635</width>
+			<height>38</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font_18A</font>
+			<textcolor>$VAR[value_headercolor]</textcolor>
+			<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate]) - [/COLOR]$LOCALIZE[180]: [COLOR=FFFFFAF0]$INFO[ListItem.Duration] - [/COLOR]$LOCALIZE[515]: [COLOR=FFFFFAF0]$INFO[ListItem.Genre][/COLOR]</label>
+			<visible>!Window.IsVisible(tvtimers)</visible>
+		</control>
+		<control type="label">
+			<!-- Hora/Data/Genero -->
+			<posx>255</posx>
+			<posy>908</posy>
+			<width>1635</width>
+			<height>38</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font_18A</font>
+			<textcolor>$VAR[value_headercolor]</textcolor>
+			<label>$LOCALIZE[142] [COLOR=FFFFFAF0]$INFO[ListItem.Date][/COLOR]</label>
+			<visible>Window.IsVisible(tvtimers) + !String.IsEmpty(ListItem.Date)</visible>
+		</control>
+		<control type="image">
+			<posx>255</posx>
+			<posy>952</posy>
+			<width>1238</width>
+			<height>3</height>
+			<align>left</align>
+			<texture flipx="true">divider.png</texture>
+		</control>
+		<control type="textbox" id="400">
+			<posx>255</posx>
+			<posy>960</posy>
+			<width>1635</width>
+			<height>98</height>
+			<align>justify</align>
+			<label>$INFO[ListItem.Plot]</label>
+			<textcolor>FFFFFAF0</textcolor>
+			<font>Font_18A</font>
+			<autoscroll delay="20000" time="3000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>90</posy>
+			<width>375</width>
+			<height>765</height>
+			<texture>menu_glass.png</texture>
+			<colordiffuse>70FFFAF0</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>854</posy>
+			<width>1920</width>
+			<height>45</height>
+			<texture flipy="true">shadow_h.png</texture>
+		</control>
+	</include>
+	<!--##################################################################################   EPG View 10  ##################################################################################-->
+	<include name="ViewEPGTimeline">
+		<control type="group">
+			<visible>Control.IsVisible(10)</visible>
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<include>EPGMenu</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>210</posy>
+				<width>360</width>
+				<height>38</height>
+				<texture>grey.png</texture>
+				<colordiffuse>E4101010</colordiffuse>
+			</control>
+			<control type="epggrid" id="10">
+				<viewtype label="19032">list</viewtype>
+				<posx>0</posx>
+				<posy>210</posy>
+				<width>1898</width>
+				<height>645</height>
+				<onleft>9900</onleft>
+				<onright>9900</onright>
+				<!-- 				<onup condition="!Skin.HasSetting(epggridwrap)">9900</onup>
+				<onup condition="Skin.HasSetting(epggridwrap)">10</onup> -->
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<timeblocks>40</timeblocks>
+				<rulerunit>6</rulerunit>
+				<progresstexture border="5">pvr_epgprogressindicator.png</progresstexture>
+				<rulerlayout height="45" width="60">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>231</width>
+						<height>38</height>
+						<texture>grey.png</texture>
+						<colordiffuse>50101010</colordiffuse>
+					</control>
+					<control type="label" id="2">
+						<posx>30</posx>
+						<posy>-2</posy>
+						<width>60</width>
+						<height>42</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+					</control>
+				</rulerlayout>
+				<channellayout height="60" width="360">
+					<control type="label" id="1">
+						<include>SettingsLabel</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+				</channellayout>
+				<focusedchannellayout height="60" width="360">
+					<control type="image" id="1">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>357</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(10)">conditional</animation>
+					</control>
+					<control type="label" id="1">
+						<include>SettingsLabelFocus</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+				</focusedchannellayout>
+				<itemlayout height="60" width="75">
+					<control type="image" id="14">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="image" id="2">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3">genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						<colordiffuse>50FFFAF0</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<posx>9</posx>
+						<posy>1</posy>
+						<width>63</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="75">
+					<control type="image" id="14">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>72</width>
+						<height>57</height>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="image" id="2">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3">genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						<colordiffuse>90FFFAF0</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<posx>9</posx>
+						<posy>1</posy>
+						<width>63</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_hastimer.png</texture>
+						<colordiffuse>E4101010</colordiffuse>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<include>ScrollBar_Vertical</include>
+				<posx>1887</posx>
+				<posy>243</posy>
+				<height>627</height>
+				<onleft>10</onleft>
+				<onright>10</onright>
+			</control>
+			<include>PVRCommonInfo</include>
+		</control>
+	</include>
+	<!--##################################################################################   EPG AGORA  View 11 ##################################################################################-->
+	<include name="ViewLiveTVGuideNow">
+		<control type="group">
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<visible>Control.IsVisible(11)</visible>
+			<include>EPGMenu</include>
+			<control type="image">
+				<posx>360</posx>
+				<posy>196</posy>
+				<width>180</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1590</posx>
+				<posy>196</posy>
+				<width>270</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="list" id="11">
+				<viewtype label="19030">list</viewtype>
+				<posx>0</posx>
+				<posy>195</posy>
+				<width>1920</width>
+				<height>660</height>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>9900</onleft>
+				<onright>76</onright>
+				<pagecontrol>76</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<itemlayout height="60">
+					<control type="label">
+						<include>SettingsLabel</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<include>listcolor</include>
+						<info>ListItem.StartTime</info>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>357</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(16)">conditional</animation>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>FFFFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<include>SettingsLabelFocus</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<info>ListItem.StartTime</info>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="76">
+				<include>ScrollBar_Vertical</include>
+				<posx>1868</posx>
+				<posy>202</posy>
+				<height>645</height>
+				<onleft>11</onleft>
+				<onright>9900</onright>
+			</control>
+			<include>PVRCommonInfo</include>
+		</control>
+	</include>
+	<!--##################################################################################   EPG PROXIMO View 12   ##################################################################################-->
+	<include name="ViewLiveTVGuideNext">
+		<control type="group">
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<visible>Control.IsVisible(12)</visible>
+			<include>EPGMenu</include>
+			<control type="image">
+				<posx>360</posx>
+				<posy>196</posy>
+				<width>180</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1590</posx>
+				<posy>196</posy>
+				<width>270</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="list" id="12">
+				<viewtype label="19031">list</viewtype>
+				<posx>0</posx>
+				<posy>195</posy>
+				<width>1920</width>
+				<height>660</height>
+				<onup>12</onup>
+				<ondown>12</ondown>
+				<onleft>9900</onleft>
+				<onright>76</onright>
+				<pagecontrol>76</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<itemlayout height="60">
+					<control type="label">
+						<include>SettingsLabel</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<include>listcolor</include>
+						<info>ListItem.StartTime</info>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>357</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(16)">conditional</animation>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>FFFFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<include>SettingsLabelFocus</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<!-- <textcolor>listcolorfocus</textcolor> -->
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<info>ListItem.StartTime</info>
+					</control>
+					<control type="label">
+						<posx>600</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="76">
+				<include>ScrollBar_Vertical</include>
+				<posx>1868</posx>
+				<posy>202</posy>
+				<height>645</height>
+				<onleft>12</onleft>
+				<onright>9900</onright>
+			</control>
+			<include>PVRCommonInfo</include>
+		</control>
+	</include>
+	<!--##################################################################################   EPG GUIA DE CANAIS  View 13 ##################################################################################-->
+	<include name="ViewLiveTVGuideChannel">
+		<control type="group">
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<visible>Control.IsVisible(13)</visible>
+			<include>EPGMenu</include>
+			<control type="image">
+				<posx>360</posx>
+				<posy>196</posy>
+				<width>240</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1590</posx>
+				<posy>196</posy>
+				<width>270</width>
+				<height>658</height>
+				<texture>grey.png</texture>
+				<colordiffuse>20FFFFFF</colordiffuse>
+			</control>
+			<control type="list" id="13">
+				<viewtype label="19029">list</viewtype>
+				<posx>0</posx>
+				<posy>195</posy>
+				<width>1920</width>
+				<height>660</height>
+				<onup>13</onup>
+				<ondown>13</ondown>
+				<onleft>9900</onleft>
+				<onright>76</onright>
+				<pagecontrol>76</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<itemlayout height="60" width="1920">
+					<!-- <control type="label">
+						<include>SettingsLabel</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control> -->
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<include>listcolor</include>
+						<info>ListItem.Date</info>
+					</control>
+					<control type="label">
+						<posx>645</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="1920">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>357</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(15)">conditional</animation>
+					</control>
+					<control type="image">
+						<posx>360</posx>
+						<posy>1</posy>
+						<width>1560</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>FFFFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<!-- <control type="label">
+						<include>SettingsLabelFocus</include>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control> -->
+					<control type="label">
+						<posx>375</posx>
+						<posy>0</posy>
+						<width>210</width>
+						<height>60</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_20</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<info>ListItem.Date</info>
+					</control>
+					<control type="label">
+						<posx>645</posx>
+						<posy>1</posy>
+						<width>885</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<posx>1620</posx>
+						<posy>15</posy>
+						<width>45</width>
+						<height>30</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>19043</label>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="label">
+						<posx>1680</posx>
+						<posy>1</posy>
+						<width>165</width>
+						<height>57</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<label>31149</label>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="76">
+				<include>ScrollBar_Vertical</include>
+				<posx>1868</posx>
+				<posy>202</posy>
+				<height>645</height>
+				<onleft>13</onleft>
+				<onright>9900</onright>
+				<ondown>76</ondown>
+				<onup>76</onup>
+			</control>
+			<include>PVRCommonInfo</include>
+		</control>
+	</include>
+	<!-- Aeon MQ 6 Mod by RjSachse -->
+	<!--################################################################################​##   EPG Low   ###########################################################################​#######-->
+	<include name="ViewEPGTimelineLow">
+		<control type="group">
+			<visible>Control.IsVisible(10)</visible>
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>810</top>
+					<width>1920</width>
+					<height>45</height>
+					<texture>shadow_h.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<left>360</left>
+					<top>855</top>
+					<width>1560</width>
+					<height>225</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>855</top>
+					<width>360</width>
+					<height>225</height>
+					<texture>grey.png</texture>
+					<colordiffuse>90FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>855</top>
+					<width>360</width>
+					<height>38</height>
+					<texture>grey.png</texture>
+					<colordiffuse>E4101010</colordiffuse>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>892</top>
+					<width>1920</width>
+					<height>45</height>
+					<texture flipy="true">shadow_h.png</texture>
+				</control>
+			</control>
+			<control type="epggrid" id="10">
+				<viewtype label="19032">list</viewtype>
+				<left>0</left>
+				<top>855</top>
+				<width>1898</width>
+				<height>225</height>
+				<onleft>9900</onleft>
+				<onright>9900</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>350</scrolltime>
+				<timeblocks>40</timeblocks>
+				<rulerunit>6</rulerunit>
+				<progresstexture border="5">pvr_epgprogressindicator.png</progresstexture>
+				<rulerlayout height="45" width="60">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>231</width>
+						<height>38</height>
+						<texture>grey.png</texture>
+						<colordiffuse>50101010</colordiffuse>
+					</control>
+					<control type="label" id="2">
+						<left>30</left>
+						<top>-2</top>
+						<width>60</width>
+						<height>42</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+					</control>
+				</rulerlayout>
+				<channellayout height="60" width="360">
+					<control type="label" id="1">
+						<include>SettingsLabel</include>
+						<width>225</width>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="image">
+						<posx>232</posx>
+						<posy>3</posy>
+						<height>52</height>
+						<width>126</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture border="3">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+				</channellayout>
+				<focusedchannellayout height="60" width="360">
+					<control type="image" id="1">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>357</width>
+						<height>60</height>
+						<texture>settings_button.png</texture>
+						<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(10)">conditional</animation>
+					</control>
+					<control type="label" id="1">
+						<include>SettingsLabelFocus</include>
+						<width>225</width>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>
+					<control type="image">
+						<posx>232</posx>
+						<posy>3</posy>
+						<height>52</height>
+						<width>126</width>
+						<aspectratio align="left">keep</aspectratio>
+						<texture border="3">$INFO[ListItem.Icon]</texture>
+					</control>
+				</focusedchannellayout>
+				<itemlayout height="60" width="75">
+					<control type="image" id="14">
+						<left>0</left>
+						<top>1</top>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>50FFFAF0</colordiffuse>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="image" id="2">
+						<left>0</left>
+						<top>1</top>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3">genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						<colordiffuse>50FFFAF0</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<left>9</left>
+						<top>1</top>
+						<width>63</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_18A</font>
+						<include>listcolor</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_hastimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="75">
+					<control type="image" id="14">
+						<left>0</left>
+						<top>1</top>
+						<width>72</width>
+						<height>57</height>
+						<texture>settings_button_focus.png</texture>
+					</control>
+					<control type="image" id="2">
+						<left>0</left>
+						<top>1</top>
+						<width>72</width>
+						<height>57</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3">genres/$INFO[ListItem.Property(GenreType)].png</texture>
+						<colordiffuse>90FFFAF0</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<left>9</left>
+						<top>1</top>
+						<width>63</width>
+						<height>57</height>
+						<aligny>center</aligny>
+						<align>left</align>
+						<font>Font_18A</font>
+						<include>listcolorfocus</include>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_isrecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>1</top>
+						<width>14</width>
+						<height>14</height>
+						<texture>pvr_hastimer.png</texture>
+						<colordiffuse>E4101010</colordiffuse>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<include>ScrollBar_Vertical</include>
+				<left>1887</left>
+				<top>890</top>
+				<height>202</height>
+				<onleft>10</onleft>
+				<onright>10</onright>
+			</control>
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>855</top>
+					<width>375</width>
+					<height>225</height>
+					<texture>menu_glass.png</texture>
+					<colordiffuse>70FFFAF0</colordiffuse>
+				</control>
+				<control type="image">
+					<left>357</left>
+					<top>855</top>
+					<width>45</width>
+					<height>225</height>
+					<texture>shadow.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

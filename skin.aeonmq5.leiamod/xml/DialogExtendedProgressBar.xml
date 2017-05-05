@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.1 -->
+<!-- Jarivs 8.1.14 -->
+<!-- Krypton 9.2.1 window IDs 151 -->
+<window>
+	<!-- was 614 changed per wiki -->
+	<!-- <zorder>3</zorder> -->
+	<controls>
+		<control type="group">
+			<include>Animation_TopDialogPopup</include>
+			<include>Dialogs_Bar</include>
+			<animation effect="slide" end="0,-105" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation) | Skin.HasSetting(custommode)">conditional</animation>
+			<control type="progress" id="32">
+				<include>Dialogs_Progress</include>
+			</control>
+			<control type="label" id="30">
+				<include>Dialogs_Label1</include>
+			</control>
+			<control type="label" id="31">
+				<include>Dialogs_Label2</include>
+			</control>
+		</control>
+	</controls>
+</window>

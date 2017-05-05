@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.0/6.1.3 -->
+<!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
+<!-- Krypton 9.2.1 window IDs -->
+<window id="641" type="dialog">
+	<defaultcontrol always="true">9030</defaultcontrol>
+	<!-- <onunload>AlarmClock(refreshview,ActivateWindowAndFocus(videos, 9940,0),0:01,true)</onunload> -->
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>165</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>1710</posx>
+				<posy>0</posy>
+				<width>45</width>
+				<height>1080</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>1080</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>1500</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>322</posx>
+				<posy>8</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31479</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="label">
+				<posx>322</posx>
+				<posy>68</posy>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31140</label>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="grouplist" id="9030">
+				<posx>210</posx>
+				<posy>150</posy>
+				<width>1500</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+				<onleft>Dialog.Close(641)</onleft>
+				<onright>Dialog.Close(641)</onright>
+				<control type="radiobutton" id="19265">
+					<!-- Sets -->
+					<!-- 65 -->
+					<radioposx>1341</radioposx>
+					<label>31826</label>
+					<onclick>Skin.ToggleSetting(viewsets_video)</onclick>
+					<selected>Skin.HasSetting(viewsets_video)</selected>
+					<visible>Container.Content(movies) | Container.Content(sets)</visible>
+				</control>
+				<control type="radiobutton" id="19252">
+					<!-- Banner -->
+					<!-- 52 -->
+					<radioposx>1341</radioposx>
+					<label>31811</label>
+					<onclick>Skin.ToggleSetting(viewbanner_video)</onclick>
+					<selected>Skin.HasSetting(viewbanner_video)</selected>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				<control type="radiobutton" id="19253">
+					<!-- BannerInfo -->
+					<!-- 53 -->
+					<radioposx>1341</radioposx>
+					<label>31812</label>
+					<onclick>Skin.ToggleSetting(viewbannerinfo_video)</onclick>
+					<selected>Skin.HasSetting(viewbannerinfo_video)</selected>
+					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				</control>
+				<control type="radiobutton" id="19254">
+					<!-- Poster -->
+					<!-- 54 -->
+					<radioposx>1341</radioposx>
+					<label>31808</label>
+					<onclick>Skin.ToggleSetting(viewposter_video)</onclick>
+					<selected>Skin.HasSetting(viewposter_video)</selected>
+					<visible>!Container.Content(years)</visible>
+				</control>
+				<control type="radiobutton" id="19255">
+					<!-- Low List -->
+					<!-- 55 -->
+					<radioposx>1341</radioposx>
+					<label>31807</label>
+					<onclick>Skin.ToggleSetting(viewlowlist_video)</onclick>
+					<selected>Skin.HasSetting(viewlowlist_video)</selected>
+				</control>
+				<control type="radiobutton" id="19256">
+					<!-- Wall -->
+					<!-- 56 -->
+					<radioposx>1341</radioposx>
+					<label>31805</label>
+					<onclick>Skin.ToggleSetting(viewwall_video)</onclick>
+					<selected>Skin.HasSetting(viewwall_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(sets) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19267">
+					<!-- 3DWall -->
+					<!-- 67/68 -->
+					<radioposx>1341</radioposx>
+					<label>31806</label>
+					<onclick>Skin.ToggleSetting(view3dwall_video)</onclick>
+					<selected>Skin.HasSetting(view3dwall_video)</selected>
+					<visible>![Container.Content(sets) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19257">
+					<!-- GlassList -->
+					<!-- 57 -->
+					<radioposx>1341</radioposx>
+					<label>31827</label>
+					<onclick>Skin.ToggleSetting(viewglasslist_video)</onclick>
+					<selected>Skin.HasSetting(viewglasslist_video)</selected>
+					<visible>!Container.Content(years)</visible>
+				</control>
+				<control type="radiobutton" id="19258">
+					<!-- CoverFlow -->
+					<!-- 58 -->
+					<radioposx>1341</radioposx>
+					<label>31810</label>
+					<onclick>Skin.ToggleSetting(viewcoverflow_video)</onclick>
+					<selected>Skin.HasSetting(viewcoverflow_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
+				</control>
+				<control type="radiobutton" id="19259">
+					<!-- RightList -->
+					<!-- 59 -->
+					<radioposx>1341</radioposx>
+					<label>31828</label>
+					<onclick>Skin.ToggleSetting(viewrightlist_video)</onclick>
+					<selected>Skin.HasSetting(viewrightlist_video)</selected>
+					<visible>!Container.Content(years)</visible>
+				</control>
+				<control type="radiobutton" id="19260">
+					<!-- ShowArt -->
+					<!-- 60 -->
+					<radioposx>1341</radioposx>
+					<label>31821</label>
+					<onclick>Skin.ToggleSetting(viewshowart_video)</onclick>
+					<selected>Skin.HasSetting(viewshowart_video)</selected>
+					<visible>![Container.Content(sets) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
+				</control>
+				<control type="radiobutton" id="19261">
+					<!-- Multiplex -->
+					<!-- 61 -->
+					<radioposx>1341</radioposx>
+					<label>31803</label>
+					<onclick>Skin.ToggleSetting(viewmultiplex_video)</onclick>
+					<selected>Skin.HasSetting(viewmultiplex_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19266">
+					<!-- ShowCase -->
+					<!-- 66 -->
+					<radioposx>1341</radioposx>
+					<label>31802</label>
+					<onclick>Skin.ToggleSetting(viewshowcase_video)</onclick>
+					<selected>Skin.HasSetting(viewshowcase_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19262">
+					<!-- Panel -->
+					<!-- 62 -->
+					<radioposx>1341</radioposx>
+					<label>31818</label>
+					<onclick>Skin.ToggleSetting(viewpanel_video)</onclick>
+					<selected>Skin.HasSetting(viewpanel_video)</selected>
+					<visible>!Container.Content(years)</visible>
+				</control>
+				<control type="radiobutton" id="19263">
+					<!-- Shelf -->
+					<!-- 63 -->
+					<radioposx>1341</radioposx>
+					<label>31809</label>
+					<onclick>Skin.ToggleSetting(viewshelf_video)</onclick>
+					<selected>Skin.HasSetting(viewshelf_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19264">
+					<!-- LandScapeX -->
+					<!-- 64 -->
+					<radioposx>1341</radioposx>
+					<label>31804</label>
+					<onclick>Skin.ToggleSetting(viewlandscapex_video)</onclick>
+					<selected>Skin.HasSetting(viewlandscapex_video)</selected>
+					<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+				</control>
+				<control type="radiobutton" id="19269">
+					<!-- ShelfCase Mod -->
+					<!-- 69 -->
+					<radioposx>1341</radioposx>
+					<label>31878</label>
+					<onclick>Skin.ToggleSetting(viewshelfcase_video)</onclick>
+					<selected>Skin.HasSetting(viewshelfcase_video)</selected>
+					<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
+				</control>
+				<control type="radiobutton" id="19270">
+					<!-- MidList Mod -->
+					<!-- 70 -->
+					<radioposx>1341</radioposx>
+					<label>31448</label>
+					<onclick>Skin.ToggleSetting(viewmidlist_video)</onclick>
+					<selected>Skin.HasSetting(viewmidlist_video)</selected>
+					<!-- <visible>![Container.Content(episodes) | Container.Content(years)]</visible> -->
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

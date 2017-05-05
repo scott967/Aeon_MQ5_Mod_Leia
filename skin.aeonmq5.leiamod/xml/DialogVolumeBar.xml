@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Krypton 9.1.15/9.2.1 window IDs 104 -->
+<window>
+	<controls>
+		<control type="group">
+			<include>Animation_TopDialogPopup</include>
+			<include>Dialogs_Bar</include>
+			<control type="progress" id="20">
+				<posx>450</posx>
+				<posy>6</posy>
+				<width>1020</width>
+				<height>30</height>
+				<info>Player.Volume</info>
+				<visible>!player.passthrough</visible>
+			</control>
+			<control type="label">
+				<include>Dialogs_Label1</include>
+				<label>$LOCALIZE[31754]</label>
+				<visible>!player.passthrough</visible>
+			</control>
+			<control type="label">
+				<include>Dialogs_Label2</include>
+				<label>$INFO[Player.Volume]</label>
+				<visible>!player.passthrough</visible>
+			</control>
+			<control type="label">
+				<width>1350</width>
+				<include>Dialogs_Label1</include>
+				<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31754][/COLOR][COLOR=80ffffff] | [/COLOR]$LOCALIZE[29802]</label>
+				<visible>player.passthrough</visible>
+			</control>
+			<control type="image">
+				<!-- moved from mutebug -->
+				<posx>1725</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>45</height>
+				<aspectratio>keep</aspectratio>
+				<texture>volume_mute.png</texture>
+				<colordiffuse>FFFFFAF0</colordiffuse>
+				<visible>Player.Muted</visible>
+			</control>
+		</control>
+	</controls>
+</window>

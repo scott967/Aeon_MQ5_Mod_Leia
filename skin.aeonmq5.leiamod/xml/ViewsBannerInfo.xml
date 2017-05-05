@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Krypton 9.1.19/9.2.1 -->
+<includes>
+	<!--##################################################################################   VISTA BANNER - ID 53   ##################################################################################-->
+	<include name="BannerInfoLabel">
+		<posx>0</posx>
+		<height>30</height>
+		<width>428</width>
+		<font>Font_18A</font>
+		<aligny>top</aligny>
+		<align>left</align>
+		<textcolor>$VAR[value_headercolor]</textcolor>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<scroll>true</scroll>
+	</include>
+	<include name="ViewBannerInfo">
+		<control type="group">
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<include>ViewBack</include>
+			<!-- Fundo -->
+			<visible>Control.IsVisible(53)</visible>
+			<control type="image">
+				<posx>598</posx>
+				<posy>128</posy>
+				<width>3</width>
+				<height>308</height>
+				<texture>separator_v.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>435</posy>
+				<width>1920</width>
+				<height>3</height>
+				<texture>separator.png</texture>
+			</control>
+			<control type="textbox">
+				<posx>627</posx>
+				<posy>153</posy>
+				<width>638</width>
+				<height>266</height>
+				<font>Font_18A</font>
+				<label>$VAR[value_plot]</label>
+				<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<include>Animation_Fade</include>
+			</control>
+			<control type="image">
+				<posx>1290</posx>
+				<posy>128</posy>
+				<width>3</width>
+				<height>308</height>
+				<texture>separator_v.png</texture>
+			</control>
+			<control type="image">
+				<posx>1170</posx>
+				<posy>159</posy>
+				<width>750</width>
+				<height>255</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+				<bordertexture border="-2">black.png</bordertexture>
+				<fadetime>FanartCrossFadeTime</fadetime>
+			</control>
+			<control type="grouplist">
+				<posx>150</posx>
+				<posy>156</posy>
+				<orientation>vertical</orientation>
+				<itemgap>8</itemgap>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground14_label]: [COLOR=FFFFFAF0]$VAR[value_ground14_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground15_label]: [COLOR=FFFFFAF0]$VAR[value_ground15_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>BannerInfoLabel</include>
+					<label>$VAR[value_ground17_label]: [COLOR=FFFFFAF0]$VAR[value_ground17_value][/COLOR]</label>
+				</control>
+			</control>
+			<control type="panel" id="53">
+				<!-- Banner Info -->
+				<viewtype label="31812">Wide Icon</viewtype>
+				<posx>142</posx>
+				<posy>447</posy>
+				<width>1665</width>
+				<height>525</height>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<onleft>9900</onleft>
+				<onright>80</onright>
+				<pagecontrol>80</pagecontrol>
+				<scrolltime>450</scrolltime>
+				<preloaditems>2</preloaditems>
+				<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(706)">Conditional</animation>
+				<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
+				<itemlayout height="134" width="550">
+					<control type="image">
+						<!-- Background -->
+						<width>536</width>
+						<height>118</height>
+						<texture>banner_glass.png</texture>
+						<colordiffuse>FF505050</colordiffuse>
+						<aspectratio>stretch</aspectratio>
+						<include>Animation_Fade</include>
+					</control>
+					<control type="image">
+						<!-- Cover -->
+						<width>536</width>
+						<height>118</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$VAR[value_banner]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<posx>492</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[value_watchedstyle]</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+					</control>
+					<control type="image">
+						<!-- Dimmer -->
+						<width>536</width>
+						<height>118</height>
+						<bordersize>5</bordersize>
+						<texture>black.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+						<visible>!String.IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="134" width="550">
+					<control type="image">
+						<!-- Background -->
+						<width>536</width>
+						<height>118</height>
+						<texture>banner_glass.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<animation effect="zoom" center="auto" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+					</control>
+					<control type="image">
+						<!-- Background Double -->
+						<width>536</width>
+						<height>118</height>
+						<texture background="true">banner_glass.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<animation effect="zoom" center="auto" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+					</control>
+					<control type="image">
+						<!-- Cover -->
+						<width>536</width>
+						<height>118</height>
+						<bordersize>5</bordersize>
+						<texture background="true">$VAR[value_banner]</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="zoom" center="auto" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+					</control>
+					<control type="image">
+						<posx>492</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>$VAR[value_watchedstyle]</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation effect="zoom" center="267,60" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="80">
+				<!--Banner Info-->
+				<include>ScrollBar_Vertical</include>
+				<posx>1800</posx>
+				<posy>442</posy>
+				<height>525</height>
+				<onleft>53</onleft>
+				<onright>9920</onright>
+				<include>Animation_Fade</include>
+				<visible allowhiddenfocus="true">Control.IsVisible(53) + Control.HasFocus(80)</visible>
+			</control>
+		</control>
+	</include>
+</includes>

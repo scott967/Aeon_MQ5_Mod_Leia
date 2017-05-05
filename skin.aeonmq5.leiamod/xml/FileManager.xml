@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvis 8.1.13 -->
+<!-- Krypton 9.2.1 window IDs 3 -->
+<window>
+	<defaultcontrol>20</defaultcontrol>
+	<!-- <allowoverlay>no</allowoverlay> -->
+	<controls>
+		<control type="image">
+			<include>HomeBG</include>
+			<texture fallback="special://skin/backgrounds/settings.jpg" background="true">$VAR[value_menutheme_settings]</texture>
+		</control>
+		<control type="group">
+			<!-- default group -->
+			<include>Animation_Window</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>84</posy>
+				<width>1920</width>
+				<height>45</height>
+				<texture>shadow_h.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<!-- Left Panel -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>128</posy>
+				<width>930</width>
+				<height>970</height>
+				<animation effect="slide" start="-960" end="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0" end="-960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+				<animation effect="fade" time="200" start="75" end="100" reversible="false" condition="Control.HasFocus(20)">Conditional</animation>
+				<animation effect="fade" time="200" start="100" end="75" reversible="false" condition="Control.HasFocus(21)">Conditional</animation>
+				<control type="image">
+					<posx>930</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>952</height>
+					<texture>shadow.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>930</width>
+					<height>952</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>930</width>
+					<height>82</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="label" id="101">
+					<posx>30</posx>
+					<posy>20</posy>
+					<width>712</width>
+					<height>75</height>
+					<font>Font_22</font>
+					<scroll>true</scroll>
+					<textcolor>FFFFFAF0</textcolor>
+				</control>
+				<control type="label">
+					<posx>908</posx>
+					<posy>24</posy>
+					<width>150</width>
+					<height>75</height>
+					<align>right</align>
+					<font>Font_18</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Container(20).NumItems] $LOCALIZE[31210]</label>
+				</control>
+			</control>
+			<!-- Left list -->
+			<control type="list" id="20">
+				<viewtype label="31450">list</viewtype>
+				<posx>0</posx>
+				<posy>210</posy>
+				<width>930</width>
+				<height>772</height>
+				<scrolltime>0</scrolltime>
+				<onright>21</onright>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<animation effect="slide" start="-960" end="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0" end="-960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+				<animation effect="fade" time="200" start="75" end="100" reversible="false" condition="Control.HasFocus(20)">Conditional</animation>
+				<animation effect="fade" time="200" start="100" end="75" reversible="false" condition="Control.HasFocus(21)">Conditional</animation>
+				<itemlayout height="75">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>1</height>
+						<texture>line.png</texture>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="75">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>1</height>
+						<texture>line.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>75</height>
+						<texture>settings_button_focus.png</texture>
+						<visible>Control.HasFocus(20)</visible>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FF101010</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FF101010</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(20)</visible>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>62</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>!Control.HasFocus(20)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- Right Panel -->
+			<control type="group">
+				<posx>990</posx>
+				<posy>128</posy>
+				<width>930</width>
+				<height>970</height>
+				<animation effect="slide" start="960" end="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0" end="960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+				<animation effect="fade" time="200" start="75" end="100" reversible="false" condition="Control.HasFocus(21)">Conditional</animation>
+				<animation effect="fade" time="200" start="100" end="75" reversible="false" condition="Control.HasFocus(20)">Conditional</animation>
+				<control type="image">
+					<posx>-45</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>952</height>
+					<texture flipx="true">shadow.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>930</width>
+					<height>952</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>930</width>
+					<height>82</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+				</control>
+				<control type="label" id="102">
+					<posx>30</posx>
+					<posy>20</posy>
+					<width>712</width>
+					<height>75</height>
+					<font>Font_22</font>
+					<scroll>true</scroll>
+					<textcolor>FFFFFAF0</textcolor>
+				</control>
+				<control type="label">
+					<posx>908</posx>
+					<posy>24</posy>
+					<width>150</width>
+					<height>75</height>
+					<align>right</align>
+					<font>Font_18</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[Container(21).NumItems] $LOCALIZE[31210]</label>
+				</control>
+			</control>
+			<!-- Right list -->
+			<control type="list" id="21">
+				<viewtype label="31450">list</viewtype>
+				<posx>990</posx>
+				<posy>210</posy>
+				<width>930</width>
+				<height>772</height>
+				<scrolltime>0</scrolltime>
+				<onleft>20</onleft>
+				<onup>21</onup>
+				<ondown>21</ondown>
+				<animation effect="slide" start="960" end="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0" end="960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+				<animation effect="fade" time="200" start="75" end="100" reversible="false" condition="Control.HasFocus(21)">Conditional</animation>
+				<animation effect="fade" time="200" start="100" end="75" reversible="false" condition="Control.HasFocus(20)">Conditional</animation>
+				<itemlayout height="75">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>1</height>
+						<texture>line.png</texture>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="75">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>1</height>
+						<texture>line.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>75</height>
+						<texture>settings_button_focus.png</texture>
+						<visible>Control.HasFocus(21)</visible>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FF101010</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FF101010</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>0</posy>
+						<width>750</width>
+						<height>75</height>
+						<font>Font_18</font>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(21)</visible>
+					</control>
+					<control type="label">
+						<posx>852</posx>
+						<posy>0</posy>
+						<width>128</width>
+						<height>62</height>
+						<font>Font_18</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+						<visible>!Control.HasFocus(21)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<include>MultiData</include>
+			<include>BGBlack</include>
+		</control>
+	</controls>
+</window>

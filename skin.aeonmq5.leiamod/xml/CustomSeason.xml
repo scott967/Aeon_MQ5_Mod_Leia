@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Krypton 9.2.1 window IDs -->
+<window id="633" type="dialog">
+	<!-- safe id -->
+	<defaultcontrol always="true">9060</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>615</posx>
+				<posy>345</posy>
+				<width>681</width>
+				<height>58</height>
+				<texture>gradient_focus.png</texture>
+				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>615</posx>
+				<posy>300</posy>
+				<width>681</width>
+				<height>58</height>
+				<texture>dialogs_context_nofocus.png</texture>
+				<colordiffuse>F9FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>735</posx>
+				<posy>312</posy>
+				<width>450</width>
+				<height>60</height>
+				<align>center</align>
+				<label>31876</label>
+				<font>Font_20</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="grouplist" id="9060">
+				<posx>615</posx>
+				<posy>375</posy>
+				<width>681</width>
+				<height max="1005">auto</height>
+				<itemgap>0</itemgap>
+				<onleft>Dialog.Close(633)</onleft>
+				<onright>Dialog.Close(633)</onright>
+				<control type="button" id="9061">
+					<include>DialogContext_Button</include>
+					<label>31720</label>
+					<onclick>Dialog.Close(633)</onclick>
+					<onclick>Skin.SetString(weatherconditionbg,northamerica)</onclick>
+				</control>
+				<control type="button" id="9062">
+					<include>DialogContext_Button</include>
+					<label>31721</label>
+					<onclick>Dialog.Close(633)</onclick>
+					<onclick>Skin.SetString(weatherconditionbg,southamerica)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvis 8.1.13 -->
+<includes>
+	<!--##################################################################################   VISTA PHOTOSHOW - ID 79   ##################################################################################-->
+	<include name="ViewPhotoShow">
+		<control type="group">
+			<!-- default group -->
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<include>Animation_HidePhotoShow</include>
+			<visible>Control.IsVisible(79)</visible>
+			<control type="group" id="304">
+				<!-- painel das miniaturas -->
+				<posx>0</posx>
+				<posy>681</posy>
+				<animation effect="slide" start="0,0" end="0,450" time="600" easing="out" tween="sine">Hidden</animation>
+				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+				<visible>!Control.IsVisible(105)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-44</posy>
+					<width>1920</width>
+					<height>45</height>
+					<texture>shadow_h.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>399</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="95" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>9</posy>
+					<width>28</width>
+					<height>332</height>
+					<texture flipx="true">photoshow_arrow.png</texture>
+					<animation effect="slide" start="-150" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
+				</control>
+				<control type="image">
+					<posx>1862</posx>
+					<posy>9</posy>
+					<width>28</width>
+					<height>332</height>
+					<texture>photoshow_arrow.png</texture>
+					<animation effect="slide" start="150" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
+				</control>
+				<control type="label">
+					<posx>96</posx>
+					<posy>352</posy>
+					<width>1728</width>
+					<font>Font_18A</font>
+					<label>$INFO[ListItem.Label]</label>
+					<include>Animation_Fade</include>
+					<visible>!Control.HasFocus(80) + [Container(79).Column(0) | Container(79).Column(1) | Container(79).Column(2)]</visible>
+				</control>
+				<control type="label">
+					<posx>1824</posx>
+					<posy>352</posy>
+					<width>1728</width>
+					<align>right</align>
+					<font>Font_18A</font>
+					<label>$INFO[ListItem.Label]</label>
+					<include>Animation_Fade</include>
+					<visible>!Control.HasFocus(80) + [Container(79).Column(3) | Container(79).Column(4) | Container(79).Column(5)]</visible>
+				</control>
+			</control>
+			<control type="panel" id="79">
+				<viewtype label="31817">icon</viewtype>
+				<posx>66</posx>
+				<posy>682</posy>
+				<width>1756</width>
+				<height>378</height>
+				<pagecontrol>80</pagecontrol>
+				<onup>9900</onup>
+				<ondown>80</ondown>
+				<orientation>horizontal</orientation>
+				<scrolltime>450</scrolltime>
+				<itemlayout width="288" height="288">
+					<control type="image">
+						<posx>30</posx>
+						<posy>30</posy>
+						<width>288</width>
+						<height>288</height>
+						<aspectratio scalediffuse="true">keep</aspectratio>
+						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<bordertexture border="-2">darkgrey.png</bordertexture>
+						<visible>!Control.IsVisible(105)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout width="288" height="288">
+					<control type="image">
+						<posx>27</posx>
+						<posy>30</posy>
+						<width>288</width>
+						<height>288</height>
+						<aspectratio scalediffuse="true">keep</aspectratio>
+						<texture fallback="DefaultPicture.png" background="true">$VAR[value_poster]</texture>
+						<animation effect="zoom" center="144,144" start="100" end="110" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+						<bordertexture border="-2">grey.png</bordertexture>
+						<visible>!Control.IsVisible(105)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posy>930</posy>
+				<animation effect="slide" start="0,180" end="0,0" time="600" easing="in" tween="sine">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="slide" start="0,0" end="0,150" time="200" tween="cubic" easing="inout" condition="System.IdleTime(8)">Conditional</animation>
+				<visible>Control.IsVisible(105)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-44</posy>
+					<width>1920</width>
+					<height>45</height>
+					<texture>shadow_h.png</texture>
+					<colordiffuse>C3FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1920</width>
+					<height>150</height>
+					<texture>darkgrey.png</texture>
+					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+					<animation effect="fade" end="95" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<!-- Nome da foto -->
+					<posx>30</posx>
+					<posy>36</posy>
+					<font>Font_18A</font>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
+				</control>
+				<control type="label">
+					<!-- Detalhes -->
+					<posx>1890</posx>
+					<posy>15</posy>
+					<width>600</width>
+					<height>150</height>
+					<align>right</align>
+					<font>Font_17A</font>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31714]:[/COLOR] $INFO[ListItem.PictureDateTime][CR][COLOR=$VAR[value_headercolor]]$LOCALIZE[31350]:[/COLOR] $INFO[ListItem.Date][CR][COLOR=$VAR[value_headercolor]]$LOCALIZE[31715]:[/COLOR] $INFO[ListItem.PictureResolution][CR]$INFO[ListItem.Size]</label>
+					<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>968</posy>
+					<width>1920</width>
+					<height>112</height>
+					<texture>gradient_small.png</texture>
+					<animation effect="slide" start="0,22" end="0,22" time="200" condition="!Control.IsVisible(105)">Conditional</animation>
+				</control>
+			</control>
+			<control type="button" id="195">
+				<include>InvisibleButton</include>
+				<onleft>79</onleft>
+				<onright>79</onright>
+				<onup>79</onup>
+				<ondown>79</ondown>
+			</control>
+			<control type="scrollbar" id="80">
+				<include>ScrollBar_Horizontal</include>
+				<posx>100</posx>
+				<posy>1010</posy>
+				<width>1720</width>
+				<onup>79</onup>
+				<ondown>195</ondown>
+				<include>Animation_Fade</include>
+				<visible allowhiddenfocus="true">Control.IsVisible(79) + Control.HasFocus(80) + !Control.IsVisible(105)</visible>
+			</control>
+		</control>
+	</include>
+</includes>

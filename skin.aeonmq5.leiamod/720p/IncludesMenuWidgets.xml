@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
-<!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs -->
+<!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
 
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
@@ -36,7 +36,7 @@
 				<posy>152</posy>
 				<width>87</width>
 				<height>5</height>
-				<aspectratio>stretch</aspectratio>
+				<!-- <aspectratio>stretch</aspectratio> -->
 				<info>ListItem.Property(Percent)</info>
 				<visible>String.IsEqual(ListItem.Property(Progress),inprogress) + Integer.IsGreater(ListItem.Property(Percent),0)</visible>
 			</control>
@@ -68,7 +68,7 @@
 				<posy>152</posy>
 				<width>87</width>
 				<height>5</height>
-				<aspectratio>stretch</aspectratio>
+				<!-- <aspectratio>stretch</aspectratio> -->
 				<info>ListItem.Property(Percent)</info>
 				<visible>String.IsEqual(ListItem.Property(Progress),inprogress) + Integer.IsGreater(ListItem.Property(Percent),0)</visible>
 			</control>

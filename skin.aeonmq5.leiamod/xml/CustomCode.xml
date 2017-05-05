@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvismod 8.1.14 -->
+<!-- Leiamod 10.2.3 -->
+<window id="629" type="dialog">
+	<!-- safe id -->
+	<defaultcontrol always="true">9930</defaultcontrol>
+	<onunload condition="!Window.IsActive(Home)">AlarmClock(firstfocus,SetFocus(51),0:01,true)</onunload>
+	<onunload condition="Window.IsActive(Home)">AlarmClock(firstfocus,SetFocus(9100),0:01,true)</onunload>
+	<!-- <zorder>3</zorder> -->
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<!-- Kiosk Code -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>darkgrey.png</texture>
+			<animation effect="fade" end="98" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+		</control>
+		<control type="button" id="9929">
+			<include>InvisibleButton</include>
+			<onfocus condition="!String.Contains(skin.string(codestep),step2)">SetFocus(9930)</onfocus>
+			<onfocus condition="![String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)]">Skin.SetString($INFO[skin.string(custom_code)],step1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step1)">Skin.SetString($INFO[skin.string(custom_code)],step2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step2)">Skin.SetString($INFO[skin.string(custom_code)],step3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(codestep),step2)">AlarmClock(kioskcode,Dialog.Close(629),0:02,true)</onfocus>
+		</control>
+		<control type="button" id="9930">
+			<!-- code -->
+			<include>InvisibleButton</include>
+			<onfocus>SetFocus(9930)</onfocus>
+			<onleft condition="![String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)]">SetFocus(9929)</onleft>
+			<onleft condition="String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)">Dialog.Close(629)</onleft>
+			<onleft condition="String.Contains(skin.string(codestep),step1) | String.Contains(skin.string(codestep),step2) | String.Contains(skin.string(codestep),step3)">Skin.Reset($INFO[skin.string(custom_code)])</onleft>
+			<onright condition="String.Contains(skin.string(codestep),step1)">SetFocus(9929)</onright>
+			<onright condition="!String.Contains(skin.string(codestep),step1)">Dialog.Close(629)</onright>
+			<onright condition="!String.Contains(skin.string(codestep),step1)">Skin.Reset($INFO[skin.string(custom_code)])</onright>
+			<onup condition="String.Contains(skin.string(codestep),step2)">SetFocus(9929)</onup>
+			<onup condition="!String.Contains(skin.string(codestep),step2)">Dialog.Close(629)</onup>
+			<onup condition="!String.Contains(skin.string(codestep),step2)">Skin.Reset($INFO[skin.string(custom_code)])</onup>
+			<ondown>Dialog.Close(629)</ondown>
+			<ondown>Skin.Reset($INFO[skin.string(custom_code)])</ondown>
+			<visible>true</visible>
+		</control>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<posx>525</posx>
+				<posy>368</posy>
+				<width>180</width>
+				<height>180</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<texture>logo_kioskcode.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>540</posx>
+				<posy>292</posy>
+				<width>150</width>
+				<height>180</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<texture>logo_kioskcode_open.png</texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="slide" start="0,0" end="0,-45" time="400" tween="circle" easing="in" condition="String.Contains(skin.string(codestep),step3)">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>750</posx>
+				<posy>338</posy>
+				<width>870</width>
+				<height>57</height>
+				<font>Font_WeatherTitle</font>
+				<textcolor>c0FFFFFF</textcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>[COLOR=$VAR[value_headercolor]]$VAR[value_kioskcodecondition][/COLOR]</label>
+			</control>
+			<control type="label">
+				<posx>750</posx>
+				<posy>435</posy>
+				<width>705</width>
+				<height>180</height>
+				<font>Font_MultiplexPlot</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[31613]</label>
+			</control>
+		</control>
+	</controls>
+</window>

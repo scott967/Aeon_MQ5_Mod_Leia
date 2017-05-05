@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvis 8.1.13 -->
+<!-- Krypton 9.2.1 window IDs 29 -->
+<window type="dialog">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<!-- <allowoverlay>no</allowoverlay> -->
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<!-- default group -->
+			<include>Animation_Window</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>1080</height>
+				<texture background="true">special://skin/backgrounds/vnodes.jpg</texture>
+				<include>Animation_Fade</include>
+			</control>
+			<control type="image">
+				<!-- Barra do rodape -->
+				<posx>0</posx>
+				<posy>660</posy>
+				<width>1920</width>
+				<height>420</height>
+				<colordiffuse>FFFFFAF0</colordiffuse>
+				<texture>shadow_mask.png</texture>
+				<include>Animation_FloorGlass</include>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>660</posy>
+				<width>1920</width>
+				<height>420</height>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<texture diffuse="shadow_mask.png">shadow_spot.png</texture>
+				<animation effect="fade" end="75" condition="true">Conditional</animation>
+			</control>
+			<control type="fixedlist" id="52">
+				<viewtype label="login">list</viewtype>
+				<posx>-68</posx>
+				<posy>622</posy>
+				<width>2169</width>
+				<height>825</height>
+				<orientation>horizontal</orientation>
+				<focusposition>3</focusposition>
+				<scrolltime>400</scrolltime>
+				<onleft>90</onleft>
+				<onright>90</onright>
+				<onup>52</onup>
+				<ondown>98</ondown>
+				<itemlayout height="300" width="300">
+					<control type="image">
+						<posx>3</posx>
+						<posy>351</posy>
+						<width>225</width>
+						<height>225</height>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture flipy="true" diffuse="thumb_box_reflect.png" border="-2">black.png</bordertexture>
+					</control>
+					<control type="image">
+						<posx>3</posx>
+						<posy>120</posy>
+						<width>225</width>
+						<height>225</height>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<texture fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="-2">black.png</bordertexture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="300" width="300">
+					<control type="image">
+						<posx>3</posx>
+						<posy>357</posy>
+						<width>225</width>
+						<height>225</height>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture flipy="true" diffuse="thumb_box_reflect.png" border="-1">grey.png</bordertexture>
+						<animation effect="zoom" start="100" end="145" center="112,368" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+					</control>
+					<control type="image">
+						<posx>3</posx>
+						<posy>128</posy>
+						<width>225</width>
+						<height>225</height>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<texture fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="-1">grey.png</bordertexture>
+						<animation effect="zoom" start="100" end="145" center="112,368" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+					</control>
+					<control type="image">
+						<posx>285</posx>
+						<posy>17</posy>
+						<width>750</width>
+						<height>75</height>
+						<texture>gradient_button.png</texture>
+						<colordiffuse>95000000</colordiffuse>
+						<visible>Control.HasFocus(52)</visible>
+					</control>
+					<control type="label">
+						<posx>300</posx>
+						<posy>9</posy>
+						<width>900</width>
+						<height>24</height>
+						<align>left</align>
+						<font>Font_30</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<info>ListItem.Label</info>
+						<scroll>true</scroll>
+						<visible>Control.HasFocus(52)</visible>
+					</control>
+					<control type="label">
+						<posx>300</posx>
+						<posy>60</posy>
+						<width>900</width>
+						<height>24</height>
+						<align>left</align>
+						<font>Font_15</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<info>ListItem.Label2</info>
+						<scroll>true</scroll>
+						<visible>Control.HasFocus(52)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<include>MultiData</include>
+		</control>
+	</controls>
+</window>
