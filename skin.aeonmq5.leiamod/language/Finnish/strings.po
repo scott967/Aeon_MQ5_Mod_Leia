@@ -1204,7 +1204,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Lisäpaketin kautta sinulla on käytettävissä:[CR]Teemat.[CR]Temaattiset tyylit.[CR]Ikonit video- ja musiikkilajeille.[CR]Fanitaide musiikille ja videoille.[CR]Animoidut sääikonit.[CR]Säätilaan perustuvat taustakuvat.[CR][CR]Lataaminen voi kestää kauan riippuen yhteyden nopeudesta."
+msgstr "Lisäpaketin kautta sinulla on käytettävissä:[CR]Teemat[CR]Lataaminen voi kestää kauan riippuen yhteyden nopeudesta."
 
 msgctxt "#31255"
 msgid "New theme has been set"

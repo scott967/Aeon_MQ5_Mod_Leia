@@ -1208,7 +1208,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Z zainstalowanym pakietem dodatków otrzymujesz:[CR]Motywy.[CR]Tematyczne style.[CR]Ikony gatunków wideo i muzyki.[CR]Fangrafy gatunków muzyki i wideo.[CR]Animowane ikony pogody.[CR]Grafiki tła bazujące na warunkach pogodowych.[CR][CR]Pobieranie całości może zająć trochę czasu, w zależności od jakości połączenia."
+msgstr "Z zainstalowanym pakietem dodatków otrzymujesz:[CR]Motywy[CR]Pobieranie całości może zająć trochę czasu, w zależności od jakości połączenia."
 
 msgctxt "#31255"
 msgid "New theme has been set"

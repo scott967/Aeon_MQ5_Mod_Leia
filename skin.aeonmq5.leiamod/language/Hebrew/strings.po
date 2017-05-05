@@ -1206,7 +1206,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "עם SKIN THEMES אתה תקבל:[CR]ערכות נושא.[CR]עיצובים.[CR]צלמיות עבור ז'אנר וידאו ומוזיקה.[CR]ז'אנר פאנארט עבור וידאו ומוזיקה.[CR]צלמיות מונפשות עבור מזג אויר.[CR]תמונות רקע מבוססות תנאי מזג האויר.[CR][CR]ההורדה המלאה יכולה לקחת זמן, תלוי בחיבור האינטרנט שלך."
+msgstr "עם AEON MQ SKIN THEMES אתה תקבל:[CR]ערכות נושא.[CR]עיצובים[CR]ההורדה המלאה יכולה לקחת זמן, תלוי בחיבור האינטרנט שלך."
 
 msgctxt "#31255"
 msgid "New theme has been set"

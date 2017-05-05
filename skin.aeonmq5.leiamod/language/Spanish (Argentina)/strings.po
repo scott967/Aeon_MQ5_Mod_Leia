@@ -1209,7 +1209,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Con el SKIN THEMES tienes disponible:[CR]Temas.[CR]Estilos temáticos.[CR]Iconos para géneros de vídeo y musicales.[CR]Fanart para géneros de música y vídeo.[CR]Iconos animados para el clima.[CR]Imágenes de fondo basadas en condiciones climáticas.[CR][CR]La descarga completa puede tardar un poco dependiendo de tu velocidad de conexión ."
+msgstr "Con el AEON MQ SKIN THEMES tienes disponible:[CR]Temas[CR]La descarga completa puede tardar un poco dependiendo de tu velocidad de conexión ."
 
 msgctxt "#31255"
 msgid "New theme has been set"

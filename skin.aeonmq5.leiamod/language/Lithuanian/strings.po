@@ -1210,7 +1210,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Su SKIN THEMES jūs gausite:[CR]Temas.[CR]Teminius stilius.[CR]Piktogramas video ir muzikos žanrams.[CR]Fanart video ir muzikos žanrams.[CR]Animuotas piktogramas orams.[CR]Oro sąlygomis paremtus foninis paveikslėlius.[CR][CR]Pilnas atsiuntimas gali šiek tiek užtrukti, priklausomai nuo jūsų interneto ryšio spartos."
+msgstr "Su AEON MQ SKIN THEMES jūs gausite:[CR]Temas[CR]Pilnas atsiuntimas gali šiek tiek užtrukti, priklausomai nuo jūsų interneto ryšio spartos."
 
 msgctxt "#31255"
 msgid "New theme has been set"

@@ -1204,7 +1204,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "ด้วย ชุดพิเศษ ที่คุณมีอยู่:[CR]ธีม.[CR]รูปแบบชุดตกแต่ง.[CR]ไอคอนสำหรับประเภทของวิดีโอและเพลง.[CR]แฟนอาร์ตสำหรับประเภทของเพลงและวิดีโอ.[CR]ไอคอนแบบเคลื่อนไหวสำหรับสภาพอากาศ.[CR]ภาพพื้นหลังตามสภาพอากาศ.[CR][CR]การดาวน์โหลดที่สมบูรณ์ต้องใช้เวลา ขึ้นอยู่กับความเร็วการเชื่อมต่อของคุณ."
+msgstr "ด้วย ชุดพิเศษ ที่คุณมีอยู่:[CR]ธีม[CR]การดาวน์โหลดที่สมบูรณ์ต้องใช้เวลา ขึ้นอยู่กับความเร็วการเชื่อมต่อของคุณ."
 
 msgctxt "#31255"
 msgid "New theme has been set"

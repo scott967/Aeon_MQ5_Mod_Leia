@@ -1205,7 +1205,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "S EKSTRA PAKETOM imate dostupno:[CR]Teme.[CR]Tematske stilove.[CR]Ikone za video i glazbene žanrove.[CR]Fanart za video i glazbene žanrove.[CR]Animirane ikone za vrijeme.[CR]Pozadinske slike temeljene na vremenskim prilikama.[CR][CR]Preuzimanje cijelog paketa može malo potrajati, ovisno o brzini veze."
+msgstr "S AEON MQ SKIN THEMES imate dostupno:[CR]Teme.[CR]Tematske stilove.[CR]Ikone za video i glazbene žanrove.[CR]Fanart za video i glazbene žanrove.[CR]Animirane ikone za vrijeme.[CR]Pozadinske slike temeljene na vremenskim prilikama.[CR][CR]Preuzimanje cijelog paketa može malo potrajati, ovisno o brzini veze."
 
 msgctxt "#31255"
 msgid "New theme has been set"

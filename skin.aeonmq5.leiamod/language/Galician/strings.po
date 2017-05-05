@@ -1204,7 +1204,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Co PAQ. ADICIONAL terá:[CR]Temas.[CR]Estilos por Tema.[CR]Iconas dos xéneros de vídeo e música.[CR]Fanart dos xéneros de vídeo e música.[CR]Iconas animadas do tempo.[CR]Imaxes de fondo baseadas na predición do tempo.[CR][CR]A descarga completa pode tardar un pouco dependendo da velocidade da súa conexión."
+msgstr "Co AEON MQ SIN THEMES terá:[CR]Temas[CR]A descarga completa pode tardar un pouco dependendo da velocidade da súa conexión."
 
 msgctxt "#31255"
 msgid "New theme has been set"

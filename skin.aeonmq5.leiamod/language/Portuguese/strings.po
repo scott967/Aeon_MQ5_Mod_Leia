@@ -1208,7 +1208,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a while depending on the "
 "connection speed"
-msgstr "Com o PACOTE EXTRA você tem a disposição:[CR]Temas.[CR]Estilos temáticos.[CR]Ícones de gênero para video e música.[CR]Fanart de gênero para video e música.[CR]Ícones animados para o clima.[CR]Imagens de fundo baseadas nas condições do clima.[CR][CR]O download completo pode demorar dependendo da velocidade de conexão."
+msgstr "Com o AEON MQ SKI THEMES você tem a disposição:[CR]Temas[CR]O download completo pode demorar dependendo da velocidade de conexão."
 
 msgctxt "#31255"
 msgid "New theme has been set"
