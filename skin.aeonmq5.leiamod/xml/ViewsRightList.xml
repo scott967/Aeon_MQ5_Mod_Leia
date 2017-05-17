@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
+<!-- Leia 10.2.4 -->
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
@@ -236,7 +237,7 @@
 							<posy>0</posy>
 							<width>720</width>
 							<height>45</height>
-							<font>Font_20</font>
+							<font>Font_20A</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolor</include>
@@ -265,7 +266,7 @@
 							<posy>-4</posy>
 							<width>720</width>
 							<height>45</height>
-							<font>Font_22</font>
+							<font>Font_22A</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
@@ -311,7 +312,7 @@
 							<posy>-2</posy>
 							<width>720</width>
 							<height>45</height>
-							<font>Font_22</font>
+							<font>Font_22A</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
@@ -325,7 +326,7 @@
 							<posy>-2</posy>
 							<width>720</width>
 							<height>45</height>
-							<font>Font_22</font>
+							<font>Font_22A</font>
 							<align>right</align>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>

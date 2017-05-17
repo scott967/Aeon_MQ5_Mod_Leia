@@ -226,16 +226,16 @@
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>150</posx>
+					<posx>50</posx>
 					<posy>-105</posy>
 					<height>45</height>
-					<width>1770</width>
-					<align>left</align>
-					<font>Font_32</font>
+					<width>1820</width>
+					<align>center</align>
+					<font>Font_32A</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<visible>Player.ShowInfo</visible>
-					<label>$INFO[MusicPlayer.Property(Role.Composer),$LOCALIZE[29903]: , | ]$INFO[MusicPlayer.Property(Role.Orchestra),$LOCALIZE[38034]: , | ]$INFO[MusicPlayer.Property(Role.Conductor),$LOCALIZE[29905]: , | ]$INFO[MusicPlayer.Property(Role.Arranger),$LOCALIZE[38037]: ]</label>
+					<label>$INFO[MusicPlayer.Property(Role.Composer),[UPPERCASE]$LOCALIZE[29903][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Orchestra),[UPPERCASE]$LOCALIZE[38034][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Conductor),[UPPERCASE]$LOCALIZE[29905][/UPPERCASE]: , | ]$INFO[MusicPlayer.Property(Role.Arranger),[UPPERCASE]$LOCALIZE[38037][/UPPERCASE]: ]</label>
 				</control>
 				<control type="label">
 					<posx>622</posx>

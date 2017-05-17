@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0 massive fonts-->
 <!-- Krypton 9.2.3 -->
+<!-- Leia 10.2.4 -->
 <fonts>
 	<fontset id="Default">
 		<font>
@@ -80,6 +81,11 @@
 			<size>33</size>
 		</font>
 		<font>
+			<name>Font_22A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
 			<name>Font_23</name>
 			<filename>aeon_mainmenu.ttf</filename>
 			<size>34</size>
@@ -112,9 +118,19 @@
 			<filename>aeon_mainmenu.ttf</filename>
 			<size>48</size>
 		</font>
+				<font>
+			<name>Font_32A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>48</size>
+		</font>
 		<font>
 			<name>Font_40</name>
 			<filename>aeon_mainmenu.ttf</filename>
+			<size>60</size>
+		</font>
+		<font>
+			<name>Font_40a</name>
+			<filename>aeon_common.ttf</filename>
 			<size>60</size>
 		</font>
 		<font>
@@ -297,6 +313,11 @@
 			<size>40</size>
 		</font>
 		<font>
+			<name>Font_22A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
 			<name>Font_23</name>
 			<filename>aeon_mainmenu.ttf</filename>
 			<size>42</size>
@@ -329,9 +350,19 @@
 			<filename>aeon_mainmenu.ttf</filename>
 			<size>56</size>
 		</font>
+				<font>
+			<name>Font_32A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>56</size>
+		</font>
 		<font>
 			<name>Font_40</name>
 			<filename>aeon_mainmenu.ttf</filename>
+			<size>68</size>
+		</font>
+		<font>
+			<name>Font_40a</name>
+			<filename>aeon_common.ttf</filename>
 			<size>68</size>
 		</font>
 		<font>
@@ -514,6 +545,11 @@
 			<size>48</size>
 		</font>
 		<font>
+			<name>Font_22A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>48</size>
+		</font>
+		<font>
 			<name>Font_23</name>
 			<filename>aeon_mainmenu.ttf</filename>
 			<size>50</size>
@@ -547,8 +583,18 @@
 			<size>63</size>
 		</font>
 		<font>
+			<name>Font_32A</name>
+			<filename>aeon_common.ttf</filename>
+			<size>63</size>
+		</font>
+		<font>
 			<name>Font_40</name>
 			<filename>aeon_mainmenu.ttf</filename>
+			<size>75</size>
+		</font>
+		<font>
+			<name>Font_40a</name>
+			<filename>aeon_common.ttf</filename>
 			<size>75</size>
 		</font>
 		<font>

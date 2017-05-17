@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
+<!-- Leia 10.2.4 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
@@ -49,7 +50,7 @@
 				<width>1425</width>
 				<height>60</height>
 				<aligny>top</aligny>
-				<font>Font_40</font>
+				<font>Font_40A</font>
 				<label>$VAR[value_music_title]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
