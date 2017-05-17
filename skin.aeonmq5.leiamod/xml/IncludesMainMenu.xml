@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7  -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.3 -->
+<!-- Leia 10.2.4 -->
 <includes>
 	<!-- ######################################################################### Menu Principal ######################################################################### -->
 	<include name="MainMenuFixedList">
@@ -465,11 +466,12 @@
 				<texture>separator_v.png</texture>
 			</control>
 			<control type="label">
-				<left>0</left>
-				<posx>156</posx>
+				<left>3</left>
+				<!-- <posx>156</posx> -->
 				<posy>0</posy>
 				<height>50</height>
-				<width>286</width>
+				<!-- <width>286</width> -->
+				<width>314</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font_15</font>
@@ -481,17 +483,17 @@
 			<control type="image">
 				<posx>3</posx>
 				<posy>-2</posy>
-				<width>315</width>
+				<width>314</width>
 				<height>50</height>
 				<texture>topmenu_button_nofocus.png</texture>
 				<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
 			</control>
 			<control type="label">
-				<left>0</left>
-				<posx>156</posx>
+				<left>3</left>
+				<!-- <posx>156</posx> -->
 				<posy>0</posy>
 				<height>50</height>
-				<width>286</width>
+				<width>314</width>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font_15</font>

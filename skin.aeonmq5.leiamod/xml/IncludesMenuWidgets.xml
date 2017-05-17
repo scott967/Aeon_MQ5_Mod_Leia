@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
+<!-- Leia 10.2.4 -->
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
 	<include name="panel_layout">
@@ -131,9 +132,10 @@
 		<animation effect="fade" start="100" end="85" condition="true">conditional</animation>
 	</include>
 	<include name="widgets_selector">
-		<posx>735</posx>
-		<posy>778</posy>
-		<width>450</width>
+		<!-- <posx>735</posx> -->
+		<posx>703</posx>
+		<posy>774</posy>
+		<width>520</width>
 		<height>40</height>
 		<onleft>9000</onleft>
 		<onright>9000</onright>
@@ -148,9 +150,9 @@
 		<texturenofocus>list_selector.png</texturenofocus>
 	</include>
 	<include name="widgets_selectorhigher">
-		<posx>750</posx>
+		<posx>703</posx>
 		<posy>480</posy>
-		<width>420</width>
+		<width>520</width>
 		<height>38</height>
 		<onleft>9000</onleft>
 		<onright>9000</onright>
