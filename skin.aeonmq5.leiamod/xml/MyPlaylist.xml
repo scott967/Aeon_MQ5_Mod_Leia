@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.15/9.1.16/9.2.1/9.2.2/9.2.3/9.2.4 -->
+<!-- Leia 10.2.4 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
-	<menucontrol>9000</menucontrol>
+	<menucontrol>9900</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<onunload condition="Skin.HasSetting(trailers)">Skin.Reset(trailers)</onunload>
 	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
