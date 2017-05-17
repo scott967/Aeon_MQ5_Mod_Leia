@@ -3,10 +3,12 @@
 <!-- Isengard 7.1.9 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.17/9.1.19 -->
+<!-- Leai 10.2.4 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:10,true)</onload>
+	<onunload condition="Window.IsActive(interfacesettings)">RunScript(script.fontinuse)</onunload>
 	<controls>
 		<control type="multiimage">
 			<include>WindowBG</include>
