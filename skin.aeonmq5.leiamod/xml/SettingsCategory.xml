@@ -8,7 +8,6 @@
 	<defaultcontrol>3</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:10,true)</onload>
-	<onunload condition="Window.IsActive(interfacesettings)">RunScript(script.fontinuse)</onunload>
 	<controls>
 		<control type="multiimage">
 			<include>WindowBG</include>
