@@ -2,7 +2,8 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2000/9.2.3 -->
-<window type="dialog">
+<!-- Leia 10.2.4 -->
+<window>
 	<defaultcontrol>3</defaultcontrol>
 	<!-- <zorder>3</zorder> -->
 	<!-- <onload condition="Player.HasVideo">Dialog.Close(124)</onload> -->

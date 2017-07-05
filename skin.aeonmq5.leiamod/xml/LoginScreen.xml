@@ -2,7 +2,8 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 window IDs 29 -->
-<window type="dialog">
+<!-- Leia 10.2.4 -->
+<window>
 	<defaultcontrol always="true">52</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<coordinates>

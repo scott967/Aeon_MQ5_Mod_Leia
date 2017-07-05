@@ -2,7 +2,8 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarivs 8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 126 -->
-<window type="dialog">
+<!-- Leia 10.2.4 -->
+<window>
 	<defaultcontrol>450</defaultcontrol>
 	<!-- <zorder>4</zorder> -->
 	<coordinates>

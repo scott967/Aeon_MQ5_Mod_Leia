@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.2.1 window IDs 114 -->
-<window type="dialog">
+<!-- Leia 10.2.4 -->
+<window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + ![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)]</visible>
 	<controls>

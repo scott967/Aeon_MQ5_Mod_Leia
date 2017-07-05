@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 / Isengard mod 7.1.11 -->
 <!-- Jarvis 8.1.13 -->
-<window type="dialog">
+<!-- Leia 10.2.4 -->
+<window>
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
