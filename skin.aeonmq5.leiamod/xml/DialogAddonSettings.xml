@@ -2,8 +2,9 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16 9.2.1 window IDs 140 -->
+<!-- Leia 10.2.5 addon settings changes #12125 -->
 <window>
-	<defaultcontrol always="true">9</defaultcontrol>
+	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
 		<control type="image">
 			<include>HomeBG</include>
@@ -19,31 +20,31 @@
 			<!-- default group -->
 			<include>Animation_Window</include>
 			<include>SettingsBack</include>
-			<control type="label" id="20">
+			<control type="label" id="2">
 				<include>SettingsContentTitle</include>
 				<label></label>
 			</control>
-			<control type="grouplist" id="2">
+			<control type="grouplist" id="5">
 				<!-- Menu da direita -->
 				<posx>360</posx>
 				<posy>180</posy>
 				<width>1560</width>
 				<height>741</height>
 				<itemgap>0</itemgap>
-				<pagecontrol>30</pagecontrol>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<onleft>9</onleft>
-				<onright>30</onright>
+				<pagecontrol>40</pagecontrol>
+				<onup>5</onup>
+				<ondown>9001</ondown>
+				<onleft>3</onleft>
+				<onright>40</onright>
 			</control>
-			<control type="scrollbar" id="30">
+			<control type="scrollbar" id="40">
 				<posx>1785</posx>
 				<posy>180</posy>
 				<height>630</height>
-				<onleft>2</onleft>
-				<onright>10</onright>
+				<onleft>5</onleft>
+				<onright>9001</onright>
 			</control>
-			<control type="button" id="13">
+			<control type="button" id="10">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>358</width>
@@ -62,16 +63,19 @@
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 				<pulseonselect>no</pulseonselect>
 			</control>
-			<control type="button" id="3"></control>
-			<control type="radiobutton" id="4"></control>
-			<control type="spincontrolex" id="5">
+			<control type="button" id="7"></control>
+			<control type="radiobutton" id="8"></control>
+			<control type="spincontrolex" id="9">
 				<subtype>text</subtype>
 			</control>
-			<control type="image" id="6">
+			<control type="edit" id="12">
+				<texturefocus>settings_button_focus.png</texturefocus>
+			</control>
+			<control type="image" id="11">
 				<height>3</height>
 				<texture></texture>
 			</control>
-			<control type="label" id="7">
+			<control type="label" id="14">
 				<textoffsetx>75</textoffsetx>
 				<height>60</height>
 				<font>Font_20</font>
@@ -80,7 +84,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 			</control>
-			<control type="sliderex" id="8">
+			<control type="sliderex" id="13">
 				<textoffsetx>75</textoffsetx>
 			</control>
 			<control type="image">
@@ -96,20 +100,22 @@
 				<posx>360</posx>
 				<posy>933</posy>
 				<itemgap>0</itemgap>
-				<onup>2</onup>
-				<ondown>2</ondown>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+				<onright>3</onright>
 				<orientation>horizontal</orientation>
-				<control type="button" id="10">
+				<control type="button" id="28">
 					<!-- OK -->
 					<include>SettingsBottomButton</include>
 					<label>186</label>
 				</control>
-				<control type="button" id="11">
+				<control type="button" id="29">
 					<!-- Cancel -->
 					<include>SettingsBottomButton</include>
 					<label>222</label>
 				</control>
-				<control type="button" id="12">
+				<control type="button" id="30">
 					<!-- Defaults -->
 					<include>SettingsBottomButton</include>
 					<label>409</label>
@@ -123,7 +129,7 @@
 				<include>SettingsSectionTitle</include>
 				<label>31202</label>
 			</control>
-			<control type="grouplist" id="9">
+			<control type="grouplist" id="3">
 				<!-- Button Section -->
 				<posx>0</posx>
 				<posy>180</posy>
@@ -131,10 +137,10 @@
 				<height>990</height>
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
-				<onup>9</onup>
-				<ondown>9</ondown>
-				<onleft>10</onleft>
-				<onright>2</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>9001</onleft>
+				<onright>5</onright>
 			</control>
 		</control>
 		<control type="image">
