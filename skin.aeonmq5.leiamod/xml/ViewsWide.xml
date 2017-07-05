@@ -139,6 +139,18 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.DBType)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_22</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEmpty(ListItem.DBType)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -212,6 +224,18 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.DBType)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEmpty(ListItem.DBType)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -275,6 +299,29 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>3</posy>
+							<width>660</width>
+							<height>62</height>
+							<font>Font_24</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>3</posy>
+							<width>660</width>
+							<height>62</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>String.IsEmpty(ListItem.DBType)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
