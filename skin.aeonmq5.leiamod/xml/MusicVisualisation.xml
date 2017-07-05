@@ -2,10 +2,11 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
+<!-- Leia 10.2.4 -->
 <window>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
-	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onload>
+	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(5600,640,0)</onload>
 	<onunload>Dialog.Close(5600)</onunload>
 	<controls>
 		<control type="image">
