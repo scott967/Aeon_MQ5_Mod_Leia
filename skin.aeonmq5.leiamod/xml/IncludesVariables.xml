@@ -4646,4 +4646,38 @@
 		<value condition="String.IsEmpty(ListItem.UserRating)">hrating0.png</value>
 		<value>$INFO[ListItem.UserRating,hrating,.png]</value>
 	</variable>
+		<variable name="value_gameosdtitle">
+		<value>Game Title</value>
+	</variable>
+		<variable name="value_gameosdtag">
+		<value>game tag</value>
+	</variable>
+		<variable name="value_osdgame_title">
+		<value condition="Container(100).HasFocus(1) + String.Contains(skin.string(vgamefurniture),full)">$LOCALIZE[31398] - $LOCALIZE[31189]</value>
+		<!-- furniture total -->
+		<value condition="Container(100).HasFocus(4)">$LOCALIZE[31375]</value>
+		<!-- general settings -->
+		<value condition="Container(100).HasFocus(5)">$LOCALIZE[35223])</value>
+		<!-- input settings -->
+		<value condition="Container(100).HasFocus(6)">$LOCALIZE[13395]</value>
+		<!-- game video settings -->
+		<value condition="Container(100).HasFocus(13)">$LOCALIZE[31754] +</value>
+		<!-- volumeup -->
+		<value condition="Container(100).HasFocus(14)">$LOCALIZE[31754] -</value>
+		<!-- volumedown -->
+		<value condition="Container(100).HasFocus(15)">$LOCALIZE[31755]</value>
+		<!-- mute -->
+		<value condition="Container(100).HasFocus(16)">$LOCALIZE[13404]</value>
+		<!-- resume -->
+		<value condition="Container(100).HasFocus(22)">$LOCALIZE[31305]</value>
+		<!-- stop -->
+		<value condition="Container(100).HasFocus(25) + !Skin.HasSetting(customosd)">$LOCALIZE[31794]</value>
+		<value condition="Container(100).HasFocus(25) + Skin.HasSetting(customosd)">$LOCALIZE[31222]</value>
+		<!-- custom OSD -->
+		<value condition="Container(100).HasFocus(26) + !Skin.HasSetting(videoosdfixedlist)">$LOCALIZE[31234]</value>
+		<value condition="Container(100).HasFocus(26) + Skin.HasSetting(videoosdfixedlist)">$LOCALIZE[31235]</value>
+		<!-- List setting -->
+		<value condition="Container(100).HasFocus(27)">$LOCALIZE[10035]</value>
+		<!-- Reset -->
+	</variable>
 </includes>

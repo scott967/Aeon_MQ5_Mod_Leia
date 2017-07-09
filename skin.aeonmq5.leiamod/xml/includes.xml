@@ -3039,7 +3039,7 @@
 				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_video_furniture,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_video_furniture,disable)</onclick>
-				<visible>[!Window.IsActive(142) + !String.Contains(skin.string(osd_video_furniture),disable) | Skin.HasSetting(customosd)]</visible>
+				<visible>[!Window.IsActive(fullscreeninfo) + !String.Contains(skin.string(osd_video_furniture),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="4">
 				<!-- general settings -->
@@ -4168,5 +4168,254 @@
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
 			<visible>!String.IsEqual(Container.NumPages,1) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)]</visible>
 		</control>
+	</include>
+		<!-- ######################################################################### Game OSD ######################################################################### -->
+	<include name="GameOSDFixedList">
+		<control type="list" id="100">
+			<include>GameOSD_Content</include>
+		</control>
+	</include>
+	<include name="GameOSDWrapList">
+		<control type="wraplist" id="100">
+			<include>GameOSD_Content</include>
+		</control>
+	</include>
+	<include name="GameOSD_Content">
+		<viewtype>list</viewtype>
+		<posx>225</posx>
+		<posy>172</posy>
+		<height>300</height>
+		<width>1470</width>
+		<onleft>100</onleft>
+		<onright>100</onright>
+		<onup>888</onup>
+		<ondown>Close</ondown>
+		<orientation>horizontal</orientation>
+		<scrolltime>300</scrolltime>
+		<preloaditems>2</preloaditems>
+		<focusposition>6</focusposition>
+		<itemlayout width="112" height="120">
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>30FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>80FF0000</colordiffuse>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>8000BFFF</colordiffuse>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout width="112" height="120">
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+				<animation effect="zoom" center="38,57" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				<visible>!Skin.HasSetting(customosd)</visible>
+			</control>
+			<control type="label">
+				<posx>-72</posx>
+				<posy>80</posy>
+				<width>262</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>!Skin.HasSetting(customosd)</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>FFFF0000</colordiffuse>
+				<animation effect="zoom" center="38,57" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+			<control type="label">
+				<posx>4</posx>
+				<posy>80</posy>
+				<width>112</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<textcolor>FFFF0000</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Skin.HasSetting(customosd) + !String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+			<control type="image">
+				<posx>20</posx>
+				<width>75</width>
+				<height>75</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<colordiffuse>FF00BFFF</colordiffuse>
+				<animation effect="zoom" center="38,57" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+			<control type="label">
+				<posx>4</posx>
+				<posy>80</posy>
+				<width>112</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<textcolor>FF00BFFF</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<visible>Skin.HasSetting(customosd) + String.IsEmpty(ListItem.Property(condition))</visible>
+			</control>
+		</focusedlayout>
+		<content>
+			<item id="16">
+				<!-- resume (play) -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_resume),disable)]</property>
+				<icon>osd_menu_play.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">Play</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_resume),disable)">Skin.SetString(osd_game_resume,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_osd_game_resume),disable)">Skin.Reset(osd_game_resume,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_osd_game_resume),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="27">
+				<!-- reset -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_reset),disable)]</property>
+				<icon>osd_menu_sub.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Reset)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_reset),disable)">Skin.SetString(osd_game_reset,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_reset),disable)">Skin.Reset(osd_game_reset,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_reset),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="5">
+				<!-- input settings -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_input),disable)]</property>
+				<icon>osd_menu_audio.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamecontrollers)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_input),disable)">Skin.SetString(osd_game_input,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_input),disable)">Skin.Reset(osd_game_input,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_input),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="6">
+				<!-- video settings-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_video),disable)]</property>
+				<icon>osd_menu_video.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideosettings)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_video),disable)">Skin.SetString(osd_game_video,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_video),disable)">Skin.Reset(osd_game_video,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_video),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="22">
+				<!-- stop -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_stop),disable)]</property>
+				<icon>osd_menu_stop.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">Stop</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_stop),disable)">Skin.SetString(osd_game_stop,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_stop),disable)">Skin.Reset(osd_game_stop,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_stop),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="1">
+				<!-- furniture -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_furniture),disable)]</property>
+				<icon>osd_menu_furniture.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_game_furniture,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_game_furniture,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_furniture),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="4">
+				<!-- general settings -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_gsettings),disable)]</property>
+				<icon>osd_menu_gensettings.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(settings)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_gsettings),disable)">Skin.SetString(osd_game_gsettings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_gsettings),disable)">Skin.Reset(osd_game_gsettings,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="25">
+				<!-- custom osd -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_osd),disable)]</property>
+				<icon>osd_menu_settings.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">Skin.SetBool(customosd)</onclick>
+				<onclick condition="Skin.HasSetting(customosd)">Skin.Reset(customosd)</onclick>
+			</item>
+			<item id="26">
+				<!-- list mode -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_listmode),disable)]</property>
+				<icon>osd_menu_fixedlist.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">Skin.ToggleSetting(gameosdfixedlist)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(listmode,action(osd),0:01,true)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_listmode),disable)">Skin.SetString(osd_game_listmode,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_listmode),disable)">Skin.Reset(osd_game_listmode,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_listmode),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="13">
+				<!-- volumeup -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_volumeup),disable)]</property>
+				<icon>osd_menu_volup.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volumeup),disable)">Skin.SetString(osd_game_volumeup,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volumeup),disable)">Skin.Reset(osd_game_volumeup,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="14">
+				<!-- volumedown-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_volumedown),disable)]</property>
+				<icon>osd_menu_voldown.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volumedown),disable)">Skin.SetString(osd_game_volumedown,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volumedown),disable)">Skin.Reset(osd_game_volumedown,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="15">
+				<!-- mute -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_mute),disable)]</property>
+				<icon>osd_menu_mute.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_mute),disable)">Skin.SetString(osd_game_mute,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_mute),disable)">Skin.Reset(osd_game_mute,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_mute),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+		</content>
 	</include>
 </includes>

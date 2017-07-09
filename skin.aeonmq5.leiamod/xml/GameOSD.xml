@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Leia 10.2.5 -->
+<window>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<onunload>Skin.Reset(customosd)</onunload>
+	<controls>
+		<control type="group">
+			<!-- Barra de info do modo custom -->
+			<posy>0</posy>
+			<include>Animation_TopPopup</include>
+			<visible>Skin.HasSetting(customosd)</visible>
+			<include>Dialogs_Bar</include>
+			<control type="image">
+				<!-- ativado azul -->
+				<posx>75</posx>
+				<posy>8</posy>
+				<width>60</width>
+				<height>28</height>
+				<texture>grey.png</texture>
+				<colordiffuse>FF007399</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>150</posx>
+				<posy>6</posy>
+				<width>375</width>
+				<align>left</align>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>31426</label>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+			</control>
+			<control type="image">
+				<!-- desativado vermelho -->
+				<posx>375</posx>
+				<posy>8</posy>
+				<width>60</width>
+				<height>28</height>
+				<texture>grey.png</texture>
+				<colordiffuse>FFB20000</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>450</posx>
+				<posy>6</posy>
+				<width>375</width>
+				<align>left</align>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>31427</label>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+			</control>
+		</control>
+		<control type="group">
+			<!-- Top title/tag display -->
+			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
+			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="out" tween="cubic">Visible</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">WindowClose</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">Hidden</animation>
+			<visible>![ Skin.HasSetting(nogamefurnituretemp) | Skin.HasSetting(customosd)]</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>450</height>
+				<width>1920</width>
+				<texture flipy="true">shadow_mask.png</texture>
+				<colordiffuse>95000000</colordiffuse>
+			</control>
+			<control type="label">
+				<!-- Title -->
+				<posx>45</posx>
+				<posy>12</posy>
+				<width>1650</width>
+				<height>60</height>
+				<font>Font_40</font>
+				<label>$VAR[value_gameosdtitle]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<scroll>true</scroll>
+				<shadowcolor>grey</shadowcolor>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>82</posy>
+				<width>1650</width>
+				<height>38</height>
+				<font>Font_18A</font>
+				<label>$VAR[value_gameosdtag]</label>
+				<textcolor>90FFFFFF</textcolor>
+				<scroll>true</scroll>
+				<shadowcolor>grey</shadowcolor>
+			</control>
+		</control>
+		<control type="group">
+			<posy>780</posy>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" time="400" start="0,300" end="0,0" easing="out" tween="cubic" />
+				<!-- <effect type="fade" delay="10000" start="100" end="30" time="5000"/> -->
+			</animation>
+			<!-- <animation effect="slide" time="400" start="0,200" end="0,0" easing="out" tween="cubic">WindowOpen</animation> -->
+			<animation type="Visible" reversible="false">
+				<effect type="slide" time="400" start="0,300" end="0,0" easing="out" tween="cubic" />
+				<!-- <effect type="fade" delay="10000" start="100" end="30" time="5000"/> -->
+			</animation>
+
+			<!-- <animation effect="slide" time="400" start="0,200" end="0,0" easing="out" tween="cubic">Visible</animation> -->
+			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">WindowClose</animation>
+			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">Hidden</animation>
+			<visible>![Skin.HasSetting(nogamefurnituretemp)]</visible>
+
+			<control type="image">
+				<!-- Barra de fundo -->
+				<posx>0</posx>
+				<posy>54</posy>
+				<width>1920</width>
+				<height>45</height>
+				<texture>shadow_h.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>98</posy>
+				<height>202</height>
+				<width>1920</width>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_HomeGlass2</include>
+			</control>
+			<control type="button" id="4205">
+				<include>InvisibleButton</include>
+				<onfocus>SetFocus(100)</onfocus>
+				<onfocus condition="String.Contains(skin.string(gamefurniture),full)">Skin.SetString(gamefurniture,hide)</onfocus>
+				<onfocus condition="String.Contains(skin.string(gamefurniture),hide)">Skin.SetString(gamefurniture,full)</onfocus>
+			</control>
+			<!-- Menu Content -->
+			<include condition="!Skin.HasSetting(gameosdfixedlist)">GameOSDWrapList</include>
+			<include condition="Skin.HasSetting(gameosdfixedlist)">GameOSDFixedList</include>
+			<control type="label">
+				<posx>135</posx>
+				<posy>106</posy>
+				<width>1650</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_17</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<shadowcolor>grey</shadowcolor>
+				<label>[B]$VAR[value_osd_timeduration][/B]</label>
+			</control>
+			<control type="label">
+				<!-- icons label -->
+				<posx>480</posx>
+				<posy>249</posy>
+				<width>960</width>
+				<height>38</height>
+				<align>center</align>
+				<font>Font_18</font>
+				<label>$VAR[value_osdgame_title]</label>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="group">
+				<include>Animation_Fade</include>
+				<visible>!Skin.HasSetting(customosd)</visible>
+				<control type="label">
+					<!-- hora atual -->
+					<posx>45</posx>
+					<posy>195</posy>
+					<width>450</width>
+					<height>38</height>
+					<font>Font_18A</font>
+					<textcolor>90FFFFFF</textcolor>
+					<label>31310</label>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>232</posy>
+					<width>450</width>
+					<height>38</height>
+					<font>Font_32</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[System.Time]</label>
+				</control>
+				<control type="label">
+					<posx>1875</posx>
+					<posy>195</posy>
+					<width>450</width>
+					<height>38</height>
+					<align>right</align>
+					<font>Font_18A</font>
+					<textcolor>90FFFFFF</textcolor>
+					<label>31311</label>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>172</posy>
+				<height>135</height>
+				<width>1920</width>
+				<texture>gradient_small.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>98</posy>
+				<height>195</height>
+				<width>1920</width>
+				<colordiffuse>99FFFFFF</colordiffuse>
+				<texture>osd_glass.png</texture>
+			</control>
+		</control>
+		<include>BGBlack</include>
+	</controls>
+</window>
