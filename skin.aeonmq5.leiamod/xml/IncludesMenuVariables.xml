@@ -1422,7 +1422,8 @@
 		<value condition="String.IsEqual(skin.string(menu0413.master),addons)">RunAddon($INFO[skin.string(menu0413.path)])</value>
 	</variable>
 	<variable name="value_menu0414.label">
-		<value condition="String.IsEmpty(skin.string(menu0414.label)) + String.IsEmpty(skin.string(menu0414.defaultlabel)) + !String.IsEqual(skin.string(menu0414.master),addons)">$LOCALIZE[31002]-$LOCALIZE[31747]</value>
+		<value condition="String.IsEmpty(skin.string(menu0414.label)) + String.IsEmpty(skin.string(menu0414.defaultlabel)) + !String.IsEqual(skin.string(menu0414.master),addons) + !library.isscanningmusic">$LOCALIZE[31002]-$LOCALIZE[31747]</value>
+		<value condition="String.IsEmpty(skin.string(menu0414.label)) + String.IsEmpty(skin.string(menu0414.defaultlabel)) + !String.IsEqual(skin.string(menu0414.master),addons) + library.isscanningmusic">$LOCALIZE[31002]-$LOCALIZE[13353]</value>
 		<value condition="String.IsEmpty(skin.string(menu0414.label)) + String.IsEmpty(skin.string(menu0414.defaultlabel)) + String.IsEqual(skin.string(menu0414.master),addons)">$INFO[system.addontitle(skin.string(menu0414.path))]</value>
 		<value condition="String.IsEmpty(skin.string(menu0414.label)) + !String.IsEmpty(skin.string(menu0414.defaultlabel))">$INFO[skin.string(menu0414.defaultlabel)]</value>
 		<value condition="!String.IsEmpty(skin.string(menu0414.label))">$INFO[skin.string(menu0414.label)]</value>
