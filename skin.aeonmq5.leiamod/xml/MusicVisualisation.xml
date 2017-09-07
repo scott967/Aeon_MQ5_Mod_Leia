@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.4/10.2.5 -->
 <window>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
@@ -291,20 +291,42 @@
 					<posx>622</posx>
 					<posy>278</posy>
 					<width>120</width>
-					<height>98</height>
+					<height>49</height> <!-- 98 -->
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<texture>$INFO[MusicPlayer.Codec,flags/musiccodec/,.png]</texture>
 				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>317</posy>
+					<width>120</width>
+					<height>49</height> <!-- 98 -->
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture>$INFO[MusicPlayer.Channels,flags/audiochannels/,ch.png]</texture>
+				</control>
 				<control type="label">
 					<posx>758</posx>
-					<posy>294</posy>
-					<width>600</width>
+					<posy>289</posy>
+					<width>554</width> <!-- 600 -->
 					<height>36</height>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_17</font>
-					<label>$LOCALIZE[31333] $INFO[MusicPlayer.Channels][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHZ][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
+					<!-- <label>$LOCALIZE[31333] $INFO[MusicPlayer.Channels][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHZ][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label> -->
+					<label>[COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
+					<visible>!String.Contains(Skin.Font,massive)</visible>
+				</control>
+				<control type="label">
+					<posx>758</posx>
+					<posy>289</posy>
+					<width>554</width> <!-- 600 -->
+					<height>36</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_14</font>
+					<label>[COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
+					<visible>String.Contains(Skin.Font,massive)</visible>
 				</control>
 				<control type="progress">
 					<posx>758</posx>
@@ -315,11 +337,11 @@
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>975</posx>
+					<posx>758</posx> <!-- 975 -->
 					<posy>327</posy>
-					<width>600</width>
+					<width>554</width> <!-- 600 -->
 					<height>36</height>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_17</font>
