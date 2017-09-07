@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
+<!-- Leia 10.2.5 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
@@ -81,7 +82,7 @@
 			<control type="label">
 				<!-- Title -->
 				<posx>45</posx>
-				<posy>12</posy>
+				<posy>2</posy>
 				<width>1650</width>
 				<height>60</height>
 				<font>Font_40</font>
