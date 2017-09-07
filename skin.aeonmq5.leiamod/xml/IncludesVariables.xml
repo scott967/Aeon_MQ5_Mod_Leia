@@ -3062,6 +3062,8 @@
 		<value condition="String.Contains(ListItem.Rating,5)">rating5.png</value>
 	</variable>
 	<variable name="value_videotitle">
+		<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + String.IsEqual(ListItem.DBType,musicvideo) + !Window.IsVisible(videos)">$INFO[ListItem.Title] - $INFO[ListItem.Album]</value>
+		<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + String.IsEqual(ListItem.DBType,musicvideo) + Window.IsVisible(videos) + [String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[554])]">$INFO[ListItem.Title] - $INFO[ListItem.Album]</value>
 		<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + ![Skin.HasSetting(originaltitle) + !String.IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label]</value>
 		<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + Skin.HasSetting(originaltitle) + !String.IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
 		<value condition="Control.IsVisible(608) + ![Control.IsVisible(65) | Skin.HasSetting(originaltitle) + !String.IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label] ($LOCALIZE[31701])</value>
@@ -3151,7 +3153,9 @@
 	</variable>
 	<variable name="value_audioinfo_zoomlabel">
 		<value condition="Skin.HasSetting(artistzoom)">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ]</value>
+		<value condition="Skin.HasSetting(coverzoom) + String.IsEqual(Container.Content, songs)">$INFO[Container(50).ListItem.Label] - $INFO[Container(50).ListItem.Label2]</value>
 		<value condition="Skin.HasSetting(coverzoom)">$INFO[Container(50).ListItem.Label]</value>
+		
 	</variable>
 	<variable name="value_audioinfo_label3">
 		<value condition="Container.Content(artists)">$LOCALIZE[21894]</value>
@@ -3200,7 +3204,8 @@
 		<value condition="Container.Content(albums)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)]</value>
 		<value condition="Container.Content(artists)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<!-- YearsActive/Artists -->
-		<value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961]</value>
+		<!-- <value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961]</value> -->
+		<value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(songs) + String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31772]: [/COLOR]$INFO[ListItem.Premiered] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31788]: [/COLOR]$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.PropertyAddonCreator]</value>
@@ -3208,9 +3213,10 @@
 	<!--  Edit for MV show album not director -->
 	<variable name="value_glasslistinfofocus">
 		<!-- <value condition="[Container.Content(movies)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value> -->
-		<value condition="[Container.Content(movies)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
-		<value condition="[Container.Content(musicvideos)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[558]: [/COLOR] $INFO[ListItem.Album]</value>
-		<value condition="[Container.Content(movies)] + String.Contains(ListItem.Duration,min) + !String.Contains(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
+		<value condition="[Container.Content(movies)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] [COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
+		<!-- <value condition="[Container.Content(musicvideos)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[558]: [/COLOR] $INFO[ListItem.Album]</value> -->
+		<value condition="[Container.Content(musicvideos)] + ![String.Contains(ListItem.Duration,min) | String.Contains(ListItem.Path,videodb://movies/sets,left)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] [COLOR=$VAR[value_headercolor]]$LOCALIZE[558]: [/COLOR] $INFO[ListItem.Album]</value>
+		<value condition="[Container.Content(movies)] + String.Contains(ListItem.Duration,min) + !String.Contains(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] [COLOR=$VAR[value_headercolor]]$LOCALIZE[20339]: [/COLOR] $INFO[ListItem.Director]</value>
 		<value condition="[Container.Content(musicvideos)] + String.Contains(ListItem.Duration,min) + !String.Contains(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[558]: [/COLOR] $INFO[ListItem.Album]</value>
 		<value condition="String.Contains(ListItem.Path,videodb://movies/sets,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20457][/COLOR]</value>
 		<value condition="Container.Content(tvshows) + !String.IsEmpty(ListItem.Episode)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[33054]: [/COLOR]$INFO[ListItem.Property(TotalSeasons)] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[20360]: [/COLOR]$INFO[ListItem.Episode]$INFO[Window(home).Property(NextAired.Status), - ]</value>
@@ -3221,7 +3227,8 @@
 		<value condition="Container.Content(albums)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)]</value>
 		<value condition="Container.Content(artists)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<!-- YearsActive/Artists -->
-		<value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961]</value>
+		<!-- <value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration] $LOCALIZE[31961]</value> -->
+		<value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(songs) + String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(addons)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31772]: [/COLOR]$INFO[ListItem.Premiered] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31788]: [/COLOR]$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(addons)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.AddonCreator]</value>
@@ -4256,7 +4263,8 @@
 	<variable name="value_songinfo_duration">
 		<value condition="Window.IsActive(visualisation) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 		<value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)] + String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
-		<value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)] + !String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value>
+		<!-- <value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)] + !String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration,, $LOCALIZE[31961]]</value> -->
+		<value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)] + !String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</value>
 		<value condition="String.Contains(ListItem.Duration,min) + Window.IsActive(musicplaylist)">$INFO[ListItem.Duration]</value>
