@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8/1/14 -->
 <!-- Krypton 9.1.17/9.1.19/9.2.1 window IDs 4 -->
-<!-- Leai 10.2.3 -->
+<!-- Leai 10.2.3/10.2.5 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
@@ -205,7 +205,7 @@
 				<orientation>vertical</orientation>
 				<focusposition>5</focusposition>
 				<scrolltime>450</scrolltime>
-				<itemlayout width="360" height="82">
+				<itemlayout width="360" height="82" condition="!String.Contains(Skin.Font,massive)">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -239,7 +239,41 @@
 						<textcolor>FF101010</textcolor>
 					</control>
 				</itemlayout>
-				<focusedlayout width="360" height="82">
+				<itemlayout width="360" height="82" condition="String.Contains(Skin.Font,massive)">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>360</width>
+						<height>4</height>
+						<texture>divider.png</texture>
+						<colordiffuse>90FFFFFF</colordiffuse>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>-26</posy>
+						<width>300</width>
+						<height>90</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_22</font>
+						<textoffsetx>0</textoffsetx>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>FF101010</textcolor>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>45</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18</font>
+						<textoffsetx>0</textoffsetx>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>FF101010</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="360" height="82" condition="!String.Contains(Skin.Font,massive)">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -267,6 +301,42 @@
 						<posy>16</posy>
 						<width>300</width>
 						<height>90</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18</font>
+						<textoffsetx>0</textoffsetx>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>FFFFFAF0</textcolor>
+					</control>
+				</focusedlayout>
+				<focusedlayout width="360" height="82" condition="String.Contains(Skin.Font,massive)">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>358</width>
+						<height>82</height>
+						<texture>settings_button_large.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<include>Animation_DefaultGlass</include>
+						<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>-26</posy>
+						<width>300</width>
+						<height>90</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_22</font>
+						<textoffsetx>0</textoffsetx>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>FFFFFAF0</textcolor>
+					</control>
+					<control type="label">
+						<posx>30</posx>
+						<posy>45</posy>
+						<width>300</width>
+						<height>30</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_18</font>
