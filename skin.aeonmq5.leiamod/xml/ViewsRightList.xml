@@ -7,6 +7,7 @@
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
+		<font>Font_22A</font>
 		<posx>0</posx>
 		<height>30</height>
 		<width>600</width>
@@ -15,6 +16,7 @@
 		<textcolor>FFFFFAF0</textcolor>
 		<textoffsetx>0</textoffsetx>
 		<scroll>true</scroll>
+		<scrollspeed>25</scrollspeed>
 	</include>
 	<include name="RightListDisc">
 		<width>195</width>
@@ -132,7 +134,7 @@
 					<posy>816</posy>
 					<width>570</width>
 					<height>20</height>
-					<font>Font_22</font>
+					<font>Font_22A</font>
 					<align>left</align>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>$VAR[value_ground6_value]</label>
@@ -147,19 +149,19 @@
 					<itemgap>6</itemgap>
 					<control type="label">
 						<include>RightListLabel</include>
-						<label>$VAR[value_ground13_label]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
+						<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
 						<!-- song title (music) -->
-						<scroll>true</scroll>
-						<scrollspeed>25</scrollspeed>
+						<!-- <scroll>true</scroll>
+						<scrollspeed>25</scrollspeed> -->
 						<!-- <visible>!Container.Content(songs)</visible> -->
 					</control>
 					<control type="label">
 						<include>RightListLabel</include>
-						<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
+						<label>[UPPERCASE]$VAR[value_ground11_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
 					</control>
 					<control type="label">
 						<include>RightListLabel</include>
-						<label>$VAR[value_ground12_label]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
+						<label>[UPPERCASE]$VAR[value_ground12_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground12_value][/COLOR]</label>
 					</control>
 				</control>
 				<control type="image">

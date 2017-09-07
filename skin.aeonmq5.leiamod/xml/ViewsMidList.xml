@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs-->
+<!-- Leia 1`0.2.5 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 70   ##################################################################################-->
 	<!-- ##########           INCLUDES USED LATER IN THIS FILE              ########## -->
@@ -737,7 +738,7 @@
 						<posy>1</posy>
 						<width>675</width>
 						<height>45</height>
-						<font>Font_18</font>
+						<font>Font_18A</font>
 						<aligny>center</aligny>
 						<include>listcolor</include>
 						<label>$INFO[ListItem.Label]</label>
@@ -778,7 +779,7 @@
 						<posy>1</posy>
 						<width>675</width>
 						<height>40</height>
-						<font>Font_18</font>
+						<font>Font_18A</font>
 						<aligny>center</aligny>
 						<include>listcolor</include>
 						<label>$INFO[ListItem.Label]</label>
@@ -819,7 +820,7 @@
 						<posy>1</posy>
 						<width>675</width>
 						<height>45</height>
-						<font>Font_18</font>
+						<font>Font_18A</font>
 						<aligny>center</aligny>
 						<include>listcolorfocus</include>
 						<label>$INFO[ListItem.Label]</label>
@@ -860,7 +861,7 @@
 						<posy>0</posy>
 						<width>675</width>
 						<height>45</height>
-						<font>Font_22</font>
+						<font>Font_22A</font>
 						<aligny>center</aligny>
 						<include>listcolorfocus</include>
 						<label>$INFO[ListItem.Label]</label>

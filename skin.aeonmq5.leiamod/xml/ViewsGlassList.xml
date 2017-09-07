@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.2 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.19/9.2.1 window IDs/9.2.3 -->
+<!-- Leia 10.2.5 -->
 <includes>
 	<!--##################################################################################   VISTA GLASS LIST - ID 57   ##################################################################################-->
 	<include name="GlassListLabel">
@@ -724,7 +725,7 @@
 						<posy>1</posy>
 						<width>390</width>
 						<height>60</height>
-						<font>Font_22</font>
+						<font>Font_22A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -756,7 +757,7 @@
 						<posy>1</posy>
 						<width>390</width>
 						<height>60</height>
-						<font>Font_24A</font>
+						<font>Font_24</font>
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -789,7 +790,7 @@
 						<posy>-14</posy>
 						<width>390</width>
 						<height>90</height>
-						<font>Font_24A</font>
+						<font>Font_24</font>
 						<label>$INFO[ListItem.Label]</label>
 						<align>left</align>
 						<aligny>center</aligny>
