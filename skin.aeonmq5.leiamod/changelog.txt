@@ -4,6 +4,7 @@ Improved:  Use mixed case font in media lists
 Improved:  Reduce scrollspeed for readability
 Improved:  Tweak positioning of various labels
 Improved:  Update music and song information for Leia
+Improved:  Skin is now designed @ 1920x1080 resolution
 
 [B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE 01/09/2017[/COLOR][/B]
 New:  Initial release for Leia
