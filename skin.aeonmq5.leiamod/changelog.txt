@@ -1,5 +1,12 @@
+[B][COLOR=FFFF8C00]BUILD 10.2.5 - RELEASE DATE 09/15/2017[/COLOR][/B]
+New:  Retroplayer support (Games OSD / Games settings)
+Improved:  Use mixed case font in media lists
+Improved:  Reduce scrollspeed for readability
+Improved:  Tweak positioning of various labels
+Improved:  Update music and song information for Leia
+
 [B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE 01/09/2017[/COLOR][/B]
-New:  Initial release ffor Leia
+New:  Initial release for Leia
 
 [B][COLOR=FFFF8C00]BUILD 9.2.0 - RELEASE DATE 08/30/2016[/COLOR][/B]
 New:  Skin files are now stored in addon folder skin.aeonmq5 (due to Kodi change) 
