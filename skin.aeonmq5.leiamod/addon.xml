@@ -66,13 +66,9 @@
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.2.5 - RELEASE DATE 09/15/2017 for Kodi LEIA ALPHA1+[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.2.6 - RELEASE DATE 10/15/2017 for Kodi LEIA ALPHA1+[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
-New:  Skin is now 1920x1080 resolution
-New:  Support for retroplayer (Games OSD / Games settings)
-Improved:  Music and song info dialog
-Improved:  Mixed case is used in media lists
-Improved:  Better layouts when "massive font" is selected
+Improved:  Music info for albums
 		</news>
 	</extension>
 
