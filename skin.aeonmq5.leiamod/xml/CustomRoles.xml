@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Krypton 9.2.2/9.2.3 -->
+<!-- Leia 10.2.6 -->
 <window id="1104" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
 	<controls>
@@ -66,6 +67,7 @@
 				<width>1500</width>
 				<height>900</height>
 				<control type="button" id="9030">
+					<hitrect x="0" y="0" w="1500" h="900" />
 					<include>InvisibleButton</include>
 					<onclick>Action(Close)</onclick>
 					<onleft>Dialog.Close(1104)</onleft>
