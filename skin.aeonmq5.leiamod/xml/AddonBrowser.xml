@@ -3,7 +3,7 @@
 <!-- Aeon MQ 5 Isengard 7.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.19/9.2.1 windowIDs/9.2.3 -->
-<!-- Leia 10.2.3 -->
+<!-- Leia 10.2.3/10.2.6 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
@@ -19,7 +19,7 @@
 			<include>WindowBG</include>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>Animation_Fade</include>
-			<visible>!Skin.HasSetting(noAddonfanart)</visible>
+			<visible>!Skin.HasSetting(noAddonfanart) + [!String.StartsWith(Container.FolderPath,Addons://user) | [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]]</visible>
 		</control>
 		<control type="group">
 			<!-- default group -->
@@ -29,6 +29,12 @@
 			<control type="label">
 				<include>SettingsContentTitle</include>
 				<label>31010</label>
+				<visible>!Skin.HasSetting(show_disabled) | !String.StartsWith(Container.FolderPath,Addons://user)</visible>
+			</control>
+			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>$LOCALIZE[31010] ($LOCALIZE[13106])</label>
+				<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
 			</control>
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
@@ -67,9 +73,24 @@
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.AddonVersion, - ]</label>
 							<scroll>true</scroll>
 							<scrollout>false</scrollout>
+							<visible>!ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
+						</control>
+						<control type="label">
+							<posx>75</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>60</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_20</font>
+							<textcolor>FFFFFAF0</textcolor>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(addon.status), - ]</label>
+							<scroll>true</scroll>
+							<scrollout>false</scrollout>
+							<visible>ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
 						</control>
 						<control type="label">
 							<posx>1080</posx>
@@ -81,6 +102,7 @@
 							<textcolor>FFFFFAF0</textcolor>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
+							<visible>String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="1485" height="60">
@@ -90,6 +112,7 @@
 							<width>1560</width>
 							<height>60</height>
 							<texture>settings_button_focus.png</texture>
+							<!-- <visible>Control.HasFocus(55) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible> -->
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="label">
@@ -101,10 +124,24 @@
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FF101010</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.AddonVersion, - ]</label>
 							<scroll>true</scroll>
 							<scrollout>false</scrollout>
-							<visible>Control.HasFocus(55)</visible>
+							<visible>Control.HasFocus(55) + !ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
+						</control>
+						<control type="label">
+							<posx>75</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>60</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_20</font>
+							<textcolor>FF101010</textcolor>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(addon.status), - ]</label>
+							<scroll>true</scroll>
+							<scrollout>false</scrollout>
+							<visible>Control.HasFocus(55) + ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
 						</control>
 						<control type="label">
 							<posx>1080</posx>
@@ -116,7 +153,7 @@
 							<textcolor>FF101010</textcolor>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>Control.HasFocus(55)</visible>
+							<visible>Control.HasFocus(55) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled)]</visible>
 						</control>
 						<control type="label">
 							<posx>75</posx>
@@ -127,10 +164,24 @@
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.AddonVersion, - ]</label>
 							<scroll>true</scroll>
 							<scrollout>false</scrollout>
-							<visible>!Control.HasFocus(55)</visible>
+							<visible>!Control.HasFocus(55)  + !ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
+						</control>
+						<control type="label">
+							<posx>75</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>60</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>Font_20</font>
+							<textcolor>FFFFFAF0</textcolor>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(addon.status), - ]</label>
+							<scroll>true</scroll>
+							<scrollout>false</scrollout>
+							<visible>!Control.HasFocus(55)  + ListItem.Property(addon.downloading) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible>
 						</control>
 						<control type="label">
 							<posx>1080</posx>
@@ -143,38 +194,41 @@
 							<textcolor>FFFFFAF0</textcolor>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
-							<visible>!Control.HasFocus(55)</visible>
+							<visible>!Control.HasFocus(55) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled)]</visible>
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="image">
-					<posx>360</posx>
-					<posy>624</posy>
-					<width>1560</width>
-					<height>374</height>
-					<texture>darkgrey.png</texture>
-					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-					<animation effect="fade" end="85" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>435</posx>
-					<posy>642</posy>
-					<width>338</width>
-					<height>338</height>
-					<texture fallback="DefaultAddon.png" background="true">$INFO[Container(55).ListItem.Icon]</texture>
-					<bordertexture border="-25">musicframe.png</bordertexture>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="textbox">
-					<posx>810</posx>
-					<posy>633</posy>
-					<width>990</width>
-					<height>360</height>
-					<textcolor>FFFFFAF0</textcolor>
-					<font>Font_18A</font>
-					<label>$INFO[ListItem.AddonDescription]</label>
-					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				<control type="group"> <!-- addon details -->
+					<visible>String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)</visible>
+					<control type="image">
+						<posx>360</posx>
+						<posy>624</posy>
+						<width>1560</width>
+						<height>374</height>
+						<texture>darkgrey.png</texture>
+						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+						<animation effect="fade" end="85" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>435</posx>
+						<posy>642</posy>
+						<width>338</width>
+						<height>338</height>
+						<texture fallback="DefaultAddon.png" background="true">$INFO[Container(55).ListItem.Icon]</texture>
+						<bordertexture border="-25">musicframe.png</bordertexture>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="textbox">
+						<posx>810</posx>
+						<posy>633</posy>
+						<width>990</width>
+						<height>360</height>
+						<textcolor>FFFFFAF0</textcolor>
+						<font>Font_18A</font>
+						<label>$INFO[ListItem.AddonDescription]</label>
+						<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					</control>
 				</control>
 			</control>
 			<include>RSS</include>
@@ -195,7 +249,7 @@
 				<ondown>9000</ondown>
 				<onleft condition="Window.Previous(settings)">ActivateWindow(settings)</onleft>
 				<onleft condition="Window.Previous(Home)">ActivateWindow(Home)</onleft>
-				<onright condition="Container(9000).HasFocus(1)">55</onright>
+				<onright condition="Container(9000).HasFocus(1) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4)">55</onright>
 				<onright condition="Container(9000).HasFocus(2)">9001</onright>
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
@@ -229,6 +283,20 @@
 						<label>31261</label>
 						<icon></icon>
 						<onclick>SetFocus(9001)</onclick>
+					</item>
+					<item id="3">
+						<!-- Show disabled -->
+						<label>$LOCALIZE[31242] $LOCALIZE[13106]</label>
+						<icon></icon>
+						<onclick>Skin.ToggleSetting(show_disabled)</onclick>
+						<visible>!Skin.HasSetting(show_disabled)</visible>
+					</item>
+					<item id="4">
+						<!-- Show all -->
+						<label>$LOCALIZE[31242] $LOCALIZE[593]</label>
+						<icon></icon>
+						<onclick>Skin.ToggleSetting(show_disabled)</onclick>
+						<visible>Skin.HasSetting(show_disabled)</visible>
 					</item>
 				</content>
 			</control>
