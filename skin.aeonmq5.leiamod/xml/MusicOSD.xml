@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- 9.2.1 window IDs 120 -->
+<!-- Leaia10.2.6 -->
 <window>
 	<defaultcontrol>101</defaultcontrol>
 	<onunload>Skin.Reset(customosd)</onunload>
@@ -151,10 +152,11 @@
 			</control>
 			<control type="label">
 				<posx>135</posx>
-				<posy>110</posy>
+				<posy>108</posy>
 				<width>1650</width>
 				<height>45</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<font>Font_17</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<shadowcolor>grey</shadowcolor>
