@@ -3154,7 +3154,8 @@
 	<variable name="value_audioinfo_zoomlabel">
 		<value condition="Skin.HasSetting(artistzoom)">$INFO[ListItem.Artist]$INFO[ListItem.Album, | ]</value>
 		<value condition="Skin.HasSetting(coverzoom) + String.IsEqual(Container.Content, songs)">$INFO[Container(50).ListItem.Label] - $INFO[Container(50).ListItem.Label2]</value>
-		<value condition="Skin.HasSetting(coverzoom)">$INFO[Container(50).ListItem.Label]</value>
+		<value condition="Skin.HasSetting(coverzoom) + !String.IsEqual(Listitem.DBType,album)">$INFO[Container(50).ListItem.Label]</value>
+		<value condition="Skin.HasSetting(coverzoom) + String.IsEqual(Listitem.DBType,album)">$INFO[ListItem.Album]</value>
 		
 	</variable>
 	<variable name="value_audioinfo_label3">
@@ -4194,7 +4195,7 @@
 	<variable name="value_music_title">
 		<value condition="Window.IsActive(visualisation) + Player.HasAudio">$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</value>
 		<value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(musicinformation)]">$INFO[ListItem.Artist]</value>
-		<value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
+		<value condition="Container.Content(artists) + String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
 		<value condition="[String.Contains(ListItem.Label,all albums) | String.IsEqual(ListItem.Label,..) | String.Contains(Container.FolderPath,musicvideos)] + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(musicinformation)]">$INFO[ListItem.Album]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]</value>
@@ -4303,8 +4304,8 @@
 		<value>$INFO[Listitem.Icon]</value>
 	</variable>
 	<variable name="value_albumsong_items">
-		<value condition="String.IsEqual(ListItem.DBType,artist)">$LOCALIZE[21888]: $INFO[Container(50).NumItems] $LOCALIZE[31040]</value>
-		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.Label)">$LOCALIZE[31340]: $INFO[Container(50).NumItems]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label)">$LOCALIZE[21888]: $INFO[Container(50).NumItems] $LOCALIZE[31040]</value> <!-- currently none was scraped disco -->
+		<value condition="String.IsEqual(ListItem.DBType,album) + !String.IsEmpty(Container(50).ListItem.Label)">$LOCALIZE[31340]: $INFO[Container(50).NumItems]</value> <!-- tracks in library for album -->
 	</variable>
 	<variable name="value_seconds">
 		<value condition="String.Contains(skin.string(panel_seconds),1)"> - $LOCALIZE[31465]</value>
