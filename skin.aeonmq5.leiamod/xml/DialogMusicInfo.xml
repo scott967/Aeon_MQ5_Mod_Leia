@@ -769,7 +769,7 @@
 					<include>Animation_DefaultGlass2</include>
 				</control>
 				<control type="group">	<!-- This group is for songs that are playing and have AS albums and art 500 panel -->
-					<visible>Player.HasAudio + system.hasaddon(script.artistslideshow) + String.IsEqual(MusicPlayer.Artist,ListItem.Artist)</visible>
+					<visible>Player.HasAudio + system.hasaddon(script.artistslideshow) + String.IsEqual(MusicPlayer.Artist,ListItem.Artist) + !String.Contains(MusicPlayer.Genre,classical)</visible>
 					<control type="list" id="500">
 						<!-- items supplied by AS was 50 but confilcts-->
 						<viewtype label="List">List Info</viewtype>
