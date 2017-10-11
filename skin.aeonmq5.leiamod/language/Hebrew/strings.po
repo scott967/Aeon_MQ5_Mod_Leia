@@ -4,116 +4,6 @@
 # Addon version: 0.0.8
 # Addon Provider: MarcosQui
 # Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
-# Translators:
 # CaTz <catzil@gmail.com>, 2013
 # Idan Bushari <ibushari@outlook.com>, 2013-2014
 # yakirp88 <yakirp88@gmail.com>, 2013
@@ -123,32 +13,26 @@ msgstr ""
 "Project-Id-Version: XBMC Skin Aeon MQ 5\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2014-02-03 15:11+0000\n"
-"Last-Translator: Idan Bushari <ibushari@outlook.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/skin-aeon-mq-5/language/he/)\n"
+"PO-Revision-Date: 2017-10-09 17:59+0300\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
+"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.4\n"
 
 msgctxt "Addon Summary"
 msgid "Aeon MQ 5, improved, more light and more powerful than ever."
 msgstr "Aeon MQ 5, משופר, קל יותר וחזק יותר מתמיד."
 
 msgctxt "Addon Description"
-msgid ""
-"The traditional Aeon MQ reaches its fifth edition.[CR]Reformulated, very "
-"simple to use, with a new code that provides a lightweight and powerful "
-"skin.[CR]The Aeon MQ 5 incorporates new features such as REPLACE it takes "
-"the level of customize the main menu to something never seen before.[CR]Aeon"
-" MQ 5, you've never seen a skin well."
-msgstr "המעטפת Aeon MQ המסורתית מגיעה אל גרסתה החמישית.[CR]נכתבה מחדש, פשוטה לשימוש, עם קוד חדש אשר מעניק מעטפת קלה וחזקה.[CR]ה-Aeon MQ 5 משלבת תכונות חדשות כמו 'החלף' שלוקח את את ההתאמה אישית לתפריט הראשי למקומות שלא נראו עוד לפני.[CR]Aeon MQ 5, עוד לא ראית מעטפת כלכך טובה."
+msgid "The traditional Aeon MQ reaches its fifth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 5 incorporates new features such as REPLACE it takes the level of customize the main menu to something never seen before.[CR]Aeon MQ 5, you've never seen a skin well."
+msgstr "המעטפת Aeon MQ המסורתית מגיעה אל גרסתה החמישית.[CR]נכתבה מחדש, פשוטה לשימוש, עם קוד חדש אשר מעניק מעטפת קלה וחזקה.[CR]ה-Aeon MQ 5 משלבת תכונות חדשות כמו החלף שלוקח את את ההתאמה אישית לתפריט הראשי למקומות שלא נראו עוד בעבר.[CR]Aeon MQ 5, עוד לא ראית מעטפת כל כך טובה כמו זו."
 
 msgctxt "Addon Disclaimer"
-msgid ""
-"Aeon MQ 5 Skin is a complement to let your XBMC prettier, its use is a "
-"matter of personal choice."
+msgid "Aeon MQ 5 Skin is a complement to let your XBMC prettier, its use is a matter of personal choice."
 msgstr "הסקין Aeon MQ5 נועד כדי להפוך את XBMC ליפה יותר, השימוש בו נובע מבחירה אישית."
 
 msgctxt "#31000"
@@ -169,7 +53,7 @@ msgstr "סרטים"
 
 msgctxt "#31004"
 msgid "PLAY DISC"
-msgstr "נגן דיסק"
+msgstr "נגן תקליטור"
 
 msgctxt "#31005"
 msgid "TV SHOWS"
@@ -189,7 +73,7 @@ msgstr "תמונות"
 
 msgctxt "#31009"
 msgid "WEATHER"
-msgstr "מזג אויר"
+msgstr "מזג אוויר"
 
 msgctxt "#31010"
 msgid "ADD-ONS"
@@ -373,7 +257,7 @@ msgstr "התראות"
 
 msgctxt "#31055"
 msgid "TIMER"
-msgstr "טיימר"
+msgstr "שעון עצר"
 
 msgctxt "#31056"
 msgid "CANCEL TIMER"
@@ -401,7 +285,7 @@ msgstr "מצב שינה"
 
 msgctxt "#31062"
 msgid "CHANGE USER"
-msgstr "שנה משתמש"
+msgstr "החלף משתמש"
 
 msgctxt "#31063"
 msgid "FILES MANAGER"
@@ -417,7 +301,7 @@ msgstr "קדימונים"
 
 msgctxt "#31066"
 msgid "CINEMA EX"
-msgstr "CINEMA EX"
+msgstr "פסטיבל CINEMA EX"
 
 msgctxt "#31067"
 msgid "TV GUIDE"
@@ -457,7 +341,7 @@ msgstr "התפריט שלי"
 
 msgctxt "#31076"
 msgid "SHOW DETAILS PANEL"
-msgstr "הצג פאנל פרטים"
+msgstr "הצג לוח פרטים"
 
 msgctxt "#31077"
 msgid "LIBRARY STATUS"
@@ -529,7 +413,7 @@ msgstr "פריטים"
 
 msgctxt "#31094"
 msgid "NO LOCAL/CANCEL"
-msgstr "לא מקומי/בטל"
+msgstr "לא מקומי או בטל"
 
 msgctxt "#31095"
 msgid "PATH"
@@ -537,7 +421,7 @@ msgstr "מיקום"
 
 msgctxt "#31096"
 msgid "DISC"
-msgstr "דיסק"
+msgstr "תקליטור"
 
 msgctxt "#31097"
 msgid "Access to collection"
@@ -597,7 +481,7 @@ msgstr "CD, DVD, Bluray"
 
 msgctxt "#31111"
 msgid "DISC ART (IF AVAILABLE)"
-msgstr "גרפיקת דיסק (אם קיים)"
+msgstr "גרפיקת תקליטור (אם קיים)"
 
 msgctxt "#31112"
 msgid "PLOT ALWAYS VISIBLE"
@@ -609,7 +493,7 @@ msgstr "ביוגרפיה תמיד מוצגת"
 
 msgctxt "#31114"
 msgid "BANNER (IF AVAILABLE)"
-msgstr "באנר (אם קיים)"
+msgstr "כרזה (אם קיימת)"
 
 msgctxt "#31115"
 msgid "VIDEO NODE"
@@ -617,7 +501,7 @@ msgstr "קישור וידאו"
 
 msgctxt "#31116"
 msgid "DISC SWING SPEED"
-msgstr "מהירות דיסק"
+msgstr "מהירות נענוע התקליטור"
 
 msgctxt "#31117"
 msgid "INVERT MENU COLORS"
@@ -641,7 +525,7 @@ msgstr "מערך עיצוב - קריוקי"
 
 msgctxt "#31122"
 msgid "BACKGROUND SET BY USER"
-msgstr "רקע מוגדר ע\"י משתמש"
+msgstr "רקע מוגדר על ידי משתמש"
 
 msgctxt "#31123"
 msgid "SMART SUBMENU"
@@ -661,7 +545,7 @@ msgstr "נותר"
 
 msgctxt "#31127"
 msgid "SELECTING TRACKS"
-msgstr "בוחר קטעים"
+msgstr "בוחר רצועות"
 
 msgctxt "#31128"
 msgid "Transparency preview"
@@ -685,7 +569,7 @@ msgstr "גרפיט"
 
 msgctxt "#31133"
 msgid "CUSTOMIZE INFO PANEL"
-msgstr "פאנל מידע התאמה אישית"
+msgstr "לוח מידע בהתאמה אישית"
 
 msgctxt "#31134"
 msgid "VIEW OPTIONS"
@@ -712,9 +596,8 @@ msgid "BROWSE FOR PREVIEW"
 msgstr "עיין לתצוגה מקדימה"
 
 msgctxt "#31140"
-msgid ""
-"Activate only the views you need, this optimizes the collection loading"
-msgstr "מפעיל רק את התצוגות שאתה צריך, זה משפר את טעינת האוספים"
+msgid "Activate only the views you need, this optimizes the collection loading"
+msgstr "מפעיל רק את התצוגות שבשימוש, לשיפור טעינת האוספים"
 
 msgctxt "#31141"
 msgid "+ views"
@@ -722,7 +605,7 @@ msgstr "+ תצוגות"
 
 msgctxt "#31142"
 msgid "LOGO AS TITLE (ON TOP IF AVAILABLE)"
-msgstr "לוגו בתור כותרת (למעלה אם קיים)"
+msgstr "סמל בתור כותרת (למעלה אם קיים)"
 
 msgctxt "#31143"
 msgid "SHUTDOWN OPTIONS"
@@ -753,44 +636,24 @@ msgid "Timer Set"
 msgstr "הגדרת טיימר"
 
 msgctxt "#31150"
-msgid ""
-"REPLACE FUNCTION[CR]The simplest way to rearrange the menu, simply choose a "
-"new item that will occupy the site of the previous item. This option will "
-"always replace the item for a standard menu, title and custom background "
-"image will be lost."
-msgstr "תכונת החלף[CR]הדרך הפשוטה ביותר לסדר תפריטים, פשוט בחר פריט חדש אשר יתפוס את מקומו של הפריט הקודם. אפשרות זו תמיד תחליף את הפריט בתפריט רגיל, כותרות ורקע מותאם אישית יאבדו."
+msgid "REPLACE FUNCTION[CR]The simplest way to rearrange the menu, simply choose a new item that will occupy the site of the previous item. This option will always replace the item for a standard menu, title and custom background image will be lost."
+msgstr "תכונת החלף[CR]הדרך הפשוטה ביותר לסדר תפריטים, פשוט בחר פריט חדש אשר יתפוס את מקומו של הפריט הקודם. אפשרות זו תמיד תחליף את הפריט בתפריט רגיל. כותרות ורקע מותאם אישית יאבדו."
 
 msgctxt "#31151"
-msgid ""
-"CLONE FUNCTION Submenu[CR]Let's assume you created a menu with a Video "
-"Playlist and would like to have in this menu a submenu equal to the Movies, "
-"for that use this function. Changes made to a cloned sub menu affects the "
-"Father Menu and vice versa.[CR]A menu that is using a cloned submenu will "
-"not appear in the list."
-msgstr "תכונת העתקה לתת-תפריט[CR]בוא נגיד שיצרת תפריט עם רשימת וידאו וברצונך להוסיף תת-תפריט לתפריט זה בדיוק כמו בתפריט סרטים, בשביל השתמש בתכונה זו. שינויים שהתבצעו לתת-תפריט המועתק ישפיעו על התפריט אב ולהפך.[CR]תפריט אשר משתמש בתת-תפריט מועתק לא יופיע ברשימה."
+msgid "CLONE FUNCTION Submenu[CR]Let's assume you created a menu with a Video Playlist and would like to have in this menu a submenu equal to the Movies, for that use this function. Changes made to a cloned sub menu affects the Father Menu and vice versa.[CR]A menu that is using a cloned submenu will not appear in the list."
+msgstr "תכונת העתקה לתת-תפריט[CR]בוא נגיד שיצרת תפריט עם רשימת וידאו וברצונך להוסיף תת-תפריט לתפריט זה, בדיוק כמו בתפריט סרטים. לצורך כך, תשתמש בתכונה הזו. שינויים שהתבצעו לתת-תפריט המועתק ישפיעו על תפריט האב ולהפך.[CR]תפריט אשר משתמש בתת-תפריט מועתק לא יופיע ברשימה."
 
 msgctxt "#31152"
-msgid ""
-"FUNCTION COPY PROPERTIES[CR]The advanced mode to rearrange the menu without "
-"losing the previous customization. Instead of using the REPLACE function you"
-" can copy the menu for the storage. All the properties menu will be saved "
-"for later use. You can store up to 20 presets."
-msgstr ""
+msgid "FUNCTION COPY PROPERTIES[CR]The advanced mode to rearrange the menu without losing the previous customization. Instead of using the REPLACE function you can copy the menu for the storage. All the properties menu will be saved for later use. You can store up to 20 presets."
+msgstr "תכונת העתקת מאפיינים[CR]מצב מתקדם כדי לסדר מחדש את התפריט מבלי לאבד את ההתאמה האישית הקודמת. במקום להשתמש בתכונת החלף, ניתן להעתיק את התפריט לאחסון. כל תפריט המאפיינים יישמר לשימוש מאוחר יותר. ניתן לאחסן עד 20 הגדרות קבועות מראש."
 
 msgctxt "#31153"
-msgid ""
-"FUNCTION APPLY PROPERTIES[CR]Use to relocate a preconfigured item. All the "
-"properties will be applied to the selected item"
-msgstr ""
+msgid "FUNCTION APPLY PROPERTIES[CR]Use to relocate a preconfigured item. All the properties will be applied to the selected item"
+msgstr "תכונת שימוש במאפיינים:[CR]נשתמש בה כדי להעביר פריט שהוגדר מראש. כל המאפיינים יחולו על הפריט שנבחר"
 
 msgctxt "#31154"
-msgid ""
-"Welcome to the Aeon MQ 5 skin customization.[CR][CR]READ CAREFULLY, THIS IS "
-"IMPORTANT.[CR][CR]Before making any adjustments here it's necessary to "
-"define the language we'll use in the skin.[CR][CR]If you have already set "
-"the language select option 2, otherwise choose option 1.[CR][CR]After "
-"choosing option 2 this warning does not appear again.[CR][CR]Enjoy!"
-msgstr ""
+msgid "Welcome to the Aeon MQ 5 skin customization.[CR][CR]READ CAREFULLY, THIS IS IMPORTANT.[CR][CR]Before making any adjustments here it's necessary to define the language we'll use in the skin.[CR][CR]If you have already set the language select option 2, otherwise choose option 1.[CR][CR]After choosing option 2 this warning does not appear again.[CR][CR]Enjoy!"
+msgstr "ברוכים הבאים לעיצוב המעטפת שלAeon MQ 5[CR][CR]קרא בעיון, זה חשוב.[CR][CR]לפני ביצוע ההתאמות כאן יש להגדיר את השפה בה נשתמש במעטפת.[CR][CR]אם כבר הגדרתם את השפה, בחרו באפשרות 2. אם לא, בחרו באפשרות 1.[CR][CR]לאחר בחירת אפשרות 2 לא תופיע אזהרה זו.[CR][CR]תיהנו!"
 
 msgctxt "#31155"
 msgid "1. WANT TO SET THE LANGUAGE NOW"
@@ -798,7 +661,7 @@ msgstr "1. מעוניין להגדיר שפה עכשיו"
 
 msgctxt "#31156"
 msgid "2. ALREADY DEFINED THE LANGUAGE AND WISH CONTINUE"
-msgstr "2. השפה כבר מוגדר, מעוניין להמשיך"
+msgstr "2. השפה כבר מוגדרת ואני מעוניין להמשיך"
 
 msgctxt "#31157"
 msgid "SET LANGUAGE"
@@ -853,18 +716,12 @@ msgid "PRESETS"
 msgstr "קביעונים"
 
 msgctxt "#31170"
-msgid ""
-"CREATE A PRESET FUNCTION[CR]Use it to save the actual main menu. All "
-"settings will be saved. You can save up to 10 individual presets."
-msgstr ""
+msgid "CREATE A PRESET FUNCTION[CR]Use it to save the actual main menu. All settings will be saved. You can save up to 10 individual presets."
+msgstr "צור תכונת קביעון[CR]תשתמש בתכונה כדי לשמור את התפריט הראשי העכשווי. אתה יכול לשמור עד 10 קביעונים."
 
 msgctxt "#31171"
-msgid ""
-"APPLY A PRESET FUNCTION.[CR]Use it to change between saved presets. All the "
-"settings will be reapplied. You can also call this function on the main menu"
-" using the system menu 'S' or you can also insert that item in any menu "
-"using the Replace function."
-msgstr ""
+msgid "APPLY A PRESET FUNCTION.[CR]Use it to change between saved presets. All the settings will be reapplied. You can also call this function on the main menu using the system menu 'S' or you can also insert that item in any menu using the Replace function."
+msgstr "תכונת שימוש בקביעון.[CR]תשתמש בתכונה כדי לשנות בין קביעונים שנשמרו. כל ההגדרות של הקביעון יחולו מחדש. ניתן גם לקרוא לתכונה זו מהתפריט הראשי באמצעות תפריט המערכת S או באפשרותכם גם להכניס פריט זה בכל תפריט באמצעות תכונת החלף."
 
 msgctxt "#31172"
 msgid "NO ITEMS IN THE STORAGE"
@@ -883,9 +740,8 @@ msgid "USE SMOOTHER ZOOM EFFECT TO OPEN AND CLOSE WINDOWS"
 msgstr "השתמש באפקט זום חלק עבור פתיחת וסגירת חלונות"
 
 msgctxt "#31176"
-msgid ""
-"USE FADE EFFECT TO OPEN AND CLOSE WINDOWS (RECOMMENDED FOR WEAKER GPUS)"
-msgstr ""
+msgid "USE FADE EFFECT TO OPEN AND CLOSE WINDOWS (RECOMMENDED FOR WEAKER GPUS)"
+msgstr "שימוש באפקט דעיכה כדי לפתוח ולסגור חלונות (מומלץ עבור GPUS חלש)"
 
 msgctxt "#31177"
 msgid "SYSTEM MENU"
@@ -893,7 +749,7 @@ msgstr "תפריט מערכת"
 
 msgctxt "#31178"
 msgid "CONTEXT MENU"
-msgstr "תפריט משני"
+msgstr "תפריט קישור"
 
 msgctxt "#31179"
 msgid "Audio language"
@@ -901,11 +757,11 @@ msgstr "שפת פסקול"
 
 msgctxt "#31180"
 msgid "NUMBER OF VISIBLE WIDGETS"
-msgstr "מספר הווידג'יטים המוצגים"
+msgstr "מספר היישומונים המוצגים"
 
 msgctxt "#31181"
 msgid "CLICK FOR CHANGE"
-msgstr "הקש כדי לשנות"
+msgstr "לחץ כדי לשנות"
 
 msgctxt "#31182"
 msgid "PARTIAL"
@@ -925,15 +781,15 @@ msgstr "דגל התאמה אישית"
 
 msgctxt "#31186"
 msgid "4K CONTENT LABEL WILL BE SHOWN."
-msgstr "תוצג 4K תווית תוכן"
+msgstr "תוצג תווית תוכן 4K."
 
 msgctxt "#31187"
 msgid "REAPPLY SETTINGS"
-msgstr "החל הגדרות שנית"
+msgstr "החל הגדרות בשנית"
 
 msgctxt "#31188"
 msgid "REAPPLY THE MOST IMPORTANT SETTINGS"
-msgstr "החל את ההגדרות החשובות שנית"
+msgstr "החל את ההגדרות החשובות בשנית"
 
 msgctxt "#31189"
 msgid "COMPLETE MODE"
@@ -1029,15 +885,15 @@ msgstr "שנה שם"
 
 msgctxt "#31212"
 msgid "DISABLE"
-msgstr "בטל"
+msgstr "השבת"
 
 msgctxt "#31213"
 msgid "ENABLE"
-msgstr "הפעל"
+msgstr "אפשר"
 
 msgctxt "#31214"
 msgid "DISABLE/REORDER"
-msgstr "בטל/מיין מחדש"
+msgstr "השבת או מיין מחדש"
 
 msgctxt "#31215"
 msgid "Page"
@@ -1073,7 +929,7 @@ msgstr "סיום"
 
 msgctxt "#31223"
 msgid "TIP"
-msgstr "עצה"
+msgstr "עיצה"
 
 msgctxt "#31224"
 msgid "MORE OPTIONS"
@@ -1089,7 +945,7 @@ msgstr "מידע כללי"
 
 msgctxt "#31227"
 msgid "INFORMATIONS BAR"
-msgstr "פס מידע"
+msgstr "סרגל מידע"
 
 msgctxt "#31228"
 msgid "SMART SUBMENU"
@@ -1105,13 +961,11 @@ msgstr "רשימת השמעה"
 
 msgctxt "#31231"
 msgid "CLEAN LIBRARY"
-msgstr "נקה ספריה"
+msgstr "נקה ספרייה"
 
 msgctxt "#31232"
-msgid ""
-"IF THERE IS A '4K' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE "
-"USED."
-msgstr "אם ישנו תג '4K' בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
+msgid "IF THERE IS A '4K' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "אם ישנו תג 4K בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31233"
 msgid "Premiered"
@@ -1151,15 +1005,15 @@ msgstr "סמן"
 
 msgctxt "#31242"
 msgid "SHOW"
-msgstr "SHOW"
+msgstr "הצג"
 
 msgctxt "#31243"
 msgid "SYSTEM MENU (MENU 'S')"
-msgstr "תפריט מערכת (תפריט 'S')"
+msgstr "תפריט מערכת (תפריט S)"
 
 msgctxt "#31244"
 msgid "MENU 'S'"
-msgstr "תפריט 'S'"
+msgstr "תפריט S"
 
 msgctxt "#31245"
 msgid "KEEP BACKGROUND'S ASPECT"
@@ -1167,23 +1021,23 @@ msgstr "שמור על יחס הרקע"
 
 msgctxt "#31246"
 msgid "MANAGEMENT OF WIDGETS"
-msgstr "ניהול ווידג'טים"
+msgstr "ניהול יישומונים"
 
 msgctxt "#31247"
 msgid "CLEARART:"
-msgstr "CLEARART"
+msgstr "אמנות שקופה:"
 
 msgctxt "#31248"
 msgid "CLEARLOGO"
-msgstr "CLEARLOGO"
+msgstr "סמל שקוף"
 
 msgctxt "#31249"
 msgid "WIDGETS"
-msgstr "ווידג'טים"
+msgstr "יישומונים"
 
 msgctxt "#31250"
 msgid "SHOW DATE AND WEATHER"
-msgstr "הצג תאריך ומזג אויר"
+msgstr "הצג תאריך ומזג אוויר"
 
 msgctxt "#31251"
 msgid "3D MODE"
@@ -1194,19 +1048,12 @@ msgid "CHANGE TRANSPARENCY"
 msgstr "שנה שקיפות"
 
 msgctxt "#31253"
-msgid ""
-"Choose a Favourite.[CR]Remember that to populate this list you must use the "
-"context menu 'C key' on an item and Add to Favourites."
-msgstr "בחר מועדף.[CR]זכור כדי לאכלס רשימה זו אתה חייב להשתמש בתפריט הקישור 'מקש C' על פריט והוסף אותו למועדפים."
+msgid "Choose a Favourite.[CR]Remember that to populate this list you must use the context menu 'C key' on an item and Add to Favourites."
+msgstr "בחר מועדף.[CR]זכור כדי לאכלס רשימה זו אתה חייב להשתמש בתפריט הקישור וללחוץ עם מקש C על פריט כדי להוסיף אותו למועדפים."
 
 msgctxt "#31254"
-msgid ""
-"With EXTRAPACK you have available:[CR]Themes.[CR]Thematic Styles.[CR]Icons "
-"for video and music genre.[CR]Genre fanart for music and video.[CR]Animated "
-"Icons for weather.[CR]Background images based on weather "
-"conditions.[CR][CR]The complete download can take a while depending on the "
-"connection speed"
-msgstr "עם AEON MQ SKIN THEMES אתה תקבל:[CR]ערכות נושא.[CR]עיצובים[CR]ההורדה המלאה יכולה לקחת זמן, תלוי בחיבור האינטרנט שלך."
+msgid "With EXTRAPACK you have available:[CR]Themes.[CR]Thematic Styles.[CR]Icons for video and music genre.[CR]Genre fanart for music and video.[CR]Animated Icons for weather.[CR]Background images based on weather conditions.[CR][CR]The complete download can take a while depending on the connection speed"
+msgstr "עם חבילת אקסטרה אתה תקבל:[CR]ערכות נושא.[CR]עיצובים[CR]ההורדה המלאה יכולה לקחת זמן, תלוי בחיבור האינטרנט שלך"
 
 msgctxt "#31255"
 msgid "New theme has been set"
@@ -1218,35 +1065,22 @@ msgstr "עיצוב חדש הוגדר"
 
 msgctxt "#31257"
 msgid ""
-"1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 21 folders by these names:[CR]addons, "
-"aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures, programs, settings, shutdown, spring, summer, tvshows, "
-"vnodes, vplaylist, winter.[CR][CR]3. Place within each of these folders the "
-"images you chose, MY THEME supports multiple files, you can include as many "
-"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
-"path of the root.[CR][CR]The default image for AEON MQ 5 has pixels 72dpi "
-"1920x1080 JPG format and I would suggest using the program FastStone Photo "
-"Resize to obtain good quality images and low size."
-msgstr "1. צור תיקיה ראשית עם כל שם, למשל 'נושא שלי'.[CR][CR]2. בתוך התיקיה הראשית צור 21 תיקיות עם שמות אלו:[CR]addons, aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, programs, settings, shutdown, spring, summer, tvshows, vnodes, vplaylist, winter.[CR][CR]3. מקם בכל אחת מתיקיות אלו את התמונות שבחרת, 'נושא שלי' תומך במספר רב של קבצים, יש באפשרותך לכלול כמה תמונות שתרצה בכל תיקיה.[CR][CR]4. לאחר שערכת הנושא מוכנה הזן את נתיב התיקיה הראשית.[CR][CR]פורמט תמונת ברירת המחדל עבור Aeon MQ 5 הוא 72dpi 1920x1080 JPG ואני ממליץ להשתמש בתוכנה FastStone Photo Resize כדי להשיג תמונות באיכות טובה בגודל נמוך."
+"1. Create a root folder with any name, for example MY THEME.[CR][CR]2. Inside the root folder create 21 folders by these names:[CR]addons, aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, programs, settings, shutdown, spring, summer, tvshows, vnodes, vplaylist, winter.[CR][CR]3. Place within each of these folders the images you chose, MY THEME supports multiple files, you can include as many pictures as you want per folder.[CR][CR]4. After the theme ready enter the path of the root.[CR][CR]The default image for AEON MQ 5 has pixels 72dpi 1920x1080 JPG format and I would suggest using the "
+"program FastStone Photo Resize to obtain good quality images and low size."
+msgstr ""
+"1. צור תיקיה ראשית עם כל שם, למשל הנושא שלי.[CR][CR]2. בתוך התיקייה הראשית צור 21 תיקיות עם שמות אלו:[CR]addons, aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, programs, settings, shutdown, spring, summer, tvshows, vnodes, vplaylist, winter.[CR][CR]3. מקם בכל אחת מתיקיות אלו את התמונות שבחרת, הנושא שלי תומך במספר רב של קבצים, יש באפשרותך לכלול כמה תמונות שתרצה בכל תיקיה.[CR][CR]4. לאחר שערכת הנושא מוכנה, הזן את נתיב התיקייה הראשית.[CR][CR]פורמט תמונת ברירת המחדל עבור Aeon MQ 5 הוא 72dpi 1920x1080 JPG ואני ממליץ להשתמש בתוכנה FastStone Photo Resize כדי להשיג תמונות באיכות טובה בגודל נמוך."
 
 msgctxt "#31258"
-msgid ""
-"This option recreates only the most important adjustments like colors, panel"
-" definitions...[CR]It's recommended for instance when there is a non "
-"functional menu.[CR]When using this option some adjustments may be "
-"necessary."
-msgstr ""
+msgid "This option recreates only the most important adjustments like colors, panel definitions...[CR]It's recommended for instance when there is a non functional menu.[CR]When using this option some adjustments may be necessary."
+msgstr "אפשרות זו יוצרת מחדש רק את ההתאמות החשובות ביותר, כגון צבעים, הגדרות לוח ...[CR]מומלץ להשתמש כאשר יש תפריט לא פונקציונלי.[CR]בעת שימוש באפשרות זו, ייתכן שיהיה צורך בהתאמות מסוימות."
 
 msgctxt "#31259"
-msgid ""
-"WANT TO KNOW HOW TO OBTAIN OR HOW TO CREATE A PACKAGE OF CASES VISIT THE "
-"FORUM:[CR]http://forum.xbmc.org/"
+msgid "WANT TO KNOW HOW TO OBTAIN OR HOW TO CREATE A PACKAGE OF CASES VISIT THE FORUM:[CR]http://forum.xbmc.org/"
 msgstr "רוצה לדעת איך להשיג או ליצור חבילת אריזות, בקר את הפורום:[CR]http://forum.xbmc.org/"
 
 msgctxt "#31260"
 msgid "FOLDER CONTAINS:"
-msgstr "תיקיה מכילה:"
+msgstr "התיקיה מכילה:"
 
 msgctxt "#31261"
 msgid "CONFIGURE"
@@ -1270,7 +1104,7 @@ msgstr "הצג פאנארט הרחבה"
 
 msgctxt "#31266"
 msgid "BLURAY"
-msgstr "BLURAY"
+msgstr "בלו-ריי"
 
 msgctxt "#31267"
 msgid "3DBD"
@@ -1282,15 +1116,15 @@ msgstr "HD-DVD"
 
 msgctxt "#31269"
 msgid "HDTV"
-msgstr "HDTV"
+msgstr "HD-TV"
 
 msgctxt "#31270"
 msgid "SDTV"
-msgstr "SDTV"
+msgstr "SD-TV"
 
 msgctxt "#31271"
 msgid "WEBTV"
-msgstr "WEBTV"
+msgstr "WEB-TV"
 
 msgctxt "#31272"
 msgid "DVD"
@@ -1325,44 +1159,32 @@ msgid "CHANGE COLORS OR THE MEDIA LABEL, BUILD YOUR OWN CASE."
 msgstr "שנה צבעים או את תווית המדיה, צור אריזה משלך."
 
 msgctxt "#31280"
-msgid ""
-"IF THERE IS A NAME TAG COMPATIBLE IN THE FILE OR FOLDER, THIS CASE WILL BE "
-"USED."
+msgid "IF THERE IS A NAME TAG COMPATIBLE IN THE FILE OR FOLDER, THIS CASE WILL BE USED."
 msgstr "אם ישנו תג שם מתאים בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31281"
 msgid "CHOOSE A CASE AND PRESS ENTER TO CUSTOMIZE."
-msgstr "בחר אריזה ולחץ ENTER כדי להתאים אישית"
+msgstr "בחר אריזה ולחץ אישור כדי להתאים אישית."
 
 msgctxt "#31282"
-msgid ""
-"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
-"FOLDER, THIS CASE WILL BE USED."
-msgstr "מצב זה יופעל במידה ויש ציון של 'BLURAY', 'BLU-RAY' או 'BDRIP' בשם הקובץ או התקייה."
+msgid "IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "מצב זה יופעל במידה ויש ציון של BLURAY, LU-RAY או BDRIP בשם הקובץ או התיקייה."
 
 msgctxt "#31283"
-msgid ""
-"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
-"THIS CASE WILL BE USED."
-msgstr "מצב זה יופעל במידה ויהיה זה תוכן '3DBD' או שיוציין בשם הקובץ או התקייה '3DBD'."
+msgid "IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "מצב זה יופעל במידה ויהיה זה תוכן 3DBD או שיצוין בשם הקובץ או התיקייה 3DBD."
 
 msgctxt "#31284"
-msgid ""
-"IF THERE IS A 'WEB' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE"
-" USED."
-msgstr "אם ישנו תג 'WEB' בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
+msgid "IF THERE IS A 'WEB' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "אם ישנו תג WEB בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31285"
-msgid ""
-"IF THERE IS A 'HDTV' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL "
-"BE USED."
-msgstr "אם ישנו תג 'HDTV' בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
+msgid "IF THERE IS A 'HDTV' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "אם ישנו תג HDTV בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31286"
-msgid ""
-"IF THERE IS A 'DVD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE"
-" USED."
-msgstr "אם ישנו תג 'DVD' בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
+msgid "IF THERE IS A 'DVD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE USED."
+msgstr "אם ישנו תג DVD בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31287"
 msgid "LABEL CASE"
@@ -1378,27 +1200,27 @@ msgstr "אף תוית לא תהיה בשימוש מארז זה."
 
 msgctxt "#31290"
 msgid "A STICKER WILL BE SHOWN IN ACCORDANCE WITH THE MEDIA CODEC."
-msgstr "תווית תוצג לפי מקודד  המדיה הנוכחית."
+msgstr "תווית תוצג בהתאם למקודד המדיה הנוכחית."
 
 msgctxt "#31291"
 msgid "BLURAY CONTENT LABEL WILL BE SHOWN."
-msgstr "תווית תוכן BLURAY תוצג"
+msgstr "תוצג תווית תוכן BLURAY."
 
 msgctxt "#31292"
 msgid "BLURAY 3D CONTENT LABEL WILL BE SHOWN."
-msgstr "תווית תוכן BLURAY 3D תוצג"
+msgstr "תוצג תווית תוכן BLURAY 3D."
 
 msgctxt "#31293"
 msgid "WEBTV CONTENT LABEL WILL BE SHOWN."
-msgstr "תווית תוכן WEBTV תוצג"
+msgstr "תוצג תווית תוכן WEBTV."
 
 msgctxt "#31294"
 msgid "HDTV CONTENT LABEL WILL BE SHOWN."
-msgstr "תווית תוכן HDTV תוצג"
+msgstr "תוצג תווית תוכן HDTV."
 
 msgctxt "#31295"
 msgid "DVD CONTENT LABEL WILL BE SHOWN."
-msgstr "תווית תוכן DVD תוצג"
+msgstr "תוצג תווית תוכן DVD."
 
 msgctxt "#31296"
 msgid "COLOR FOR THIS CASE"
@@ -1414,7 +1236,7 @@ msgstr "התאם אישית מארז"
 
 msgctxt "#31299"
 msgid "BOOKMARK"
-msgstr "סימניה"
+msgstr "סימנייה"
 
 msgctxt "#31300"
 msgid "SUBTITLES"
@@ -1486,7 +1308,7 @@ msgstr "מצב"
 
 msgctxt "#31317"
 msgid "POSTER"
-msgstr "POSTER"
+msgstr "פוסטר"
 
 msgctxt "#31318"
 msgid "IMDB: STARS"
@@ -1506,11 +1328,11 @@ msgstr "מצב מידע"
 
 msgctxt "#31322"
 msgid "PANEL"
-msgstr "PANEL"
+msgstr "לוח"
 
 msgctxt "#31323"
 msgid "STANDARD"
-msgstr "סטנדרטי"
+msgstr "רגיל"
 
 msgctxt "#31324"
 msgid "AUTO INFO"
@@ -1522,7 +1344,7 @@ msgstr "רצועות הבאות"
 
 msgctxt "#31326"
 msgid "WEATHER MENU"
-msgstr "תפריט מזג אויר"
+msgstr "תפריט מזג אוויר"
 
 msgctxt "#31327"
 msgid "BACKGROUND IMAGE"
@@ -1530,7 +1352,7 @@ msgstr "תמונת רקע"
 
 msgctxt "#31328"
 msgid "SHOW CDART"
-msgstr "הצג עטיפה"
+msgstr "הצג עטיפת תקליטור"
 
 msgctxt "#31329"
 msgid "VIEW ARTIST BIOGRAPHY"
@@ -1538,11 +1360,11 @@ msgstr "הצג ביוגרפיית אמן"
 
 msgctxt "#31330"
 msgid "VIEW ARTIST/ALBUM INFORMATION"
-msgstr "הצג פרטי אמן/אלבום"
+msgstr "הצג פרטי אמן או אלבום"
 
 msgctxt "#31331"
 msgid "DISPLAY ARTIST IMAGES THUMBNAIL"
-msgstr "הצג תמונות ממוזערות אמן"
+msgstr "הצג תמונות ממוזערות של אמן"
 
 msgctxt "#31332"
 msgid "ITEMS IN PLAYLIST"
@@ -1622,7 +1444,7 @@ msgstr "שונה"
 
 msgctxt "#31351"
 msgid "APPEARANCE"
-msgstr "חזות"
+msgstr "מראה"
 
 msgctxt "#31352"
 msgid "DISPLAY AND INTERFACE"
@@ -1682,15 +1504,15 @@ msgstr "תמונה"
 
 msgctxt "#31366"
 msgid "NAVIGATION AND PRESENTATIONS"
-msgstr "ניווט ופרזנטציה"
+msgstr "ניווט ומצגות"
 
 msgctxt "#31367"
 msgid "WEATHER"
-msgstr "מזג אויר"
+msgstr "מזג אוויר"
 
 msgctxt "#31368"
 msgid "LOCATION AND APPEARANCE"
-msgstr "מיקום וחזות"
+msgstr "מיקום ומראה"
 
 msgctxt "#31369"
 msgid "PROFILE"
@@ -1725,29 +1547,23 @@ msgid "A HIGH DEFINITION MEDIA ENVIROMENT"
 msgstr "סביבת מדיה בחדות גבוהה"
 
 msgctxt "#31377"
-msgid ""
-"A MODERN AND ELEGANT MEDIA CENTER.[CR]AEON MQ 5 IS PART OF NEW SKINS "
-"GENERATION."
-msgstr "מדיה סנטר מודרני ואלגנטי.[CR] Aeon MQ5 הוא חלק מדור חדש של סקינים"
+msgid "A MODERN AND ELEGANT MEDIA CENTER.[CR]AEON MQ 5 IS PART OF NEW SKINS GENERATION."
+msgstr "מרכז מדיה מודרני ואלגנטי.[CR]Aeon MQ5 הוא חלק מדור חדש של מעטפות."
 
 msgctxt "#31378"
 msgid "MOVIES, TV SHOWS AND CONCERTS"
 msgstr "סרטים, סדרות והופעות"
 
 msgctxt "#31379"
-msgid ""
-"ADJUST YOUR SYSTEM IN ORDER TO GET THE BEST PICTURE QUALITY. [CR] SELECT "
-"COLOR OR POSITION OF SUBTITLES."
-msgstr "התאם את המערכת שלך כדי לקבל את התמונה הטובה ביותר. [CR]בחר את צבע או מיקום הכתוביות."
+msgid "ADJUST YOUR SYSTEM IN ORDER TO GET THE BEST PICTURE QUALITY. [CR] SELECT COLOR OR POSITION OF SUBTITLES."
+msgstr "התאם את המערכת שלך כדי לקבל את התמונה הטובה ביותר.[CR]בחר את צבע או מיקום הכתוביות."
 
 msgctxt "#31380"
 msgid "XBMC LISTS AND PLAYS YOUR MUSIC"
-msgstr "XBMC מאחסן ומנגן את המוזיקה שלך"
+msgstr "קודי יארגן ברשימות וינגן את המוזיקה שלך"
 
 msgctxt "#31381"
-msgid ""
-"ARTIST, ALBUM AND TRACKS INFORMATION.[CR]RELAX AND LISTEN TO YOUR MUSIC WITH"
-" VISUAL EFFECTS."
+msgid "ARTIST, ALBUM AND TRACKS INFORMATION.[CR]RELAX AND LISTEN TO YOUR MUSIC WITH VISUAL EFFECTS."
 msgstr "פרטים על אמן, אלבום ורצועות.[CR]הירגע והקשב למוזיקה שלך עם אפקטיים חזותיים."
 
 msgctxt "#31382"
@@ -1756,83 +1572,67 @@ msgstr "צפה בסדרה האהובה עלייך"
 
 msgctxt "#31383"
 msgid "LIVE TV RECEPTION.[CR]TUNE AND RECORD A TV SHOW."
-msgstr "שידור חי.[CR]כוון והקלט את הסדרה שלך."
+msgstr "קבלת שידור חי.[CR]כוון והקלט את הסדרה שלך."
 
 msgctxt "#31384"
 msgid "ORGANIZE YOUR PICTURES"
-msgstr "ארגן את התמונת שלך"
+msgstr "ארגן את התמונות שלך"
 
 msgctxt "#31385"
-msgid ""
-"MAKE A SLIDESHOW PRESENTATION.[CR]SHOW YOUR LIBRARY DIRECTLY FROM A HARD "
-"DISK OR FLASH DRIVE."
+msgid "MAKE A SLIDESHOW PRESENTATION.[CR]SHOW YOUR LIBRARY DIRECTLY FROM A HARD DISK OR FLASH DRIVE."
 msgstr "צור מצגת תמונות.[CR]הצג את הספריה שלך ישירות מכונן קשיח או מהתקן נייד."
 
 msgctxt "#31386"
 msgid "WEATHER FORECAST"
-msgstr "תחזית מזג האויר"
+msgstr "תחזית מזג האוויר"
 
 msgctxt "#31387"
-msgid ""
-"SUNNY OR RAINY? CHOOSE THREE CITIES AND HAVE THEIR LIVE FORECAST, COURTESY "
-"OF WEATHER.COM.[CR]IN ADDITION TO THE CITIES, YOU CAN ALSO CHOOSE FROM "
-"IMPERIAL OR METRIC SYSTEM."
-msgstr "שמשי או גשום? בחר 3 ערים וקבל את תחזיות מזג האויר שלהן, באדיבות WEATHER.COM.[CR]בנוסף לערים, יש לך אפשרות לבחור בין מערכת מטרית לבין אימפריאלית."
+msgid "SUNNY OR RAINY? CHOOSE THREE CITIES AND HAVE THEIR LIVE FORECAST, COURTESY OF WEATHER.COM.[CR]IN ADDITION TO THE CITIES, YOU CAN ALSO CHOOSE FROM IMPERIAL OR METRIC SYSTEM."
+msgstr "שמשי או גשום? בחר 3 ערים וקבל את תחזיות מזג האויר שלהן, באדיבותWEATHER.COM.[CR]בנוסף לערים, יש לך אפשרות לבחור בין מערכת מטרית לבין אימפריאלית."
 
 msgctxt "#31388"
 msgid "SUPPLEMENTS FOR XBMC"
-msgstr "תוספות עבור XBMC"
+msgstr "תוספות עבור קודי"
 
 msgctxt "#31389"
-msgid ""
-"GET AND MANAGE ADD-ONS TO MAKE THE MOST OUT OF XMBC.[CR]FILM AND MUSIC "
-"SCRAPERS AND PLUGINS WITH AUTOMATIC UPDATES."
-msgstr "קבל ונהל הרחבות כדי להשיג את המיטב מ-XBMC.[CR]סקרייפרים עבור סרטים ומוזיקה ותוספים עם עדכון אוטומטי."
+msgid "GET AND MANAGE ADD-ONS TO MAKE THE MOST OUT OF XMBC.[CR]FILM AND MUSIC SCRAPERS AND PLUGINS WITH AUTOMATIC UPDATES."
+msgstr "קבל ונהל הרחבות כדי להשיג את המיטב מקודי.[CR]סקרייפרים עבור סרטים ומוזיקה ותוספים עם עדכון אוטומטי."
 
 msgctxt "#31390"
 msgid "PLAYBACK SETTINGS"
 msgstr "הגדרות ניגון"
 
 msgctxt "#31391"
-msgid ""
-"IMAGE CALIBRATION AND AUDIO SELECTION.[CR]XBMC PROVIDES MAXIMUM QUALITY FOR "
-"AUDIO AND VIDEO."
-msgstr "כיול תמונה ובחירת יציאת אודיו.[CR]XBMC מפיקה את המקסימום באיכות אודיו ווידאו."
+msgid "IMAGE CALIBRATION AND AUDIO SELECTION.[CR]XBMC PROVIDES MAXIMUM QUALITY FOR AUDIO AND VIDEO."
+msgstr "כיול תמונה ובחירת יציאת אודיו.[CR]קודי מפיק את המקסימום מאיכות האודיו והוידאו."
 
 msgctxt "#31392"
 msgid "DATA MANAGEMENT"
 msgstr "ניהול נתונים"
 
 msgctxt "#31393"
-msgid ""
-"HIGH CAPACITY REMOVABLE HARD DRIVES ARE IDEAL FOR COLLECTION "
-"STORAGE.[CR]XBMC CAN MANAGE THOUSANDS OF FILES IN DIFFERENT SOURCES."
-msgstr "דיסקים קשיחים נשלפים עם קיבולת גבוהה אידאלים עבור אחסון אוסף.[CR]XBMC יכול לנהל אלפי קבצים במיקומים שונים."
+msgid "HIGH CAPACITY REMOVABLE HARD DRIVES ARE IDEAL FOR COLLECTION STORAGE.[CR]XBMC CAN MANAGE THOUSANDS OF FILES IN DIFFERENT SOURCES."
+msgstr "תקליטורים קשיחים נשלפים עם קיבולת גבוהה אידאלים עבור אחסון אוסף.[CR]קודי יכול לנהל אלפי קבצים במיקומים שונים."
 
 msgctxt "#31394"
 msgid "YOUR FAMILY MEMBERS WILL LOVE IT"
 msgstr "בני המשפחה שלך יאהבו את זה"
 
 msgctxt "#31395"
-msgid ""
-"MULTIPLE USER SUPPORT WITH CUSTOM LOGINS ALLOWING YOU TO KEEP YOUR "
-"CONFIGURATIONS.[CR]RSS FEEDS, VISUALS AND LIBRARIES OPTIONS CAN BE USED "
-"SEPARATELY."
-msgstr "תמיכה בריבוי משתמשים עם כניסות מותאמות מאפשרים לך לשמור את ההגדרות שלך.[CR]מאפשר לך להשתמש בנפרד בהזנות RSS, אפשרויות תצוגות וספריות."
+msgid "MULTIPLE USER SUPPORT WITH CUSTOM LOGINS ALLOWING YOU TO KEEP YOUR CONFIGURATIONS.[CR]RSS FEEDS, VISUALS AND LIBRARIES OPTIONS CAN BE USED SEPARATELY."
+msgstr "תמיכה בריבוי משתמשים עם כניסות מותאמות מאפשרים לך לשמור את ההגדרות שלך.[CR]אתה יכול להשתמש בנפרד בהזנות RSS, אפשרויות תצוגות וספרייות."
 
 msgctxt "#31396"
 msgid "IMPROVE YOUR EXPERIENCE WITH THE AEON MQ 5 SKIN"
-msgstr "שפר את החוויה בעזרת הסקין Aeon MQ5"
+msgstr "שפר את החוויה בעזרת מעטפת Aeon MQ5"
 
 msgctxt "#31397"
-msgid ""
-"FINE ADJUSTMENTS THAT ALLOW SURPRISING LOOKS.[CR]MINOR DETAILS THAT ONLY "
-"AEON MQ 5 SKIN CAN OFFER."
-msgstr "מצא התאמות שמאפשרות מראות מפתיעים.[CR] פרטים קטנים שרק Aeon MQ5 יכול להציע."
+msgid "FINE ADJUSTMENTS THAT ALLOW SURPRISING LOOKS.[CR]MINOR DETAILS THAT ONLY AEON MQ 5 SKIN CAN OFFER."
+msgstr "מצא התאמות שמאפשרות מראות מפתיעים.[CR]פרטים קטנים שרק Aeon MQ5 יכול להציע."
 
 msgctxt "#31398"
 msgid "FURNITURE"
-msgstr "תפאורה"
+msgstr "ריהוט"
 
 msgctxt "#31399"
 msgid "MOVE OBJECTS"
@@ -1848,7 +1648,7 @@ msgstr "בחר סוג"
 
 msgctxt "#31402"
 msgid "EXTRAPACK"
-msgstr "EXTRAPACK"
+msgstr "חבילת אקסטרות"
 
 msgctxt "#31403"
 msgid "THEMES AND IMAGES"
@@ -1876,7 +1676,7 @@ msgstr "אומנות"
 
 msgctxt "#31409"
 msgid "CONTEXTUAL ART"
-msgstr "אומנות קונטקסטואלי"
+msgstr "אומנות מותאמת לפי הקשר"
 
 msgctxt "#31410"
 msgid "MAIN MENU"
@@ -1920,15 +1720,15 @@ msgstr "מערך הניווט"
 
 msgctxt "#31420"
 msgid "MODES/RESET"
-msgstr "מצבים/אתחול"
+msgstr "מצבים או אתחול"
 
 msgctxt "#31421"
 msgid "RESET SKIN"
-msgstr "אתחל מעטפת"
+msgstr "אפס מעטפת"
 
 msgctxt "#31422"
 msgid "ELIMINATE ALL OPTIONS"
-msgstr "הסר כל האפשרויות"
+msgstr "מנע את כל האפשרויות"
 
 msgctxt "#31423"
 msgid "CUSTOMIZATION - OPTIONS"
@@ -1992,7 +1792,7 @@ msgstr "ראשי"
 
 msgctxt "#31438"
 msgid "GET LOGO/CLEARART"
-msgstr "קבל LOGO/CLEARART"
+msgstr "קבל סמל או אמנות שקופה"
 
 msgctxt "#31439"
 msgid "GET SOUND THEME"
@@ -2008,7 +1808,7 @@ msgstr "קבל גרפיקה"
 
 msgctxt "#31442"
 msgid "GET ARTWORK ARTIST/ALBUM"
-msgstr "קבל גרפיקת אמן/אלבום"
+msgstr "קבל גרפיקת אמן או אלבום"
 
 msgctxt "#31443"
 msgid "SKIN AEON MQ 5"
@@ -2016,7 +1816,7 @@ msgstr "מעטפת AEON MQ 5"
 
 msgctxt "#31444"
 msgid "COLORS FOR THE TITLES AND PANELS"
-msgstr "צבעים עבור כותרות ופאנלים"
+msgstr "צבעים עבור כותרות ולוחות"
 
 msgctxt "#31445"
 msgid "Settings"
@@ -2028,11 +1828,11 @@ msgstr "הסתר גבולות מתמונות ממוזערות"
 
 msgctxt "#31447"
 msgid "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
-msgstr "הצג כפתור עבור אתחול מעטפת (זמני)"
+msgstr "הצג כפתור עבור איפוס מעטפת (זמני)"
 
 msgctxt "#31448"
 msgid "MID LIST"
-msgstr "MID LIST"
+msgstr "רשימת ביניים"
 
 msgctxt "#31449"
 msgid "SOLO MODE"
@@ -2044,7 +1844,7 @@ msgstr "שחזור הגדרות"
 
 msgctxt "#31451"
 msgid "EXPORT/IMPORT OR RESTART SETTINGS"
-msgstr "ייצא/ייבא או אתחל הגדרות"
+msgstr "ייצא,ייבא או אפס הגדרות"
 
 msgctxt "#31452"
 msgid "SAVE AN COPY OF SETTINGS"
@@ -2056,7 +1856,7 @@ msgstr "החל הגדרות שנשמרו"
 
 msgctxt "#31454"
 msgid "SETTING BY SYSTEM"
-msgstr "הגדרות ע\"י מערכת"
+msgstr "הגדרות על ידי מערכת"
 
 msgctxt "#31455"
 msgid "TRAILERS - SET SCRIPT"
@@ -2100,7 +1900,7 @@ msgstr "פאנארט מונפש (SLIDE)"
 
 msgctxt "#31465"
 msgid "1 SECOND DELAY"
-msgstr "שנייה השהיה"
+msgstr "1 שנייה השהיה"
 
 msgctxt "#31466"
 msgid "2 SECONDS DELAY"
@@ -2120,19 +1920,19 @@ msgstr "5 שניות השהיה"
 
 msgctxt "#31470"
 msgid "AUTOMATIC PANEL"
-msgstr "פאנל אוטומטי"
+msgstr "לוח אוטומטי"
 
 msgctxt "#31471"
 msgid "MANUAL PANEL"
-msgstr "פאנל ידני"
+msgstr "לוח ידני"
 
 msgctxt "#31472"
 msgid "PANEL ALWAYS VISIBLE"
-msgstr "פאנל תמיד גלוי"
+msgstr "לוח תמיד גלוי"
 
 msgctxt "#31473"
 msgid "PANEL OFF"
-msgstr "פאנל כבוי"
+msgstr "לוח כבוי"
 
 msgctxt "#31474"
 msgid "FANART STYLE"
@@ -2148,7 +1948,7 @@ msgstr "עיצוב עלילה"
 
 msgctxt "#31477"
 msgid "EXTRA THUMBNAIL STYLE"
-msgstr "עיצוב EXTRA THUMBNAIL"
+msgstr "עיצוב אקסטרה תמונות ממוזערות"
 
 msgctxt "#31478"
 msgid "CHANGING VIEW"
@@ -2168,7 +1968,7 @@ msgstr "מיין לפי: סדר יורד"
 
 msgctxt "#31482"
 msgid "MEDIA LABELS"
-msgstr "תוויות  מדיה"
+msgstr "תוויות מדיה"
 
 msgctxt "#31483"
 msgid "AUTO HIDE"
@@ -2196,11 +1996,11 @@ msgstr "אפשרויות וידאו"
 
 msgctxt "#31489"
 msgid "TRANSPARENT PANEL"
-msgstr "פאנל שקוף"
+msgstr "לוח שקוף"
 
 msgctxt "#31490"
 msgid "SLIM LIST"
-msgstr "רשימה דקה"
+msgstr "רשימה צרה"
 
 msgctxt "#31491"
 msgid "HIDE WATCHED"
@@ -2216,11 +2016,11 @@ msgstr "רשימה מקובעת"
 
 msgctxt "#31494"
 msgid "PREFER: CLEARART"
-msgstr "עדיף: CLEARART"
+msgstr "עדיף: אמנות שקופה"
 
 msgctxt "#31495"
 msgid "PREFER: LOGO"
-msgstr "עדיף: LOGO"
+msgstr "עדיף: סמל"
 
 msgctxt "#31496"
 msgid "EXTRA INFO"
@@ -2244,7 +2044,7 @@ msgstr "פאנארט רזרבי"
 
 msgctxt "#31501"
 msgid "CURTAINS"
-msgstr "וילון"
+msgstr "וילונות"
 
 msgctxt "#31502"
 msgid "SEASON FANART"
@@ -2272,15 +2072,15 @@ msgstr "השתמש LANDSCAPE.JPG"
 
 msgctxt "#31508"
 msgid "SHOW CLEARLOGO AND CLEARART"
-msgstr "הצג ClearLogo ו-ClearArt"
+msgstr "הצג אמנות שקופה ולוגו שקוף"
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
-msgstr "צלמיות סגנון חלופיות"
+msgstr "סמלילי סגנון חלופיים"
 
 msgctxt "#31510"
 msgid "ALTERNATIVE STUDIO ICONS"
-msgstr "צלמיות אולפן חלופיות"
+msgstr "סמלילי אולפן חלופיים"
 
 msgctxt "#31511"
 msgid "GRID SIZE"
@@ -2308,7 +2108,7 @@ msgstr "רשת"
 
 msgctxt "#31517"
 msgid "LANDSCAPE"
-msgstr "LANDSCAPE"
+msgstr "נוף"
 
 msgctxt "#31518"
 msgid "USE ZOOM EFFECT"
@@ -2316,7 +2116,7 @@ msgstr "השתמש באפקט זום"
 
 msgctxt "#31519"
 msgid "BANNER"
-msgstr "BANNER"
+msgstr "כרזה"
 
 msgctxt "#31520"
 msgid "ALTERNATIVE"
@@ -2400,23 +2200,23 @@ msgstr "מבוסס על התנאים הנוכחים"
 
 msgctxt "#31540"
 msgid "BACKDROP IMAGE BASED ON ACTUAL CONDITIONS"
-msgstr "רקע מזג האויר מבוסס על תנאים אמיתיים"
+msgstr "רקע מזג האויר מבוסס על התנאים בפועל"
 
 msgctxt "#31541"
 msgid "BACKDROP IMAGE BASED IN SEASONS OF NORTH AMERICA"
-msgstr "הרקע מבוסס על העונה בצ.אמריקה"
+msgstr "הרקע מבוסס על העונה בצפון אמריקה"
 
 msgctxt "#31542"
 msgid "BACKDROP IMAGE BASED IN SEASONS OF SOUTH AMERICA"
-msgstr "הרקע מבוסס על העונה בד.אמריקה"
+msgstr "הרקע מבוסס על העונה בדרום אמריקה"
 
 msgctxt "#31543"
 msgid "SHOW ANIMATED WEATHER ICONS (WEATHER MENU)"
-msgstr "הצג צלמיות מזג אויר בהנפשה (תפריט מזג האויר)"
+msgstr "הצג סמלילי מזג אוויר בהנפשה (תפריט מזג האוויר)"
 
 msgctxt "#31544"
 msgid "STATIC SHOW ICONS OF CLIMATE"
-msgstr "הצג צלמיות אקלים סטטיות"
+msgstr "הצג סמלילי אקלים סטטיים"
 
 msgctxt "#31545"
 msgid "SHOW MINI MENU (MAIN MENU NAVIGATION HELP)"
@@ -2452,31 +2252,31 @@ msgstr "תפריט עליון"
 
 msgctxt "#31553"
 msgid "SHOW PROGRESS BAR"
-msgstr "הצג פס התקדמות"
+msgstr "הצג סרגל התקדמות"
 
 msgctxt "#31554"
 msgid "HIDE PROGRESS BAR"
-msgstr "הסתר פס התקדמות"
+msgstr "הסתר סרגל התקדמות"
 
 msgctxt "#31555"
 msgid "SHOW NEXT TRACKS"
-msgstr "הצג רצועות הבאות"
+msgstr "הצג את הרצועות הבאות"
 
 msgctxt "#31556"
 msgid "HIDE NEXT TRACKS"
-msgstr "הסתר רצועות הבאות"
+msgstr "הסתר את הרצועות הבאות"
 
 msgctxt "#31557"
 msgid "SHOW ARTIST/ALBUM ART"
-msgstr "הצג אמנות אמן/אלבום"
+msgstr "הצג אמנות אמן או אלבום"
 
 msgctxt "#31558"
 msgid "HIDE ARTIST/ALBUM ART"
-msgstr "הסתר אמנות אמן/אלבום"
+msgstr "הסתר אמנות אמן או אלבום"
 
 msgctxt "#31559"
 msgid "SLIDESHOW"
-msgstr "מצגת"
+msgstr "מצגת שקופיות"
 
 msgctxt "#31560"
 msgid "FAVOURITES IMAGES"
@@ -2484,7 +2284,7 @@ msgstr "תמונות מועדפות"
 
 msgctxt "#31561"
 msgid "ARTIST FANART"
-msgstr "אמן פאנארט"
+msgstr "פאנארט אמן"
 
 msgctxt "#31562"
 msgid "HIDE VIDEO WINDOWS"
@@ -2496,23 +2296,23 @@ msgstr "הצג חלונות וידאו"
 
 msgctxt "#31564"
 msgid "SHOW CDART"
-msgstr "הצג דיסק"
+msgstr "הצג עטיפת תקליטור"
 
 msgctxt "#31565"
 msgid "HIDE CDART"
-msgstr "הסתר דיסק"
+msgstr "הסתר עטיפת תקליטור"
 
 msgctxt "#31566"
 msgid "HIDE MEDIA CONTROLS"
-msgstr "הסתר שליטת מדיה"
+msgstr "הסתר בקרי מדיה"
 
 msgctxt "#31567"
 msgid "SHOW MEDIA CONTROLS"
-msgstr "הצג שליטת מדיה"
+msgstr "הצג בקרי מדיה"
 
 msgctxt "#31568"
 msgid "UPDATE FANART DATABASE"
-msgstr "עדכן מסד נתונים לפאנארט"
+msgstr "עדכן מסד נתונים של פאנארט"
 
 msgctxt "#31569"
 msgid "MAIN MENU OPTIONS"
@@ -2532,7 +2332,7 @@ msgstr "למוזיקה, עדיף תצוגה לפי"
 
 msgctxt "#31573"
 msgid "TRAILER REMINDER AVAILABLE"
-msgstr "קיים תזכורת לקדימון"
+msgstr "קדימון תזכורת זמין"
 
 msgctxt "#31574"
 msgid "SHOW TRAILER IN FULLSCREEN MODE"
@@ -2592,7 +2392,7 @@ msgstr "הוסף תוכן באפשרות"
 
 msgctxt "#31588"
 msgid "USE DISC FOR TV SHOWS/SEASONS"
-msgstr "USE DISC FOR TV SHOWS/SEASONS"
+msgstr "תשתמש תקליטור עבור סדרות או עונות"
 
 msgctxt "#31589"
 msgid "SEASON"
@@ -2612,7 +2412,7 @@ msgstr "ארגון מחדש אובייקטים"
 
 msgctxt "#31593"
 msgid "MOVE LEFT/RIGHT TO BROWSE"
-msgstr "זוז שמאלה/ימינה לעיון"
+msgstr "זוז שמאלה או ימינה כדי לדפדף"
 
 msgctxt "#31594"
 msgid "CHOOSE A STYLE TO MAIN MENU"
@@ -2620,47 +2420,39 @@ msgstr "בחר עיצוב לתפריט הראשי"
 
 msgctxt "#31595"
 msgid "CHOOSE A COLOR FOR THE PANELS"
-msgstr "בחר צבע עבור הפאנלים"
+msgstr "בחר צבע עבור הלוחות"
 
 msgctxt "#31596"
-msgid ""
-"BESIDES THE MAIN MENU, MANY OTHER PLACES OF THE SKIN MAY HAVE THE COLOR TONE"
-" CHANGED."
-msgstr ""
+msgid "BESIDES THE MAIN MENU, MANY OTHER PLACES OF THE SKIN MAY HAVE THE COLOR TONE CHANGED."
+msgstr "מלבד בתפריט הראשי, ניתן לשנות גוונים וצבעים במקומות רבים אחרים במעטפת."
 
 msgctxt "#31597"
 msgid "RESTORE ALL OPTIONS FOR DEFAULT SKIN"
-msgstr "שחזר כל האפשרויות עבור מעטפת ברירת מחדל"
+msgstr "שחזר את כל האפשרויות עבור מעטפת ברירת מחדל"
 
 msgctxt "#31598"
-msgid ""
-"Error or others troubles can be solved here.[CR]Press Enter to access the "
-"button that will reset the settings to the skin defaults."
-msgstr "שגיאות ובעיות אחרות ניתן לפתור כאן.[CR]הקש אנטר כדי לגשת לכפתור שיבצע את האתחול להגדרות למעטפת ברירת המחדל."
+msgid "Error or others troubles can be solved here.[CR]Press Enter to access the button that will reset the settings to the skin defaults."
+msgstr "שגיאות ובעיות אחרות ניתן לפתור כאן.[CR]הקש אישור כדי לגשת ללחצן שיבצע את האיפוס להגדרות למעטפת ברירת המחדל."
 
 msgctxt "#31599"
 msgid "CAREFUL: THIS PROCESS IS IRREVERSIBLE !"
-msgstr "זהירות: תהליך זה בלתי הפיך!"
+msgstr "זהירות: התהליך בלתי הפיך!"
 
 msgctxt "#31600"
-msgid ""
-"Move for any direction to cancel.[CR]Press Enter to proceed.[CR]This option "
-"will reset the skin entirely and you will loose all your customizations."
-msgstr ""
+msgid "Move for any direction to cancel.[CR]Press Enter to proceed.[CR]This option will reset the skin entirely and you will loose all your customizations."
+msgstr "הזז לכל כיוון כדי לבטל.[CR]הקש אישור כדי להמשיך.[CR]אפשרות זו תאפס את המעטפת לחלוטין ותאבד את כל ההתאמות האישיות שלך."
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
-msgstr "מצב קיוסק  - מונע גישת תפריט באוספים"
+msgstr "מצב קיוסק - מונע גישה לתפריט באוספים"
 
 msgctxt "#31602"
 msgid "INFO KIOSK MODE- PREVENTS CHANGE SETTINGS IN INFORMATION WINDOW"
 msgstr "מצב מידע קיוסק - מונע שינוי הגדרות בחלון המידע"
 
 msgctxt "#31603"
-msgid ""
-"KIOSK CODE - TEMPORARILY DISABLES THE KIOSK MODE USING ARROWS - "
-"LEFT/RIGHT/UP"
-msgstr "קוד קיוסק - מנטרל זמנית את מצב KIOSK ע\"י שימוש בחצים - שמאלה/ימינה/למעלה"
+msgid "KIOSK CODE - TEMPORARILY DISABLES THE KIOSK MODE USING ARROWS - LEFT/RIGHT/UP"
+msgstr "קוד קיוסק - מנטרל זמנית את מצב קיוסק על ידי שימוש בחצים - שמאלה, ימינה, למעלה"
 
 msgctxt "#31604"
 msgid "SMART KIOSK - PREVENTS ONLY ACCESS TO ITEMS SETTINGS"
@@ -2668,7 +2460,7 @@ msgstr "קיוסק חכם - מונע רק גישה להגדרות הפריטים
 
 msgctxt "#31605"
 msgid "SHOW OPTMIZED POPUP FOR VOXCOMMANDO"
-msgstr "הצג פופ-אפ משופר עבור VOXCOMMANDO"
+msgstr "הצג חלונית משופרת עבור VOXCOMMANDO"
 
 msgctxt "#31606"
 msgid "Want a different visual for skin?[CR]Choose a new images theme"
@@ -2680,23 +2472,23 @@ msgstr "תמונות ערכות נושא"
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
-msgstr "הפעל אפשרויות הקלטה (PVR)"
+msgstr "הפעל אפשרויות מקליט וידאו אישי (PVR)"
 
 msgctxt "#31609"
 msgid "KIOSK CODE"
-msgstr "קוד KIOSK"
+msgstr "קוד קיוסק"
 
 msgctxt "#31610"
 msgid "REACTIVATE KIOSK CODE"
-msgstr "הפעל מחדש קוד KIOSK"
+msgstr "הפעל מחדש קוד קיוסק"
 
 msgctxt "#31611"
 msgid "KIOSK CODE BLOCKED"
-msgstr "קוד KIOSK חסום"
+msgstr "קוד קיוסק חסום"
 
 msgctxt "#31612"
 msgid "KIOSK CODE ACCEPTED"
-msgstr "קוד KIOSK התקבל"
+msgstr "קוד קיוסק התקבל"
 
 msgctxt "#31613"
 msgid "AN INCORRECT SEQUENCE CANCELS THE PROCESS."
@@ -2704,7 +2496,7 @@ msgstr "רצף לא נכון מבטל את התהליך."
 
 msgctxt "#31614"
 msgid "STYLES BY EXTRAPACK"
-msgstr "עיצובים עם EXTRAPACK"
+msgstr "עיצובים עם חבילת אקסטרה"
 
 msgctxt "#31615"
 msgid "MY STYLE"
@@ -2724,15 +2516,15 @@ msgstr "אם ישנו מארז של סרטים, יהיה שימוש באריזה
 
 msgctxt "#31619"
 msgid "MOVIE SETS LABEL WILL BE SHOWN."
-msgstr "תווית מארז סרטים תוצג."
+msgstr "תוצג תווית מארז סרטים."
 
 msgctxt "#31620"
 msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
-msgstr "הצג אייקוני שפת אודיו וכתוביות"
+msgstr "הצג סמלילי שפת אודיו וכתוביות"
 
 msgctxt "#31621"
 msgid "PANEL DELAY"
-msgstr "פאנל השהייה"
+msgstr "לוח השהייה"
 
 msgctxt "#31622"
 msgid "EXPORT SKIN SETTINGS"
@@ -2744,11 +2536,11 @@ msgstr "ייבא הגדרות מעטפת"
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"
-msgstr "לחץ אנטר לסימון"
+msgstr "לחץ אישור לסימון"
 
 msgctxt "#31625"
 msgid "AQUA"
-msgstr "אקווה"
+msgstr "מים"
 
 msgctxt "#31626"
 msgid "BLOOD"
@@ -2844,7 +2636,7 @@ msgstr "ללא צבע"
 
 msgctxt "#31649"
 msgid "Select an item and press enter to switch his position."
-msgstr "בחר פריט כלשהו ולחץ ENTER כדי להעביר את מיקומו."
+msgstr "בחר פריט כלשהו ולחץ אישור כדי להעביר את מיקומו."
 
 msgctxt "#31650"
 msgid "AEON MQ 5 CONFIGURATION WIZARD"
@@ -2852,31 +2644,23 @@ msgstr "אשף ההגדרות של Aeon MQ5"
 
 msgctxt "#31651"
 msgid "SMART KIOSK"
-msgstr "KIOSK חכם"
+msgstr "קיוסק חכם"
 
 msgctxt "#31652"
-msgid ""
-"SMART KIOSK leaves the menu accessible with the basic functions and inhibits"
-" all the setup options.[CR]KIOSK CODE mode temporarily disables it using a "
-"sequence of pre-defined commands."
-msgstr "'קיוסק חכם' משאיר את התפריט נגיש עבור פונקציות בסיסיות ומונע את כל אפשרויות ההתקנה.[CR]'קוד קיוסק' מנטרל זאת זמנית בעזרת רצף של פקודות מוגדרות מראש."
+msgid "SMART KIOSK leaves the menu accessible with the basic functions and inhibits all the setup options.[CR]KIOSK CODE mode temporarily disables it using a sequence of pre-defined commands."
+msgstr "קיוסק חכם משאיר את התפריט נגיש עבור פונקציות בסיסיות ומונע את כל אפשרויות ההתקנה.[CR]קוד קיוסק מנטרל זאת זמנית בעזרת רצף של פקודות מוגדרות מראש."
 
 msgctxt "#31653"
 msgid "CUSTOM CASE"
 msgstr "מארז מותאם אישית"
 
 msgctxt "#31654"
-msgid ""
-"Change the color or define a new label, adjust the media cases to your "
-"collection."
+msgid "Change the color or define a new label, adjust the media cases to your collection."
 msgstr "שנה את הצבעים או הגדר תווית חדשה, התאם את אריזות המדיה של האוסף שלך."
 
 msgctxt "#31655"
-msgid ""
-"Would not it be great to get all the themes, backdrops, icons and logos with"
-" only one click?[CR]You can with Aeon MQ 5, you download a single package "
-"and have access to all the extra content."
-msgstr "זה לא יהיה נהדר אם נוכל להשיג את כל ערכות הנושא, רקעים, סמלים ולוגואים בלחיצה אחת?[CR]עם Aeon MQ 5 זה אפשרי, באפשרותך להוריד חבילה בודדת ולהשיג את כל התוכן הנוסף."
+msgid "Would not it be great to get all the themes, backdrops, icons and logos with only one click?[CR]You can with Aeon MQ 5, you download a single package and have access to all the extra content."
+msgstr "זה לא יהיה נהדר אם נוכל להשיג את כל ערכות הנושא, רקעים, סמלים וסמלילים בלחיצה אחת?[CR]עם Aeon MQ 5 זה אפשרי, באפשרותך להוריד חבילה בודדת ולהשיג את כל התוכן הנוסף."
 
 msgctxt "#31656"
 msgid "Applying new settings..."
@@ -2892,7 +2676,7 @@ msgstr "-"
 
 msgctxt "#31659"
 msgid "BUILD"
-msgstr "גרסה"
+msgstr "גרסת בילד"
 
 msgctxt "#31660"
 msgid "TO SELECT THE STYLE YOU WANT,[CR]USE THE ARROW UP OR DOWN."
@@ -2900,11 +2684,11 @@ msgstr "כדי לסמן את העיצוב שאתה רוצה,[CR]השתמש בח�
 
 msgctxt "#31661"
 msgid "SHOW 'PAUSE'"
-msgstr "הצג 'הפסקה'"
+msgstr "הצג לחצן השהה"
 
 msgctxt "#31662"
 msgid "HIDE 'PAUSE'"
-msgstr "הסתר 'הפסקה'"
+msgstr "הסתר לחצן השהה"
 
 msgctxt "#31663"
 msgid "HIDE PARTLY WATCHED"
@@ -2952,7 +2736,7 @@ msgstr "הסתר מצב ספרייה"
 
 msgctxt "#31674"
 msgid "ALTERNATIVE GENRE FANART"
-msgstr "פאנארט ז'אנר חלופי"
+msgstr "פאנארט סגנון חלופי"
 
 msgctxt "#31675"
 msgid "SHOW RSS"
@@ -2964,19 +2748,19 @@ msgstr "הסתר RSS"
 
 msgctxt "#31677"
 msgid "SHOW TITLES (GENRE:; STUDIO: AND ETC...)"
-msgstr "הצג כותרות (ז'אנר:, אולפן: וכ'ו...)"
+msgstr "הצג כותרות (סגנון:, אולפן: וכדומה)."
 
 msgctxt "#31678"
 msgid "SHOW FURNITURE"
-msgstr "הצג תפאורה"
+msgstr "הצג ריהוט"
 
 msgctxt "#31679"
 msgid "HIDE FURNITURE"
-msgstr "הסתר תפאורה"
+msgstr "הסתר ריהוט"
 
 msgctxt "#31681"
 msgid "MOVE UP/DOWN TO END"
-msgstr "הזז למעלה/למטה כדי לסיים"
+msgstr "הזז למעלה או למטה כדי לסיים"
 
 msgctxt "#31682"
 msgid "MOVE RIGHT TO BROWSE"
@@ -2992,7 +2776,7 @@ msgstr "סיים שלב זה והתקדם קדימה"
 
 msgctxt "#31685"
 msgid "COLOR PALETTE FOR THE PANELS"
-msgstr "בורר צבעים עבור הפאנלים"
+msgstr "בורר צבעים עבור הלוחות"
 
 msgctxt "#31686"
 msgid "COLOR PALETTE FOR TITLES"
@@ -3000,7 +2784,7 @@ msgstr "בורר צבעים עבור כותרות"
 
 msgctxt "#31687"
 msgid "COLOR FOR PANELS"
-msgstr "צבע עבור פאנלים"
+msgstr "צבע עבור לוחות"
 
 msgctxt "#31688"
 msgid "COLOR FOR TITLES"
@@ -3008,11 +2792,11 @@ msgstr "צבע עבור כותרות"
 
 msgctxt "#31689"
 msgid "TRANSPARENCY FOR PANELS - INCLUDE MAIN MENU"
-msgstr "שקיפות עבור פאנלים - כולל תפריט ראשי"
+msgstr "שקיפות עבור לוחות - כולל תפריט ראשי"
 
 msgctxt "#31690"
 msgid "PANEL TRANSPARENCY"
-msgstr "שקיפות פאנל"
+msgstr "שקיפות לוח"
 
 msgctxt "#31691"
 msgid "CURRENT TRANSPARENCY LEVEL"
@@ -3024,11 +2808,11 @@ msgstr "מיידי - ללא עיכוב"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr "מעטפת מותאמת למסך מגע (כרטיסיית עזרה תופיע)"
+msgstr "מעטפת מותאמת למסך מגע (תופיע כרטיסיית עזרה)"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"
-msgstr "הכי שוחקו"
+msgstr "שוחקו הכי הרבה"
 
 msgctxt "#31695"
 msgid "RELOAD"
@@ -3040,7 +2824,7 @@ msgstr "כותרת מקורית בחלק העליון"
 
 msgctxt "#31697"
 msgid "CAST SCROLLING"
-msgstr " גלילת צוות"
+msgstr "גלילת צוות"
 
 msgctxt "#31698"
 msgid "PLAYBACK OPTIONS"
@@ -3048,7 +2832,7 @@ msgstr "אפשרויות ניגון"
 
 msgctxt "#31699"
 msgid "INFORMATION PANEL OPTIONS"
-msgstr "אפשרויות פאנל מידע"
+msgstr "אפשרויות לוח מידע"
 
 msgctxt "#31700"
 msgid "PLAY"
@@ -3079,10 +2863,8 @@ msgid "Translation and support coordinator"
 msgstr "רכזי תרגום ותמיכה"
 
 msgctxt "#31707"
-msgid ""
-"To all the people who believed in my work and collaborated in some way to "
-"make this project possible. To all of you, thank you from my heart"
-msgstr ""
+msgid "To all the people who believed in my work and collaborated in some way to make this project possible. To all of you, thank you from my heart"
+msgstr "לכל האנשים שהאמינו בעבודתי ושיתפו פעולה בדרך כלשהי כדי להפוך את הפרויקט הזה אפשרי. לכולכם, תודה לכם מכל הלב"
 
 msgctxt "#31708"
 msgid "Special thanks"
@@ -3170,15 +2952,15 @@ msgstr "אפשרויות צפייה"
 
 msgctxt "#31729"
 msgid "SHOW PAUSE WORD"
-msgstr "הצג את המילה 'הפסקה'"
+msgstr "הצג את המילה השהה"
 
 msgctxt "#31730"
 msgid "SHOW POSTER/CLEARART"
-msgstr "הצג POSTER/CLEARART"
+msgstr "הצג פוסטר או אמנות שקופה"
 
 msgctxt "#31731"
 msgid "SHOW COVER/THUMBNAIL"
-msgstr "הצג COVER/THUMBNAIL"
+msgstr "הצג עטיפה או תמונות ממוזערות"
 
 msgctxt "#31732"
 msgid "MODE: FIXED"
@@ -3190,23 +2972,23 @@ msgstr "מצב: חלופי"
 
 msgctxt "#31734"
 msgid "DISPLAY: CLEARART"
-msgstr "תצוגה: CLEARART"
+msgstr "תצוגה: אמנות שקופה"
 
 msgctxt "#31735"
 msgid "DISPLAY: LOGO"
-msgstr "תצוגה: LOGO"
+msgstr "תצוגה: סמל"
 
 msgctxt "#31736"
 msgid "LANDSCAPE"
-msgstr "LANDSCAPE"
+msgstr "נוף"
 
 msgctxt "#31737"
 msgid "PAUSE"
-msgstr "הפסקה"
+msgstr "השהה"
 
 msgctxt "#31738"
 msgid "RETURN TO MENU BUTTON"
-msgstr "חזרה לתפריט הקודם"
+msgstr "לחצן חזרה לתפריט"
 
 msgctxt "#31739"
 msgid "CLOSE THIS DIALOGUE BOX"
@@ -3214,11 +2996,11 @@ msgstr "סגור את תיבת הדו-שיח"
 
 msgctxt "#31740"
 msgid "VIS(VIDEO)"
-msgstr "תצ'(וידאו)"
+msgstr "VIS(וידאו)"
 
 msgctxt "#31741"
 msgid "VIS(AUDIO)"
-msgstr "תצ'(אודיו)"
+msgstr "VIS(אודיו)"
 
 msgctxt "#31742"
 msgid "OPEN TRAY"
@@ -3230,7 +3012,7 @@ msgstr "פעיל"
 
 msgctxt "#31744"
 msgid "THERE IS NO BUTTON ON !"
-msgstr "אין כפתור פעיל !"
+msgstr "אין כפתור פעיל!"
 
 msgctxt "#31745"
 msgid "FILTERS"
@@ -3246,7 +3028,7 @@ msgstr "עדכן ספריה"
 
 msgctxt "#31748"
 msgid "THEME IN USE"
-msgstr "מעטפת בשימוש"
+msgstr "ערכת נושא בשימוש"
 
 msgctxt "#31749"
 msgid "STYLE IN USE"
@@ -3254,11 +3036,11 @@ msgstr "עיצוב בשימוש"
 
 msgctxt "#31750"
 msgid "COLOR IN USE TO THE PANELS"
-msgstr "צבע בשימוש הפאנלים"
+msgstr "צבע לשימוש בלוחות"
 
 msgctxt "#31751"
 msgid "COLOR IN USE FOR TITLES"
-msgstr "צבע בשימוש עבור כותרות"
+msgstr "צבע לשימוש בכותרות"
 
 msgctxt "#31752"
 msgid "Skin status"
@@ -3274,7 +3056,7 @@ msgstr "עוצמה"
 
 msgctxt "#31755"
 msgid "MUTE"
-msgstr "השקט"
+msgstr "השתק"
 
 msgctxt "#31756"
 msgid "TOTAL"
@@ -3458,11 +3240,11 @@ msgstr "פרטי אלבום"
 
 msgctxt "#31801"
 msgid "LIST"
-msgstr "LIST"
+msgstr "רשימה"
 
 msgctxt "#31802"
 msgid "SHOWCASE"
-msgstr "SHOWCASE"
+msgstr "תצוגת עטיפות"
 
 msgctxt "#31803"
 msgid "MULTIPLEX"
@@ -3474,87 +3256,87 @@ msgstr "LANDSCAPEX"
 
 msgctxt "#31805"
 msgid "WALL"
-msgstr "WALL"
+msgstr "קיר"
 
 msgctxt "#31806"
 msgid "WALL 3D"
-msgstr "WALL 3D"
+msgstr "קיר תלת-ממד"
 
 msgctxt "#31807"
 msgid "LOW LIST"
-msgstr "LOW LIST"
+msgstr "רשימה נמוכה"
 
 msgctxt "#31808"
 msgid "POSTER"
-msgstr "POSTER"
+msgstr "פוסטר"
 
 msgctxt "#31809"
 msgid "SHELF"
-msgstr "SHELF"
+msgstr "מדף"
 
 msgctxt "#31810"
 msgid "COVERFLOW"
-msgstr "COVERFLOW"
+msgstr "גלישה"
 
 msgctxt "#31811"
 msgid "BANNER"
-msgstr "BANNER"
+msgstr "כרזה"
 
 msgctxt "#31812"
 msgid "BANNER INFO"
-msgstr "BANNER INFO"
+msgstr "מידע על כרזה"
 
 msgctxt "#31813"
 msgid "WIDE"
-msgstr "WIDE"
+msgstr "רחב"
 
 msgctxt "#31814"
 msgid "LANDSCAPE"
-msgstr "LANDSCAPE"
+msgstr "נוף"
 
 msgctxt "#31815"
 msgid "SQUARE"
-msgstr "SQUARE"
+msgstr "מרובע"
 
 msgctxt "#31816"
 msgid "TALL"
-msgstr "TALL"
+msgstr "גבוה"
 
 msgctxt "#31817"
 msgid "PHOTOSHOW"
-msgstr "PHOTOSHOW"
+msgstr "תצוגת תמונה"
 
 msgctxt "#31818"
 msgid "PANEL"
-msgstr "PANEL"
+msgstr "לוח"
 
 msgctxt "#31819"
 msgid "LANDSCAPE PANEL"
-msgstr "PANEL LANDSCAPE"
+msgstr "לוח נוף"
 
 msgctxt "#31820"
 msgid "LOGO PANEL"
-msgstr "PANEL LOGO"
+msgstr "לוח סמל"
 
 msgctxt "#31821"
 msgid "SHOWART"
-msgstr "SHOWART"
+msgstr "הצגת אמנות"
 
 msgctxt "#31822"
 msgid "EPG:NEXT"
-msgstr ""
+msgstr "מדריך תכניות: הבא"
 
 msgctxt "#31823"
 msgid "LARGE LIST"
-msgstr "LARGE LIST"
+msgstr "רשימה רחבה"
 
 msgctxt "#31824"
 msgid "SEASON BANNER"
-msgstr "באנר עונה"
+msgstr "כרזת עונה"
 
 msgctxt "#31825"
 msgid "EPISODES BANNER"
-msgstr "באנר פרקים"
+msgstr "כרזת פרקים"
 
 msgctxt "#31826"
 msgid "SETS"
@@ -3562,15 +3344,15 @@ msgstr "מארזים"
 
 msgctxt "#31827"
 msgid "GLASS LIST"
-msgstr "GLASS LIST"
+msgstr "רשימת זכוכית"
 
 msgctxt "#31828"
 msgid "RIGHT LIST"
-msgstr "RIGHT LIST"
+msgstr "רשימה בימין"
 
 msgctxt "#31829"
 msgid "EPG:NOW"
-msgstr ""
+msgstr "מדריך תכניות: עכשיו"
 
 msgctxt "#31830"
 msgid "...Defining fonts, colors and styles"
@@ -3602,7 +3384,7 @@ msgstr "...מגדיר תת-תפריטים למוזיקה"
 
 msgctxt "#31837"
 msgid "...Defining sub menus for weather"
-msgstr "...מגדיר תת-תפריטים למזג אויר"
+msgstr "...מגדיר תת-תפריטים למזג אוויר"
 
 msgctxt "#31838"
 msgid "...Defining sub menus for settings"
@@ -3654,7 +3436,7 @@ msgstr "מזג אויר קשה"
 
 msgctxt "#31850"
 msgid "WEATHER PERSPECTIVE"
-msgstr "השקפת תחזית מזג האויר"
+msgstr "שיקוף תחזית מזג האויר"
 
 msgctxt "#31851"
 msgid "AVERAGE HIGH"
@@ -3682,7 +3464,7 @@ msgstr "קרוב לוודאי נמוך"
 
 msgctxt "#31857"
 msgid "DEFAULT MAP"
-msgstr "מפה ברירת מחדל"
+msgstr "מפת ברירת מחדל"
 
 msgctxt "#31858"
 msgid "LARGER MAP"
@@ -3706,15 +3488,15 @@ msgstr "הסתברות לגשם"
 
 msgctxt "#31863"
 msgid "SEARCHING FOR FORECAST INFO"
-msgstr "מחפש פרטים על תחזית..."
+msgstr "מחפש פרטים על התחזית"
 
 msgctxt "#31864"
 msgid "SELECT VIDEO BUTTON TO PLAYBACK"
-msgstr "סמן כפתור וידאו לניגון"
+msgstr "בחר לחצן וידאו לניגון"
 
 msgctxt "#31865"
 msgid "MAPS PATH"
-msgstr "מיקום מפות"
+msgstr "נתיב מפות"
 
 msgctxt "#31866"
 msgid "SHOW DETAILS"
@@ -3762,11 +3544,11 @@ msgstr "עונה"
 
 msgctxt "#31877"
 msgid "EPG:CHANNEL"
-msgstr ""
+msgstr "מדריך תכניות: ערוץ"
 
 msgctxt "#31878"
 msgid "SHELFCASE"
-msgstr "SHELFCASE"
+msgstr "עטיפת מדף"
 
 msgctxt "#31879"
 msgid "USE EXTERNAL MEDIA CASES OF PACKAGE (USER DEFINED)"
@@ -3794,19 +3576,19 @@ msgstr "קבל פרטי תסריטאי"
 
 msgctxt "#31885"
 msgid "GET FILMOGRAPHY ARTIST"
-msgstr "קבל פילמוגרפיית אמן"
+msgstr "קבל רשימת סרטי האמן"
 
 msgctxt "#31886"
 msgid "PRESS LEFT/RIGHT TO CHANGE RATING"
-msgstr "לחץ שמאלה/ימינה כדי לשנות דירוג"
+msgstr "לחץ שמאלה או ימינה כדי לשנות דירוג"
 
 msgctxt "#31887"
 msgid "PRESS ENTER TO CONFIRM"
-msgstr "לחץ ENTER לאישור"
+msgstr "לחץ אישור כדי לאשר"
 
 msgctxt "#31888"
 msgid "GET OR UPDATE EXTRAPACK"
-msgstr "קבל או עדכן EXTRAPACK"
+msgstr "קבל או עדכן חבילת אקסטרה"
 
 msgctxt "#31889"
 msgid "COLD"
@@ -3854,7 +3636,7 @@ msgstr "תמונות ערכת נושא אקראיות"
 
 msgctxt "#31900"
 msgid "EXTRAPACK NECESSARY"
-msgstr "דרוש EXTRAPACK"
+msgstr "דרושה חבילת אקסטרה"
 
 msgctxt "#31901"
 msgid "USE EXTERNAL PACKAGE IMAGES (USER DEFINED)"
@@ -3862,21 +3644,19 @@ msgstr "השתמש בחבילת תמונות חיצונית (הגדרת משתמ
 
 msgctxt "#31902"
 msgid "USE INTERNAL PACKAGE ICONS (EXTRAPACK PROVIDED BY SKIN)"
-msgstr "השתמש בחבילת צלמיות פנימית (EXTRAPACK מסופק עם המעטפת)"
+msgstr "השתמש בחבילת סמלילים פנימיים (חבילת אקסטרה מסופקת עם המעטפת)"
 
 msgctxt "#31903"
 msgid "USE EXTERNAL ICONS OF PACKAGE (USER DEFINED)"
-msgstr "השתמש בחבילת צלמיות חיצונית (הגדרת משתמש)"
+msgstr "השתמש בחבילת סמלילים חיצונית (הגדרת משתמש)"
 
 msgctxt "#31904"
 msgid "MODERN IMAGES THEME"
 msgstr "תמונות ערכת נושא מודרני"
 
 msgctxt "#31905"
-msgid ""
-"A new theme is loaded each time you start skin, your skin will never be the "
-"same"
-msgstr "ערכת נושא חדשה נטענת בכל הפעלה של המעטפת, המעטפת שלך לעולם לא תראה אותו הדבר."
+msgid "A new theme is loaded each time you start skin, your skin will never be the same"
+msgstr "ערכת נושא חדשה נטענת בכל הפעלה של המעטפת, המעטפת שלך לעולם לא תראה אותו הדבר"
 
 msgctxt "#31906"
 msgid "DIRECTOR'S MOVIES"
@@ -3895,18 +3675,16 @@ msgid "PERSONAL IMAGES THEME"
 msgstr "תמונות ערכת נושא אישיות"
 
 msgctxt "#31910"
-msgid ""
-"CREATE YOUR OWN THEME WITH THE IMAGES YOU WANT.[CR] PRESS ENTER TO LEARN "
-"MORE OR TO DEFINE."
-msgstr "צור ערכת נושא משלך עם תמונות שאתה רוצה.[CR] לחץ ENTER כדי ללמוד עוד או כדי להגדיר."
+msgid "CREATE YOUR OWN THEME WITH THE IMAGES YOU WANT.[CR] PRESS ENTER TO LEARN MORE OR TO DEFINE."
+msgstr "צור ערכת נושא משלך עם תמונות שאתה רוצה.[CR]לחץ אישור כדי ללמוד עוד או כדי להגדיר."
 
 msgctxt "#31911"
 msgid "CREATING MY THEME"
-msgstr "יוצר ערכת הנושא שלי"
+msgstr "יוצר את ערכת הנושא שלי"
 
 msgctxt "#31912"
 msgid "MOVE TO ANY DIRECTION TO CANCEL PRESS ENTER TO INDICATE THE PATH"
-msgstr "זוז לכל כיוון כדי לבטל לחץ ENTER כדי לסמן את המיקום"
+msgstr "זוז לכל כיוון כדי לבטל. לחץ אישור כדי לסמן את המיקום"
 
 msgctxt "#31913"
 msgid "Clear color images for a smooth visual."
@@ -3917,13 +3695,12 @@ msgid "Hot color images tones for people who prefer more contrast."
 msgstr "גווני תמונה חמים לאנשים שמעדיפים יותר ניגודיות."
 
 msgctxt "#31915"
-msgid ""
-"Computer generated graphics, highlighting the work of many web artists."
+msgid "Computer generated graphics, highlighting the work of many web artists."
 msgstr "גרפיקה ממוחשבת, מדגישה את העבודה של הרבה מעצבי אינטרנט."
 
 msgctxt "#31916"
 msgid "Dark tone images mixed with neon, a nice combination."
-msgstr "טונים כהים מעורבבים עם ניאון, שילוב נחמד."
+msgstr "גוונים כהים מעורבבים עם ניאון, שילוב נחמד."
 
 msgctxt "#31917"
 msgid "SHORTCUTS"
@@ -3955,11 +3732,11 @@ msgstr "מחק מסד נתונים והורד את החבילה שוב"
 
 msgctxt "#31924"
 msgid "BOX FRONT"
-msgstr "אריזה קדמית"
+msgstr "עטיפה קדמית"
 
 msgctxt "#31925"
 msgid "BOX BACK"
-msgstr "אריזה אחורית"
+msgstr "עטיפה אחורית"
 
 msgctxt "#31926"
 msgid "CARTRIDGE"
@@ -3971,7 +3748,7 @@ msgstr "צילום מסך"
 
 msgctxt "#31928"
 msgid "CLICK GO TO LIBRARY MODE"
-msgstr "לחץ כדי לעבור למצב ספריה"
+msgstr "לחץ כדי לעבור למצב ספרייה"
 
 msgctxt "#31929"
 msgid "CLICK GO TO SETS MODE"
@@ -3979,11 +3756,11 @@ msgstr "לחץ כדי לעבור למצב אוספים"
 
 msgctxt "#31930"
 msgid "RESCRAPE GAME"
-msgstr "משוך משחק"
+msgstr "בצע סקרייפ למשחק"
 
 msgctxt "#31931"
 msgid "RESCRAPE SELECTION"
-msgstr "משוך בחירה"
+msgstr "בצע סקרייפ לבחירה"
 
 msgctxt "#31932"
 msgid "EXPORT GAME DATABASE (NFO FILES)"
@@ -3995,7 +3772,7 @@ msgstr "פתח הגדרות הרחבות"
 
 msgctxt "#31934"
 msgid "LAYOUT: BANNER"
-msgstr "מערך: באנר"
+msgstr "מערך: כרזה"
 
 msgctxt "#31935"
 msgid "LAYOUT: POSTER"
@@ -4015,7 +3792,7 @@ msgstr "אוטומטי"
 
 msgctxt "#31939"
 msgid "SEARCHING FOR DISCOGRAPHY INFORMATION..."
-msgstr "מחפש עבור פרטי דיסקוגרפיה..."
+msgstr "מחפש מידע על קטלוג תקליטורים"
 
 msgctxt "#31940"
 msgid "Similar artists"
@@ -4027,11 +3804,11 @@ msgstr "הגבלה"
 
 msgctxt "#31942"
 msgid "Metadata"
-msgstr "מטהדאטה"
+msgstr "מטא-דאטה"
 
 msgctxt "#31943"
 msgid "SHOW ONLY CDART AND COVER"
-msgstr "הצג רק דיסק ועטיפה"
+msgstr "הצג רק אמנות תקליטור ועטיפה"
 
 msgctxt "#31944"
 msgid "IMAGE ZOOM"
@@ -4047,7 +3824,7 @@ msgstr "נגן סרט"
 
 msgctxt "#31947"
 msgid "PRESS ENTER TO ACCESS"
-msgstr "לחץ 'ENTER' כדי להיכנס"
+msgstr "לחץ אישור כדי להיכנס"
 
 msgctxt "#31948"
 msgid "WINDOW"
@@ -4055,15 +3832,15 @@ msgstr "חלון"
 
 msgctxt "#31949"
 msgid "VIDEO CLIPS"
-msgstr "קליפים"
+msgstr "סרטוני וידאו"
 
 msgctxt "#31950"
 msgid "ARTIST VIDEO CLIPS"
-msgstr "אמן וידאו קליפ"
+msgstr "סרטון וידאו לאמן"
 
 msgctxt "#31951"
 msgid "SONG VIDEO CLIP"
-msgstr "שיר וידאו קליפ"
+msgstr "סרטון וידאו לשיר"
 
 msgctxt "#31952"
 msgid "PERSONAL INFORMATION"
@@ -4075,15 +3852,15 @@ msgstr "פרטי סרט"
 
 msgctxt "#31954"
 msgid "FILMOGRAPHY"
-msgstr "פילמוגרפיה"
+msgstr "רשימת סרטים"
 
 msgctxt "#31955"
 msgid "In library"
-msgstr "בספריה"
+msgstr "בספרייה"
 
 msgctxt "#31956"
 msgid "DISC MENU"
-msgstr "תפריט דיסק"
+msgstr "תפריט תקליטור"
 
 msgctxt "#31957"
 msgid "MULTIPLE THUMBS (TOP MENU)"
@@ -4095,7 +3872,7 @@ msgstr "תמונה ממוזערת (תפריט עליון)"
 
 msgctxt "#31959"
 msgid "SHOW AUDIO AND VIDEO VISUALIZATIONS AS BACKGROUND (GLOBAL)"
-msgstr "הצג חיזוי עבור וידאו ואודיו כרקע (גלובאלי)"
+msgstr "הצג חיזוי ברקע עבור וידאו ואודיו (כללי)"
 
 msgctxt "#31960"
 msgid "CONTINUE LISTENING"
@@ -4123,12 +3900,10 @@ msgstr "תמונות שמשלבות אומנות דיגיטלית ועיצוב �
 
 msgctxt "#31966"
 msgid "Images that transmit a visual look fresh and modern."
-msgstr "תמונות שמשדרות מראה רענן ומודרני"
+msgstr "תמונות שמשדרות מראה רענן ומודרני."
 
 msgctxt "#31967"
-msgid ""
-"This function erases all the pictures that were downloaded and performs a "
-"full download again. Used to correct any problems in downloading."
+msgid "This function erases all the pictures that were downloaded and performs a full download again. Used to correct any problems in downloading."
 msgstr "פעולה זו תמחק את כל התמונות אשר הורדו ותבצע הורדה מלאה שוב. עדיף להשתמש כאשר יש בעיות בהורדה."
 
 msgctxt "#31968"
@@ -4137,15 +3912,15 @@ msgstr "עתידני"
 
 msgctxt "#31970"
 msgid "Aeon MQ 5 - Extrapack"
-msgstr "Aeon MQ 5 - Extrapack"
+msgstr "חבילת אקסטרה - Aeon MQ 5"
 
 msgctxt "#31971"
 msgid "Update finished"
-msgstr "עדכון הסתיים"
+msgstr "העדכון הסתיים"
 
 msgctxt "#31972"
 msgid "Update failed"
-msgstr "עדכון נכשל"
+msgstr "העדכון נכשל"
 
 msgctxt "#31973"
 msgid "No update required"
@@ -4156,10 +3931,8 @@ msgid "Downloading:"
 msgstr "מוריד:"
 
 msgctxt "#31975"
-msgid ""
-"Images in reddish tones the combined with graphite tone.[CR]The default "
-"theme of Aeon MQ 5."
-msgstr "תמונות בגוונים אדומים משולבים עם גווני גרפיט. [CR] ערכת נושא ברירת מחדל של Aeon MQ5"
+msgid "Images in reddish tones the combined with graphite tone.[CR]The default theme of Aeon MQ 5."
+msgstr "תמונות בגוונים אדומים משולבים עם גווני גרפיט.[CR]ערכת נושא ברירת מחדל של Aeon MQ5"
 
 msgctxt "#31976"
 msgid "SHOW TAGLINE"
@@ -4167,27 +3940,27 @@ msgstr "הצג סלוגן"
 
 msgctxt "#31977"
 msgid "CUSTOMIZE DEFAULT DISC"
-msgstr "התאם דיסק ברירת מחדל"
+msgstr "התאם תקליטור ברירת מחדל"
 
 msgctxt "#31978"
 msgid "AUDIO DISC"
-msgstr "דיסק אודיו"
+msgstr "תקליטור אודיו"
 
 msgctxt "#31979"
 msgid "VIDEO DISC"
-msgstr "דיסק וידאו"
+msgstr "תקליטור וידאו"
 
 msgctxt "#31980"
 msgid "NEXT EPISODE"
-msgstr "פרק הבא"
+msgstr "הפרק הבא"
 
 msgctxt "#31981"
 msgid "EPISODES AIRED TODAY"
-msgstr "פרקים ששודרו היום"
+msgstr "הפרקים ששודרו היום"
 
 msgctxt "#31982"
 msgid "SHOW FIRST WIDGET LIKE 'IN PROGRESS' (MOVIES, TV SHOWS AND CONCERT)"
-msgstr "הצג ווידג'ט ראשון כמו 'בתהליך' (סרטים, סדרות והופעות)"
+msgstr "הצג יישומון ראשון כמו - בתהליך (סרטים, סדרות והופעות)"
 
 msgctxt "#31983"
 msgid "Rating"
@@ -4199,25 +3972,18 @@ msgstr "קרדיט"
 
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
-msgstr "הצג פאנל מתנגן עכשיו"
+msgstr "הצג לוח מתנגן עכשיו"
 
 msgctxt "#31987"
-msgid ""
-"You can save all settings made in the skin.[CR]You also transfer the "
-"settings to another computer"
-msgstr "יש באפשרותך לשמור את כל ההגדרות שנעשו במעטפת.[CR]כמוכן יש אפשרות להעביר את ההגדרות למחשב אחר"
+msgid "You can save all settings made in the skin.[CR]You also transfer the settings to another computer"
+msgstr "יש באפשרותך לשמור את כל ההגדרות שנעשו במעטפת.[CR]כמו כן יש אפשרות להעביר את ההגדרות למחשב אחר"
 
 msgctxt "#31988"
-msgid ""
-"Here you reapply all settings saved previously.[CR]You can also do a fresh "
-"install and apply the saved settings.[CR]This option will override all "
-"settings made currently."
-msgstr "כאן באפשרותך להחיל מחדש את ההגדרות הקודמות השמורות.[CR]באפשרותך גם לבצע התקנה נקיה ולטעון את ההגדרות השמורות.[CR]אפשרות זו תדרוס כל הגדרות קודמות שנעשו."
+msgid "Here you reapply all settings saved previously.[CR]You can also do a fresh install and apply the saved settings.[CR]This option will override all settings made currently."
+msgstr "כאן באפשרותך להחיל מחדש את ההגדרות הקודמות השמורות.[CR]באפשרותך לבצע גם התקנה נקיה ולטעון את ההגדרות השמורות.[CR]אפשרות זו תדרוס את כל ההגדרות הקודמות שנעשו."
 
 msgctxt "#31989"
-msgid ""
-"Export settings as backup.[CR]Import settings to configure the skin in a "
-"simple way.[CR]Restore all settings to skin defaults."
+msgid "Export settings as backup.[CR]Import settings to configure the skin in a simple way.[CR]Restore all settings to skin defaults."
 msgstr "ייצא הגדרות כגיבוי.[CR]ייבא הגדרות כדי להגדיר את המעטפת בדרך פשוטה.[CR]שחזר כל ההגדרות למעטפת ברירת המחדל."
 
 msgctxt "#31990"
@@ -4234,28 +4000,24 @@ msgstr "קיימת כתובית מקומית"
 
 msgctxt "#31993"
 msgid "ADD GROUP"
-msgstr ""
+msgstr "הוסף קבוצה"
 
 msgctxt "#31994"
 msgid "RENAME GROUP"
-msgstr ""
+msgstr "שנה שם קבוצה"
 
 msgctxt "#31995"
 msgid "DELETE GROUP"
-msgstr ""
+msgstr "מחק קבוצה"
 
 msgctxt "#31996"
 msgid "AVAILABLE[CR]GROUPS"
-msgstr ""
+msgstr "קבוצות[CR]זמינות"
 
 msgctxt "#31997"
 msgid "SEEKING"
-msgstr ""
+msgstr "מחפש"
 
 msgctxt "#31999"
-msgid ""
-"The Original Aeon Skin and its name are intelectual property of djh_. The "
-"Aeon MQ 5 however has a independent code and does not use any texture of "
-"Original Aeon. A big thanks to the master djh_ for creating the masterpiece "
-"that is original Aeon."
-msgstr ""
+msgid "The Original Aeon Skin and its name are intelectual property of djh_. The Aeon MQ 5 however has a independent code and does not use any texture of Original Aeon. A big thanks to the master djh_ for creating the masterpiece that is original Aeon."
+msgstr "המעטפת המקורית Aeon והשם שלה הם קניין רוחני של djh_. עם זאת ל-Aeon MQ 5 יש קוד עצמאי שאינו משתמש במרקם של Aeon המקורי. תודה גדולה למאסטר djh_ על יצירת המופת כי הוא יצר את Aeon המקורי."
