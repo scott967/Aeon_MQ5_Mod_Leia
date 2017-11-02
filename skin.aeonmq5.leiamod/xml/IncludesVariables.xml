@@ -4699,4 +4699,8 @@
 		<value condition="Container(100).HasFocus(27)">$LOCALIZE[10035]</value>
 		<!-- Reset -->
 	</variable>
+	<variable name="TextDir">
+		<value condition="String.IsEqual(System>Language,hebrew) | String.IsEqual(System.Language,arabic)">right</value>
+		<value>left</value>
+	</variable>
 </includes>
