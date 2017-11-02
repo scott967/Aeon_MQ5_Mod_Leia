@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.3 -->
+<!-- Leia 10.2.3/10.2.6 -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>32</posy>
@@ -4127,6 +4127,12 @@
 					<description>Group recording items by folder structure</description>
 					<include>TopMenuRadioButton</include>
 					<label>[UPPERCASE]$LOCALIZE[19270][/UPPERCASE]</label>
+					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+				</control>
+				<control type="radiobutton" id="7">
+					<description>Show deleted recordings</description>
+					<include>TopMenuRadioButton</include>
+					<label>[UPPERCASE]SHOW $LOCALIZE[19184][/UPPERCASE]</label>
 					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 				</control>
 				<control type="button" id="9220">

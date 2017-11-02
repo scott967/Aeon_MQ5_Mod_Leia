@@ -112,15 +112,15 @@
 				</control>
 			</control>
 			<control type="label" id="29">
-				<description>Current Category</description>
+				<description>Show deleted</description>
 				<include>InvisibleButton</include>
 				<visible>false</visible>
 			</control>
-			<control type="label" id="30">
+			<!-- <control type="label" id="30">
 				<description>Current Sub Category</description>
 				<include>InvisibleButton</include>
 				<visible>false</visible>
-			</control>
+			</control> -->
 			<control type="group">
 				<!-- All views Grupo ocultar flags ou fanart -->
 				<posy>45</posy>
