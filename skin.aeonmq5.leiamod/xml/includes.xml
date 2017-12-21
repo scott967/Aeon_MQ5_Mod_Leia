@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
+<!-- Leia 10.2.7 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -2955,10 +2956,10 @@
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_rec),disable)]</property>
 				<icon>osd_menu_rec.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Record)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rec),disable)">Skin.SetString(osd_video_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rec),disable)">Skin.Reset(osd_video_rec,disable)</onclick>
-				<visible>[Player.CanRecord + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<visible>[PVR.CanRecordPlayingChannel + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="7">
 				<!-- disc -->
@@ -3343,10 +3344,10 @@
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_rec),disable)]</property>
 				<icon>osd_menu_rec.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Record)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rec),disable)">Skin.SetString(osd_audio_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rec),disable)">Skin.Reset(osd_audio_rec,disable)</onclick>
-				<visible>[Player.CanRecord + !String.Contains(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<visible>[PVR.CanRecordPlayingChannel + !String.Contains(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="13">
 				<!-- volumeup -->
