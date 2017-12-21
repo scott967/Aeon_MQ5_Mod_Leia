@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.19 -->
-<!-- Leia 10.2.6 -->
 <window>
 	<controls>
 		<!-- This was the old codecinfo provided in full screen video -->
@@ -89,7 +88,7 @@
 				<description>Header</description>
 				<left>120</left>
 				<top>8</top>
-				<width>1100</width>
+				<width>1800</width>
 				<height>38</height>
 				<label>$LOCALIZE[19005]</label>
 				<align>left</align>
@@ -101,7 +100,7 @@
 				<description>Backend</description>
 				<left>120</left>
 				<top>60</top>
-				<width>300</width>
+				<width>248</width>
 				<height>38</height>
 				<label>$LOCALIZE[19012]:</label>
 				<align>left</align>
@@ -111,7 +110,7 @@
 			</control>
 			<control type="label">
 				<description>Backend value</description>
-				<left>470</left>
+				<left>330</left>
 				<top>60</top>
 				<width>1500</width>
 				<height>38</height>
@@ -125,7 +124,7 @@
 				<description>Device</description>
 				<left>120</left>
 				<top>98</top>
-				<width>300</width>
+				<width>248</width>
 				<height>38</height>
 				<label>$LOCALIZE[19006]:</label>
 				<align>left</align>
@@ -135,7 +134,7 @@
 			</control>
 			<control type="label">
 				<description>Device value</description>
-				<left>470</left>
+				<left>330</left>
 				<top>98</top>
 				<width>1500</width>
 				<height>38</height>
@@ -149,7 +148,7 @@
 				<description>Status</description>
 				<left>120</left>
 				<top>135</top>
-				<width>300</width>
+				<width>248</width>
 				<height>38</height>
 				<label>$LOCALIZE[19007]:</label>
 				<align>left</align>
@@ -159,7 +158,7 @@
 			</control>
 			<control type="label">
 				<description>Status value</description>
-				<left>470</left>
+				<left>330</left>
 				<top>135</top>
 				<width>1500</width>
 				<height>38</height>
@@ -183,7 +182,7 @@
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
-				<left>420</left>
+				<left>330</left>
 				<top>183</top>
 				<width>1365</width>
 				<height>21</height>
