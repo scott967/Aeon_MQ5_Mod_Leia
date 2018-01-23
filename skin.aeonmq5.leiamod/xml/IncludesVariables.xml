@@ -2746,7 +2746,7 @@
 		<value condition="[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra)">$INFO[ListItem.Path]extrafanart/</value>
 		<value condition="Container.Content(files) + Skin.HasSetting(fallbackaudioimage)">$INFO[Skin.String(CustomFallbackMoviesBG)]</value>
 		<value condition="Container.Content(files) + Skin.HasSetting(musiccurtains)">special://skin/backgrounds/extras/curtains.jpg</value>
-		<value condition="Container.Content(files) + Skin.HasSetting(extrafanartaudio)">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</value>
+		<value condition="Container.Content(files) + Skin.HasSetting(extrafanartaudio)">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</value> <!-- extrafanartaudio never set -->
 	</variable>
 	<variable name="value_defaultmusicfanart">
 		<value condition="String.IsEmpty(ListItem.Art(fanart)) + ![Container.Content(genres) | Container.Content(roles)]">special://skin/backgrounds/music.jpg</value>

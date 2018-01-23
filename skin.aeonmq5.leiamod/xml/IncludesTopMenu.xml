@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.3/10.2.6 -->
+<!-- Leia 10.2.3/10.2.6/10.2.7 -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>32</posy>
@@ -1335,7 +1335,7 @@
 					<selected>!Skin.HasSetting(nodisctvshow)</selected>
 				</control>
 				<control type="button" id="9319">
-					<!-- ArtWork Downloader Solo Mode-->
+					<!-- ArtWork Downloader Solo Mode  Note artwork downloader is deprecated in Leia-->
 					<include>TopMenuButton</include>
 					<label>$VAR[value_addon1_solo]</label>
 					<onclick condition="!system.hasaddon(script.artwork.downloader)">ActivateWindow(Programs,Addons,return)</onclick>
@@ -1343,7 +1343,7 @@
 					<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mediatype=musicvideos, dbid=$INFO[ListItem.DBID])</onclick>
 					<onclick>SetFocus(51)</onclick>
-					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				</control>
 				<control type="button" id="9320">
 					<!-- ArtWork Downloader Gui Mode-->
@@ -1354,7 +1354,7 @@
 					<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
 					<onclick>SetFocus(51)</onclick>
-					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				</control>
 				<control type="button" id="9321">
 					<!-- ArtWork Downloader - Auto Mode -->
@@ -1364,7 +1364,7 @@
 					<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mediatype=movie)</onclick>
 					<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mediatype=musicvideos)</onclick>
 					<onclick>SetFocus(51)</onclick>
-					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				</control>
 				<control type="button" id="9322">
 					<!-- ArtWork Downloader - Custom Mode -->
@@ -1374,7 +1374,7 @@
 					<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], poster, fanart, extrafanart, extrathumbs, clearlogo, clearart, discart, thumb, banner)</onclick>
 					<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=custom, dbid=$INFO[ListItem.DBID], poster, fanart, extrafanart, extrathumbs, clearlogo, clearart, discart)</onclick>
 					<onclick>SetFocus(51)</onclick>
-					<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)</visible>
+					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				</control>
 				<!-- <control type="radiobutton" id="9323">
 					<include>TopMenuRadioButton</include>
