@@ -2,6 +2,8 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2901/9.2.2/9.2.3 -->
+<!-- Leia 10.2.8 -->
+
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onunload>Skin.Reset(customosd)</onunload>
@@ -59,7 +61,7 @@
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="out" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">Hidden</animation>
-			<visible>![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(videobookmarks) | Window.IsActive(fullscreeninfo) | Skin.HasSetting(novideofurnituretemp) | Skin.HasSetting(customosd)]</visible>
+			<visible>![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdsubtitlesettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(videobookmarks) | Window.IsActive(fullscreeninfo) | Skin.HasSetting(novideofurnituretemp) | Skin.HasSetting(customosd)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -110,7 +112,7 @@
 			<!-- <animation effect="slide" time="400" start="0,200" end="0,0" easing="out" tween="cubic">Visible</animation> -->
 			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">Hidden</animation>
-			<visible>![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(sliderdialog) | Skin.HasSetting(novideofurnituretemp)]</visible>
+			<visible>![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdsubtitlesettings) | Window.IsVisible(osdcmssettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(sliderdialog) | Skin.HasSetting(novideofurnituretemp)]</visible>
 			<!-- Seek Widget + add support for player tempo-->
 			<control type="group">
 				<posx>-750</posx>
