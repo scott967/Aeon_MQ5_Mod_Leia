@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5 -->
+<!-- Leia 10.2.4/10.2.5/10.2.8 -->
 <window>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
@@ -33,18 +33,18 @@
 			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044)) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + String.IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + String.IsEmpty(Control.GetLabel(5046)) + String.IsEmpty(Control.GetLabel(5047)) + String.IsEmpty(Control.GetLabel(5048)) + String.IsEmpty(Control.GetLabel(5049)) + String.IsEmpty(Control.GetLabel(5050)) + String.IsEmpty(Control.GetLabel(5051))</visible>
 		</control>
 		<control type="multiimage" id="5043">
-			<!-- Extra Fanart Song -->
+			<!-- Extra Fanart Song Artist has priority-->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra)</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra) + String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage" id="5044">
 			<!-- Extra Fanart Artist -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra) + String.IsEmpty(Control.GetLabel(5043))</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra))</visible>
 		</control>
 		<control type="multiimage" id="5045">
 			<!-- Artist SlideShow -->
