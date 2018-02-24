@@ -533,7 +533,7 @@
 			<!-- Extra Fanart Artist/Album -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-			<visible>[Container.Content(artists) | Container.Content(albums)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>[[Container.Content(artists) | Container.Content(albums)] | [String.IsEmpty(Control.GetLabel(5033)) + [Container.Content(songs) | Container.Content(playlists)]]] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 		</control>
 		<control type="multiimage" id="5033">
 			<!-- Extra Fanart Song -->
