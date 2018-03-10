@@ -7,7 +7,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>10.2.8 Leiamod[COLOR=80FFFFFF] | [/COLOR]03/01/2018</value>
+		<value>10.2.8 Leiamod[COLOR=80FFFFFF] | [/COLOR]03/10/2018</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -2563,6 +2563,7 @@
 		<value condition="String.IsEmpty(Player.Art(discart)) + String.Contains(skin.string(discvideo),4)">cdart_4.png</value>
 	</variable>
 	<variable name="value_audiodisc">
+		<value condition="!String.IsEmpty(Player.Art(cdart))">$INFO[Player.Art(cdart)]</value>
 		<value condition="String.Contains(skin.string(discaudio),0)">cdart.png</value>
 		<value condition="String.Contains(skin.string(discaudio),1)">cdart_1.png</value>
 		<value condition="String.Contains(skin.string(discaudio),2)">cdart_2.png</value>
