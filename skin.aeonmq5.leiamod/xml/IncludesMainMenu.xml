@@ -15,6 +15,12 @@
 			<include>MainMenu_Content</include>
 		</control>
 	</include>
+	<!--                                                                                                                                                                                    -->
+	<!--                                                                                                                                                                                    -->
+	<!--                                                                                                                                                                                    -->
+	<!-- MainMenu_Content  when navigate down set bool submode then open dialog id 6001- 6524 based on value of menu item -->
+	<!-- property  subid.  Menu items are in IncludesMainMenu menu_content.  Item properties are condition, name, id, subid,     -->
+	<!-- path, action -->                                                                         -->
 	<include name="MainMenu_Content">
 		<viewtype label="Main Menu">list</viewtype>
 		<animation type="WindowOpen" reversible="false" condition="true">

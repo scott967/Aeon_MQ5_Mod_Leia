@@ -747,7 +747,7 @@
 				<onfocus>Skin.SetString(menu0109.action,ActivateWindow(videos,movietags,return))</onfocus>
 				<onfocus>Skin.SetString(menu0110.master,videocleanlibrary)</onfocus>
 				<!-- Video limpar colecao -->
-				<onfocus>Skin.SetString(menu0110.action,CleanLibrary(video))</onfocus>
+				<onfocus>Skin.SetString(menu0110.action,CleanLibrary(movies))</onfocus>
 				<onfocus>Skin.SetString(menu0111.master,videoupdatelibrary)</onfocus>
 				<!-- Video atualizar colecao -->
 				<onfocus>Skin.SetString(menu0111.action,UpdateLibrary(video))</onfocus>
@@ -782,7 +782,7 @@
 				<onfocus>Skin.SetString(menu0206.action,ActivateWindow(videos,tvshowstudios,return))</onfocus>
 				<onfocus>Skin.SetString(menu0207.master,videocleanlibrary)</onfocus>
 				<!-- Video limpar colecao -->
-				<onfocus>Skin.SetString(menu0207.action,CleanLibrary(video))</onfocus>
+				<onfocus>Skin.SetString(menu0207.action,CleanLibrary(tvshows))</onfocus>
 				<onfocus>Skin.SetString(menu0208.master,videoupdatelibrary)</onfocus>
 				<!-- Video atualizar colecao -->
 				<onfocus>Skin.SetString(menu0208.action,UpdateLibrary(video))</onfocus>
@@ -820,7 +820,7 @@
 				<onfocus>Skin.SetString(menu0307.action,ActivateWindow(videos,musicvideostudios,return))</onfocus>
 				<onfocus>Skin.SetString(menu0308.master,videocleanlibrary)</onfocus>
 				<!-- Video limpar colecao -->
-				<onfocus>Skin.SetString(menu0308.action,CleanLibrary(video))</onfocus>
+				<onfocus>Skin.SetString(menu0308.action,CleanLibrary(musicvideos))</onfocus>
 				<onfocus>Skin.SetString(menu0309.master,videoupdatelibrary)</onfocus>
 				<!-- Video atualizar colecao -->
 				<onfocus>Skin.SetString(menu0309.action,UpdateLibrary(video))</onfocus>

@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.3 -->
+<!-- Leia 10.2.3/10.2.8 -->
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
 	<include name="Preset1_Apply">
@@ -1580,7 +1580,7 @@
 			<content>
 				<item>
 					<label>31162</label>
-					<!-- Nenhum - Limpar  -->
+					<!-- NONE - CLEAR -->
 					<property name="id">clean</property>
 					<onclick>Skin.Reset($INFO[skin.string(custom_master)])</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_defaultlabel)],$LOCALIZE[31014])</onclick>
@@ -1591,7 +1591,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31075] 1</label>
-					<!-- Meu Menu 1 -->
+					<!-- MY MENU 1 -->
 					<!-- 6021 -->
 					<label2>$LOCALIZE[31075] 1</label2>
 					<property name="id">custom</property>
@@ -1601,7 +1601,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31075] 2</label>
-					<!-- Meu Menu 2 -->
+					<!-- MY MENU 2 -->
 					<!-- 6022 -->
 					<label2>$LOCALIZE[31075] 2</label2>
 					<property name="id">custom</property>
@@ -1611,7 +1611,7 @@
 				</item>
 				<item>
 					<label>31016</label>
-					<!-- Video Playlist -->
+					<!-- CHOOSE VIDEO PLAYLIST -->
 					<!-- 6100 -->
 					<label2>31072</label2>
 					<property name="id">custom</property>
@@ -1621,7 +1621,7 @@
 				</item>
 				<item>
 					<label>31017</label>
-					<!-- Audio Playlist -->
+					<!-- CHOOSE AUDIO PLAYLIST -->
 					<!-- 6200 -->
 					<label2>31073</label2>
 					<property name="id">custom</property>
@@ -1631,7 +1631,7 @@
 				</item>
 				<item>
 					<label>31022</label>
-					<!-- Video Nodes -->
+					<!-- CHOOSE VIDEO NODE  -->
 					<!-- 6300 -->
 					<label2>31115</label2>
 					<property name="id">custom</property>
@@ -1641,7 +1641,7 @@
 				</item>
 				<item>
 					<label>$VAR[value_addon13]</label>
-					<!-- Favorito -->
+					<!--CHOOSE FAVOURITE or  Add-on Required; Favourites Script-->
 					<!-- 6400 -->
 					<label2>31071</label2>
 					<property name="id">custom</property>
@@ -1652,7 +1652,7 @@
 				</item>
 				<item>
 					<label>31018</label>
-					<!-- Add-on de video -->
+					<!-- CHOOSE VIDEO ADD-ON -->
 					<!-- 6500 -->
 					<property name="id">custom</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],addons)</onclick>
@@ -1661,7 +1661,7 @@
 				</item>
 				<item>
 					<label>31019</label>
-					<!-- Add-on de audio -->
+					<!-- CHOOSE AUDIO ADD-ON -->
 					<!-- 6500 -->
 					<property name="id">custom</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],addons)</onclick>
@@ -1670,7 +1670,7 @@
 				</item>
 				<item>
 					<label>31020</label>
-					<!-- Add-on de programas -->
+					<!-- CHOOSE PROGRAMS ADD-ON -->
 					<!-- 6500 -->
 					<property name="id">custom</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],addons)</onclick>
@@ -1679,7 +1679,7 @@
 				</item>
 				<item>
 					<label>31021</label>
-					<!-- Add-on de imagem -->
+					<!-- CHOOSE IMAGE ADD-ON -->
 					<!-- 6500 -->
 					<property name="id">custom</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],addons)</onclick>
@@ -1688,7 +1688,7 @@
 				</item>
 				<item>
 					<label>31003</label>
-					<!-- Filmes -->
+					<!-- MOVIES -->
 					<!-- 6001 -->
 					<label2>31003</label2>
 					<property name="id">movies</property>
@@ -1698,7 +1698,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31583]</label>
-					<!-- Filme recentes -->
+					<!-- MOVIES-RECENTLY ADDED -->
 					<!-- 6033 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31583]</label2>
 					<property name="id">movies</property>
@@ -1708,7 +1708,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31029]</label>
-					<!-- Filme sets -->
+					<!-- MOVIES-SETS -->
 					<!-- 6034 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31029]</label2>
 					<property name="id">movies</property>
@@ -1718,7 +1718,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31066]</label>
-					<!-- Filme cinema ex -->
+					<!-- MOVIES-CINEMA EX -->
 					<!-- 6035 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31066]</label2>
 					<property name="id">movies</property>
@@ -1729,7 +1729,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-CINEMAVISION</label>
-					<!-- Filme cinema ex -->
+					<!-- MOVIES-CINEMAVISION -->
 					<!-- no customsub yet -->
 					<label2>$LOCALIZE[31003]-CINEMAVISION</label2>
 					<property name="id">movies</property>
@@ -1739,7 +1739,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31091]</label>
-					<!-- Filme generos -->
+					<!-- MOVIES-GENRES -->
 					<!-- 6036 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31091]</label2>
 					<property name="id">movies</property>
@@ -1749,7 +1749,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31036]</label>
-					<!-- Filme anos -->
+					<!-- MOVIES-Years -->
 					<!-- 6037 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31036]</label2>
 					<property name="id">movies</property>
@@ -1759,7 +1759,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31045]</label>
-					<!-- Filme atores -->
+					<!-- MOVIES-ACTORS -->
 					<!-- 6038 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31045]</label2>
 					<property name="id">movies</property>
@@ -1769,7 +1769,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31090]</label>
-					<!-- Filme diretores -->
+					<!-- MOVIES-DIRECTORS -->
 					<!-- 6039 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31090]</label2>
 					<property name="id">movies</property>
@@ -1779,7 +1779,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[31047]</label>
-					<!-- Filme estudios -->
+					<!-- MOVIES-STUDIOS -->
 					<!-- 6040 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[31047]</label2>
 					<property name="id">movies</property>
@@ -1789,7 +1789,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[20451]</label>
-					<!-- Filme paises -->
+					<!-- MOVIES-Countries -->
 					<!-- 6041 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[20451]</label2>
 					<property name="id">movies</property>
@@ -1799,7 +1799,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31003]-$LOCALIZE[20459]</label>
-					<!-- Filme tags -->
+					<!-- MOVIES-Tags -->
 					<!-- 6042 -->
 					<label2>$LOCALIZE[31003]-$LOCALIZE[20459]</label2>
 					<property name="id">movies</property>
@@ -1808,8 +1808,19 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>$LOCALIZE[31003]-$LOCALIZE[31231]</label>
+					<!-- MOVIES-CLEAN LIBRARY -->
+					<!-- no submenu window id -->
+					<label2>$LOCALIZE[31003]-$LOCALIZE[31231]</label2>
+					<property name="id">movies</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],videocleanlibrary)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],CleanLibrary(movies))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
 					<label>31005</label>
-					<!-- Seriados -->
+					<!-- TV SHOWS-->
 					<!-- 6002 -->
 					<label2>31005</label2>
 					<property name="id">tvshows</property>
@@ -1819,7 +1830,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31527]-$LOCALIZE[31583]</label>
-					<!-- Episodios recentes -->
+					<!-- TV SHOWS-RECENTLY ADDED -->
 					<!-- 6043 -->
 					<label2>$LOCALIZE[31527]-$LOCALIZE[31583]</label2>
 					<property name="id">tvshows</property>
@@ -1829,7 +1840,7 @@
 				</item>
 				<item>
 					<label>31067</label>
-					<!-- Guia de TV -->
+					<!-- NEXT AIRED GUIDE -->
 					<!-- 6044 -->
 					<label2>31067</label2>
 					<property name="id">tvshows</property>
@@ -1839,7 +1850,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31005]-$LOCALIZE[31091]</label>
-					<!-- Seriado generos -->
+					<!-- TV SHOWS-GENRES -->
 					<!-- 6045 -->
 					<label2>$LOCALIZE[31005]-$LOCALIZE[31091]</label2>
 					<property name="id">tvshows</property>
@@ -1849,7 +1860,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31005]-$LOCALIZE[31036]</label>
-					<!-- Seriado anos -->
+					<!-- TV SHOWS-Years -->
 					<!-- 6046 -->
 					<label2>$LOCALIZE[31005]-$LOCALIZE[31036]</label2>
 					<property name="id">tvshows</property>
@@ -1859,7 +1870,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31005]-$LOCALIZE[31045]</label>
-					<!-- Seriado atores -->
+					<!-- TV SHOWS-ACTORS -->
 					<!-- 6047 -->
 					<label2>$LOCALIZE[31005]-$LOCALIZE[31045]</label2>
 					<property name="id">tvshows</property>
@@ -1869,7 +1880,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31005]-$LOCALIZE[31047]</label>
-					<!-- Seriado estudios -->
+					<!-- TV SHOWS-STUDIOS -->
 					<!-- 6048 -->
 					<label2>$LOCALIZE[31005]-$LOCALIZE[31047]</label2>
 					<property name="id">tvshows</property>
@@ -1878,8 +1889,19 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>$LOCALIZE[31005]-$LOCALIZE[31231]</label>
+					<!-- TVSHOWS-CLEAN LIBRARY -->
+					<!-- no submenu window id -->
+					<label2>$LOCALIZE[31005]-$LOCALIZE[31231]</label2>
+					<property name="id">tvshows</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],videocleanlibrary)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],CleanLibrary(tvshows))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
 					<label>31013</label>
-					<!-- Concertos -->
+					<!-- CONCERTS -->
 					<!-- 6003 -->
 					<label2>31013</label2>
 					<property name="id">concerts</property>
@@ -1889,7 +1911,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31583]</label>
-					<!-- Concerto recentes -->
+					<!-- CONCERTS-RECENTLY ADDED -->
 					<!-- 6049 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31583]</label2>
 					<property name="id">concerts</property>
@@ -1899,7 +1921,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31091]</label>
-					<!-- Concerto generos -->
+					<!-- CONCERTS-GENRES -->
 					<!-- 6050 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31091]</label2>
 					<property name="id">concerts</property>
@@ -1909,7 +1931,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31036]</label>
-					<!-- Concerto anos -->
+					<!-- CONCERTS-Years -->
 					<!-- 6051 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31036]</label2>
 					<property name="id">concerts</property>
@@ -1918,10 +1940,10 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
-					<label>$LOCALIZE[31013]-$LOCALIZE[31045]</label>
-					<!-- Concerto artistas -->
+					<label>$LOCALIZE[31013]-$LOCALIZE[31037]</label>
+					<!-- CONCERTS-ARTISTS -->
 					<!-- 6052 -->
-					<label2>$LOCALIZE[31013]-$LOCALIZE[31045]</label2>
+					<label2>$LOCALIZE[31013]-$LOCALIZE[31037]</label2>
 					<property name="id">concerts</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],concertartists)</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(videos,musicvideoartists,return))</onclick>
@@ -1929,7 +1951,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31040]</label>
-					<!-- Concerto albuns -->
+					<!-- CONCERTS-ALBUMS -->
 					<!-- 6053 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31040]</label2>
 					<property name="id">concerts</property>
@@ -1939,7 +1961,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31090]</label>
-					<!-- Concerto diretores -->
+					<!-- CONCERTS-DIRECTORS -->
 					<!-- 6054 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31090]</label2>
 					<property name="id">concerts</property>
@@ -1949,7 +1971,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31013]-$LOCALIZE[31047]</label>
-					<!-- Concerto estudios -->
+					<!-- CONCERTS-STUDIOS -->
 					<!-- 6055 -->
 					<label2>$LOCALIZE[31013]-$LOCALIZE[31047]</label2>
 					<property name="id">concerts</property>
@@ -1958,8 +1980,19 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>$LOCALIZE[31013]-$LOCALIZE[31231]</label>
+					<!-- CONCERTS-CLEAN LIBRARY -->
+					<!-- no submenu window id -->
+					<label2>$LOCALIZE[31013]-$LOCALIZE[31231]</label2>
+					<property name="id">movies</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],videocleanlibrary)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],CleanLibrary(musicvideos))</onclick>
+					<include>DefaultReset</include>
+					<visible>Skin.HasSetting(submode)</visible>
+				</item>
+				<item>
 					<label>31002</label>
-					<!-- Musicas -->
+					<!-- MUSIC -->
 					<!-- 6004 -->
 					<label2>31002</label2>
 					<property name="id">music</property>
@@ -2248,7 +2281,7 @@
 				</item>
 				<item>
 					<label>31007</label>
-					<!-- Jogos -->
+					<!-- GAMES -->
 					<!-- 6007 -->
 					<label2>31007</label2>
 					<property name="id">various</property>
@@ -2259,7 +2292,7 @@
 				</item>
 				<item>
 					<label>31030</label>
-					<!-- Programas -->
+					<!-- PROGRAMS -->
 					<!-- 6008 -->
 					<label2>31030</label2>
 					<property name="id">various</property>
@@ -2269,7 +2302,7 @@
 				</item>
 				<item>
 					<label>31008</label>
-					<!-- Imagens -->
+					<!-- IMAGES -->
 					<!-- 6009 -->
 					<label2>31008</label2>
 					<property name="id">various</property>
@@ -2279,7 +2312,7 @@
 				</item>
 				<item>
 					<label>31746</label>
-					<!-- Procurar -->
+					<!-- SEARCH -->
 					<!-- 6069 -->
 					<label2>31746</label2>
 					<property name="id">various</property>
@@ -2290,7 +2323,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31031]-$LOCALIZE[31204]</label>
-					<!-- Atualizar favoritos -->
+					<!-- FAVOURITES-UPDATE -->
 					<!-- 6068 -->
 					<label2>$LOCALIZE[31031]-$LOCALIZE[31204]</label2>
 					<property name="id">various</property>
@@ -2301,7 +2334,7 @@
 				</item>
 				<item>
 					<label>31004</label>
-					<!-- Disco -->
+					<!-- PLAY DISC -->
 					<!-- 6030 -->
 					<label2>31004</label2>
 					<property name="id">various</property>
@@ -2311,7 +2344,7 @@
 				</item>
 				<item>
 					<label>31742</label>
-					<!-- Ejetar disco -->
+					<!-- OPEN TRAY -->
 					<!-- 6031 -->
 					<label2>31742</label2>
 					<property name="id">various</property>
@@ -2321,7 +2354,7 @@
 				</item>
 				<item>
 					<label>31009</label>
-					<!-- Clima -->
+					<!-- WEATHER -->
 					<!-- 6010 -->
 					<label2>31009</label2>
 					<property name="id">weather</property>
@@ -2398,7 +2431,7 @@
 				</item>
 				<item>
 					<label>31011</label>
-					<!-- Ajustes -->
+					<!-- SETTINGS -->
 					<!-- 6011 -->
 					<label2>31011</label2>
 					<property name="id">settings</property>
@@ -2439,7 +2472,7 @@
 				</item>
 				<item>
 					<label>31010</label>
-					<!-- Janela Add-ons -->
+					<!-- ADD-ONS -->
 					<!-- 6076 -->
 					<label2>31010</label2>
 					<property name="id">settings</property>
@@ -2489,7 +2522,7 @@
 				</item>
 				<item>
 					<label>31063</label>
-					<!-- Gerenciador de arquivos -->
+					<!-- FILE MANAGER -->
 					<!-- 6081 -->
 					<label2>31063</label2>
 					<property name="id">settings</property>
@@ -2509,7 +2542,7 @@
 				</item>
 				<item>
 					<label>31057</label>
-					<!-- Encerrar -->
+					<!-- SHUTDOWN -->
 					<!-- 6012 -->
 					<label2>31057</label2>
 					<property name="id">shutdown</property>
@@ -2519,7 +2552,7 @@
 				</item>
 				<item>
 					<label>31012</label>
-					<!-- Sair -->
+					<!-- EXIT -->
 					<!-- 6012 -->
 					<!-- 6013 -->
 					<label2>31012</label2>
@@ -2530,7 +2563,7 @@
 				</item>
 				<item>
 					<label>31058</label>
-					<!-- Desligar sistema -->
+					<!-- TURN OFF -->
 					<!-- 6012 -->
 					<!-- 6014 -->
 					<label2>31058</label2>
@@ -2541,7 +2574,7 @@
 				</item>
 				<item>
 					<label>31059</label>
-					<!-- Reiniciar sistema -->
+					<!-- RESTART -->
 					<!-- 6012 -->
 					<!-- 6015 -->
 					<label2>31059</label2>
@@ -2574,7 +2607,7 @@
 				</item>
 				<item>
 					<label>31055</label>
-					<!-- Temporizador -->
+					<!-- TIMER -->
 					<!-- 6012 -->
 					<!-- 6018 -->
 					<label2>31055</label2>
@@ -2585,7 +2618,7 @@
 				</item>
 				<item>
 					<label>31056</label>
-					<!-- Cancelar temporizador -->
+					<!-- CANCEL TIMER -->
 					<!-- 6012 -->
 					<!-- 6019 -->
 					<label2>31056</label2>
@@ -2596,7 +2629,7 @@
 				</item>
 				<item>
 					<label>31062</label>
-					<!-- Deslogar -->
+					<!-- CHANGE USER -->
 					<!-- 6012 -->
 					<!-- 6020 -->
 					<label2>31062</label2>
@@ -2617,7 +2650,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31001]-$LOCALIZE[31231]</label>
-					<!-- Video limpar colecao -->
+					<!-- VIDEO-CLEAN LIBRARY -->
 					<!-- 6026 -->
 					<label2>$LOCALIZE[31001]-$LOCALIZE[31231]</label2>
 					<property name="id">video</property>
