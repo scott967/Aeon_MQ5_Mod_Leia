@@ -3680,8 +3680,166 @@
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
-				<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)] + !String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible -->&gt;
-				<content><item><label>$INFO[Window(home).Property(NextAired.1.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.1.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.1.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.1.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.1.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.1.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.1.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.1.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.1.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible></item><item><label>$INFO[Window(home).Property(NextAired.2.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.2.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.2.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.2.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.2.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.2.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.2.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.2.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.2.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.2.NextTitle))</visible></item><item><label>$INFO[Window(home).Property(NextAired.3.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.3.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.3.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.3.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.3.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.3.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.3.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.3.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.3.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.3.NextTitle))</visible></item><item><label>$INFO[Window(home).Property(NextAired.4.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.4.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.4.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.4.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.4.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.4.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.4.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.4.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.4.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.4.NextTitle))</visible></item><item><label>$INFO[Window(home).Property(NextAired.5.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.5.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.5.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.5.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.5.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.5.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.5.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.5.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.5.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.5.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible></item><item><label>$INFO[Window(home).Property(NextAired.6.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.6.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.6.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.6.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.6.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.6.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.6.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.6.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.6.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.6.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible></item><item><label>$INFO[Window(home).Property(NextAired.7.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.7.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.7.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.7.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.7.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.7.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.7.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.7.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.7.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.7.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible></item><item><label>$INFO[Window(home).Property(NextAired.8.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.8.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.8.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.8.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.8.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.8.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.8.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.8.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.8.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.8.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible></item><item><label>$INFO[Window(home).Property(NextAired.9.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.9.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.9.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.9.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.9.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.9.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.9.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.9.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.9.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.9.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible></item><item><label>$INFO[Window(home).Property(NextAired.10.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.10.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.10.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.10.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.10.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.10.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.10.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.10.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.10.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.10.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible></item><item><label>$INFO[Window(home).Property(NextAired.11.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.11.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.11.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.11.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.11.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.11.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.11.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.11.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.11.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.11.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible></item><item><label>$INFO[Window(home).Property(NextAired.12.NextTitle)]</label><label2>$INFO[Window(home).Property(NextAired.12.Label)]</label2><icon>$INFO[Window(home).Property(NextAired.12.Art(poster))]</icon><property name="Fanart">$INFO[Window(home).Property(NextAired.12.Art(fanart))]</property><property name="Genre">$INFO[Window(home).Property(NextAired.12.Genre)]</property><property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.12.NextNumber)]</property><property name="Plot">$INFO[Window(home).Property(NextAired.12.Status)]</property><property name="Year">$INFO[Window(home).Property(NextAired.12.ShortTime)]</property><property name="Studio">$INFO[Window(home).Property(NextAired.12.Network)]</property><onclick>noop</onclick><visible>!String.IsEmpty(Window(home).Property(NextAired.12.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible></item></content></control>
+				<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)] + !String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible> -->
+				<content>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.1.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.1.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.1.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.1.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.1.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.1.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.1.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.1.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.1.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.2.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.2.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.2.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.2.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.2.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.2.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.2.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.2.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.2.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.2.NextTitle))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.3.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.3.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.3.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.3.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.3.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.3.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.3.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.3.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.3.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.3.NextTitle))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.4.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.4.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.4.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.4.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.4.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.4.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.4.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.4.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.4.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.4.NextTitle))</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.5.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.5.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.5.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.5.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.5.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.5.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.5.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.5.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.5.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.5.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.6.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.6.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.6.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.6.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.6.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.6.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.6.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.6.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.6.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.6.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.7.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.7.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.7.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.7.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.7.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.7.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.7.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.7.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.7.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.7.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.8.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.8.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.8.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.8.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.8.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.8.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.8.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.8.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.8.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.8.NextTitle)) + [String.Contains(skin.string(widgetsnumber),8) | String.Contains(skin.string(widgetsnumber),12)]</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.9.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.9.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.9.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.9.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.9.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.9.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.9.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.9.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.9.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.9.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.10.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.10.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.10.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.10.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.10.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.10.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.10.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.10.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.10.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.10.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.11.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.11.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.11.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.11.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.11.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.11.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.11.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.11.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.11.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.11.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible>
+					</item>
+					<item>
+						<label>$INFO[Window(home).Property(NextAired.12.NextTitle)]</label>
+						<label2>$INFO[Window(home).Property(NextAired.12.Label)]</label2>
+						<icon>$INFO[Window(home).Property(NextAired.12.Art(poster))]</icon>
+						<property name="Fanart">$INFO[Window(home).Property(NextAired.12.Art(fanart))]</property>
+						<property name="Genre">$INFO[Window(home).Property(NextAired.12.Genre)]</property>
+						<property name="EpisodeNumber">$INFO[Window(home).Property(NextAired.12.NextNumber)]</property>
+						<property name="Plot">$INFO[Window(home).Property(NextAired.12.Status)]</property>
+						<property name="Year">$INFO[Window(home).Property(NextAired.12.ShortTime)]</property>
+						<property name="Studio">$INFO[Window(home).Property(NextAired.12.Network)]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(NextAired.12.NextTitle)) + String.Contains(skin.string(widgetsnumber),12)</visible>
+					</item>
+				</content>
+			</control>
 		</control>
 	</include>
 	<!-- ################################################################################ Favourites ################################################################################ -->
