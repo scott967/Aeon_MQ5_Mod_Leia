@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.aeon-mq5-mod-leia" name="Aeon MQ5 Kryptonmod Skin Repository" version="10.0.0" provider-name="scott967">
+<addon id="repository.aeon-mq5-mod-leia" name="Aeon MQ5 Leiamod Skin Repository" version="10.0.0" provider-name="scott967">
 	<extension point="xbmc.addon.repository" name="Aeon MQ5 Leiamod Skin Repository">
 		<info compressed="false">https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Leia/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/scott967/Aeon_MQ5_Mod_Leia/master/addons.xml.md5</checksum>
