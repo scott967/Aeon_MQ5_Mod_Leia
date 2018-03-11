@@ -62,8 +62,8 @@
 		<description lang="th">จากแบบตั้งเดิมของ Aeon MQ ได้มาถึงรุ่นที่ห้า.[CR]ได้ถูกยกเครื่องใหม่, ง่ายต่อการใช้งาน, ด้วยคำสั่งใหม่ ที่นำมาซึ่ง สกินที่เบาและและมีประสิทธิภาพ.[CR]Aeon MQ 5 Leiamod ประกอบด้วยคุณสมบัติใหม่ ๆ เช่น การแทนที่ ซึ่งนำระดับการปรับแต่งเมนูหลัก ไปสู่บางสิ่งที่ไม่เคยพบมาก่อน.[CR]Aeon MQ 5, คุณคงไม่เคยเห็นสกินที่ดีเช่นนี้.</description>
 		<platform>all</platform>	
 		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
 		</assets>
 		<news>[B][COLOR=FFFF8C00]BUILD 10.2.6 - RELEASE DATE 10/15/2017 for Kodi LEIA ALPHA1+[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
