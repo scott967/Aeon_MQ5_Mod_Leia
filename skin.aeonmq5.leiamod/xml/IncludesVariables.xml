@@ -3,11 +3,11 @@
 <!-- Aeon MQ5 Isengard 7.1.8/7.1.9/7.1.10/7.1.11/7.1.12 -->
 <!-- Aeon MQ5 Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.14/9.1.16/9.1.17/9.1.18/9.1.19 /9.2.0/9.2.1 window IDs/9.2.2 /9.2.3-->
-<!-- Leia 10.2.3 /10.2.4/10.2.5/10.2.6/10.2.8 -->
+<!-- Leia 10.2.3 /10.2.4/10.2.5/10.2.6/10.2.8/10.3.0 -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>10.2.8 Leiamod[COLOR=80FFFFFF] | [/COLOR]03/10/2018</value>
+		<value>10.3.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]04/30/2018</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -3928,8 +3928,8 @@
 		<value condition="!System.HasAddon(script.artworkorganizer)">[COLOR=FFB20000]$LOCALIZE[31547] / $LOCALIZE[31548] | $LOCALIZE[31435]: Artwork Organizer[/COLOR]</value>
 	</variable>
 	<variable name="value_addon5">
-		<value condition="System.HasAddon(script.cdartmanager)">$LOCALIZE[31442]</value>
-		<value condition="!System.HasAddon(script.cdartmanager)">[COLOR=FFB20000]$LOCALIZE[31442] | $LOCALIZE[31435]: cdART Manager[/COLOR]</value>
+		<value condition="System.HasAddon(script.artwork.beef)">$LOCALIZE[31442]</value>
+		<value condition="!System.HasAddon(script.artwork.beef)">[COLOR=FFB20000]$LOCALIZE[31442] | $LOCALIZE[31435]: Artwork Beef[/COLOR]</value>
 	</variable>
 	<variable name="value_addon6">
 		<value condition="System.HasAddon(script.artistslideshow)">$LOCALIZE[31557]</value>
@@ -3967,7 +3967,7 @@
 		<value condition="!String.IsEmpty(Skin.String(CustomFallbackAudioBG))">[COLOR=$VAR[value_headercolor]]$LOCALIZE[15311] $INFO[Skin.String(CustomFallbackAudioBG)][/COLOR]</value>
 	</variable>
 	<variable name="value_musiclogopath">
-		<value condition="String.IsEmpty(Skin.String(CustomMusicLogoPath))"> - $LOCALIZE[31503] ($LOCALIZE[31334])</value>
+		<value condition="String.IsEmpty(Skin.String(CustomMusicLogoPath))"> - $LOCALIZE[31241] $LOCALIZE[31498] $LOCALIZE[31095] ($LOCALIZE[31334])</value>
 		<value condition="!String.IsEmpty(Skin.String(CustomMusicLogoPath))">$LOCALIZE[15311] $INFO[Skin.String(CustomMusicLogoPath)]</value>
 	</variable>
 	<variable name="value_musicgenreicon">
