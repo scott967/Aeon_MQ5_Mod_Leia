@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10/7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5 -->
+<!-- Leia 10.2.5/10.3.0 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
 	<include name="LowListLabel">
@@ -96,7 +96,7 @@
 						<posy>570</posy>
 						<width>450</width>
 						<height>195</height>
-						<texture background="true" fallback="transparent.png">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/logo.png]</texture>
+						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 						<aspectratio align="right" aligny="bottom">keep</aspectratio>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<visible>Window.IsActive(musicplaylist) | Window.IsActive(music)</visible>

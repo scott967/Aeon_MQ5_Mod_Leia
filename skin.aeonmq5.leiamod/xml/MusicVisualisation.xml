@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.8 -->
+<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0 -->
 <window>
 	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
@@ -221,7 +221,7 @@
 					<posy>-15</posy>
 					<width>300</width>
 					<height>90</height>
-					<texture fallback="transparent.png" background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+					<texture fallback="transparent.png" background="true">$INFO[Player.Art(artist.clearlogo)]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio align="center">keep</aspectratio>
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
