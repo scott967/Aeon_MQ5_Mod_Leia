@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8 -->
+<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
@@ -104,7 +104,7 @@
 				<label>[B]$INFO[ListItem.Rating][/B]</label>
 				<!-- scraped rating -->
 				<textcolor>FF101010</textcolor>
-				<visible>[String.IsEqual(ListItem.DBType(album)) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating)</visible>
+				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -968,15 +968,9 @@
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
 						</item>
 						<item id="2">
-							<!-- Get Thumb -->
-							<label>13405</label>
+							<!-- Set Art-->
+							<label>31702</label>
 							<onclick>SendClick(musicinformation,10)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
-						</item>
-						<item id="3">
-							<!-- Get Fanart -->
-							<label>20413</label>
-							<onclick>SendClick(musicinformation,12)</onclick>
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
 						</item>
 						<item id="4">
