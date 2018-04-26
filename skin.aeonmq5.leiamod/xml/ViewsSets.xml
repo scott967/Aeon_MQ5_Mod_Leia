@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<!--##################################################################################   VISTA SETS - ID 65   ##################################################################################-->
 	<include name="SetsLabel">
@@ -25,7 +26,7 @@
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(65)</visible>
 			<control type="image">
-				<!-- fundo da parte de baixo -->
+				<!-- bottom of bottom -->
 				<posx>0</posx>
 				<posy>210</posy>
 				<width>1920</width>
@@ -35,7 +36,7 @@
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
-				<!-- fundo da lista -->
+				<!-- list bottom -->
 				<posx>1350</posx>
 				<posy>435</posy>
 				<width>570</width>
@@ -276,7 +277,7 @@
 							<colordiffuse>E4101010</colordiffuse>
 							<include>Animation_Fade</include>
 							<animation effect="fade" start="20" end="80" time="700" condition="true" pulse="true">Conditional</animation>
-							<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
+							<visible>String.Contains(ListItem.Path,videodb://movies/sets)</visible>
 						</control>
 						<control type="label">
 							<posx>30</posx>

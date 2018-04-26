@@ -461,7 +461,7 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(norightlistvideocase)">Conditional</animation>
-					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(norightlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(norightlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<posx>168</posx>
 						<posy>105</posy>
@@ -493,7 +493,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<include>RightListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>

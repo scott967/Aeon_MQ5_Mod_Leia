@@ -414,12 +414,12 @@
 							</control>
 							<control type="image">
 								<include>FlagSeparator</include>
-								<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+								<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
 							</control>
 							<control type="group">
 								<!-- % Played -->
 								<width>188</width>
-								<visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
+								<visible>ListItem.IsResumable</visible>
 								<control type="image">
 									<include>FlagImage</include>
 									<texture>flags/percentplayed.png</texture>
@@ -896,12 +896,12 @@
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
 						</control>
 						<control type="group">
 							<!-- % Played -->
 							<width>188</width>
-							<visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>ListItem.IsResumable</visible>
 							<control type="image">
 								<include>FlagImage</include>
 								<texture>flags/percentplayed.png</texture>

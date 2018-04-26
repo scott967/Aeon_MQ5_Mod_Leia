@@ -447,7 +447,7 @@
 						<effect type="slide" start="0,0" end="300,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(nomidlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(nomidlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<include>MidListMiniDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
@@ -608,7 +608,7 @@
 					<description>MOVIE COUNT</description>
 					<include>MidListInfoTitle</include>
 					<label>$LOCALIZE[342]</label>
-					<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
+					<visible>String.Contains(ListItem.Path,videodb://movies/sets)</visible>
 				</control>
 				<control type="label">
 					<description>DURATION</description>
@@ -659,7 +659,7 @@
 					<description>MOVIE COUNT</description>
 					<include>MidListInfo</include>
 					<label>$INFO[Window(home).Property(Set.Movies.Count)]</label>
-					<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
+					<visible>String.Contains(ListItem.Path,videodb://movies/sets)</visible>
 				</control>
 				<control type="label">
 					<description>DURATION</description>
@@ -1108,8 +1108,8 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(nomidlistvideocase)">Conditional</animation>
-					<!-- <visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible> -->
-					<visible>![[String.IsEmpty(ListItem.Art(discart)) + [String.IsEmpty(ListItem.Art(poster)) | [Skin.HasSetting(nodisctvshow) + [Container.content(tvshows) | Container.Content(seasons)]]]] | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets,left)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
+					<!-- <visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible> -->
+					<visible>![[String.IsEmpty(ListItem.Art(discart)) + [String.IsEmpty(ListItem.Art(poster)) | [Skin.HasSetting(nodisctvshow) + [Container.content(tvshows) | Container.Content(seasons)]]]] | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<description>THIS IS WHERE YOU CHANGE DISC SIZE AND POSITION</description>
 						<posx>1</posx>
@@ -1156,7 +1156,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(nomidlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets,left) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(nomidlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<include>MidListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>

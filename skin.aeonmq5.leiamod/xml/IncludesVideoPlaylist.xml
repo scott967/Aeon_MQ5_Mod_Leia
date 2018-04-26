@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<include name="VideoPLWindow">
 		<!-- 	<defaultcontrol always="true">51</defaultcontrol> -->
@@ -243,13 +244,13 @@
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
 						</control>
 						<control type="label">
 							<!-- % Played -->
 							<include>FlagLabel</include>
 							<label>$INFO[ListItem.PercentPlayed]%</label>
-							<visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
 					<control type="image">

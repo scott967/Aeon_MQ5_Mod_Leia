@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 25/9.2.2/9.2.3 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
@@ -302,12 +303,12 @@
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Trailer) + !String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
 						</control>
 						<control type="group">
 							<!-- % Played -->
 							<width>188</width>
-							<visible>!String.IsEqual(ListItem.PercentPlayed,0)</visible>
+							<visible>ListItem.IsResumable</visible>
 							<control type="image">
 								<include>FlagImage</include>
 								<texture>flags/percentplayed.png</texture>
