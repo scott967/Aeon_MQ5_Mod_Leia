@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2901/9.2.2/9.2.3 -->
-<!-- Leia 10.2.8 -->
+<!-- Leia 10.2.8/10.3.0 -->
 
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
@@ -187,12 +187,31 @@
 			<!-- Menu Content -->
 			<include condition="!Skin.HasSetting(videoosdfixedlist)">VideoOSDWrapList</include>
 			<include condition="Skin.HasSetting(videoosdfixedlist)">VideoOSDFixedList</include>
+<!-- 			<control type="progress">
+				<posx>45</posx>
+				<posy>110</posy>
+				<width>1830</width>
+				<height>38</height>
+				<info>PVR.EpgEventProgress</info>
+				<visible>VideoPlayer.HasEpg</visible>
+			</control> -->
+			<control type="progress">
+				<posx>45</posx>
+				<posy>110</posy>
+				<width>1830</width>
+				<height>38</height>
+				<info>Player.ProgressCache</info>
+				<midtexture>progress_mid50.png</midtexture>
+				<visible>!VideoPlayer.Content(livetv)</visible>
+			</control>
 			<control type="progress">
 				<posx>45</posx>
 				<posy>110</posy>
 				<width>1830</width>
 				<height>38</height>
 				<info>Player.Progress</info>
+				<texturebg>progress_back50.png</texturebg>
+				<visible>!VideoPlayer.HasEpg + !Player.ChannelPreviewActive</visible>
 			</control>
 			<control type="slider" id="888">
 				<posx>58</posx>
