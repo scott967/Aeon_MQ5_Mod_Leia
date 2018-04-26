@@ -12,11 +12,11 @@
 	<onload condition="SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],0)</onload>
 	<onload condition="!SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,0)</onload>
 	<!-- copied from startup.xml -->
-	<onload condition="System.HasAddon(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">RunScript(script.skin.info.service)</onload>
-	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Skin.Reset(custommode)</onload>
-	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Skin.Reset(submode)</onload>
-	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
-	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
+	<onload condition="System.HasAddon(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run)">RunScript(script.skin.info.service)</onload>
+	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run)">Skin.Reset(custommode)</onload>
+	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run)">Skin.Reset(submode)</onload>
+	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run)">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
+	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run)">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
 	<onload>SetProperty(skin.aeonmq5.leiamod.status,run,home)</onload>
 
 	<!-- default weather icons -->
