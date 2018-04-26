@@ -11,11 +11,19 @@
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">SetFocus(900)</onload>
 	<onload condition="SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],0)</onload>
 	<onload condition="!SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,resource://resource.images.weathericons.default/,0)</onload>
+	<!-- copied from startup.xml -->
+	<onload condition="System.HasAddon(script.skin.info.service) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">RunScript(script.skin.info.service)</onload>
+	<onload condition="Skin.HasSetting(custommode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Skin.Reset(custommode)</onload>
+	<onload condition="Skin.HasSetting(submode) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Skin.Reset(submode)</onload>
+	<onload condition="Skin.HasSetting(startplay) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">PlayMedia($INFO[Skin.String(startupplaylist)])</onload>
+	<onload condition="String.IsEqual(System.ProfileAutoLogin,Last Used Profile) + !String.IsEqual(System.ProfileName,master user) + !String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run))">Notification(Profile In Use,$INFO[System.ProfileName],5000)</onload>
+	<onload>SetProperty(skin.aeonmq5.leiamod.status,run,home)</onload>
+
 	<!-- default weather icons -->
 	<onload condition="Skin.HasSetting(custom_wxicons.multi)">SetProperty(current_wxicon_multi,true,0)</onload>
 	<onload condition="Player.HasAudio + System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload condition="System.HasAddon(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">RunScript(script.favourites)</onload>
-	<onload condition="Skin.HasSetting(rcbgames)">RunScript(script.games.rom.collection.browser,limit=12)</onload>
+	<onload condition="Skin.HasSetting(rcbgames) | [!String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run)) + System.HasAddon(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
 	<onload condition="Skin.HasSetting(rcbgames)">Skin.Reset(rcbgames)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onunload condition="String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
