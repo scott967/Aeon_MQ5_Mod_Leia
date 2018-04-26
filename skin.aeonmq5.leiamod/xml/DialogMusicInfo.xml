@@ -42,7 +42,7 @@
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>75000000</colordiffuse>
 			</control>
-			<!-- Title (album or artist) Artist-album (song) -->
+			<!-- Artist (artist)  Album title (album / song) -->
 			<control type="label">
 				<posx>45</posx>
 				<posy>2</posy>
@@ -56,7 +56,7 @@
 				<scrollspeed>20</scrollspeed>
 				<scrollout>false</scrollout>
 			</control>
-			<!-- Artist (album or artist) Title (song) -->
+			<!-- Artist (album)  Album Artist (album) Title (song) -->
 			<control type="label">
 				<posx>45</posx>
 				<posy>70</posy>
@@ -147,6 +147,20 @@
 				<font>Font_24A</font>
 				<label>$INFO[ListItem.Year]</label>
 				<textcolor>FFFFFAF0</textcolor>
+				<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
+			</control>
+			<control type="label">
+			    <left>0</left>
+				<posx>285</posx>
+				<posy>154</posy>
+				<height>60</height>
+				<width>300</width>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<label>$LOCALIZE[135]</label>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<visible>String.IsEqual(ListItem.DBType,artist)</visible>
 			</control>
 			<control type="label">
 				<!-- Genre -->
