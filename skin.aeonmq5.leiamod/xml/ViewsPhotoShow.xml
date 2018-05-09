@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<!--##################################################################################   VISTA PHOTOSHOW - ID 79   ##################################################################################-->
 	<include name="ViewPhotoShow">
@@ -130,8 +131,20 @@
 					<animation effect="fade" end="95" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<!-- Nome da foto -->
 					<posx>30</posx>
+					<posy>36</posy>
+					<width>112</width>
+					<height>75</height>
+					<align>center</align>
+					<!-- <aligny>center</aligny> -->
+					<font>Font_18B</font>
+					<textcolor>$VAR[value_flagscolor]</textcolor>
+					<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
+					<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
+				</control>
+				<control type="label">
+					<!-- Nome da foto -->
+					<posx>145</posx>
 					<posy>36</posy>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Label]</label>
