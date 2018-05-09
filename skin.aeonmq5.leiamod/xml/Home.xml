@@ -23,7 +23,7 @@
 	<onload condition="Skin.HasSetting(custom_wxicons.multi)">SetProperty(current_wxicon_multi,true,0)</onload>
 	<onload condition="Player.HasAudio + System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload condition="System.HasAddon(script.favourites) + ![String.IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">RunScript(script.favourites)</onload>
-	<onload condition="Skin.HasSetting(rcbgames) | [!String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status,run)) + System.HasAddon(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
+	<onload condition="Skin.HasSetting(rcbgames) | [!String.IsEqual(Window.Property(skin.aeonmq5.leiamod.status),run) + System.HasAddon(script.games.rom.collection.browser) + ![String.IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]]">RunScript(script.games.rom.collection.browser,limit=12)</onload>
 	<onload condition="Skin.HasSetting(rcbgames)">Skin.Reset(rcbgames)</onload>
 	<onload>Skin.Reset(playlists)</onload>
 	<onunload condition="String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)">Skin.SetString(playlists,$INFO[Container(9000).ListItem.Property(id)])</onunload>
