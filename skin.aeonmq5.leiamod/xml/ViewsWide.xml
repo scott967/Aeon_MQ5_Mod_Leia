@@ -140,7 +140,7 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -151,7 +151,7 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre)</visible>
+							<visible>String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -164,6 +164,20 @@
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
+							<visible>!Container.Content(images)</visible>
+						</control>
+						<control type="label">
+							<posx>762</posx>
+							<posy>-16</posy>
+							<width>200</width>
+							<height>60</height>
+							<font>Font_18</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolor</include>
+							<label>$INFO[ListItem.Date]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
+							<visible>Container.Content(images)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -176,7 +190,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
 							<!-- <colordiffuse>$VAR[value_headercolor]</colordiffuse> -->
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 						</control>
 						<control type="image">
 							<posx>788</posx>
@@ -185,7 +199,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -225,7 +239,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -236,7 +250,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre)</visible>
+							<visible>String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -250,6 +264,20 @@
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
 						</control>
+						<visible>!Container.Content(images)</visible>
+						<control type="label">
+							<posx>762</posx>
+							<posy>-11</posy>
+							<width>200</width>
+							<height>60</height>
+							<font>Font_18</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Date]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
+							<visible>Container.Content(images)</visible>
+						</control>
 						<control type="label">
 							<posx>772</posx>
 							<posy>22</posy>
@@ -261,7 +289,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
 							<!-- <colordiffuse>$VAR[value_headercolorfocus]</colordiffuse> -->
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 						</control>
 						<control type="image">
 							<posx>788</posx>
@@ -270,7 +298,7 @@
 							<height>15</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
