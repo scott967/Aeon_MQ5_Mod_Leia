@@ -774,8 +774,8 @@
 				<control type="radiobutton" id="9237">
 					<include>TopMenuRadioButton</include>
 					<label>31111</label>
-					<onclick>Skin.ToggleSetting(nowalldiscart)</onclick>
-					<selected>!Skin.HasSetting(nowalldiscart)</selected>
+					<onclick>Skin.ToggleSetting(nowalldiscart_video)</onclick>
+					<selected>!Skin.HasSetting(nowalldiscart_video)</selected>
 					<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
 				<control type="radiobutton" id="9238">
@@ -2065,6 +2065,13 @@
 					<onclick>Skin.SetString(wallmusicgrid,big)</onclick>
 					<selected>String.Contains(skin.string(wallmusicgrid),big)</selected>
 					<visible>Control.IsVisible(56)</visible>
+				</control>
+				<control type="radiobutton" id="9237">
+					<include>TopMenuRadioButton</include>
+					<label>31111</label>
+					<onclick>Skin.ToggleSetting(nowalldiscart_audio)</onclick>
+					<selected>!Skin.HasSetting(nowalldiscart_audio)</selected>
+					<visible>Control.IsVisible(56) + Container.Content(albums)</visible>
 				</control>
 				<!-- Glass List -->
 				<control type="radiobutton" id="9225">
