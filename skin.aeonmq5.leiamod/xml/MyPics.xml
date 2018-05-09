@@ -2,6 +2,8 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs 2 -->
+<!-- Leia 10.3.0 -->
+
 <window>
 	<defaultcontrol>51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
@@ -159,6 +161,7 @@
 			<include>ScrollLabel</include>
 			<include>TopMenu_Pics</include>
 			<include>BGBlack</include>
+			<include>ContainerViewPage</include>
 		</control>
 	</controls>
 </window>
