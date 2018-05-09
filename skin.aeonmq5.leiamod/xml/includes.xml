@@ -4167,7 +4167,7 @@
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
-			<visible>!String.IsEqual(Container.NumPages,1) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)]</visible>
+			<visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)]</visible>
 		</control>
 	</include>
 		<!-- ######################################################################### Game OSD ######################################################################### -->
