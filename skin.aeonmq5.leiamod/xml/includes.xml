@@ -614,6 +614,8 @@
 				<onfocus>Skin.SetString(case_dvd,grey)</onfocus>
 				<onfocus>Skin.SetString(case_set,blood)</onfocus>
 				<onfocus>Skin.SetString(case_4k,chocolate)</onfocus>
+				<onfocus>Skin.SetString(case_hdr,digital)</onfocus>
+				<onfocus>Skin.SetString(case_uhd,goldyellow)</onfocus>
 				<onfocus>Skin.SetString(codec_default,default)</onfocus>
 				<onfocus>Skin.SetString(codec_bluray,bluray)</onfocus>
 				<onfocus>Skin.SetString(codec_3dbd,3dbd)</onfocus>
@@ -622,6 +624,8 @@
 				<onfocus>Skin.SetString(codec_dvd,dvd)</onfocus>
 				<onfocus>Skin.SetString(codec_set,set)</onfocus>
 				<onfocus>Skin.SetString(codec_4k,4k)</onfocus>
+				<onfocus>Skin.SetString(codec_hdr,hdr)</onfocus>
+				<onfocus>Skin.SetString(codec_uhd,uhd)</onfocus>
 				<onfocus>Skin.SetString(panel_seconds,3)</onfocus>
 				<onfocus>Skin.SetString(gamevideo_seconds,2)</onfocus>
 				<onfocus>Skin.SetString(games_video,auto)</onfocus>
@@ -2870,6 +2874,16 @@
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_video_cms),disable) | Skin.HasSetting(customosd)] + System.HasCMS</visible>
+			</item>
+			<item id="33">
+				<!-- video resolution -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_menu_video_res),disable)]</property>
+				<icon>osd_menu_video_res.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">PlayerResolutionSelect</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_menu_video_res),disable)">Skin.SetString(osd_menu_video_res,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_menu_video_res),disable)">Skin.Reset(osd_menu_video_res,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_menu_video_res),disable) | Skin.HasSetting(customosd)] + Player.HasResolutions</visible>
 			</item>
 			<item id="23">
 				<!-- skipbwd -->
