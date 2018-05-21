@@ -3920,15 +3920,15 @@ msgstr "העדכון הסתיים"
 
 msgctxt "#31972"
 msgid "Update failed"
-msgstr "העדכון נכשל"
+msgstr "msgstr "אם ישנו תג UHD בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו.""
 
 msgctxt "#31973"
 msgid "No update required"
-msgstr "אין עדכון הכרחי"
+msgstr "אם ישנו תג HDR בשם הקובץ או בתיקיה, יהיה שימוש באריזה זו."
 
 msgctxt "#31974"
 msgid "Downloading:"
-msgstr "מוריד:"
+msgstr "תוצג תווית תוכן UHD."
 
 msgctxt "#31975"
 msgid "Images in reddish tones the combined with graphite tone.[CR]The default theme of Aeon MQ 5."
@@ -3952,7 +3952,7 @@ msgstr "תקליטור וידאו"
 
 msgctxt "#31980"
 msgid "NEXT EPISODE"
-msgstr "הפרק הבא"
+msgstr "תוצג תווית תוכן HDR."
 
 msgctxt "#31981"
 msgid "EPISODES AIRED TODAY"
