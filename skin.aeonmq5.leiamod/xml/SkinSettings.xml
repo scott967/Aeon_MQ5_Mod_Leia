@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs/9.2.3 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">9100</defaultcontrol>
 	<onunload condition="String.Contains(skin.string(customwindow),video)">SetFocus(50)</onunload>
@@ -222,10 +223,10 @@
 					<selected>!Skin.HasSetting(nosmartsub)</selected>
 				</control>
 				<control type="button" id="1057">
-					<!-- Ir para customizacao do menu -->
+					<!-- Go to menu customization -->
 					<label>31207</label>
 					<onclick>ActivateWindow(6000)</onclick>
-					<!-- custo home -->
+					<!-- custom home  window-->
 					<onclick>Skin.SetBool(custommode)</onclick>
 				</control>
 			</control>
@@ -712,7 +713,7 @@
 					<selected>Skin.HasSetting(resetmode)</selected>
 				</control>
 				<control type="button" id="1163">
-					<!-- resetar -->
+					<!-- reset -->
 					<posy>60</posy>
 					<label>31421</label>
 					<onup>9100</onup>
@@ -721,7 +722,7 @@
 					<onright>9100</onright>
 					<colordiffuse>FFB20000</colordiffuse>
 					<onclick>ActivateWindow(628)</onclick>
-					<!-- custom res -->
+					<!-- custom reset window -->
 					<visible>Skin.HasSetting(resetmode)</visible>
 				</control>
 			</control>
@@ -767,7 +768,7 @@
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
 			</control>
-			<!-- ########################################################## SELETOR DE ESTOJO ########################################################## -->
+			<!-- ########################################################## CASE SELECTOR ########################################################## -->
 			<control type="group">
 				<visible>Container(9100).HasFocus(31)</visible>
 				<!--<control type="grouplist" id="9010">
@@ -821,6 +822,7 @@
 					<visible>Control.HasFocus(403)</visible>
 				</control>
 				<control type="wraplist" id="403">
+				<!-- List of current video cases with case color (set by list 165) and case codec icon (set by list 150) -->
 					<posx>477</posx>
 					<posy>352</posy>
 					<height>450</height>
@@ -835,7 +837,7 @@
 					<focusposition>0</focusposition>
 					<visible allowhiddenfocus="true">![Control.Hasfocus(150) | ControlGroup(165).HasFocus]</visible>
 					<itemlayout width="900" height="450"></itemlayout>
-					<focusedlayout width="900" height="450">
+					<focusedlayout width="900" height="450">  <!-- only focused case is visible-->
 						<control type="image">
 							<!-- reflexo -->
 							<posx>502</posx>
@@ -853,6 +855,7 @@
 							<aspectratio>stretch</aspectratio>
 							<texture>DefaultVideoPoster.png</texture>
 						</control>
+						<!-- case colored image from here -->
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
@@ -942,6 +945,29 @@
 							<visible>Container(403).HasFocus(8)</visible>
 						</control>
 						<control type="image">
+							<include>CaseSelectorReflect</include>
+							<!-- reflexo -->
+							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">$VAR[value_colorhdrcase]</texture>
+							<visible>Container(403).HasFocus(9)</visible>
+						</control>
+						<control type="image">
+							<include>CaseSelector</include>
+							<texture>$VAR[value_colorhdrcase]</texture>
+							<visible>Container(403).HasFocus(9)</visible>
+						</control>
+						<control type="image">
+							<include>CaseSelectorReflect</include>
+							<!-- reflexo -->
+							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">$VAR[value_coloruhdcase]</texture>
+							<visible>Container(403).HasFocus(10)</visible>
+						</control>
+						<control type="image">
+							<include>CaseSelector</include>
+							<texture>$VAR[value_coloruhdcase]</texture>
+							<visible>Container(403).HasFocus(10)</visible>
+						</control>
+						<!-- codec icon displayed on case -->
+						<control type="image">
 							<posx>588</posx>
 							<posy>3</posy>
 							<width>68</width>
@@ -1015,6 +1041,22 @@
 							<icon>$VAR[value_codec4k]</icon>
 							<onclick>Skin.SetString(custom_case,case_4k)</onclick>
 							<onclick>Skin.SetString(custom_codec,codec_4k)</onclick>
+							<onclick>SetFocus(165)</onclick>
+						</item>
+						<item id="9">
+							<!-- hdr -->
+							<label></label>
+							<icon>$VAR[value_codechdr]</icon>
+							<onclick>Skin.SetString(custom_case,case_hdr)</onclick>
+							<onclick>Skin.SetString(custom_codec,codec_hdr)</onclick>
+							<onclick>SetFocus(165)</onclick>
+						</item>
+						<item id="10">
+							<!-- uhd -->
+							<label></label>
+							<icon>$VAR[value_codecuhd]</icon>
+							<onclick>Skin.SetString(custom_case,case_uhd)</onclick>
+							<onclick>Skin.SetString(custom_codec,codec_uhd)</onclick>
 							<onclick>SetFocus(165)</onclick>
 						</item>
 					</content>
@@ -1095,17 +1137,17 @@
 					<texture>grey.png</texture>
 				</control>
 				<control type="list" id="150">
-					<!-- Seletor de Codec -->
-					<posx>465</posx>
+					<!-- Codec list to display on case first select case color on list 165 then icon here-->
+					<posx>370</posx>
 					<posy>870</posy>
-					<width>1500</width>
+					<width>1540</width>
 					<height>120</height>
 					<onup>9100</onup>
 					<ondown>403</ondown>
 					<viewtype>list</viewtype>
 					<orientation>horizontal</orientation>
 					<focusposition>0</focusposition>
-					<itemlayout width="150" height="60">
+					<itemlayout width="140" height="60">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -1115,7 +1157,7 @@
 							<colordiffuse>FF101010</colordiffuse>
 						</control>
 						<control type="image">
-							<posx>22</posx>
+							<posx>17</posx>
 							<posy>0</posy>
 							<height>60</height>
 							<width>105</width>
@@ -1124,7 +1166,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 					</itemlayout>
-					<focusedlayout width="150" height="60">
+					<focusedlayout width="140" height="60">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -1137,7 +1179,7 @@
 							<visible>Control.Hasfocus(150)</visible>
 						</control>
 						<control type="image">
-							<posx>22</posx>
+							<posx>17</posx>
 							<posy>0</posy>
 							<height>60</height>
 							<width>105</width>
@@ -1146,7 +1188,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="image">
-							<posx>22</posx>
+							<posx>17</posx>
 							<posy>75</posy>
 							<width>105</width>
 							<height>30</height>
@@ -1211,6 +1253,18 @@
 							<onclick>Skin.SetString($INFO[skin.string(custom_codec)],4k)</onclick>
 							<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
 						</item>
+						<item id="10">
+							<label></label>
+							<icon>flags/source/hdr.png</icon>
+							<onclick>Skin.SetString($INFO[skin.string(custom_codec)],hdr)</onclick>
+							<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
+						</item>
+						<item id="11">
+							<label></label>
+							<icon>flags/source/uhd.png</icon>
+							<onclick>Skin.SetString($INFO[skin.string(custom_codec)],uhd)</onclick>
+							<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
+						</item>
 					</content>
 				</control>
 				<control type="image">
@@ -1272,6 +1326,7 @@
 						<colordiffuse>20FFFFFF</colordiffuse>
 					</control>
 					<control type="grouplist" id="165">
+					<!-- List of available case colors to select for list 403 case-->
 						<posx>102</posx>
 						<posy>232</posy>
 						<width>13650</width>
@@ -2327,7 +2382,7 @@
 					<label>31908</label>
 					<onclick>Skin.SetString(theme,mytheme)</onclick>
 					<onclick>ActivateWindow(640)</onclick>
-					<!-- custom help -->
+					<!-- custom help dialog -->
 					<selected>String.Contains(skin.string(theme),mytheme)</selected>
 				</control>
 				<control type="button" id="1071">

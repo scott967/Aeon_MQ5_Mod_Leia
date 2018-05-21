@@ -4146,15 +4146,25 @@ msgid "Update finished"
 msgstr ""
 
 msgctxt "#31972"
-msgid "Update failed"
+#: msgid "Update failed"
+#: msgstr ""
+msgid ""
+"IF THERE IS A 'UHD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE 
+"USED."
 msgstr ""
 
 msgctxt "#31973"
-msgid "No update required"
+#: msgid "No update required"
+#: msgstr ""
+msgid ""
+"IF THERE IS AN 'HDR' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE 
+"USED."
 msgstr ""
 
 msgctxt "#31974"
-msgid "Downloading:"
+#: msgid "Downloading:"
+#: msgstr ""
+msgid "UHD CONTENT LABEL WILL BE SHOWN."
 msgstr ""
 
 msgctxt "#31975"
@@ -4180,7 +4190,9 @@ msgid "VIDEO DISC"
 msgstr ""
 
 msgctxt "#31980"
-msgid "NEXT EPISODE"
+#: msgid "NEXT EPISODE"
+#: msgstr ""
+msgid "HDR CONTENT LABEL WILL BE SHOWN."
 msgstr ""
 
 msgctxt "#31981"

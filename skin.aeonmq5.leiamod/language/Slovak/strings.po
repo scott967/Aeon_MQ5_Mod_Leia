@@ -4141,16 +4141,26 @@ msgid "Update finished"
 msgstr "Aktualizácia dokončená"
 
 msgctxt "#31972"
-msgid "Update failed"
-msgstr "Aktualizácia zlyhala"
+#: msgid "Update failed"
+#: msgstr "Aktualizácia zlyhala"
+msgid ""
+"IF THERE IS A 'UHD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE 
+"USED."
+msgstr ""
 
 msgctxt "#31973"
-msgid "No update required"
-msgstr "Aktualizácia nie je potrebná"
+#: msgid "No update required"
+#: msgstr "Aktualizácia nie je potrebná"
+msgid ""
+"IF THERE IS AN 'HDR' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL BE 
+"USED."
+msgstr ""
 
 msgctxt "#31974"
-msgid "Downloading:"
-msgstr "Sťahujem:"
+#: msgid "Downloading:"
+#: msgstr "Sťahujem:"
+msgid "UHD CONTENT LABEL WILL BE SHOWN."
+msgstr ""
 
 msgctxt "#31975"
 msgid ""
@@ -4175,7 +4185,9 @@ msgid "VIDEO DISC"
 msgstr ""
 
 msgctxt "#31980"
-msgid "NEXT EPISODE"
+#: msgid "NEXT EPISODE"
+#: msgstr ""
+msgid "HDR CONTENT LABEL WILL BE SHOWN."
 msgstr ""
 
 msgctxt "#31981"
