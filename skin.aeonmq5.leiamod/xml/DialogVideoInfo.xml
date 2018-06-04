@@ -637,7 +637,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_24</font>
-					<label>$INFO[Container(50).ListItem.Label]</label>
+					<label>$INFO[Container(50).ListItem.Label] $INFO[Container(50).ListItem.Label2, $LOCALIZE[20347]: ,]</label>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<scroll>true</scroll>
 				</control>
