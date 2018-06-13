@@ -7,7 +7,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>10.3.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]05/15/2018</value>
+		<value>10.3.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]06/10/2018</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>

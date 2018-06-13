@@ -3,7 +3,7 @@
 <!-- Aeon MQ 5 Isengard 7.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.19/9.2.1 windowIDs/9.2.3 -->
-<!-- Leia 10.2.3/10.2.6 -->
+<!-- Leia 10.2.3/10.2.6/10.3.0 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
@@ -26,16 +26,6 @@
 			<include>Animation_Window</include>
 			<include>SettingsBack</include>
 			<!-- Menu da direita -->
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31010</label>
-				<visible>!Skin.HasSetting(show_disabled) | !String.StartsWith(Container.FolderPath,Addons://user)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>$LOCALIZE[31010] ($LOCALIZE[13106])</label>
-				<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
-			</control>
 			<control type="scrollbar" id="80">
 				<include>ScrollBar_Vertical</include>
 				<posx>1860</posx>
@@ -50,6 +40,26 @@
 			<control type="group">
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<visible>![Container(9000).HasFocus(2) | ControlGroup(9001).HasFocus]</visible>
+			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>$LOCALIZE[31010] ($LOCALIZE[35257])</label>
+				<visible>!Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
+			</control>
+			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>$LOCALIZE[31010] ($LOCALIZE[13106])</label>
+				<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
+			</control>
+			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>$LOCALIZE[31010] ($LOCALIZE[39024])</label>
+				<visible>String.StartsWith(Container.FolderPath,Addons://dependencies)</visible>
+			</control>
+			<control type="label">
+				<include>SettingsContentTitle</include>
+				<label>$LOCALIZE[31010] ($LOCALIZE[23054])</label>
+				<visible>String.StartsWith(Container.FolderPath,Addons://running)</visible>
+			</control>
 				<control type="list" id="55">
 					<viewtype>list</viewtype>
 					<posx>360</posx>
@@ -236,6 +246,7 @@
 			<!-- Menu da esquerda -->
 			<include>Date</include>
 			<control type="label">
+			<!-- OPTIONS -->
 				<include>SettingsSectionTitle</include>
 				<label>31202</label>
 			</control>
@@ -289,14 +300,14 @@
 						<label>$LOCALIZE[31242] $LOCALIZE[13106]</label>
 						<icon></icon>
 						<onclick>Skin.ToggleSetting(show_disabled)</onclick>
-						<visible>!Skin.HasSetting(show_disabled)</visible>
+						<visible>!Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
 					</item>
 					<item id="4">
 						<!-- Show all -->
 						<label>$LOCALIZE[31242] $LOCALIZE[593]</label>
 						<icon></icon>
 						<onclick>Skin.ToggleSetting(show_disabled)</onclick>
-						<visible>Skin.HasSetting(show_disabled)</visible>
+						<visible>Skin.HasSetting(show_disabled) + String.StartsWith(Container.FolderPath,Addons://user)</visible>
 					</item>
 				</content>
 			</control>

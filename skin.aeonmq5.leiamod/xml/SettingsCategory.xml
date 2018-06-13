@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.17/9.1.19 -->
-<!-- Leai 10.2.4 -->
+<!-- Leai 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<!-- <allowoverlay>no</allowoverlay> -->
@@ -19,60 +19,10 @@
 			<include>SettingsBack</include>
 			<!-- Menu da direita -->
 			<visible>!Window.IsActive(PVRChannelManager)</visible>
-			<control type="label">
+			<!-- Heading label supplied by window -->
+			<control type="label" id="2">
 				<include>SettingsContentTitle</include>
-				<label>14207</label>
-				<visible>Window.IsActive(interfacesettings)</visible>
-				<!-- appearancesettings -->
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>14201</label>
-				<visible>Window.IsActive(playersettings)</visible>
-				<!-- video and music settings -->
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>14212</label>
-				<visible>Window.IsActive(mediasettings)</visible>
-				<!-- music and video library settings -->
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>14205</label>
-				<visible>Window.IsActive(pvrsettings) + System.HasPVR</visible>
-				<!-- tvsettings -->
-			</control>
-			<!-- <control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31365</label>
-				<visible>Window.IsActive(picturessettings)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31367</label>
-				<visible>Window.IsActive(weathersettings)</visible>
-			</control> -->
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>15016</label>
-				<visible>Window.IsActive(gamesettings)</visible>
-				<!-- game settings -->
-			</control>
-			<!-- <control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31367</label>
-				<visible>Window.IsActive(weathersettings)</visible>
-			</control> -->
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>31359</label>
-				<visible>Window.IsActive(systemsettings)</visible>
-			</control>
-			<control type="label">
-				<include>SettingsContentTitle</include>
-				<label>14208</label>
-				<visible>Window.IsActive(servicesettings)</visible>
+				<label></label>
 			</control>
 			<control type="image">
 				<posx>360</posx>
@@ -92,6 +42,7 @@
 				<texture>separator.png</texture>
 			</control>
 			<control type="textbox" id="6">
+			<!-- window template -->
 				<posx>435</posx>
 				<posy>915</posy>
 				<width>1410</width>
@@ -102,12 +53,8 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
-			<!-- <control type="label" id="2">
-				<posx>240</posx>
-				<posy>95</posy>
-				<height>25</height>
-			</control> -->
 			<control type="grouplist" id="5">
+			<!-- details of settings -->
 				<posx>360</posx>
 				<posy>180</posy>
 				<width>1560</width>
@@ -153,11 +100,12 @@
 			<!-- Menu da esquerda -->
 			<include>Date</include>
 			<control type="label">
+			<!-- OPTIONS -->
 				<include>SettingsSectionTitle</include>
 				<label>31202</label>
 			</control>
 			<control type="group">
-				<!-- Menu de nivel -->
+				<!-- Slide out menu settings level -->
 				<posx>-450</posx>
 				<animation effect="slide" start="0,0" end="450,0" time="300" easing="out" tween="cubic" condition="ControlGroup(9900).HasFocus">Conditional</animation>
 				<control type="grouplist" id="9900">
@@ -189,6 +137,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="3">
+			<!-- options list -->
 				<posx>0</posx>
 				<posy>180</posy>
 				<width>360</width>
