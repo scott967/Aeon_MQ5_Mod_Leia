@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.3/10.2.8 -->
+<!-- Leia 10.2.3/10.2.8/10.3.0 -->
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
 	<include name="Preset1_Apply">
@@ -1236,6 +1236,8 @@
 		<onclick>Skin.SetString(menu20.visible,$INFO[skin.string(menu20preset10.condition)])</onclick>
 	</include>
 	<!-- ######################################################################### Menu Custom Content ######################################################################### -->
+	<!--       MenuCustom is main code block.  List 452 is list of available menu items List 453 is for cloning submenu to another menu item List 454 is to copy submenus to disk  List 455 is to load submenus from disk -->
+	<!--            List 456 is to create preset List 457 is to apply preset Grouplist 450 is context dependent customization buttons -->
 	<include name="DefaultReset">
 		<onclick>Skin.Reset($INFO[skin.string(custom_label)])</onclick>
 		<onclick>Skin.Reset($INFO[skin.string(custom_bg)])</onclick>
@@ -2002,7 +2004,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31002]-$LOCALIZE[31043]</label>
-					<!-- Musica recem tocada -->
+					<!-- MUSIC-RECENTLY PLAYED -->
 					<!-- 6056 -->
 					<label2>$LOCALIZE[31002]-$LOCALIZE[31043]</label2>
 					<property name="id">music</property>
@@ -2012,7 +2014,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31002]-$LOCALIZE[31583]</label>
-					<!-- Musica recentes -->
+					<!-- MUSIC-RECENTLY ADDED -->
 					<!-- 6057 -->
 					<label2>$LOCALIZE[31002]-$LOCALIZE[31583]</label2>
 					<property name="id">music</property>
@@ -2062,7 +2064,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31002]-$LOCALIZE[31040]</label>
-					<!-- Musica albuns -->
+					<!-- Musica ALBUMS -->
 					<!-- 6062 -->
 					<label2>$LOCALIZE[31002]-$LOCALIZE[31040]</label2>
 					<property name="id">music</property>
@@ -2072,7 +2074,7 @@
 				</item>
 				<item>
 					<label>$LOCALIZE[31002]-$LOCALIZE[31340]</label>
-					<!-- Musica faixas -->
+					<!-- Musica SONGS -->
 					<!-- 6063 -->
 					<label2>$LOCALIZE[31002]-$LOCALIZE[31340]</label2>
 					<property name="id">music</property>
@@ -2091,8 +2093,18 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
+					<label>$LOCALIZE[31002]-$LOCALIZE[39031]</label>
+					<!-- Music SOURCES -->
+					<!-- 6084 -->
+					<label2>$LOCALIZE[31002]-$LOCALIZE[39031]</label2>
+					<property name="id">music</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],musicsources)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(music,"musicdb://sources/",return))</onclick>
+					<include>DefaultReset</include>
+				</item>
+				<item>
 					<label>$LOCALIZE[31002]-$LOCALIZE[31033]</label>
-					<!-- Musica arquivos -->
+					<!-- Musica FILES -->
 					<!-- 6064 -->
 					<label2>$LOCALIZE[31002]-$LOCALIZE[31033]</label2>
 					<property name="id">music</property>
@@ -2191,7 +2203,6 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvepg)</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvguide))</onclick>
 					<include>DefaultReset</include>
-					<!-- <visible>Skin.HasSetting(submode)</visible> -->
 				</item>
 				<item>
 					<label>$LOCALIZE[31006]-$LOCALIZE[19163]</label>
@@ -2202,7 +2213,6 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],livetvrecords)</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(tvrecordings))</onclick>
 					<include>DefaultReset</include>
-					<!-- <visible>Skin.HasSetting(submode)</visible> -->
 				</item>
 				<item>
 					<label>$LOCALIZE[31006]-$LOCALIZE[19040]</label>
@@ -2286,7 +2296,6 @@
 					<label2>31007</label2>
 					<property name="id">various</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],games)</onclick>
-					<!-- <onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.games.rom.collection.browser))</onclick> -->
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(games))</onclick>
 					<include>DefaultReset</include>
 				</item>
@@ -2704,7 +2713,7 @@
 			<visible allowhiddenfocus="true">Control.Hasfocus(81) | Control.Hasfocus(453)</visible>
 		</control>
 		<control type="list" id="453">
-			<!-- Seletor clonar submenu -->
+			<!-- Select submenu to clone-->
 			<viewtype>list</viewtype>
 			<posx>1530</posx>
 			<posy>84</posy>
@@ -2910,7 +2919,7 @@
 			<visible allowhiddenfocus="true">Control.Hasfocus(82) | Control.Hasfocus(454)</visible>
 		</control>
 		<control type="list" id="454">
-			<!-- Seletor copiar propriedades -->
+			<!-- Select to copy to disk -->
 			<viewtype>list</viewtype>
 			<posx>1530</posx>
 			<posy>84</posy>
@@ -4853,7 +4862,7 @@
 			<height>998</height>
 			<texture>shadow.png</texture>
 		</control>
-		<control type="grouplist" id="450">
+		<control type="grouplist" id="450">  <!-- buttons to control customization -->
 			<posx>450</posx>
 			<posy>180</posy>
 			<height>720</height>
@@ -4979,19 +4988,6 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
 				<!-- <enable>Skin.HasSetting(custom_wxicons.multi) | String.Contains(skin.string(weatherconditionbg),weathercondition)</enable> -->
 			</control>
-			<!-- <control type="button" id="128">
-				<label>31923</label>
-				<onclick>RunScript(script.aeonmq5.extrapack,mode=forcerefresh)</onclick>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
-				<enable>Skin.HasSetting(custom_wxicons.multi) | String.Contains(skin.string(weatherconditionbg),weathercondition)</enable>
-			</control> -->
-			<!-- <control type="radiobutton" id="129">
-				<include>CustomMenuRadioButton</include>
-				<label>$LOCALIZE[31543]</label>
-				<onclick>ActivateWindowAndFocus(skinsettings,9100,35)</onclick>
-				<selected>Skin.HasSetting(custom_wxicons.multi)</selected>
-				<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
-			</control> -->
 			<control type="radiobutton" id="130">
 				<!-- Icones Clima Externo -->
 				<!-- nao trocar id -->
@@ -5097,7 +5093,7 @@
 				<visible>Skin.HasSetting(submode) + [Window.IsVisible(6021) | Window.IsVisible(6022)]</visible>
 			</control>
 		</control>
-		<control type="button" id="5000">
+		<control type="button" id="5000">  <!-- This button sets the menu or submenu item from the CustomSub window -->
 			<include>InvisibleButton</include>
 			<onfocus>SetFocus(450)</onfocus>
 			<onfocus>Skin.SetString(custom_on,$INFO[Container(9000).ListItem.Property(name)].visible)</onfocus>

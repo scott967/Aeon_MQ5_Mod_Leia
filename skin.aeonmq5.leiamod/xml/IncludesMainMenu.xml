@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7  -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.3 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.4/10.3.0 -->
 <includes>
 	<!-- ######################################################################### Menu Principal ######################################################################### -->
 	<include name="MainMenuFixedList">
@@ -55,7 +55,6 @@
 		<itemlayout width="639" height="105">
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx> -->
 				<posy>3</posy>
 				<height>105</height>
 				<width>600</width>
@@ -68,7 +67,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx> -->
 				<posy>6</posy>
 				<height>105</height>
 				<width>600</width>
@@ -81,7 +79,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx> -->
 				<posy>9</posy>
 				<height>105</height>
 				<width>600</width>
@@ -94,7 +91,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx> -->
 				<posy>6</posy>
 				<height>105</height>
 				<width>600</width>
@@ -107,7 +103,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>10</posy>
 				<height>105</height>
 				<width>600</width>
@@ -120,7 +115,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>4</posy>
 				<height>105</height>
 				<width>600</width>
@@ -133,7 +127,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>10</posy>
 				<height>105</height>
 				<width>600</width>
@@ -146,7 +139,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>-2</posy>
 				<height>105</height>
 				<width>600</width>
@@ -161,7 +153,6 @@
 		<focusedlayout width="639" height="105">
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>3</posy>
 				<height>105</height>
 				<width>600</width>
@@ -175,7 +166,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>6</posy>
 				<height>105</height>
 				<width>600</width>
@@ -189,7 +179,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>9</posy>
 				<height>105</height>
 				<width>600</width>
@@ -203,7 +192,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>6</posy>
 				<height>105</height>
 				<width>600</width>
@@ -217,7 +205,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>10</posy>
 				<height>105</height>
 				<width>600</width>
@@ -231,7 +218,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>4</posy>
 				<height>105</height>
 				<width>600</width>
@@ -245,7 +231,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>10</posy>
 				<height>105</height>
 				<width>600</width>
@@ -259,7 +244,6 @@
 			</control>
 			<control type="label">
 				<left>20</left>
-				<!-- <posx>213</posx>  -->
 				<posy>-2</posy>
 				<height>105</height>
 				<width>600</width>
@@ -680,8 +664,14 @@
 			<icon>$INFO[skin.string(menu10.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu10.visible)]</property>
 			<property name="name">menu10</property>
-			<property name="id">$VAR[value_menu10.id]</property>&gt;
-			<property name="subid">$VAR[value_menu10.subid]</property><property name="path">$INFO[skin.string(menu10.path)]</property><property name="action">$VAR[value_menu10.action]</property><onclick condition="Window.IsVisible(Home)">$VAR[value_menu10.action]</onclick><onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick><visible>![String.IsEmpty(skin.string(menu10.master)) | String.Contains(skin.string(menu10.visible),off)] | Window.IsVisible(6000)</visible></item>
+			<property name="id">$VAR[value_menu10.id]</property>
+			<property name="subid">$VAR[value_menu10.subid]</property>
+			<property name="path">$INFO[skin.string(menu10.path)]</property>
+			<property name="action">$VAR[value_menu10.action]</property>
+			<onclick condition="Window.IsVisible(Home)">$VAR[value_menu10.action]</onclick>
+			<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
+			<visible>![String.IsEmpty(skin.string(menu10.master)) | String.Contains(skin.string(menu10.visible),off)] | Window.IsVisible(6000)</visible>
+		</item>
 		<item>
 			<label fallback="31014">$VAR[value_menu11.label]</label>
 			<icon>$INFO[skin.string(menu11.bg)]</icon>
