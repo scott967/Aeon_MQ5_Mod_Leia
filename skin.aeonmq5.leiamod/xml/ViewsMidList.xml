@@ -264,7 +264,7 @@
 				<description>CLEARART/FANART GROUP</description>
 				<animation effect="slide" time="600" start="555,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="555,0" tween="cubic" easing="inout">Hidden</animation>
-				<visible>!Control.HasFocus(9915) + ![Container.content(genres) | Container.Content(roles)]</visible>
+				<visible>!Control.HasFocus(9915) + ![Container.content(genres) | Container.Content(roles) | Container.Content(sources)]</visible>
 				<control type="image">
 					<description>CLEARART DISPLAY</description>
 					<posx>1323</posx>
@@ -553,7 +553,7 @@
 				<description>CLEARART/FANART GROUP</description>
 				<animation effect="slide" time="600" start="555,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="555,0" tween="cubic" easing="inout">Hidden</animation>
-				<visible>[Container.content(genres) | Container.Content(roles)] + [Window.IsActive(music) | Window.IsActive(musicplaylist)]</visible>
+				<visible>[Container.content(genres) | Container.Content(roles) | Container.Content(sources)] + [Window.IsActive(music) | Window.IsActive(musicplaylist)]</visible>
 				<control type="image">
 					<description>FANART WINDOW BACKGROUND</description>
 					<posx>1402</posx>
@@ -618,7 +618,7 @@
 					<description>YEAR</description>
 					<include>MidListInfoTitle</include>
 					<label>$VAR[value_ground17_label]</label>
-					<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
+					<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources)]</visible>
 				</control>
 				<control type="label">
 					<description>DIRECTOR</description>
@@ -742,7 +742,7 @@
 						<height>20</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
@@ -783,7 +783,7 @@
 						<height>20</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
@@ -824,7 +824,7 @@
 						<height>20</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
@@ -878,7 +878,7 @@
 						<height>20</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
@@ -1286,7 +1286,7 @@
 				<control type="group">
 					<!-- MUSICA -->
 					<include>Animation_Fade</include>
-					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + [Skin.HasSetting(nomidlistaudiocase) | Container.Content(genres) | Container.Content(roles)]</visible>
+					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + [Skin.HasSetting(nomidlistaudiocase) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources)]</visible>
 					<control type="image">
 						<!-- Musica reflexo -->
 						<posx>-8</posx>

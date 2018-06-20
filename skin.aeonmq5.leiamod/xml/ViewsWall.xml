@@ -955,7 +955,7 @@
 						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>3</posx>
@@ -965,7 +965,7 @@
 						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -978,7 +978,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),default) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="160" height="160">
@@ -1010,7 +1010,7 @@
 						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -1020,7 +1020,7 @@
 						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -1033,7 +1033,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="273" height="276">
@@ -1065,7 +1065,7 @@
 						<texture fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">stretch</aspectratio>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>33</posx>
@@ -1075,7 +1075,7 @@
 						<texture fallback="DefaultAudioCover.png" diffuse="thumb_poster_diffuse.png" background="true">genres/256.png</texture>
 						<bordertexture border="-2">black.png</bordertexture>
 						<aspectratio align="center">keep</aspectratio>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>40</posx>
@@ -1088,7 +1088,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</itemlayout>
 				<itemlayout condition="String.Contains(skin.string(wallmusicgrid),big) + [Container.Content(albums) + !Skin.HasSetting(nowallaudiocase)]" width="482" height="414">
@@ -1124,7 +1124,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>3</posx>
@@ -1138,7 +1138,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -1155,7 +1155,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),default) + Container.Content(albums) + Skin.HasSetting(nowallaudiocase)" width="160" height="160">
@@ -1271,7 +1271,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -1285,7 +1285,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -1302,7 +1302,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),mid) + Container.Content(albums) + Skin.HasSetting(nowallaudiocase)" width="273" height="276">
@@ -1418,7 +1418,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]</visible>
+						<visible>![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]</visible>
 					</control>
 					<control type="image">
 						<posx>33</posx>
@@ -1432,7 +1432,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 					<control type="label">
 						<posx>40</posx>
@@ -1449,7 +1449,7 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)</visible>
+						<visible>Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)</visible>
 					</control>
 				</focusedlayout>
 				<focusedlayout condition="String.Contains(skin.string(wallmusicgrid),big) + Container.Content(albums) + Skin.HasSetting(nowallaudiocase)" width="482" height="414">

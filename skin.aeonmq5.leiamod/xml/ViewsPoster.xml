@@ -76,7 +76,7 @@
 				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</itemlayout>
-		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
+		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
 			<control type="image">
 				<posx>0</posx>
 				<posy>9</posy>
@@ -107,7 +107,7 @@
 				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</itemlayout>
-		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
+		<itemlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
 			<control type="image">
 				<posx>0</posx>
 				<posy>9</posy>
@@ -167,7 +167,7 @@
 				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
+		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + ![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
 			<control type="image">
 				<posx>0</posx>
 				<posy>9</posy>
@@ -203,7 +203,7 @@
 				<visible>[!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 		</focusedlayout>
-		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
+		<focusedlayout condition="Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="447" height="540">
 			<control type="image">
 				<posx>0</posx>
 				<posy>9</posy>

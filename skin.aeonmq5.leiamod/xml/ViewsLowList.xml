@@ -396,7 +396,7 @@
 							<width>98</width>
 							<height>20</height>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEmpty(ListItem.Title)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEmpty(ListItem.Title)]</visible>
 						</control>
 						<control type="image">
 							<posx>738</posx>
@@ -405,7 +405,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 						</control>
 						<control type="image">
 							<posx>848</posx>

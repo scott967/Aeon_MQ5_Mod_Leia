@@ -200,7 +200,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<itemlayout condition="!Window.IsActive(videos) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
+					<itemlayout condition="!Window.IsActive(videos) + ![Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
 						<control type="image">
 							<posx>9</posx>
 							<posy>9</posy>
@@ -225,7 +225,7 @@
 							<height>180</height>
 						</control>
 					</itemlayout>
-					<itemlayout condition="!Window.IsActive(videos) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
+					<itemlayout condition="!Window.IsActive(videos) + [Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
 						<control type="image">
 							<posx>9</posx>
 							<posy>9</posy>
@@ -440,7 +440,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!Window.IsActive(videos) + ![Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
+					<focusedlayout condition="!Window.IsActive(videos) + ![Container.Content(genres) | Container.Content(roles) | Container.Content(sources)| String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
 						<control type="image">
 							<posx>9</posx>
 							<posy>9</posy>
@@ -467,7 +467,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!Window.IsActive(videos) + [Container.Content(genres) | Container.Content(roles) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
+					<focusedlayout condition="!Window.IsActive(videos) + [Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | String.IsEqual(Container.FolderName,roles)]" width="180" height="180">
 						<control type="image">
 							<posx>9</posx>
 							<posy>9</posy>
