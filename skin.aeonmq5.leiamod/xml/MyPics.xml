@@ -8,7 +8,6 @@
 	<defaultcontrol>51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<views>51,56,79</views>
 	<controls>
 		<control type="multiimage">

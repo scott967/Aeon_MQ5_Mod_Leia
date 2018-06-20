@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.5 -->
 <!-- Isengard 7.1.9/7.1.10/7.1.11 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<!--##################################################################################   VISTA PANEL - ID 62   ##################################################################################-->
 	<include name="Panel_Dimmer">
@@ -70,8 +71,6 @@
 						<control type="image">
 							<posx>12</posx>
 							<posy>9</posy>
-							<!-- <width>100</width>
-							<height>141</height> -->
 							<width>262</width>
 							<height>180</height>
 							<texture fallback="DefaultVideoPoster.png" diffuse="thumb_poster_diffuse.png" background="true">$VAR[value_poster]</texture>
@@ -242,8 +241,6 @@
 							<width>142</width>
 							<height>142</height>
 							<font>Font_18A</font>
-							<!-- <scroll>true</scroll> -->
-							<!-- <scrollspeed>15</scrollspeed> -->
 							<wrapmultiline>true</wrapmultiline>
 							<textcolor>FFFFFAF0</textcolor>
 							<align>center</align>

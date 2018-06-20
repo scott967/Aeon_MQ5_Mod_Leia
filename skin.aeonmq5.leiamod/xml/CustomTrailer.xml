@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.4 -->
+<!-- Leia 10.3.0 -->
 <window id="639" type="dialog">
 	<!-- safe id -->
 	<defaultcontrol>9006</defaultcontrol>
@@ -107,8 +108,6 @@
 					<onleft>Dialog.Close(639)</onleft>
 					<onright>Dialog.Close(639)</onright>
 					<onclick>Dialog.Close(639)</onclick>
-					<!-- <onclick>RunScript(service.skin.widgets,moviequeue=$INFO[skin.string(custom_id)])</onclick> -->
-					<!-- <onclick>RunScript(special://skin/scripts/add_and_run_cv.py,moviequeue=$INFO[skin.string(custom_id)])</onclick> -->
 					<onclick>RunScript(script.cinemavision,movieid=$INFO[skin.string(custom_id)])</onclick>
 					<label>Watch with CinemaVision</label>
 					<visible>System.HasAddon(script.cinemavision)</visible>

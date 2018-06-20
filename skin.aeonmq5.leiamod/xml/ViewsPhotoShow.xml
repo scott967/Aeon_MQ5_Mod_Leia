@@ -136,10 +136,8 @@
 					<width>112</width>
 					<height>75</height>
 					<align>center</align>
-					<!-- <aligny>center</aligny> -->
 					<font>Font_18B</font>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 					<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
 				</control>
 				<control type="label">

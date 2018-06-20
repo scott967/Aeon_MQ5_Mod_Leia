@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">570</defaultcontrol>
 	<views>570</views>
@@ -8,7 +9,6 @@
 		<control type="group">
 			<posy>120</posy>
 			<include>Animation_DialogPopup</include>
-			<!-- <visible>!Window.IsVisible(smartplaylistrule)</visible> -->
 			<control type="image">
 				<posx>256</posx>
 				<posy>60</posy>
@@ -47,15 +47,6 @@
 				<label>$LOCALIZE[14111]</label>
 			</control>
 			<control type="group" id="9002">
-				<!-- <control type="image">
-					<posx>200</posx>
-					<posy>90</posy>
-					<width>711</width>
-					<height>40</height>
-					<texture>black.png</texture>
-					<colordiffuse>40FFFFFF</colordiffuse>
-					<visible>Control.IsVisible(570)</visible>
-				</control> -->
 				<control type="list" id="570">
 					<!-- Events -->
 					<posx>300</posx>
@@ -77,7 +68,6 @@
 							<height>117</height>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<!-- <animation effect="slide" start="60,0" end="60,0" time="0" condition="Window.IsActive(musicplaylist) | Window.IsActive(music) | Window.IsActive(videos) + ![Container.Content(movies) + !Container.Content(musicvideos)]">Conditional</animation> -->
 						</control>
 						<control type="label">
 							<left>135</left>
@@ -86,7 +76,6 @@
 							<height>52</height>
 							<font>Font_18</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<!-- <selectedcolor>selected</selectedcolor> -->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
@@ -98,7 +87,6 @@
 							<height>52</height>
 							<font>Font_17</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<!-- 		<selectedcolor>selected</selectedcolor> -->
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
@@ -109,7 +97,6 @@
 							<height>45</height>
 							<font>Font_14</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<!-- <selectedcolor>selected</selectedcolor> -->
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
@@ -161,7 +148,6 @@
 							<height>72</height>
 							<font>Font_17</font>
 							<textcolor>$VAR[value_headercolor]</textcolor>
-							<!-- <selectedcolor>selected</selectedcolor> -->
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
 						</control>
@@ -172,7 +158,6 @@
 							<height>60</height>
 							<font>Font_15</font>
 							<textcolor>$VAR[value_headercolor]</textcolor>
-							<!-- <selectedcolor>selected</selectedcolor> -->
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
@@ -227,9 +212,7 @@
 						<label>21431</label>
 						<altlabel>21430</altlabel>
 						<font>Font_20</font>
-						<!-- <texturenofocus>topmenu_button_nofocus.png</texturenofocus> -->
 						<texturefocus>topmenu_button_focus.png</texturefocus>
-						<!-- <alttexturenofocus>topmenu_button_nofocus.png</alttexturenofocus> -->
 						<alttexturefocus>topmenu_button_focus.png</alttexturefocus>
 						<textcolor>E4101010</textcolor>
 						<focusedcolor>FFFFFAF0</focusedcolor>
@@ -254,10 +237,7 @@
 						<focusedcolor>FFFFFAF0</focusedcolor>
 						<disabledcolor>FF505050</disabledcolor>
 						<textoffsetx>15</textoffsetx>
-						<!-- <texturenofocus>topmenu_button_nofocus.png</texturenofocus> -->
 						<texturefocus>topmenu_button_focus.png</texturefocus>
-						<!-- <alttexturenofocus>topmenu_button_nofocus.png</alttexturenofocus> -->
-						<!-- <alttexturefocus>topmenu_button_focus.png</alttexturefocus> -->
 						<pulseonselect>false</pulseonselect>
 						<radioheight>45</radioheight>
 						<textureradioonfocus>radiobutton_on.png</textureradioonfocus>

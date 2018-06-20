@@ -242,7 +242,6 @@
 						<posx>1432</posx>
 						<posy>75</posy>
 						<width>458</width>
-						<!-- <height>378</height> -->
 						<height>195</height>
 						<align>left</align>
 						<font>Font_17</font>
@@ -252,7 +251,6 @@
 					<control type="image">
 						<description>LINE BELOW PLOT DISPLAY</description>
 						<posx>1418</posx>
-						<!-- <posy>442</posy> -->
 						<posy>273</posy>
 						<width>488</width>
 						<height>1</height>
@@ -616,12 +614,6 @@
 					<label>$VAR[value_ground16_label]</label>
 					<visible>Container.Content(movies)</visible>
 				</control>
-				<!-- <control type="label">
-						<description>TV STATUS</description>
-						<include>MidListInfoTitle</include>
-						<label>Status</label>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
-					</control> -->
 				<control type="label">
 					<description>YEAR</description>
 					<include>MidListInfoTitle</include>
@@ -1108,7 +1100,6 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(nomidlistvideocase)">Conditional</animation>
-					<!-- <visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible> -->
 					<visible>![[String.IsEmpty(ListItem.Art(discart)) + [String.IsEmpty(ListItem.Art(poster)) | [Skin.HasSetting(nodisctvshow) + [Container.content(tvshows) | Container.Content(seasons)]]]] | Skin.HasSetting(nomidlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<description>THIS IS WHERE YOU CHANGE DISC SIZE AND POSITION</description>

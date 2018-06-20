@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Leia 10.2.5 -->
+<!-- Leia 10.2.5/10.3.0 -->
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onunload>Skin.Reset(customosd)</onunload>
@@ -95,15 +95,10 @@
 			<posy>780</posy>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="slide" time="400" start="0,300" end="0,0" easing="out" tween="cubic" />
-				<!-- <effect type="fade" delay="10000" start="100" end="30" time="5000"/> -->
 			</animation>
-			<!-- <animation effect="slide" time="400" start="0,200" end="0,0" easing="out" tween="cubic">WindowOpen</animation> -->
 			<animation type="Visible" reversible="false">
 				<effect type="slide" time="400" start="0,300" end="0,0" easing="out" tween="cubic" />
-				<!-- <effect type="fade" delay="10000" start="100" end="30" time="5000"/> -->
 			</animation>
-
-			<!-- <animation effect="slide" time="400" start="0,200" end="0,0" easing="out" tween="cubic">Visible</animation> -->
 			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,300" easing="in" tween="cubic">Hidden</animation>
 			<visible>![Skin.HasSetting(nogamefurnituretemp)]</visible>

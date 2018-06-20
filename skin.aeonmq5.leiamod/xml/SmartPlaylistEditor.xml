@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.9 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.18/9.2.1 window IDs 136/9.2.2 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">22</defaultcontrol>
 	<controls>
@@ -42,7 +43,6 @@
 				<posy>75</posy>
 				<width>1035</width>
 				<align>center</align>
-				<!-- 	<label>21432</label> -->
 				<font>Font_23</font>
 				<textcolor>80FFFAF0</textcolor>
 			</control>
@@ -59,13 +59,8 @@
 					<focusedcolor>FF101010</focusedcolor>
 					<disabledcolor>FF505050</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
-					<!-- <pulseonselect>false</pulseonselect>
-					<spinposx>-4</spinposx>
-					<spinwidth>40</spinwidth>
-					<spinheight>65</spinheight> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>22</onright>
 					<onleft>22</onleft>
 					<onup>18</onup>
@@ -205,12 +200,8 @@
 					<disabledcolor>FF505050</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
 					<pulseonselect>false</pulseonselect>
-					<!-- <spinposx>-4</spinposx>
-					<spinwidth>40</spinwidth>
-					<spinheight>65</spinheight> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>9001</onright>
 					<onleft>16</onleft>
 					<onup>10</onup>
@@ -228,13 +219,8 @@
 					<focusedcolor>FF101010</focusedcolor>
 					<disabledcolor>FF505050</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
-					<!-- <pulseonselect>false</pulseonselect>
-					<spinposx>-4</spinposx>
-					<spinwidth>40</spinwidth>
-					<spinheight>65</spinheight> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>9001</onright>
 					<onleft>17</onleft>
 					<onup>16</onup>
@@ -245,7 +231,6 @@
 					<posx>300</posx>
 					<posy>660</posy>
 					<width>532</width>
-					<!-- <label>21429</label> -->
 					<label>581</label>
 					<height>60</height>
 					<font>Font_18</font>
@@ -254,12 +239,8 @@
 					<disabledcolor>FF505050</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
 					<pulseonselect>false</pulseonselect>
-					<!-- <spinposx>-4</spinposx>
-					<spinwidth>40</spinwidth>
-					<spinheight>65</spinheight> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>19</onright>
 					<onleft>19</onleft>
 					<onup>17</onup>
@@ -273,12 +254,8 @@
 					<height>60</height>
 					<width>532</width>
 					<label>580</label>
-					<!-- <altlabel>21430</altlabel> -->
 					<font>Font_18</font>
-					<!-- <texturenofocus>settings_menudivider.png</texturenofocus> -->
 					<texturefocus>grey.png</texturefocus>
-					<!-- <alttexturenofocus>settings_menudivider.png</alttexturenofocus>
-					<alttexturefocus>settings_button_focus.png</alttexturefocus> -->
 					<textcolor>FFbbbbbb</textcolor>
 					<focusedcolor>FF101010</focusedcolor>
 					<disabledcolor>FF505050</disabledcolor>
@@ -305,12 +282,8 @@
 					<disabledcolor>FF505050</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
 					<pulseonselect>false</pulseonselect>
-					<!-- <spinposx>-4</spinposx>
-					<spinwidth>40</spinwidth>
-					<spinheight>65</spinheight> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>24</onright>
 					<onleft>24</onleft>
 					<onup>18</onup>

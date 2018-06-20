@@ -6,7 +6,6 @@
 <!-- Leai 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:10,true)</onload>
 	<controls>
 		<control type="multiimage">

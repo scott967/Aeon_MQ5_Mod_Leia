@@ -171,7 +171,6 @@
 		<animation effect="fade" time="200">Hidden</animation>
 	</include>
 	<include name="Animation_Fade_Togglebutton">
-		<!-- <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation> -->
 		<animation effect="fade" time="200">Visible</animation>
 		<animation effect="fade" time="200">WindowClose</animation>
 		<animation effect="fade" time="200">Hidden</animation>
@@ -356,7 +355,6 @@
 		<width>1920</width>
 		<height>104</height>
 		<font>Font_60</font>
-		<!-- <textoffsety>-10</textoffsety> -->
 		<align>center</align>
 		<aligny>center</aligny>
 		<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
@@ -392,7 +390,6 @@
 		<width>1920</width>
 		<height>104</height>
 		<font>Font_60c</font>
-		<!-- <textoffsety>-6</textoffsety> -->
 		<align>center</align>
 		<aligny>center</aligny>
 		<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
@@ -500,7 +497,6 @@
 		<include condition="String.IsEqual(skin.string(homebg_seconds),60000)">Animation_Timer4</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),600000)">Animation_Timer5</include>
 		<include condition="String.IsEqual(skin.string(homebg_seconds),3600000)">Animation_Timer6</include>
-		<!-- <timeperimage>$VAR[value_homebgdelay]</timeperimage> -->
 		<randomize>true</randomize>
 		<include condition="Skin.HasSetting(keepaspect)">KeepAspect</include>
 		<fadetime>FanartCrossFadeTime</fadetime>
@@ -677,7 +673,6 @@
 				<onfocus>Skin.SetString(mediaflags,on)</onfocus>
 				<onfocus>Skin.SetBool(visanimation_panscan)</onfocus>
 				<onfocus>Skin.SetBool(darkbar)</onfocus>
-				<!-- <onfocus>Skin.SetBool(ontvtunes)</onfocus> -->
 				<onfocus>AlarmClock(nextstep,SetFocus(901),0:03,true)</onfocus>
 			</control>
 			<control type="button" id="901">
@@ -1096,7 +1091,6 @@
 				<height>38</height>
 				<align>center</align>
 				<font>Font_23</font>
-				<!-- <colordiffuse>d0FFFFFF</colordiffuse> -->
 				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
 				<include>Animation_Fade</include>
 				<visible>!Player.Paused</visible>
@@ -1586,7 +1580,6 @@
 		<aligny>center</aligny>
 		<font>Font_20B</font>
 		<textcolor>$VAR[value_flagscolor]</textcolor>
-		<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 	</include>
 	<include name="FlagSeparator">
 		<posx>0</posx>
@@ -2829,7 +2822,6 @@
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_subtitle),disable)]</property>
 				<icon>osd_menu_sub.png</icon>
-				<!-- <onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick> -->
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdsubtitlesettings)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_subtitle),disable)">Skin.SetString(osd_video_subtitle,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_subtitle),disable)">Skin.Reset(osd_video_subtitle,disable)</onclick>
@@ -3393,22 +3385,12 @@
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_audio_mute),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
-			<!-- Audio DSP is killed 
-			<item id="27">
-				<label></label>
-				<property name="condition">$INFO[skin.string(osd_audio_dsp),disable)]</property>
-				<icon>osd_menu_audio.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdaudiodspsettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_dsp),disable)">Skin.SetString(osd_audio_dsp,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_dsp),disable)">Skin.Reset(osd_audio_mute,dsp)</onclick>
-				<visible>[!String.Contains(skin.string(osd_audio_dsp),disable) | Skin.HasSetting(customosd)]</visible>
-			</item>      -->
+			<!-- Audio DSP is killed -->
 			<item id="1">
 				<!-- vis settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_settings),disable)]</property>
 				<icon>osd_menu_settings.png</icon>
-				<!-- 	<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(all,true)</onclick> -->
 				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(customosd,ActivateWindow(627),0:01,true)</onclick>
 				<!-- custom osd music -->
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_settings),disable)">Skin.SetString(osd_audio_settings,disable)</onclick>
@@ -4166,7 +4148,6 @@
 			<aligny>center</aligny>
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 			<label>$INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
 			<visible>!String.IsEqual(Container.NumPages,1) + [Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(59) | Control.IsVisible(62) | Control.IsVisible(64) | Control.IsVisible(70)]</visible>
 		</control>
@@ -4179,7 +4160,6 @@
 			<aligny>center</aligny>
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
 			<visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)]</visible>
 		</control>

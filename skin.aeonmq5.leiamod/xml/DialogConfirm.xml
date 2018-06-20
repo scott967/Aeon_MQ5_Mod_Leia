@@ -2,26 +2,15 @@
 <!-- Aeon MQ 5 Helix 6.1.9 -->
 <!-- Isengard 7.1.10 -->
 <!-- Krypton 9.1.15/9.2.3 -->
+<!-- Leia 10.3.0 -->
 <window>
-	<!-- <defaultcontrol>10</defaultcontrol> -->
 	<controls>
 		<control type="group">
 			<include>Animation_TopDialogPopup</include>
 			<include>Dialogs_DoubleBar</include>
 			<control type="label" id="1">
 				<include>Dialogs_Label1</include>
-				<!-- <label>$LOCALIZE[13406]</label> -->
 			</control>
-			<!-- obsolete -->
-			<!-- <control type="label" id="2">
-				<include>Dialogs_Label2</include>
-			</control>
-			<control type="label" id="3">
-				<include>Dialogs_Label4</include>
-			</control>
-			<control type="label" id="4">
-				<include>Dialogs_Label3</include>
-			</control> -->
 			<control type="textbox" id="9">
 				<include>DialogTextBox</include>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>

@@ -5,7 +5,6 @@
 <!-- Leia 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
-	<!-- <zorder>4</zorder> -->
 	<coordinates>
 		<left>308</left>
 		<top>180</top>

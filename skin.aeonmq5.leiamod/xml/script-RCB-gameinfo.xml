@@ -2,8 +2,8 @@
 <!-- Aeon MQ 5 Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16 -->
+<!-- Leia 10.3.0 -->
 <window>
-	<!-- <allowoverlay>yes</allowoverlay> -->
 	<defaultcontrol always="true">3001</defaultcontrol>
 	<controls>
 		<control type="group">

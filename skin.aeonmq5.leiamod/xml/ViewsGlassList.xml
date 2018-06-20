@@ -80,7 +80,6 @@
 							<aligny>center</aligny>
 							<font>Font_20B</font>
 							<textcolor>$VAR[value_flagscolor]</textcolor>
-							<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 							<label>$INFO[ListItem.Rating]</label>
 						</control>
 						<control type="image">
@@ -165,7 +164,6 @@
 							<aligny>center</aligny>
 							<font>Font_20B</font>
 							<textcolor>$VAR[value_flagscolor]</textcolor>
-							<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 							<label>$INFO[ListItem.PercentPlayed]%</label>
 						</control>
 					</control>
@@ -232,7 +230,6 @@
 					<width>150</width>
 					<height>30</height>
 					<label>$INFO[ListItem.Rating]</label>
-					<!-- <colordiffuse>$VAR[value_headercolor]</colordiffuse> -->
 					<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(seasons) | String.IsEmpty(ListItem.Title)]</visible>
 				</control>
 				<control type="image">

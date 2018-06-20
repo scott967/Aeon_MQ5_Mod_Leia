@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.4 -->
 <!-- Jarvis 8.1.13 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">14</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<views>14</views>
 	<controls>
 		<control type="multiimage">
@@ -175,7 +175,6 @@
 							<texture>settings_button_focus.png</texture>
 						</control>
 						<control type="label">
-							<!-- 	<posx>400</posx> -->
 							<posx>345</posx>
 							<posy>0</posy>
 							<width>525</width>
@@ -240,7 +239,6 @@
 							<label>$INFO[ListItem.ChannelName]</label>
 						</control>
 						<control type="label">
-							<!-- 	<posx>400</posx> -->
 							<posx>345</posx>
 							<posy>0</posy>
 							<width>525</width>
@@ -292,7 +290,6 @@
 					<onright>9900</onright>
 					<ondown>73</ondown>
 					<onup>73</onup>
-					<!-- <visible>Control.IsVisible(14)</visible> -->
 				</control>
 				<include>PVRCommonInfo</include>
 			</control>

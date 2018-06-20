@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 6.1.1 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 111 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol always="true">4112</defaultcontrol>
 	<coordinates>
@@ -10,7 +10,6 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
-	<!-- 	<zorder>4</zorder> -->
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>

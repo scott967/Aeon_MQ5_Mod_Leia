@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 Window IDs 142/9.2.3 -->
-<!-- Leia 10.2.5 -->
+<!-- Leia 10.2.5/10.3.0 -->
 <window>
 	<defaultcontrol></defaultcontrol>
 	<controls>
@@ -13,7 +13,6 @@
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
 			<visible>![[String.Contains(skin.string(videofurniture),hide) + !Player.Paused] | Window.IsActive(SubtitleSearch) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible>
-			<!-- <visible>![Skin.HasSetting(novideofurniture) | Window.IsActive(SubtitleSearch) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings)]</visible> -->
 			<control type="image" id="9924">
 				<!-- Studio icons -->
 				<include>InvisibleButton</include>

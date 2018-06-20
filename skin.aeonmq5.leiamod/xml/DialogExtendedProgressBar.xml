@@ -2,9 +2,9 @@
 <!-- Aeon MQ 5 Helix 6.1.1 -->
 <!-- Jarivs 8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 151 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<!-- was 614 changed per wiki -->
-	<!-- <zorder>3</zorder> -->
 	<controls>
 		<control type="group">
 			<include>Animation_TopDialogPopup</include>

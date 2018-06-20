@@ -6,7 +6,6 @@
 <!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<include condition="!Skin.HasSetting(fix3)">Quickfix</include>
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">SetFocus(900)</onload>
 	<onload condition="SkinString(custom_wxicons.path)">SetProperty(current_wxicon_path,$INFO[Skin.String(custom_wxicons.path)],0)</onload>
@@ -133,16 +132,6 @@
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<visible>Player.HasAudio</visible>
 				</control>
-			<!-- 	<control type="image">
-					<include>Animation_CDart</include>
-					<posx>-128</posx>
-					<posy>952</posy>
-					<width>255</width>
-					<height>255</height>
-					<texture diffuse="cdart_diffuse.png" background="true">$INFO[Player.FolderPath]cdart.png</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<visible>Player.HasAudio</visible>
-				</control> -->
 				<control type="image">
 					<include>Animation_CDart</include>
 					<posx>-128</posx>

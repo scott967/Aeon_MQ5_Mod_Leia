@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
+<!-- Leia 10.3.0 -->
 <window id="632" type="dialog">
 	<!-- safe id -->
 	<defaultcontrol always="true">260</defaultcontrol>
 	<onunload>SetFocus(51)</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<controls>
 		<control type="group">
 			<animation effect="slide" start="0,-1050" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>

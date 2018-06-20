@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5  Helix 6.1.0/6.1.7 -->
 <!-- Jarvis 8.1.14 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3 -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<!-- ######################################################################### Current #########################################################################-->
 	<!-- Widget Common Values -->
@@ -5531,7 +5532,6 @@
 		<control type="group">
 			<posx>435</posx>
 			<posy>90</posy>
-			<!-- <onright>5200</onright>  -->
 			<visible>String.IsEqual(Window.Property(Weather.CurrentView),maps) + String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="label">
@@ -5596,8 +5596,6 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<!-- <include>VisibleFadeEffect</include>  -->
-				<!-- <visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible> -->
 				<itemlayout height="705" width="885">
 					<control type="image">
 						<description>area image</description>

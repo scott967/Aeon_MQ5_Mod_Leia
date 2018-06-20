@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Krypton 9.2.1 window IDs 137/9.2.2 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">15</defaultcontrol>
 	<coordinates>
@@ -72,10 +73,8 @@
 					<focusedcolor>FF101010</focusedcolor>
 					<disabledcolor>60ffffff</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
-					<!-- 	<spinposx>-4</spinposx> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>16</onright>
 					<onleft>16</onleft>
 					<onup>9000</onup>
@@ -92,10 +91,8 @@
 					<focusedcolor>FF101010</focusedcolor>
 					<disabledcolor>60ffffff</disabledcolor>
 					<texturefocus>settings_button_focus.png</texturefocus>
-					<!-- <spinposx>-4</spinposx> -->
 					<textoffsetx>30</textoffsetx>
 					<aligny>center</aligny>
-					<!-- <reverse>yes</reverse> -->
 					<onright>9000</onright>
 					<onleft>15</onleft>
 					<onup>9000</onup>

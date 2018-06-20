@@ -151,9 +151,6 @@
 						<include>RightListLabel</include>
 						<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
 						<!-- song title (music) -->
-						<!-- <scroll>true</scroll>
-						<scrollspeed>25</scrollspeed> -->
-						<!-- <visible>!Container.Content(songs)</visible> -->
 					</control>
 					<control type="label">
 						<include>RightListLabel</include>

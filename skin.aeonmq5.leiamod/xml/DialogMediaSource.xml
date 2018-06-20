@@ -3,9 +3,9 @@
 <!-- Isengardmod 7.1.12 -->
 <!-- Jarivs 8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 129 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol>11</defaultcontrol>
-	<!-- <zorder>3</zorder> -->
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -223,7 +223,6 @@
 				<texturenofocus></texturenofocus>
 				<textcolor>80FFFAF0</textcolor>
 				<focusedcolor>FFFFFAF0</focusedcolor>
-				<!-- <selectedcolor>FFFFFAF0</selectedcolor> -->
 				<label></label>
 				<onup>10</onup>
 				<onleft>18</onleft>

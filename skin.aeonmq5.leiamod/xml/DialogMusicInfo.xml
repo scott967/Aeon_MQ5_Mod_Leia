@@ -899,7 +899,6 @@
 							<texture>separator_v.png</texture>
 						</control>
 						<control type="label">
-							<!-- <left>15</left> -->
 							<posx>0</posx>
 							<posy>-2</posy>
 							<height>38</height>
@@ -947,7 +946,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<!-- <posx>45</posx> -->
 							<left>0</left>
 							<posy>-2</posy>
 							<height>38</height>
@@ -1023,7 +1021,6 @@
 							<label>31950</label>
 							<onclick>Dialog.Close(musicinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist],return)</onclick> -->
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>					
 					</item>
@@ -1032,7 +1029,6 @@
 							<label>31951</label>
 							<onclick>Dialog.Close(musicinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick> -->
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 							</item>
@@ -1207,7 +1203,6 @@
 							<label>31949</label>
 							<onclick>Dialog.Close(songinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist],return)</onclick> -->
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 						</item>
@@ -1216,7 +1211,6 @@
 							<label>31951</label>
 							<onclick>Dialog.Close(songinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<!-- <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick> -->
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 						</item>
@@ -1290,7 +1284,6 @@
 						<font>Font_24</font>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
 						<textcolor>B6FFFFFF</textcolor>
-						<!-- <visible>!String.IsEmpty(ListItem.Label)</visible> -->
 					</control>
 				</itemlayout>
 				<focusedlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372"> <!-- ARTIST INFO -->
@@ -1417,7 +1410,6 @@
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 				</focusedlayout>
-				<!-- <include condition="Player.HasAudio + system.hasaddon(script.artistslideshow) + String.IsEqual(MusicPlayer.Artist,ListItem.Label)">AlbumContent</include> --> <!-- 50 albums from AS disco -->
 			</control>
 			<control type="button" id="160">
 				<include>InvisibleButton</include>
@@ -1512,26 +1504,6 @@
 					<imagepath fallback="DefaultAudioCover.png" background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 					<visible>String.IsEmpty(ListItem.Thumb) + Skin.HasSetting(artistzoom)</visible>
 				</control>
-				<!-- 				<control type="image">
-					<description>CD Background</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1920</width>
-					<height>1080</height>
-					<aspectratio>keep</aspectratio>
-					<texture>thumb_box_cd_shadow_light.png</texture>
-					<visible>Skin.HasSetting(coverzoom)</visible>
-				</control>
-				<control type="image">
-					<description>CD Glass Overlay</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1920</width>
-					<height>1080</height>
-					<aspectratio>keep</aspectratio>
-					<texture>thumb_box_cd_glass.png</texture>
-					<visible>Skin.HasSetting(coverzoom)</visible>
-				</control> -->
 			</control>
 			<control type="group"> <!-- bottom zoom text -->
 				<visible>Control.HasFocus(160)</visible>

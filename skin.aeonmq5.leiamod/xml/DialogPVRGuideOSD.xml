@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Aeon MQ 5 Helix 6.1.5 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
@@ -235,7 +236,6 @@
 				<ondown>76</ondown>
 				<onup>76</onup>
 			</control>
-			<!-- <include>PVRCommonInfo</include> -->
 		</control>
 	</controls>
 </window>

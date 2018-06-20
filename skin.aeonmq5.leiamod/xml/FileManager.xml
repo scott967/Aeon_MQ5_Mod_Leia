@@ -2,9 +2,9 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 window IDs 3 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol>20</defaultcontrol>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<controls>
 		<control type="image">
 			<include>HomeBG</include>

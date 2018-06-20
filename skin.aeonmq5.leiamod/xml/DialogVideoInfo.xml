@@ -7,7 +7,6 @@
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
-	<!-- 	<onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload> -->
 	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<controls>
 		<control type="group">
@@ -882,19 +881,12 @@
 							<!-- Set user rating -->
 							<label>38023</label>
 							<onclick>SendClick(movieinformation,7)</onclick>
-							<!-- <visible>![Container.Content(episodes) | Container.Content(seasons) | Skin.HasSetting(kioskininfo)]</visible> -->
 						</item>
-						<!-- <item id="21"></item>
-							<label>TVTUNES $LOCALIZE[31893] </label>
-							<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-							<visible>Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
-						</item> -->
 						<item id="20">
 							<!-- Editor de info -->
 							<label>31671</label>
 							<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 							<visible>System.HasAddon(script.libraryeditor)</visible>
-							<!--<visible>System.HasAddon(script.libraryeditor) + [Container.Content(Movies) | Container.Content(episodes)]</visible>-->
 						</item>
 						<item id="9">
 							<!-- Actor Info -->

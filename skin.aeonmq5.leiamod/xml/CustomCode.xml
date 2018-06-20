@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Jarvismod 8.1.14 -->
-<!-- Leiamod 10.2.3 -->
+<!-- Leiamod 10.2.3/10.3.0 -->
 <window id="629" type="dialog">
 	<!-- safe id -->
 	<defaultcontrol always="true">9930</defaultcontrol>
 	<onunload condition="!Window.IsActive(Home)">AlarmClock(firstfocus,SetFocus(51),0:01,true)</onunload>
 	<onunload condition="Window.IsActive(Home)">AlarmClock(firstfocus,SetFocus(9100),0:01,true)</onunload>
-	<!-- <zorder>3</zorder> -->
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>

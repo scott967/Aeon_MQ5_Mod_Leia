@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.15/9.1.16/9.2.1/9.2.2/9.2.3/9.2.4 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.4/10.3.0 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<onunload condition="Skin.HasSetting(trailers)">Skin.Reset(trailers)</onunload>
 	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
-	<!-- <onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True&amp;loop=False)</onload> -->
-	<!-- <onload condition="!Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">SetProperty(TvTunesBlocked, true,videos)</onload> -->
-	<!-- <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,backend=True)</onload> -->
-	<!-- <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,backend=true)</onload> -->
-	<!-- <onunload condition="!Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">ClearProperty(TvTunesBlocked,videos)</onunload> -->
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70</views>
 	<controls>
 		<include condition="Window.IsVisible(musicplaylist)">MusicPLWindow</include>

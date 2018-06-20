@@ -441,10 +441,6 @@
 				<width>748</width>
 				<height>42</height>
 				<visible>Player.IsTempo</visible>
-				<!-- <animation type="Visible" reversible="false">
-					<effect type="slide" end="200,0" time="200"/>
-					<effect type="fade" start="100" end="0" time="3000"/>
-				</animation> -->
 				<animation type="Conditional" condition="String.IsEqual(Player.Playspeed,0.80)" reversible="false">
 					<effect type="slide" end="300,0" time="200" />
 					<effect type="fade" start="100" end="0" time="3000" />

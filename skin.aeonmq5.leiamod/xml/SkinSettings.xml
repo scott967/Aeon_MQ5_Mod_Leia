@@ -27,8 +27,6 @@
 				<posy>180</posy>
 				<width>1560</width>
 				<height>900</height>
-				<!-- <timeperimage>6000</timeperimage>
-				<randomize>true</randomize> -->
 				<aspectratio>stretch</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<texture>$VAR[value_menutheme_movies]</texture>
@@ -2454,11 +2452,6 @@
 					<onclick condition="!Skin.String(custom_styles.name)">RunScript(script.image.resource.select,type=resource.images.skinstyles&amp;property=custom_styles)</onclick>
 					<onclick condition="Skin.String(custom_styles.name)">SetFocus(9100,10)</onclick>
 				</control>
-				<!-- <control type="button" id="1081">
-					<label>31923</label>
-					<onclick>RunScript(script.aeonmq5.extrapack,mode=forcerefresh)</onclick>
-					<visible>System.HasAddon(script.aeonmq5.extrapack)</visible>
-				</control> -->
 				<control type="radiobutton" id="1082">
 					<!-- Inverter cores do menu -->
 					<label>31117</label>

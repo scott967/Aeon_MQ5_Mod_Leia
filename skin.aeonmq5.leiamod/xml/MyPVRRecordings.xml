@@ -7,7 +7,6 @@
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<views>51,54,55,56,57,59,62</views>
 	<controls>
 		<control type="multiimage">
@@ -117,11 +116,6 @@
 				<include>InvisibleButton</include>
 				<visible>false</visible>
 			</control>
-			<!-- <control type="label" id="30">
-				<description>Current Sub Category</description>
-				<include>InvisibleButton</include>
-				<visible>false</visible>
-			</control> -->
 			<control type="group">
 				<!-- All views Grupo ocultar flags ou fanart -->
 				<posy>45</posy>
@@ -183,7 +177,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label>$INFO[ListItem.Rating]</label>
 							</control>
 							<control type="image">
@@ -267,7 +260,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label>$INFO[ListItem.PercentPlayed]%</label>
 							</control>
 						</control>

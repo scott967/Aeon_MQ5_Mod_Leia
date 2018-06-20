@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Aeon MQ 5 - Helix 6.1.0/6.1.1/6.1.2/6.1.3/6.1.4 -->
 <!-- Jarvis 8.1.13 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<views>11</views>
 	<controls>
 		<control type="multiimage">

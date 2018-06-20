@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Isengard 7.1.10 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2005/9.2.2 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<controls>
 		<control type="group">
@@ -67,11 +68,6 @@
 			<posy>1040</posy>
 			<width>748</width>
 			<height>42</height>
-			<!-- <visible>Player.IsTempo </visible> -->
-			<!-- <animation type="Visible">
-					<effect type="slide" end="200,0" time="200"/>
-					<effect type="fade" start="100" end="0" delay="2000" time="200"/>
-				</animation> -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>

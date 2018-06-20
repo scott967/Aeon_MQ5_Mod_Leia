@@ -2,12 +2,9 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2000/9.2.3 -->
-<!-- Leia 10.2.4/10.2.8 -->
+<!-- Leia 10.2.4/10.2.8/10.3.0 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<!-- <zorder>3</zorder> -->
-	<!-- <onload condition="Player.HasVideo">Dialog.Close(124)</onload> -->
-	<!-- <onload condition="Player.HasVideo">Dialog.Close(VideoOSD)</onload> -->
 	<coordinates>
 		<posx>0</posx>
 		<posy>0</posy>
@@ -228,7 +225,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<include>subcolor</include>
-							<!-- <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21864]:[/COLOR] $INFO[ListItem.Label2]</label> -->
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>String.IsEmpty(ListItem.AddonCreator)+ String.IsEmpty(ListItem.Property(extension))</visible>
 						</control>
@@ -285,7 +281,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<include>subcolorfocus</include>
-							<!-- <label>[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21864]:[/COLOR] $INFO[ListItem.Label2]</label> -->
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>String.IsEmpty(ListItem.AddonCreator)+ String.IsEmpty(ListItem.Property(extension))</visible>
 						</control>

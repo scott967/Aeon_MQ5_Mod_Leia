@@ -2,9 +2,9 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.3 -->
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Krypton 9.2.1 window IDs -->
+<!-- Leia 10.3.0 -->
 <window id="641" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
-	<!-- <onunload>AlarmClock(refreshview,ActivateWindowAndFocus(videos, 9940,0),0:01,true)</onunload> -->
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>
@@ -230,7 +230,6 @@
 					<label>31448</label>
 					<onclick>Skin.ToggleSetting(viewmidlist_video)</onclick>
 					<selected>Skin.HasSetting(viewmidlist_video)</selected>
-					<!-- <visible>![Container.Content(episodes) | Container.Content(years)]</visible> -->
 				</control>
 			</control>
 		</control>

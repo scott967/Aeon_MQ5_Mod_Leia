@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.17/9.1.19/9.2.1 window IDs/9.2.4 -->
-<!-- Leiamod 10.2.3 -->
+<!-- Leiamod 10.2.3/10.3.0 -->
 <window id="6000">
 	<!-- safe id -->
 	<defaultcontrol></defaultcontrol>
@@ -28,7 +28,6 @@
 	<onunload condition="String.Contains(skin.string(menu1.master),game) | String.Contains(skin.string(menu2.master),game) | String.Contains(skin.string(menu3.master),game) | String.Contains(skin.string(menu4.master),game) | String.Contains(skin.string(menu5.master),game) | String.Contains(skin.string(menu6.master),game) | String.Contains(skin.string(menu7.master),game) | String.Contains(skin.string(menu8.master),game) | String.Contains(skin.string(menu9.master),game) | String.Contains(skin.string(menu10.master),game) | String.Contains(skin.string(menu11.master),game) | String.Contains(skin.string(menu12.master),game) | String.Contains(skin.string(menu13.master),game) | String.Contains(skin.string(menu14.master),game) | String.Contains(skin.string(menu15.master),game) | String.Contains(skin.string(menu16.master),game) | String.Contains(skin.string(menu17.master),game) | String.Contains(skin.string(menu18.master),game) | String.Contains(skin.string(menu19.master),game) | String.Contains(skin.string(menu20.master),game)">Skin.SetString(gameswidget,true)</onunload>
 	<onunload condition="String.IsEqual(skin.string(menu1.master),livetv) | String.IsEqual(skin.string(menu2.master),livetv) | String.IsEqual(skin.string(menu3.master),livetv) | String.IsEqual(skin.string(menu4.master),livetv) | String.IsEqual(skin.string(menu5.master),livetv) | String.IsEqual(skin.string(menu6.master),livetv) | String.IsEqual(skin.string(menu7.master),livetv) | String.IsEqual(skin.string(menu8.master),livetv) | String.IsEqual(skin.string(menu9.master),livetv) | String.IsEqual(skin.string(menu10.master),livetv) | String.IsEqual(skin.string(menu11.master),livetv) | String.IsEqual(skin.string(menu12.master),livetv) | String.IsEqual(skin.string(menu13.master),livetv) | String.IsEqual(skin.string(menu14.master),livetv) | String.IsEqual(skin.string(menu15.master),livetv) | String.IsEqual(skin.string(menu16.master),livetv) | String.IsEqual(skin.string(menu17.master),livetv) | String.IsEqual(skin.string(menu18.master),livetv) | String.IsEqual(skin.string(menu19.master),livetv) | String.IsEqual(skin.string(menu20.master),livetv)">Skin.SetString(livetvwidget,true)</onunload>
 	<onunload condition="String.IsEqual(skin.string(menu1.master),weather) | String.IsEqual(skin.string(menu2.master),weather) | String.IsEqual(skin.string(menu3.master),weather) | String.IsEqual(skin.string(menu4.master),weather) | String.IsEqual(skin.string(menu5.master),weather) | String.IsEqual(skin.string(menu6.master),weather) | String.IsEqual(skin.string(menu7.master),weather) | String.IsEqual(skin.string(menu8.master),weather) | String.IsEqual(skin.string(menu9.master),weather) | String.IsEqual(skin.string(menu10.master),weather) | String.IsEqual(skin.string(menu11.master),weather) | String.IsEqual(skin.string(menu12.master),weather) | String.IsEqual(skin.string(menu13.master),weather) | String.IsEqual(skin.string(menu14.master),weather) | String.IsEqual(skin.string(menu15.master),weather) | String.IsEqual(skin.string(menu16.master),weather) | String.IsEqual(skin.string(menu17.master),weather) | String.IsEqual(skin.string(menu18.master),weather) | String.IsEqual(skin.string(menu19.master),weather) | String.IsEqual(skin.string(menu20.master),weather)">Skin.SetString(weatherwidget,true)</onunload>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<controls>
 		<control type="multiimage">
 			<include>HomeBG</include>
@@ -68,7 +67,7 @@
 				<include>Animation_Fade</include>
 			</control>
 			<control type="group">
-				<include>MenuCustom</include>
+				<include>MenuCustom</include>  <!-- IncludesMenuCustom list 452 and buttons grouplist 450-->
 				<visible>!Skin.HasSetting(submode)</visible>
 			</control>
 			<control type="image">
@@ -257,6 +256,7 @@
 			</control>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="-450,0" time="300" easing="out" tween="cubic" condition="Skin.HasSetting(submode)">Conditional</animation>
+				<!-- List of main menu items with current assignment  left click opens the appropriate CustomSub window -->
 				<control type="list" id="9000">
 					<viewtype>list</viewtype>
 					<posx>0</posx>
@@ -264,7 +264,7 @@
 					<width>450</width>
 					<height>900</height>
 					<onleft condition="![String.IsEqual(Container(9000).ListItem.Property(id),virtual) | String.IsEmpty(Container(9000).ListItem.Property(id))]">Skin.SetBool(submode)</onleft>
-					<onleft condition="![String.IsEqual(Container(9000).ListItem.Property(id),virtual) | String.IsEmpty(Container(9000).ListItem.Property(id))]">ActivateWindow($VAR[Sub_GoTo])</onleft>
+					<onleft condition="![String.IsEqual(Container(9000).ListItem.Property(id),virtual) | String.IsEmpty(Container(9000).ListItem.Property(id))]">ActivateWindow($VAR[Sub_GoTo])</onleft> 
 					<onright>5000</onright>
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
@@ -390,12 +390,12 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<include>Menu_Content</include>
+						<include>Menu_Content</include> <!-- IncludesMainMenu -->
 					</content>
 				</control>
 				<include>Glass</include>
 			</control>
-			<control type="group">
+			<control type="group">  <!-- Top bar of color keys for menu item status custom menu -->
 				<include>Animation_TopPopup</include>
 				<visible>![Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog) | Control.HasFocus(80) | Control.HasFocus(452)]</visible>
 				<!-- 151 was 614 extendedprogress -->
@@ -493,7 +493,7 @@
 					<scrollout>false</scrollout>
 				</control>
 			</control>
-			<control type="group">
+			<control type="group">  <!-- Top bar of color keys for available menu items list 452 custom menu -->
 				<posy>-8</posy>
 				<include>Animation_TopPopup</include>
 				<visible>![Window.IsVisible(volumebar) | Window.IsVisible(notification) | Window.IsVisible(extendedprogressdialog)] + [Control.HasFocus(80) | Control.HasFocus(452)]</visible>

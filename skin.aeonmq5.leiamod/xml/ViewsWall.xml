@@ -973,8 +973,6 @@
 						<width>140</width>
 						<height>140</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -991,7 +989,6 @@
 						<width>154</width>
 						<height>154</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1000,7 +997,6 @@
 						<width>126</width>
 						<height>142</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1032,8 +1028,6 @@
 						<width>248</width>
 						<height>248</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -1050,7 +1044,6 @@
 						<width>262</width>
 						<height>262</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1059,7 +1052,6 @@
 						<width>216</width>
 						<height>244</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1091,8 +1083,6 @@
 						<width>393</width>
 						<height>393</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -1109,7 +1099,6 @@
 						<width>408</width>
 						<height>408</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1118,7 +1107,6 @@
 						<width>334</width>
 						<height>380</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1158,8 +1146,6 @@
 						<width>140</width>
 						<height>140</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -1252,7 +1238,6 @@
 						<width>154</width>
 						<height>154</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1265,7 +1250,6 @@
 						<width>126</width>
 						<height>142</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1309,8 +1293,6 @@
 						<width>248</width>
 						<height>248</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -1403,7 +1385,6 @@
 						<width>262</width>
 						<height>262</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1416,7 +1397,6 @@
 						<width>216</width>
 						<height>244</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1460,8 +1440,6 @@
 						<width>393</width>
 						<height>393</height>
 						<font>Font_18A</font>
-						<!-- <scroll>true</scroll> -->
-						<!-- <scrollspeed>15</scrollspeed> -->
 						<wrapmultiline>true</wrapmultiline>
 						<textcolor>FFFFFAF0</textcolor>
 						<align>center</align>
@@ -1554,7 +1532,6 @@
 						<width>408</width>
 						<height>408</height>
 						<texture>thumb_box_cd.png</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1567,7 +1544,6 @@
 						<width>334</width>
 						<height>380</height>
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
-						<!-- <bordertexture border="-2">black.png</bordertexture> -->
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />

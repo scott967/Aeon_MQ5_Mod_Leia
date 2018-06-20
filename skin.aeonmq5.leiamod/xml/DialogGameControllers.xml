@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.16/9.2.1/9.2.2 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<include>Animation_DialogPopup</include>
 	<defaultcontrol>3</defaultcontrol>
@@ -102,11 +103,9 @@
 			</control>
 			<control type="button" id="10">
 				<width>225</width>
-				<!-- <textoffset>20</textoffset> -->
 			</control>
 			<control type="button" id="7">
 				<width>225</width>
-				<!-- <textoffset>20</textoffset> -->
 			</control>
 			<control type="label" id="8">
 				<width>225</width>
@@ -151,7 +150,6 @@
 				<width>480</width>
 				<height>60</height>
 				<aligny>center</aligny>
-				<!-- <textoffset>20</textoffset> -->
 				<textcolor>$VAR[value_headercolor]</textcolor>
 			</control>
 			<control type="image">

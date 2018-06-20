@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.4/6.1.5 -->
 <!-- Jarvis 8.1.15 RjSachse EPGTimeLineLow view -->
 <!-- Krypton 9.1.16/9.2.1 window IDs/9.2.2  -->
+<!-- Leia 10.3.0 -->
 <includes>
 	<include name="EPGMenu">
 		<control type="image">
@@ -188,8 +189,6 @@
 				<height>645</height>
 				<onleft>9900</onleft>
 				<onright>9900</onright>
-				<!-- 				<onup condition="!Skin.HasSetting(epggridwrap)">9900</onup>
-				<onup condition="Skin.HasSetting(epggridwrap)">10</onup> -->
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<pagecontrol>60</pagecontrol>
@@ -716,7 +715,6 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>Font_20</font>
-						<!-- <textcolor>listcolorfocus</textcolor> -->
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<info>ListItem.StartTime</info>
 					</control>
@@ -819,10 +817,6 @@
 				<pagecontrol>76</pagecontrol>
 				<scrolltime>350</scrolltime>
 				<itemlayout height="60" width="1920">
-					<!-- <control type="label">
-						<include>SettingsLabel</include>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control> -->
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -913,10 +907,6 @@
 						<colordiffuse>FFFFFAF0</colordiffuse>
 						<texture>settings_button_focus.png</texture>
 					</control>
-					<!-- <control type="label">
-						<include>SettingsLabelFocus</include>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control> -->
 					<control type="label">
 						<posx>375</posx>
 						<posy>0</posy>

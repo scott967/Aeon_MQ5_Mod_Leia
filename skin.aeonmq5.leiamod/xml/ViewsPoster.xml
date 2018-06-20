@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.2-->
+<!-- Leia 10.3.0 -->
 <includes>
 	<!--##################################################################################   VISTA POSTER - ID 54   #############################################################################-->
 	<include name="PosterLabel">
@@ -123,8 +124,6 @@
 				<width>375</width>
 				<height>510</height>
 				<font>Font_18A</font>
-				<!-- <scroll>true</scroll> -->
-				<!-- <scrollspeed>15</scrollspeed> -->
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>FFFFFAF0</textcolor>
 				<align>center</align>
@@ -222,8 +221,6 @@
 				<width>375</width>
 				<height>510</height>
 				<font>Font_18A</font>
-				<!-- <scroll>true</scroll> -->
-				<!-- <scrollspeed>15</scrollspeed> -->
 				<wrapmultiline>true</wrapmultiline>
 				<textcolor>FFFFFAF0</textcolor>
 				<align>center</align>

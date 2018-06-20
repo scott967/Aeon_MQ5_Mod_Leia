@@ -6,8 +6,6 @@
 <!-- Leia 10.2.3/10.2.6/10.3.0 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<!-- <allowoverlay>no</allowoverlay> -->
-	<!-- <onload condition="String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(9000),0:01,true)</onload> -->
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:01,true)</onload>
 	<views>55</views>
 	<controls>
@@ -122,7 +120,6 @@
 							<width>1560</width>
 							<height>60</height>
 							<texture>settings_button_focus.png</texture>
-							<!-- <visible>Control.HasFocus(55) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled) | String.IsEmpty(ListItem.Label2)]</visible> -->
 							<visible>Control.HasFocus(55)</visible>
 						</control>
 						<control type="label">

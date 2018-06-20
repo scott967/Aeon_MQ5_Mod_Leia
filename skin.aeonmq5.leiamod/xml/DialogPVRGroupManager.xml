@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Aeon MQ 5 Helix 6.1.1/6.1.3 Isengard 7.1.8 -->
+<!-- Leia 10.3.0 -->
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
 	<coordinates>
@@ -55,14 +56,6 @@
 				<aligny>center</aligny>
 				<include>Animation_Fade</include>
 			</control>
-			<!--			<control type="image">
-				<posx>390</posx>
-				<posy>100</posy>
-				<width>35</width>
-				<height>440</height>
-				<texture>grey.png</texture>
-				<colordiffuse>20FFFFFF</colordiffuse>
-			</control>  -->
 			<control type="group">
 				<description>Chan Group list</description>
 				<posx>210</posx>
@@ -175,15 +168,6 @@
 							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 						</control>
-						<!--				<control type="image">
-							<posx>468</posx>
-							<posy>5</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture>OverlayWatched.png</texture>
-							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>ListItem.Property(Changed)</visible>
-						</control>  -->
 					</itemlayout>
 					<focusedlayout height="75" width="375">
 						<control type="image">
@@ -237,27 +221,6 @@
 							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							<visible>!Control.HasFocus(11)</visible>
 						</control>
-						<!--						<control type="label">
-							<posx>90</posx>
-							<posy>22</posy>
-							<width>250</width>
-							<height>30</height>
-							<font>Font_18A</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textcolor>FF101010</textcolor>
-							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
-							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
-						</control>
-						<control type="image">
-							<posx>468</posx>
-							<posy>5</posy>
-							<width>22</width>
-							<height>22</height>
-							<texture>OverlayWatched.png</texture>
-							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>ListItem.Property(Changed)</visible>
-						</control>   -->
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="71">
@@ -371,18 +334,6 @@
 							<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							<visible>!Control.HasFocus(12)</visible>
 						</control>
-						<!--						<control type="label">
-							<posx>90</posx>
-							<posy>22</posy>
-							<width>365</width>
-							<height>30</height>
-							<font>Font_18A</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textcolor>FF101010</textcolor>
-							<selectedcolor>$VAR[value_headercolor]</selectedcolor>
-							<label>$LOCALIZE[19210]: $INFO[ListItem.ClientName]</label>
-						</control>  -->
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="72">
@@ -396,18 +347,6 @@
 					<onup>72</onup>
 				</control>
 			</control>
-			<!--			<control type="label">
-				<posx>150</posx>
-				<posy>555</posy>
-				<width>400</width>
-				<height>20</height>
-				<font>Font_18</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<scroll>true</scroll>
-				<textcolor>$VAR[value_headercolor]</textcolor>
-				<label>$INFO[Container(13).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages]</label>
-			</control> -->
 			<control type="group" id="9002">
 				<control type="group">
 					<posx>960</posx>

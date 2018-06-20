@@ -75,7 +75,6 @@
 		<focusedcolor>FFFFFAF0</focusedcolor>
 		<disabledcolor>FF505050</disabledcolor>
 		<textoffsetx>15</textoffsetx>
-		<!-- <textwidth>200</textwidth> -->
 		<texturenofocus>topmenu_button_nofocus.png</texturenofocus>
 		<texturefocus>topmenu_button_focus.png</texturefocus>
 		<alttexturenofocus>topmenu_button_nofocus.png</alttexturenofocus>
@@ -270,10 +269,8 @@
 				<onclick condition="Window.IsActive(videos)">ActivateWindow(641)</onclick>
 				<!-- custom views video -->
 				<onclick condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onclick>
-				<!-- <onclick condition="Window.IsActive(702)">ActivateWindow(1101)</onup> -->
 				<onclick condition="Window.IsActive(programs)">ActivateWindow(631)</onclick>
 				<!-- custom views programs -->
-				<!-- <ondown condition="Window.IsActive(1103)">SetFocus(50)</ondown> -->
 				<ondown>SetFocus(51)</ondown>
 				<visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible>
 			</control>
@@ -1186,7 +1183,6 @@
 					<label>31495</label>
 					<altlabel>31494</altlabel>
 					<onclick>Skin.ToggleSetting(nopreferclearart)</onclick>
-					<!-- <selected>!Skin.HasSetting(nopreferclearart)</selected> -->
 					<visible>Control.IsVisible(51) + !Skin.HasSetting(noartwidevideo) | Control.IsVisible(54) + !Skin.HasSetting(noartpostervideo) | Control.IsVisible(55) + !Skin.HasSetting(noartlowlistvideo) | Control.IsVisible(57) + !Skin.HasSetting(noartglasslistvideo) | Control.IsVisible(59) + !Skin.HasSetting(noartrightlistvideo) | Control.IsVisible(60) | Control.IsVisible(62) + Skin.HasSetting(noviewpanelposter) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</control>
 			</control>
@@ -1376,16 +1372,6 @@
 					<onclick>SetFocus(51)</onclick>
 					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
 				</control>
-				<!-- <control type="radiobutton" id="9323">
-					<include>TopMenuRadioButton</include>
-					<label>$VAR[value_addon2]</label>
-					<onclick condition="System.HasAddon(script.tvtunes)">Skin.ToggleSetting(ontvtunes)</onclick>
-					<onclick condition="System.HasAddon(script.tvtunes) + !Skin.HasSetting(ontvtunes)">SetProperty(TvTunesBlocked,true)</onclick>
-					<onclick condition="System.HasAddon(script.tvtunes) + Skin.HasSetting(ontvtunes)">ClearProperty(TvTunesBlocked)</onclick>
-					<onclick condition="!System.HasAddon(script.tvtunes)">ActivateWindow(Programs,Addons,return)</onclick>
-					<selected>System.HasAddon(script.tvtunes) + Skin.HasSetting(ontvtunes)</selected>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-				</control> -->
 				<include condition="Window.IsActive(videoplaylist)">TopMenu_Playlist</include>
 			</control>
 			<control type="grouplist" id="9401">
@@ -4178,13 +4164,6 @@
 				<itemgap>0</itemgap>
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
-				<!-- <control type="button" id="9334">
-					<include>TopMenuButton</include>
-					<onclick>PreviousChannelGroup</onclick>
-					<label>$LOCALIZE[31769] - $INFO[Control.GetLabel(29)]</label>
-					<ondown>28</ondown>
-					<visible>Window.IsVisible(tvchannels)</visible>
-				</control> -->
 				<control type="button" id="28">
 					<!-- Channel Groups list-->
 					<include>TopMenuButton</include>
@@ -4291,7 +4270,6 @@
 				<onleft>31</onleft>
 				<onright>33</onright>
 				<label>19023</label>
-				<!-- <ondown>SetFocus(11)</ondown> -->
 			</control>
 			<control type="button" id="33">
 				<!-- Radio Channels -->

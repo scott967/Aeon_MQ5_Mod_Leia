@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.7 -->
 <!-- Jarvis 8.1.13 -->
-<!-- Leia 10.2.6 -->
+<!-- Leia 10.2.6/10.3.0 -->
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
 	<views>50</views>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<controls>
 		<control type="image">
 			<!-- Single Fanart -->

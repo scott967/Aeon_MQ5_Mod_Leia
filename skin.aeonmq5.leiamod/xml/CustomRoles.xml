@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Krypton 9.2.2/9.2.3 -->
-<!-- Leia 10.2.6 -->
+<!-- Leia 10.2.6 /10.3.0-->
 <window id="1104" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
 	<controls>
@@ -50,17 +50,6 @@
 				<font>Font_32</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
-			<!-- 	<control type="label">
-				<posx>215</posx>
-				<posy>45</posy>
-				<width>852</width>
-				<height>30</height>
-				<align>center</align>
-				<aligny>top</aligny>
-				<label>31140</label>
-				<font>Font_18A</font>
-				<textcolor>FFFFFAF0</textcolor>
-			</control> -->
 			<control type="group">
 				<posx>210</posx>
 				<posy>150</posy>
