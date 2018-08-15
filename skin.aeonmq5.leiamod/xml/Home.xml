@@ -4,6 +4,8 @@
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 windowIDs/9.2.2 -->
 <!-- Leia 10.3.0 -->
+<!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
+<!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<include condition="!Skin.HasSetting(fix3)">Quickfix</include>
@@ -297,13 +299,13 @@
 					<posx>750</posx>
 					<animation effect="slide" start="0,0" end="-292,0" time="50" easing="inout" tween="sine" condition="Control.HasFocus(603)">Conditional</animation>
 					<control type="label">
-						<!-- Palavra tocando agora -->
+						<!-- Now Playing -->
 						<posx>0</posx>
 						<posy>128</posy>
 						<width>450</width>
 						<height>45</height>
 						<align>left</align>
-						<font>Font_18A</font>
+						<font>Font_18</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>[UPPERCASE]$VAR[value_playerheader][/UPPERCASE]</label>
 						<scroll>true</scroll>
@@ -417,7 +419,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- Proximas faixas -->
+					<!-- Next tracks -->
 					<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
 					<control type="label">
 						<posx>1305</posx>
@@ -443,7 +445,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 					</control>
-					<control type="panel" id="603">
+					<control type="panel" id="603">  <!-- Next tracks -->
 						<posx>1305</posx>
 						<posy>225</posy>
 						<width>615</width>
