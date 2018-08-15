@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">9100</defaultcontrol>
 	<onunload condition="String.Contains(skin.string(customwindow),video)">SetFocus(50)</onunload>
@@ -2518,7 +2518,7 @@
 					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_14</font>
+					<font>Font_14A</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>31128</label>
 				</control>
@@ -2957,7 +2957,7 @@
 						<height>30</height>
 						<align>right</align>
 						<aligny>center</aligny>
-						<font>Font_14</font>
+						<font>Font_14A</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[Window(home).Property(Movies.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(home).Property(Movies.UnWatched)]</label>
 					</control>
@@ -2984,7 +2984,7 @@
 						<height>30</height>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_14</font>
+						<font>Font_14A</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<label>$INFO[Window(home).Property(Movies.Count)][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(home).Property(Movies.UnWatched)]</label>
 					</control>

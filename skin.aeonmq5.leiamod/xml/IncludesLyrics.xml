@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.1/Orby -->
 <!-- Krypton 9.2.1 window IDs -->
+<!-- Leia 10.4.0 -->
 <includes>
 	<!-- ######################################################################### Letras layout estilo default ######################################################################### -->
 	<include name="LyricsDefault">
@@ -33,7 +34,7 @@
 				<posy>54</posy>
 				<width>618</width>
 				<height>44</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>31723</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -126,7 +127,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>80FFFAF0</textcolor>
@@ -149,7 +150,7 @@
 						<width>1770</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_30</font>
+						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>FFFFFAF0</textcolor>
@@ -179,7 +180,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>80FFFAF0</textcolor>
@@ -201,7 +202,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_30</font>
+						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>FFFFFAF0</textcolor>
@@ -261,7 +262,7 @@
 				<width>1770</width>
 				<height>30</height>
 				<label>[COLOR=$VAR[value_headercolor]]$INFO[MusicPlayer.Artist][/COLOR] - $INFO[MusicPlayer.Title]</label>
-				<font>Font_30</font>
+				<font>Font_30A</font>
 				<align>center</align>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
@@ -308,7 +309,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_26</font>
+						<font>Font_26A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>80FFFAF0</textcolor>
@@ -330,7 +331,7 @@
 						<width>1770</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_30</font>
+						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>FFFFFAF0</textcolor>
@@ -359,7 +360,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_26</font>
+						<font>Font_26A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>80FFFAF0</textcolor>
@@ -381,7 +382,7 @@
 						<width>1620</width>
 						<height>33</height>
 						<info>ListItem.Label</info>
-						<font>Font_30</font>
+						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>FFFFFAF0</textcolor>

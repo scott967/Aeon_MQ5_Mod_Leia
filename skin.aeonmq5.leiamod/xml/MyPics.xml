@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs 2 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 
 <window>
 	<defaultcontrol>51</defaultcontrol>
@@ -122,7 +122,7 @@
 					<posy>150</posy>
 					<width>1125</width>
 					<height>38</height>
-					<font>Font_21</font>
+					<font>Font_21A</font>
 					<label>$INFO[ListItem.Tagline]</label>
 					<textcolor>90FFFFFF</textcolor>
 					<scroll>true</scroll>

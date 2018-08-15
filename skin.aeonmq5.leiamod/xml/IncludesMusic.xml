@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
@@ -105,7 +105,7 @@
 						<width>1650</width>
 						<height>60</height>
 						<!-- <font>Font_40</font> -->
-						<font>Font_40a</font>
+						<font>Font_40A</font>
 						<label>$VAR[value_music_title]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
@@ -602,7 +602,7 @@
 					<posy>27</posy>
 					<width>1650</width>
 					<height>60</height>
-					<font>Font_40a</font>
+					<font>Font_40A</font>
 					<label>$VAR[value_music_title]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>

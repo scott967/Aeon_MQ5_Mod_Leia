@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.2.1 window IDs 114 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.410.4.0 -->
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + ![Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)]</visible>
@@ -147,7 +147,7 @@
 				<width>825</width>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_30</font>
+				<font>Font_30A</font>
 				<label>$VAR[value_playertitle]</label>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<scroll>true</scroll>

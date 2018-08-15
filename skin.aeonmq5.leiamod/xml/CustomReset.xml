@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window id="628">
 	<!-- safe id -->
 	<defaultcontrol always="true">892</defaultcontrol>
@@ -39,7 +39,7 @@
 			<height>120</height>
 			<align>center</align>
 			<textcolor>B6FFFAF0</textcolor>
-			<font>Font_21</font>
+			<font>Font_21A</font>
 			<label>31425</label>
 			<include>Animation_Fade</include>
 			<visible>Control.HasFocus(892)</visible>

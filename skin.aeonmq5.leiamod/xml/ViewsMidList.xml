@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs-->
-<!-- Leia 1`0.2.5/10.3.0 -->
+<!-- Leia 1`0.2.5/10.3.0/10.4.0 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 70   ##################################################################################-->
 	<!-- ##########           INCLUDES USED LATER IN THIS FILE              ########## -->
@@ -29,7 +29,7 @@
 		<posx>0</posx>
 		<height>33</height>
 		<width>105</width>
-		<font>Font_17</font>
+		<font>Font_17A</font>
 		<aligny>top</aligny>
 		<align>left</align>
 		<textcolor>$VAR[value_headercolor]</textcolor>
@@ -40,7 +40,7 @@
 		<posx>0</posx>
 		<height>33</height>
 		<width>315</width>
-		<font>Font_17</font>
+		<font>Font_17A</font>
 		<aligny>top</aligny>
 		<align>left</align>
 		<textcolor>FFFFFFFF</textcolor>
@@ -202,7 +202,7 @@
 						<posy>15</posy>
 						<height>33</height>
 						<width>232</width>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$LOCALIZE[207]</label>
 						<visible>Container.Content(movies) | Container.Content(tv shows) | Container.Content(series) | Container.Content(episodes) | Container.Content(sets)</visible>
@@ -213,7 +213,7 @@
 						<posy>15</posy>
 						<height>33</height>
 						<width>232</width>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$LOCALIZE[21887]</label>
 						<visible>Container.Content(artists) | Container.Content(actors)</visible>
@@ -224,7 +224,7 @@
 						<posy>15</posy>
 						<height>33</height>
 						<width>232</width>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>[CAPITALIZE][LOWERCASE]$LOCALIZE[31753][/LOWERCASE][/CAPITALIZE]</label>
 						<visible>Container.Content(songs) | Container.Content(musicvideos) | Container.content(albums)</visible>
@@ -244,7 +244,7 @@
 						<width>458</width>
 						<height>195</height>
 						<align>left</align>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<label>$VAR[value_plot]</label>
 						<autoscroll delay="20000" time="3000" repeat="20000"></autoscroll>
 					</control>
@@ -387,7 +387,7 @@
 						<width>345</width>
 						<height>38</height>
 						<aligny>center</aligny>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<label>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ]$INFO[ListItem.Property(AudioLanguage.3), / ]$INFO[ListItem.Property(AudioLanguage.4), / ]$INFO[ListItem.Property(AudioLanguage.5), / ]$INFO[ListItem.Property(AudioLanguage.6), / ]$INFO[ListItem.Property(AudioLanguage.7), / ]$INFO[ListItem.Property(AudioLanguage.8), / ]$INFO[ListItem.Property(AudioLanguage.9), / ]$INFO[ListItem.Property(AudioLanguage.10), / ]</label>
 						<textcolor>CCCCCCCC</textcolor>
 						<scroll>true</scroll>
@@ -414,7 +414,7 @@
 						<width>345</width>
 						<height>38</height>
 						<aligny>center</aligny>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label>
 						<textcolor>CCCCCCCC</textcolor>
 						<scroll>true</scroll>
@@ -684,7 +684,7 @@
 					<description>GENRE</description>
 					<height>72</height>
 					<width>315</width>
-					<font>Font_17</font>
+					<font>Font_17A</font>
 					<aligny>top</aligny>
 					<align>left</align>
 					<textcolor>FFFFFFFF</textcolor>
@@ -864,7 +864,7 @@
 						<posy>44</posy>
 						<width>675</width>
 						<height>24</height>
-						<font>Font_17</font>
+						<font>Font_17A</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>subcolorfocus</include>

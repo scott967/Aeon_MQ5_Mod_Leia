@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.2 -->
+<!-- Leia 10.4.0 -->
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
 	<coordinates>
@@ -64,7 +65,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>$VAR[value_headercolor]</textcolor>
-				<font>Font_30</font>
+				<font>Font_30A</font>
 				<label>$INFO[ListItem.Title]</label>
 				<scroll>true</scroll>
 			</control>

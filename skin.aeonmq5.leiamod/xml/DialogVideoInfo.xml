@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
-<!-- Leia 10.2.5/10.3.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
@@ -95,7 +95,7 @@
 				<posy>75</posy>
 				<width>1650</width>
 				<height>38</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>$INFO[ListItem.Tagline]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
@@ -107,7 +107,7 @@
 				<posy>75</posy>
 				<width>1650</width>
 				<height>38</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>$INFO[ListItem.Artist]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
@@ -195,7 +195,7 @@
 				<width>165</width>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_24A</font>
+				<font>Font_24</font>
 				<label>$INFO[ListItem.Year]</label>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
@@ -635,7 +635,7 @@
 					<width>975</width>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<label>$INFO[Container(50).ListItem.Label] $INFO[Container(50).ListItem.Label2, $LOCALIZE[20347]: ,]</label>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<scroll>true</scroll>
@@ -1019,7 +1019,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$VAR[value_videoinfo_zoomlabel]</label>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 				</control>

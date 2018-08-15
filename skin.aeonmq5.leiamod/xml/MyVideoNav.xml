@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 25/9.2.2/9.2.3 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
@@ -381,7 +381,7 @@
 						<posy>165</posy>
 						<width>1125</width>
 						<height>38</height>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<label>$INFO[ListItem.Tagline]</label>
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
@@ -394,7 +394,7 @@
 						<posy>165</posy>
 						<width>1125</width>
 						<height>38</height>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<label>$INFO[ListItem.Artist]</label>
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
@@ -450,7 +450,7 @@
 						<posy>165</posy>
 						<width>1650</width>
 						<height>38</height>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<label>$INFO[ListItem.Tagline]</label>
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
@@ -463,7 +463,7 @@
 						<posy>165</posy>
 						<width>1125</width>
 						<height>38</height>
-						<font>Font_21</font>
+						<font>Font_21A</font>
 						<label>$INFO[ListItem.Artist]</label>
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>

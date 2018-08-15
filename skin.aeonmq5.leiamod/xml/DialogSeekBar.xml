@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Isengard 7.1.8/7.1.9 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3-->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol>23</defaultcontrol>
 	<visible>Window.IsActive(fullscreenvideo) + ![Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(SubtitleSearch)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
@@ -363,7 +363,7 @@
 				<width>450</width>
 				<height>38</height>
 				<align>left</align>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>31530</label>
 			</control>
@@ -387,7 +387,7 @@
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
-					<font>Font_17</font>
+					<font>Font_17A</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>31703</label>
 				</control>

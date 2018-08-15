@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.19 -->
-<!-- Leia 10.2.6 -->
+<!-- Leia 10.2.6/10.4.0 -->
 <window>
 	<controls>
 		<!-- This was the old codecinfo provided in full screen video -->
@@ -106,7 +106,7 @@
 				<label>$LOCALIZE[19012]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -118,7 +118,7 @@
 				<label>$INFO[PVR.ActStreamClient]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>white</textcolor>
 			</control>
 			<control type="label">
@@ -130,7 +130,7 @@
 				<label>$LOCALIZE[19006]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -142,7 +142,7 @@
 				<label>$INFO[PVR.ActStreamDevice]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -154,7 +154,7 @@
 				<label>$LOCALIZE[19007]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -166,7 +166,7 @@
 				<label>$INFO[PVR.ActStreamStatus]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -178,7 +178,7 @@
 				<label>$LOCALIZE[19008]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="progress">
@@ -198,7 +198,7 @@
 				<label>$INFO[PVR.ActStreamSignal]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -210,7 +210,7 @@
 				<label>$LOCALIZE[19009]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="progress">
@@ -231,7 +231,7 @@
 				<label>$INFO[PVR.ActStreamSNR]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -243,7 +243,7 @@
 				<label>$LOCALIZE[19010]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -255,7 +255,7 @@
 				<label>$INFO[PVR.ActStreamBER]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -267,7 +267,7 @@
 				<label>$LOCALIZE[19011]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -279,7 +279,7 @@
 				<label>$INFO[PVR.ActStreamUNC]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -291,7 +291,7 @@
 				<label>$LOCALIZE[19099]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -303,7 +303,7 @@
 				<label>$INFO[PVR.ActStreamServiceName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -315,7 +315,7 @@
 				<label>$LOCALIZE[19015]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -327,7 +327,7 @@
 				<label>$INFO[PVR.ActStreamEncryptionName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -339,7 +339,7 @@
 				<label>$LOCALIZE[19101]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -351,7 +351,7 @@
 				<label>$INFO[PVR.ActStreamProviderName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -363,7 +363,7 @@
 				<label>$LOCALIZE[19100]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 			<control type="label">
@@ -375,7 +375,7 @@
 				<label>$INFO[PVR.ActStreamMux]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
 		</control>

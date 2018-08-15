@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.7 -->
 <!-- Jarvis 8.1.13 -->
-<!-- Leia 10.2.6/10.3.0 -->
+<!-- Leia 10.2.6/10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">6</defaultcontrol>
 	<views>50</views>
@@ -129,7 +129,7 @@
 					<posy>136</posy>
 					<width>1156</width>
 					<height>34</height>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<label>$LOCALIZE[10503]</label>
 					<textcolor>80FFFAF0</textcolor>
 				</control>
@@ -178,7 +178,7 @@
 							<posy>0</posy>
 							<width>540</width>
 							<height>62</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -240,7 +240,7 @@
 							<posy>0</posy>
 							<width>540</width>
 							<height>62</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.2 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.4.0 -->
 <window id="5600" type="dialog">
 	<!-- safe id -->
 	<defaultcontrol>604</defaultcontrol>
@@ -35,7 +36,7 @@
 				<posy>54</posy>
 				<width>618</width>
 				<height>44</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>31325</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>

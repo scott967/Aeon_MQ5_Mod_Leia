@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5  Helix 6.1.0/6.1.7 -->
 <!-- Jarvis 8.1.14 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <includes>
 	<!-- ######################################################################### Current #########################################################################-->
 	<!-- Widget Common Values -->
@@ -3726,7 +3726,7 @@
 	<include name="TWC.36Hour.PeriodForecastCommon">
 		<posy>390</posy>
 		<height>360</height>
-		<font>Font_17</font>
+		<font>Font_17A</font>
 		<align>center</align>
 		<aligny>top</aligny>
 		<autoscroll time="2000" delay="6000" repeat="6000">VisibleChange</autoscroll>
@@ -5304,7 +5304,7 @@
 		<posy>-14</posy>
 		<height>38</height>
 		<width>376</width>
-		<font>Font_17</font>
+		<font>Font_17A</font>
 		<texturefocus>grey.png</texturefocus>
 		<alttexturefocus>grey.png</alttexturefocus>
 		<textcolor>FFFFFAF0</textcolor>
@@ -5361,7 +5361,7 @@
 		<posy>820</posy>
 		<width>1080</width>
 		<height>45</height>
-		<font>Font_17</font>
+		<font>Font_17A</font>
 		<textcolor>FFf5f5f5</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>

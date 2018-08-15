@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Aeon MQ 5 Helix 6.1.5 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">11</defaultcontrol>
 	<coordinates>
@@ -49,7 +49,7 @@
 				<width>978</width>
 				<height>45</height>
 				<label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
-				<font>Font_30</font>
+				<font>Font_30A</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>

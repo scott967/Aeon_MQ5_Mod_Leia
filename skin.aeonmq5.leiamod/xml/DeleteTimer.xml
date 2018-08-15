@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
+<!-- Leia 10.4.0 -->
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
@@ -98,7 +99,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label></label>
-				<font>Font_30</font>
+				<font>Font_30A</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<scroll>true</scroll>
 			</control>

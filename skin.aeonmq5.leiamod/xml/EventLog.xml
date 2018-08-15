@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">570</defaultcontrol>
 	<views>570</views>
@@ -85,7 +85,7 @@
 							<top>56</top>
 							<width>825</width>
 							<height>52</height>
-							<font>Font_17</font>
+							<font>Font_17A</font>
 							<textcolor>FFFFFAF0</textcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>
@@ -95,7 +95,7 @@
 							<top>0</top>
 							<width>300</width>
 							<height>45</height>
-							<font>Font_14</font>
+							<font>Font_14A</font>
 							<textcolor>FFFFFAF0</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -146,7 +146,7 @@
 							<top>60</top>
 							<width>825</width>
 							<height>72</height>
-							<font>Font_17</font>
+							<font>Font_17A</font>
 							<textcolor>$VAR[value_headercolor]</textcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Event.Description)]</label>

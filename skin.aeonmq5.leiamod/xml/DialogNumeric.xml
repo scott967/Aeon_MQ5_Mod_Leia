@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 109 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">21</defaultcontrol>
 	<controls>
@@ -80,7 +80,7 @@
 				<posy>758</posy>
 				<width>390</width>
 				<height>60</height>
-				<font>Font_24</font>
+				<font>Font_24A</font>
 				<textcolor>FF101010</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>

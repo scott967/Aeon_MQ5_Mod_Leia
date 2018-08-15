@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.17/9.1.19/9.2.1 window IDs/9.2.4 -->
-<!-- Leiamod 10.2.3/10.3.0 -->
+<!-- Leiamod 10.2.3/10.3.0/10.4.0 -->
 <window id="6000">
 	<!-- safe id -->
 	<defaultcontrol></defaultcontrol>
@@ -324,7 +324,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>60</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -381,7 +381,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>60</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<label>$INFO[ListItem.Label]</label>
 							<align>left</align>
 							<aligny>center</aligny>

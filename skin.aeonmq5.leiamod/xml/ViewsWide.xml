@@ -3,7 +3,7 @@
 <!-- Isengardmod 7.1.11/7/1/12 -->
 <!-- Jarvis 8.1.3 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.3.0 -->
+<!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
@@ -234,7 +234,7 @@
 							<posy>1</posy>
 							<width>660</width>
 							<height>60</height>
-							<font>Font_24</font>
+							<font>Font_24A</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -245,7 +245,7 @@
 							<posy>1</posy>
 							<width>660</width>
 							<height>60</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -322,7 +322,7 @@
 							<posy>3</posy>
 							<width>660</width>
 							<height>62</height>
-							<font>Font_24</font>
+							<font>Font_24A</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
@@ -333,7 +333,7 @@
 							<posy>3</posy>
 							<width>660</width>
 							<height>62</height>
-							<font>Font_24</font>
+							<font>Font_24A</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Title]</label>
@@ -344,7 +344,7 @@
 							<posy>3</posy>
 							<width>660</width>
 							<height>62</height>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>

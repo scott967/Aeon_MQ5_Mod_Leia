@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4 -->
+<!-- Leia 10.2.4/10.4.0 -->
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
 	<include name="panel_layout">
@@ -3997,7 +3997,7 @@
 					<height>495</height>
 					<align>right</align>
 					<aligny>top</aligny>
-					<font>Font_17A</font>
+					<font>Font_17AB</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>[UPPERCASE]$LOCALIZE[31443] by MarcosQui:[CR]$LOCALIZE[9]:[CR]$LOCALIZE[31748]:[CR]$LOCALIZE[31749]:[CR]$LOCALIZE[31750]:[CR]$LOCALIZE[31751]:[CR]$LOCALIZE[31691]:[CR]$LOCALIZE[20093]:[CR]$LOCALIZE[13287][CR]$LOCALIZE[13284][/UPPERCASE]</label>
 				</control>
@@ -4010,7 +4010,7 @@
 					<height>495</height>
 					<align>right</align>
 					<aligny>top</aligny>
-					<font>Font_17A</font>
+					<font>Font_17AB</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>[UPPERCASE]$LOCALIZE[158]:[CR]$LOCALIZE[12395]:[CR]$LOCALIZE[20089]:[CR]$LOCALIZE[150]:[CR]$LOCALIZE[13295][CR]$LOCALIZE[12390]:[/UPPERCASE]</label>
 				</control>
@@ -4022,7 +4022,7 @@
 					<height>495</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>Font_17A</font>
+					<font>Font_17AB</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>[LOWERCASE]$VAR[SkinVersion][CR]$INFO[System.BuildVersion][COLOR=80FFFFFF] | [/COLOR]$INFO[System.BuildDate][CR]$VAR[value_skinstatus_theme][CR]$VAR[value_skinstatus_style][CR]$VAR[value_skinstatus_texturecolor][CR]$VAR[value_skinstatus_headercolor][CR]$VAR[value_skinstatus_homeglass][CR]$INFO[System.ProfileName][CR]$INFO[System.ScreenWidth]x$INFO[System.ScreenHeight] pxl[CR]$INFO[System.CpuFrequency][/LOWERCASE]</label>
 				</control>
@@ -4034,7 +4034,7 @@
 					<height>495</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>Font_17A</font>
+					<font>Font_17AB</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>[LOWERCASE]$INFO[System.FreeMemory][CR]$INFO[System.BatteryLevel][CR]$INFO[System.FreeSpace][COLOR=80FFFFFF] | [/COLOR]$INFO[System.FreeSpacePercent][CR]$INFO[Network.IPAddress][CR]$INFO[System.InternetState][CR]$INFO[System.Uptime][/LOWERCASE]</label>
 				</control>
@@ -39159,7 +39159,7 @@
 				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_26</font>
+				<font>Font_26A</font>
 				<!-- <scroll>false</scroll> -->
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<shadowcolor>grey</shadowcolor>

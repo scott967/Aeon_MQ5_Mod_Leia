@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <includes>
 	<!--##################################################################################   VISTA SETS - ID 65   ##################################################################################-->
 	<include name="SetsLabel">
@@ -285,7 +285,7 @@
 							<height>60</height>
 							<width>495</width>
 							<aligny>center</aligny>
-							<font>Font_24A</font>
+							<font>Font_24</font>
 							<label>$INFO[ListItem.Label]</label>
 							<include>listcolorfocus</include>
 						</control>
@@ -743,7 +743,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(5801).ListItem.Label]</label>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
 					</control>

@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2901/9.2.2/9.2.3 -->
-<!-- Leia 10.2.8/10.3.0 -->
+<!-- Leia 10.2.8/10.3.0/10.4.0 -->
 
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
@@ -228,7 +228,7 @@
 				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>Font_17</font>
+				<font>Font_17A</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<shadowcolor>grey</shadowcolor>
 				<label>[B]$VAR[value_osd_timeduration][/B]</label>

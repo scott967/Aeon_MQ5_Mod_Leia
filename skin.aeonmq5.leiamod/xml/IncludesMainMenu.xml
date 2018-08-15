@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7  -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0 -->
 <includes>
 	<!-- ######################################################################### Menu Principal ######################################################################### -->
 	<include name="MainMenuFixedList">
@@ -72,7 +72,7 @@
 				<width>600</width>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>Font_60a</font>
+				<font>Font_60h</font>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[value_menucolorlabel]</textcolor>
 				<visible>String.IsEqual(skin.string(font),font2)</visible>
@@ -171,7 +171,7 @@
 				<width>600</width>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>Font_60a</font>
+				<font>Font_60h</font>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Control.Hasfocus(9000) | Skin.HasSetting(submode)">conditional</animation>

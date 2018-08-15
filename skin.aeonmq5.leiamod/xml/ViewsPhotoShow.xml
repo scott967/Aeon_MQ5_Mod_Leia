@@ -155,7 +155,7 @@
 					<width>600</width>
 					<height>150</height>
 					<align>right</align>
-					<font>Font_17A</font>
+					<font>Font_17AB</font>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31714]:[/COLOR] $INFO[ListItem.PictureDateTime][CR][COLOR=$VAR[value_headercolor]]$LOCALIZE[31350]:[/COLOR] $INFO[ListItem.Date][CR][COLOR=$VAR[value_headercolor]]$LOCALIZE[31715]:[/COLOR] $INFO[ListItem.PictureResolution][CR]$INFO[ListItem.Size]</label>
 					<animation effect="fade" delay="600" start="0" end="100" time="200">Visible</animation>
 				</control>
