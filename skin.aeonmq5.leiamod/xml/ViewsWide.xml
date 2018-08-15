@@ -163,7 +163,7 @@
 							<aligny>center</aligny>
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
 							<visible>!Container.Content(images)</visible>
 						</control>
 						<control type="label">
@@ -179,7 +179,7 @@
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
 							<visible>Container.Content(images)</visible>
 						</control>
-						<control type="label">
+						<!-- <control type="label">
 							<posx>772</posx>
 							<posy>20</posy>
 							<width>128</width>
@@ -190,7 +190,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
 							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
-						</control>
+						</control> -->
 						<control type="image">
 							<posx>788</posx>
 							<posy>35</posy>
@@ -220,7 +220,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) | [Window.IsActive(videos) + Skin.HasSetting(slimwidevideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimwidemusic)]" height="60">
+					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) | [Window.IsActive(videos) + Skin.HasSetting(slimwidevideo) | Window.IsActive(videoplaylist) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimwidemusic)]" height="60">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -238,7 +238,18 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>3</posy>
+							<width>660</width>
+							<height>62</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>String.Contains(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -253,7 +264,7 @@
 						</control>
 						<control type="label">
 							<posx>772</posx>
-							<posy>-22</posy>
+							<posy>-30</posy>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -261,12 +272,25 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>!String.IsEqual(Skin.Font,Massive) + !Container.Content(images)</visible>
 						</control>
-						<visible>!Container.Content(images)</visible>
+						<control type="label">
+							<posx>772</posx>
+							<posy>-30</posy>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_14A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Year]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>String.IsEqual(Skin.Font,Massive) + !Container.Content(images)</visible>
+						</control>
 						<control type="label">
 							<posx>762</posx>
-							<posy>-11</posy>
+							<posy>-15</posy>
 							<width>200</width>
 							<height>60</height>
 							<font>Font_18</font>
@@ -275,11 +299,24 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Date]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
-							<visible>Container.Content(images)</visible>
+							<visible>!String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
+						</control>
+						<control type="label">
+							<posx>762</posx>
+							<posy>-15</posy>
+							<width>200</width>
+							<height>60</height>
+							<font>Font_18</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Date]</label>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
+							<visible>String.IsEqual(Skin.Font,Massive) + Container.Content(images)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
-							<posy>22</posy>
+							<posy>16</posy>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -287,11 +324,23 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + !String.IsEqual(Skin.Font,Massive) </visible>
+						</control>
+						<control type="label">
+							<posx>772</posx>
+							<posy>16</posy>
+							<width>128</width>
+							<height>60</height>
+							<font>Font_14A</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<include>detailcolorfocus</include>
+							<label>$INFO[ListItem.Rating]</label>
+							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)] + String.IsEqual(Skin.Font,Massive) </visible>
 						</control>
 						<control type="image">
 							<posx>788</posx>
-							<posy>27</posy>
+							<posy>23</posy>
 							<width>98</width>
 							<height>15</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
@@ -352,7 +401,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>56</posy>
+							<posy>68</posy>
 							<width>660</width>
 							<height>24</height>
 							<font>Font_18A</font>
@@ -364,7 +413,7 @@
 						</control>
 						<control type="label">
 							<posx>772</posx>
-							<posy>0</posy>
+							<posy>-10</posy>
 							<width>128</width>
 							<height>62</height>
 							<font>Font_18A</font>
@@ -387,7 +436,7 @@
 						</control>
 						<control type="image">
 							<posx>788</posx>
-							<posy>50</posy>
+							<posy>36</posy>
 							<width>98</width>
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>

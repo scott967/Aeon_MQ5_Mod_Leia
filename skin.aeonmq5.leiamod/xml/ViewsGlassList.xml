@@ -24,7 +24,7 @@
 		<aligny>top</aligny>
 		<align>left</align>
 		<textoffsetx>45</textoffsetx>
-		<textoffsety>32</textoffsety>
+		<textoffsety>37</textoffsety>
 		<scroll>true</scroll>
 	</include>
 	<include name="GlassListDisc">
@@ -226,7 +226,7 @@
 				</control>
 				<control type="label">
 					<posx>836</posx>
-					<posy>168</posy>
+					<posy>158</posy>
 					<width>150</width>
 					<height>30</height>
 					<label>$INFO[ListItem.Rating]</label>
@@ -234,7 +234,7 @@
 				</control>
 				<control type="image">
 					<posx>836</posx>
-					<posy>140</posy>
+					<posy>135</posy>
 					<width>150</width>
 					<height>30</height>
 					<texture>$VAR[User_Rating_Stars]</texture>
@@ -677,7 +677,7 @@
 			<control type="label">
 				<!-- Contador de pagina -->
 				<posx>30</posx>
-				<posy>998</posy>
+				<posy>988</posy>
 				<width>225</width>
 				<height>33</height>
 				<label>$LOCALIZE[31757] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>

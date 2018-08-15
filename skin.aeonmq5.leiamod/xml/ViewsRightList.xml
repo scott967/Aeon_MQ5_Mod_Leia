@@ -316,7 +316,7 @@
 						</control>
 						<control type="image">
 							<posx>765</posx>
-							<posy>-4</posy>
+							<posy>0</posy>
 							<width>45</width>
 							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>

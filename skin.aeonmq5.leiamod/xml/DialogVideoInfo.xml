@@ -84,6 +84,7 @@
 				<posy>2</posy>
 				<width>1650</width>
 				<height>60</height>
+				<aligny>center</aligny>
 				<font>Font_40</font>
 				<label>$VAR[value_videotitle]</label>
 				<textcolor>FFFFFAF0</textcolor>
@@ -95,6 +96,7 @@
 				<posy>75</posy>
 				<width>1650</width>
 				<height>38</height>
+				<aligny>center</aligny>
 				<font>Font_21A</font>
 				<label>$INFO[ListItem.Tagline]</label>
 				<textcolor>FFFFFAF0</textcolor>
@@ -107,6 +109,7 @@
 				<posy>75</posy>
 				<width>1650</width>
 				<height>38</height>
+				<aligny>center</aligny>
 				<font>Font_21A</font>
 				<label>$INFO[ListItem.Artist]</label>
 				<textcolor>FFFFFAF0</textcolor>
@@ -202,7 +205,7 @@
 			<control type="label">
 				<!-- Genre -->
 				<posx>330</posx>
-				<posy>154</posy>
+				<posy>164</posy>
 				<height>60</height>
 				<width>735</width>
 				<align>left</align>
@@ -224,7 +227,7 @@
 				<onright>149</onright>
 				<onup>149</onup>
 				<ondown>149</ondown>
-				<itemgap>0</itemgap>
+				<itemgap>2</itemgap>
 				<pagecontrol></pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="30">

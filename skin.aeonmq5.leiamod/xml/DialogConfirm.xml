@@ -23,6 +23,7 @@
 				<height>44</height>
 				<width>225</width>
 				<align>center</align>
+				<aligny>center</aligny>
 				<textcolor>FFFFFAF0</textcolor>
 				<focusedcolor>FF101010</focusedcolor>
 				<font>Font_18A</font>
@@ -43,6 +44,7 @@
 				<height>44</height>
 				<width>225</width>
 				<align>center</align>
+				<aligny>center</aligny>
 				<textcolor>FFFFFAF0</textcolor>
 				<focusedcolor>FF101010</focusedcolor>
 				<font>Font_18A</font>
@@ -64,10 +66,11 @@
 			</control>
 			<control type="label">
 				<posx>960</posx>
-				<posy>6</posy>
+				<posy>3</posy>
 				<width>75</width>
 				<height>52</height>
 				<align>left</align>
+				<aligny>center</aligny>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<font>Font_18A</font>
 				<scroll>true</scroll>

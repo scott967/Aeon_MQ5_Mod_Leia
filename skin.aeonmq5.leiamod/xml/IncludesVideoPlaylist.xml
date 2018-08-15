@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <includes>
 	<include name="VideoPLWindow">
 		<control type="image">
@@ -53,6 +53,7 @@
 						<width>1125</width>
 						<height>60</height>
 						<font>Font_40</font>
+						<aligny>center</aligny>
 						<label>$VAR[value_videotitle]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
@@ -69,7 +70,19 @@
 						<textcolor>90FFFFFF</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
+					</control>
+					<control type="label">
+						<posx>45</posx>
+						<posy>75</posy>
+						<width>1125</width>
+						<height>38</height>
+						<font>Font_18A</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<textcolor>90FFFFFF</textcolor>
+						<scroll>true</scroll>
+						<scrollout>false</scrollout>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -81,6 +94,7 @@
 						<width>1650</width>
 						<height>60</height>
 						<font>Font_40</font>
+						<aligny>center</aligny>
 						<label>$VAR[value_videotitle]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>

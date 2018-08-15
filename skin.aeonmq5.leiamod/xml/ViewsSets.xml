@@ -81,14 +81,14 @@
 				<control type="label">
 					<include>SetsValue</include>
 					<posx>45</posx>
-					<posy>494</posy>
+					<posy>504</posy>
 					<label>$VAR[value_ground6_value]</label>
 					<visible>!Control.HasFocus(5801)</visible>
 				</control>
 				<control type="label">
 					<include>SetsValue</include>
 					<posx>45</posx>
-					<posy>494</posy>
+					<posy>504</posy>
 					<label>$INFO[Container(5801).ListItem.Property(Year)]</label>
 					<visible>Control.HasFocus(5801)</visible>
 				</control>
@@ -101,7 +101,7 @@
 				<control type="label">
 					<include>SetsValue</include>
 					<posx>45</posx>
-					<posy>568</posy>
+					<posy>578</posy>
 					<label>$INFO[ListItem.Country]$INFO[Window(home).Property(Set.Movies.Country)]</label>
 				</control>
 				<control type="label">
@@ -113,7 +113,7 @@
 				<control type="label">
 					<include>SetsValue</include>
 					<posx>528</posx>
-					<posy>494</posy>
+					<posy>504</posy>
 					<label>$INFO[ListItem.Genre]$INFO[Window(home).Property(Set.Movies.Genre)]</label>
 				</control>
 				<control type="label">
@@ -125,7 +125,7 @@
 				<control type="label">
 					<include>SetsValue</include>
 					<posx>528</posx>
-					<posy>568</posy>
+					<posy>578</posy>
 					<label>$INFO[ListItem.studio]$INFO[Window(home).Property(Set.Movies.Studio)]</label>
 				</control>
 			</control>

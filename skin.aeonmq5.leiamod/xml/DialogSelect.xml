@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 2000/9.2.3 -->
-<!-- Leia 10.2.4/10.2.8/10.3.0 -->
+<!-- Leia 10.2.4/10.2.8/10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<coordinates>
@@ -218,7 +218,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<height>24</height>
 							<width>1140</width>
 							<font>Font_18A</font>
@@ -230,7 +230,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<height>24</height>
 							<width>1140</width>
 							<font>Font_18A</font>
@@ -242,7 +242,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<height>24</height>
 							<width>1140</width>
 							<font>Font_18A</font>
@@ -274,7 +274,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<width>1140</width>
 							<height>24</height>
 							<font>Font_18A</font>
@@ -286,7 +286,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<width>1140</width>
 							<height>24</height>
 							<font>Font_18A</font>
@@ -298,7 +298,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>52</posy>
+							<posy>62</posy>
 							<height>24</height>
 							<width>1140</width>
 							<font>Font_18A</font>

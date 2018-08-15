@@ -35,10 +35,10 @@
 		<animation effect="fade" start="100" end="0" time="750" condition="Player.HasMedia + System.IdleTime(8)">Conditional</animation>
 		<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(510) | Control.HasFocus(600)">Conditional</animation>
 		<posx>0</posx>
-		<posy>804</posy>
+		<posy>796</posy>
 		<!-- was 545 -->
 		<width>1920</width>
-		<height>105</height>
+		<height>120</height>
 		<!-- was 60 -->
 		<ondown condition="!Skin.HasSetting(highermainmenu)">Skin.SetBool(submode)</ondown>
 		<ondown condition="!Skin.HasSetting(highermainmenu)">ActivateWindow($VAR[Sub_GoTo])</ondown>
@@ -52,11 +52,11 @@
 		<orientation>horizontal</orientation>
 		<scrolltime>350</scrolltime>
 		<focusposition>1</focusposition>
-		<itemlayout width="639" height="105">
+		<itemlayout width="639" height="120">
 			<control type="label">
 				<left>20</left>
 				<posy>3</posy>
-				<height>105</height>
+				<height>120</height>
 				<width>600</width>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -150,11 +150,11 @@
 				<visible>String.IsEqual(skin.string(font),font8)</visible>
 			</control>
 		</itemlayout>
-		<focusedlayout width="639" height="105">
+		<focusedlayout width="639" height="120">
 			<control type="label">
 				<left>20</left>
 				<posy>3</posy>
-				<height>105</height>
+				<height>120</height>
 				<width>600</width>
 				<align>center</align>
 				<aligny>center</aligny>

@@ -356,6 +356,7 @@
 						<posy>87</posy>
 						<width>1125</width>
 						<height>60</height>
+						<aligny>center</aligny>
 						<font>Font_40</font>
 						<label>$VAR[value_videotitle]</label>
 						<textcolor>FFFFFAF0</textcolor>
