@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Isengard 7.1.10 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.4.0 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE ID 50   #############################################################################-->
 	<include name="ViewWideGames">
@@ -420,7 +421,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>0</posy>
-					<label fallback="416">$INFO[ListItem.Property(year)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(year)]</label>
 				</control>
 				<control type="label">
 					<!-- Genre -->
@@ -431,7 +432,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>66</posy>
-					<label fallback="416">$INFO[ListItem.Property(genre)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(genre)]</label>
 				</control>
 				<control type="label">
 					<!-- Publisher -->
@@ -442,7 +443,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>132</posy>
-					<label fallback="416">$INFO[ListItem.Property(publisher)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(publisher)]</label>
 				</control>
 				<control type="label">
 					<!-- Developer -->
@@ -453,7 +454,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>198</posy>
-					<label fallback="416">$INFO[ListItem.Property(developer)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(developer)]</label>
 				</control>
 				<control type="label">
 					<!-- Players -->
@@ -464,7 +465,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>264</posy>
-					<label fallback="416">$INFO[ListItem.Property(maxplayers)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(maxplayers)]</label>
 				</control>
 				<control type="label">
 					<!-- Play count -->
@@ -475,7 +476,7 @@
 				<control type="label">
 					<include>WideValue</include>
 					<posy>330</posy>
-					<label fallback="416">$INFO[ListItem.Property(playcount)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(playcount)]</label>
 				</control>
 			</control>
 		</control>
