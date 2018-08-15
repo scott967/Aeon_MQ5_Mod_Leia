@@ -148,6 +148,13 @@
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<onclick>ActivateWindow(Favourites)</onclick>
 					</item>
+					<item id="15">
+						<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>System.LogOff</onclick>
+						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
+						<visible>System.Loggedon</visible>
+					</item>
 				</content>
 			</control>
 		</control>
