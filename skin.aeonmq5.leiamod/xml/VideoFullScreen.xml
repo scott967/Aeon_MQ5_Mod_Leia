@@ -4,20 +4,20 @@
 <!-- Leia 10.3.0 -->
 <window>
 	<controls>
-		<control type="group">
+		<control type="group" id="1">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1920</width>
-			<height>188</height>
-			<animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">WindowOpen</animation>
-			<animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">Visible</animation>
-			<animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">WindowClose</animation>
-			<animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">Hidden</animation>
-			<visible>![Window.IsVisible(seekbar) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Skin.HasSetting(customosd)]</visible>
+			<height>240</height>
+			<!-- <animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">WindowOpen</animation> -->
+			<animation effect="slide" time="400" start="0,-255" end="0,0" easing="out" tween="cubic">Visible</animation>
+			<!-- <animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">WindowClose</animation> -->
+			<animation effect="slide" time="400" start="0,0" end="0,-255" easing="in" tween="cubic">Hidden</animation>
+			<visible>!String.IsEmpty(Player.SeekNumeric) + ![ Window.IsVisible(seekbar) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Skin.HasSetting(customosd)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<height>300</height>
+				<height>240</height>
 				<width>1920</width>
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>75000000</colordiffuse>
@@ -34,7 +34,7 @@
 			</control>
 			<control type="label" id="11">
 				<posx>45</posx>
-				<posy>82</posy>
+				<posy>60</posy>
 				<width>1875</width>
 				<height>30</height>
 				<align>left</align>
@@ -44,7 +44,7 @@
 			</control>
 			<control type="label" id="12">
 				<posx>45</posx>
-				<posy>150</posy>
+				<posy>105</posy>
 				<width>1875</width>
 				<height>30</height>
 				<align>left</align>
@@ -54,13 +54,24 @@
 			</control>
 			<control type="label" id="1">
 				<posx>45</posx>
-				<posy>210</posy>
+				<posy>150</posy>
 				<width>1875</width>
 				<height>30</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_18</font>
-				<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+				<label>$LOCALIZE[13386] (hh:mm:ss)</label>
+			</control>
+			<control type="label" id="1">
+				<posx>45</posx>
+				<posy>195</posy>
+				<width>1875</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18</font>
+				<!-- <label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label> -->
+				<label>$INFO[Player.SeekNumeric]</label>
 			</control>
 		</control>
 		<control type="group">
