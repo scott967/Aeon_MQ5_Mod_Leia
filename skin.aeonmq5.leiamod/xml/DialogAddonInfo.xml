@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0  -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.2.1 window IDs 146 -->
+<!-- Leia 10.4.0 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
@@ -54,7 +55,7 @@
 					<posy>0</posy>
 					<width>825</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonType]</label>
+					<label fallback="10005">$INFO[ListItem.AddonType]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
@@ -78,7 +79,7 @@
 					<posy>45</posy>
 					<width>825</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonCreator]</label>
+					<label fallback="10005">$INFO[ListItem.AddonCreator]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
@@ -102,7 +103,7 @@
 					<posy>90</posy>
 					<width>825</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonVersion]</label>
+					<label fallback="10005">$INFO[ListItem.AddonVersion]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>
@@ -127,7 +128,7 @@
 					<height>25</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label fallback="416">$INFO[ListItem.AddonLastUpdated]</label>
+					<label fallback="10005">$INFO[ListItem.AddonLastUpdated]</label>
 				</control> -->
 				<control type="label">
 					<!-- Summary -->
@@ -147,7 +148,7 @@
 					<posy>180</posy>
 					<width>825</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonSummary]</label>
+					<label fallback="10005">$INFO[ListItem.AddonSummary]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18</font>

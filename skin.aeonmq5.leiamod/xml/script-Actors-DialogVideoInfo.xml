@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0  -->
 <!-- Jarivs 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.19 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window id="3003">
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>Skin.Reset(trailermode)</onload>
@@ -185,7 +185,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$INFO[Listitem.Property(set)]</label>
+				<label fallback="10005">$INFO[Listitem.Property(set)]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -210,7 +210,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$INFO[ListItem.Director]</label>
+				<label fallback="10005">$INFO[ListItem.Director]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -235,7 +235,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$INFO[ListItem.Writer]</label>
+				<label fallback="10005">$INFO[ListItem.Writer]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -260,7 +260,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$INFO[Listitem.Property(country)]</label>
+				<label fallback="10005">$INFO[Listitem.Property(country)]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -285,7 +285,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$VAR[value_actorinfo_duration]</label>
+				<label fallback="10005">$VAR[value_actorinfo_duration]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -310,7 +310,7 @@
 				<aligny>center</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label fallback="161">$INFO[ListItem.FilenameAndPath]</label>
+				<label fallback="10005">$INFO[ListItem.FilenameAndPath]</label>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
 			</control>
@@ -581,7 +581,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$INFO[Container(150).ListItem.Label]$INFO[Container(150).ListItem.Label2, $LOCALIZE[20347] ]</label>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>

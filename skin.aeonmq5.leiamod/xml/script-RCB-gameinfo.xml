@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">3001</defaultcontrol>
 	<controls>
@@ -51,7 +51,7 @@
 					<posy>75</posy>
 					<width>1650</width>
 					<height>38</height>
-					<font>Font_21</font>
+					<font>Font_21A</font>
 					<label>$INFO[ListItem.Tagline]</label>
 					<textcolor>90FFFFFF</textcolor>
 					<scroll>true</scroll>
@@ -155,7 +155,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_15</font>
-					<label fallback="161">$INFO[ListItem.Property(originaltitle)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(originaltitle)]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -180,7 +180,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_15</font>
-					<label fallback="161">$INFO[ListItem.Property(developer)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(developer)]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -205,7 +205,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_15</font>
-					<label fallback="161">$INFO[ListItem.Property(publisher)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(publisher)]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -231,7 +231,7 @@
 					<aligny>center</aligny>
 					<font>Font_15</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(perspective)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(perspective)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -256,7 +256,7 @@
 					<aligny>center</aligny>
 					<font>Font_15</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(region)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(region)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -448,7 +448,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(151).ListItem.Label]</label>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<textcolor>FF101010</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
@@ -749,7 +749,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Container(151).ListItem.Label]</label>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>

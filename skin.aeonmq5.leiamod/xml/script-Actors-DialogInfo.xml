@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19 -->
+<!-- Leia 10.4.0 -->
 <window id="3000">
 	<defaultcontrol always="true">149</defaultcontrol>
 	<controls>
@@ -62,7 +63,7 @@
 				<posy>75</posy>
 				<width>1650</width>
 				<height>38</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>$VAR[value_actorinfo_tag]</label>
 				<scroll>true</scroll>
 			</control>
@@ -122,7 +123,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(Birthday)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(Birthday)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<visible>String.IsEmpty(ListItem.Property(Deathday))</visible>
@@ -149,7 +150,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(Deathday)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(Deathday)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<visible>!String.IsEmpty(ListItem.Property(Deathday))</visible>
@@ -175,7 +176,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(PlaceOfBirth)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(PlaceOfBirth)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -200,7 +201,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(Adult)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(Adult)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -225,7 +226,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[ListItem.Property(AlsoKnownAs)]</label>
+					<label fallback="10005">$INFO[ListItem.Property(AlsoKnownAs)]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
@@ -269,7 +270,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[Container(150).ListItem.OriginalTitle]</label>
+					<label fallback="10005">$INFO[Container(150).ListItem.OriginalTitle]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -293,7 +294,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[Container(150).ListItem.Property(releasedate)]</label>
+					<label fallback="10005">$INFO[Container(150).ListItem.Property(releasedate)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -317,7 +318,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[Container(150).ListItem.Property(role)]</label>
+					<label fallback="10005">$INFO[Container(150).ListItem.Property(role)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -341,7 +342,7 @@
 					<aligny>center</aligny>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label fallback="161">$INFO[Container(150).ListItem.Property(job)]</label>
+					<label fallback="10005">$INFO[Container(150).ListItem.Property(job)]</label>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -459,7 +460,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$VAR[value_actorinfo_label]</label>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -942,7 +943,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$VAR[value_actorinfo_zoomlabel]</label>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 				</control>

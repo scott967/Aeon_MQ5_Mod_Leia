@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0 -->
+<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
@@ -62,7 +62,7 @@
 				<posy>70</posy>
 				<width>1425</width>
 				<height>38</height>
-				<font>Font_21</font>
+				<font>Font_21A</font>
 				<label>$VAR[value_music_subtitle]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
@@ -144,7 +144,7 @@
 				<width>165</width>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>Font_24A</font>
+				<font>Font_24</font>
 				<label>$INFO[ListItem.Year]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
@@ -502,7 +502,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<label fallback="161">$VAR[value_songinfo_track]</label>
+					<label fallback="10005">$VAR[value_songinfo_track]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -526,7 +526,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_18A</font>
-					<label fallback="161">$VAR[value_songinfo_duration]</label>
+					<label fallback="10005">$VAR[value_songinfo_duration]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollspeed>20</scrollspeed>
@@ -750,7 +750,7 @@
 						<width>975</width>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[Container(500).ListItem.Label]</label>
 						<textcolor>$VAR[value_flagscolor]</textcolor>
 						<scroll>true</scroll>
@@ -1255,7 +1255,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
 						<include>listcolor</include>
 						<visible>!String.IsEqual(ListItem.TrackNumber,0)</visible>
@@ -1267,7 +1267,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<include>listcolor</include>
 						<visible>String.IsEqual(ListItem.TrackNumber,0)</visible>
@@ -1281,7 +1281,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
 						<textcolor>B6FFFFFF</textcolor>
 					</control>
@@ -1331,7 +1331,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
 						<include>listcolor</include>
 						<visible>!Control.HasFocus(50) + !String.IsEqual(ListItem.TrackNumber,0)</visible>
@@ -1343,7 +1343,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<include>listcolor</include>
 						<visible>!Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
@@ -1355,7 +1355,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label]</label>
 						<include>listcolorfocus</include>
 						<include>Animation_Fade</include>
@@ -1368,7 +1368,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<include>listcolorfocus</include>
 						<include>Animation_Fade</include>
@@ -1391,7 +1391,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
 						<textcolor>B6FFFFFF</textcolor>
 						<visible>!Control.HasFocus(50) </visible>
@@ -1403,7 +1403,7 @@
 						<width>592</width>
 						<align>left</align>
 						<aligny>center</aligny>
-						<font>Font_24</font>
+						<font>Font_24A</font>
 						<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
 						<textcolor>FF101010</textcolor>
 						<include>Animation_Fade</include>
@@ -1525,7 +1525,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$VAR[value_audioinfo_zoomlabel]</label>
-					<font>Font_24</font>
+					<font>Font_24A</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
