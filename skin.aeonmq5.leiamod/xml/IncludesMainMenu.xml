@@ -543,7 +543,7 @@
 	<include name="Menu_Content">
 		<include condition="Window.IsVisible(6000)">Menu_Preset</include>
 		<item>
-			<label fallback="31014">$VAR[value_menu1.label]</label>
+			<label fallback="31014">$VAR[value_menu1.label]</label>  <!-- default MOVIES -->
 			<icon>$INFO[skin.string(menu1.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu1.visible)]</property>
 			<property name="name">menu1</property>
@@ -556,7 +556,7 @@
 			<visible>![String.IsEmpty(skin.string(menu1.master)) | String.Contains(skin.string(menu1.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu2.label]</label>
+			<label fallback="31014">$VAR[value_menu2.label]</label>  <!-- default TV SHOWS -->
 			<icon>$INFO[skin.string(menu2.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu2.visible)]</property>
 			<property name="name">menu2</property>
@@ -569,7 +569,7 @@
 			<visible>![String.IsEmpty(skin.string(menu2.master)) | String.Contains(skin.string(menu2.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu3.label]</label>
+			<label fallback="31014">$VAR[value_menu3.label]</label>  <!-- default CONCERTS -->
 			<icon>$INFO[skin.string(menu3.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu3.visible)]</property>
 			<property name="name">menu3</property>
@@ -582,7 +582,7 @@
 			<visible>![String.IsEmpty(skin.string(menu3.master)) | String.Contains(skin.string(menu3.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu4.label]</label>
+			<label fallback="31014">$VAR[value_menu4.label]</label>  <!-- default MUSIC -->
 			<icon>$INFO[skin.string(menu4.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu4.visible)]</property>
 			<property name="name">menu4</property>
@@ -595,7 +595,7 @@
 			<visible>![String.IsEmpty(skin.string(menu4.master)) | String.Contains(skin.string(menu4.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu5.label]</label>
+			<label fallback="31014">$VAR[value_menu5.label]</label>  <!-- default TV -->
 			<icon>$INFO[skin.string(menu5.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu5.visible)]</property>
 			<property name="name">menu5</property>
@@ -608,7 +608,7 @@
 			<visible>![String.IsEmpty(skin.string(menu5.master)) | String.Contains(skin.string(menu5.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu6.label]</label>
+			<label fallback="31014">$VAR[value_menu6.label]</label>  <!-- default FAVOURITES -->
 			<icon>$INFO[skin.string(menu6.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu6.visible)]</property>
 			<property name="name">menu6</property>
@@ -621,7 +621,7 @@
 			<visible>![String.IsEmpty(skin.string(menu6.master)) | String.Contains(skin.string(menu6.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu7.label]</label>
+			<label fallback="31014">$VAR[value_menu7.label]</label>  <!-- default GAMES -->
 			<icon>$INFO[skin.string(menu7.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu7.visible)]</property>
 			<property name="name">menu7</property>
@@ -634,7 +634,7 @@
 			<visible>![String.IsEmpty(skin.string(menu7.master)) | String.Contains(skin.string(menu7.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu8.label]</label>
+			<label fallback="31014">$VAR[value_menu8.label]</label>  <!-- default PROGRAMS -->
 			<icon>$INFO[skin.string(menu8.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu8.visible)]</property>
 			<property name="name">menu8</property>
@@ -647,7 +647,7 @@
 			<visible>![String.IsEmpty(skin.string(menu8.master)) | String.Contains(skin.string(menu8.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu9.label]</label>
+			<label fallback="31014">$VAR[value_menu9.label]</label>  <!-- default IMAGES -->
 			<icon>$INFO[skin.string(menu9.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu9.visible)]</property>
 			<property name="name">menu9</property>
@@ -660,7 +660,7 @@
 			<visible>![String.IsEmpty(skin.string(menu9.master)) | String.Contains(skin.string(menu9.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu10.label]</label>
+			<label fallback="31014">$VAR[value_menu10.label]</label>  <!-- default WEATHER -->
 			<icon>$INFO[skin.string(menu10.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu10.visible)]</property>
 			<property name="name">menu10</property>
@@ -673,7 +673,7 @@
 			<visible>![String.IsEmpty(skin.string(menu10.master)) | String.Contains(skin.string(menu10.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu11.label]</label>
+			<label fallback="31014">$VAR[value_menu11.label]</label>  <!-- default SETTINGS -->
 			<icon>$INFO[skin.string(menu11.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu11.visible)]</property>
 			<property name="name">menu11</property>
@@ -686,7 +686,7 @@
 			<visible>![String.IsEmpty(skin.string(menu11.master)) | String.Contains(skin.string(menu11.visible),off)] | Window.IsVisible(6000)</visible>
 		</item>
 		<item>
-			<label fallback="31014">$VAR[value_menu12.label]</label>
+			<label fallback="31014">$VAR[value_menu12.label]</label>  <!-- default SHUTDOWN -->
 			<icon>$INFO[skin.string(menu12.bg)]</icon>
 			<property name="condition">$INFO[skin.string(menu12.visible)]</property>
 			<property name="name">menu12</property>
