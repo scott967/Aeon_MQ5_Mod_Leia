@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.4.0">
+<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.5.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0" />
 		<import addon="script.favourites" version="4.0.4" />
