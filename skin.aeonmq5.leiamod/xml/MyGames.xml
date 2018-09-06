@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Aeon MQ 5 Leia 10.2.3 -->
+<!-- Aeon MQ 5 Leia 10.2.3/10.5.0 -->
 <window>
 	<defaultcontrol>51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
@@ -45,7 +45,7 @@
 				<ondown>SetFocus(50)</ondown>
 			</control>
 			<control type="button" id="9922">
-				<!-- refresh das vistas -->
+				<!-- refresh views -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="3000">Hidden</animation>
 				<visible>Window.IsVisible(631)</visible>
@@ -55,7 +55,7 @@
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-				<visible>[Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(62) | Window.IsActive(movieinformation)] + ![Control.HasFocus(9920) | Control.IsVisible(9922)]</visible>
+				<visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)] + ![Control.HasFocus(9920) | Control.IsVisible(9922)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -86,7 +86,7 @@
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-					<visible>![Skin.HasSetting(nomediaflags) | Control.IsVisible(57)]</visible>
+					<visible>![Skin.HasSetting(nomediaflags)]</visible>
 					<control type="image">
 						<!-- Barra das etiquetas -->
 						<posx>0</posx>
@@ -124,23 +124,23 @@
 				<!-- ViewTypes -->
 				<include>ViewWide</include>
 				<!-- 51 -->
-				<include condition="Skin.HasSetting(viewposter_programs)">ViewPoster</include>
+				<include condition="Skin.HasSetting(viewposter_games)">ViewPoster</include>
 				<!-- 54 -->
-				<include condition="Skin.HasSetting(viewlowlist_programs)">ViewLowList</include>
+				<include condition="Skin.HasSetting(viewlowlist_games)">ViewLowList</include>
 				<!-- 55 -->
-				<include condition="Skin.HasSetting(viewwall_programs)">ViewWallPrograms</include>
+				<include condition="Skin.HasSetting(viewwall_games)">ViewWallPrograms</include>
 				<!-- 56 -->
-				<include condition="Skin.HasSetting(viewrightlist_programs)">ViewRightList</include>
+				<include condition="Skin.HasSetting(viewrightlist_games)">ViewRightList</include>
 				<!-- 59 -->
-				<include condition="Skin.HasSetting(viewpanel_programs)">ViewPanel</include>
+				<include condition="Skin.HasSetting(viewpanel_games)">ViewPanel</include>
 				<!-- 62 -->
-				<include condition="Skin.HasSetting(viewcoverflow_programs)">ViewCoverFlowPrograms</include>
+				<include condition="Skin.HasSetting(viewcoverflow_games)">ViewCoverFlowPrograms</include>
 				<!-- 58 -->
 			</control>
 			<include>TouchScreen</include>
 			<include>ScrollLabel</include>
 			<!--<include>MultiData</include>-->
-			<include>TopMenu_Programs</include>
+			<include>TopMenu_Games</include>
 			<include>BGBlack</include>
 		</control>
 	</controls>

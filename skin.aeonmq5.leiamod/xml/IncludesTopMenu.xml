@@ -146,10 +146,13 @@
 				<!-- custom views videos -->
 				<onclick condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onclick>
 				<!-- custom views music -->
-				<onclick condition="Window.IsActive(programs) | Window.IsActive(games)">ActivateWindow(631)</onclick>
+				<onclick condition="Window.IsActive(programs)">ActivateWindow(631)</onclick>
 				<!-- custom views programs -->
+				<onclick condition="Window.IsActive(games)">ActivateWindow(1105)</onclick>
+				<!-- custom views games -->
 				<ondown>SetFocus(51)</ondown>
-				<visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible>
+				<!-- <visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible> -->
+				<visible>![Window.IsActive(pictures)]</visible>
 			</control>
 			<control type="label">
 				<left>45</left>
@@ -162,7 +165,8 @@
 				<label>31141</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<include>Animation_Fade</include>
-				<visible>Control.HasFocus(9940) + ![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible>
+				<!-- <visible>Control.HasFocus(9940) + ![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible> -->
+				<visible>Control.HasFocus(9940) + ![Window.IsActive(pictures)]</visible>
 			</control>
 			<control type="label">
 				<left>0</left>
@@ -227,6 +231,8 @@
 				<!-- custom views music -->
 				<onup condition="Window.IsActive(programs)">ActivateWindow(631)</onup>
 				<!-- custom views programs -->
+				<onup condition="Window.IsActive(games)">ActivateWindow(1105)</onup>
+				<!-- custom views games -->
 				<ondown>SetFocus(51)</ondown>
 			</control>
 			<control type="button" id="9941">

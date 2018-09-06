@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.0 -->
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onunload>Skin.Reset(customosd)</onunload>
@@ -58,7 +58,7 @@
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="out" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="in" tween="cubic">Hidden</animation>
-			<visible>![ Skin.HasSetting(nogamefurnituretemp) | Skin.HasSetting(customosd)]</visible>
+			<visible>![Skin.HasSetting(nogamefurnituretemp) | Skin.HasSetting(customosd)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -74,12 +74,13 @@
 				<width>1650</width>
 				<height>60</height>
 				<font>Font_40</font>
-				<label>$VAR[value_gameosdtitle]</label>
+				<label>$VAR[value_gameosdtitle]</label>  <!-- Player.Title -->
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
 				<shadowcolor>grey</shadowcolor>
+				<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
 			</control>
-			<control type="label">
+			<!-- <control type="label">
 				<posx>45</posx>
 				<posy>82</posy>
 				<width>1650</width>
@@ -89,7 +90,7 @@
 				<textcolor>90FFFFFF</textcolor>
 				<scroll>true</scroll>
 				<shadowcolor>grey</shadowcolor>
-			</control>
+			</control> -->
 		</control>
 		<control type="group">
 			<posy>780</posy>
@@ -131,18 +132,6 @@
 			<include condition="!Skin.HasSetting(gameosdfixedlist)">GameOSDWrapList</include>
 			<include condition="Skin.HasSetting(gameosdfixedlist)">GameOSDFixedList</include>
 			<control type="label">
-				<posx>135</posx>
-				<posy>106</posy>
-				<width>1650</width>
-				<height>45</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>Font_17A</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<shadowcolor>grey</shadowcolor>
-				<label>[B]$VAR[value_osd_timeduration][/B]</label>
-			</control>
-			<control type="label">
 				<!-- icons label -->
 				<posx>480</posx>
 				<posy>249</posy>
@@ -157,7 +146,7 @@
 				<include>Animation_Fade</include>
 				<visible>!Skin.HasSetting(customosd)</visible>
 				<control type="label">
-					<!-- hora atual -->
+					<!-- current time -->
 					<posx>45</posx>
 					<posy>195</posy>
 					<width>450</width>
@@ -174,16 +163,6 @@
 					<font>Font_32</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>$INFO[System.Time]</label>
-				</control>
-				<control type="label">
-					<posx>1875</posx>
-					<posy>195</posy>
-					<width>450</width>
-					<height>38</height>
-					<align>right</align>
-					<font>Font_18A</font>
-					<textcolor>90FFFFFF</textcolor>
-					<label>31311</label>
 				</control>
 			</control>
 			<control type="image">

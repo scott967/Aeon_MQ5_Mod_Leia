@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -666,6 +666,7 @@
 				<onfocus>Skin.SetString(colorwatched,nocolor)</onfocus>
 				<onfocus>Skin.SetString(videofurniture,full)</onfocus>
 				<onfocus>Skin.SetString(audiofurniture,full)</onfocus>
+				<onfocus>Skin.SetString(gamefurniture,full)</onfocus>
 				<onfocus>Skin.SetString(homebg_seconds,5000)</onfocus>
 				<onfocus>Skin.SetString(discaudio,0)</onfocus>
 				<onfocus>Skin.SetString(discvideo,0)</onfocus>
@@ -698,7 +699,8 @@
 				<onfocus>Skin.SetString(menu6.action,ActivateWindow(favourites))</onfocus>
 				<onfocus>Skin.SetString(menu7.master,games)</onfocus>
 				<onfocus>Skin.SetString(gameswidget,true)</onfocus>
-				<onfocus>Skin.SetString(menu7.action,RunScript(script.games.rom.collection.browser))</onfocus>
+				<onfocus>Skin.SetString(menu7.action,ActivateWindow(games))</onfocus>
+				<!-- <onfocus>Skin.SetString(menu7.action,RunScript(script.games.rom.collection.browser))</onfocus> -->
 				<onfocus>Skin.SetString(menu8.master,programs)</onfocus>
 				<onfocus condition="!System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs,Addons,return))</onfocus>
 				<onfocus condition="System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs))</onfocus>
@@ -4309,7 +4311,7 @@
 				<!-- reset -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_reset),disable)]</property>
-				<icon>osd_menu_sub.png</icon>
+				<icon>osd_menu_reset.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">PlayerControl(Reset)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_reset),disable)">Skin.SetString(osd_game_reset,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_reset),disable)">Skin.Reset(osd_game_reset,disable)</onclick>
@@ -4319,21 +4321,51 @@
 				<!-- input settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_input),disable)]</property>
-				<icon>osd_menu_audio.png</icon>
+				<icon>osd_menu_controls.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamecontrollers)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_input),disable)">Skin.SetString(osd_game_input,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_input),disable)">Skin.Reset(osd_game_input,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_game_input),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="6">
-				<!-- video settings-->
+				<!-- video filter-->
 				<label></label>
-				<property name="condition">$INFO[skin.string(osd_game_video),disable)]</property>
+				<property name="condition">$INFO[skin.string(osd_game_videofilter),disable)]</property>
 				<icon>osd_menu_video.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideosettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_video),disable)">Skin.SetString(osd_game_video,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_video),disable)">Skin.Reset(osd_game_video,disable)</onclick>
-				<visible>[!String.Contains(skin.string(osd_game_video),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideofilter)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videofilter),disable)">Skin.SetString(osd_game_videofilter,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videofilter),disable)">Skin.Reset(osd_game_videofilter,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_videofilter),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="7">
+				<!-- video stretch-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_videostretch),disable)]</property>
+				<icon>osd_menu_video.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameviewmode)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videostretch),disable)">Skin.SetString(osd_game_videostretch,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videostretch),disable)">Skin.Reset(osd_game_videostretch,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_videostretch),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="8">
+				<!-- video rotation-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_videorotation),disable)]</property>
+				<icon>osd_menu_video.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevideorotation)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videorotation),disable)">Skin.SetString(osd_game_videorotation,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videorotation),disable)">Skin.Reset(osd_game_videorotation,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_videorotation),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="9">
+				<!-- game advanced settings-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_advsettings),disable)]</property>
+				<icon>osd_menu_gensettings.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameadvancedsettings)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_advsettings),disable)">Skin.SetString(osd_game_advsettings,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_advsettings),disable)">Skin.Reset(osd_game_advsettings,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_advsettings),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="22">
 				<!-- stop -->
@@ -4351,19 +4383,9 @@
 				<property name="condition">$INFO[skin.string(osd_game_furniture),disable)]</property>
 				<icon>osd_menu_furniture.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">SetFocus(4205)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_furniture),disable)">Skin.SetString(osd_game_furniture,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_furniture),disable)">Skin.Reset(osd_game_furniture,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_furniture),disable)">Skin.SetString(osd_game_furniture,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_furniture),disable)">Skin.Reset(osd_game_furniture,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_game_furniture),disable) | Skin.HasSetting(customosd)]</visible>
-			</item>
-			<item id="4">
-				<!-- general settings -->
-				<label></label>
-				<property name="condition">$INFO[skin.string(osd_game_gsettings),disable)]</property>
-				<icon>osd_menu_gensettings.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(settings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_gsettings),disable)">Skin.SetString(osd_game_gsettings,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_gsettings),disable)">Skin.Reset(osd_game_gsettings,disable)</onclick>
-				<visible>[!String.Contains(skin.string(osd_game_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="25">
 				<!-- custom osd -->
@@ -4386,34 +4408,14 @@
 				<visible>[!String.Contains(skin.string(osd_game_listmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="13">
-				<!-- volumeup -->
+				<!-- game volume-->
 				<label></label>
-				<property name="condition">$INFO[skin.string(osd_game_volumeup),disable)]</property>
+				<property name="condition">$INFO[skin.string(osd_game_volume),disable)]</property>
 				<icon>osd_menu_volup.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">VolumeUp</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volumeup),disable)">Skin.SetString(osd_game_volumeup,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volumeup),disable)">Skin.Reset(osd_game_volumeup,disable)</onclick>
-				<visible>[!String.Contains(skin.string(osd_game_volumeup),disable) | Skin.HasSetting(customosd)]</visible>
-			</item>
-			<item id="14">
-				<!-- volumedown-->
-				<label></label>
-				<property name="condition">$INFO[skin.string(osd_game_volumedown),disable)]</property>
-				<icon>osd_menu_voldown.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">VolumeDown</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volumedown),disable)">Skin.SetString(osd_game_volumedown,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volumedown),disable)">Skin.Reset(osd_game_volumedown,disable)</onclick>
-				<visible>[!String.Contains(skin.string(osd_game_volumedown),disable) | Skin.HasSetting(customosd)]</visible>
-			</item>
-			<item id="15">
-				<!-- mute -->
-				<label></label>
-				<property name="condition">$INFO[skin.string(osd_game_mute),disable)]</property>
-				<icon>osd_menu_mute.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">Mute</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_mute),disable)">Skin.SetString(osd_game_mute,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_mute),disable)">Skin.Reset(osd_game_mute,disable)</onclick>
-				<visible>[!String.Contains(skin.string(osd_game_mute),disable) | Skin.HasSetting(customosd)]</visible>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamevolume)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_volume),disable)">Skin.SetString(osd_game_volume,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_volume),disable)">Skin.Reset(osd_game_volume,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_volume),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 		</content>
 	</include>
