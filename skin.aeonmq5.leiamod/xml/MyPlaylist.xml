@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Krypton 9.1.15/9.1.16/9.2.1/9.2.2/9.2.3/9.2.4 -->
-<!-- Leia 10.2.4/10.3.0 -->
+<!-- Leia 10.2.4/10.3.0/10.5.0 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
@@ -14,6 +14,12 @@
 		<control type="group">
 			<posy>15</posy>
 			<include>ContainerViewPage</include>
+			<visible>!Window.IsActive(musicplaylist)</visible>
+		</control>
+		<control type="group">
+			<posy>47</posy>
+			<include>ContainerViewPage</include>
+			<visible>Window.IsActive(musicplaylist)</visible>
 		</control>
 	</controls>
 </window>
