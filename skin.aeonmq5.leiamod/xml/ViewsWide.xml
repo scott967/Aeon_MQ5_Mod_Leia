@@ -863,7 +863,7 @@
 					</control>
 				</control>
 				<control type="textbox">
-					<!-- Video e audio para quando tem logo -->
+					<!-- Video and audio for when you have logo -->
 					<posx>30</posx>
 					<posy>615</posy>
 					<width>900</width>
@@ -875,7 +875,7 @@
 					<visible>![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | ![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
-					<!-- Video e audio para quando nao tem logo -->
+					<!-- Video and audio for when there is no logo -->
 					<posx>30</posx>
 					<posy>615</posy>
 					<width>900</width>
@@ -951,6 +951,7 @@
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 					<fadetime>250</fadetime>
+					<visible>!String.IsEqual(Listitem.DBType,genre)</visible>
 				</control>
 				<control type="image" id="1018">
 					<!-- clearlogo e clearart -->
