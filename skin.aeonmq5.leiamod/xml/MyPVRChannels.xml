@@ -175,7 +175,7 @@
 				<control type="label">
 					<!-- Nome do programa -->
 					<posx>922</posx>
-					<posy>668</posy>
+					<posy>673</posy>
 					<width>938</width>
 					<height>30</height>
 					<textcolor>FFFFFAF0</textcolor>
@@ -185,7 +185,7 @@
 				</control>
 				<control type="image">
 					<posx>922</posx>
-					<posy>702</posy>
+					<posy>715</posy>
 					<width>938</width>
 					<height>3</height>
 					<align>left</align>
@@ -194,7 +194,7 @@
 				<control type="label">
 					<!-- Genero -->
 					<posx>922</posx>
-					<posy>705</posy>
+					<posy>712</posy>
 					<width>938</width>
 					<height>30</height>
 					<align>left</align>
@@ -205,7 +205,7 @@
 				</control>
 				<control type="image">
 					<posx>922</posx>
-					<posy>740</posy>
+					<posy>754</posy>
 					<width>938</width>
 					<height>3</height>
 					<align>left</align>
@@ -213,15 +213,15 @@
 				</control>
 				<control type="label">
 					<posx>922</posx>
-					<posy>744</posy>
-					<width>240</width>
+					<posy>754</posy>
+					<width>938</width>
 					<height>30</height>
 					<font>Font_18A</font>
-					<textcolor>FFFFFAF0</textcolor>&gt;
+					<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label><animation effect="fade" reversible="true" time="300">VisibleChange</animation></control>
 				<control type="progress">
 					<posx>922</posx>
-					<posy>780</posy>
+					<posy>807</posy>
 					<width>938</width>
 					<height>8</height>
 					<info>ListItem.Progress</info>
@@ -231,9 +231,9 @@
 				</control>
 				<control type="textbox">
 					<posx>922</posx>
-					<posy>788</posy>
+					<posy>818</posy>
 					<width>938</width>
-					<height>202</height>
+					<height>170</height>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.Plot]</label>
