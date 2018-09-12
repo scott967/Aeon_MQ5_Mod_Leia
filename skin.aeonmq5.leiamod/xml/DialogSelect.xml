@@ -87,7 +87,7 @@
 				<animation effect="slide" start="0,0" end="900,0" time="1000" tween="cubic" easing="out">WindowClose</animation>
 				<animation effect="slide" start="1200,0" end="0,0" time="1000" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-				<visible>Control.IsVisible(11)</visible>
+				<visible>[Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
 				<control type="image">
 					<posx>1208</posx>
 					<posy>69</posy>
