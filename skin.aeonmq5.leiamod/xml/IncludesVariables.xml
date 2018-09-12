@@ -1271,7 +1271,7 @@
 		<value condition="String.Contains(ListItem(4).Filenameandpath,.3dbd.) | String.Contains(ListItem(4).Filenameandpath,.3d.)">$VAR[value_codec3dbd4]</value>
 		<value condition="String.Contains(ListItem(4).Path,videodb://movies/sets)">$VAR[value_codecset4]</value>
 		<value condition="String.Contains(ListItem(4).Filenameandpath,hdr)">$VAR[value_codechdr4]</value>
-		<value condition="String.Contains(ListItem(4).Filenameandpath,uhd)">$VAR[value_codec4uhd4]</value>
+		<value condition="String.Contains(ListItem(4).Filenameandpath,uhd)">$VAR[value_codecuhd4]</value>
 		<value condition="String.Contains(ListItem(4).Filenameandpath,4k)">$VAR[value_codec4k4]</value>
 		<value condition="![String.Contains(ListItem(4).Filenameandpath,bluray) | String.Contains(ListItem(4).Filenameandpath,blu-ray) | String.Contains(ListItem(4).Filenameandpath,bdrip) | String.Contains(ListItem(4).Filenameandpath,hdtv) | String.Contains(ListItem(4).Filenameandpath,web) | String.Contains(ListItem(4).Filenameandpath,dvd) | String.Contains(ListItem(4).Filenameandpath,.3dbd.) | String.Contains(ListItem(4).Filenameandpath,.3d.) | String.EndsWith(ListItem(4).Filenameandpath,.iso) | String.EndsWith(ListItem(4).Filenameandpath,.ifo) | String.Contains(ListItem(4).Filenameandpath,web) | String.Contains(ListItem(4).Path,videodb://movies/sets) | String.Contains(ListItem(4).Filenameandpath,4k)]">$VAR[value_codecdefault4]</value>
 	</variable>
