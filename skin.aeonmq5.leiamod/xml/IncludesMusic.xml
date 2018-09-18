@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.4.0 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
@@ -276,7 +276,7 @@
 						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
 						<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 						<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="out">Hidden</animation>
-						<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+						<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + [String.IsEqual(ListItem.DBType,MusicVideo) | [String.IsEmpty(ListItem.DBType) + String.Contains(ListItem.Path,musicvideos)]]</visible>
 						<control type="grouplist">
 							<!-- Etiquetas/tags -->
 							<posx>30</posx>
@@ -485,7 +485,7 @@
 				<control type="image">
 					<!-- Logo -->
 					<posx>1402</posx>
-					<posy>962</posy>
+					<posy>489</posy> <!-- 962 -->
 					<width>300</width>
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
@@ -493,7 +493,7 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<animation effect="slide" end="-735,-270" tween="cubic" easing="in" condition="Control.IsVisible(54)">Conditional</animation>
 					<include>Animation_HiddenView</include>
-					<visible>Control.IsVisible(54)</visible>
+					<visible>Control.IsVisible(54) + !String.IsEqual(ListItem.DBType,genre)</visible>
 				</control>
 				<include>TouchScreen</include>
 				<include>ScrollLabel</include>
@@ -758,7 +758,7 @@
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="out">Hidden</animation>
-					<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + String.IsEqual(ListItem.DBType,MusicVideo)</visible>
+					<visible>[String.Contains(skin.string(mediaflags),on) | String.Contains(skin.string(mediaflags),auto) + Control.IsVisible(9921)] + [String.IsEqual(ListItem.DBType,MusicVideo) | [String.IsEmpty(ListItem.DBType) + String.Contains(ListItem.Path, musicvideos)]]</visible>
 					<control type="grouplist">
 						<!-- Etiquetas/tags -->
 						<posx>30</posx>
@@ -974,7 +974,7 @@
 				<fadetime>FanartCrossFadeTime</fadetime>
 				<animation effect="slide" end="-735,-270" tween="cubic" easing="in" condition="Control.IsVisible(54)">Conditional</animation>
 				<include>Animation_HiddenView</include>
-				<visible>Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(54) + !String.IsEqual(ListItem.DBType, genre)</visible>
 			</control>
 			<include>TouchScreen</include>
 			<include>ScrollLabel</include>

@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.2-->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.0 -->
 <includes>
 	<!--##################################################################################   VISTA POSTER - ID 54   #############################################################################-->
 	<include name="PosterLabel">
@@ -268,6 +268,7 @@
 				<height>201</height>
 				<texture>black.png</texture>
 				<colordiffuse>70FFFFFF</colordiffuse>
+				<visible> !Container.Content(genres)</visible>
 			</control>
 			<control type="image" id="1008">
 				<!-- clearlogo e clearart -->
@@ -309,7 +310,7 @@
 				<posy>788</posy>
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
-				<visible>!Container.Content(addons)</visible>
+				<visible>![Container.Content(addons) | Container.Content(genres) | String.IsEmpty(ListItem.DBType)]</visible>
 				<control type="label">
 					<include>PosterLabel</include>
 					<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
@@ -331,6 +332,7 @@
 				<control type="label">
 					<include>PosterLabel</include>
 					<label>$VAR[value_ground16_label]: [COLOR=FFFFFAF0]$VAR[value_ground16_value][/COLOR]</label>
+					<visible>!Container.Content(songs)</visible>
 				</control>
 				<control type="label">
 					<include>PosterLabel</include>

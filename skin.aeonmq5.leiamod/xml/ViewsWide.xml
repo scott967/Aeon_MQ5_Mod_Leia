@@ -3,7 +3,7 @@
 <!-- Isengardmod 7.1.11/7/1/12 -->
 <!-- Jarvis 8.1.3 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0 -->
+<!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0/10.5.0 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
@@ -951,7 +951,7 @@
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 					<fadetime>250</fadetime>
-					<visible>!String.IsEqual(Listitem.DBType,genre)</visible>
+					<visible>!String.IsEqual(ListItem.DBType,genre)</visible>
 				</control>
 				<control type="image" id="1018">
 					<!-- clearlogo e clearart -->

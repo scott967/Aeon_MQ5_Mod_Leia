@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0 -->
+<!-- Leia 10.2.4/10.3.0/10.5.0 -->
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
@@ -60,7 +60,7 @@
 					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Window.IsActive(musicplaylist) | Window.IsActive(music)</visible>
+					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + !String.IsEqual(ListItem.DBType, genre)</visible>
 				</control>
 				<control type="image">
 					<!-- clearlogo e clearart -->
@@ -147,6 +147,7 @@
 					<posy>858</posy>
 					<orientation>vertical</orientation>
 					<itemgap>6</itemgap>
+					<visible>!String.IsEqual(ListItem.DBType,genre)</visible>
 					<control type="label">
 						<include>RightListLabel</include>
 						<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
