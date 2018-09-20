@@ -1,3 +1,22 @@
+
+[B][COLOR=FFFF8C00]BUILD 10.5.0 - RELEASE DATE 09/15/2018[/COLOR][/B]
+New:  Complete implementation of Retroplayer.  "Games" menu default is to
+support retroplayer.  Rom collection Browser is available as a custom menu entry
+New:  Support for media cases / codec display for 4K, UHD, HDR media types
+New:  System menu (key "s") now has log off current profile as option
+New:  Support new library-managed art types such as discart, clearlogo, etc
+New:  Custom home menu allows option to crate menu to clean specific videeo library type
+New:  New Kodi susbtitle settings on Full Screen Video OSD menu
+Improved:  In media views, the nomber off list items / total number of list items is shown
+Improved:  Aeon MQ fonts now support Arabic, Thai, and Devanagari scripts
+Improved:  Layout of labels when the "Massive" fontset option is selected in settings
+Improved:  Using Full Screen video OSD, you can turn off all overlays for paused and frame-advance video
+Improved:  Various changes in how addons are presented in lists.
+Improved:  Hungarian virtual keyboard
+Improved:  Varioous fixes to the music and song info dialogs
+Fixed:  Numeric Seek and Numeric LiveTV channel input now supported in Full Screen Video
+
+
 [B][COLOR=FFFF8C00]BUILD 10.2.5 - RELEASE DATE 09/15/2017[/COLOR][/B]
 New:  Retroplayer support (Games OSD / Games settings)
 Improved:  Use mixed case font in media lists
