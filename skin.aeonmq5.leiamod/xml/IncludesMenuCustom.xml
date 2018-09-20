@@ -1690,13 +1690,14 @@
 					<include>DefaultReset</include>
 				</item>
 				<item>
-					<label>31998</label>
-					<!-- CHOOSE GAME ADD-ON -->
-					<!-- 6500 -->
+					<label>$LOCALIZE[24009] $INFO[System.AddonTitle(script.games.rom.collection.browser)]</label>
+					<!-- CHOOSE GAME RCB ADD-ON -->
+					<!-- 6500  -->
 					<property name="id">custom</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],addons)</onclick>
-					<onclick>Skin.SetAddon($INFO[Skin.String(custom_path)],xbmc.addon.game)</onclick>
+					<onclick>Skin.SetString($INFO[Skin.String(custom_path)],script.games.rom.collection.browser)</onclick>
 					<include>DefaultReset</include>
+					<visible>System.HasAddon(script.games.rom.collection.browser)</visible>
 				</item>
 				<item>
 					<label>31003</label>
