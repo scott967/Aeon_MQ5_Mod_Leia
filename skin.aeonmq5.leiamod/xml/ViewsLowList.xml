@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10/7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.5.0 -->
+<!-- Leia 10.2.5/10.3.0/10.5.0/10.5.1 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
 	<include name="LowListLabel">
@@ -650,11 +650,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- MUSICA -->
+					<!-- MUSIC no audio case -->
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(nolowlistaudiocase)</visible>
 					<control type="image">
-						<!-- Musica reflexo -->
+						<!-- Music poster reflected -->
 						<posx>-8</posx>
 						<posy>630</posy>
 						<width>368</width>
@@ -665,7 +665,7 @@
 						<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
-						<!-- Musica -->
+						<!-- Music poster -->
 						<posx>-8</posx>
 						<posy>98</posy>
 						<width>368</width>
@@ -677,11 +677,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- MUSICA ESTOJO -->
+					<!-- MUSIC with audio case -->
 					<include>Animation_Fade</include>
 					<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + !Skin.HasSetting(nolowlistaudiocase)</visible>
 					<control type="image">
-						<!-- Musica/Estojo reflexo-->
+						<!-- Music case reflected poster-->
 						<posx>27</posx>
 						<posy>630</posy>
 						<width>345</width>
@@ -691,7 +691,7 @@
 						<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
-						<!-- Estojo reflexo -->
+						<!-- Msuic case reflected case -->
 						<posx>-30</posx>
 						<posy>627</posy>
 						<width>417</width>
@@ -699,7 +699,7 @@
 						<texture flipy="true" diffuse="thumb_box_reflect.png">thumb_box_cd.png</texture>
 					</control>
 					<control type="image">
-						<!-- Musica -->
+						<!-- Music poster -->
 						<posx>27</posx>
 						<posy>291</posy>
 						<width>345</width>
@@ -709,7 +709,7 @@
 						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 					</control>
 					<control type="image">
-						<!-- Estojo -->
+						<!-- Music case -->
 						<posx>-30</posx>
 						<posy>285</posy>
 						<width>417</width>
