@@ -4503,6 +4503,7 @@
 	</variable>
 	<variable name="value_music_title">
 		<value condition="Window.IsActive(visualisation) + Player.HasAudio">$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</value>
+		<value condition="Container.Content(artists) + String.IsEqual(Container.SortMethod,artist) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname)) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
 		<value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(musicinformation)]">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(artists) + String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
 		<value condition="[String.Contains(ListItem.Label,all albums) | String.IsEqual(ListItem.Label,..) | String.Contains(Container.FolderPath,musicvideos)] + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
@@ -5009,5 +5010,9 @@
 		<value condition="Window.IsActive(gamevideofilter)">$INFO[Player.Title] - $LOCALIZE[35225]</value>
 		<value condition="Window.IsActive(gameviewmode)">$INFO[Player.Title] - $LOCALIZE[35223]</value>
 		<value condition="Window.IsActive(gamevideorotation)">$INFO[Player.Title] - $LOCALIZE[35227]</value>
+	</variable>
+	<variable name="artist_label">
+		<value condition="String.IsEqual(Container.SortMethod,artist) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname))">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 </includes>

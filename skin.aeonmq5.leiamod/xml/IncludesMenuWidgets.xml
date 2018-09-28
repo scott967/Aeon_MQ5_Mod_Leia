@@ -39099,7 +39099,7 @@
 			<animation effect="slide" start="0,-525" end="0,0" time="300" delay="700" easing="out" tween="sine">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,-525" time="200" easing="in" tween="sine">Hidden</animation>
 			<animation effect="slide" start="0,0" end="0,-570" time="300" easing="out" tween="sine" condition="[String.Contains(skin.string(widgetsmode),manual) | String.Contains(skin.string(widgetsmode),auto) + !Control.IsVisible(9931)] + !Control.HasFocus(520)">Conditional</animation>
-			<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Window.IsVisible(Home) + [String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo)]</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather) + Window.IsVisible(Home) + [String.IsEqual(Weather.Plugin,weather.openweathermap.extended) | String.IsEqual(Weather.Plugin,weather.ozweather) | String.IsEqual(Weather.Plugin,weather.worldweatheronline) | String.IsEqual(Weather.Plugin,weather.wunderground) | String.IsEqual(Weather.Plugin,weather.yahoo) | String.IsEqual(Weather.Plugin,weather.weatherbit.io)]</visible>
 			<control type="button" id="520">
 				<!-- panel focus -->
 				<include>InvisibleButton</include>

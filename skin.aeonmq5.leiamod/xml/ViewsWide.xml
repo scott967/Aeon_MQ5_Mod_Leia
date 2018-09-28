@@ -123,6 +123,37 @@
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
 					<preloaditems>2</preloaditems>
+					<itemlayout height="60" condition="String.IsEqual(Container.Content,artists)">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1108</width>
+							<height>1</height>
+							<texture>line.png</texture>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_22A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$VAR[artist_label]</label>
+							<visible>String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_22A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+					</itemlayout>
 					<itemlayout height="60">
 						<control type="image">
 							<posx>0</posx>
@@ -220,6 +251,82 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
+					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + String.IsEqual(Container.Content,artists)" height="60">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>960</width>
+							<height>60</height>
+							<texture>settings_button_focus.png</texture>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$VAR[artist_label]</label>
+							<visible>String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_24</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="!Skin.HasSetting(slimwidemusic) + String.IsEqual(Container.Content,artists)" height="94">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>960</width>
+							<height>94</height>
+							<texture>settings_button_focus.png</texture>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>3</posy>
+							<width>660</width>
+							<height>62</height>
+							<font>Font_24A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$VAR[artist_label]</label>
+							<visible>String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>3</posy>
+							<width>660</width>
+							<height>62</height>
+							<font>Font_24</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!String.Contains(ListItem.DBType,artist)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>68</posy>
+							<width>660</width>
+							<height>24</height>
+							<font>Font_18A</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<include>subcolorfocus</include>
+							<label>$VAR[value_listinfofocus]</label>
+							<visible>!String.IsEqual(ListItem.Label,..)</visible>
+						</control>
+					</focusedlayout>
 					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5101)) | [Window.IsActive(videos) + Skin.HasSetting(slimwidevideo) | Window.IsActive(videoplaylist) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimwidemusic)]" height="60">
 						<control type="image">
 							<posx>0</posx>

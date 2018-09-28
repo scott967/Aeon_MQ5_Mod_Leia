@@ -229,6 +229,44 @@
 					<scrolltime>450</scrolltime>
 					<preloaditems>2</preloaditems>
 					<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(637)">Conditional</animation>
+					<itemlayout condition="Container.Content(artists) + !Skin.HasSetting(slimlowlistmusic)" height="45">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>898</width>
+							<height>1</height>
+							<texture>line.png</texture>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>675</width>
+							<height>45</height>
+							<font>Font_20A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$VAR[artist_label]</label>
+						</control>
+					</itemlayout>
+					<itemlayout condition="Container.Content(artists) + Skin.HasSetting(slimlowlistmusic)" height="40">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>898</width>
+							<height>1</height>
+							<texture>line.png</texture>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>675</width>
+							<height>40</height>
+							<font>Font_20A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$VAR[artist_label]</label>
+						</control>
+					</itemlayout>
 					<itemlayout condition="[Window.IsActive(videos) + !Skin.HasSetting(slimlowlistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + !Skin.HasSetting(slimlowlistmusic)]" height="45">
 						<control type="image">
 							<posx>0</posx>
@@ -307,6 +345,56 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
+					<focusedlayout condition="Container.Content(artists) + [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimlowlistmusic)" height="45">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>45</height>
+							<texture>settings_button_focus.png</texture>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>675</width>
+							<height>45</height>
+							<font>Font_20A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$VAR[artist_label]</label>
+						</control>
+					</focusedlayout>
+					<focusedlayout condition="Container.Content(artists) + [Window.IsActive(musicplaylist) | Window.IsActive(music)] + !Skin.HasSetting(slimlowlistmusic)" height="75">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>75</height>
+							<texture>settings_button_focus.png</texture>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>675</width>
+							<height>45</height>
+							<font>Font_22A</font>
+							<aligny>center</aligny>
+							<include>listcolorfocus</include>
+							<label>$VAR[artist_label]</label>
+						</control>
+						<control type="label">
+							<posx>30</posx>
+							<posy>44</posy>
+							<width>675</width>
+							<height>24</height>
+							<font>Font_18A</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<include>subcolorfocus</include>
+							<label>$VAR[value_listinfofocus]</label>
+							<visible>!String.IsEqual(ListItem.Label,..)</visible>
+						</control>
+					</focusedlayout>
 					<focusedlayout condition="String.IsEmpty(Control.GetLabel(5502)) | [Window.IsActive(videos) + Skin.HasSetting(slimlowlistvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(slimlowlistmusic)]" height="45">
 						<control type="image">
 							<posx>0</posx>
