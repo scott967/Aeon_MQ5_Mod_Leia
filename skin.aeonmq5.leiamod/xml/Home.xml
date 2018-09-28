@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 windowIDs/9.2.2 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.1 -->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <window>
@@ -470,20 +470,22 @@
 							</control>
 							<control type="label">
 								<posx>21</posx>
-								<posy>4</posy>
+								<posy>8</posy>
 								<width>75</width>
 								<height>27</height>
 								<align>right</align>
+								<aligny>center</aligny>
 								<font>Font_18A</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>$VAR[value_headercolor]</textcolor>
 							</control>
 							<control type="label">
 								<posx>96</posx>
-								<posy>4</posy>
+								<posy>8</posy>
 								<width>495</width>
 								<height>27</height>
 								<align>left</align>
+								<aligny>center</aligny>
 								<font>Font_18A</font>
 								<label>$INFO[ListItem.Label2]</label>
 								<textcolor>B5FFFAF0</textcolor>
@@ -508,20 +510,22 @@
 							</control>
 							<control type="label">
 								<posx>21</posx>
-								<posy>4</posy>
+								<posy>8</posy>
 								<width>75</width>
 								<height>27</height>
 								<align>right</align>
+								<aligny>center</aligny>
 								<font>Font_18A</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>$VAR[value_headercolor]</textcolor>
 							</control>
 							<control type="label">
 								<posx>96</posx>
-								<posy>4</posy>
+								<posy>8</posy>
 								<width>495</width>
 								<height>27</height>
 								<align>left</align>
+								<aligny>center</aligny>
 								<font>Font_18A</font>
 								<label>[B]$INFO[ListItem.Label2][/B]</label>
 								<textcolor>FFFFFAF0</textcolor>
