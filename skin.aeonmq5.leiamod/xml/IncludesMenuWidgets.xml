@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.4.0 -->
+<!-- Leia 10.2.4/10.4.0/10.5.1 -->
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
 	<include name="panel_layout">
@@ -39163,7 +39163,7 @@
 				<!-- <scroll>false</scroll> -->
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<shadowcolor>grey</shadowcolor>
-				<label>$INFO[Window(Weather).Property(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+				<label>$INFO[Window(Weather).Property(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(WeatherProvider)]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -39237,7 +39237,7 @@
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Daily.1.ChancePrecipitation)]</label>
-				<visible>!String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<visible>![String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)]</visible>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -39251,6 +39251,19 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Daily.1.Precipitation)]</label>
 				<visible>String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<posx>82</posx>
+				<posy>360</posy>
+				<width>195</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<label>$INFO[Window(Weather).Property(Daily.1.Probability)]</label>
+				<visible>String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)</visible>
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
@@ -39273,7 +39286,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Today.AvgHighTemperature)]</label>
 				<scroll>true</scroll>
-				<visible>![String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
+				<visible>![String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) | String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)]</visible>
 			</control>
 			<control type="label">
 				<posx>112</posx>
@@ -39297,9 +39310,9 @@
 				<aligny>top</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Window(Weather).Property(Day0.HighTemp)]</label>
+				<label>$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label>
 				<scroll>true</scroll>
-				<visible>String.IsEqual(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.IsEqual(Window(Weather).Property(WeatherProvider),Yahoo) | String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)</visible>
 			</control>
 			<control type="image">
 				<!-- Minima prevista -->
@@ -39321,7 +39334,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<label>$INFO[Window(Weather).Property(Today.AvgLowTemperature)]</label>
 				<scroll>true</scroll>
-				<visible>![String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)]</visible>
+				<visible>![String.IsEqual(Window(Weather).Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) | String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)]</visible>
 			</control>
 			<control type="label">
 				<posx>112</posx>
@@ -39345,9 +39358,9 @@
 				<aligny>top</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Window(Weather).Property(Day0.LowTemp)]</label>
+				<label>$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
 				<scroll>true</scroll>
-				<visible>String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) | String.IsEqual(Window(Weather).Property(WeatherProvider),Weatherbit IO)</visible>
 			</control>
 			<control type="label">
 				<!-- Umidade -->
@@ -39423,7 +39436,7 @@
 				<aligny>top</aligny>
 				<font>Font_18A</font>
 				<textcolor>FFFFFAF0</textcolor>
-				<label>$INFO[Window(Weather).Property(Current.DewPoint)]</label>
+				<label>$INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label">
@@ -39477,7 +39490,7 @@
 				<posx>540</posx>
 				<posy>150</posy>
 				<orientation>horizontal</orientation>
-				<visible>String.Contains(skin.string(weather_mode),7days) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.Contains(skin.string(weather_mode),7days) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) + String.IsEqual(Window(Weather).Property(Daily.IsFetched),true)</visible>
 				<control type="group">
 					<!-- Day 1 -->
 					<include>Widget_Weather7Day</include>
@@ -40067,7 +40080,7 @@
 				<posy>150</posy>
 				<orientation>horizontal</orientation>
 				<itemgap>495</itemgap>
-				<visible>String.Contains(skin.string(weather_mode),weekend) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.Contains(skin.string(weather_mode),weekend) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) + !String.IsEmpty(Window(Weather).Property(Weekend.IsFetched))</visible>
 				<control type="group">
 					<!-- Day 1 -->
 					<include>Widget_WeatherWeekend</include>
@@ -40083,14 +40096,14 @@
 						</control>
 						<control type="label">
 							<include>Widget_WeatherTempHigh</include>
-							<label>$INFO[Window(Weather).Property(Daily.1.HighTemperature)]</label>
+							<label>$INFO[Window(Weather).Property(Weekend.1.HighTemperature)]</label>
 						</control>
 						<control type="image">
 							<include>Widget_WeatherArrowDown</include>
 						</control>
 						<control type="label">
 							<include>Widget_WeatherTempLow</include>
-							<label>$INFO[Window(Weather).Property(Daily.1.LowTemperature)]</label>
+							<label>$INFO[Window(Weather).Property(Weekend.1.LowTemperature)]</label>
 						</control>
 					</control>
 					<control type="image">
@@ -40129,14 +40142,14 @@
 						</control>
 						<control type="label">
 							<include>Widget_WeatherTempHigh</include>
-							<label>$INFO[Window(Weather).Property(Daily.2.HighTemperature)]</label>
+							<label>$INFO[Window(Weather).Property(Weekend.2.HighTemperature)]</label>
 						</control>
 						<control type="image">
 							<include>Widget_WeatherArrowDown</include>
 						</control>
 						<control type="label">
 							<include>Widget_WeatherTempLow</include>
-							<label>$INFO[Window(Weather).Property(Daily.2.LowTemperature)]</label>
+							<label>$INFO[Window(Weather).Property(Weekend.2.LowTemperature)]</label>
 						</control>
 					</control>
 					<control type="image">
@@ -40160,7 +40173,7 @@
 				<posy>150</posy>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
-				<visible>String.Contains(skin.string(weather_mode),36hour) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+				<visible>String.Contains(skin.string(weather_mode),36hour) + !String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) + !String.IsEmpty(Window(Weather).Property(36Hour.IsFetched))</visible>
 				<control type="group">
 					<!-- Day 1 -->
 					<include>Widget_Weather36hour</include>
