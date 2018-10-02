@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8/1/14 -->
 <!-- Krypton 9.1.17/9.1.19/9.2.1 window IDs 4 -->
-<!-- Leai 10.2.3/10.2.5/10.3.0 -->
+<!-- Leai 10.2.3/10.2.5/10.3.0/10.5.1 -->
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
@@ -199,7 +199,6 @@
 				<onright condition="Container(9000).HasFocus(107)">ActivateWindow(MediaSettings)</onright>
 				<onright condition="Container(9000).HasFocus(108) + Skin.HasSetting(pvrmode)">ActivateWindow(PVRSettings)</onright>
 				<onright condition="Container(9000).HasFocus(109)">ActivateWindow(ServiceSettings)</onright>
-				<onright condition="Container(9000).HasFocus(110)">ActivateWindow(WeatherSettings)</onright>
 				<viewtype>list</viewtype>
 				<orientation>vertical</orientation>
 				<focusposition>5</focusposition>
@@ -390,15 +389,6 @@
 						<icon>special://skin/backgrounds/extras/settings_pictures.jpg</icon>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
 					</item>
-					<!-- Weather settings dead
-					<item id="110">
-						<label>31367</label>
-						<label2>31368</label2>
-						<property name="MainLabel">31386</property>
-						<property name="SubLabel">31387</property>
-						<icon>special://skin/backgrounds/extras/settings_weather.jpg</icon>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>
-					</item> -->
 					<item id="100">
 						<!-- Addons -->
 						<label>31363</label>

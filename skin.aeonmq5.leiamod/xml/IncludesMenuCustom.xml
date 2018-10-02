@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.3/10.2.8/10.3.0/10.5.0 -->
+<!-- Leia 10.2.3/10.2.8/10.3.0/10.5.0/10.5.1 -->
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
 	<include name="Preset1_Apply">
@@ -2433,7 +2433,7 @@
 					<label2>$LOCALIZE[31009]-$LOCALIZE[31011]</label2>
 					<property name="id">weather</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],weathersettings)</onclick>
-					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(weathersettings))</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(servicesettings,weather))</onclick>
 					<include>DefaultReset</include>
 					<visible>Skin.HasSetting(submode)</visible>
 				</item>
