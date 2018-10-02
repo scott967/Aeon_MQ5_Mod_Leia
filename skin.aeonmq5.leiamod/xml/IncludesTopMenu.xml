@@ -491,7 +491,7 @@
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[291] $LOCALIZE[14203]</label>
 					<onclick>SetFocus(51)</onclick>
-					<onclick>ActivateWindow(librarysettings)</onclick>
+					<onclick>ActivateWindow(mediasettings)</onclick>
 					<!-- videosettings -->
 					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
@@ -1927,7 +1927,7 @@
 					<include>TopMenuButton</include>
 					<label>$LOCALIZE[2] $LOCALIZE[14203]</label>
 					<onclick>SetFocus(51)</onclick>
-					<onclick>ActivateWindow(librarysettings)</onclick>
+					<onclick>ActivateWindow(mediasettings)</onclick>
 					<!-- musicsettings -->
 					<visible>![Skin.HasSetting(kiosksmart) + !String.Contains(skin.string(codestep),step3)]</visible>
 				</control>
@@ -2534,9 +2534,9 @@
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
 				<control type="radiobutton" id="98">
-					<!-- Extra Options -->
 					<include>TopMenuRadioButton</include>
 					<label>31496</label>
+					<visible>Skin.HasSetting(weather_extrainfo)</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="9301">
@@ -2560,7 +2560,6 @@
 				<control type="spincontrolex" id="3">
 					<!-- Alterar local -->
 					<include>TopMenuButton</include>
-					<label>35500</label>
 					<spinposx>-12</spinposx>
 					<spinwidth>52</spinwidth>
 					<spinheight>75</spinheight>
@@ -2569,7 +2568,7 @@
 				<control type="button" id="9505">
 					<include>TopMenuButton</include>
 					<label>31873</label>
-					<onclick>ActivateWindow(weathersettings)</onclick>
+					<onclick>ActivateWindow(servicesettings,weather)</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="9401">

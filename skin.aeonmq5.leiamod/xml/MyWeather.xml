@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.7 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 window IDs 2600 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.1 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
@@ -105,7 +105,7 @@
 					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31841])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+					<visible>![String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) | String.Contains(Window(Weather).Property(WeatherProvider),Weatherbit)]</visible>
 				</control>
 				<control type="button" id="104">
 					<!-- 10 Days -->
@@ -121,10 +121,11 @@
 					<!-- Maps -->
 					<label>31844</label>
 					<include>SettingsButton</include>
+					<onright>SetFocus(5200)</onright>
 					<onfocus>SetProperty(Weather.CurrentView,maps)</onfocus>
 					<onfocus>SetProperty(Weather.CurrentViewMenu,$LOCALIZE[31844])</onfocus>
 					<onfocus>Skin.Reset(TWC.ZoomWeatherMap)</onfocus>
-					<visible>!String.Contains(Window(Weather).Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.Contains(Window(Weather).Property(WeatherProvider),Yahoo) + System.HasAddon(script.openweathermap.maps) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 				</control>
 				<control type="button" id="106">
 					<!-- Alerts -->

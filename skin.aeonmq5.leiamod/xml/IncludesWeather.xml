@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5  Helix 6.1.0/6.1.7 -->
 <!-- Jarvis 8.1.14 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.3.0/10.4.0 -->
+<!-- Leia 10.3.0/10.4.0/10.5.1 -->
 <includes>
 	<!-- ######################################################################### Current #########################################################################-->
 	<!-- Widget Common Values -->
@@ -223,31 +223,31 @@
 					<description>current Precipitation label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33021] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>barometric pressure</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31859] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>visibility</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[31860] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33027] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunset label</description>
 					<include>TWC.Current.ConditionLabelsCommon</include>
 					<label>$LOCALIZE[33028] :</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) |String.Contains(Window.Property(WeatherProvider),Yahoo) </visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) |String.Contains(Window.Property(WeatherProvider),Yahoo)  | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -269,7 +269,7 @@
 				<control type="label">
 					<description>current UV Index Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
-					<label>$INFO[Window.Property(Current.HeatIndex)]</label>
+					<label>$INFO[Window.Property(Current.UVIndex)]</label>
 					<visible>![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)]</visible>
 				</control>
 				<control type="label">
@@ -281,37 +281,37 @@
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(36Hour.1.ChancePrecipitation)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + ![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)]</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + ![String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)]</visible>
 				</control>
 				<control type="label">
 					<description>current Precip Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Precipitation)]</label>
-					<visible>String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+					<visible>String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Pressure Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Pressure)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Visibilty Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Current.Visibility)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunrise Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Today.Sunrise)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 				<control type="label">
 					<description>current Sunset Value</description>
 					<include>TWC.Current.ConditionValuesCommon</include>
 					<label>$INFO[Window.Property(Today.Sunset)]</label>
-					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo)</visible>
+					<visible>!String.IsEmpty(Window.Property(36Hour.IsFetched)) | String.Contains(Window.Property(WeatherProvider),Yahoo) | String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -5301,9 +5301,8 @@
 	</include>
 	<!-- ######################################################################### Maps #########################################################################-->
 	<include name="MapsRadioButton">
-		<posy>-14</posy>
 		<height>38</height>
-		<width>376</width>
+		<width>286</width>
 		<font>Font_17A</font>
 		<texturefocus>grey.png</texturefocus>
 		<alttexturefocus>grey.png</alttexturefocus>
@@ -5313,12 +5312,14 @@
 		<textwidth>285</textwidth>
 		<pulseonselect>true</pulseonselect>
 		<radiowidth>134</radiowidth>
-		<radioposx>270</radioposx>
+		<radioposx>200</radioposx>
 		<radioheight>75</radioheight>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textureradiofocus>settings_radiobuttononfocus.png</textureradiofocus>
-		<textureradionofocus>settings_radiobuttonon.png</textureradionofocus>
+		<!-- <textureradioon>settings_radiobuttonon.png</textureradioon> -->
+		<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
+		<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
 	</include>
 	<control type="button" id="90200">
 		<include>InvisibleButton</include>
@@ -5367,13 +5368,13 @@
 		<aligny>center</aligny>
 	</include>
 	<include name="TWC.Maps">
-		<control type="group">
+		<control type="group">  <!-- Weatherbit.IO and openweathermap maps -->
 			<posx>435</posx>
 			<posy>90</posy>
 			<onright>5200</onright>
-			<visible>String.IsEqual(Window.Property(Weather.CurrentView),maps) + !String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),maps) + [String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended) | String.Contains(Window.Property(WeatherProvider), Weatherbit)] + System.HasAddon(script.openweathermap.maps)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-			<!-- Category buttons and other controls -->
+			<!-- Category buttons and maps -->
 			<control type="group" id="5200">
 				<posx>180</posx>
 				<posy>60</posy>
@@ -5387,80 +5388,279 @@
 				<control type="radiobutton" id="5201">
 					<description>Map List Button</description>
 					<include>MapsRadioButton</include>
-					<posx>-135</posx>
-					<label>$INFO[Window.Property(MapList.1.ShortTitle)]</label>
-					<onleft>50</onleft>
-					<onright>5202</onright>
-					<onup>5100</onup>
-					<ondown>5100</ondown>
-					<visible>!String.IsEmpty(Window.Property(MapList.1.ShortTitle))</visible>
-					<onfocus>SetProperty(CurrentMapList,1)</onfocus>
-					<selected>String.IsEqual(Window.Property(CurrentMapList),1)</selected>
+					<posx>-650</posx> <!-- was -135 -->
+					<posy>630</posy>
+					<label>$INFO[Window.Property(Map.1.Heading)]</label>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>5205</onup>
+					<ondown>5202</ondown>
+					<visible>!String.IsEmpty(Window.Property(Map.1.Heading))</visible>
+					<onfocus>SetProperty(CurrentMap,1)</onfocus>
+					<selected>String.IsEqual(Window.Property(CurrentMap),1)</selected>
 				</control>
 				<control type="radiobutton" id="5202">
 					<description>Map List Button</description>
 					<include>MapsRadioButton</include>
-					<posx>249</posx>
-					<label>$INFO[Window.Property(MapList.2.ShortTitle)]</label>
-					<onleft>5201</onleft>
-					<onright>5203</onright>
-					<onup>5100</onup>
-					<ondown>5100</ondown>
-					<visible>!String.IsEmpty(Window.Property(MapList.2.ShortTitle))</visible>
-					<onfocus>SetProperty(CurrentMapList,2)</onfocus>
-					<selected>String.IsEqual(Window.Property(CurrentMapList),2)</selected>
+					<posx>-650</posx>
+					<posy>675</posy>
+					<label>$INFO[Window.Property(Map.2.Heading)]</label>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>5201</onup>
+					<ondown>5203</ondown>
+					<visible>!String.IsEmpty(Window.Property(Map.2.Heading))</visible>
+					<onfocus>SetProperty(CurrentMap,2)</onfocus>
+					<selected>String.IsEqual(Window.Property(CurrentMap),2)</selected>
 				</control>
 				<control type="radiobutton" id="5203">
 					<description>Map List Button</description>
 					<include>MapsRadioButton</include>
-					<posx>630</posx>
-					<label>$INFO[Window.Property(MapList.3.ShortTitle)]</label>
-					<onleft>5202</onleft>
-					<onright>5201</onright>
-					<onup>5100</onup>
-					<ondown>5100</ondown>
-					<visible>!String.IsEmpty(Window.Property(MapList.3.ShortTitle))</visible>
-					<onfocus>SetProperty(CurrentMapList,3)</onfocus>
-					<selected>String.IsEqual(Window.Property(CurrentMapList),3)</selected>
+					<posx>-650</posx>
+					<posy>720</posy>
+					<label>$INFO[Window.Property(Map.3.Heading)]</label>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>5202</onup>
+					<ondown>5204</ondown>
+					<visible>!String.IsEmpty(Window.Property(Map.3.Heading))</visible>
+					<onfocus>SetProperty(CurrentMap,3)</onfocus>
+					<selected>String.IsEqual(Window.Property(CurrentMap),3)</selected>
 				</control>
-				<control type="multiimage">
-					<description>maps multiimage</description>
-					<posx>-105</posx>
-					<posy>60</posy>
-					<width>1080</width>
-					<height>729</height>
-					<imagepath background="true">$INFO[Window.Property(MapPath)]</imagepath>
-					<timeperimage>500</timeperimage>
-					<pauseatend>1000</pauseatend>
-					<fadetime>0</fadetime>
-					<randomize>false</randomize>
-					<loop>yes</loop>
-					<aspectratio>keep</aspectratio>
-					<aligny>center</aligny>
-					<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-					<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation>
+				<control type="radiobutton" id="5204">
+					<description>Map List Button</description>
+					<include>MapsRadioButton</include>
+					<posx>-650</posx>
+					<posy>765</posy>
+					<label>$INFO[Window.Property(Map.4.Heading)]</label>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>5203</onup>
+					<ondown>5205</ondown>
+					<visible>!String.IsEmpty(Window.Property(Map.4.Heading))</visible>
+					<onfocus>SetProperty(CurrentMap,4)</onfocus>
+					<selected>String.IsEqual(Window.Property(CurrentMap),4)</selected>
 				</control>
-				<control type="image">
-					<description>legend image</description>
-					<posx>308</posx>
-					<posy>705</posy>
-					<width>600</width>
-					<height>75</height>
-					<texture>$INFO[Window.Property(LegendPath)]</texture>
-					<align>right</align>
-					<aligny>top</aligny>
-					<aspectratio>keep</aspectratio>
-					<colordiffuse>BFFFFFFF</colordiffuse>
-					<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-					<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation>
+				<control type="radiobutton" id="5205">
+					<description>Map List Button</description>
+					<include>MapsRadioButton</include>
+					<posx>-650</posx>
+					<posy>810</posy>
+					<label>$INFO[Window.Property(Map.5.Heading)]</label>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>5204</onup>
+					<ondown>5201</ondown>
+					<visible>!String.IsEmpty(Window.Property(Map.5.Heading))</visible>
+					<onfocus>SetProperty(CurrentMap,5)</onfocus>
+					<selected>String.IsEqual(Window.Property(CurrentMap),5)</selected>
+				</control>
+				<control type="group"> <!-- Map 1 -->
+					<visible>String.IsEqual(Window.Property(CurrentMap),1)</visible>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.1.Area)]</texture>
+						<aspectratio>scale</aspectratio>
+					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.1.Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>legend image</description>
+						<posx>408</posx>
+						<posy>830</posy>
+						<width>600</width>
+						<height>75</height>
+						<texture>$INFO[Window.Property(Map.1.Legend)]</texture>
+						<align>right</align>
+						<aligny>top</aligny>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+				</control>
+				<control type="group"> <!-- Map 2 -->
+					<visible>String.IsEqual(Window.Property(CurrentMap),2)</visible>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.2.Area)]</texture>
+						<aspectratio>scale</aspectratio>
+					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.2.Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>legend image</description>
+						<posx>408</posx>
+						<posy>830</posy>
+						<width>600</width>
+						<height>75</height>
+						<texture>$INFO[Window.Property(Map.2.Legend)]</texture>
+						<align>right</align>
+						<aligny>top</aligny>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+				</control>
+				<control type="group"> <!-- Map 3 -->
+					<visible>String.IsEqual(Window.Property(CurrentMap),3)</visible>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.3.Area)]</texture>
+						<aspectratio>scale</aspectratio>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.3.Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>legend image</description>
+						<posx>408</posx>
+						<posy>830</posy>
+						<width>600</width>
+						<height>75</height>
+						<texture>$INFO[Window.Property(Map.3.Legend)]</texture>
+						<align>right</align>
+						<aligny>top</aligny>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+				</control>
+				<control type="group"> <!-- Map 4 -->
+					<visible>String.IsEqual(Window.Property(CurrentMap),4)</visible>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.4.Area)]</texture>
+						<aspectratio>scale</aspectratio>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.4.Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>legend image</description>
+						<posx>408</posx>
+						<posy>830</posy>
+						<width>600</width>
+						<height>75</height>
+						<texture>$INFO[Window.Property(Map.4.Legend)]</texture>
+						<align>right</align>
+						<aligny>top</aligny>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+				</control>
+				<control type="group"> <!-- Map 5 -->
+					<visible>String.IsEqual(Window.Property(CurrentMap),5)</visible>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.5.Area)]</texture>
+						<aspectratio>scale</aspectratio>
+					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>map</description>
+						<posx>-135</posx>
+						<posy>-15</posy>
+						<width>1140</width>
+						<height>825</height>
+						<texture>$INFO[Window.Property(Map.5.Layer)]</texture>
+						<aspectratio>scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
+					<control type="image">
+						<description>legend image</description>
+						<posx>408</posx>
+						<posy>830</posy>
+						<width>600</width>
+						<height>75</height>
+						<texture>$INFO[Window.Property(Map.5.Legend)]</texture>
+						<align>right</align>
+						<aligny>top</aligny>
+						<aspectratio>keep</aspectratio>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
+						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
+					</control>
 				</control>
 			</control>
 			<!-- Category Lists  -->
-			<control type="group" id="5100">
+<!-- 			<control type="group" id="5100">
 				<posx>180</posx>
 				<posy>52</posy>
-				<visible>Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus</visible>
-				<!-- Maps List #1 -->
+				<visible>!String.Contains(Window.Property(WeatherProvider),Weatherbit) + [Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus]</visible>
 				<control type="group">
 					<visible>String.IsEqual(Window.Property(CurrentMapList),1)</visible>
 					<control type="label">
@@ -5482,7 +5682,29 @@
 						<onright>501</onright>
 					</control>
 				</control>
-				<!-- Maps List #2 -->
+
+				<control type="group">
+					<visible>!String.IsEmpty(Window.Property(MapIsFetched)) + String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
+					<control type="label">
+						<include>TWC.Maps.ListTitleCommon</include>
+						<label>$INFO[Window.Property(Map.1.Heading)]</label>
+					</control>
+					<control type="image" id="501">
+						<posx>-120</posx>
+						<posy>75</posy>
+						<width>1058</width>
+						<height>698</height>
+						<texture>$INFO[window.Property(Map.1.Area)]</texture>
+					</control>
+					<control type="image" id="501">
+						<posx>-120</posx>
+						<posy>75</posy>
+						<width>1058</width>
+						<height>698</height>
+						<texture>$INFO[window.Property(Map.1.Layer)]</texture>
+					</control>
+				</control>
+
 				<control type="group">
 					<visible>String.IsEqual(Window.Property(CurrentMapList),2)</visible>
 					<control type="label">
@@ -5504,7 +5726,7 @@
 						<onright>502</onright>
 					</control>
 				</control>
-				<!-- Maps List #3 -->
+
 				<control type="group">
 					<visible>String.IsEqual(Window.Property(CurrentMapList),3)</visible>
 					<control type="label">
@@ -5526,10 +5748,10 @@
 						<onright>503</onright>
 					</control>
 				</control>
-			</control>
+			</control> -->
 		</control>
 		<!-- OpenWeatherMaps -->
-		<control type="group">
+<!-- 		<control type="group">
 			<posx>435</posx>
 			<posy>90</posy>
 			<visible>String.IsEqual(Window.Property(Weather.CurrentView),maps) + String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
@@ -5704,7 +5926,7 @@
 				<height>6</height>
 				<texture>separator.png</texture>
 			</control>
-		</control>
+		</control> -->
 	</include>
 	<!-- ######################################################################### Maps Content #########################################################################-->
 	<include name="MapsList1.Content">
