@@ -123,7 +123,7 @@
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
 					<preloaditems>2</preloaditems>
-					<itemlayout height="60" condition="String.IsEqual(Container.Content,artists)">
+					<itemlayout height="60" condition="Container.Content(artists)">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -171,7 +171,18 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo)] | Container.Content(images)</visible>
+						</control>
+						<control type="label">
+							<posx>68</posx>
+							<posy>1</posy>
+							<width>660</width>
+							<height>60</height>
+							<font>Font_22A</font>
+							<aligny>center</aligny>
+							<include>listcolor</include>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>String.Contains(ListItem.DBType, musicvideo)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -251,7 +262,7 @@
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + String.IsEqual(Container.Content,artists)" height="60">
+					<focusedlayout condition="Skin.HasSetting(slimwidemusic) + Container.Content(artists)" height="60">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -283,7 +294,7 @@
 							<visible>!String.Contains(ListItem.DBType,artist)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="!Skin.HasSetting(slimwidemusic) + String.IsEqual(Container.Content,artists)" height="94">
+					<focusedlayout condition="!Skin.HasSetting(slimwidemusic) + Container.Content(artists)" height="94">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -459,6 +470,16 @@
 							<posy>3</posy>
 							<width>45</width>
 							<height>45</height>
+							<texture>DefaultMusicVideos.png</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>FFFFFFFF</colordiffuse>
+							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>3</posy>
+							<width>45</width>
+							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -549,6 +570,16 @@
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(files) | Container.Content(addons) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+						</control>
+						<control type="image">
+							<posx>903</posx>
+							<posy>20</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>DefaultMusicVideos.png</texture>
+							<aspectratio>keep</aspectratio>
+							<colordiffuse>FFFFFFFF</colordiffuse>
+							<visible>Container.Content(mixed) + String.IsEqual(ListItem.DBType,musicvideo)</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>

@@ -3525,8 +3525,8 @@
 		<value condition="Container.Content(albums)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21899]: [/COLOR]$INFO[ListItem.Property(Album_Label)]</value>
 		<value condition="Container.Content(artists)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21898]: [/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<!-- YearsActive/Artists -->
-		<value condition="Container.Content(songs) + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
-		<value condition="Container.Content(songs) + String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
+		<value condition="[Container.Content(songs) | Container.Content(mixed)] + !String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
+		<value condition="[Container.Content(songs) | Container.Content(mixed)] + String.Contains(ListItem.Duration,min)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[180]: [/COLOR] $INFO[ListItem.Duration]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31772]: [/COLOR]$INFO[ListItem.Premiered] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31788]: [/COLOR]$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(addons)">[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24051] [/COLOR]$INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21863]: [/COLOR]$INFO[ListItem.PropertyAddonCreator]</value>
 	</variable>
