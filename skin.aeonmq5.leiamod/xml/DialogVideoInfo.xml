@@ -3,16 +3,15 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
-	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
-	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+<!-- 	<onload>ClearProperty(script.metadata.actors.isactive)</onload> -->
 	<controls>
 		<control type="group">
 			<!-- default group -->
 			<include>Animation_Window</include>
-			<animation effect="fade" start="100" end="0" time="300" condition="String.IsEqual(Window.Property(script.metadata.actors.isactive),1)">Conditional</animation>
+			<!-- <animation effect="fade" start="100" end="0" time="300" condition="String.IsEqual(Window.Property(script.metadata.actors.isactive),1)">Conditional</animation> -->
 			<control type="multiimage">
 				<!-- Multi Fanart -->
 				<include>WindowBG</include>
@@ -326,7 +325,7 @@
 					<item>
 						<label>$LOCALIZE[20339]/$LOCALIZE[20417]</label>
 						<!-- Director/Written -->
-						<label2>$INFO[ListItem.Director]/$INFO[ListItem.Writer]</label2>
+						<label2>$INFO[ListItem.Director,,/]$INFO[ListItem.Writer]</label2>
 						<onclick>SendClick(movieinformation,13)</onclick>
 						<visible>!Container.Content(musicvideos)</visible>
 					</item>
@@ -391,7 +390,7 @@
 				<height>3</height>
 				<width>1480</width>
 				<texture>separator.png</texture>
-				<visible>![Container.Content(episodes) | Container.Content(musicvideos) + !String.IsEmpty(ListItem.Art(poster))]</visible>
+				<visible>![Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + !String.IsEmpty(ListItem.Art(poster))]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -399,7 +398,7 @@
 				<height>3</height>
 				<width>1078</width>
 				<texture>separator.png</texture>
-				<visible>Container.Content(episodes) | Container.Content(musicvideos) + String.IsEmpty(ListItem.Art(poster))</visible>
+				<visible>Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + String.IsEmpty(ListItem.Art(poster))</visible>
 			</control>
 			<control type="textbox">
 				<!-- Plot -->
@@ -412,7 +411,7 @@
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-				<visible>![Container.Content(episodes) | Container.Content(musicvideos) + String.IsEmpty(ListItem.Art(poster))]</visible>
+				<visible>![Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + String.IsEmpty(ListItem.Art(poster))]</visible>
 			</control>
 			<control type="textbox">
 				<!-- Plot -->
@@ -425,7 +424,7 @@
 				<label>$INFO[ListItem.Plot]</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-				<visible>Container.Content(episodes) | Container.Content(musicvideos) + String.IsEmpty(ListItem.Art(poster))</visible>
+				<visible>Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + String.IsEmpty(ListItem.Art(poster))</visible>
 			</control>
 			<control type="image">
 				<posx>1080</posx>
@@ -433,7 +432,7 @@
 				<width>3</width>
 				<height>345</height>
 				<texture>separator_v.png</texture>
-				<visible>![Container.Content(episodes) | Container.Content(musicvideos) + !String.IsEmpty(ListItem.Art(poster))]</visible>
+				<visible>![Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + !String.IsEmpty(ListItem.Art(poster))]</visible>
 			</control>
 			<control type="image">
 				<!-- Logo -->
@@ -464,7 +463,7 @@
 				<aspectratio align="left">keep</aspectratio>
 				<texture background="true">$VAR[value_poster]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
-				<animation effect="slide" end="-399,0" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos) + String.IsEmpty(ListItem.Art(poster))">Conditional</animation>
+				<animation effect="slide" end="-399,0" time="0" condition="Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + String.IsEmpty(ListItem.Art(poster))">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>1479</posx>
@@ -862,12 +861,11 @@
 							<onclick>RunScript(script.cinemavision,experience)</onclick>
 							<visible>System.HasAddon(script.cinemavision) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 						</item>
-						<item id="23">
-							<!-- Extras -->
+						<!-- <item id="23">
 							<label>31416</label>
 							<onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
 							<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows)] + String.IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
-						</item>
+						</item> -->
 						<item id="5">
 							<!-- Trailer Window -->
 							<label>31701</label>
@@ -891,11 +889,16 @@
 							<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
 							<visible>System.HasAddon(script.libraryeditor)</visible>
 						</item>
-						<item id="9">
-							<!-- Actor Info -->
+						<!-- <item id="9">
 							<label>31798</label>
 							<onclick>RunScript(script.metadata.actors,$INFO[Container(50).Listitem.Label])</onclick>
 							<visible>System.HasAddon(script.metadata.actors)</visible>
+						</item> -->
+						<item id="9">
+							<!-- actor bio -->
+							<label>31798</label>
+							<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
+							<visible>System.HasAddon(script.extendedinfo)</visible>
 						</item>
 						<item id="13">
 							<!-- Director Movies -->
@@ -904,17 +907,16 @@
 							<visible>!String.IsEmpty(ListItem.Director)</visible>
 						</item>
 						<item id="10">
-							<!-- Director Info -->
-							<label>31883</label>
-							<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Director])</onclick>
-							<visible>System.HasAddon(script.metadata.actors)</visible>
+							<label>$LOCALIZE[31496]</label>
+							<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>"
+							<visible>System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,season) | String.IsEqual(ListItem.DbType,episode)]</visible>
 						</item>
+						<!--
 						<item id="11">
-							<!-- Writer Info -->
 							<label>31884</label>
 							<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Writer])</onclick>
 							<visible>System.HasAddon(script.metadata.actors)</visible>
-						</item>
+						</item> -->
 					</content>
 				</control>
 				<control type="image">

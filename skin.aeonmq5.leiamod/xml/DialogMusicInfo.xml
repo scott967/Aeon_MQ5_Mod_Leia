@@ -2,11 +2,11 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0 -->
+<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0/10.5.2 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
-	<onload condition="Window.Is(musicinformation)">ClearProperty(script.metadata.actors.isactive)</onload>
+	<!-- <onload condition="Window.Is(musicinformation)">ClearProperty(script.metadata.actors.isactive)</onload> -->
 	<controls>
 		<control type="group">  			<!-- default group -->
 			<include>Animation_Window</include>
@@ -1003,12 +1003,11 @@
 							<onclick>RunScript(script.playalbum,songid=$INFO[Container(50).ListItem.DBID])</onclick>
 							<visible>String.IsEqual(ListItem.DBType,album) + System.HasAddon(script.playalbum)</visible>
 						</item>
-						<item id="5">
-							<!-- Artist Info -->
+						<!-- <item id="5">
 							<label>31885</label>
 							<onclick>RunScript(script.metadata.actors,$INFO[Listitem.Artist])</onclick>
 							<visible>System.HasAddon(script.metadata.actors)</visible>
-						</item>
+						</item> -->
 						<item id="18">
 							<!-- Artist Zoom -->
 							<label>31944</label>
