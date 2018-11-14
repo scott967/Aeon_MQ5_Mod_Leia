@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.2 -->
 <window>
 	<onload>ClearProperty(TVGuide.MondayList,Home)</onload>
 	<onload>ClearProperty(TVGuide.TuesdayList,Home)</onload>
@@ -46,6 +46,7 @@
 					<width>1650</width>
 					<height>60</height>
 					<font>Font_40</font>
+					<aligny>center</aligny>
 					<label>$VAR[value_nextairedlabel]</label>
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
@@ -53,10 +54,11 @@
 				</control>
 				<control type="label">
 					<posx>45</posx>
-					<posy>75</posy>
+					<posy>80</posy>
 					<width>1650</width>
 					<height>38</height>
 					<font>Font_18A</font>
+					<aligny>center</aligny>
 					<label>$VAR[value_nextairedtagline]</label>
 					<textcolor>90FFFFFF</textcolor>
 					<scroll>true</scroll>
@@ -99,8 +101,9 @@
 						<orientation>horizontal</orientation>
 						<itemgap>39</itemgap>
 						<control type="label">
-							<width>225</width>
+							<width>300</width>
 							<include>FlagLabel</include>
+							<scrollspeed>20</scrollspeed>
 							<label>$VAR[value_nextairedmultilabel]</label>
 						</control>
 						<control type="image">
@@ -176,10 +179,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(200)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(200)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Monday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -202,10 +205,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(201)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(201)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Tuesday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -228,10 +231,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(202)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(202)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Wednesday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -254,10 +257,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(203)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(203)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Thursday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -280,10 +283,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(204)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(204)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Friday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -306,10 +309,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(205)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(205)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Saturday -->
 								<include>NextAiredLabelDaySelect</include>
@@ -332,10 +335,10 @@
 								<include>NextAiredButtomDay</include>
 								<visible>Control.HasFocus(206)</visible>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<include>NextAiredLed</include>
 								<visible>Control.Hasfocus(206)</visible>
-							</control>
+							</control> -->
 							<control type="label">
 								<!-- Sunday -->
 								<include>NextAiredLabelDaySelect</include>
