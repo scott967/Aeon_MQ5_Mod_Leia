@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.5.0/10.5.1 -->
+<!-- Leia 10.2.4/10.3.0/10.5.0/10.5.1/10.5.2 -->
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
@@ -535,7 +535,7 @@
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
 					<animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(norightlistvideocase)">Conditional</animation>
-					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(norightlistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(norightlistdiscart) | ListItem.IsCollection] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<posx>168</posx>
 						<posy>105</posy>
@@ -567,7 +567,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + Control.IsVisible(9923)</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(norightlistdiscart)] + Window.IsActive(videos) + ListItem.IsCollection + Control.IsVisible(9923)</visible>
 					<control type="image">
 						<include>RightListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
@@ -665,7 +665,7 @@
 						<textoffsetx>0</textoffsetx>
 						<left>-8</left>
 						<top>686</top>
-						<label>($INFO[Player.Time] / $INFO[Player.Duration,])</label>
+						<label>($INFO[Player.Time] / $INFO[Player.Duration])</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<visible>Player.HasMedia + !String.Contains(Window(Videos).Property(PlayingBackgroundMedia),TRUE)</visible>

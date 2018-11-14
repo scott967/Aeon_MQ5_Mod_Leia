@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.2 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2 -->
 <includes>
 	<!--##################################################################################   VISTA GLASS LIST - ID 57   ##################################################################################-->
 	<include name="GlassListLabel">
@@ -338,7 +338,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(noglasslistdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(noglasslistdiscart) | ListItem.IsCollection] + Window.IsActive(videos) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<posx>168</posx>
 						<posy>82</posy>
@@ -370,7 +370,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + ListItem.IsCollection + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
@@ -416,7 +416,7 @@
 						<effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + String.Contains(ListItem.Path,videodb://movies/sets) + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
+					<visible>![String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(noglasslistdiscart)] + Window.IsActive(videos) + ListItem.IsCollection + [Control.HasFocus(9957) | Control.IsVisible(9923)]</visible>
 					<control type="image">
 						<include>GlassListDisc</include>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
