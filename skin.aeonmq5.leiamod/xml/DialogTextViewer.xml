@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.2.1 window IDs 147 -->
+<!-- Leia 10.5.2 -->
 <window>
 	<defaultcontrol>61</defaultcontrol>
 	<coordinates>
@@ -28,14 +29,14 @@
 				<font>Font_32</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
-			<control type="image">
+			<!-- <control type="image">
 				<description>separator</description>
 				<posx>210</posx>
 				<posy>120</posy>
 				<width>1500</width>
 				<height>3</height>
 				<texture>common_divider.png</texture>
-			</control>
+			</control> -->
 			<control type="textbox" id="5">
 				<posx>210</posx>
 				<posy>180</posy>
