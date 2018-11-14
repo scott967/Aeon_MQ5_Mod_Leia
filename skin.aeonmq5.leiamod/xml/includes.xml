@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.010.5.1 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -1065,7 +1065,8 @@
 				<width>1440</width>
 				<height>840</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>homewidget.png</texture>
+				<!-- <texture>homewidget.png</texture> -->
+				<texture>fanartframe.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_Fade</include>
 				<include>Animation_HomeGlass</include>
@@ -1799,7 +1800,7 @@
 		<include>Animation_Fade</include>
 	</include>
 	<include name="NextAiredLabelDay">
-		<posx>22</posx>
+		<posx>42</posx>
 		<width>135</width>
 		<height>124</height>
 		<font>Font_20</font>
@@ -1822,14 +1823,14 @@
 		<texture flipx="true">divider.png</texture>
 		<colordiffuse>90FFFFFF</colordiffuse>
 	</include>
-	<include name="NextAiredLed">
+	<!-- <include name="NextAiredLed">
 		<posx>15</posx>
 		<posy>56</posy>
 		<width>12</width>
 		<height>12</height>
 		<texture>settings_led_focus.gif</texture>
 		<include>Animation_Fade</include>
-	</include>
+	</include> -->
 	<!-- ######################################################################### Dialogs ######################################################################### -->
 	<include name="Dialogs_Bar">
 		<control type="image">
