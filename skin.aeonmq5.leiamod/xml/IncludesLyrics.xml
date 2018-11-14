@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.1/Orby -->
 <!-- Krypton 9.2.1 window IDs -->
-<!-- Leia 10.4.0 -->
+<!-- Leia 10.4.0/10.5.2 -->
 <includes>
 	<!-- ######################################################################### Letras layout estilo default ######################################################################### -->
 	<include name="LyricsDefault">
@@ -126,7 +126,7 @@
 						<posy>4</posy>
 						<width>1620</width>
 						<height>33</height>
-						<info>ListItem.Label</info>
+						<label fallback="--">$INFO[ListItem.Label]</label>
 						<font>Font_21A</font>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -149,7 +149,7 @@
 						<posy>4</posy>
 						<width>1770</width>
 						<height>33</height>
-						<info>ListItem.Label</info>
+						<label fallback="--">$INFO[ListItem.Label]</label>
 						<font>Font_30A</font>
 						<align>center</align>
 						<aligny>center</aligny>
