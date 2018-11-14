@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.5/6.1.7/6.1.8  Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.4.0/10.5.1 -->
+<!-- Leia 10.2.4/10.4.0/10.5.1/10.5.2 -->
 <includes>
 	<!-- ######################################################################### Widgets dos Recentes ######################################################################### -->
 	<include name="panel_layout">
@@ -4065,9 +4065,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl1_list),latest)">Skin.SetString(mfvpl1_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl1_list),random)">Skin.SetString(mfvpl1_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl1_list),inprogress)">Skin.SetString(mfvpl1_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl1_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl1_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl1_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -5443,9 +5443,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl2_list),latest)">Skin.SetString(mfvpl2_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl2_list),random)">Skin.SetString(mfvpl2_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl2_list),inprogress)">Skin.SetString(mfvpl2_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl2_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl2_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl2_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=vpl2)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -6821,9 +6821,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl3_list),latest)">Skin.SetString(mfvpl3_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl3_list),random)">Skin.SetString(mfvpl3_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl3_list),inprogress)">Skin.SetString(mfvpl3_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl3_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl3_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl3_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=vpl3)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -8199,9 +8199,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl4_list),latest)">Skin.SetString(mfvpl4_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl4_list),random)">Skin.SetString(mfvpl4_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl4_list),inprogress)">Skin.SetString(mfvpl4_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl4_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl4_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl4_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=vpl4)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -9577,9 +9577,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl5_list),latest)">Skin.SetString(mfvpl5_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl5_list),random)">Skin.SetString(mfvpl5_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl5_list),inprogress)">Skin.SetString(mfvpl5_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl5_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl5_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl5_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=vpl5)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -10955,9 +10955,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl6_list),latest)">Skin.SetString(mfvpl6_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl6_list),random)">Skin.SetString(mfvpl6_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl6_list),inprogress)">Skin.SetString(mfvpl6_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl6_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl6_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl6_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=vpl6)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -12333,9 +12333,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl7_list),latest)">Skin.SetString(mfvpl7_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl7_list),random)">Skin.SetString(mfvpl7_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl7_list),inprogress)">Skin.SetString(mfvpl7_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl7_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl7_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl7_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=vpl7)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -13711,9 +13711,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl8_list),latest)">Skin.SetString(mfvpl8_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl8_list),random)">Skin.SetString(mfvpl8_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl8_list),inprogress)">Skin.SetString(mfvpl8_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl8_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl8_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl8_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=vpl8)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -15089,9 +15089,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl9_list),latest)">Skin.SetString(mfvpl9_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl9_list),random)">Skin.SetString(mfvpl9_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl9_list),inprogress)">Skin.SetString(mfvpl9_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl9_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl9_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl9_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=vpl9)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -16467,9 +16467,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl10_list),latest)">Skin.SetString(mfvpl10_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl10_list),random)">Skin.SetString(mfvpl10_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl10_list),inprogress)">Skin.SetString(mfvpl10_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl10_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl10_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl10_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=vpl10)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -17845,9 +17845,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl11_list),latest)">Skin.SetString(mfvpl11_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl11_list),random)">Skin.SetString(mfvpl11_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl11_list),inprogress)">Skin.SetString(mfvpl11_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl11_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl11_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl11_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=vpl11)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -19223,9 +19223,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl12_list),latest)">Skin.SetString(mfvpl12_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl12_list),random)">Skin.SetString(mfvpl12_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl12_list),inprogress)">Skin.SetString(mfvpl12_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl12_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl12_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl12_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=vpl12)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -20601,9 +20601,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl13_list),latest)">Skin.SetString(mfvpl13_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl13_list),random)">Skin.SetString(mfvpl13_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl13_list),inprogress)">Skin.SetString(mfvpl13_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl13_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl13_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl13_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=vpl13)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -21979,9 +21979,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl14_list),latest)">Skin.SetString(mfvpl14_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl14_list),random)">Skin.SetString(mfvpl14_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl14_list),inprogress)">Skin.SetString(mfvpl14_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl14_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl14_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl14_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=vpl14)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -23357,9 +23357,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl15_list),latest)">Skin.SetString(mfvpl15_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl15_list),random)">Skin.SetString(mfvpl15_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl15_list),inprogress)">Skin.SetString(mfvpl15_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl15_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl15_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl15_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=vpl15)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -24735,9 +24735,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl16_list),latest)">Skin.SetString(mfvpl16_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl16_list),random)">Skin.SetString(mfvpl16_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl16_list),inprogress)">Skin.SetString(mfvpl16_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl16_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl16_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl16_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=vpl16)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -26111,9 +26111,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl17_list),latest)">Skin.SetString(mfvpl17_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl17_list),random)">Skin.SetString(mfvpl17_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl17_list),inprogress)">Skin.SetString(mfvpl17_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl17_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl17_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl17_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=vpl17)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -27489,9 +27489,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl18_list),latest)">Skin.SetString(mfvpl18_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl18_list),random)">Skin.SetString(mfvpl18_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl18_list),inprogress)">Skin.SetString(mfvpl18_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl18_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl18_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl18_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=vpl18)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -28867,9 +28867,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl19_list),latest)">Skin.SetString(mfvpl19_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl19_list),random)">Skin.SetString(mfvpl19_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl19_list),inprogress)">Skin.SetString(mfvpl19_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl19_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl19_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl19_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=vpl19)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -30243,9 +30243,9 @@
 			<onfocus condition="String.Contains(skin.string(mfvpl20_list),latest)">Skin.SetString(mfvpl20_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl20_list),random)">Skin.SetString(mfvpl20_list,inprogress)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfvpl20_list),inprogress)">Skin.SetString(mfvpl20_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl20_list),random)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfvpl20_list),inprogress)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl20_list),inprogress)">RunScript(script.randomandlastitems,limit=12,resume=True,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfvpl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=vpl20)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -31586,8 +31586,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl1_list),latest)">Skin.SetString(mfapl1_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl1_list),random)">Skin.SetString(mfapl1_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=apl1)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -31954,8 +31954,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl2_list),latest)">Skin.SetString(mfapl2_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl2_list),random)">Skin.SetString(mfapl2_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl2_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl2_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu2.path)],menu=apl2)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -32322,8 +32322,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl3_list),latest)">Skin.SetString(mfapl3_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl3_list),random)">Skin.SetString(mfapl3_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl3_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl3_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu3.path)],menu=apl3)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -32690,8 +32690,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl4_list),latest)">Skin.SetString(mfapl4_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl4_list),random)">Skin.SetString(mfapl4_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl4_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl4_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu4.path)],menu=apl4)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -33058,8 +33058,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl5_list),latest)">Skin.SetString(mfapl5_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl5_list),random)">Skin.SetString(mfapl5_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl5_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl5_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu5.path)],menu=apl5)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -33426,8 +33426,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl6_list),latest)">Skin.SetString(mfapl6_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl6_list),random)">Skin.SetString(mfapl6_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl6_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl6_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu6.path)],menu=apl6)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -33794,8 +33794,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl7_list),latest)">Skin.SetString(mfapl7_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl7_list),random)">Skin.SetString(mfapl7_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl7_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl7_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu7.path)],menu=apl7)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -34162,8 +34162,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl8_list),latest)">Skin.SetString(mfapl8_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl8_list),random)">Skin.SetString(mfapl8_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl8_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl8_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu8.path)],menu=apl8)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -34530,8 +34530,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl9_list),latest)">Skin.SetString(mfapl9_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl9_list),random)">Skin.SetString(mfapl9_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl9_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl9_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu9.path)],menu=apl9)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -34898,8 +34898,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl10_list),latest)">Skin.SetString(mfapl10_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl10_list),random)">Skin.SetString(mfapl10_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl10_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl10_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu10.path)],menu=apl10)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -35266,8 +35266,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl11_list),latest)">Skin.SetString(mfapl11_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl11_list),random)">Skin.SetString(mfapl11_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl11_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl11_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu11.path)],menu=apl11)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -35634,8 +35634,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl12_list),latest)">Skin.SetString(mfapl12_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl12_list),random)">Skin.SetString(mfapl12_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl12_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl12_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu12.path)],menu=apl12)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -36002,8 +36002,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl13_list),latest)">Skin.SetString(mfapl13_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl13_list),random)">Skin.SetString(mfapl13_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl13_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl13_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu13.path)],menu=apl13)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -36370,8 +36370,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl14_list),latest)">Skin.SetString(mfapl14_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl14_list),random)">Skin.SetString(mfapl14_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl14_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl14_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu14.path)],menu=apl14)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -36738,8 +36738,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl15_list),latest)">Skin.SetString(mfapl15_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl15_list),random)">Skin.SetString(mfapl15_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl15_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl15_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu15.path)],menu=apl15)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -37106,8 +37106,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl16_list),latest)">Skin.SetString(mfapl16_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl16_list),random)">Skin.SetString(mfapl16_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl16_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl16_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu16.path)],menu=apl16)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -37474,8 +37474,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl17_list),latest)">Skin.SetString(mfapl17_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl17_list),random)">Skin.SetString(mfapl17_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl17_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl17_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu17.path)],menu=apl17)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -37842,8 +37842,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl18_list),latest)">Skin.SetString(mfapl18_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl18_list),random)">Skin.SetString(mfapl18_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl18_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl18_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu18.path)],menu=apl18)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -38210,8 +38210,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl19_list),latest)">Skin.SetString(mfapl19_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl19_list),random)">Skin.SetString(mfapl19_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl19_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl19_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu19.path)],menu=apl19)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
@@ -38578,8 +38578,8 @@
 			<include>InvisibleButton</include>
 			<onfocus condition="String.Contains(skin.string(mfapl20_list),latest)">Skin.SetString(mfapl20_list,random)</onfocus>
 			<onfocus condition="String.Contains(skin.string(mfapl20_list),random)">Skin.SetString(mfapl20_list,latest)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onfocus>
-			<onfocus condition="String.Contains(skin.string(mfapl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onfocus>
+			<onfocus condition="String.Contains(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onfocus>
 			<onfocus>SetFocus(5100)</onfocus>
 		</control>
 		<control type="group">
