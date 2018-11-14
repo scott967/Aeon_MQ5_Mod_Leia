@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Jarvis 8.1.13 -->
 <!-- Krypton 9.2.1 -->
-<!-- Leia 10.3.0/10.4.0 -->
+<!-- Leia 10.3.0/10.4.0/10.5.2 -->
 <window>
 	<defaultcontrol always="true">570</defaultcontrol>
 	<views>570</views>
@@ -126,7 +126,7 @@
 							<height>114</height>
 							<texture>$INFO[Listitem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
-							<bordertexture border="3">black-back2.png</bordertexture>
+							<bordertexture border="3">black.png</bordertexture>
 							<bordersize>2</bordersize>
 						</control>
 						<control type="label">
@@ -241,7 +241,7 @@
 						<pulseonselect>false</pulseonselect>
 						<radioheight>45</radioheight>
 						<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
-						<textureradioonnofocus>radiobutton.png</textureradioonnofocus>
+						<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 						<include>Animation_Fade</include>
 						<colordiffuse>FFFFFAF0</colordiffuse>
 						<left>15</left>
