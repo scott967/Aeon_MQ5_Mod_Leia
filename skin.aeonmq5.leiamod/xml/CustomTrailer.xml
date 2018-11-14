@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.2.4 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.2 -->
 <window id="639" type="dialog">
 	<!-- safe id -->
 	<defaultcontrol>9006</defaultcontrol>
@@ -31,22 +31,23 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>681</width>
-				<height>58</height>
+				<height>75</height>
 				<texture>dialogs_context_nofocus.png</texture>
 				<colordiffuse>F9FFFFFF</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>120</posx>
-				<posy>12</posy>
+				<posy>7</posy>
 				<width>450</width>
 				<height>60</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>31415</label>
 				<font>Font_20</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 			</control>
-			<control type="image" id="999">
-				<!-- background image -->
+<!-- 			<control type="image" id="999">
+
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>684</width>
@@ -54,7 +55,7 @@
 				<texture></texture>
 			</control>
 			<control type="image" id="997">
-				<!-- top image -->
+
 				<posx>-3</posx>
 				<posy>34</posy>
 				<width>694</width>
@@ -62,13 +63,13 @@
 				<texture>dialogs_context_top.png</texture>
 			</control>
 			<control type="image" id="998">
-				<!-- bottom image -->
+
 				<posx>-3</posx>
 				<posy>0</posy>
 				<width>694</width>
 				<height>40</height>
 				<texture>dialogs_context_bottom.png</texture>
-			</control>
+			</control> -->
 			<control type="grouplist" id="996">
 				<posx>0</posx>
 				<posy>75</posy>
