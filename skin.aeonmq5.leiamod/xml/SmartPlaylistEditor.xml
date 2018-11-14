@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.18/9.2.1 window IDs 136/9.2.2 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.5.2 -->
 <window>
 	<defaultcontrol always="true">22</defaultcontrol>
 	<controls>
@@ -180,8 +180,7 @@
 							<aligny>center</aligny>
 							<info>ListItem.Label</info>
 							<font>Font_18</font>
-							<textcolor>FF101010</textcolor>
-							<disabledcolor>FF505050</disabledcolor>
+							<include>listcolorfocus</include>
 							<animation effect="slide" start="90,0" end="90,0" time="0" condition="Window.IsActive(musicplaylist) | Window.IsActive(music) | Window.IsActive(Videos) + ![Container.Content(movies) | Container.Content(musicvideos)]">Conditional</animation>
 							<visible>Control.HasFocus(10) | Control.HasFocus(13) | Control.HasFocus(14) | Control.HasFocus(15)</visible>
 						</control>
