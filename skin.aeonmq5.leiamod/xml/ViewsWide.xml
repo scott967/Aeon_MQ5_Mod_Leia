@@ -35,7 +35,7 @@
 		<height>66</height>
 		<width>900</width>
 		<font>Font_18A</font>
-		<aligny>top</aligny>
+		<aligny>center</aligny>
 		<align>left</align>
 		<textcolor>$VAR[value_headercolor]</textcolor>
 		<textoffsetx>45</textoffsetx>
@@ -49,7 +49,7 @@
 		<aligny>top</aligny>
 		<align>left</align>
 		<textoffsetx>45</textoffsetx>
-		<textoffsety>32</textoffsety>
+		<textoffsety>37</textoffsety>
 		<scroll>true</scroll>
 	</include>
 	<include name="WideDisc">
@@ -127,7 +127,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1108</width>
+							<width>960</width>
 							<height>1</height>
 							<texture>line.png</texture>
 						</control>
@@ -158,7 +158,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1108</width>
+							<width>960</width>
 							<height>1</height>
 							<texture>line.png</texture>
 						</control>
@@ -269,7 +269,7 @@
 							<width>960</width>
 							<height>60</height>
 							<texture>settings_button_focus.png</texture>
-							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -301,7 +301,7 @@
 							<width>960</width>
 							<height>94</height>
 							<texture>settings_button_focus.png</texture>
-							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -327,7 +327,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>68</posy>
+							<posy>66</posy>
 							<width>660</width>
 							<height>24</height>
 							<font>Font_18A</font>
@@ -345,7 +345,7 @@
 							<width>960</width>
 							<height>60</height>
 							<texture>settings_button_focus.png</texture>
-							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -492,7 +492,7 @@
 							<width>960</width>
 							<height>94</height>
 							<texture>settings_button_focus.png</texture>
-							<animation effect="fade" start="100" end="30" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -529,7 +529,7 @@
 						</control>
 						<control type="label">
 							<posx>68</posx>
-							<posy>68</posy>
+							<posy>66</posy>
 							<width>660</width>
 							<height>24</height>
 							<font>Font_18A</font>
@@ -592,6 +592,7 @@
 						</control>
 					</focusedlayout>
 				</control>
+<!-- List 51 Widelist ends here ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<control type="label" id="5101">
 					<!-- Tag -->
 					<include>InvisibleButton</include>
@@ -599,7 +600,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<!-- Grupo da direita -->
+<!-- Right side group +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<posx>960</posx>
 				<posy>0</posy>
 				<animation effect="slide" time="1000" start="900,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
@@ -1117,8 +1118,9 @@
 					<texture>gradient_small.png</texture>
 				</control>
 			</control>
+<!-- End right side group ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 			<control type="group">
-			<!--  right slide out panel -->
+<!--  right slide out panel B562 controlled ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<posy>15</posy>
 				<animation effect="slide" start="1050,0" end="0,0" time="400" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="1050,0" time="400" easing="inout" tween="cubic">Hidden</animation>
@@ -1142,55 +1144,55 @@
 				</control>
 				<control type="label">
 					<include>WideLabel</include>
-					<posy>66</posy>
+					<posy>67</posy>
 					<label>$VAR[value_ground12_label]</label>
 				</control>
 				<control type="label">
 					<include>WideValue</include>
-					<posy>66</posy>
+					<posy>67</posy>
 					<label>$VAR[value_ground12_value]</label>
 				</control>
 				<control type="label">
 					<include>WideLabel</include>
-					<posy>132</posy>
+					<posy>134</posy>
 					<label>$VAR[value_ground13_label]</label>
 				</control>
 				<control type="label">
 					<include>WideValue</include>
-					<posy>132</posy>
+					<posy>134</posy>
 					<label>$VAR[value_ground13_value]</label>
 				</control>
 				<control type="label">
 					<include>WideLabel</include>
-					<posy>198</posy>
+					<posy>201</posy>
 					<label>$VAR[value_ground15_label]</label>
 				</control>
 				<control type="label">
 					<include>WideValue</include>
-					<posy>198</posy>
+					<posy>201</posy>
 					<label>$VAR[value_ground15_value]</label>
 				</control>
 				<control type="label">
 					<include>WideLabel</include>
-					<posy>264</posy>
+					<posy>268</posy>
 					<label>$VAR[value_ground16_label]</label>
 					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="label">
 					<include>WideValue</include>
-					<posy>264</posy>
+					<posy>268</posy>
 					<label>$VAR[value_ground16_value]</label>
 					<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="label">
 					<include>WideLabel</include>
-					<posy>330</posy>
+					<posy>335</posy>
 					<label>$VAR[value_ground14_label]</label>
 					<visible>!Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<include>WideValue</include>
-					<posy>330</posy>
+					<posy>335</posy>
 					<label>$VAR[value_ground14_value]</label>
 					<visible>!Container.Content(albums)</visible>
 				</control>
