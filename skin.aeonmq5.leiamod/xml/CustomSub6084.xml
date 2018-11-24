@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.6.0 -->
 <window id="6084" type="dialog">
 	<!-- Music Sources -->
 	<defaultcontrol></defaultcontrol>
@@ -18,104 +18,104 @@
 					<include condition="Window.IsVisible(Home)">SubmenuHList</include>
 					<content>
 						<item>
-							<label fallback="31014">$VAR[value_menu6301.label]</label>
-							<property name="condition">$INFO[skin.string(menu6301.visible)]</property>
-							<property name="name">menu6301</property>
-							<property name="id">$INFO[skin.string(menu6301.master)]</property>
+							<label fallback="31014">$VAR[value_menu8401.label]</label>
+							<property name="condition">$INFO[skin.string(menu8401.visible)]</property>
+							<property name="name">menu8401</property>
+							<property name="id">$INFO[skin.string(menu8401.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6301.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6301.master)) | String.Contains(skin.string(menu6301.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8401.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8401.master)) | String.Contains(skin.string(menu8401.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6302.label]</label>
-							<property name="condition">$INFO[skin.string(menu6302.visible)]</property>
-							<property name="name">menu6302</property>
-							<property name="id">$INFO[skin.string(menu6302.master)]</property>
+							<label fallback="31014">$VAR[value_menu8402.label]</label>
+							<property name="condition">$INFO[skin.string(menu8402.visible)]</property>
+							<property name="name">menu8402</property>
+							<property name="id">$INFO[skin.string(menu8402.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6302.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6302.master)) | String.Contains(skin.string(menu6302.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8402.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8402.master)) | String.Contains(skin.string(menu8402.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6303.label]</label>
-							<property name="condition">$INFO[skin.string(menu6303.visible)]</property>
-							<property name="name">menu6303</property>
-							<property name="id">$INFO[skin.string(menu6303.master)]</property>
+							<label fallback="31014">$VAR[value_menu8403.label]</label>
+							<property name="condition">$INFO[skin.string(menu8403.visible)]</property>
+							<property name="name">menu8403</property>
+							<property name="id">$INFO[skin.string(menu8403.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6303.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6303.master)) | String.Contains(skin.string(menu6303.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8403.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8403.master)) | String.Contains(skin.string(menu8403.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6304.label]</label>
-							<property name="condition">$INFO[skin.string(menu6304.visible)]</property>
-							<property name="name">menu6304</property>
-							<property name="id">$INFO[skin.string(menu6304.master)]</property>
+							<label fallback="31014">$VAR[value_menu8404.label]</label>
+							<property name="condition">$INFO[skin.string(menu8404.visible)]</property>
+							<property name="name">menu8404</property>
+							<property name="id">$INFO[skin.string(menu8404.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6304.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6304.master)) | String.Contains(skin.string(menu6304.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8404.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8404.master)) | String.Contains(skin.string(menu8404.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6305.label]</label>
-							<property name="condition">$INFO[skin.string(menu6305.visible)]</property>
-							<property name="name">menu6305</property>
-							<property name="id">$INFO[skin.string(menu6305.master)]</property>
+							<label fallback="31014">$VAR[value_menu8405.label]</label>
+							<property name="condition">$INFO[skin.string(menu8405.visible)]</property>
+							<property name="name">menu8405</property>
+							<property name="id">$INFO[skin.string(menu8405.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6305.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6305.master)) | String.Contains(skin.string(menu6305.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8405.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8405.master)) | String.Contains(skin.string(menu8405.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6306.label]</label>
-							<property name="condition">$INFO[skin.string(menu6306.visible)]</property>
-							<property name="name">menu6306</property>
-							<property name="id">$INFO[skin.string(menu6306.master)]</property>
+							<label fallback="31014">$VAR[value_menu8406.label]</label>
+							<property name="condition">$INFO[skin.string(menu8406.visible)]</property>
+							<property name="name">menu8406</property>
+							<property name="id">$INFO[skin.string(menu8406.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6306.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6306.master)) | String.Contains(skin.string(menu6306.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8406.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8406.master)) | String.Contains(skin.string(menu8406.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6307.label]</label>
-							<property name="condition">$INFO[skin.string(menu6307.visible)]</property>
-							<property name="name">menu6307</property>
-							<property name="id">$INFO[skin.string(menu6307.master)]</property>
+							<label fallback="31014">$VAR[value_menu8407.label]</label>
+							<property name="condition">$INFO[skin.string(menu8407.visible)]</property>
+							<property name="name">menu8407</property>
+							<property name="id">$INFO[skin.string(menu8407.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6307.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6307.master)) | String.Contains(skin.string(menu6307.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8407.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8407.master)) | String.Contains(skin.string(menu8407.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6308.label]</label>
-							<property name="condition">$INFO[skin.string(menu6308.visible)]</property>
-							<property name="name">menu6308</property>
-							<property name="id">$INFO[skin.string(menu6308.master)]</property>
+							<label fallback="31014">$VAR[value_menu8408.label]</label>
+							<property name="condition">$INFO[skin.string(menu8408.visible)]</property>
+							<property name="name">menu8408</property>
+							<property name="id">$INFO[skin.string(menu8408.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6308.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6308.master)) | String.Contains(skin.string(menu6308.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8408.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8408.master)) | String.Contains(skin.string(menu8408.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6309.label]</label>
-							<property name="condition">$INFO[skin.string(menu6309.visible)]</property>
-							<property name="name">menu6309</property>
-							<property name="id">$INFO[skin.string(menu6309.master)]</property>
+							<label fallback="31014">$VAR[value_menu8409.label]</label>
+							<property name="condition">$INFO[skin.string(menu8409.visible)]</property>
+							<property name="name">menu8409</property>
+							<property name="id">$INFO[skin.string(menu8409.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6309.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6309.master)) | String.Contains(skin.string(menu6309.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8409.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8409.master)) | String.Contains(skin.string(menu8409.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 						<item>
-							<label fallback="31014">$VAR[value_menu6310.label]</label>
-							<property name="condition">$INFO[skin.string(menu6310.visible)]</property>
-							<property name="name">menu6310</property>
-							<property name="id">$INFO[skin.string(menu6310.master)]</property>
+							<label fallback="31014">$VAR[value_menu8410.label]</label>
+							<property name="condition">$INFO[skin.string(menu8410.visible)]</property>
+							<property name="name">menu8410</property>
+							<property name="id">$INFO[skin.string(menu8410.master)]</property>
 							<onclick condition="Window.IsVisible(6000)">SetFocus(5000)</onclick>
 							<onclick condition="Window.IsVisible(Home)">Dialog.Close(6084)</onclick>
-							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu6310.action])</onclick>
-							<visible>![String.IsEmpty(skin.string(menu6310.master)) | String.Contains(skin.string(menu6310.visible),off)] | Window.IsVisible(6000)</visible>
+							<onclick condition="Window.IsVisible(Home)">Skin.SetString(submenu_action,$VAR[value_menu8410.action])</onclick>
+							<visible>![String.IsEmpty(skin.string(menu8410.master)) | String.Contains(skin.string(menu8410.visible),off)] | Window.IsVisible(6000)</visible>
 						</item>
 					</content>
 				</control>

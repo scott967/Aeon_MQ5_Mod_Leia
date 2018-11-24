@@ -9685,6 +9685,248 @@
 		<value condition="String.IsEqual(skin.string(menu8210.master),favs)">$INFO[skin.string(menu8210.path)]</value>
 		<value condition="String.IsEqual(skin.string(menu8210.master),addons)">RunAddon($INFO[skin.string(menu8210.path)])</value>
 	</variable>
+<!--......-->
+	<variable name="value_menu8301.label">
+		<value condition="String.IsEmpty(skin.string(menu8301.label)) + !String.IsEqual(skin.string(menu8301.master),addons)">$INFO[skin.string(menu8301.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8301.label)) + String.IsEqual(skin.string(menu8301.master),addons)">$INFO[system.addontitle(skin.string(menu8301.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8301.label))">$INFO[skin.string(menu8301.label)]</value>
+	</variable>
+	<variable name="value_menu8301.action">
+		<value condition="![String.IsEqual(skin.string(menu8301.master),vplaylist) | String.IsEqual(skin.string(menu8301.master),aplaylist) | String.IsEqual(skin.string(menu8301.master),vnodes) | String.IsEqual(skin.string(menu8301.master),favs) | String.IsEqual(skin.string(menu8301.master),addons)]">$INFO[skin.string(menu8301.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8301.master),vplaylist) | String.IsEqual(skin.string(menu8301.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8301.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8301.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8301.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8301.master),favs)">$INFO[skin.string(menu8301.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8301.master),addons)">RunAddon($INFO[skin.string(menu8301.path)])</value>
+	</variable>
+	<variable name="value_menu8302.label">
+		<value condition="String.IsEmpty(skin.string(menu8302.label)) + !String.IsEqual(skin.string(menu8302.master),addons)">$INFO[skin.string(menu8302.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8302.label)) + String.IsEqual(skin.string(menu8302.master),addons)">$INFO[system.addontitle(skin.string(menu8302.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8302.label))">$INFO[skin.string(menu8302.label)]</value>
+	</variable>
+	<variable name="value_menu8302.action">
+		<value condition="![String.IsEqual(skin.string(menu8302.master),vplaylist) | String.IsEqual(skin.string(menu8302.master),aplaylist) | String.IsEqual(skin.string(menu8302.master),vnodes) | String.IsEqual(skin.string(menu8302.master),favs) | String.IsEqual(skin.string(menu8302.master),addons)]">$INFO[skin.string(menu8302.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8302.master),vplaylist) | String.IsEqual(skin.string(menu8302.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8302.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8302.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8302.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8302.master),favs)">$INFO[skin.string(menu8302.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8302.master),addons)">RunAddon($INFO[skin.string(menu8302.path)])</value>
+	</variable>
+	<variable name="value_menu8303.label">
+		<value condition="String.IsEmpty(skin.string(menu8303.label)) + !String.IsEqual(skin.string(menu8303.master),addons)">$INFO[skin.string(menu8303.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8303.label)) + String.IsEqual(skin.string(menu8303.master),addons)">$INFO[system.addontitle(skin.string(menu8303.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8303.label))">$INFO[skin.string(menu8303.label)]</value>
+	</variable>
+	<variable name="value_menu8303.action">
+		<value condition="![String.IsEqual(skin.string(menu8303.master),vplaylist) | String.IsEqual(skin.string(menu8303.master),aplaylist) | String.IsEqual(skin.string(menu8303.master),vnodes) | String.IsEqual(skin.string(menu8303.master),favs) | String.IsEqual(skin.string(menu8303.master),addons)]">$INFO[skin.string(menu8303.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8303.master),vplaylist) | String.IsEqual(skin.string(menu8303.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8303.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8303.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8303.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8303.master),favs)">$INFO[skin.string(menu8303.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8303.master),addons)">RunAddon($INFO[skin.string(menu8303.path)])</value>
+	</variable>
+	<variable name="value_menu8304.label">
+		<value condition="String.IsEmpty(skin.string(menu8304.label)) + !String.IsEqual(skin.string(menu8304.master),addons)">$INFO[skin.string(menu8304.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8304.label)) + String.IsEqual(skin.string(menu8304.master),addons)">$INFO[system.addontitle(skin.string(menu8304.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8304.label))">$INFO[skin.string(menu8304.label)]</value>
+	</variable>
+	<variable name="value_menu8304.action">
+		<value condition="![String.IsEqual(skin.string(menu8304.master),vplaylist) | String.IsEqual(skin.string(menu8304.master),aplaylist) | String.IsEqual(skin.string(menu8304.master),vnodes) | String.IsEqual(skin.string(menu8304.master),favs) | String.IsEqual(skin.string(menu8304.master),addons)]">$INFO[skin.string(menu8304.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8304.master),vplaylist) | String.IsEqual(skin.string(menu8304.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8304.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8304.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8304.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8304.master),favs)">$INFO[skin.string(menu8304.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8304.master),addons)">RunAddon($INFO[skin.string(menu8304.path)])</value>
+	</variable>
+	<variable name="value_menu8305.label">
+		<value condition="String.IsEmpty(skin.string(menu8305.label)) + !String.IsEqual(skin.string(menu8305.master),addons)">$INFO[skin.string(menu8305.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8305.label)) + String.IsEqual(skin.string(menu8305.master),addons)">$INFO[system.addontitle(skin.string(menu8305.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8305.label))">$INFO[skin.string(menu8305.label)]</value>
+	</variable>
+	<variable name="value_menu8305.action">
+		<value condition="![String.IsEqual(skin.string(menu8305.master),vplaylist) | String.IsEqual(skin.string(menu8305.master),aplaylist) | String.IsEqual(skin.string(menu8305.master),vnodes) | String.IsEqual(skin.string(menu8305.master),favs) | String.IsEqual(skin.string(menu8305.master),addons)]">$INFO[skin.string(menu8305.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8305.master),vplaylist) | String.IsEqual(skin.string(menu8305.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8305.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8305.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8305.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8305.master),favs)">$INFO[skin.string(menu8305.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8305.master),addons)">RunAddon($INFO[skin.string(menu8305.path)])</value>
+	</variable>
+	<variable name="value_menu8306.label">
+		<value condition="String.IsEmpty(skin.string(menu8306.label)) + !String.IsEqual(skin.string(menu8306.master),addons)">$INFO[skin.string(menu8306.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8306.label)) + String.IsEqual(skin.string(menu8306.master),addons)">$INFO[system.addontitle(skin.string(menu8306.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8306.label))">$INFO[skin.string(menu8306.label)]</value>
+	</variable>
+	<variable name="value_menu8306.action">
+		<value condition="![String.IsEqual(skin.string(menu8306.master),vplaylist) | String.IsEqual(skin.string(menu8306.master),aplaylist) | String.IsEqual(skin.string(menu8306.master),vnodes) | String.IsEqual(skin.string(menu8306.master),favs) | String.IsEqual(skin.string(menu8306.master),addons)]">$INFO[skin.string(menu8306.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8306.master),vplaylist) | String.IsEqual(skin.string(menu8306.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8306.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8306.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8306.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8306.master),favs)">$INFO[skin.string(menu8306.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8306.master),addons)">RunAddon($INFO[skin.string(menu8306.path)])</value>
+	</variable>
+	<variable name="value_menu8307.label">
+		<value condition="String.IsEmpty(skin.string(menu8307.label)) + !String.IsEqual(skin.string(menu8307.master),addons)">$INFO[skin.string(menu8307.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8307.label)) + String.IsEqual(skin.string(menu8307.master),addons)">$INFO[system.addontitle(skin.string(menu8307.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8307.label))">$INFO[skin.string(menu8307.label)]</value>
+	</variable>
+	<variable name="value_menu8307.action">
+		<value condition="![String.IsEqual(skin.string(menu8307.master),vplaylist) | String.IsEqual(skin.string(menu8307.master),aplaylist) | String.IsEqual(skin.string(menu8307.master),vnodes) | String.IsEqual(skin.string(menu8307.master),favs) | String.IsEqual(skin.string(menu8307.master),addons)]">$INFO[skin.string(menu8307.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8307.master),vplaylist) | String.IsEqual(skin.string(menu8307.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8307.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8307.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8307.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8307.master),favs)">$INFO[skin.string(menu8307.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8307.master),addons)">RunAddon($INFO[skin.string(menu8307.path)])</value>
+	</variable>
+	<variable name="value_menu8308.label">
+		<value condition="String.IsEmpty(skin.string(menu8308.label)) + !String.IsEqual(skin.string(menu8308.master),addons)">$INFO[skin.string(menu8308.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8308.label)) + String.IsEqual(skin.string(menu8308.master),addons)">$INFO[system.addontitle(skin.string(menu8308.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8308.label))">$INFO[skin.string(menu8308.label)]</value>
+	</variable>
+	<variable name="value_menu8308.action">
+		<value condition="![String.IsEqual(skin.string(menu8308.master),vplaylist) | String.IsEqual(skin.string(menu8308.master),aplaylist) | String.IsEqual(skin.string(menu8308.master),vnodes) | String.IsEqual(skin.string(menu8308.master),favs) | String.IsEqual(skin.string(menu8308.master),addons)]">$INFO[skin.string(menu8308.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8308.master),vplaylist) | String.IsEqual(skin.string(menu8308.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8308.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8308.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8308.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8308.master),favs)">$INFO[skin.string(menu8308.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8308.master),addons)">RunAddon($INFO[skin.string(menu8308.path)])</value>
+	</variable>
+	<variable name="value_menu8309.label">
+		<value condition="String.IsEmpty(skin.string(menu8309.label)) + !String.IsEqual(skin.string(menu8309.master),addons)">$INFO[skin.string(menu8309.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8309.label)) + String.IsEqual(skin.string(menu8309.master),addons)">$INFO[system.addontitle(skin.string(menu8309.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8309.label))">$INFO[skin.string(menu8309.label)]</value>
+	</variable>
+	<variable name="value_menu8309.action">
+		<value condition="![String.IsEqual(skin.string(menu8309.master),vplaylist) | String.IsEqual(skin.string(menu8309.master),aplaylist) | String.IsEqual(skin.string(menu8309.master),vnodes) | String.IsEqual(skin.string(menu8309.master),favs) | String.IsEqual(skin.string(menu8309.master),addons)]">$INFO[skin.string(menu8309.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8309.master),vplaylist) | String.IsEqual(skin.string(menu8309.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8309.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8309.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8309.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8309.master),favs)">$INFO[skin.string(menu8309.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8309.master),addons)">RunAddon($INFO[skin.string(menu8309.path)])</value>
+	</variable>
+	<variable name="value_menu8310.label">
+		<value condition="String.IsEmpty(skin.string(menu8310.label)) + !String.IsEqual(skin.string(menu8310.master),addons)">$INFO[skin.string(menu8310.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8310.label)) + String.IsEqual(skin.string(menu8310.master),addons)">$INFO[system.addontitle(skin.string(menu8310.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8310.label))">$INFO[skin.string(menu8310.label)]</value>
+	</variable>
+	<variable name="value_menu8310.action">
+		<value condition="![String.IsEqual(skin.string(menu8310.master),vplaylist) | String.IsEqual(skin.string(menu8310.master),aplaylist) | String.IsEqual(skin.string(menu8310.master),vnodes) | String.IsEqual(skin.string(menu8310.master),favs) | String.IsEqual(skin.string(menu8310.master),addons)]">$INFO[skin.string(menu8310.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8310.master),vplaylist) | String.IsEqual(skin.string(menu8310.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8310.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8310.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8310.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8310.master),favs)">$INFO[skin.string(menu8310.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8310.master),addons)">RunAddon($INFO[skin.string(menu8310.path)])</value>
+	</variable>
+<!--......-->
+	<variable name="value_menu8401.label">
+		<value condition="String.IsEmpty(skin.string(menu8401.label)) + !String.IsEqual(skin.string(menu8401.master),addons)">$INFO[skin.string(menu8401.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8401.label)) + String.IsEqual(skin.string(menu8401.master),addons)">$INFO[system.addontitle(skin.string(menu8401.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8401.label))">$INFO[skin.string(menu8401.label)]</value>
+	</variable>
+	<variable name="value_menu8401.action">
+		<value condition="![String.IsEqual(skin.string(menu8401.master),vplaylist) | String.IsEqual(skin.string(menu8401.master),aplaylist) | String.IsEqual(skin.string(menu8401.master),vnodes) | String.IsEqual(skin.string(menu8401.master),favs) | String.IsEqual(skin.string(menu8401.master),addons)]">$INFO[skin.string(menu8401.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8401.master),vplaylist) | String.IsEqual(skin.string(menu8401.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8401.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8401.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8401.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8401.master),favs)">$INFO[skin.string(menu8401.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8401.master),addons)">RunAddon($INFO[skin.string(menu8401.path)])</value>
+	</variable>
+	<variable name="value_menu8402.label">
+		<value condition="String.IsEmpty(skin.string(menu8402.label)) + !String.IsEqual(skin.string(menu8402.master),addons)">$INFO[skin.string(menu8402.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8402.label)) + String.IsEqual(skin.string(menu8402.master),addons)">$INFO[system.addontitle(skin.string(menu8402.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8402.label))">$INFO[skin.string(menu8402.label)]</value>
+	</variable>
+	<variable name="value_menu8402.action">
+		<value condition="![String.IsEqual(skin.string(menu8402.master),vplaylist) | String.IsEqual(skin.string(menu8402.master),aplaylist) | String.IsEqual(skin.string(menu8402.master),vnodes) | String.IsEqual(skin.string(menu8402.master),favs) | String.IsEqual(skin.string(menu8402.master),addons)]">$INFO[skin.string(menu8402.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8402.master),vplaylist) | String.IsEqual(skin.string(menu8402.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8402.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8402.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8402.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8402.master),favs)">$INFO[skin.string(menu8402.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8402.master),addons)">RunAddon($INFO[skin.string(menu8402.path)])</value>
+	</variable>
+	<variable name="value_menu8403.label">
+		<value condition="String.IsEmpty(skin.string(menu8403.label)) + !String.IsEqual(skin.string(menu8403.master),addons)">$INFO[skin.string(menu8403.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8403.label)) + String.IsEqual(skin.string(menu8403.master),addons)">$INFO[system.addontitle(skin.string(menu8403.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8403.label))">$INFO[skin.string(menu8403.label)]</value>
+	</variable>
+	<variable name="value_menu8403.action">
+		<value condition="![String.IsEqual(skin.string(menu8403.master),vplaylist) | String.IsEqual(skin.string(menu8403.master),aplaylist) | String.IsEqual(skin.string(menu8403.master),vnodes) | String.IsEqual(skin.string(menu8403.master),favs) | String.IsEqual(skin.string(menu8403.master),addons)]">$INFO[skin.string(menu8403.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8403.master),vplaylist) | String.IsEqual(skin.string(menu8403.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8403.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8403.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8403.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8403.master),favs)">$INFO[skin.string(menu8403.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8403.master),addons)">RunAddon($INFO[skin.string(menu8403.path)])</value>
+	</variable>
+	<variable name="value_menu8404.label">
+		<value condition="String.IsEmpty(skin.string(menu8404.label)) + !String.IsEqual(skin.string(menu8404.master),addons)">$INFO[skin.string(menu8404.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8404.label)) + String.IsEqual(skin.string(menu8404.master),addons)">$INFO[system.addontitle(skin.string(menu8404.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8404.label))">$INFO[skin.string(menu8404.label)]</value>
+	</variable>
+	<variable name="value_menu8404.action">
+		<value condition="![String.IsEqual(skin.string(menu8404.master),vplaylist) | String.IsEqual(skin.string(menu8404.master),aplaylist) | String.IsEqual(skin.string(menu8404.master),vnodes) | String.IsEqual(skin.string(menu8404.master),favs) | String.IsEqual(skin.string(menu8404.master),addons)]">$INFO[skin.string(menu8404.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8404.master),vplaylist) | String.IsEqual(skin.string(menu8404.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8404.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8404.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8404.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8404.master),favs)">$INFO[skin.string(menu8404.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8404.master),addons)">RunAddon($INFO[skin.string(menu8404.path)])</value>
+	</variable>
+	<variable name="value_menu8405.label">
+		<value condition="String.IsEmpty(skin.string(menu8405.label)) + !String.IsEqual(skin.string(menu8405.master),addons)">$INFO[skin.string(menu8405.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8405.label)) + String.IsEqual(skin.string(menu8405.master),addons)">$INFO[system.addontitle(skin.string(menu8405.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8405.label))">$INFO[skin.string(menu8405.label)]</value>
+	</variable>
+	<variable name="value_menu8405.action">
+		<value condition="![String.IsEqual(skin.string(menu8405.master),vplaylist) | String.IsEqual(skin.string(menu8405.master),aplaylist) | String.IsEqual(skin.string(menu8405.master),vnodes) | String.IsEqual(skin.string(menu8405.master),favs) | String.IsEqual(skin.string(menu8405.master),addons)]">$INFO[skin.string(menu8405.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8405.master),vplaylist) | String.IsEqual(skin.string(menu8405.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8405.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8405.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8405.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8405.master),favs)">$INFO[skin.string(menu8405.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8405.master),addons)">RunAddon($INFO[skin.string(menu8405.path)])</value>
+	</variable>
+	<variable name="value_menu8406.label">
+		<value condition="String.IsEmpty(skin.string(menu8406.label)) + !String.IsEqual(skin.string(menu8406.master),addons)">$INFO[skin.string(menu8406.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8406.label)) + String.IsEqual(skin.string(menu8406.master),addons)">$INFO[system.addontitle(skin.string(menu8406.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8406.label))">$INFO[skin.string(menu8406.label)]</value>
+	</variable>
+	<variable name="value_menu8406.action">
+		<value condition="![String.IsEqual(skin.string(menu8406.master),vplaylist) | String.IsEqual(skin.string(menu8406.master),aplaylist) | String.IsEqual(skin.string(menu8406.master),vnodes) | String.IsEqual(skin.string(menu8406.master),favs) | String.IsEqual(skin.string(menu8406.master),addons)]">$INFO[skin.string(menu8406.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8406.master),vplaylist) | String.IsEqual(skin.string(menu8406.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8406.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8406.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8406.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8406.master),favs)">$INFO[skin.string(menu8406.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8406.master),addons)">RunAddon($INFO[skin.string(menu8406.path)])</value>
+	</variable>
+	<variable name="value_menu8407.label">
+		<value condition="String.IsEmpty(skin.string(menu8407.label)) + !String.IsEqual(skin.string(menu8407.master),addons)">$INFO[skin.string(menu8407.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8407.label)) + String.IsEqual(skin.string(menu8407.master),addons)">$INFO[system.addontitle(skin.string(menu8407.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8407.label))">$INFO[skin.string(menu8407.label)]</value>
+	</variable>
+	<variable name="value_menu8407.action">
+		<value condition="![String.IsEqual(skin.string(menu8407.master),vplaylist) | String.IsEqual(skin.string(menu8407.master),aplaylist) | String.IsEqual(skin.string(menu8407.master),vnodes) | String.IsEqual(skin.string(menu8407.master),favs) | String.IsEqual(skin.string(menu8407.master),addons)]">$INFO[skin.string(menu8407.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8407.master),vplaylist) | String.IsEqual(skin.string(menu8407.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8407.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8407.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8407.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8407.master),favs)">$INFO[skin.string(menu8407.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8407.master),addons)">RunAddon($INFO[skin.string(menu8407.path)])</value>
+	</variable>
+	<variable name="value_menu8408.label">
+		<value condition="String.IsEmpty(skin.string(menu8408.label)) + !String.IsEqual(skin.string(menu8408.master),addons)">$INFO[skin.string(menu8408.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8408.label)) + String.IsEqual(skin.string(menu8408.master),addons)">$INFO[system.addontitle(skin.string(menu8408.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8408.label))">$INFO[skin.string(menu8408.label)]</value>
+	</variable>
+	<variable name="value_menu8408.action">
+		<value condition="![String.IsEqual(skin.string(menu8408.master),vplaylist) | String.IsEqual(skin.string(menu8408.master),aplaylist) | String.IsEqual(skin.string(menu8408.master),vnodes) | String.IsEqual(skin.string(menu8408.master),favs) | String.IsEqual(skin.string(menu8408.master),addons)]">$INFO[skin.string(menu8408.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8408.master),vplaylist) | String.IsEqual(skin.string(menu8408.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8408.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8408.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8408.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8408.master),favs)">$INFO[skin.string(menu8408.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8408.master),addons)">RunAddon($INFO[skin.string(menu8408.path)])</value>
+	</variable>
+	<variable name="value_menu8409.label">
+		<value condition="String.IsEmpty(skin.string(menu8409.label)) + !String.IsEqual(skin.string(menu8409.master),addons)">$INFO[skin.string(menu8409.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8409.label)) + String.IsEqual(skin.string(menu8409.master),addons)">$INFO[system.addontitle(skin.string(menu8409.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8409.label))">$INFO[skin.string(menu8409.label)]</value>
+	</variable>
+	<variable name="value_menu8409.action">
+		<value condition="![String.IsEqual(skin.string(menu8409.master),vplaylist) | String.IsEqual(skin.string(menu8409.master),aplaylist) | String.IsEqual(skin.string(menu8409.master),vnodes) | String.IsEqual(skin.string(menu8409.master),favs) | String.IsEqual(skin.string(menu8409.master),addons)]">$INFO[skin.string(menu8409.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8409.master),vplaylist) | String.IsEqual(skin.string(menu8409.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8409.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8409.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8409.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8409.master),favs)">$INFO[skin.string(menu8409.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8409.master),addons)">RunAddon($INFO[skin.string(menu8409.path)])</value>
+	</variable>
+	<variable name="value_menu8410.label">
+		<value condition="String.IsEmpty(skin.string(menu8410.label)) + !String.IsEqual(skin.string(menu8410.master),addons)">$INFO[skin.string(menu8410.defaultlabel)]</value>
+		<value condition="String.IsEmpty(skin.string(menu8410.label)) + String.IsEqual(skin.string(menu8410.master),addons)">$INFO[system.addontitle(skin.string(menu8410.path))]</value>
+		<value condition="!String.IsEmpty(skin.string(menu8410.label))">$INFO[skin.string(menu8410.label)]</value>
+	</variable>
+	<variable name="value_menu8410.action">
+		<value condition="![String.IsEqual(skin.string(menu8410.master),vplaylist) | String.IsEqual(skin.string(menu8410.master),aplaylist) | String.IsEqual(skin.string(menu8410.master),vnodes) | String.IsEqual(skin.string(menu8410.master),favs) | String.IsEqual(skin.string(menu8410.master),addons)]">$INFO[skin.string(menu8410.action)]</value>
+		<value condition="String.IsEqual(skin.string(menu8410.master),vplaylist) | String.IsEqual(skin.string(menu8410.master),vnodes)">ActivateWindow(Videos,$INFO[skin.string(menu8410.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8410.master),aplaylist)">ActivateWindow(music,$INFO[skin.string(menu8410.path)],return)</value>
+		<value condition="String.IsEqual(skin.string(menu8410.master),favs)">$INFO[skin.string(menu8410.path)]</value>
+		<value condition="String.IsEqual(skin.string(menu8410.master),addons)">RunAddon($INFO[skin.string(menu8410.path)])</value>
+	</variable>
 	<!--......-->
 	<variable name="value_menu8501.label">
 		<value condition="String.IsEmpty(skin.string(menu8501.label)) + !String.IsEqual(skin.string(menu8501.master),addons)">$INFO[skin.string(menu8501.defaultlabel)]</value>
