@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.5.2">
+<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.6.0">
 	<requires>
-		<import addon="xbmc.gui" version="5.13.0" />
+		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="script.favourites" version="4.0.4" />
 		<import addon="script.randomandlastitems" version="2.0.3" />
 		<import addon="script.games.rom.collection.browser" version="2.1.2" />
@@ -65,13 +65,14 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.5.1 - RELEASE DATE 09/22/2018 for Kodi LEIA BETA2+[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.6.0 - RELEASE DATE 11/22/2018 for Kodi LEIA RC1+[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
 Improved:  Support for all Kodi Leia enahancements.
 New:  Support for retroplayer
 New:  Support for additional library-managed art types
-Improved:  Improved font support for languages
-Improved:  Music library views and info dialogs
+New:  Support for ExtraInfo script
+New:  Multi-list viewtype for music
+New:  Support for Weatherbit.io weather source
 		</news>
 	</extension>
 
