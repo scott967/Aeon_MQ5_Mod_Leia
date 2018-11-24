@@ -3,13 +3,14 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2/10.6.0 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
 		<defaultcontrol always="true">51</defaultcontrol>
 		<menucontrol>9900</menucontrol>
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
+		<onunload>ClearProperty(mv_artist,music)</onunload>
 		<!-- <allowoverlay>no</allowoverlay> -->
 		<views>51,54,55,56,58,59,62,70,71</views>
 		<controls>
