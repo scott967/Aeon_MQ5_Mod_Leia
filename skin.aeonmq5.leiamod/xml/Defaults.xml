@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 6.1.3 -->
 <!-- Krypton 9.1.18/9.2.1 window IDs -->
-<!-- Leia 10.2.5 -->
+<!-- Leia 10.2.5/10.5.2 -->
 <includes>
 	<default type="image">
 		<posx>0</posx>
@@ -129,7 +129,7 @@
 	</default>
 	<default type="fadelabel">
 		<posx>82</posx>
-		<posY>530</posY>
+		<posy>530</posy>
 		<width>270</width>
 		<align>left</align>
 		<font>Font_20</font>
