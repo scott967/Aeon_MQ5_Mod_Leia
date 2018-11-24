@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.4 /6.1.7/6.1.8 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.3/10.2.8/10.3.0/10.5.0/10.5.1 -->
+<!-- Leia 10.2.3/10.2.8/10.3.0/10.5.0/10.5.1/10.6.0 -->
 <includes>
 	<!-- ######################################################################### Presets para aplicar ######################################################################### -->
 	<include name="Preset1_Apply">
@@ -1266,6 +1266,7 @@
 			<visible allowhiddenfocus="true">Control.Hasfocus(80) | Control.Hasfocus(452)</visible>
 		</control>
 <!--  List of available actions to assign to Home menu or submenu -->
+<!--  Each action has a corresponding CustomSub file -->
 		<control type="list" id="452">
 			<viewtype>list</viewtype>
 			<posx>1530</posx>
@@ -2111,6 +2112,16 @@
 					<property name="id">music</property>
 					<onclick>Skin.SetString($INFO[skin.string(custom_master)],musicsources)</onclick>
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(music,"musicdb://sources/",return))</onclick>
+					<include>DefaultReset</include>
+				</item>
+				<item>
+					<label>$LOCALIZE[31002]-$LOCALIZE[31099]</label>
+					<!-- Music MUSIC VIDEOS -->
+					<!-- 6085 -->
+					<label2>$LOCALIZE[31002]-$LOCALIZE[31099]</label2>
+					<property name="id">music</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],musicmusicvideos)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(music,"library://music/musicvideos/",return))</onclick>
 					<include>DefaultReset</include>
 				</item>
 				<item>

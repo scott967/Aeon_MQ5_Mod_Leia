@@ -82,6 +82,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),settingssystem)">6082</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),musicroles)">6083</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),musicsources)">6084</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),musicmusicvideos)">6085</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),vpl1)">6101</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),vpl2)">6102</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),vpl3)">6103</value>
