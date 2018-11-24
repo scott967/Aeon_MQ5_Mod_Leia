@@ -41,7 +41,11 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>FFFFFAF0</textcolor>
-				<include>Animation_Widgets</include>
+				<annimation type="Visible" reversible="false">
+					<effect effect="fade" start="0" end="100" time="500" delay="700"/>
+					<effect effect="fade" start="100" end="50" time="500" delay="700"/>
+				</annimation>
+				<animation effect="fade" start="50" end="0" time="200">Hidden</animation>
 			</control>
 			<control type="image">
 				<posx>45</posx>
