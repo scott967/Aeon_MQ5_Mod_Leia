@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
@@ -11,7 +11,7 @@
 		<menucontrol>9900</menucontrol>
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 		<!-- <allowoverlay>no</allowoverlay> -->
-		<views>51,54,55,56,58,59,62,70</views>
+		<views>51,54,55,56,58,59,62,70,71</views>
 		<controls>
 			<control type="multiimage">
 				<!-- Multi Fanart -->
@@ -88,7 +88,7 @@
 					<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-					<visible>![[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(637)]</visible>
+					<visible>![[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(70) | Control.IsVisible(71)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(637)]</visible>
 					<!-- <visible>![Control.IsVisible(51) | [Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(637)]</visible> -->
 					<control type="image">
 						<posx>0</posx>
@@ -481,6 +481,8 @@
 					<!-- 62 -->
 					<include condition="Skin.HasSetting(viewmidlist_music)">ViewMidList</include>
 					<!-- 70-->
+					<include condition="Skin.HasSetting(viewmultilist_music)">ViewMultiList</include>
+					<!-- 71 -->
 				</control>
 				<control type="image">
 					<!-- Logo -->

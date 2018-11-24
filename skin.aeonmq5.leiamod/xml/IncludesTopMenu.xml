@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.3/10.2.6/10.2.7/10.3.0/10.5.0/10.5.1 -->
+<!-- Leia 10.2.3/10.2.6/10.2.7/10.3.0/10.5.0/10.5.1/10.5.2 -->
 <includes>
 	<include name="TopMenuTopButton">
 		<posy>32</posy>
@@ -2110,6 +2110,21 @@
 					<onclick>Skin.ToggleSetting(multiplexpanel_on)</onclick>
 					<selected>Skin.HasSetting(multiplexpanel_on)</selected>
 					<visible>Control.IsVisible(61)</visible>
+				</control>
+				<!-- MultiList -->
+				<control type="radiobutton" id="9261">
+					<include>TopMenuRadioButton</include>
+					<label>31486</label>
+					<onclick>Skin.ToggleSetting(nomultiaudiocase)</onclick>
+					<selected>!Skin.HasSetting(nomultiaudiocase)</selected>
+					<visible>Control.IsVisible(71)</visible>
+				</control>
+				<control type="radiobutton" id="9262">
+					<include>TopMenuRadioButton</include>
+					<label>31490</label>
+					<onclick>Skin.ToggleSetting(slimmultimusic)</onclick>
+					<selected>Skin.HasSetting(slimmultimusic)</selected>
+					<visible>Control.IsVisible(71)</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="9301">

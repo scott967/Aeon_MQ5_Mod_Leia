@@ -58,6 +58,8 @@
 	<!-- 79 -->
 	<include file="ViewsMidList.xml" />
 	<!-- 70 -->
+	<include file="ViewsMultiList.xml" />
+	<!-- 71 -->
 	<include file="ViewsGames.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<constant name="FanartCrossFadeTime">350</constant>

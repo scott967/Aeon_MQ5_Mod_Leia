@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.2.1 window IDs -->
+<!-- Leia 10.5.2 -->
 <window id="1103" type="dialog">
 	<!-- was 626 -->
 	<defaultcontrol always="true">9030</defaultcontrol>
@@ -128,6 +129,14 @@
 					<label>31448</label>
 					<onclick>Skin.ToggleSetting(viewmidlist_music)</onclick>
 					<selected>Skin.HasSetting(viewmidlist_music)</selected>
+				</control>
+				<control type="radiobutton" id="19271">
+					<!-- Multi List -->
+					<!-- 71 -->
+					<radioposx>1341</radioposx>
+					<label>Multi-$LOCALIZE[535]</label>
+					<onclick>Skin.ToggleSetting(viewmultilist_music)</onclick>
+					<selected>Skin.HasSetting(viewmultilist_music)</selected>
 				</control>
 			</control>
 		</control>
