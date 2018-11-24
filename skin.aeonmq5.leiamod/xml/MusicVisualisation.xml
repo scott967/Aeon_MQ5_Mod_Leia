@@ -2,10 +2,10 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0 -->
+<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0/10.5.2 -->
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
-	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(5600,640,0)</onload>
+	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(5600,640,0)</onload> <!-- Custom next tracks -->
 	<onunload>Dialog.Close(5600)</onunload>
 	<controls>
 		<control type="image">
@@ -113,8 +113,7 @@
 				<posx>0</posx>
 				<posy>1160</posy>
 				<animation effect="slide" start="0,0" end="-600,0" time="400" tween="cubic" easing="inout" condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(627)">Conditional</animation>
-				<!-- custom osd music -->
+				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(627)">Conditional</animation><!-- 627 custom osd music -->
 				<animation effect="slide" start="0,0" end="0,450" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-1350,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 				<animation effect="slide" start="0,1080" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
@@ -216,7 +215,7 @@
 					<aspectratio align="center">keep</aspectratio>
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
 				</control>
-				<control type="label">
+				<control type="label">  <!-- move this -->
 					<posx>50</posx>
 					<posy>-105</posy>
 					<height>45</height>
@@ -230,26 +229,30 @@
 				</control>
 				<control type="label">
 					<posx>622</posx>
-					<posy>-30</posy>
+					<posy>-50</posy> <!-- was -30 -->
 					<width>690</width>
 					<height>45</height>
-					<align>left</align>
+					<align>center</align>
 					<font>Font_32</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<scroll>true</scroll>
 				</control>
-				<control type="label">
+				<control type="fadelabel">
 					<posx>622</posx>
-					<posy>26</posy>
+					<posy>10</posy> <!-- was 26 -->
 					<width>690</width>
 					<height>30</height>
-					<align>left</align>
-					<font>Font_21A</font>
+					<align>center</align>
+					<font>Font_24A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label>$INFO[MusicPlayer.Album][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Year][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Genre]</label>
+					<!-- <label>$INFO[MusicPlayer.Album][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Year][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Genre]</label> -->
+					<label>$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title]</label>
+					<label>$INFO[MusicPlayer.Album] - $INFO[MusicPlayer.Year]</label>
+					<pauseatend>5000</pauseatend>
 					<scroll>true</scroll>
-					<scrollspeed>20</scrollspeed>
+					<scrollout>false</scrollout>
+					<scrollspeed>25</scrollspeed>
 				</control>
 				<control type="image">
 					<posx>622</posx>
