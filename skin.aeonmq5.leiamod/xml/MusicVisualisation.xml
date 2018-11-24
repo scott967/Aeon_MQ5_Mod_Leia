@@ -249,7 +249,7 @@
 					<!-- <label>$INFO[MusicPlayer.Album][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Year][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Genre]</label> -->
 					<label>$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title]</label>
 					<label>$INFO[MusicPlayer.Album] - $INFO[MusicPlayer.Year]</label>
-					<pauseatend>5000</pauseatend>
+					<pauseatend>10000</pauseatend>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 					<scrollspeed>25</scrollspeed>
@@ -279,18 +279,18 @@
 					<texture>divider.png</texture>
 				</control>
 				<control type="image">
-					<posx>622</posx>
+					<posx>607</posx>
 					<posy>278</posy>
-					<width>120</width>
-					<height>49</height> <!-- 98 -->
+					<width>145</width>
+					<height>60</height> <!-- 98 -->
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<texture>$INFO[MusicPlayer.Codec,flags/musiccodec/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>622</posx>
-					<posy>317</posy>
-					<width>120</width>
-					<height>49</height> <!-- 98 -->
+					<posx>1217</posx> <!-- was 622 -->
+					<posy>278</posy> <!-- was 317 -->
+					<width>145</width>
+					<height>60</height> <!-- 98 -->
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 					<texture>$INFO[MusicPlayer.Channels,flags/audiochannels/,ch.png]</texture>
 				</control>
@@ -303,11 +303,11 @@
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_17A</font>
-					<label>[COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
+					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>!String.Contains(Skin.Font,massive)</visible>
 				</control>
 				<control type="label">
-					<posx>758</posx>
+					<posx>690</posx>
 					<posy>289</posy>
 					<width>554</width> <!-- 600 -->
 					<height>36</height>
@@ -315,11 +315,11 @@
 					<aligny>center</aligny>
 					<textcolor>FFFFFAF0</textcolor>
 					<font>Font_14A</font>
-					<label>[COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
+					<label>$INFO[MusicPlayer.SampleRate,,KHz][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitRate,,Kbps][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.BitsPerSample,,Bits]</label>
 					<visible>String.Contains(Skin.Font,massive)</visible>
 				</control>
 				<control type="progress">
-					<posx>758</posx>
+					<posx>690</posx> <!-- was 758 -->
 					<posy>328</posy>
 					<width>554</width>
 					<height>34</height>
@@ -327,7 +327,7 @@
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>758</posx> <!-- 975 -->
+					<posx>690</posx> <!-- 975/758 -->
 					<posy>327</posy>
 					<width>554</width> <!-- 600 -->
 					<height>36</height>
