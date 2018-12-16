@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 Window IDs 142/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.6.2 -->
 <window>
 	<defaultcontrol></defaultcontrol>
 	<controls>
@@ -369,7 +369,7 @@
 				<bordertexture border="-2">darkgrey.png</bordertexture>
 			</control>
 			<control type="label">
-				<!-- Titulo enredo -->
+				<!-- Plot -->
 				<posx>330</posx>
 				<posy>670</posy>
 				<width>450</width>
@@ -395,7 +395,7 @@
 			<control type="group">
 				<visible>!VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
 				<control type="label">
-					<!-- Titulo elenco -->
+					<!-- Starring -->
 					<posx>1320</posx>
 					<posy>670</posy>
 					<width>450</width>
@@ -421,12 +421,13 @@
 			<control type="group">
 				<visible>VideoPlayer.Content(musicvideos)</visible>
 				<control type="label">
-					<!-- Titulo elenco -->
+					<!-- Album | Artist -->
 					<posx>1320</posx>
 					<posy>670</posy>
 					<width>450</width>
 					<height>38</height>
 					<align>left</align>
+					<aligny>center</aligny>
 					<font>Font_17A</font>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 					<label>[UPPERCASE]$LOCALIZE[558] | $LOCALIZE[557][/UPPERCASE]</label>
