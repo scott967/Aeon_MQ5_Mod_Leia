@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0/10.5.2 -->
+<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
@@ -410,7 +410,7 @@
 					<font>Font_15</font>
 					<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
-					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Container(50).ListItem.Label) + Integer.IsEqual(Container(50).NumItems,50)</visible>
 				</control>
 				<control type="label">
 					<!-- Container 50 label focus album track (these tracks are in library) when AS info not avail -->
