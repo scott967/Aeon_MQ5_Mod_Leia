@@ -11,7 +11,7 @@
 				<left>729</left>
 				<width>1950</width>
 				<height>1080</height>
-				<texture fallback="common/black.png">$INFO[Window.Property(ImageFilter)]</texture>
+				<texture fallback="black.png">$INFO[Window.Property(ImageFilter)]</texture>
 			</control> -->
 			<control type="image">
 				<posx>0</posx>
@@ -279,10 +279,10 @@
 							</control>
 							<control type="radiobutton" id="6005">
 								<label>$ADDON[script.extendedinfo 32107]</label>
-								<textureradioonfocus colordiffuse="FFFAFAFA">icons/checkmark.png</textureradioonfocus>
-								<textureradioofffocus colordiffuse="FFFAFAFA">icons/checkmark.png</textureradioofffocus>
-								<textureradiooffnofocus colordiffuse="FF999999">icons/checkmark.png</textureradiooffnofocus>
-								<textureradioonnofocus colordiffuse="FF999999">icons/checkmark.png</textureradioonnofocus>
+								<textureradioonfocus colordiffuse="FFFAFAFA">OverlayWatched_6.png</textureradioonfocus>
+								<textureradioofffocus colordiffuse="FFFAFAFA">OverlayWatched_6.png</textureradioofffocus>
+								<textureradiooffnofocus colordiffuse="FF999999">OverlayWatched_6.png</textureradiooffnofocus>
+								<textureradioonnofocus colordiffuse="FF999999">OverlayWatched_6.png</textureradioonnofocus>
 								<width>280</width>
 								<height>140</height>
 								<textoffsetx>0</textoffsetx>
@@ -349,7 +349,7 @@
 								<visible>String.IsEmpty(Window.Property(tmdb_logged_in))</visible>
 								<visible>!String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),TVShow)</visible>
 							</control>
-							<control type="radiobutton" id="100">
+							<!-- <control type="radiobutton" id="100">
 								<width>280</width>
 								<height>140</height>
 								<textoffsetx>0</textoffsetx>
@@ -373,7 +373,7 @@
 								<textureradioofffocus colordiffuse="FFFAFAFA">icons/plus2.png</textureradioofffocus>
 								<textureradiooffnofocus colordiffuse="FF999999">icons/plus2.png</textureradiooffnofocus>
 								<textureradioonnofocus colordiffuse="FF999999">icons/plus2.png</textureradioonnofocus>
-							</control>
+							</control> -->
 							<control type="radiobutton" id="445">
 								<width>280</width>
 								<height>140</height>
@@ -424,7 +424,7 @@
 								<width>100</width>
 								<height>62</height>
 								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="FFFAFAFA">$INFO[Window.Property(VideoCodec),flags/source/,.png]</texture>
+								<texture colordiffuse="FFFAFAFA">$INFO[Window.Property(VideoCodec),flags/videocodec/,.png]</texture>
 								<visible>!String.IsEmpty(Window.Property(VideoCodec))</visible>
 							</control>
 							<control type="image">
@@ -683,7 +683,7 @@
 							<top>71</top>
 							<width>1042</width>
 							<height>1</height>
-							<texture>info/infopanel_line.png</texture>
+							<texture>line.png</texture>
 						</control>
 					</control>
 					<control type="group" id="50111">
@@ -753,7 +753,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(1000)">Conditional</animation>
 											<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
@@ -827,7 +827,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32115]$INFO[Container(750).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -893,7 +893,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(750)">Conditional</animation>
 											<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
@@ -973,7 +973,7 @@
 							<top>0</top>
 							<width>70</width>
 							<height>70</height>
-							<texture>icons/info.png</texture>
+							<texture>osd_menu_info.png</texture>
 						</control>
 						<control type="label" id="800">
 							<left>130</left>
@@ -997,7 +997,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32116]$INFO[Container(150).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -1054,7 +1054,7 @@
 											<top>310</top>
 											<width>63</width>
 											<height>25</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>!String.IsEmpty(ListItem.Year)</visible>
@@ -1074,14 +1074,14 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
 										</control>
 										<control type="image">
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(150)">Conditional</animation>
 											<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
@@ -1134,14 +1134,14 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
 										</control>
 										<control type="image">
 											<top>310</top>
 											<width>63</width>
 											<height>25</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>!String.IsEmpty(ListItem.Year)</visible>
@@ -1191,7 +1191,7 @@
 							<width>980</width>
 							<height>325</height>
 							<visible>!String.IsEmpty(Window.Property(set.fanart)) + !String.IsEmpty(Window.Property(set.overview))</visible>
-							<texture colordiffuse="66FFFFFF">common/black.png</texture>
+							<texture colordiffuse="66FFFFFF">black.png</texture>
 							<aspectratio>scale</aspectratio>
 						</control>
 						<control type="label">
@@ -1201,7 +1201,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$INFO[Window.Property(set.label)]$INFO[Container(250).NumItems, (,)]</label>
+							<label>$INFO[Window.Property(set.label)]$INFO[Container(250).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="textbox">
 							<left>280</left>
@@ -1234,7 +1234,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$LOCALIZE[33054]$INFO[Container(250).NumItems, (,)]</label>
+							<label>$LOCALIZE[33054]$INFO[Container(250).NumNonFolderItems, (,)]</label>
 							<visible>String.IsEmpty(Window.Property(set.label))</visible>
 						</control>
 						<control type="image">
@@ -1292,14 +1292,14 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
 										</control>
 										<control type="image">
 											<top>310</top>
 											<width>63</width>
 											<height>25</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>!String.IsEmpty(ListItem.Year)</visible>
@@ -1318,7 +1318,7 @@
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(250)">Conditional</animation>
 											<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
@@ -1370,14 +1370,14 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.dbid)</visible>
 										</control>
 										<control type="image">
 											<top>310</top>
 											<width>63</width>
 											<height>25</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
 											<visible>!String.IsEmpty(ListItem.Year)</visible>
@@ -1418,7 +1418,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32117]$INFO[Container(1150).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32117]$INFO[Container(1150).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -1478,7 +1478,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture>common/black.png</texture>
+										<texture>black.png</texture>
 										<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(1150)">Conditional</animation>
 										<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -1548,7 +1548,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32118]$INFO[Container(350).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -1606,7 +1606,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture>common/black.png</texture>
+										<texture>black.png</texture>
 										<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(350)">Conditional</animation>
 										<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -1675,7 +1675,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$LOCALIZE[20388]$INFO[Container(550).NumItems, (,)]</label>
+							<label>$LOCALIZE[20388]$INFO[Container(550).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -1724,7 +1724,7 @@
 										<left>50</left>
 										<width>273</width>
 										<height>100</height>
-										<texture fallback="flags/source/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="osd_menu_unknown.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1761,7 +1761,7 @@
 										<left>50</left>
 										<width>273</width>
 										<height>100</height>
-										<texture fallback="flags/source/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="osd_menu_unknown.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1789,7 +1789,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32152]$INFO[Container(1450).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32152]$INFO[Container(1450).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -1838,7 +1838,7 @@
 										<left>30</left>
 										<width>313</width>
 										<height>100</height>
-										<texture fallback="flags/source/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="osd_menu_unknown.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1875,7 +1875,7 @@
 										<left>30</left>
 										<width>313</width>
 										<height>100</height>
-										<texture fallback="flags/source/default.png">$INFO[ListItem.Thumb]</texture>
+										<texture fallback="osd_menu_unknown.png">$INFO[ListItem.Thumb]</texture>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
 									</control>
 									<control type="textbox">
@@ -1903,7 +1903,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32168]$INFO[Container(650).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32168]$INFO[Container(650).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2024,7 +2024,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$LOCALIZE[135]$INFO[Container(850).NumItems, (,)]</label>
+							<label>$LOCALIZE[135]$INFO[Container(850).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="panel" id="850">
 							<left>-45</left>
@@ -2105,7 +2105,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32167]$INFO[Container(1050).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32167]$INFO[Container(1050).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="panel" id="1050">
 							<left>-45</left>
@@ -2185,7 +2185,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$LOCALIZE[21861]$INFO[Container(950).NumItems, (,)]</label>
+							<label>$LOCALIZE[21861]$INFO[Container(950).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="panel" id="950">
 							<left>-45</left>
@@ -2265,7 +2265,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32119]$INFO[Container(1250).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32119]$INFO[Container(1250).NumnonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2324,7 +2324,7 @@
 										<top>28</top>
 										<width>224</width>
 										<height>325</height>
-										<texture>common/black.png</texture>
+										<texture>black.png</texture>
 										<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(1250)">Conditional</animation>
 										<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -2372,7 +2372,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$LOCALIZE[20445]$INFO[Container(1350).NumItems, (,)]</label>
+							<label>$LOCALIZE[20445]$INFO[Container(1350).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2431,7 +2431,7 @@
 										<top>28</top>
 										<width>505</width>
 										<height>325</height>
-										<texture>common/black.png</texture>
+										<texture>black.png</texture>
 										<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(1350)">Conditional</animation>
 										<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -2479,7 +2479,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32026]$INFO[Container(450).NumItems, (,)]</label>
+							<label>$ADDON[script.extendedinfo 32026]$INFO[Container(450).NumNonFolderItems, (,)]</label>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2537,14 +2537,14 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.Property(account))</visible>
 										</control>
 										<control type="image">
 											<top>10</top>
 											<width>224</width>
 											<height>325</height>
-											<texture>common/black.png</texture>
+											<texture>black.png</texture>
 											<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(450)">Conditional</animation>
 											<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 											<aspectratio aligny="center">scale</aspectratio>
@@ -2606,7 +2606,7 @@
 											<height>55</height>
 											<top>10</top>
 											<left>169</left>
-											<texture>flags/local.png</texture>
+											<texture>OverlayWatched_3.png</texture>
 											<visible>!String.IsEmpty(ListItem.Property(account))</visible>
 										</control>
 										<control type="label">
@@ -2644,7 +2644,7 @@
 							<height>25</height>
 							<aligny>center</aligny>
 							<font>Font_14A</font>
-							<label>$ADDON[script.extendedinfo 32025] $INFO[Container(2000).NumItems,(,)]</label>
+							<label>$ADDON[script.extendedinfo 32025] $INFO[Container(2000).NumNonFolderItems,(,)]</label>
 						</control>
 						<control type="panel" id="2000">
 							<left>-45</left>
@@ -2682,7 +2682,7 @@
 										<top>10</top>
 										<width>320</width>
 										<height>200</height>
-										<texture>common/black.png</texture>
+										<texture>black.png</texture>
 										<animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(2000)">Conditional</animation>
 										<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 										<aspectratio aligny="center">scale</aspectratio>
@@ -2771,9 +2771,9 @@
 								<width>120</width>
 								<height>120</height>
 								<label>$INFO[Window.Property(Top250)]</label>
-								<textcolor>black</textcolor>
+								<textcolor>FF000000</textcolor>
 								<align>center</align>
-								<font>font14</font>
+								<font>Font_14A</font>
 							</control>
 						</control>
 						<control type="grouplist">
@@ -2789,7 +2789,7 @@
 								<width>1018</width>
 								<height>50</height>
 								<label>$INFO[Window.Property(season),,x]$INFO[Window.Property(episode),,: ]$INFO[Window.Property(Title)]</label>
-								<font>font45_title</font>
+								<font>Font_20</font>
 								<scroll>true</scroll>
 							</control>
 						</control>
@@ -2802,14 +2802,14 @@
 							<top>90</top>
 							<width>1042</width>
 							<height>1</height>
-							<texture>info/infopanel_line.png</texture>
+							<texture>line.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
 							<top>170</top>
 							<width>1042</width>
 							<height>1</height>
-							<texture>info/infopanel_line.png</texture>
+							<texture>line.png</texture>
 						</control>
 						<control type="grouplist">
 							<left>-25</left>
@@ -2825,7 +2825,7 @@
 								<height>67</height>
 								<visible>!String.IsEqual(Window.Property(type),Season) + !String.IsEqual(Window.Property(type),episode)</visible>
 								<aspectratio align="center">keep</aspectratio>
-								<texture colordiffuse="FFFAFAFA" fallback="flags/rating/MPAA_NR_Certificate_US.png">$INFO[Window.Property(mpaa),flags/rating/,.png]</texture>
+								<texture colordiffuse="FFFAFAFA" fallback="flags/mpaa/MPAA_NR_Certificate_US.png">$INFO[Window.Property(mpaa),flags/rating/,.png]</texture>
 							</control>
 							<control type="group">
 								<left>0</left>
@@ -3008,7 +3008,7 @@
 									<height>38</height>
 									<align>center</align>
 									<textcolor>FFFAFAFA</textcolor>
-									<label fallback="?">[B]$INFO[Container(2000).NumItems][/B]</label>
+									<label fallback="?">[B]$INFO[Container(2000).NumNonFolderItems][/B]</label>
 									<font>Font_14A</font>
 								</control>
 								<control type="label">
@@ -3039,7 +3039,7 @@
 				<height>1100</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture background="true">black.png</texture>
-				<bordertexture colordiffuse="$INFO[Window(home).Property(ImageColor)]" border="10">thumbs/homewidget_shadow.png</bordertexture>
+				<bordertexture colordiffuse="$INFO[Window(home).Property(ImageColor)]" border="10">actor_border.png</bordertexture>
 				<bordersize>10</bordersize>
 			</control>
 			<control type="image">
