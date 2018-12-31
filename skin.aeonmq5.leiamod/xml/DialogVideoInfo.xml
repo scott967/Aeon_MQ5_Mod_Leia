@@ -5,13 +5,15 @@
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
 <!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0 -->
 <window>
-	<defaultcontrol always="true">149</defaultcontrol>
+	<onload>Control.SetFocus(50,0,absolute)</onload>
+	<onload>Control.SetFocus(149)</onload>
+	<!-- <defaultcontrol always="true">149</defaultcontrol> -->
 <!-- 	<onload>ClearProperty(script.metadata.actors.isactive)</onload> -->
 	<controls>
 		<control type="group">
 			<!-- default group -->
 			<include>Animation_Window</include>
-			<!-- <animation effect="fade" start="100" end="0" time="300" condition="String.IsEqual(Window.Property(script.metadata.actors.isactive),1)">Conditional</animation> -->
+			<!-- <animation effect="fade" start="100" end="0" time="300" condition="String.IsEqual(Window(home).Property(extendedinfo_running),true)">Conditional</animation> -->
 			<control type="multiimage">
 				<!-- Multi Fanart -->
 				<include>WindowBG</include>
@@ -668,6 +670,7 @@
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_DefaultGlass</include>
 			</control>
+<!--  Actor / Artist (musicvideo) list supplied by core -->
 			<control type="list" id="50">
 				<viewtype label="List">List Info</viewtype>
 				<posx>45</posx>
@@ -725,8 +728,8 @@
 					</control>
 				</focusedlayout>
 			</control>
+<!-- Menu bar -->
 			<control type="group">
-				<!-- Menu bar -->
 				<posx>0</posx>
 				<posy>698</posy>
 				<control type="image">
@@ -754,6 +757,7 @@
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass2</include>
 				</control>
+<!--  Container  buttons to provide actions for current listitem -->
 				<control type="list" id="149">
 					<posx>0</posx>
 					<posy>4</posy>
@@ -771,16 +775,16 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1</width>
+							<width>2</width>
 							<height>38</height>
 							<texture>separator_v.png</texture>
 						</control>
 						<control type="label">
 							<left>0</left>
-							<posx>136</posx>
+							<posx>10</posx>
 							<posy>1</posy>
 							<height>38</height>
-							<width>243</width>
+							<width>254</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>Font_18</font>
@@ -792,7 +796,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>-2</posy>
-							<width>273</width>
+							<width>274</width>
 							<height>40</height>
 							<texture>settings_button_focus.png</texture>
 							<visible>Control.Hasfocus(149)</visible>
@@ -800,16 +804,15 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1</width>
+							<width>2</width>
 							<height>38</height>
 							<texture>separator_v.png</texture>
 						</control>
 						<control type="label">
-							<left>0</left>
-							<posx>136</posx>
+							<posx>10</posx>
 							<posy>1</posy>
 							<height>38</height>
-							<width>243</width>
+							<width>254</width>
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>Font_18</font>
@@ -818,11 +821,11 @@
 							<visible>Control.Hasfocus(149)</visible>
 						</control>
 						<control type="label">
-							<posx>136</posx>
+							<posx>10</posx>
 							<posy>1</posy>
 							<height>38</height>
-							<width>243</width>
-							<align>left</align>
+							<width>254</width>
+							<align>center</align>
 							<aligny>center</aligny>
 							<font>Font_18</font>
 							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -920,7 +923,7 @@
 						<item id="11">
 							<!-- Artist Video Clips -->
 							<label>31950</label>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Actor])</onclick>
+							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[Container(50).ListItem.Label])</onclick>
 							<visible>System.HasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,musicvideo)</visible>					
 					</item>
 					</content>
@@ -933,6 +936,7 @@
 					<texture>gradient_small.png</texture>
 				</control>
 			</control>
+<!-- End of menu bar -->
 			<control type="button" id="160">
 				<include>InvisibleButton</include>
 				<onup condition="Skin.HasSetting(artistzoom)">SetFocus(50)</onup>
