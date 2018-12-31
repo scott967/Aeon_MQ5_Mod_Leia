@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.9 -->
 <!-- Isengard 7.1.10 -->
 <!-- Krypton 9.1.15/9.2.3 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.6.0 -->
 <window>
 	<controls>
 		<control type="group">
@@ -36,6 +36,25 @@
 				<onright>11</onright>
 				<onup>11</onup>
 				<ondown>11</ondown>
+				<visible>!Window.IsActive(progressdialog)</visible>
+			</control>
+			<control type="button" id="10">
+				<!-- cancel -->
+				<posx>848</posx>
+				<posy>45</posy>
+				<height>44</height>
+				<width>225</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>FFFFFAF0</textcolor>
+				<focusedcolor>FF101010</focusedcolor>
+				<font>Font_18A</font>
+				<label>106</label>
+				<textoffsetx>0</textoffsetx>
+				<textwidth>270</textwidth>
+				<texturefocus>settings_button_focus.png</texturefocus>
+				<texturenofocus></texturenofocus>
+				<visible>Window.IsActive(progressdialog)</visible>
 			</control>
 			<control type="button" id="11">
 				<!-- yes -->
