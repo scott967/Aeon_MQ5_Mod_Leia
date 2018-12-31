@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.2 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.4.0 -->
-<window id="5600" type="dialog">
-	<!-- safe id -->
+<!-- Leia 10.4.0/10.6.0 -->
+<window id="1107" type="dialog">
+	<!-- was safe id 5600 -->
 	<defaultcontrol>604</defaultcontrol>
 	<controls>
 		<!-- ######################################################################### Proximas faixas layout estilo default ######################################################################### -->

@@ -2,9 +2,9 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.4 -->
-<!-- Leia 10.2.6 -->
-<window id="627" type="dialog">
-	<!-- safe id -->
+<!-- Leia 10.2.6/10.6.0 -->
+<window id="1106" type="dialog">
+	<!-- was safe id 627  -->
 	<defaultcontrol always="true">9030</defaultcontrol>
 	<onunload>ReplaceWindow(visualisation)</onunload>
 	<controls>
@@ -61,7 +61,7 @@
 				<posx>225</posx>
 				<posy>150</posy>
 				<height>900</height>
-				<onleft>Dialog.Close(627)</onleft>
+				<onleft>Dialog.Close(1106)</onleft>
 				<onright>9030</onright>
 				<ondown>80</ondown>
 				<onup>80</onup>
@@ -73,7 +73,7 @@
 				<height>900</height>
 				<itemgap>0</itemgap>
 				<onleft>80</onleft>
-				<onright>Dialog.Close(627)</onright>
+				<onright>Dialog.Close(1106)</onright>
 				<pagecontrol>80</pagecontrol>
 				<control type="radiobutton" id="1">
 					<!-- furniture -->
@@ -110,7 +110,7 @@
 				<control type="button" id="6">
 					<!-- lyrics set script if script is "none" turn off lyrics-->
 					<!-- <radioposx>894</radioposx> -->
-					<label>31725</label>
+					<label>$LOCALIZE[31725]  $INFO[System.AddonTitle($INFO[Skin.String(LyricScript_Path)]),($LOCALIZE[31843] - ,)]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Skin.SetBool(nolyrics_on)</onclick>
@@ -125,7 +125,7 @@
 					<enable>![Skin.HasSetting(novisfurniture)  | String.IsEqual(skin.string(vis_layout),karaoke)]</enable>
 				</control>
 				<control type="label" id="8">
-					<!-- palavra Fundos -->
+					<!-- Backgrounds (options) -->
 					<width>1560</width>
 					<height>60</height>
 					<aligny>center</aligny>
@@ -141,7 +141,7 @@
 					<selected>String.IsEqual(skin.string(vis_bg),fanart)</selected>
 				</control>
 				<control type="radiobutton" id="10">
-					<!-- background fanartmix -->
+					<!-- background fanartmix (fanart + viz)  -->
 					<radioposx>1341</radioposx>
 					<label>- $LOCALIZE[31561] + $LOCALIZE[31727]</label>
 					<onclick>Skin.SetString(vis_bg,fanartmix)</onclick>
@@ -214,12 +214,13 @@
 					<height>60</height>
 					<aligny>center</aligny>
 					<textoffsetx>75</textoffsetx>
-					<label>[B]$LOCALIZE[31727][/B]</label>
+					<label>[B]$LOCALIZE[250][/B]</label>
 					<textcolor>$VAR[value_headercolor]</textcolor>
 				</control>
 				<control type="button" id="19">
-					<!-- vis -->
-					<label>$LOCALIZE[457]</label>
+					<!-- select vis -->
+					<!-- <label>$LOCALIZE[457]</label> -->
+					<label>$LOCALIZE[12006] ($LOCALIZE[31843] - $INFO[Visualisation.Name])</label>
 					<!-- <onclick>ActivateWindowAndFocus(musicsettings, -99,0, -72,0)</onclick> -->
 					<!-- 	<onclick>ActivateWindow(musicosd)</onclick> -->
 					<onclick>Control.Message(500,click,120)</onclick>
@@ -228,7 +229,8 @@
 				<control type="button" id="20">
 					<!-- preset -->
 					<!-- <radioposx>894</radioposx> -->
-					<label>$LOCALIZE[13388]</label>
+					<!-- <label>$LOCALIZE[13388]</label> -->
+					<label>$LOCALIZE[10122]</label>
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 					<enable>String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),vis)</enable>
 				</control>
