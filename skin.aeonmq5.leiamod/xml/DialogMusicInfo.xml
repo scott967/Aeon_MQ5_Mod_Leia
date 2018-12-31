@@ -10,8 +10,9 @@
 	<controls>
 		<control type="group">  			<!-- default group -->
 			<include>Animation_Window</include>
-			<animation effect="slide" start="0" end="-1920" time="400" tween="cubic" easing="inout" condition="String.IsEqual(Window.Property(script.metadata.actors.isactive),1)">Conditional</animation>
+			<animation effect="slide" start="0" end="-1920" time="400" tween="cubic" easing="inout" condition="String.IsEqual(Window(home).Property(extendedinfo_running),true)">Conditional</animation>
 			<animation effect="slide" start="0" end="-1920" time="400" tween="cubic" easing="inout" condition="Window.IsActive(visualisation) + Window.Is(musicinformation)">Conditional</animation>
+<!-- controls used for album, artists (musicinfo), and songs(songinfo) -->
 			<control type="multiimage">
 				<!-- Multi Fanart -->
 				<include>WindowBG</include>
@@ -42,7 +43,7 @@
 				<texture flipy="true">shadow_mask.png</texture>
 				<colordiffuse>75000000</colordiffuse>
 			</control>
-			<!-- Artist (artist)  Album title (album / song) -->
+			<!-- Artist (artist)  Album title (album / song) Artist - title (musicplayer) -->
 			<control type="label">
 				<posx>45</posx>
 				<posy>2</posy>
@@ -56,7 +57,7 @@
 				<scrollspeed>20</scrollspeed>
 				<scrollout>false</scrollout>
 			</control>
-			<!-- Artist (album)  Album Artist (album) Title (song) -->
+			<!-- Artist (album)  Album Artist (album) Title (song) Empty (musicplayer) -->
 			<control type="label">
 				<posx>45</posx>
 				<posy>70</posy>
@@ -79,10 +80,10 @@
 				<aligny>center</aligny>
 				<texture>$VAR[User_Rating_Stars]</texture>
 				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)</visible>
+				<visible>String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | Window.IsActive(visualisation)</visible>
 			</control>
 			<control type="image">
-				<!-- Star -->
+				<!-- Star for scraped rating float -->
 				<posx>1768</posx>
 				<posy>8</posy>
 				<width>110</width>
@@ -91,9 +92,10 @@
 				<aligny>center</aligny>
 				<texture>star.png</texture>
 				<colordiffuse>FFFFFAF0</colordiffuse>
-				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating)</visible>
+				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating) | [Window.IsActive(visualisation) + !String.IsEmpty(Musicplayer.Rating)]</visible>
 			</control>
 			<control type="label">
+			<!-- scraped rating value (float) -->
 				<posx>1778</posx>
 				<posy>22</posy>
 				<width>90</width>
@@ -105,6 +107,20 @@
 				<!-- scraped rating -->
 				<textcolor>FF101010</textcolor>
 				<visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Rating)</visible>
+			</control>
+			<control type="label">
+			<!-- scraped rating value (float) -->
+				<posx>1778</posx>
+				<posy>22</posy>
+				<width>90</width>
+				<height>90</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<label>[B]$INFO[MusicPlayer.Rating][/B]</label>
+				<!-- scraped rating -->
+				<textcolor>FF101010</textcolor>
+				<visible>Window.IsActive(visualisation) + !String.IsEmpty(Musicplayer.Rating)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -147,7 +163,20 @@
 				<font>Font_24</font>
 				<label>$INFO[ListItem.Year]</label>
 				<textcolor>FFFFFAF0</textcolor>
-				<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
+				<visible>![String.IsEqual(ListItem.DBType,artist) | Window.IsActive(visualisation)]</visible>
+			</control>
+			<control type="label">
+				<!-- Year -->
+				<posx>330</posx>
+				<posy>120</posy>
+				<height>60</height>
+				<width>165</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_24</font>
+				<label>$INFO[MusicPlayer.Year]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<visible>Window.IsActive(visualisation)</visible>
 			</control>
 			<control type="label">
 			    <left>0</left>
@@ -175,7 +204,24 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
+				<visible>!Window.IsActive(visualisation)</visible>
 			</control>
+			<control type="label">
+				<!-- Genre -->
+				<posx>330</posx>
+				<posy>154</posy>
+				<height>60</height>
+				<width>735</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>Font_18A</font>
+				<label>$INFO[MusicPlayer.Genre]</label>
+				<textcolor>FFFFFAF0</textcolor>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+				<visible>Window.IsActive(visualisation)</visible>
+			</control>
+<!-- End of controls used in both music and song info windows -->
 <!--   +++++++++++++++++++++++++++++++++   Info panel and panel 50 derived info for artists and albums (musicinformation 2001) -->
 			<control type="group">				<!-- album and artist info musicinformation -->
 				<visible>Window.Is(musicinformation)</visible>
@@ -557,7 +603,7 @@
 					<scrollspeed>20</scrollspeed>
 				</control>
 				<control type="label">
-					<!-- Data -->
+					<!-- Data (only available for playing songs) -->
 					<posx>285</posx>
 					<posy>300</posy>
 					<height>40</height>
@@ -730,10 +776,9 @@
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 					</control>
-					<control type="label">
+					<!-- <control type="label">
 						<posx>45</posx>
 						<posy>38</posy>
-						<!-- was 12 -->
 						<width>600</width>
 						<height>40</height>
 						<align>left</align>
@@ -742,7 +787,7 @@
 						<textcolor>$VAR[value_flagscolor]</textcolor>
 						<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
 						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
-					</control>
+					</control> -->
 					<control type="label">
 						<!-- Nome do album was container 50 -->
 						<posx>472</posx>
@@ -782,10 +827,10 @@
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_DefaultGlass2</include>
 				</control>
-				<control type="group">	<!-- This group is for songs that are playing and have AS albums and art 500 panel -->
-					<visible>Player.HasAudio + system.hasaddon(script.artistslideshow) + String.IsEqual(MusicPlayer.Artist,ListItem.Artist) + !String.Contains(MusicPlayer.Genre,classical)</visible>
+				<control type="group">	<!-- This group is for songs that are playing and have AS albums and art 500 panel (don't use for classical) -->
+					<visible>Player.HasAudio + system.hasaddon(script.artistslideshow) + !String.Contains(MusicPlayer.Genre,classical) + [String.IsEqual(MusicPlayer.Artist,ListItem.Artist) | Window.IsActive(visualisation)]</visible>
 					<control type="list" id="500">
-						<!-- items supplied by AS was 50 but confilcts-->
+						<!-- items supplied by AS was 50 but conflicts-->
 						<viewtype label="List">List Info</viewtype>
 						<posx>78</posx>
 						<posy>738</posy>
@@ -1018,7 +1063,8 @@
 						<item id="19">
 							<!-- Artist Video Clips -->
 							<label>31950</label>
-							<onclick>Dialog.Close(musicinformation)</onclick>
+							<!-- <onclick>Dialog.Close(musicinformation)</onclick> -->
+							<onclick>Action(close)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>					
@@ -1026,15 +1072,17 @@
 						<item id="8">
 							<!-- Song Video Clip -->
 							<label>31951</label>
-							<onclick>Dialog.Close(musicinformation)</onclick>
+							<!-- <onclick>Dialog.Close(musicinformation)</onclick> -->
+							<onclick>Action(close)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+							<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+							<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 							</item>
 					</content>
 				</control>
 			</control>
-<!-- end of album info (musicinformation) -->
+<!-- end of album info (musicinformation) menu bar 149 -->
 <!--  +++++++++++++++++++++++++++++++++++++ Menu bar 149 Songinfo dialog -->
 			<control type="group">	<!-- Menu bar 149 songinformation-->
 				<posx>0</posx>
@@ -1165,26 +1213,28 @@
 							<!-- Set Art-->
 							<label>31702</label>
 							<onclick>SendClick(songinformation,10)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
+							<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
 						</item>
 						<item id="2">
 							<!-- Album info-->
 							<label>10523</label>
 							<onclick>SendClick(songinformation,12)</onclick>
-							<visible>!Skin.HasSetting(kioskininfo)</visible>
+							<visible>!Skin.HasSetting(kioskininfo) + !Window.IsActive(visualisation)</visible>
 						</item>
 						<item id="3">
 							<!-- Set UserRating -->
 							<label>31936</label>
-							<onclick>SendClick(songinformation,7)</onclick>
+							<onclick condition="!Window.IsActive(visualisation)">SendClick(songinformation,7)</onclick>
+							<onclick condition="Window.IsActive(visualisation)">Action(setrating)</onclick>
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
 						</item>
+						<!-- Artist Info 
 						<item id="4">
-							<!-- Artist Info -->
+
 							<label>31885</label>
 							<onclick>RunScript(script.metadata.actors,$INFO[Listitem.Artist])</onclick>
 							<visible>System.HasAddon(script.metadata.actors)</visible>
-						</item>
+						</item> -->
 						<item id="5">
 							<!-- Artist Zoom -->
 							<label>31944</label>
@@ -1196,13 +1246,15 @@
 							<!-- Roles -->
 							<label>29994</label>
 							<onclick>ActivateWindow(1104)</onclick>
+							<visible>[!Window.IsActive(visualisation) + !String.IsEmpty(ListItem.ContributorAndRole)] | [Window.IsActive(visualisation) + !String.IsEmpty(MusicPlayer.ContributorAndRole)] </visible>
 						</item>
 						<item id="16">
 							<!-- Video Clips -->
 							<label>31949</label>
 							<onclick>Dialog.Close(songinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+							<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
+							<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 						</item>
 						<item id="17">
@@ -1210,7 +1262,8 @@
 							<label>31951</label>
 							<onclick>Dialog.Close(songinformation)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
-							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+							<onclick condition="!Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+							<onclick condition="Window.IsActive(visualisation)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Title])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>
 						</item>
 					</content>
@@ -1230,7 +1283,7 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>400</scrolltime>
 				<focusposition>2</focusposition>
-				<visible>!String.IsEqual(ListItem.DBType,song) | [String.IsEqual(ListItem.DBType,song) + [!Player.HasAudio | [Player.HasAudio + !String.IsEqual(MusicPlayer.Artist,ListItem.Artist)] | String.Contains(ListItem.Genre,classical)]]</visible>
+				<visible>[!String.IsEqual(ListItem.DBType,song) + !Window.IsActive(visualisation)] | [String.IsEqual(ListItem.DBType,song) + [!Player.HasAudio | [Player.HasAudio + !String.IsEqual(MusicPlayer.Artist,ListItem.Artist)] | String.Contains(ListItem.Genre,classical)]] | [Window.IsActive(visualisation) + String.Contains(MusicPlayer.Genre,classical)]</visible>
 				<itemlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372"> <!-- ARTIST INFO container 50 for artists currently empty was scraped discography -->
 					<control type="image">
 						<posx>0</posx>
@@ -1272,7 +1325,7 @@
 						<visible>String.IsEqual(ListItem.TrackNumber,0)</visible>
 					</control>
 				</itemlayout>
-				<itemlayout height="57" width="600"  condition="String.IsEqual(ListItem.DBType,song)"> <!-- SONG INFO when no AS info -->
+				<itemlayout height="57" width="600"  condition="String.IsEqual(ListItem.DBType,song)"> <!-- SONG INFO contributors (when no AS info for playing song) -->
 					<control type="label">
 						<posx>5</posx>
 						<posy>8</posy>
@@ -1374,7 +1427,7 @@
 						<visible>Control.HasFocus(50) + String.IsEqual(ListItem.TrackNumber,0)</visible>
 					</control>
 				</focusedlayout>
-				<focusedlayout height="57" width="600"  condition="String.IsEqual(ListItem.DBType,song)"> <!-- SONG INFO -->
+				<focusedlayout height="57" width="600"  condition="String.IsEqual(ListItem.DBType,song) | Window.IsActive(visualisation)"> <!-- SONG INFO -->
 					<control type="image">
 						<posx>0</posx>
 						<posy>5</posy>
