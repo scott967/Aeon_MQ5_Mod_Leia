@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.1/Orby -->
 <!-- Krypton 9.2.1 window IDs -->
-<!-- Leia 10.4.0/10.5.2 -->
+<!-- Leia 10.4.0/10.5.2/10.6.0 -->
 <includes>
 	<!-- ######################################################################### Letras layout estilo default ######################################################################### -->
 	<include name="LyricsDefault">
@@ -10,7 +10,7 @@
 			<animation effect="slide" start="-1950,0" end="0,0" time="700" tween="sine" easing="inout" delay="1000">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1950,0" time="400" tween="sine" easing="inout">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="-1950,0" time="400" tween="sine" easing="inout">Hidden</animation>
-			<visible>Player.HasAudio + ![Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(5600) | Skin.HasSetting(nolyrics_on) | Skin.HasSetting(novisfurniture)]</visible>
+			<visible>Player.HasAudio + ![Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(1107) | Skin.HasSetting(nolyrics_on) | Skin.HasSetting(novisfurniture)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>578</posy>
@@ -65,7 +65,7 @@
 				<font>Font_18A</font>
 				<align>left</align>
 				<textoffsetx>60</textoffsetx>
-				<onclick>ActivateWindow(5600)</onclick>
+				<onclick>ActivateWindow(1107)</onclick>
 				<textcolor>80FFFAF0</textcolor>
 				<focusedcolor>FFFFFAF0</focusedcolor>
 				<texturefocus diffuse="gradient_button.png">settings_button_focus.png</texturefocus>
@@ -116,7 +116,7 @@
 				<posy>105</posy>
 				<width>1620</width>
 				<height>405</height>
-				<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
+				<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(1107)</onleft>
 				<onright>ActivateWindow(musicosd)</onright>
 				<onup>999</onup>
 				<ondown>110</ondown>
@@ -170,7 +170,7 @@
 				<posy>105</posy>
 				<width>1620</width>
 				<height>405</height>
-				<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(5600)</onleft>
+				<onleft condition="![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks_on)]">ActivateWindow(1107)</onleft>
 				<onright>ActivateWindow(musicosd)</onright>
 				<onup>120</onup>
 				<ondown>120</ondown>
@@ -226,7 +226,7 @@
 			<animation effect="slide" start="-1920,0" end="0,0" time="700" tween="sine" easing="inout" delay="1000">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1920,0" time="400" tween="sine" easing="inout">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="-1920,0" time="400" tween="sine" easing="inout">Hidden</animation>
-			<visible>Player.HasAudio + ![Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(5600)]</visible>
+			<visible>Player.HasAudio + ![Window.IsVisible(musicosd) | Window.IsVisible(visualisationpresetlist) | Window.IsVisible(1107)]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>

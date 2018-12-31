@@ -7,7 +7,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>10.6.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]11/22/2018</value>
+		<value>10.6.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]01/02/2019</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -4135,7 +4135,7 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(home).Property(Favourite.1.Name))">[COLOR=$VAR[value_headercolor]][CAPITALIZE][LOWERCASE]$LOCALIZE[31249][/LOWERCASE][/CAPITALIZE]: [/COLOR]$INFO[Container(510).NumItems][COLOR=50FFFAF0] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[20161]:[/COLOR] $INFO[Window(home).Property(Favourite.Count)]</value>
 	</variable>
 	<variable name="value_multilabel">
-		<value condition="Container.Content(movies) + ![String.IsEqual(Container.FolderPath,videodb://movies/sets/) | Window.IsActive(selectdialog) | Skin.HasSetting(trailers) | !String.IsEmpty(skin.string(playlists)) | Container.Content(sets)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20342]:[/COLOR] $INFO[Window(home).Property(Movies.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16102]:[/COLOR] $INFO[Window(home).Property(Movies.Watched)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window(home).Property(Movies.UnWatched)]</value>
+		<value condition="Container.Content(movies) + ![Container.Content(sets) | Window.IsActive(selectdialog) | Skin.HasSetting(trailers) | !String.IsEmpty(skin.string(playlists)) | Container.Content(sets)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20342]:[/COLOR] $INFO[Window(home).Property(Movies.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16102]:[/COLOR] $INFO[Window(home).Property(Movies.Watched)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window(home).Property(Movies.UnWatched)]</value>
 		<value condition="Container.Content(sets) + !Control.HasFocus(5801)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20457]:[/COLOR] $INFO[Container.NumItems]</value>
 		<value condition="Container.Content(sets) + Control.HasFocus(5801)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20342]:[/COLOR] $INFO[Container(5801).NumItems]</value>
 		<value condition="String.IsEqual(skin.string(playlists),vpl1) + !String.IsEmpty(Window(home).Property(PlaylistLastMovievpl1.1.Title))">$LOCALIZE[31230] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[31210]:[/COLOR] $INFO[Window(home).Property(PlaylistLastMovievpl1.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16102]:[/COLOR] $INFO[Window(home).Property(PlaylistLastMovievpl1.Watched)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window(home).Property(PlaylistLastMovievpl1.UnWatched)]</value>
@@ -4451,12 +4451,12 @@
 		<!-- select video resolution -->
 		<value condition="Container(100).HasFocus(33)">$LOCALIZE[39110]</value>
 	</variable>
-	<variable name="value_osdmusic_title">
+	<variable name="value_osdmusic_title"> <!-- text used in music OSD menu -->
 		<value condition="Container(101).HasFocus(1)">$LOCALIZE[31011]</value>
 		<!-- settings -->
-		<value condition="Container(101).HasFocus(2) + !Skin.HasSetting(lyrics_on)">$LOCALIZE[31722]</value>
+		<value condition="Container(101).HasFocus(2) + Skin.HasSetting(nolyrics_on)">$LOCALIZE[31722]</value>
 		<!-- lyrics set -->
-		<value condition="Container(101).HasFocus(2) + Skin.HasSetting(lyrics_on)">$LOCALIZE[31724]</value>
+		<value condition="Container(101).HasFocus(2) + !Skin.HasSetting(nolyrics_on)">$LOCALIZE[31724]</value>
 		<value condition="Container(101).HasFocus(3)">$LOCALIZE[31723] - $LOCALIZE[31725]</value>
 		<!-- lyrics on -->
 		<value condition="Container(101).HasFocus(4)">$LOCALIZE[31375]</value>
@@ -4631,10 +4631,11 @@
 		<!-- <value condition="!String.Contains(ListItem.Duration,min) + Window.IsActive(musicplaylist)">$INFO[ListItem.Duration] $LOCALIZE[31961]</value> -->
 	</variable>
 	<variable name="value_songinfo_plot">
+		<value condition="Window.IsActive(visualisation) + String.Contains(MusicPlayer.Genre,classical)">$INFO[MusicPlayer.Comment]</value>
 		<value condition="Window.IsActive(songinformation) + String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.Plot]</value>
-		<value condition="!Player.HasAudio | Window.IsActive(songinformation) + String.IsEmpty(VideoPlayer.Artist)">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Player.HasAudio + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31940]: [/COLOR]$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName)]$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName), / ]$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName), / ][CR]$INFO[MusicPlayer.Property(Artist_Description)]$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography), - ]</value>
 		<value condition="Player.HasAudio + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">$INFO[MusicPlayer.Property(Artist_Description)]</value>
+		<value condition="!Player.HasAudio | Window.IsActive(songinformation) + String.IsEmpty(VideoPlayer.Artist)">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>		
 	</variable>
 	<variable name="value_songinfo_record">
 		<value condition="!Player.HasAudio">$INFO[ListItem.Property(Album.label),flags/music/recordlabel/,.png]</value>
@@ -5007,8 +5008,9 @@
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[31997]</value>
 	</variable>
 	<variable name="User_Rating_Stars">
-		<value condition="String.IsEmpty(ListItem.UserRating)">hrating0.png</value>
-		<value>$INFO[ListItem.UserRating,hrating,.png]</value>
+		<value condition="[!Window.IsActive(visualisation) + String.IsEmpty(ListItem.UserRating)] | [Window.IsActive(visualisation) + String.IsEmpty(MusicPlayer.UserRating)]">hrating0.png</value>
+		<value condition="!Window.IsActive(visualisation)">$INFO[ListItem.UserRating,hrating,.png]</value>
+		<value condition="Window.IsActive(visualisation)">$INFO[MusicPlayer.UserRating,hrating,.png]</value>
 	</variable>
 		<variable name="value_gameosdtitle">
 		<value>$INFO[Player.Title]</value>
@@ -5052,11 +5054,12 @@
 	</variable>
 	<variable name="gamesetting_dialog">
 		<value condition="Window.IsActive(gamevideofilter)">$INFO[Player.Title] - $LOCALIZE[35225]</value>
-		<value condition="Window.IsActive(gameviewmode)">$INFO[Player.Title] - $LOCALIZE[35223]</value>
+		<value condition="Window.IsActive(gamestretchmode)">$INFO[Player.Title] - $LOCALIZE[35223]</value>
 		<value condition="Window.IsActive(gamevideorotation)">$INFO[Player.Title] - $LOCALIZE[35227]</value>
 	</variable>
 	<variable name="artist_label">
 		<value condition="String.IsEqual(Container.SortMethod,artist) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname))">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+	<expression name="Can_record">Player.CanRecordPlayingChannel | Player.IsRecordingPlayingChannel | Pvr.IsRecording</expression>
 </includes>

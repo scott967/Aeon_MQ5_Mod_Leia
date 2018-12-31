@@ -2,11 +2,11 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0/10.5.2 -->
+<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0 refactor customOSDMusic is now 1106 custom Next Tracks is now 1107 -->
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
-	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(5600,640,0)</onload> <!-- Custom next tracks -->
-	<onunload>Dialog.Close(5600)</onunload>
+	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(1107,640,0)</onload> <!-- Custom next tracks -->
+	<onunload>Dialog.Close(1107)</onunload> <!-- custom Next Tracks -->
 	<controls>
 		<control type="image">
 			<posx>0</posx>
@@ -25,28 +25,30 @@
 			<visible>String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix) | String.IsEqual(skin.string(vis_bg),vis)</visible>
 		</control>
 		<control type="image">
-			<!-- Fanart -->
+			<!-- 1.  Fanart or Fanartmix and no extrafanart in library path or custom artist info path-->
+			<!-- 2.  Slideshow or Slideshowmix and no AS art available -->
+			<!-- 3.  Slideshowmosaic or Slideshowmosaicmix and not AS art available)-->
 			<include>WindowBG</include>
-			<texture background="true">$INFO[MusicPlayer.Property(fanart_image)]</texture>
+			<texture background="true" fallback="special://skin/backgrounds/music.jpg">$INFO[Player.Art(artist.fanart)]</texture>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
-			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044)) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + String.IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + String.IsEmpty(Control.GetLabel(5046)) + String.IsEmpty(Control.GetLabel(5047)) + String.IsEmpty(Control.GetLabel(5048)) + String.IsEmpty(Control.GetLabel(5049)) + String.IsEmpty(Control.GetLabel(5050)) + String.IsEmpty(Control.GetLabel(5051))</visible>
+			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.IsEmpty(Control.GetLabel(5043)) + String.IsEmpty(Control.GetLabel(5044)) | [String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)] + String.IsEmpty(Control.GetLabel(5045)) | [String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)] + Control.IsVisible(5046)</visible>
 		</control>
 		<control type="multiimage" id="5043">
-			<!-- Extra Fanart Song Artist has priority-->
+			<!-- Extra Fanart requires setting in music window Song Artist custom artist info path has priority-->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra) + String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage" id="5044">
-			<!-- Extra Fanart Artist -->
+			<!-- Extra Fanart requires setting in music window custom Artist info path-->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),fanartmix)">Conditional</animation>
 			<visible>[String.IsEqual(skin.string(vis_bg),fanart) | String.IsEqual(skin.string(vis_bg),fanartmix)] + String.Contains(skin.string(musicfanart),extra)</visible>
 		</control>
 		<control type="multiimage" id="5045">
-			<!-- Artist SlideShow -->
+			<!-- Artist SlideShow arts -->
 			<aspectratio>keep</aspectratio>
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
@@ -57,63 +59,62 @@
 			<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),slideshowmix)">Conditional</animation>
 			<visible>String.IsEqual(skin.string(vis_bg),slideshow) | String.IsEqual(skin.string(vis_bg),slideshowmix)</visible>
 		</control>
-		<control type="multiimage" id="5046">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>0</posx>
-			<posy>0</posy>
+		<control type="group" id="5046">
+			<!-- AS slideshow mosaic arts -->
 			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
-		</control>
-		<control type="multiimage" id="5047">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>640</posx>
-			<posy>0</posy>
-			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
-		</control>
-		<control type="multiimage" id="5048">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>1280</posx>
-			<posy>0</posy>
-			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
-		</control>
-		<control type="multiimage" id="5049">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>0</posx>
-			<posy>540</posy>
-			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
-		</control>
-		<control type="multiimage" id="5050">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>640</posx>
-			<posy>540</posy>
-			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
-		</control>
-		<control type="multiimage" id="5051">
-			<!-- Artist SlideShow Mosaico -->
-			<include>MosaicBG</include>
-			<posx>1280</posx>
-			<posy>540</posy>
-			<visible>String.IsEqual(skin.string(vis_bg),slideshowmosaic) | String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)</visible>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 1 -->
+				<include>MosaicBG</include>
+				<posx>0</posx>
+				<posy>0</posy>
+			</control>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 2 -->
+				<include>MosaicBG</include>
+				<posx>640</posx>
+				<posy>0</posy>
+			</control>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 3 -->
+				<include>MosaicBG</include>
+				<posx>1280</posx>
+				<posy>0</posy>
+			</control>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 4 -->
+				<include>MosaicBG</include>
+				<posx>0</posx>
+				<posy>540</posy>
+			</control>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 5 -->
+				<include>MosaicBG</include>
+				<posx>640</posx>
+				<posy>540</posy>
+			</control>
+			<control type="multiimage">
+				<!-- Artist SlideShow Mosaic 6 -->
+				<include>MosaicBG</include>
+				<posx>1280</posx>
+				<posy>540</posy>
+			</control>
 		</control>
 		<control type="multiimage">
-			<!-- Pasta pessoal  home folder -->
+			<!-- Custom background image  -->
 			<aspectratio>keep</aspectratio>
 			<include>WindowBG</include>
 			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[skin.string(musicviz.bg)]</imagepath>
 			<visible>String.IsEqual(skin.string(vis_bg),custom)</visible>
 		</control>
 		<control type="group">
-			<!-- default group -->
+			<!-- overlays on art background group -->
 			<include>Animation_Fade</include>
 			<control type="group">
+				<!-- default layout -->
 				<posx>0</posx>
 				<posy>1160</posy>
 				<animation effect="slide" start="0,0" end="-600,0" time="400" tween="cubic" easing="inout" condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(627)">Conditional</animation><!-- 627 custom osd music -->
+				<animation effect="slide" start="0,0" end="0,405" time="400" tween="cubic" easing="inout" condition="Window.IsVisible(musicosd) | Window.IsVisible(1106)">Conditional</animation><!-- 1106 custom osd music -->
 				<animation effect="slide" start="0,0" end="0,450" time="700" tween="cubic" easing="out" condition="Skin.HasSetting(novisfurniture)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-1350,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(furniture_cdart)">Conditional</animation>
 				<animation effect="slide" start="0,1080" end="0,-450" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
@@ -174,7 +175,7 @@
 					<width>525</width>
 					<height>396</height>
 					<fadetime>200</fadetime>
-					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Player.Art(album.thumb)]</texture>
 					<aspectratio align="left">keep</aspectratio>
 				</control>
 				<control type="image">
@@ -201,7 +202,7 @@
 					<height>396</height>
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
-					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
+					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- AS art or fanart -->
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
@@ -248,7 +249,7 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<!-- <label>$INFO[MusicPlayer.Album][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Year][COLOR=50FFFAF0] | [/COLOR]$INFO[MusicPlayer.Genre]</label> -->
 					<label>$INFO[MusicPlayer.TrackNumber,, : ]$INFO[MusicPlayer.Title]</label>
-					<label>$INFO[MusicPlayer.Album] - $INFO[MusicPlayer.Year]</label>
+					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, - ,]</label>
 					<pauseatend>10000</pauseatend>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -268,7 +269,7 @@
 					<height>198</height>
 					<font>Font_18A</font>
 					<textcolor>FFFFFAF0</textcolor>
-					<label>$VAR[value_playerplot]</label>
+					<label>$VAR[value_playerplot]</label>  <!-- AS ddata fallback artist bio -->
 					<autoscroll delay="20000" time="6000" repeat="20000">!Skin.HasSetting(noallowscroll)</autoscroll>
 				</control>
 				<control type="image">

@@ -127,7 +127,7 @@
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_HomeGlass2</include>
 			</control>
-			<!-- Menu Content -->
+			<!-- Menu Audio OSD Content -->
 			<include condition="!Skin.HasSetting(audioosdfixedlist)">AudioOSDWrapList</include>
 			<include condition="Skin.HasSetting(audioosdfixedlist)">AudioOSDFixedList</include>
 			<control type="progress">
@@ -163,7 +163,7 @@
 				<label>[B]$VAR[value_osd_timeduration][/B]</label>
 			</control>
 			<control type="label">
-				<!-- nome dos botoes -->
+				<!-- OSD Menu item names -->
 				<posx>480</posx>
 				<posy>250</posy>
 				<width>960</width>
