@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -2872,8 +2872,8 @@
 				<property name="condition">$INFO[skin.string(osd_video_cms),disable)]</property>
 				<icon>osd_menu_cms.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(osdcmssettings)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_3dmode),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
-				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_3dmode),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_cms),disable)">Skin.SetString(osd_video_cms,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_cms),disable)">Skin.Reset(osd_video_cms,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_video_cms),disable) | Skin.HasSetting(customosd)] + System.HasCMS</visible>
 			</item>
 			<item id="33">
@@ -2974,7 +2974,7 @@
 				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_rec),disable)">Skin.SetString(osd_video_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_rec),disable)">Skin.Reset(osd_video_rec,disable)</onclick>
-				<visible>[PVR.CanRecordPlayingChannel + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<visible>$EXP[Can_record] + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)</visible>
 			</item>
 			<item id="7">
 				<!-- disc -->
@@ -3362,7 +3362,7 @@
 				<onclick condition="!Skin.HasSetting(customosd)">PVR.ToggleRecordPlayingChannel</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_rec),disable)">Skin.SetString(osd_audio_rec,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_rec),disable)">Skin.Reset(osd_audio_rec,disable)</onclick>
-				<visible>[PVR.CanRecordPlayingChannel + !String.Contains(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)]</visible>
+				<visible>[Player.CanRecordPlayingChannel | Player.IsRecordingPlayingChannel] + !String.Contains(skin.string(osd_audio_rec),disable) | Skin.HasSetting(customosd)</visible>
 			</item>
 			<item id="13">
 				<!-- volumeup -->
@@ -3396,11 +3396,11 @@
 			</item>
 			<!-- Audio DSP is killed -->
 			<item id="1">
-				<!-- vis settings -->
+				<!-- custom OSD settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_audio_settings),disable)]</property>
 				<icon>osd_menu_settings.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(customosd,ActivateWindow(627),0:01,true)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">AlarmClock(customosd,ActivateWindow(1106),0:01,true)</onclick> <!-- custom OSD music dialog -->
 				<!-- custom osd music -->
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_settings),disable)">Skin.SetString(osd_audio_settings,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_settings),disable)">Skin.Reset(osd_audio_settings,disable)</onclick>
@@ -3412,7 +3412,6 @@
 				<icon>osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(playersettings)</onclick>
-				<!-- musicsettings -->
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.SetString(osd_audio_gsettings,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.Reset(osd_audio_gsettings,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_audio_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
@@ -3443,7 +3442,7 @@
 		<content>
 			<item>
 				<label>1:</label>
-				<label2>$INFO[MusicPlayer.offset(1).Artist]$INFO[MusicPlayer.offset(1).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(1).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(1).Album][CR]$INFO[MusicPlayer.offset(1).Duration]</property>
 				<onclick>Playlist.PlayOffset(1)</onclick>
@@ -3451,7 +3450,7 @@
 			</item>
 			<item>
 				<label>2:</label>
-				<label2>$INFO[MusicPlayer.offset(2).Artist]$INFO[MusicPlayer.offset(2).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(2).Title]$INFO[MusicPlayer.offset(2).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(2).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(2).Album][CR]$INFO[MusicPlayer.offset(2).Duration]</property>
 				<onclick>Playlist.PlayOffset(2)</onclick>
@@ -3459,7 +3458,7 @@
 			</item>
 			<item>
 				<label>3:</label>
-				<label2>$INFO[MusicPlayer.offset(3).Artist]$INFO[MusicPlayer.offset(3).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(3).Title]$INFO[MusicPlayer.offset(3).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(3).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(3).Album][CR]$INFO[MusicPlayer.offset(3).Duration]</property>
 				<onclick>Playlist.PlayOffset(3)</onclick>
@@ -3467,7 +3466,7 @@
 			</item>
 			<item>
 				<label>4:</label>
-				<label2>$INFO[MusicPlayer.offset(4).Artist]$INFO[MusicPlayer.offset(4).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(4).Title]$INFO[MusicPlayer.offset(4).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(4).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(4).Album][CR]$INFO[MusicPlayer.offset(4).Duration]</property>
 				<onclick>Playlist.PlayOffset(4)</onclick>
@@ -3475,7 +3474,7 @@
 			</item>
 			<item>
 				<label>5:</label>
-				<label2>$INFO[MusicPlayer.offset(5).Artist]$INFO[MusicPlayer.offset(5).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(5).Title]$INFO[MusicPlayer.offset(5).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(5).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(5).Album][CR]$INFO[MusicPlayer.offset(5).Duration]</property>
 				<onclick>Playlist.PlayOffset(5)</onclick>
@@ -3483,7 +3482,7 @@
 			</item>
 			<item>
 				<label>6:</label>
-				<label2>$INFO[MusicPlayer.offset(6).Artist]$INFO[MusicPlayer.offset(6).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(6).Title]$INFO[MusicPlayer.offset(6).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(6).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(6).Album][CR]$INFO[MusicPlayer.offset(6).Duration]</property>
 				<onclick>Playlist.PlayOffset(6)</onclick>
@@ -3491,7 +3490,7 @@
 			</item>
 			<item>
 				<label>7:</label>
-				<label2>$INFO[MusicPlayer.offset(7).Artist]$INFO[MusicPlayer.offset(7).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(7).Title]$INFO[MusicPlayer.offset(7).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(7).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(7).Album][CR]$INFO[MusicPlayer.offset(7).Duration]</property>
 				<onclick>Playlist.PlayOffset(7)</onclick>
@@ -3499,7 +3498,7 @@
 			</item>
 			<item>
 				<label>8:</label>
-				<label2>$INFO[MusicPlayer.offset(8).Artist]$INFO[MusicPlayer.offset(8).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(8).Title]$INFO[MusicPlayer.offset(8).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(8).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(8).Album][CR]$INFO[MusicPlayer.offset(8).Duration]</property>
 				<onclick>Playlist.PlayOffset(8)</onclick>
@@ -3507,7 +3506,7 @@
 			</item>
 			<item>
 				<label>9:</label>
-				<label2>$INFO[MusicPlayer.offset(9).Artist]$INFO[MusicPlayer.offset(9).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(9).Title]$INFO[MusicPlayer.offset(9).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(9).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(9).Album][CR]$INFO[MusicPlayer.offset(9).Duration]</property>
 				<onclick>Playlist.PlayOffset(9)</onclick>
@@ -3515,7 +3514,7 @@
 			</item>
 			<item>
 				<label>10:</label>
-				<label2>$INFO[MusicPlayer.offset(10).Artist]$INFO[MusicPlayer.offset(10).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(10).Title]$INFO[MusicPlayer.offset(10).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(10).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(10).Album][CR]$INFO[MusicPlayer.offset(10).Duration]</property>
 				<onclick>Playlist.PlayOffset(10)</onclick>
@@ -3523,7 +3522,7 @@
 			</item>
 			<item>
 				<label>11:</label>
-				<label2>$INFO[MusicPlayer.offset(11).Artist]$INFO[MusicPlayer.offset(11).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(11).Title]$INFO[MusicPlayer.offset(11).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(11).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(11).Album][CR]$INFO[MusicPlayer.offset(11).Duration]</property>
 				<onclick>Playlist.PlayOffset(11)</onclick>
@@ -3531,7 +3530,7 @@
 			</item>
 			<item>
 				<label>12:</label>
-				<label2>$INFO[MusicPlayer.offset(12).Artist]$INFO[MusicPlayer.offset(12).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(12).Title]$INFO[MusicPlayer.offset(12).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(12).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(12).Album][CR]$INFO[MusicPlayer.offset(12).Duration]</property>
 				<onclick>Playlist.PlayOffset(12)</onclick>
@@ -3539,7 +3538,7 @@
 			</item>
 			<item>
 				<label>13:</label>
-				<label2>$INFO[MusicPlayer.offset(13).Artist]$INFO[MusicPlayer.offset(13).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(13).Title]$INFO[MusicPlayer.offset(13).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(13).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(13).Album][CR]$INFO[MusicPlayer.offset(13).Duration]</property>
 				<onclick>Playlist.PlayOffset(13)</onclick>
@@ -3547,7 +3546,7 @@
 			</item>
 			<item>
 				<label>14:</label>
-				<label2>$INFO[MusicPlayer.offset(14).Artist]$INFO[MusicPlayer.offset(14).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(14).Title]$INFO[MusicPlayer.offset(14).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(14).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(14).Album][CR]$INFO[MusicPlayer.offset(14).Duration]</property>
 				<onclick>Playlist.PlayOffset(14)</onclick>
@@ -3555,7 +3554,7 @@
 			</item>
 			<item>
 				<label>15:</label>
-				<label2>$INFO[MusicPlayer.offset(15).Artist]$INFO[MusicPlayer.offset(15).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(15).Title]$INFO[MusicPlayer.offset(15).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(15).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(15).Album][CR]$INFO[MusicPlayer.offset(15).Duration]</property>
 				<onclick>Playlist.PlayOffset(15)</onclick>
@@ -3563,7 +3562,7 @@
 			</item>
 			<item>
 				<label>16:</label>
-				<label2>$INFO[MusicPlayer.offset(16).Artist]$INFO[MusicPlayer.offset(16).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(16).Title]$INFO[MusicPlayer.offset(16).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(16).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(16).Album][CR]$INFO[MusicPlayer.offset(16).Duration]</property>
 				<onclick>Playlist.PlayOffset(16)</onclick>
@@ -3571,7 +3570,7 @@
 			</item>
 			<item>
 				<label>17:</label>
-				<label2>$INFO[MusicPlayer.offset(17).Artist]$INFO[MusicPlayer.offset(17).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(17).Title]$INFO[MusicPlayer.offset(17).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(17).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(17).Album][CR]$INFO[MusicPlayer.offset(17).Duration]</property>
 				<onclick>Playlist.PlayOffset(17)</onclick>
@@ -3579,7 +3578,7 @@
 			</item>
 			<item>
 				<label>18:</label>
-				<label2>$INFO[MusicPlayer.offset(18).Artist]$INFO[MusicPlayer.offset(18).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(18).Title]$INFO[MusicPlayer.offset(18).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(18).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(18).Album][CR]$INFO[MusicPlayer.offset(18).Duration]</property>
 				<onclick>Playlist.PlayOffset(18)</onclick>
@@ -3587,7 +3586,7 @@
 			</item>
 			<item>
 				<label>19:</label>
-				<label2>$INFO[MusicPlayer.offset(19).Artist]$INFO[MusicPlayer.offset(19).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(19).Title]$INFO[MusicPlayer.offset(19).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(19).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(19).Album][CR]$INFO[MusicPlayer.offset(19).Duration]</property>
 				<onclick>Playlist.PlayOffset(19)</onclick>
@@ -3595,7 +3594,7 @@
 			</item>
 			<item>
 				<label>20:</label>
-				<label2>$INFO[MusicPlayer.offset(20).Artist]$INFO[MusicPlayer.offset(20).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(20).Title]$INFO[MusicPlayer.offset(20).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(20).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(20).Album][CR]$INFO[MusicPlayer.offset(20).Duration]</property>
 				<onclick>Playlist.PlayOffset(20)</onclick>
@@ -3603,7 +3602,7 @@
 			</item>
 			<item>
 				<label>21:</label>
-				<label2>$INFO[MusicPlayer.offset(21).Artist]$INFO[MusicPlayer.offset(21).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(21).Title]$INFO[MusicPlayer.offset(21).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(21).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(21).Album][CR]$INFO[MusicPlayer.offset(21).Duration]</property>
 				<onclick>Playlist.PlayOffset(21)</onclick>
@@ -3611,7 +3610,7 @@
 			</item>
 			<item>
 				<label>22:</label>
-				<label2>$INFO[MusicPlayer.offset(22).Artist]$INFO[MusicPlayer.offset(22).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(22).Title]$INFO[MusicPlayer.offset(22).artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(22).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(22).Album][CR]$INFO[MusicPlayer.offset(22).Duration]</property>
 				<onclick>Playlist.PlayOffset(22)</onclick>
@@ -3619,7 +3618,7 @@
 			</item>
 			<item>
 				<label>23:</label>
-				<label2>$INFO[MusicPlayer.offset(23).Artist]$INFO[MusicPlayer.offset(23).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(23).Title]$INFO[MusicPlayer.offset(23).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(23).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(23).Album][CR]$INFO[MusicPlayer.offset(23).Duration]</property>
 				<onclick>Playlist.PlayOffset(23)</onclick>
@@ -3627,7 +3626,7 @@
 			</item>
 			<item>
 				<label>24:</label>
-				<label2>$INFO[MusicPlayer.offset(24).Artist]$INFO[MusicPlayer.offset(24).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(24).Title]$INFO[MusicPlayer.offset(24).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(24).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(24).Album][CR]$INFO[MusicPlayer.offset(24).Duration]</property>
 				<onclick>Playlist.PlayOffset(24)</onclick>
@@ -3635,7 +3634,7 @@
 			</item>
 			<item>
 				<label>25:</label>
-				<label2>$INFO[MusicPlayer.offset(25).Artist]$INFO[MusicPlayer.offset(25).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(25).Title]$INFO[MusicPlayer.offset(25).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(25).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(25).Album][CR]$INFO[MusicPlayer.offset(25).Duration]</property>
 				<onclick>Playlist.PlayOffset(25)</onclick>
@@ -3643,7 +3642,7 @@
 			</item>
 			<item>
 				<label>26:</label>
-				<label2>$INFO[MusicPlayer.offset(26).Artist]$INFO[MusicPlayer.offset(26).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(26).Title]$INFO[MusicPlayer.offset(26).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(26).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(26).Album][CR]$INFO[MusicPlayer.offset(26).Duration]</property>
 				<onclick>Playlist.PlayOffset(26)</onclick>
@@ -3651,7 +3650,7 @@
 			</item>
 			<item>
 				<label>27:</label>
-				<label2>$INFO[MusicPlayer.offset(27).Artist]$INFO[MusicPlayer.offset(27).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(27).Title]$INFO[MusicPlayer.offset(27).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(27).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(27).Album][CR]$INFO[MusicPlayer.offset(27).Duration]</property>
 				<onclick>Playlist.PlayOffset(27)</onclick>
@@ -3659,7 +3658,7 @@
 			</item>
 			<item>
 				<label>28:</label>
-				<label2>$INFO[MusicPlayer.offset(28).Artist]$INFO[MusicPlayer.offset(28).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(28).Title]$INFO[MusicPlayer.offset(28).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(28).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(28).Album][CR]$INFO[MusicPlayer.offset(28).Duration]</property>
 				<onclick>Playlist.PlayOffset(28)</onclick>
@@ -3667,7 +3666,7 @@
 			</item>
 			<item>
 				<label>29:</label>
-				<label2>$INFO[MusicPlayer.offset(29).Artist]$INFO[MusicPlayer.offset(29).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(29).Title]$INFO[MusicPlayer.offset(29).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(29).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(29).Album][CR]$INFO[MusicPlayer.offset(29).Duration]</property>
 				<onclick>Playlist.PlayOffset(29)</onclick>
@@ -3675,7 +3674,7 @@
 			</item>
 			<item>
 				<label>30:</label>
-				<label2>$INFO[MusicPlayer.offset(30).Artist]$INFO[MusicPlayer.offset(30).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(30).Title]$INFO[MusicPlayer.offset(30).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(30).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(30).Album][CR]$INFO[MusicPlayer.offset(30).Duration]</property>
 				<onclick>Playlist.PlayOffset(30)</onclick>
@@ -3683,7 +3682,7 @@
 			</item>
 			<item>
 				<label>31:</label>
-				<label2>$INFO[MusicPlayer.offset(31).Artist]$INFO[MusicPlayer.offset(31).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(31).Title]$INFO[MusicPlayer.offset(31).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(31).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(31).Album][CR]$INFO[MusicPlayer.offset(31).Duration]</property>
 				<onclick>Playlist.PlayOffset(31)</onclick>
@@ -3691,7 +3690,7 @@
 			</item>
 			<item>
 				<label>32:</label>
-				<label2>$INFO[MusicPlayer.offset(32).Artist]$INFO[MusicPlayer.offset(32).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(32).Title]$INFO[MusicPlayer.offset(32).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(32).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(32).Album][CR]$INFO[MusicPlayer.offset(32).Duration]</property>
 				<onclick>Playlist.PlayOffset(32)</onclick>
@@ -3699,7 +3698,7 @@
 			</item>
 			<item>
 				<label>33:</label>
-				<label2>$INFO[MusicPlayer.offset(33).Artist]$INFO[MusicPlayer.offset(33).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(33).Title]$INFO[MusicPlayer.offset(33).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(33).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(33).Album][CR]$INFO[MusicPlayer.offset(33).Duration]</property>
 				<onclick>Playlist.PlayOffset(33)</onclick>
@@ -3707,7 +3706,7 @@
 			</item>
 			<item>
 				<label>34:</label>
-				<label2>$INFO[MusicPlayer.offset(34).Artist]$INFO[MusicPlayer.offset(34).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(34).Title]$INFO[MusicPlayer.offset(34).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(34).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(34).Album][CR]$INFO[MusicPlayer.offset(34).Duration]</property>
 				<onclick>Playlist.PlayOffset(34)</onclick>
@@ -3715,7 +3714,7 @@
 			</item>
 			<item>
 				<label>35:</label>
-				<label2>$INFO[MusicPlayer.offset(35).Artist]$INFO[MusicPlayer.offset(35).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(35).Title]$INFO[MusicPlayer.offset(35).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(35).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(35).Album][CR]$INFO[MusicPlayer.offset(35).Duration]</property>
 				<onclick>Playlist.PlayOffset(35)</onclick>
@@ -3723,7 +3722,7 @@
 			</item>
 			<item>
 				<label>36:</label>
-				<label2>$INFO[MusicPlayer.offset(36).Artist]$INFO[MusicPlayer.offset(36).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(36).Title]$INFO[MusicPlayer.offset(36).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(36).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(36).Album][CR]$INFO[MusicPlayer.offset(36).Duration]</property>
 				<onclick>Playlist.PlayOffset(36)</onclick>
@@ -3731,7 +3730,7 @@
 			</item>
 			<item>
 				<label>37:</label>
-				<label2>$INFO[MusicPlayer.offset(37).Artist]$INFO[MusicPlayer.offset(37).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(37).Title]$INFO[MusicPlayer.offset(37).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(37).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(37).Album][CR]$INFO[MusicPlayer.offset(37).Duration]</property>
 				<onclick>Playlist.PlayOffset(37)</onclick>
@@ -3739,7 +3738,7 @@
 			</item>
 			<item>
 				<label>38:</label>
-				<label2>$INFO[MusicPlayer.offset(38).Artist]$INFO[MusicPlayer.offset(38).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(38).Title]$INFO[MusicPlayer.offset(38).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(38).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(38).Album][CR]$INFO[MusicPlayer.offset(38).Duration]</property>
 				<onclick>Playlist.PlayOffset(38)</onclick>
@@ -3747,7 +3746,7 @@
 			</item>
 			<item>
 				<label>39:</label>
-				<label2>$INFO[MusicPlayer.offset(39).Artist]$INFO[MusicPlayer.offset(39).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(39).Title]$INFO[MusicPlayer.offset(39).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(39).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(39).Album][CR]$INFO[MusicPlayer.offset(39).Duration]</property>
 				<onclick>Playlist.PlayOffset(39)</onclick>
@@ -3755,7 +3754,7 @@
 			</item>
 			<item>
 				<label>40:</label>
-				<label2>$INFO[MusicPlayer.offset(40).Artist]$INFO[MusicPlayer.offset(40).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(40).Title]$INFO[MusicPlayer.offset(40).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(40).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(40).Album][CR]$INFO[MusicPlayer.offset(40).Duration]</property>
 				<onclick>Playlist.PlayOffset(40)</onclick>
@@ -3763,7 +3762,7 @@
 			</item>
 			<item>
 				<label>41:</label>
-				<label2>$INFO[MusicPlayer.offset(41).Artist]$INFO[MusicPlayer.offset(41).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(41).Title]$INFO[MusicPlayer.offset(41).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(41).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(41).Album][CR]$INFO[MusicPlayer.offset(41).Duration]</property>
 				<onclick>Playlist.PlayOffset(41)</onclick>
@@ -3771,7 +3770,7 @@
 			</item>
 			<item>
 				<label>42:</label>
-				<label2>$INFO[MusicPlayer.offset(42).Artist]$INFO[MusicPlayer.offset(42).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(42).Title]$INFO[MusicPlayer.offset(42).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(42).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(42).Album][CR]$INFO[MusicPlayer.offset(42).Duration]</property>
 				<onclick>Playlist.PlayOffset(42)</onclick>
@@ -3779,7 +3778,7 @@
 			</item>
 			<item>
 				<label>43:</label>
-				<label2>$INFO[MusicPlayer.offset(43).Artist]$INFO[MusicPlayer.offset(43).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(43).Title]$INFO[MusicPlayer.offset(43).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(43).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(43).Album][CR]$INFO[MusicPlayer.offset(43).Duration]</property>
 				<onclick>Playlist.PlayOffset(43)</onclick>
@@ -3787,7 +3786,7 @@
 			</item>
 			<item>
 				<label>44:</label>
-				<label2>$INFO[MusicPlayer.offset(44).Artist]$INFO[MusicPlayer.offset(44).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(44).Title]$INFO[MusicPlayer.offset(44).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(44).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(44).Album][CR]$INFO[MusicPlayer.offset(44).Duration]</property>
 				<onclick>Playlist.PlayOffset(44)</onclick>
@@ -3795,7 +3794,7 @@
 			</item>
 			<item>
 				<label>45:</label>
-				<label2>$INFO[MusicPlayer.offset(45).Artist]$INFO[MusicPlayer.offset(45).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(45).Title]$INFO[MusicPlayer.offset(45).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(45).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(45).Album][CR]$INFO[MusicPlayer.offset(45).Duration]</property>
 				<onclick>Playlist.PlayOffset(45)</onclick>
@@ -3803,7 +3802,7 @@
 			</item>
 			<item>
 				<label>46:</label>
-				<label2>$INFO[MusicPlayer.offset(46).Artist]$INFO[MusicPlayer.offset(46).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(46).Title]$INFO[MusicPlayer.offset(46).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(46).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(46).Album][CR]$INFO[MusicPlayer.offset(46).Duration]</property>
 				<onclick>Playlist.PlayOffset(46)</onclick>
@@ -3811,7 +3810,7 @@
 			</item>
 			<item>
 				<label>47:</label>
-				<label2>$INFO[MusicPlayer.offset(47).Artist]$INFO[MusicPlayer.offset(47).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(47).Title]$INFO[MusicPlayer.offset(47).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(47).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(47).Album][CR]$INFO[MusicPlayer.offset(47).Duration]</property>
 				<onclick>Playlist.PlayOffset(47)</onclick>
@@ -3819,7 +3818,7 @@
 			</item>
 			<item>
 				<label>48:</label>
-				<label2>$INFO[MusicPlayer.offset(48).Artist]$INFO[MusicPlayer.offset(48).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(48).Title]$INFO[MusicPlayer.offset(48).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(48).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(48).Album][CR]$INFO[MusicPlayer.offset(48).Duration]</property>
 				<onclick>Playlist.PlayOffset(48)</onclick>
@@ -3827,7 +3826,7 @@
 			</item>
 			<item>
 				<label>49:</label>
-				<label2>$INFO[MusicPlayer.offset(49).Artist]$INFO[MusicPlayer.offset(49).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(49).Title]$INFO[MusicPlayer.offset(49).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(49).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(49).Album][CR]$INFO[MusicPlayer.offset(49).Duration]</property>
 				<onclick>Playlist.PlayOffset(49)</onclick>
@@ -3835,7 +3834,7 @@
 			</item>
 			<item>
 				<label>50:</label>
-				<label2>$INFO[MusicPlayer.offset(50).Artist]$INFO[MusicPlayer.offset(50).Title, | ]</label2>
+				<label2>$INFO[MusicPlayer.offset(50).Title]$INFO[MusicPlayer.offset(50).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(50).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(50).Album][CR]$INFO[MusicPlayer.offset(50).Duration]</property>
 				<onclick>Playlist.PlayOffset(50)</onclick>
@@ -4359,7 +4358,7 @@
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videostretch),disable)]</property>
 				<icon>osd_menu_video.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameviewmode)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gamestretchmode)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videostretch),disable)">Skin.SetString(osd_game_videostretch,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videostretch),disable)">Skin.Reset(osd_game_videostretch,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_game_videostretch),disable) | Skin.HasSetting(customosd)]</visible>
