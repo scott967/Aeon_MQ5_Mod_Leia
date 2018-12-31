@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.0/10.6.0 -->
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
 	<onunload>Skin.Reset(customosd)</onunload>
@@ -78,7 +78,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
 				<shadowcolor>grey</shadowcolor>
-				<visible>![Window.IsActive(gameviewmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
+				<visible>![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
 			</control>
 			<!-- <control type="label">
 				<posx>45</posx>
