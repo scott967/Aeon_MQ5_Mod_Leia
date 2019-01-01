@@ -17,52 +17,53 @@
 	<include file="IncludesWeather.xml" />
 	<include file="IncludesTopMenu.xml" />
 	<include file="IncludesLyrics.xml" />
-	<include file="ViewsWide.xml" />
+	<include file="ViewsWide_51.xml" />
 	<!-- 51 -->
-	<include file="ViewsBanner.xml" />
+	<include file="ViewsBanner_52.xml" />
 	<!-- 52 -->
-	<include file="ViewsBannerInfo.xml" />
+	<include file="ViewsBannerInfo_53.xml" />
 	<!-- 53 -->
-	<include file="ViewsPoster.xml" />
+	<include file="ViewsPoster_54.xml" />
 	<!-- 54 -->
-	<include file="ViewsLowList.xml" />
+	<include file="ViewsLowList_55.xml" />
 	<!-- 55 -->
-	<include file="ViewsWall.xml" />
+	<include file="ViewsWall_56.xml" />
 	<!-- 56 -->
-	<include file="ViewsGlassList.xml" />
+	<include file="ViewsGlassList_57.xml" />
 	<!-- 57 -->
-	<include file="ViewsCoverFlow.xml" />
+	<include file="ViewsCoverFlow_58.xml" />
 	<!-- 58 -->
-	<include file="ViewsRightList.xml" />
+	<include file="ViewsRightList_59.xml" />
 	<!-- 59 -->
-	<include file="ViewsShowArt.xml" />
+	<include file="ViewsShowArt_60.xml" />
 	<!-- 60 -->
-	<include file="ViewsMultiplex.xml" />
+	<include file="ViewsMultiplex_61.xml" />
 	<!-- 61 -->
-	<include file="ViewsPanel.xml" />
+	<include file="ViewsPanel_62.xml" />
 	<!-- 62 -->
-	<include file="ViewsShelf.xml" />
+	<include file="ViewsShelf_63.xml" />
 	<!-- 63 -->
-	<include file="ViewsShelfCase.xml" />
+	<include file="ViewsShelfCase_69.xml" />
 	<!-- 69 -->
 	<!-- ShelfCase Mod -->
-	<include file="ViewsLandScapeX.xml" />
+	<include file="ViewsLandScapeX_64.xml" />
 	<!-- 64 -->
-	<include file="ViewsSets.xml" />
+	<include file="ViewsSets_65.xml" />
 	<!-- 65 -->
-	<include file="ViewsShowCase.xml" />
+	<include file="ViewsShowCase_66.xml" />
 	<!-- 66 -->
-	<include file="Views3DWall.xml" />
+	<include file="Views3DWall_67.xml" />
 	<!-- 67 -->
-	<include file="ViewsPhotoShow.xml" />
+	<include file="ViewsPhotoShow_79.xml" />
 	<!-- 79 -->
-	<include file="ViewsMidList.xml" />
+	<include file="ViewsMidList_70.xml" />
 	<!-- 70 -->
-	<include file="ViewsMultiList.xml" />
+	<include file="ViewsMultiList_71.xml" />
 	<!-- 71 -->
-	<include file="ViewsGames.xml" />
+	<include file="ViewsGames_50.xml" />
 	<include file="ViewsLiveTV.xml" />
 	<constant name="FanartCrossFadeTime">350</constant>
+<!-- Home widgets for video and audio playlists (random or last played) *************************************************************************************** -->
 	<include name="Playlists">
 		<onload condition="String.Contains(skin.string(menu1.master),vpl) + String.Contains(skin.string(mfvpl1_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
 		<onload condition="String.Contains(skin.string(menu1.master),vpl) + String.Contains(skin.string(mfvpl1_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu1.path)],menu=vpl1)</onload>
@@ -165,7 +166,7 @@
 		<onload condition="String.Contains(skin.string(menu20.master),apl) + String.Contains(skin.string(mfapl20_list),latest)">RunScript(script.randomandlastitems,limit=12,method=Last,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
 		<onload condition="String.Contains(skin.string(menu20.master),apl) + String.Contains(skin.string(mfapl20_list),random)">RunScript(script.randomandlastitems,limit=12,method=Random,playlist=$INFO[Skin.String(menu20.path)],menu=apl20)</onload>
 	</include>
-	<!-- ######################################################################### Animations ######################################################################### -->
+<!-- ######################################################################### Animations ######################################################################### -->
 	<include name="Animation_Fade">
 		<animation effect="fade" time="500">WindowOpen</animation>
 		<animation effect="fade" time="200">Visible</animation>
@@ -350,7 +351,7 @@
 		<animation effect="rotate" end="-360" center="auto" time="16000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),16000)">Conditional</animation>
 		<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),20000)">Conditional</animation>
 	</include>
-	<!-- ######################################################################### Fontes do menu principal ######################################################################### -->
+<!-- ######################################################################### Fonts for Home menu ######################################################################### -->
 	<include name="Font1">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -445,7 +446,7 @@
 		<textcolor>$VAR[value_menucolorlabelfocus]</textcolor>
 		<scroll>true</scroll>
 	</include>
-	<!-- ######################################################################### Backgrounds / Dimensions ######################################################################### -->
+<!-- ######################################################################### Backgrounds / Dimensions ######################################################################### -->
 	<include name="InvisibleButton">
 		<posx>-30</posx>
 		<posy>-30</posy>
@@ -523,6 +524,7 @@
 			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(SliderDialog)">conditional</animation>
 			<visible>Window.IsVisible(progressdialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(contextmenu) | Window.IsVisible(numericinput) | Window.IsVisible(shutdownmenu) | Window.IsVisible(playercontrols) | Window.IsVisible(filebrowser) | Window.IsVisible(networksetup) | Window.IsVisible(mediasource) | Window.IsVisible(profilesettings) | Window.IsVisible(contentsettings) | Window.IsVisible(favourites) | Window.IsVisible(smartplaylisteditor) | Window.IsVisible(smartplaylistrule) | Window.IsVisible(radiotimers) | Window.IsVisible(630) | Window.IsVisible(633) | Window.IsVisible(selectdialog)</visible>
 		</control>
+<!-- default skin settings used for initial install or if user requests reset to default ******************************************************************  -->
 		<include condition="!String.IsEqual(skin.string(defaultsettings),2)">DefaultSettings</include>
 	</include>
 	<include name="DefaultSettings">
@@ -604,6 +606,7 @@
 				<onfocus>Skin.SetString(mfapl18_list,latest)</onfocus>
 				<onfocus>Skin.SetString(mfapl19_list,latest)</onfocus>
 				<onfocus>Skin.SetString(mfapl20_list,latest)</onfocus>
+				<!-- set the default video case colors and "sticker" icon"  -->
 				<onfocus>Skin.SetString(case_default,deepblue)</onfocus>
 				<onfocus>Skin.SetString(case_bluray,sky)</onfocus>
 				<onfocus>Skin.SetString(case_3dbd,orange)</onfocus>
@@ -624,6 +627,7 @@
 				<onfocus>Skin.SetString(codec_4k,4k)</onfocus>
 				<onfocus>Skin.SetString(codec_hdr,hdr)</onfocus>
 				<onfocus>Skin.SetString(codec_uhd,uhd)</onfocus>
+				<!-- end video case colors and sticker icon  -->
 				<onfocus>Skin.SetString(panel_seconds,3)</onfocus>
 				<onfocus>Skin.SetString(gamevideo_seconds,2)</onfocus>
 				<onfocus>Skin.SetString(games_video,auto)</onfocus>
