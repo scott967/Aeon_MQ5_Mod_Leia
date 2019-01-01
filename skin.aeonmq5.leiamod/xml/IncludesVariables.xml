@@ -1794,31 +1794,31 @@
 	</variable>
 	<variable name="value_codecdefault-7">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-6">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-5">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-4">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-3">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-2">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault-1">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault">
 		<value condition="String.Contains(skin.string(codec_default),none)"></value>
@@ -1834,63 +1834,64 @@
 	</variable>
 	<variable name="value_codecdefault0">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<!-- <value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value> -->
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault1">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault2">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault3">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault4">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault5">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault6">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault7">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-7">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-6">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-5">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-4">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-3">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-2">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray-1">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray">
 		<value condition="String.Contains(skin.string(codec_bluray),none)"></value>
@@ -1906,63 +1907,63 @@
 	</variable>
 	<variable name="value_codecbluray0">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray1">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray2">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray3">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]]</value>
 	</variable>
 	<variable name="value_codecbluray4">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray5">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray6">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecbluray7">
 		<value condition="!String.Contains(skin.string(codec_bluray),default)">$VAR[value_codecbluray]</value>
-		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_bluray),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-7">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-6">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-5">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-4">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-3">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-2">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd-1">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd">
 		<value condition="String.Contains(skin.string(codec_3dbd),none)"></value>
@@ -1978,63 +1979,63 @@
 	</variable>
 	<variable name="value_codec3dbd0">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd1">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd2">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd3">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd4">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd5">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd6">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec3dbd7">
 		<value condition="!String.Contains(skin.string(codec_3dbd),default)">$VAR[value_codec3dbd]</value>
-		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_3dbd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-7">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-6">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-5">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-4">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-3">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-2">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv-1">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv">
 		<value condition="String.Contains(skin.string(codec_webtv),none)"></value>
@@ -2050,63 +2051,63 @@
 	</variable>
 	<variable name="value_codecwebtv0">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv1">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv2">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv3">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv4">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv5">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv6">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecwebtv7">
 		<value condition="!String.Contains(skin.string(codec_webtv),default)">$VAR[value_codecwebtv]</value>
-		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_webtv),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-7">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-6">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-5">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-4">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-3">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-2">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv-1">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv">
 		<value condition="String.Contains(skin.string(codec_hdtv),none)"></value>
@@ -2122,63 +2123,63 @@
 	</variable>
 	<variable name="value_codechdtv0">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv1">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv2">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv3">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv4">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv5">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv6">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdtv7">
 		<value condition="!String.Contains(skin.string(codec_hdtv),default)">$VAR[value_codechdtv]</value>
-		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdtv),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-7">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-6">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-5">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-4">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-3">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-2">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd-1">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd">
 		<value condition="String.Contains(skin.string(codec_dvd),none)"></value>
@@ -2194,63 +2195,63 @@
 	</variable>
 	<variable name="value_codecdvd0">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd1">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd2">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd3">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd4">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd5">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd6">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdvd7">
 		<value condition="!String.Contains(skin.string(codec_dvd),default)">$VAR[value_codecdvd]</value>
-		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_dvd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-7">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-6">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-5">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-4">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-3">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-2">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset-1">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset">
 		<value condition="String.Contains(skin.string(codec_set),none)"></value>
@@ -2266,63 +2267,63 @@
 	</variable>
 	<variable name="value_codecset0">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset1">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset2">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset3">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset4">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset5">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset6">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecset7">
 		<value condition="!String.Contains(skin.string(codec_set),default)">$VAR[value_codecset]</value>
-		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_set),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-7">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-6">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-5">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-4">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-3">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-2">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k-1">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k">
 		<value condition="String.Contains(skin.string(codec_4k),none)"></value>
@@ -2338,64 +2339,64 @@
 	</variable>
 	<variable name="value_codec4k0">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k1">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k2">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k3">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k4">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k5">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k6">
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codec4k7">
 	
 		<value condition="!String.Contains(skin.string(codec_4k),default)">$VAR[value_codec4k]</value>
-		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_4k),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-7">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-6">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-5">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-4">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-3">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-2">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr-1">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr">
 		<value condition="String.Contains(skin.string(codec_hdr),none)"></value>
@@ -2411,63 +2412,63 @@
 	</variable>
 	<variable name="value_codechdr0">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr1">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr2">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr3">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr4">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr5">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr6">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codechdr7">
 		<value condition="!String.Contains(skin.string(codec_hdr),default)">$VAR[value_codechdr]</value>
-		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_hdr),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-7">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-6">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-5">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-4">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-3">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-2">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd-1">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(-1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd">
 		<value condition="String.Contains(skin.string(codec_uhd),none)"></value>
@@ -2483,35 +2484,35 @@
 	</variable>
 	<variable name="value_codecuhd0">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd1">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(1).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd2">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(2).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd3">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(3).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd4">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(4).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd5">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(5).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd6">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(6).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecuhd7">
 		<value condition="!String.Contains(skin.string(codec_uhd),default)">$VAR[value_codecuhd]</value>
-		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
+		<value condition="String.Contains(skin.string(codec_uhd),default)">$INFO[ListItem(7).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_menucolorlabel">
 		<value condition="Skin.HasSetting(whitemenu)">60101010</value>

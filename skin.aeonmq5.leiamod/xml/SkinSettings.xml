@@ -1135,7 +1135,8 @@
 					<texture>grey.png</texture>
 				</control>
 				<control type="list" id="150">
-					<!-- Codec list to display on case first select case color on list 165 then icon here-->
+					<!-- Codec list to display on case first select case color on list 165 then icon here. Note that you can display a fixed flag image per case, or use a video codec selected codec flag image, or none image-->
+					<!-- "Custom_code" is the specific codec to change (eg codec_bluray) -->
 					<posx>370</posx>
 					<posy>870</posy>
 					<width>1540</width>
@@ -1324,7 +1325,7 @@
 						<colordiffuse>20FFFFFF</colordiffuse>
 					</control>
 					<control type="grouplist" id="165">
-					<!-- List of available case colors to select for list 403 case-->
+					<!-- List of available case colors to select for list 403 case "custom_case" is set in 403 to appropriate case (eg case_bluray) -->
 						<posx>102</posx>
 						<posy>232</posy>
 						<width>13650</width>
