@@ -154,7 +154,7 @@
 					<ondown>Dialog.Close(1104)</ondown>
 				</control>
 				<control type="textbox" id="9001">
-					<posx>0</posx>
+					<posx>20</posx>
 					<posy>45</posy>
 					<width>894</width>
 					<height>534</height>
@@ -165,7 +165,7 @@
 					<visible>Window.IsActive(visualisation)</visible>
 				</control>
 				<control type="textbox" id="9001">
-					<posx>0</posx>
+					<posx>20</posx>
 					<posy>45</posy>
 					<width>894</width>
 					<height>534</height>
@@ -173,7 +173,18 @@
 					<font>Font_18A</font>
 					<label>$INFO[ListItem.ContributorAndRole]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-					<visible>!Window.IsActive(visualisation)</visible>
+					<visible>!Window.IsActive(visualisation) + !String.IsEqual(ListItem.DBType,album)</visible>
+				</control>
+				<control type="textbox" id="9001">
+					<posx>20</posx>
+					<posy>45</posy>
+					<width>894</width>
+					<height>534</height>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<label>$INFO[Window(musicinformation).Property(roles)]</label>
+					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
+					<visible>!Window.IsActive(visualisation) + String.IsEqual(ListItem.DBType,album)</visible>
 				</control>
 			</control>
 		</control>
