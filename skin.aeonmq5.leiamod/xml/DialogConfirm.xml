@@ -16,66 +16,54 @@
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				<label></label>
 			</control>
-			<control type="button" id="10">
-				<!-- no -->
-				<posx>735</posx>
-				<posy>45</posy>
-				<height>44</height>
-				<width>225</width>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
 				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
-				<focusedcolor>FF101010</focusedcolor>
-				<font>Font_18A</font>
-				<label>106</label>
-				<textoffsetx>0</textoffsetx>
-				<textwidth>270</textwidth>
-				<texturefocus>settings_button_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<onleft>11</onleft>
-				<onright>11</onright>
-				<onup>11</onup>
-				<ondown>11</ondown>
-				<visible>!Window.IsActive(progressdialog)</visible>
-			</control>
-			<control type="button" id="10">
-				<!-- cancel -->
-				<posx>848</posx>
+				<posx>0</posx>
 				<posy>45</posy>
-				<height>44</height>
-				<width>225</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
-				<focusedcolor>FF101010</focusedcolor>
-				<font>Font_18A</font>
-				<label>106</label>
-				<textoffsetx>0</textoffsetx>
-				<textwidth>270</textwidth>
-				<texturefocus>settings_button_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<visible>Window.IsActive(progressdialog)</visible>
-			</control>
-			<control type="button" id="11">
-				<!-- yes -->
-				<posx>960</posx>
-				<posy>45</posy>
-				<height>44</height>
-				<width>225</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>FFFFFAF0</textcolor>
-				<focusedcolor>FF101010</focusedcolor>
-				<font>Font_18A</font>
-				<label>107</label>
-				<textoffsetx>0</textoffsetx>
-				<textwidth>270</textwidth>
-				<texturefocus>settings_button_focus.png</texturefocus>
-				<texturenofocus></texturenofocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+				<width>1920</width>
+				<control type="button" id="10">
+					<!-- no -->
+					<!-- <posx>735</posx> -->
+					<!-- <posy>45</posy> -->
+					<height>44</height>
+					<width>225</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<focusedcolor>FF101010</focusedcolor>
+					<font>Font_18A</font>
+					<label>106</label>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>270</textwidth>
+					<texturefocus>settings_button_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onleft>11</onleft>
+					<onright>11</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+				</control>
+				<control type="button" id="11">
+					<!-- yes -->
+					<!-- <posx>960</posx> -->
+					<!-- <posy>45</posy> -->
+					<height>44</height>
+					<width>225</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<focusedcolor>FF101010</focusedcolor>
+					<font>Font_18A</font>
+					<label>107</label>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>270</textwidth>
+					<texturefocus>settings_button_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+				</control>
 			</control>
 			<control type="progress" id="20">
 				<!-- was 404? -->
