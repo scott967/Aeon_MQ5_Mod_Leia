@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.0/Orby/6.1.4 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.2.1 window IDs 103/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.5.2 -->
+<!-- Leia 10.2.4/10.3.0/10.5.2/10.6.1 -->
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
 	<coordinates>
@@ -160,6 +160,12 @@
 						<ondown>131</ondown>
 						<include>KeyboardButton</include>
 					</control>
+					<control type="button" id="112">
+						<description>(0,12) key button</description>
+						<onup>306</onup>
+						<ondown>132</ondown>
+						<include>KeyboardButton</include>
+					</control>
 				</control>
 				<!-- 2nd row -->
 				<control type="grouplist">
@@ -260,7 +266,7 @@
 					</control>
 					<control type="button" id="132">
 						<description>(1,12) key button</description>
-						<onup>111</onup>
+						<onup>112</onup>
 						<ondown>152</ondown>
 						<include>KeyboardButton</include>
 					</control>
