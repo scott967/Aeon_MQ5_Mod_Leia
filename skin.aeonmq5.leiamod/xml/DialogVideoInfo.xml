@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1 -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
@@ -326,7 +326,7 @@
 					</item>
 					<item>
 						<label>$LOCALIZE[20339]/$LOCALIZE[20417]</label>
-						<!-- Director/Written -->
+						<!-- Director/Writer 13 show all movies by director -->
 						<label2>$INFO[ListItem.Director,,/]$INFO[ListItem.Writer]</label2>
 						<onclick>SendClick(movieinformation,13)</onclick>
 						<visible>!Container.Content(musicvideos)</visible>
@@ -473,7 +473,7 @@
 				<width>3</width>
 				<height>576</height>
 				<texture>separator_v.png</texture>
-				<animation effect="slide" end="-399,0" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos) + String.IsEmpty(ListItem.Art(poster))">Conditional</animation>
+				<animation effect="slide" end="-399,0" time="0" condition="Container.Content(episodes) | [Container.Content(musicvideos) | Container.Content(movies)] + String.IsEmpty(ListItem.Art(poster))">Conditional</animation>
 			</control>
 			<control type="image">
 				<posx>0</posx>
