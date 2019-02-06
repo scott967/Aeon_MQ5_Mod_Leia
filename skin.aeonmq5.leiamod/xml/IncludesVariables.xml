@@ -3888,7 +3888,10 @@
 		<value condition="!Skin.HasSetting(nopreferclearart) + String.IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 	</variable>
 	<variable name="value_poster">
-		<value condition="Window.IsActive(musicplaylist) + !Strimg.IsEmpty(MusicPlayer.cover)">$INFO[MusicPlayer.cover]</value>
+		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio +  !String.IsEmpty(Player.Art(album.thumb))">$INFO[Player.Art(album.thumb)]</value>
+		<value condition="Window.IsActive(musicplaylist) + ![Player.HasAudio | [Player.HasVideo + VideoPlayer.Content(musicvideos)]] +  String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.Art(album.thumb)]</value>
+		<value condition="Window.IsActive(musicplaylist) + ![Player.HasAudio | [Player.HasVideo + VideoPlayer.Content(musicvideos)]] +  String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="Window.IsActive(musicplaylist) + Player.HasVideo +  VideoPlayer.Content(musicvideos)">$INFO[Player.Art(thumb)]</value>  <!-- MV is playing on mixed playlist -->
 		<value condition="![String.IsEmpty(ListItem.Art(poster)) | Container.Content(genres)]">$INFO[ListItem.Art(poster)]</value>
 		<value condition="String.IsEmpty(ListItem.Art(poster)) + !Container.Content(genres)">$INFO[ListItem.Icon]</value>
 		<value condition="Window.IsActive(videos) + Container.Content(genres) + !Skin.HasSetting(externalvideogenreicon)">$INFO[Skin.String(custom_moviegenreicons.path)]$INFO[ListItem.Label]$INFO[Skin.String(custom_moviegenreicons.ext)]</value>
@@ -4554,6 +4557,8 @@
 		<value condition="[Container.Content(musicvideos) | String.Contains(Container.FolderPath,musicvideos)] + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Artist]</value>
 	</variable>
 	<variable name="value_songinfo_title">
+		<value condition="Window.IsActive(music) + String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.Label]</value>
+		<value condition="Window.IsActive(music) + String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.Title]$INFO[ListItem.Artist, - ,]</value>
 		<value condition="!Window.IsActive(musicplaylist) | [!Player.HasAudio + String.IsEmpty(VideoPlayer.Artist)]">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Title]</value>
 		<value condition="Window.IsActive(musicplaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Title]</value>
