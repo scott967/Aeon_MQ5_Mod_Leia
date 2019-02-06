@@ -3707,107 +3707,85 @@
 	<variable name="value_ground6_value">
 		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio">$LOCALIZE[31582]   $INFO[MusicPlayer.Artist]</value>
 		<value condition="Window.IsActive(musicplaylist) + !String.IsEmpty(VideoPlayer.Artist)">$LOCALIZE[31582]   $INFO[VideoPlayer.Artist]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(Container.ListItemAbsolute(0).Year) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Year]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(Container.ListItemAbsolute(0).Year) + MusicPartyMode.Enabled">$LOCALIZE[31582]   $INFO[Container.ListItemAbsolute(0).Year]</value>
 		<!-- fixed for party mode -->
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Year)">$INFO[VideoPlayer.Year]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Year)">$LOCALIZE[31582]   $INFO[VideoPlayer.Year]</value>
 		<value condition="!ListItem.IsCollection + ![Window.IsActive(musicplaylist) + Player.HasAudio]">$INFO[ListItem.Year]</value>
 		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(Set.Movies.Years)]</value>
 	</variable>
 	<!--  music video changes from here  -->
-	<variable name="value_ground11_label">
-		<!-- Para vistas que sejam lista -->
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !String.IsEmpty(Container.ListItemAbsolute(Container.CurrentItem).Artist)]">$LOCALIZE[557]</value>
-		<value condition="[Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Episode)]">$LOCALIZE[31233]</value>
-		<value condition="[Window.IsVisible(VideoPlaylist) + String.IsEmpty(VideoPlayer.Episode) + String.IsEmpty(VideoPlayer.Artist)]">$LOCALIZE[21875]</value>
-		<value condition="Container.Content(movies) | Container.Content(sets)">$LOCALIZE[21875]</value>
-		<!-- Pais -->
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[31233]</value>
-		<!-- Estreou -->
-		<value condition="Container.Content(artists)">$LOCALIZE[176]</value>
-		<!-- Artist style -->
-		<value condition="Container.Content(albums)">$LOCALIZE[21895]</value>
-		<!-- Temas Albuns -->
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$LOCALIZE[554]</value>
-		<!-- Faixa -->
-		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[31772]</value>
-		<!-- Lancamento -->
-		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[24051]</value>
-		<!-- Versao-->
+	<variable name="value_ground11_label"> <!-- used in media list views -->
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$LOCALIZE[557]</value> <!-- artist -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(movies)">$LOCALIZE[21875]</value> <!-- movie playing country -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(episodes)">$LOCALIZE[31233]</value> <!-- episode playing premiered -->
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[554]</value>  <!-- track -->
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$LOCALIZE[176]</value>  <!-- Artist style -->
+		<value condition="String.IsEqual(ListItem.DBType,album)">$LOCALIZE[21895]</value>  <!-- Album theme -->
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[21875]</value>  <!-- country -->
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$LOCALIZE[31233]</value>  <!-- premiered -->
+		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[31772]</value>  <!-- premiered -->
+		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[19114]</value>  <!-- version -->
 		<value condition="Window.IsActive(pictures) + Container.Content(images)">$LOCALIZE[21805]</value>
 	</variable>
 	<variable name="value_ground11_value">
-		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Artist]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Artist]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Episode)">$INFO[VideoPlayer.Premiered]</value>
-		<value condition="[Window.IsVisible(VideoPlaylist) + String.IsEmpty(VideoPlayer.Episode) + String.IsEmpty(VideoPlayer.Artist)]">$INFO[VideoPlayer.Country]</value>
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist)">$INFO[ListItem.Country]$INFO[Window(home).Property(Set.Movies.Country)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(home).Property(Set.Movies.Country)]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Theme)]</value>
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$VAR[value_songinfo_track]</value>
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Country]</value> <!-- movie playing country -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Premiered]</value> <!-- episode playing premiered -->
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_track]</value>
+		<!-- <value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Artist]</value> -->
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Style)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Theme)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist)">$INFO[ListItem.Country]$INFO[Window(home).Property(Set.Movies.Country)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(Set.Movies.Country)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Premiered]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Premiered]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonVersion]</value>
 		<value condition="Window.IsActive(pictures) + Container.Content(images)">$INFO[ListItem.PictureResolution]</value>
 	</variable>
-	<variable name="value_ground12_label">
-		<!-- Para vistas que sejam lista -->
-		<value condition="[Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Episode)]">$LOCALIZE[20339]</value>
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">$LOCALIZE[515]</value>
-		<!-- Genero -->
-		<value condition="Container.Content(episodes)">$LOCALIZE[20339]</value>
-		<!-- Diretor -->
-		<value condition="Container.Content(artists)">$LOCALIZE[515]</value>
-		<!-- Artist genre -->
-		<value condition="Container.Content(albums)">$LOCALIZE[564]</value>
-		<!-- Tipo Albuns -->
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$LOCALIZE[180]</value>
-		<!-- Duracao -->
-		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[515]</value>
-		<!-- Genero -->
-		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[126]</value>
-		<!-- Estatus -->
+	<variable name="value_ground12_label"> <!-- used in media list views -->
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$LOCALIZE[515]</value> <!-- genre -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(movies)">$LOCALIZE[515]</value> <!-- movie playing genre -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(episodes)">$LOCALIZE[20339]</value> <!-- episode playing director -->
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[180]</value> <!-- duration -->
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$LOCALIZE[515]</value>  <!-- Genre (artist) -->
+		<value condition="String.IsEqual(ListItem.DBType,album)">$LOCALIZE[564]</value>  <!-- Album type -->
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[515]</value>  <!-- Genre -->
+		<value condition="String.IsEqual(ListItem.DBType,episode)">$LOCALIZE[20339]</value>  <!-- director -->
+		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[515]</value>  <!-- genre -->
+		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[126]</value>  <!-- status (broken) -->
 	</variable>
 	<variable name="value_ground12_value">
-		<value condition="Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Genre]$INFO[Window(home).Property(Set.Movies.Genre)]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Genre]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="[Window.IsVisible(VideoPlaylist) + String.IsEmpty(VideoPlayer.Episode) + String.IsEmpty(VideoPlayer.Artist)]">$INFO[VideoPlayer.Genre]</value>
-		<value condition="[Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Episode)]">$INFO[VideoPlayer.Director]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(home).Property(Set.Movies.Genre)]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.director]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<!-- Genero Artistas -->
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Type)]</value>
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$VAR[value_songinfo_duration]</value>
-		<!-- Duracao -->
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Genre]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]</value> <!-- movie playing genre -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Director]</value> <!-- episode playing director -->
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_duration]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Genre)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Type)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Genre]$INFO[Window(home).Property(Set.Movies.Genre)]</value>
+		<!-- <value condition="Window.IsVisible(VideoPlaylist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Genre]</value> -->
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(Set.Movies.Genre)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.director]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Genre]</value>
-		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonStatus]$INFO[ListItem.AddonBroken, | ]</value>
+		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonBroken]</value>
 	</variable>
-	<variable name="value_ground13_label">
-		<!-- Para vistas que sejam lista -->
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$LOCALIZE[369]</value>
-		<value condition="Container.Content(musicvideos) | [Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Artist)]">$LOCALIZE[558]</value>
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)">$LOCALIZE[20388]</value>
-		<!-- Estudio -->
-		<value condition="Container.Content(artists) | Container.Content(albums)">$LOCALIZE[175]</value>
-		<!-- Moods Artistas/Albums -->
-		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[31788]</value>
-		<!-- Desenvolvedor -->
-		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[21863]</value>
-		<!-- Criador -->
+	<variable name="value_ground13_label">  <!-- used in media list views -->
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$LOCALIZE[558]</value> <!-- MV playing album -->
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">$LOCALIZE[20388]</value> <!-- movie or episode playing studio -->
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$LOCALIZE[369]</value> <!-- title -->
+		<value condition="String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)">$LOCALIZE[175]</value> <!-- Moods Artists/Albums -->
+		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set)">$LOCALIZE[20388]</value>  <!-- studio -->
+		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$LOCALIZE[31788]</value>  <!-- developer -->
+		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$LOCALIZE[21863]</value>  <!-- author -->
 	</variable>
 	<variable name="value_ground13_value">
-		<value condition="Container.Content(songs) | Container.Content(mixed) | Container.Content(files)">$VAR[value_songinfo_title]</value>
-		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Album]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Album]</value>
-		<value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Album]</value>
-		<value condition="Window.IsVisible(VideoPlaylist)">$INFO[VideoPlayer.Studio]</value>
-		<value condition="Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[ListItem.Studio]$INFO[Window(home).Property(Set.Movies.Studio)]</value>
-		<value condition="Container.Content(sets)">$INFO[Window(home).Property(Set.Movies.Studio)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
+		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.album]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">$INFO[VideoPlayer.Studio]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_title]</value>
+		<!-- <value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Album]</value> -->
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Mood)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Mood)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Studio]$INFO[Window(home).Property(Set.Movies.Studio)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(Set.Movies.Studio)]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Studio]</value>
 		<value condition="Window.IsActive(programs) + Container.Content(Addons)">$INFO[ListItem.AddonCreator]</value>
 	</variable>
