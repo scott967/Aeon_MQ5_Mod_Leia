@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -2811,7 +2811,7 @@
 		</focusedlayout>
 		<content>
 			<item id="16">
-				<!-- info -->
+				<!-- load full screen info -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_info),disable)]</property>
 				<icon>osd_menu_info.png</icon>
@@ -2841,7 +2841,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_subtitle),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="5">
-				<!-- audio -->
+				<!-- load audio settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_audio),disable)]</property>
 				<icon>osd_menu_audio.png</icon>
@@ -2851,7 +2851,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_audio),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="6">
-				<!-- video -->
+				<!-- load video settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_video),disable)]</property>
 				<icon>osd_menu_video.png</icon>
@@ -2871,7 +2871,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_3dmode),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="18">
-				<!-- cms control -->
+				<!-- load cms control settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_cms),disable)]</property>
 				<icon>osd_menu_cms.png</icon>
@@ -2881,7 +2881,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_cms),disable) | Skin.HasSetting(customosd)] + System.HasCMS</visible>
 			</item>
 			<item id="33">
-				<!-- video resolution -->
+				<!-- video resolution select -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_video_res),disable)]</property>
 				<icon>osd_menu_video_res.png</icon>
@@ -2891,7 +2891,7 @@
 				<visible>[!String.Contains(skin.string(osd_menu_video_res),disable) | Skin.HasSetting(customosd)] + Player.HasResolutions</visible>
 			</item>
 			<item id="23">
-				<!-- skipbwd -->
+				<!-- skipbwd previous -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_skipbwd),disable)]</property>
 				<icon>osd_menu_skipbwd.png</icon>
@@ -2901,7 +2901,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_skipbwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="23">
-				<!-- - canal -->
+				<!-- - channel down -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channeldown),disable)]</property>
 				<icon>osd_menu_channeldown.png</icon>
@@ -2941,7 +2941,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_ff),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="17">
-				<!-- skipfwd -->
+				<!-- skipfwd next -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_skipfwd),disable)]</property>
 				<icon>osd_menu_skipfwd.png</icon>
@@ -2951,7 +2951,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_skipfwd),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="17">
-				<!-- + canal -->
+				<!-- + channel up -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_menu_channelup),disable)]</property>
 				<icon>osd_menu_channelup.png</icon>
@@ -2981,7 +2981,7 @@
 				<visible>$EXP[Can_record] + !String.Contains(skin.string(osd_video_rec),disable) | Skin.HasSetting(customosd)</visible>
 			</item>
 			<item id="7">
-				<!-- disc -->
+				<!-- disc menu -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_disc),disable)]</property>
 				<icon>osd_menu_disc.png</icon>
@@ -2991,7 +2991,7 @@
 				<visible>[VideoPlayer.HasMenu + !String.Contains(skin.string(osd_video_disc),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="8">
-				<!-- book -->
+				<!-- load bookmarks -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_book),disable)]</property>
 				<icon>osd_menu_book.png</icon>
@@ -3032,7 +3032,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_random),disable) | Skin.HasSetting(customosd)] + !VideoPlayer.Content(LiveTV)</visible>
 			</item>
 			<item id="2">
-				<!-- teletext -->
+				<!-- load teletext -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_teletext),disable)]</property>
 				<icon>osd_menu_teletext.png</icon>
@@ -3042,7 +3042,7 @@
 				<visible>[VideoPlayer.HasTeletext + !String.Contains(skin.string(osd_video_teletext),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="3">
-				<!-- wordpause -->
+				<!-- show pause label when paused -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_wordpause),disable)]</property>
 				<icon>osd_menu_wordpause.png</icon>
@@ -3052,7 +3052,7 @@
 				<visible>[!String.Contains(skin.string(osd_video_wordpause),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="1">
-				<!-- furniture -->
+				<!-- furniture disable -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_furniture),disable)]</property>
 				<icon>osd_menu_furniture.png</icon>
@@ -3062,7 +3062,7 @@
 				<visible>[!Window.IsActive(fullscreeninfo) + !String.Contains(skin.string(osd_video_furniture),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="4">
-				<!-- general settings -->
+				<!-- load general settings -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_video_gsettings),disable)]</property>
 				<icon>osd_menu_gensettings.png</icon>
@@ -3416,6 +3416,7 @@
 				<icon>osd_menu_gensettings.png</icon>
 				<onclick condition="!Skin.HasSetting(customosd)">Close</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(playersettings)</onclick>
+				<!-- musicsettings -->
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.SetString(osd_audio_gsettings,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_gsettings),disable)">Skin.Reset(osd_audio_gsettings,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_audio_gsettings),disable) | Skin.HasSetting(customosd)]</visible>
@@ -4174,7 +4175,7 @@
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumNonFolderItems]</label>
 			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + [String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
-			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible>
+			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 		<control type="label">
 			<posx>1808</posx>
@@ -4185,9 +4186,35 @@
 			<aligny>center</aligny>
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumAllItems]</label>
+			<label>$INFO[Container.NumNonFolderItems]</label>
+			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + [String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
+			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
+		</control>
+		<control type="label">
+			<posx>1808</posx>
+			<posy>968</posy>
+			<width>112</width>
+			<height>75</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Font_18B</font>
+			<textcolor>$VAR[value_flagscolor]</textcolor>
+			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
 			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + ![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
-			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible>
+			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
+		</control>
+		<control type="label">
+			<posx>1808</posx>
+			<posy>968</posy>
+			<width>112</width>
+			<height>75</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Font_18B</font>
+			<textcolor>$VAR[value_flagscolor]</textcolor>
+			<label>$INFO[Container.NumItems]</label>
+			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + ![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
+			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 	</include>
 		<!-- ######################################################################### Game OSD ######################################################################### -->
@@ -4439,4 +4466,5 @@
 			</item>
 		</content>
 	</include>
+	<expression name="HasDetailInfo">String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | Container.Content(addons) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)</expression>
 </includes>
