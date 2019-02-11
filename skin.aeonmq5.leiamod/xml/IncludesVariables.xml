@@ -7,7 +7,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>10.6.0 Leiamod[COLOR=80FFFFFF] | [/COLOR]01/15/2019</value>
+		<value>10.6.1 Leiamod[COLOR=80FFFFFF] | [/COLOR]03/01/2019</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -2867,7 +2867,7 @@
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Control.GetLabel(5046))">$INFO[Player.FolderPath,,../extrafanart/]</value>
 	</variable>
 	<variable name="value_playerthumb">
-		<value condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+		<value condition="!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.Contains(Window(Visualisation).Property(ArtistSlideshow),transparent)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Player.Art(fanart)]</value>
 	</variable>
 	<variable name="value_playerresume">
