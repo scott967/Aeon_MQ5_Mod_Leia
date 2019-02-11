@@ -142,12 +142,12 @@
 					<scrollspeed>25</scrollspeed>
 				</control>
 				<control type="grouplist">
-					<!-- Painel de info -->
+					<!-- Info panel for focus listitem or nowplaying in playlist windows -->
 					<posx>480</posx>
 					<posy>858</posy>
 					<orientation>vertical</orientation>
 					<itemgap>6</itemgap>
-					<visible>!String.IsEqual(ListItem.DBType,genre)</visible>
+					<visible>$EXP[HasDetailInfo]</visible>
 					<control type="label">
 						<include>RightListLabel</include>
 						<label>[UPPERCASE]$VAR[value_ground13_label][/UPPERCASE]: [COLOR=FFFFFAF0]$VAR[value_ground13_value][/COLOR]</label>
