@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!--  Krypton 9.1.16/9.1.19/9.2.1 window IDs 2006/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0 refactor customOSDMusic is now 1106 custom Next Tracks is now 1107 -->
+<!-- Leia 10.2.4/10.2.5/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0 refactor customOSDMusic is now 1106 custom Next Tracks is now 1107/10.6.1 -->
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<onload condition="Skin.HasSetting(nolyrics_on) + ![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(novisfurniture) | Skin.HasSetting(nonexttracks_on)]">ActivateWindowAndFocus(1107,640,0)</onload> <!-- Custom next tracks -->
@@ -107,7 +107,7 @@
 			<visible>String.IsEqual(skin.string(vis_bg),custom)</visible>
 		</control>
 		<control type="group">
-			<!-- overlays on art background group -->
+			<!-- overlays on art background group furniture -->
 			<include>Animation_Fade</include>
 			<control type="group">
 				<!-- default layout -->
@@ -177,6 +177,17 @@
 					<fadetime>200</fadetime>
 					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[Player.Art(album.thumb)]</texture>
 					<aspectratio align="left">keep</aspectratio>
+					<visible>!String.IsEmpty(Player.Art(album.thumb))</visible>
+				</control>
+				<control type="image">
+					<posx>1335</posx>
+					<posy>-30</posy>
+					<width>525</width>
+					<height>396</height>
+					<fadetime>200</fadetime>
+					<texture fallback="DefaultAudio.png" diffuse="thumb_cdcover_mask_cdart.png" background="true">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio align="left">keep</aspectratio>
+					<visible>String.IsEmpty(Player.Art(album.thumb))</visible>
 				</control>
 				<control type="image">
 					<posx>58</posx>
