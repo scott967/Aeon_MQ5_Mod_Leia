@@ -664,8 +664,8 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<textoffsetx>0</textoffsetx>
 						<left>-8</left>
-						<top>686</top>
-						<label>($INFO[Player.Time] / $INFO[Player.Duration])</label>
+						<top>691</top>
+						<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<visible>Player.HasMedia + !String.Contains(Window(Videos).Property(PlayingBackgroundMedia),TRUE)</visible>
