@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.2 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.1 -->
 <includes>
 	<!--##################################################################################   VISTA GLASS LIST - ID 57   ##################################################################################-->
 	<include name="GlassListLabel">
@@ -40,7 +40,7 @@
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">WindowOpen</animation>
 			<animation effect="slide" start="1500,0" end="0,0" time="600" easing="out" tween="sine">Visible</animation>
 			<animation effect="slide" start="0,0" end="1500,0" time="600" easing="out" tween="sine">Hidden</animation>
-			<visible>Control.IsVisible(57) + [Control.HasFocus(9957) | String.IsEqual(skin.string(glasslistvideopanel),alwayson) | String.IsEqual(skin.string(glasslistvideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)]</visible>
+			<visible>Control.IsVisible(57) + [Control.HasFocus(9957) | String.IsEqual(skin.string(glasslistvideopanel),alwayson) | String.IsEqual(skin.string(glasslistvideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(1108)]</visible>
 			<!-- custom delay RCB -->
 			<control type="group">
 				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>

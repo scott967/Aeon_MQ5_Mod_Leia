@@ -222,7 +222,7 @@
 					<preloaditems>2</preloaditems>
 					<animation effect="slide" start="0,0" end="900,0" time="600" easing="inout" tween="cubic" condition="Control.HasFocus(9915)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-45,0" time="200" easing="inout" tween="cubic" condition="Control.HasFocus(80)">Conditional</animation>
-					<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(637)">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation>
 					<visible>!Container.Content(years)</visible>
 					<itemlayout condition="[Window.IsActive(musicplaylist) | Window.IsActive(music)] + Container.Content(artists)" height="45">
 						<control type="image">

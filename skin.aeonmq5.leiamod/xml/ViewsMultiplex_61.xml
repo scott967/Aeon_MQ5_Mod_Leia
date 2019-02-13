@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.6 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
+<!-- Leia 10.6.1 -->
 <includes>
 	<!--##################################################################################   VISTA MULTIPLEX - ID 61   #############################################################################-->
 	<include name="MultiplexLabel_Fanart">
@@ -57,7 +58,7 @@
 		<preloaditems>2</preloaditems>
 		<pagecontrol>80</pagecontrol>
 		<animation effect="slide" start="0,0" end="0,-15" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
-		<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(637)">Conditional</animation>
+		<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation>
 		<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
 		<itemlayout condition="Skin.HasSetting(nomultiplexvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Container.Content(addons) | Window.IsActive(programs)" width="208" height="570">
 			<control type="image">
@@ -280,7 +281,7 @@
 				<!-- painel de info fanart layout -->
 				<animation effect="slide" start="0,-900" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-900" time="500" tween="sine" easing="out">Hidden</animation>
-				<visible>[Control.HasFocus(9961) | String.IsEqual(skin.string(multiplexvideopanel),alwayson) | String.IsEqual(skin.string(multiplexvideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(637)] + String.Contains(skin.string(multiplexlayout),fanart) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
+				<visible>[Control.HasFocus(9961) | String.IsEqual(skin.string(multiplexvideopanel),alwayson) | String.IsEqual(skin.string(multiplexvideopanel),auto) + Control.IsVisible(9921) | Window.IsVisible(1108)] + String.Contains(skin.string(multiplexlayout),fanart) + ![String.IsEqual(ListItem.Label,..) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>84</posy>

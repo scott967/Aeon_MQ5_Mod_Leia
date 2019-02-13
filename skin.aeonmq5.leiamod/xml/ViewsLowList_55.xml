@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10/7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.5.0/10.5.1/10.5.2 -->
+<!-- Leia 10.2.5/10.3.0/10.5.0/10.5.1/10.5.2/10.6.1 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
 	<include name="LowListLabel">
@@ -88,7 +88,7 @@
 				<animation effect="slide" time="500" start="0,600" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
 				<control type="group">
-					<animation effect="slide" time="600" start="0,0" end="-600,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(637) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)] + !String.IsEmpty(Control.GetLabel(5501))">Conditional</animation>
+					<animation effect="slide" time="600" start="0,0" end="-600,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)] + !String.IsEmpty(Control.GetLabel(5501))">Conditional</animation>
 					<animation effect="slide" time="400" start="-600,0" end="0,0" tween="cubic" easing="inout">Hidden</animation>
 					<control type="image">
 						<!-- Logo -->
@@ -117,7 +117,7 @@
 					<!-- Painel de Info -->
 					<animation effect="slide" time="600" start="600,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="600,0" tween="cubic" easing="inout">Hidden</animation>
-					<visible>Control.HasFocus(9915) | Window.IsVisible(637) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) + !String.IsEmpty(Control.GetLabel(5501)) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio) + !String.IsEmpty(Control.GetLabel(5501))</visible>
+					<visible>Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) + !String.IsEmpty(Control.GetLabel(5501)) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio) + !String.IsEmpty(Control.GetLabel(5501))</visible>
 					<control type="image">
 						<posx>1306</posx>
 						<posy>-105</posy>
@@ -152,7 +152,7 @@
 					<posy>771</posy>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<animation effect="slide" time="600" start="0,0" end="-540,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(637) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
+					<animation effect="slide" time="600" start="0,0" end="-540,0" tween="cubic" easing="inout" condition="Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)">Conditional</animation>
 					<control type="label">
 						<include>LowListLabel</include>
 						<label>$VAR[value_ground11_label]: [COLOR=FFFFFAF0]$VAR[value_ground11_value][/COLOR]</label>
@@ -228,7 +228,7 @@
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
 					<preloaditems>2</preloaditems>
-					<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(637)">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation>
 					<itemlayout condition="Container.Content(artists) + !Skin.HasSetting(slimlowlistmusic)" height="45">
 						<control type="image">
 							<posx>0</posx>
@@ -520,7 +520,7 @@
 					<autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<animation effect="slide" time="600" start="600,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="600,0" tween="cubic" easing="inout">Hidden</animation>
-					<visible>![Control.HasFocus(9915) | Window.IsVisible(637) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)]</visible>
+					<visible>![Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(lowlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(lowlistplotaudio)]</visible>
 				</control>
 				<control type="label" id="5501">
 					<!-- Plot -->
