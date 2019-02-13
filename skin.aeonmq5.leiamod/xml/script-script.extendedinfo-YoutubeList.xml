@@ -218,6 +218,7 @@
 							<width>380</width>
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
+							<autoscroll time="2500" repeat="2500">true</autoscroll>
 							<font>Font_17A</font>
 							<textcolor>FFFAFAFA</textcolor>
 						</control>
