@@ -159,7 +159,7 @@
 					<animation effect="slide" time="600" start="0,0" end="-600,0" tween="cubic" easing="inout" condition="[Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(midlistplotvideo) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(midlistplotaudio)] + !String.IsEmpty(Control.GetLabel(7011))">Conditional</animation>
 					<animation effect="slide" time="400" start="-600,0" end="0,0" tween="cubic" easing="inout">Hidden</animation>
 					<control type="image">
-						<description>MUSIC LOGO?</description>
+						<description>MUSIC CLEARLOGO</description>
 						<posx>1440</posx>
 						<posy>750</posy>
 						<!-- was 380 -->
@@ -168,11 +168,23 @@
 						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 						<aspectratio align="right" aligny="bottom">keep</aspectratio>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>[Window.IsActive(musicplaylist) | Window.IsActive(music)] + !String.IsEqual(ListItem.DBType, genre)</visible>
+						<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
+					</control>
+					<control type="image">
+						<description>MUSIC CLEARLOGO</description>
+						<posx>1440</posx>
+						<posy>750</posy>
+						<!-- was 380 -->
+						<width>450</width>
+						<height>195</height>
+						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(clearlogo)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<fadetime>FanartCrossFadeTime</fadetime>
+						<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + String.IsEqual(ListItem.DBType,artist)</visible>
 					</control>
 				</control>
 				<control type="group">
-					<description>INFO PANEL SLIDE OUT</description>
+					<description>INFO PANEL SLIDE OUT (also viz when midlistplot enabled in top menu)</description>
 					<animation effect="slide" time="600" start="555,0" end="0,0" tween="cubic" easing="inout">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="555,0" tween="cubic" easing="inout">Hidden</animation>
 					<visible>Control.HasFocus(9915) | Window.IsVisible(1108) | Window.IsActive(videos) + Skin.HasSetting(midlistplotvideo) + !String.IsEmpty(Control.GetLabel(7011)) | [Window.IsActive(musicplaylist) | Window.IsActive(music)] + Skin.HasSetting(midlistplotaudio) + !String.IsEmpty(Control.GetLabel(7011))</visible>

@@ -1082,7 +1082,7 @@
 					<visible>![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | !String.IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="image" id="1017">
-					<!-- Logo Musicas -->
+					<!-- Music artist clearlogo -->
 					<posx>630</posx>
 					<posy>867</posy>
 					<width>300</width>
@@ -1090,7 +1090,18 @@
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
 					<fadetime>250</fadetime>
-					<visible>!String.IsEqual(ListItem.DBType,genre)</visible>
+					<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
+				</control>
+				<control type="image" id="1017">
+					<!-- Music artist clearlogo -->
+					<posx>630</posx>
+					<posy>867</posy>
+					<width>300</width>
+					<height>108</height>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(clearlogo)]</texture>
+					<fadetime>250</fadetime>
+					<visible>[Window.IsVisible(music) | Window.IsVisible(musicplaylist)] + String.IsEqual(ListItem.DBType,artist)</visible>
 				</control>
 				<control type="image" id="1018">
 					<!-- clearlogo e clearart -->
@@ -1101,7 +1112,7 @@
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<texture background="true">$VAR[value_logoandclearart]</texture>
 					<fadetime>250</fadetime>
-					<visible>!Skin.HasSetting(noartwidevideo)</visible>
+					<visible>!Skin.HasSetting(noartwidevideo) + [Window.IsVisible(video) | Window.IsVisible(videoplaylist)]</visible>
 				</control>
 				<control type="group">
 					<!-- Linguagem de audio e legendas -->
