@@ -3137,7 +3137,7 @@
 				<label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, - ]</label>
 				<property name="condition">$INFO[skin.string(osd_video_epg),disable)]</property>
 				<icon>osd_menu_epg.png</icon>
-				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(PVROSDGuide)</onclick>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(pvrchannelguide)</onclick>
 				<onclick condition="!Skin.HasSetting(customosd)">Dialog.Close(VideoOSD)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_video_epg),disable)">Skin.SetString(osd_video_epg,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_video_epg),disable)">Skin.Reset(osd_video_epg,disable)</onclick>

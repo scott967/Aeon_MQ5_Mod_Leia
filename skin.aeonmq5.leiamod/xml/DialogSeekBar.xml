@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Isengard 7.1.8/7.1.9 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3-->
-<!-- Leia 10.3.0/10.4.010.5.0 -->
+<!-- Leia 10.3.0/10.4.010.5.0/10.6.1 -->
 <window>
 	<defaultcontrol>23</defaultcontrol>
 	<visible>Window.IsActive(fullscreenvideo) + ![Window.IsActive(videoosd) | [Skin.HasSetting(nopausedlabel) + [Player.FrameAdvance | Player.Paused]] | Window.IsActive(fullscreeninfo) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(SubtitleSearch)] + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
@@ -12,7 +12,7 @@
 			<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 			<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-			<visible>![String.Contains(skin.string(videofurniture),hide) | Window.IsActive(pvrosdguide) | Window.IsActive(pvrosdchannels) | Player.IsTempo]</visible>
+			<visible>![String.Contains(skin.string(videofurniture),hide) | Window.IsActive(pvrchannelguide) | Window.IsActive(pvrosdchannels) | Player.IsTempo]</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
