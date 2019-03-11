@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 Helix 6.1.4/6.1.5 -->
 <!-- Jarvis 8.1.15 RjSachse EPGTimeLineLow view -->
 <!-- Krypton 9.1.16/9.2.1 window IDs/9.2.2  -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.6.1 -->
 <includes>
 	<include name="EPGMenu">
 		<control type="image">
@@ -170,7 +170,7 @@
 	<!--##################################################################################   EPG View 10  ##################################################################################-->
 	<include name="ViewEPGTimeline">
 		<control type="group">
-			<visible>Control.IsVisible(10)</visible>
+			<visible>Control.IsVisible(51)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<include>EPGMenu</include>
 			<control type="image">
@@ -181,7 +181,7 @@
 				<texture>grey.png</texture>
 				<colordiffuse>E4101010</colordiffuse>
 			</control>
-			<control type="epggrid" id="10">
+			<control type="epggrid" id="51">
 				<viewtype label="19032">list</viewtype>
 				<posx>0</posx>
 				<posy>210</posy>
@@ -344,8 +344,8 @@
 				<posx>1887</posx>
 				<posy>243</posy>
 				<height>627</height>
-				<onleft>10</onleft>
-				<onright>10</onright>
+				<onleft>51</onleft>
+				<onright>51</onright>
 			</control>
 			<include>PVRCommonInfo</include>
 		</control>
@@ -980,7 +980,7 @@
 	<!--################################################################################​##   EPG Low   ###########################################################################​#######-->
 	<include name="ViewEPGTimelineLow">
 		<control type="group">
-			<visible>Control.IsVisible(10)</visible>
+			<visible>Control.IsVisible(52)</visible>
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="group">
 				<control type="image">
@@ -1024,7 +1024,7 @@
 					<texture flipy="true">shadow_h.png</texture>
 				</control>
 			</control>
-			<control type="epggrid" id="10">
+			<control type="epggrid" id="52">
 				<viewtype label="19032">list</viewtype>
 				<left>0</left>
 				<top>855</top>
@@ -1205,8 +1205,8 @@
 				<left>1887</left>
 				<top>890</top>
 				<height>202</height>
-				<onleft>10</onleft>
-				<onright>10</onright>
+				<onleft>52</onleft>
+				<onright>52</onright>
 			</control>
 			<control type="group">
 				<control type="image">

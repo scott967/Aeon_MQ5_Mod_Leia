@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  Aeon MQ 5 - Helix 6.1.0/6.1.1/6.1.2/6.1.3/6.1.4 -->
 <!-- Jarvis 8.1.13 -->
-<!-- Leia 10.3.0 -->
+<!-- Leia 10.3.0/10.6.1 -->
 <window>
-	<defaultcontrol always="true">11</defaultcontrol>
+	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<views>11</views>
+	<views>51</views>
 	<controls>
 		<control type="multiimage">
 			<!-- Fanart -->
@@ -57,10 +57,10 @@
 			<control type="button" id="9920">
 				<!-- hidden colection/view fanart -->
 				<include>InvisibleButton</include>
-				<onleft>SetFocus(11)</onleft>
-				<onright>SetFocus(11)</onright>
-				<onup>SetFocus(11)</onup>
-				<ondown>SetFocus(11)</ondown>
+				<onleft>SetFocus(51)</onleft>
+				<onright>SetFocus(51)</onright>
+				<onup>SetFocus(51)</onup>
+				<ondown>SetFocus(51)</ondown>
 			</control>
 			<!-- Recording/Time -->
 			<control type="group">
@@ -68,7 +68,8 @@
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">Hidden</animation>
-				<animation effect="slide" start="0,0" end="450,0" time="0" easing="in" tween="cubic" condition="Control.IsVisible(11) | Control.IsVisible(12)">Conditional</animation>
+				<!-- <animation effect="slide" start="0,0" end="450,0" time="0" easing="in" tween="cubic" condition="Control.IsVisible(11) | Control.IsVisible(12)">Conditional</animation> -->
+				<animation effect="slide" start="0,0" end="450,0" time="0" easing="in" tween="cubic" condition="Control.IsVisible(51)">Conditional</animation>
 				<visible>[PVR.IsRecording | PVR.HasNonRecordingTimer] + ![Player.HasMedia | Control.HasFocus(9920) | ControlGroup(9000).HasFocus]</visible>
 				<control type="image">
 					<posx>0</posx>
@@ -112,7 +113,8 @@
 			</control>
 			<control type="group">
 				<!-- Mobilia furniture -->
-				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
+				<!-- <visible>Control.IsVisible(51) | Control.IsVisible(12)</visible> -->
+				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
 					<posx>450</posx>
@@ -144,11 +146,11 @@
 					<posy>642</posy>
 					<width>338</width>
 					<height>338</height>
-					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(11).ListItem.Icon]</texture>
+					<texture fallback="DefaultVideoCover.png" background="true">$INFO[Container(51).ListItem.Icon]</texture>
 					<bordertexture border="-25">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
-					<visible>Control.IsVisible(11)</visible>
+					<visible>Control.IsVisible(51)</visible>
 				</control>
 				<control type="image">
 					<posx>522</posx>
@@ -260,7 +262,7 @@
 						<posy>555</posy>
 						<height>300</height>
 						<width>600</width>
-						<ondown>11</ondown>
+						<ondown>51</ondown>
 						<onup>9900</onup>
 						<onleft>600</onleft>
 						<onright>600</onright>
@@ -393,7 +395,7 @@
 			<control type="group">
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<animation effect="slide" start="0,0" end="-480,0" time="300" easing="out" tween="cubic" condition="Player.HasVideo + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
-				<visible>Control.IsVisible(11)</visible>
+				<visible>Control.IsVisible(51)</visible>
 				<include>BackMenuV</include>
 				<!-- Fundo Menu -->
 				<control type="label">
@@ -415,7 +417,7 @@
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
-				<control type="list" id="11">
+				<control type="list" id="51">
 					<viewtype>list</viewtype>
 					<posx>0</posx>
 					<posy>98</posy>
@@ -423,7 +425,8 @@
 					<height>874</height>
 					<onleft>9900</onleft>
 					<onright condition="Player.HasVideo">600</onright>
-					<ondown>11</ondown>
+					<ondown>51</ondown>
+					<onup>51</onup>
 					<orientation>vertical</orientation>
 					<focusposition>2</focusposition>
 					<scrolltime>300</scrolltime>
@@ -477,7 +480,7 @@
 							<width>448</width>
 							<height>90</height>
 							<texture>settings_button.png</texture>
-							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(11)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="50" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -490,7 +493,7 @@
 							<aligny>center</aligny>
 							<textcolor>FFFFFAF0</textcolor>
 							<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
-							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(11)">conditional</animation>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(51)">conditional</animation>
 						</control>
 						<control type="label">
 							<posx>30</posx>
@@ -520,12 +523,12 @@
 					<posx>930</posx>
 					<posy>968</posy>
 					<width>885</width>
-					<onup>SetFocus(11)</onup>
+					<onup>SetFocus(51)</onup>
 					<ondown>9920</ondown>
 					<onleft>71</onleft>
 					<onright>71</onright>
 					<include>Animation_Fade</include>
-					<visible allowhiddenfocus="true">Control.IsVisible(11) + Control.HasFocus(71)</visible>
+					<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(71)</visible>
 				</control>
 			</control>
 			<!-- Furniture -->

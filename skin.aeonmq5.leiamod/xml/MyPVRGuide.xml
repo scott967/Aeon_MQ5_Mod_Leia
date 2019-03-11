@@ -2,12 +2,12 @@
 <!-- Aeon MQ 5 Helix 6.1.0/6.1.4/6.1.5 -->
 <!-- Jarvis 8.1.13/8.1.15  RjSachse EPGTimeLineLow view/8.2.1 -->
 <!-- Krypton 9.1.16 -->
-<!-- Leia 10.2.3/10.3.0 -->
+<!-- Leia 10.2.3/10.3.0/10.6.1 -->
 <window>
 	<defaultcontrol always="false">9901</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
-	<views>10</views>
+	<views>51,52</views>
 	<controls>
 		<control type="multiimage">
 			<!-- Fanart -->
@@ -130,8 +130,9 @@
 			<!-- ViewTypes -->
 			<control type="group" id="50">
 				<include condition="!Player.HasVideo | Skin.HasSetting(noepggridlow)">ViewEPGTimeline</include>
-				<!-- view 10 -->
+				<!-- view 51 -->
 				<include condition="Player.HasVideo + !Skin.HasSetting(noepggridlow)">ViewEPGTimelineLow</include>
+				<!-- view 52 -->
 			</control>
 			<!-- Furniture -->
 			<include>TopMenu_PVR</include>
