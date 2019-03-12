@@ -152,7 +152,7 @@
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(51)</visible>
 				</control>
-				<control type="image">
+				<!-- <control type="image">
 					<posx>522</posx>
 					<posy>642</posy>
 					<width>338</width>
@@ -162,7 +162,7 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(12)</visible>
-				</control>
+				</control> -->
 				<control type="label">
 					<!-- Nome do canal -->
 					<posx>922</posx>
@@ -187,7 +187,7 @@
 				</control>
 				<control type="image">
 					<posx>922</posx>
-					<posy>715</posy>
+					<posy>722</posy>
 					<width>938</width>
 					<height>3</height>
 					<align>left</align>
@@ -207,7 +207,7 @@
 				</control>
 				<control type="image">
 					<posx>922</posx>
-					<posy>754</posy>
+					<posy>762</posy>
 					<width>938</width>
 					<height>3</height>
 					<align>left</align>
@@ -257,6 +257,7 @@
 						<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 						<include>Animation_HomeGlass</include>
 					</control>
+					<!-- Player controls -->
 					<control type="list" id="600">
 						<posx>1455</posx>
 						<posy>555</posy>
@@ -302,13 +303,6 @@
 							</control>
 						</focusedlayout>
 						<content>
-							<item id="1">
-								<!-- play DVD -->
-								<label></label>
-								<icon>osd_menu_play_square.png</icon>
-								<onclick>PlayDVD</onclick>
-								<visible>System.HasMediaDVD + ![Player.Playing | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
-							</item>
 							<item id="2">
 								<!-- pause -->
 								<label></label>
@@ -329,39 +323,27 @@
 								<icon>osd_menu_stop_square.png</icon>
 								<onclick>PlayerControl(Stop)</onclick>
 							</item>
-							<item id="6">
-								<!-- skipbwd -->
-								<label></label>
-								<icon>osd_menu_skipbwd_square.png</icon>
-								<onclick>PlayerControl(Previous)</onclick>
-								<visible>!VideoPlayer.Content(LiveTV)</visible>
-							</item>
 							<item id="4">
 								<!-- - canal -->
 								<label></label>
 								<icon>osd_menu_skipbwd_channeldown.png</icon>
 								<!-- <onclick>PlayerControl(Previous)</onclick> -->
 								<onclick>Action(ChannelDown)</onclick>
-								<visible>VideoPlayer.Content(LiveTV)</visible>
+								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
 							<item id="7">
 								<!-- rew -->
 								<label></label>
 								<icon>osd_menu_rew_square.png</icon>
 								<onclick>PlayerControl(Rewind)</onclick>
+								<visible>PVR.IsTimeShift</visible>
 							</item>
 							<item id="8">
 								<!-- ff -->
 								<label></label>
 								<icon>osd_menu_ff_square.png</icon>
 								<onclick>PlayerControl(Forward)</onclick>
-							</item>
-							<item id="9">
-								<!-- skipfwd -->
-								<label></label>
-								<icon>osd_menu_skipfwd_square.png</icon>
-								<onclick>PlayerControl(Next)</onclick>
-								<visible>!VideoPlayer.Content(LiveTV)</visible>
+								<visible>PVR.IsTimeShift</visible>
 							</item>
 							<item id="10">
 								<!-- + canal -->
@@ -369,7 +351,7 @@
 								<icon>osd_menu_skipfwd_channelup.png</icon>
 								<!-- <onclick>PlayerControl(Next)</onclick> -->
 								<onclick>Action(ChannelUp)</onclick>
-								<visible>VideoPlayer.Content(LiveTV)</visible>
+								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
 							<item id="12">
 								<!-- go to fullscreen -->
@@ -381,12 +363,12 @@
 					</control>
 				</control>
 				<control type="label" id="29">
-					<description>Current Category</description>
+					<description>View name</description>
 					<include>InvisibleButton</include>
 					<visible>false</visible>
 				</control>
 				<control type="label" id="30">
-					<description>Current Sub Category</description>
+					<description>Channel group name</description>
 					<include>InvisibleButton</include>
 					<visible>false</visible>
 				</control>
@@ -399,32 +381,34 @@
 				<include>BackMenuV</include>
 				<!-- Fundo Menu -->
 				<control type="label">
-					<!-- Titulo da esquerda -->
+					<!-- Left hand view name -->
 					<posy>15</posy>
 					<include>SettingsSectionTitle</include>
 					<label>$INFO[Control.GetLabel(29)]</label>
 				</control>
 				<control type="label">
 					<posx>30</posx>
-					<posy>1042</posy>
+					<posy>1035</posy>
 					<width>390</width>
 					<height>33</height>
 					<font>Font_15</font>
 					<align>left</align>
 					<textcolor>E4101010</textcolor>
 					<include>Animation_Fade</include>
-					<label>[UPPERCASE]$INFO[Control.GetLabel(29)][COLOR=80ffffff] | [/COLOR]$INFO[Control.GetLabel(30)][COLOR=80ffffff] | [/COLOR]$VAR[value_pvrnumitems][/UPPERCASE]</label>
+					<!-- <label>[UPPERCASE]$INFO[Control.GetLabel(29)][COLOR=80ffffff] | [/COLOR]$INFO[Control.GetLabel(30)][COLOR=80ffffff] | [/COLOR]$VAR[value_pvrnumitems][/UPPERCASE]</label> -->
+					<label>[UPPERCASE]$VAR[value_pvrnumitems][/UPPERCASE]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
 				</control>
+<!--  Channel view 51 (groupname is title) -->)
 				<control type="list" id="51">
 					<viewtype>list</viewtype>
 					<posx>0</posx>
 					<posy>98</posy>
 					<width>450</width>
-					<height>874</height>
+					<height>890</height>  <!-- was 874 -->
 					<onleft>9900</onleft>
-					<onright condition="Player.HasVideo">600</onright>
+					<onright condition="[Player.HasVideo + VideoPlayer.Content(liveTV)] | [Player.HasAudio + !String.IsEmpty(MusicPlayer.ChannelName)]">600</onright>
 					<ondown>51</ondown>
 					<onup>51</onup>
 					<orientation>vertical</orientation>
@@ -442,7 +426,7 @@
 						</control>
 						<control type="label">
 							<posx>30</posx>
-							<posy>0</posy>
+							<posy>-2</posy>
 							<width>390</width>
 							<height>52</height>
 							<font>Font_22</font>
@@ -484,7 +468,7 @@
 						</control>
 						<control type="label">
 							<posx>30</posx>
-							<posy>1</posy>
+							<posy>-2</posy>
 							<width>390</width>
 							<height>52</height>
 							<font>Font_22</font>
