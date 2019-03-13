@@ -501,7 +501,7 @@
 				<include>TouchScreen</include>
 				<include>ScrollLabel</include>
 				<include condition="Skin.HasSetting(musicinfobar)">MultiData</include>
-				<include condition="Skin.HasSetting(musictopdate)">TopDate</include>
+				<include condition="Skin.HasSetting(musicdate)">TopDate</include>
 				<include>TopMenu_Audio</include>
 				<include>BGBlack</include>
 			</control>
