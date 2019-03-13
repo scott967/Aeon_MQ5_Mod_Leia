@@ -65,14 +65,12 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.6.0 - RELEASE DATE 01/15/2019 for Kodi LEIA RC1+[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.6.1 - RELEASE DATE 03/12/2019 for Kodi LEIA 18.0/18.1+[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
-Improved:  Support for all Kodi Leia enahancements.
-New:  Support for retroplayer
-New:  Support for additional library-managed art types
-New:  Support for ExtraInfo script
-New:  Multi-list viewtype for music
-New:  Support for Weatherbit.io weather source
+Fixed:  Correct and update PVR views
+Fixed:  Correctly display "top date and weather" in some views
+Improved:  Add some missing defualt icons
+Improved:  Various layout issues in windows and dialogs
 		</news>
 	</extension>
 

@@ -1,3 +1,8 @@
+[B][COLOR=FFFF8C00]BUILD 10.6.1 - RELEASE DATE 03/12/2019[/COLOR][/B]
+Fixed:  Correct and update PVR views
+Fixed:  Correctly display "top date and weather" in some views
+Improved:  Add some missing defualt icons
+Improved:  Various layout issues in windows and dialogs
 
 [B][COLOR=FFFF8C00]BUILD 10.5.0 - RELEASE DATE 09/15/2018[/COLOR][/B]
 New:  Complete implementation of Retroplayer.  "Games" menu default is to
