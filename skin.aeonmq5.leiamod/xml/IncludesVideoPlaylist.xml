@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0/10.4.0 -->
+<!-- Leia 10.3.0/10.4.0/10.6.1 -->
 <includes>
 	<include name="VideoPLWindow">
 		<control type="image">
@@ -144,7 +144,7 @@
 				<include>AudioandSub</include>
 			</control>
 			<control type="group">
-				<!-- Grupo ocultar flags ou fanart views -->
+				<!-- Video Flags -->
 				<include>Animation_HiddenView</include>
 				<control type="group">
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
@@ -152,7 +152,7 @@
 					<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 					<visible>![Skin.HasSetting(nomediaflags) | Control.IsVisible(57)]</visible>
 					<control type="image">
-						<!-- Barra das etiquetas (flags) -->
+						<!-- Flag Bar -->
 						<posx>0</posx>
 						<posy>915</posy>
 						<width>1920</width>
@@ -161,11 +161,12 @@
 						<texture>shadow_mask.png</texture>
 					</control>
 					<control type="grouplist">
-						<!-- Etiquetas (flags)  -->
+						<!-- Flags for not playing media -->
 						<posx>30</posx>
 						<posy>976</posy>
 						<orientation>horizontal</orientation>
 						<itemgap>40</itemgap>
+						<visible>!String.IsEqual(ListItem.Label,..)</visible>
 						<control type="image">
 							<!-- Mpaa -->
 							<include>FlagImage</include>
