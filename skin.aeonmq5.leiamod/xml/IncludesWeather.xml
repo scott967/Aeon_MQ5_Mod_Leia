@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5  Helix 6.1.0/6.1.7 -->
 <!-- Jarvis 8.1.14 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.3.0/10.4.0/10.5.1 -->
+<!-- Leia 10.3.0/10.4.0/10.5.1/10.6.2 -->
 <includes>
 	<!-- ######################################################################### Current #########################################################################-->
 	<!-- Widget Common Values -->
@@ -5316,7 +5316,7 @@
 		<radioheight>75</radioheight>
 		<align>left</align>
 		<aligny>center</aligny>
-		<textureradiofocus>settings_radiobuttononfocus.png</textureradiofocus>
+		<!-- <textureradiofocus>settings_radiobuttononfocus.png</textureradiofocus> -->
 		<!-- <textureradioon>settings_radiobuttonon.png</textureradioon> -->
 		<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 		<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
