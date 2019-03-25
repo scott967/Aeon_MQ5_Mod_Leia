@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 windowIDs/9.2.2 -->
-<!-- Leia 10.3.0/10.5.1 /10.6.0-->
+<!-- Leia 10.3.0/10.5.1 /10.6.0/10.6.2-->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <window>
@@ -868,7 +868,7 @@
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="500" tween="sine" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="500" tween="sine" easing="out">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-592" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertotals) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<visible>[String.IsEqual(Container(9000).ListItem.Property(id),movies) + Library.HasContent(Movies) | String.IsEqual(Container(9000).ListItem.Property(id),tvshows) + Library.HasContent(TVShows) | String.IsEqual(Container(9000).ListItem.Property(id),concerts) + Library.HasContent(MusicVideos) | String.IsEqual(Container(9000).ListItem.Property(id),music) + Library.HasContent(Music) | String.IsEqual(Container(9000).ListItem.Property(id),favourites) + !String.IsEmpty(Window(0).Property(Favourite.1.Name)) | String.Contains(Container(9000).ListItem.Property(id),vpl) | String.Contains(Container(9000).ListItem.Property(id),apl)] + ![Player.HasMedia + System.IdleTime(8) | Skin.HasSetting(nohometotals) | Control.HasFocus(510) | Skin.HasSetting(highertotals) + [Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog)]]</visible>
 				<!-- 151 was 614 extendedprogress -->
@@ -901,7 +901,7 @@
 				<!-- 151 was 614 extendedprogress -->
 				<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="0,-908" condition="Skin.HasSetting(highertime) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-592" condition="Skin.HasSetting(highertime) + Skin.HasSetting(highermainmenu)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-594" condition="Skin.HasSetting(highertime) + Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-315" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 				<control type="image">
 					<posx>1170</posx>
