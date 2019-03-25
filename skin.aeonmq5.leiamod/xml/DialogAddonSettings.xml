@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.15 -->
 <!-- Krypton 9.1.16 9.2.1 window IDs 140 -->
-<!-- Leia 10.2.5 addon settings changes #12125 -->
+<!-- Leia 10.2.5 addon settings changes #12125/10.6.2 -->
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
@@ -29,7 +29,7 @@
 				<posx>360</posx>
 				<posy>180</posy>
 				<width>1560</width>
-				<height>741</height>
+				<height>606</height>
 				<itemgap>0</itemgap>
 				<pagecontrol>40</pagecontrol>
 				<onup>5</onup>
@@ -40,7 +40,7 @@
 			<control type="scrollbar" id="40">
 				<posx>1785</posx>
 				<posy>180</posy>
-				<height>630</height>
+				<height>606</height>
 				<onleft>5</onleft>
 				<onright>9001</onright>
 			</control>
@@ -86,6 +86,18 @@
 			</control>
 			<control type="sliderex" id="13">
 				<textoffsetx>75</textoffsetx>
+			</control>
+			<control type="textbox" id="6">
+			<!-- window template for settings description -->
+				<posx>360</posx>
+				<posy>786</posy>
+				<width>1560</width>
+				<height>135</height>
+				<font>Font_18A</font>
+				<align>justify</align>
+				<aligny>top</aligny>
+				<textcolor>FFFFFAF0</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="image">
 				<posx>360</posx>
