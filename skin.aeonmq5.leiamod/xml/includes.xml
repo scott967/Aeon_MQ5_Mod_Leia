@@ -1407,7 +1407,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_24</font>
-		<texture>settings_button.png</texture>
+		<!-- <texture>settings_button.png</texture> -->
 		<texturefocus>settings_button.png</texturefocus>
 		<texturenofocus></texturenofocus>
 		<textcolor>E4101010</textcolor>
@@ -4466,5 +4466,6 @@
 			</item>
 		</content>
 	</include>
-	<expression name="HasDetailInfo">String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | Container.Content(addons) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)</expression>
+	<expression name="HasDetailInfo">String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,set) | Container.Content(addons) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)</expression>
+	<expression name="HasUserRating">String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | Striing.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist)</expression>
 </includes>
