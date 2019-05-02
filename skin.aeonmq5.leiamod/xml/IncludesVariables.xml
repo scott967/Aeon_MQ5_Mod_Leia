@@ -4667,11 +4667,11 @@
 		<value condition="String.IsEqual(skin.string(homebg_seconds),3600000)">$LOCALIZE[31199]</value>
 	</variable>
 	<variable name="value_cdartseconds">
-		<value condition="String.IsEqual(skin.string(cdart_seconds),2000)">5</value>
+		<value condition="String.IsEqual(skin.string(cdart_seconds),2000)">2</value>
 		<value condition="String.IsEqual(skin.string(cdart_seconds),4000)">4 ($LOCALIZE[31277])</value>
-		<value condition="String.IsEqual(skin.string(cdart_seconds),8000)">3</value>
-		<value condition="String.IsEqual(skin.string(cdart_seconds),16000)">2</value>
-		<value condition="String.IsEqual(skin.string(cdart_seconds),20000)">1</value>
+		<value condition="String.IsEqual(skin.string(cdart_seconds),8000)">8</value>
+		<value condition="String.IsEqual(skin.string(cdart_seconds),16000)">16</value>
+		<value condition="String.IsEqual(skin.string(cdart_seconds),20000)">20</value>
 	</variable>
 	<variable name="value_menuhelp">
 		<value condition="Control.HasFocus(113)">$LOCALIZE[31150]</value>
