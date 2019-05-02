@@ -2395,7 +2395,7 @@
 			<posx>45</posx>
 			<posy>540</posy>
 			<control type="panel" id="510">
-				<!--- Musicas Recentes/Faixas -->
+				<!--- Recent Songs / Tracks -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestsong)</visible>
 				<content>
@@ -2527,7 +2527,7 @@
 				</content>
 			</control>
 			<control type="panel" id="510">
-				<!--- Musicas Recentes/Albums -->
+				<!--- Recent Albums -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),latestalbum)</visible>
 				<content>
@@ -2695,7 +2695,7 @@
 				</content>
 			</control>
 			<control type="panel" id="510">
-				<!--- Musicas Random/Faixas -->
+				<!--- Musicas Random/tracks -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomsong)</visible>
 				<content>
@@ -2995,7 +2995,7 @@
 				</content>
 			</control>
 			<control type="panel" id="510">
-				<!--- Musicas Random/Artistas -->
+				<!--- Musicas Random/Artists -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),randomartist)</visible>
 				<content>
@@ -3127,7 +3127,7 @@
 				</content>
 			</control>
 			<control type="panel" id="510">
-				<!--- Musicas Em Progresso -->
+				<!--- Musicas albums in Progress -->
 				<include>panel_layout</include>
 				<visible>String.Contains(Container(9000).ListItem.Property(id),music) + String.Contains(skin.string(mfmusic_list),inprogress)</visible>
 				<content>

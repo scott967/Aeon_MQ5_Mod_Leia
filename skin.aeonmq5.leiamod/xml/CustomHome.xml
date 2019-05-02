@@ -5,6 +5,7 @@
 <!-- Leiamod 10.2.3/10.3.0/10.4.0 -->
 <window id="6000">
 	<!-- safe id -->
+	<!-- See IncludesMenuCustom "MenuCustom"  for center panel buttons and right 452 actions list -->
 	<defaultcontrol></defaultcontrol>
 	<onload condition="Skin.HasSetting(languagedone)">SetFocus(9000)</onload>
 	<onload condition="!Skin.HasSetting(languagedone)">SetFocus(9010)</onload>

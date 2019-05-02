@@ -49,7 +49,7 @@
 				<label>$VAR[value_virtualsublabel]</label>
 			</control>
 			<control type="grouplist" id="9001">
-				<!-- Ajustes Gerais -->
+				<!-- General Settings -->
 				<visible>Container(9100).HasFocus(16)</visible>
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<posx>360</posx>
@@ -666,7 +666,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9003">
-				<!-- Restaurar -->
+				<!-- Restore -->
 				<!-- nao trocar ids -->
 				<visible>Container(9100).HasFocus(32)</visible>
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
@@ -725,7 +725,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<!-- Alerta -->
+				<!-- Alert reset  -->
 				<visible>Container(9100).HasFocus(32)</visible>
 				<include>Animation_Fade</include>
 				<control type="image">
@@ -2435,7 +2435,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9005">
-				<!-- Estilos -->
+				<!-- Styles -->
 				<visible>Container(9100).HasFocus(23)</visible>
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<posx>360</posx>
@@ -2737,7 +2737,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9008">
-				<!-- Fontes -->
+				<!-- Fonts -->
 				<visible>Container(9100).HasFocus(24)</visible>
 				<animation effect="fade" reversible="true" time="150">VisibleChange</animation>
 				<posx>360</posx>
@@ -3227,7 +3227,7 @@
 					<animation effect="fade" end="85" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
-					<!-- Nome Previa -->
+					<!-- Preview -->
 					<posx>15</posx>
 					<posy>807</posy>
 					<width>450</width>
@@ -3246,7 +3246,7 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label">
-					<!-- Nome da cor no cinza -->
+					<!-- Skin: build highlight -->
 					<posx>480</posx>
 					<posy>860</posy>
 					<width>600</width>
@@ -3305,7 +3305,7 @@
 					<colordiffuse>20FFFFFF</colordiffuse>
 				</control>
 				<control type="label">
-					<!-- Nome da transparencia -->
+					<!-- Current transparency level -->
 					<posx>60</posx>
 					<posy>291</posy>
 					<width>1410</width>
@@ -3318,7 +3318,7 @@
 					<scrollout>false</scrollout>
 				</control>
 				<control type="grouplist" id="250">
-					<!-- Nivel de transparencia -->
+					<!-- Transparency select buttons -->
 					<posx>60</posx>
 					<posy>232</posy>
 					<width>1815</width>
@@ -3441,7 +3441,7 @@
 					<colordiffuse>20FFFFFF</colordiffuse>
 				</control>
 				<control type="label">
-					<!-- Nome da cor -->
+					<!-- Color in use for panels -->
 					<posx>60</posx>
 					<posy>486</posy>
 					<width>1410</width>
@@ -3453,7 +3453,7 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="grouplist" id="100">
-					<!-- Cores das Texturas -->
+					<!-- Panel color select buttons -->
 					<posx>60</posx>
 					<posy>428</posy>
 					<width>1815</width>
@@ -3713,7 +3713,7 @@
 					<colordiffuse>20FFFFFF</colordiffuse>
 				</control>
 				<control type="label">
-					<!-- Nome da cor -->
+					<!-- Color in use for titles -->
 					<posx>60</posx>
 					<posy>680</posy>
 					<width>1410</width>
@@ -3725,7 +3725,7 @@
 					<scroll>true</scroll>
 				</control>
 				<control type="grouplist" id="125">
-					<!-- Cores dos Titulos -->
+					<!-- Title color select buttons -->
 					<posx>60</posx>
 					<posy>622</posy>
 					<width>1815</width>

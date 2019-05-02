@@ -213,7 +213,7 @@
 					<height>396</height>
 					<timeperimage>5000</timeperimage>
 					<randomize>true</randomize>
-					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- AS art or fanart -->
+					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath> <!-- AS art (transparent if set in AS) or fanart -->
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
@@ -227,7 +227,7 @@
 					<aspectratio align="center">keep</aspectratio>
 					<animation effect="fade" end="60" condition="true">Conditional</animation>
 				</control>
-				<control type="label">  <!-- move this -->
+				<control type="label">  <!-- check this location -->
 					<posx>50</posx>
 					<posy>-105</posy>
 					<height>45</height>

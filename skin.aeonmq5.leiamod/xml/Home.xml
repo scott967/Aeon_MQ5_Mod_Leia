@@ -72,12 +72,14 @@
 			<visible>Player.HasAudio + System.IdleTime(8) + String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage">
+		<!-- Audio fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
 			<visible>Player.HasAudio + System.IdleTime(8) + !String.IsEmpty(Control.GetLabel(5044))</visible>
 		</control>
 		<control type="multiimage">
+		<!-- Widget fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$INFO[Container(510).ListItem.Property(Fanart)]</imagepath>
@@ -88,7 +90,7 @@
 			<!-- default group -->
 			<include>Animation_Window</include>
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>
-			<control type="group" id="605">
+			<control type="group" id="605">  <!-- disc art bottom left -->
 				<!-- Arte de disco -->
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
@@ -145,7 +147,7 @@
 					<visible>Player.HasVideo</visible>
 				</control>
 			</control>
-			<control type="group" id="606">
+			<control type="group" id="606">  <!-- PVR recording/next recording bottom left -->
 				<!-- Lembrete (reminder) PVR-->
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
@@ -203,7 +205,7 @@
 					<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				</control>
 			</control>
-			<control type="group" id="604">
+			<control type="group" id="604">  <!-- top left now playing art + data panel / Top right next tracks-->
 				<!-- Tocando agora (now playing) -->
 				<posy>-75</posy>
 				<include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomeNowPlaying</include>
@@ -243,7 +245,7 @@
 					<visible>Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)</visible>
 				</control>
 				<control type="image">
-					<!-- Thumb audio -->
+					<!-- album thumb (cover) from the next track list -->
 					<posx>60</posx>
 					<posy>135</posy>
 					<width>375</width>
@@ -252,7 +254,7 @@
 					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(603).ListItem.Icon]</texture>
 					<bordertexture border="-35">musicframe.png</bordertexture>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Control.HasFocus(603)</visible>
+					<visible>Control.HasFocus(603)</visible>  <!-- Next Tracks album cover from top right -->
 				</control>
 				<control type="image">
 					<!-- Fundo borda -->
@@ -264,6 +266,7 @@
 					<visible>Player.HasAudio + !Control.HasFocus(603) | Player.HasVideo + !Skin.HasSetting(homevisvideo)</visible>
 				</control>
 				<control type="multiimage">
+				<!-- show AS fanart if avail else fanart else default background -->
 					<posx>52</posx>
 					<posy>141</posy>
 					<width>666</width>
@@ -286,7 +289,7 @@
 					<fadetime>FanartCrossFadeTime</fadetime>
 					<visible>Player.HasAudio</visible>
 				</control>
-				<control type="videowindow" id="8">
+				<control type="videowindow" id="8">  <!-- show unless we have video playing full screen -->
 					<posx>52</posx>
 					<posy>141</posy>
 					<width>666</width>
@@ -299,7 +302,7 @@
 					<posx>750</posx>
 					<animation effect="slide" start="0,0" end="-292,0" time="50" easing="inout" tween="sine" condition="Control.HasFocus(603)">Conditional</animation>
 					<control type="label">
-						<!-- Now Playing -->
+						<!-- Now Playing Data block top center NOW PLAYING or  SELECTING TRACKS -->
 						<posx>0</posx>
 						<posy>128</posy>
 						<width>450</width>
@@ -419,7 +422,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<!-- Next tracks -->
+					<!-- Next tracks heading top right -->
 					<visible>![String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] + Player.HasAudio</visible>
 					<control type="label">
 						<posx>1305</posx>
@@ -445,7 +448,7 @@
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
 					</control>
-					<control type="panel" id="603">  <!-- Next tracks -->
+					<control type="panel" id="603">  <!-- Next tracks top right -->
 						<posx>1305</posx>
 						<posy>225</posy>
 						<width>615</width>
@@ -536,7 +539,7 @@
 				</control>
 			</control>
 			<control type="group" id="601">
-				<!-- Painel de detalhes for skin widgets 510 -->
+				<!-- Details panel for skin widgets panel (includesmenuwidgets) 510 -->
 				<posx>0</posx>
 				<posy>-450</posy>
 				<include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomePanel</include>
