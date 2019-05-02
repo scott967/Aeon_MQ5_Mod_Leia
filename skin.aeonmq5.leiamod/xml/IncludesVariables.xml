@@ -4027,18 +4027,19 @@
 		<value condition="Container.Content(files)">$INFO[ListItem.Plot]$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Window.IsVisible(VideoPlaylist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Plot]</value>
 		<!-- fixed for party mode -->
-		<value condition="Window.IsVisible(VideoPlaylist)">$INFO[VideoPlayer.Plot]</value>
-		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | ListItem.IsCollection | Window.IsActive(musicplaylist) | Window.IsActive(music) + [Container.Content(albums) | Container.Content(artists)]]">$INFO[ListItem.Plot]</value>
-		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="ListItem.IsCollection + System.HasAddon(script.skin.info.service)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary][CR]$INFO[ListItem.AddonDescription]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="Window.IsVisible(MusicPlaylist) + Player.HasAudio">$INFO[MusicPlayer.Property(Album_Description)]$INFO[MusicPlayer.Property(Artist_Description)]</value>
-		<value condition="Window.IsVisible(MusicPlaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Plot]</value>
+		<value condition="Window.IsVisible(MusicPlaylist) + Player.HasVideo + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Plot]</value>
 		<!-- now playing MV in music playlist -->
-		<value condition="[Container.Content(songs) | Container.Content(mixed) | Container.Content(files)]  + !String.IsEqual(ListItem.DBType,MusicVideo) ">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="[Container.Content(songs) | Container.Content(mixed) | Container.Content(files)]  + String.IsEqual(ListItem.DBType,MusicVideo)">$INFO[ListItem.Plot]</value>
+		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo">$INFO[VideoPlayer.Plot]</value>
+		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Description)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song) + ![Window.IsVisible(musicplaylist) + Player.HasAudio]">$INFO[ListItem.Comment]</value>
+		<value condition="String.IsEqual(ListItem.DBType,MusicVideo)">$INFO[ListItem.Plot]</value>
+		<value condition="![Container.Content(files) | Container.Content(addons) | Window.IsActive(pictures) | ListItem.IsCollection | Window.IsActive(musicplaylist) | Window.IsActive(music) + [String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,song)] | String.IsEqual(ListItem.DBType,musicvideo)]">$INFO[ListItem.Plot]</value>
+		<value condition="ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>  <!-- set overview -->
+		<value condition="ListItem.IsCollection + System.HasAddon(script.skin.info.service)">$INFO[Window(home).Property(Set.Movies.Plot)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary][CR]$INFO[ListItem.AddonDescription]</value>				
+		<value condition="[Container.Content(songs) + String.IsEmpty(ListItem.Comment) | Container.Content(mixed) | Container.Content(files)] + !String.IsEqual(ListItem.DBType,MusicVideo) ">$INFO[ListItem.Property(Album_Description)]$INFO[ListItem.Property(Artist_Description)]</value>
 		<!-- MV in mixed music library  or music playlist-->
 		<value condition="Container.Content(images)">$INFO[ListItem.PictureComment]</value>
 	</variable>
