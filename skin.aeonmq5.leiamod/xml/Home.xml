@@ -294,7 +294,6 @@
 					<posy>141</posy>
 					<width>666</width>
 					<height>375</height>
-					<aspectratio>stretch</aspectratio>
 					<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 					<visible>!Skin.HasSetting(homevisvideo)</visible>
 				</control>
