@@ -255,6 +255,84 @@
 							<visible>ListItem.IsResumable</visible>
 						</control>
 					</control>
+					<control type="grouplist">
+						<!-- Flags for playing media (only .. entry when playing MusicVudeo from musicplaylist) -->
+						<posx>30</posx>
+						<posy>976</posy>
+						<orientation>horizontal</orientation>
+						<itemgap>40</itemgap>
+						<visible>String.IsEqual(ListItem.Label,..) + Player.HasVideo</visible>
+						<control type="image">
+							<!-- Mpaa -->
+							<include>FlagImage</include>
+							<texture>$VAR[value_mpaa_fs]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.Mpaa)</visible>
+						</control>
+						<control type="label">
+							<!-- Rating -->
+							<include>FlagLabel</include>
+							<label>$INFO[VideoPlayer.Rating]</label>
+							<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
+						</control>
+						<control type="image">
+							<!-- Codec -->
+							<include>FlagImage</include>
+							<texture>$VAR[value_videocodec_fs]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
+						</control>
+						<control type="image">
+							<!-- Resolution -->
+							<include>FlagImage</include>
+							<texture>$INFO[VideoPlayer.VideoResolution,flags/resolution/,.png]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
+						</control>
+						<control type="image">
+							<!-- Aspect -->
+							<include>FlagImage</include>
+							<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
+						</control>
+						<control type="image">
+							<!-- Audio Codec -->
+							<include>FlagImage</include>
+							<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
+						</control>
+						<control type="image">
+							<!-- Channels -->
+							<include>FlagImage</include>
+							<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannels/,ch.png]</texture>
+							<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+						</control>
+						<control type="image">
+							<include>FlagSeparator</include>
+							<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+						</control>
+					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>975</posy>
