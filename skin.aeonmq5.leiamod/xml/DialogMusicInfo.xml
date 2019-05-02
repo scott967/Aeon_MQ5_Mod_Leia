@@ -1009,7 +1009,7 @@
 							<!-- Artist Video Clips -->
 							<label>31950</label>
 							<!-- <onclick>Dialog.Close(musicinformation)</onclick> -->
-							<onclick>Action(close)</onclick>
+							<!-- <onclick>Action(close)</onclick> -->
 							<onclick>Skin.SetBool(musictrailers)</onclick>
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>					
