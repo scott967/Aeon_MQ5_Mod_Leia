@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.3.0/10.4.0 -->
+<!-- Leia 10.3.0/10.4.0/10.6.2 -->
 <window>
 	<defaultcontrol always="true">9100</defaultcontrol>
 	<onunload condition="String.Contains(skin.string(customwindow),video)">SetFocus(50)</onunload>
@@ -3229,10 +3229,11 @@
 				<control type="label">
 					<!-- Preview -->
 					<posx>15</posx>
-					<posy>807</posy>
+					<posy>802</posy>
 					<width>450</width>
 					<height>45</height>
 					<align>left</align>
+					<aligny>center</aligny>
 					<font>Font_18</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>31083</label>
@@ -3248,10 +3249,11 @@
 				<control type="label">
 					<!-- Skin: build highlight -->
 					<posx>480</posx>
-					<posy>860</posy>
+					<posy>855</posy>
 					<width>600</width>
 					<height>45</height>
 					<align>center</align>
+					<aligny>center</aligny>
 					<font>Font_18</font>
 					<textcolor>FF101010</textcolor>
 					<label>[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[31443]: [/COLOR]$LOCALIZE[31659] $VAR[SkinVersion]</label>
@@ -3259,12 +3261,13 @@
 					<scrollout>false</scrollout>
 				</control>
 				<control type="label">
-					<!-- Nome da cor no preto -->
+					<!-- Skin: build black -->
 					<posx>480</posx>
 					<posy>922</posy>
 					<width>600</width>
 					<height>45</height>
 					<align>center</align>
+					<aligny>center</aligny>
 					<font>Font_18</font>
 					<textcolor>FFFFFAF0</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31443]: [/COLOR]$LOCALIZE[31659] $VAR[SkinVersion]</label>
