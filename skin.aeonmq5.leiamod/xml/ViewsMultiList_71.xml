@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Aeon MQ 5 Leia 10.5.2/10.6.0/10.6.1 -->
+<!-- Aeon MQ 5 Leia 10.5.2/10.6.0/10.6.1/10.6.2 -->
 
 <includes>
 	<!--##################################################################################   VIEW MULTILIST - 71   ##################################################################################-->
@@ -570,7 +570,7 @@
 				</control>
 				<control type="group">
 					<!-- Artwork -->
-					<animation effect="slide" start="0,0" end="1050,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(562) | Control.HasFocus(9920) | Window.IsVisible(1108)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="1050,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(562) | Control.HasFocus(9920)">Conditional</animation>
 					<control type="group">
 						<!-- Music Video no video case -->
 						<include>Animation_Fade</include>

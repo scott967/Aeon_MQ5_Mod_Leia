@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs 2 -->
-<!-- Leia 10.3.0/10.4.0/10.6.1 -->
+<!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2 -->
 
 <window>
 	<defaultcontrol>51</defaultcontrol>
@@ -82,7 +82,7 @@
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-				<visible>[Control.IsVisible(56) | Control.IsVisible(79)] + ![ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Control.HasFocus(9940) | Window.IsActive(movieinformation) | Window.IsVisible(1108) | Window.IsVisible(641) | Control.IsVisible(105)]</visible>
+				<visible>[Control.IsVisible(56) | Control.IsVisible(79)] + ![ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Control.HasFocus(9940) | Window.IsActive(movieinformation) | Window.IsVisible(641) | Control.IsVisible(105)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
