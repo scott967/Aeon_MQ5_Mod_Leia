@@ -407,12 +407,6 @@
 		</control>
 		<!-- Seek Widget + support for player tempo-->
 		<control type="group">
-			<!-- <animation type="WindowOpen" condition="true">
-				<effect type="slide" time="400" start="0,800" end="0,0" easing="out" tween="cubic"/>
-			</animation>
-			<animation type="WindowClose" condition="true">
-				<effect type="slide" time="400" start="0,0" end="0,800" easing="in" tween="cubic"/>
-			</animation> -->
 			<control type="group">
 				<posx>-750</posx>
 				<posy>1040</posy>

@@ -221,18 +221,6 @@
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(images)">Conditional</animation>
 							<visible>Container.Content(images)</visible>
 						</control>
-						<!-- <control type="label">
-							<posx>772</posx>
-							<posy>20</posy>
-							<width>128</width>
-							<height>60</height>
-							<font>Font_18A</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<include>detailcolorfocus</include>
-							<label>$INFO[ListItem.Rating]</label>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
-						</control> -->
 						<control type="image">
 							<posx>788</posx>
 							<posy>35</posy>

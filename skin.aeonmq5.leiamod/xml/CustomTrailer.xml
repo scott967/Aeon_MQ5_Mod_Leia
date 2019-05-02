@@ -46,30 +46,6 @@
 				<font>Font_20</font>
 				<textcolor>$VAR[value_headercolor]</textcolor>
 			</control>
-<!-- 			<control type="image" id="999">
-
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>684</width>
-				<height>1080</height>
-				<texture></texture>
-			</control>
-			<control type="image" id="997">
-
-				<posx>-3</posx>
-				<posy>34</posy>
-				<width>694</width>
-				<height>40</height>
-				<texture>dialogs_context_top.png</texture>
-			</control>
-			<control type="image" id="998">
-
-				<posx>-3</posx>
-				<posy>0</posy>
-				<width>694</width>
-				<height>40</height>
-				<texture>dialogs_context_bottom.png</texture>
-			</control> -->
 			<control type="grouplist" id="996">
 				<posx>0</posx>
 				<posy>75</posy>

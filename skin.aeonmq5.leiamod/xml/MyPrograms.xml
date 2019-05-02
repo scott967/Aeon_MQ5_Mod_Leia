@@ -142,7 +142,6 @@
 			</control>
 			<include>TouchScreen</include>
 			<include>ScrollLabel</include>
-			<!--<include>MultiData</include>-->
 			<include>TopMenu_Programs</include>
 			<include>BGBlack</include>
 		</control>

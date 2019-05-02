@@ -103,12 +103,6 @@
 					<onclick>Skin.ToggleSetting(livebg)</onclick>
 					<selected>Skin.HasSetting(livebg)</selected>
 				</control>
-				<!--<control type="radiobutton" id="1020">
-	<label>31605</label>
-	<onclick>Skin.ToggleSetting(popupvoxcommando)</onclick>
-	<onclick>ReloadSkin</onclick>
-	<selected>Skin.HasSetting(popupvoxcommando)</selected>
-	</control>-->
 				<control type="radiobutton" id="1021">
 					<label>31245</label>
 					<onclick>Skin.ToggleSetting(keepaspect)</onclick>
@@ -270,18 +264,6 @@
 				<onfocus condition="String.IsEqual(skin.string(cdart_seconds),8000)">Skin.SetString(cdart_seconds,4000)</onfocus>
 				<onfocus condition="String.IsEqual(skin.string(cdart_seconds),4000)">Skin.SetString(cdart_seconds,2000)</onfocus>
 			</control>
-			<!--<control type="button" id="4201">
-	<include>InvisibleButton</include>
-	<onfocus>SetFocus(1170)</onfocus>
-	<onfocus>Skin.SetBool(externalvideocase)</onfocus>
-	<onfocus>Skin.SetPath(CustomVideoCase)</onfocus>
-	</control>
-	<control type="button" id="4202">
-	<include>InvisibleButton</include>
-	<onfocus>SetFocus(1170)</onfocus>
-	<onfocus>Skin.Reset(externalvideocase)</onfocus>
-	<onfocus>Skin.Reset(CustomVideoCase)</onfocus>
-	</control>-->
 			<control type="grouplist" id="9006">
 				<!-- Menu Principal Widgets -->
 				<visible>Container(9100).HasFocus(18)</visible>

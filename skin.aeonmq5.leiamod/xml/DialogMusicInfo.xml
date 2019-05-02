@@ -6,7 +6,6 @@
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
-	<!-- <onload condition="Window.Is(musicinformation)">ClearProperty(script.metadata.actors.isactive)</onload> -->
 	<controls>
 	<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
 			<posx>-500</posx>
@@ -766,7 +765,6 @@
 				<control type="group">	<!-- Discography data visible when the 500 (was 50) list is focused -->
 					<posx>0</posx>
 					<posy>1005</posy>
-					<!-- was 685 -->
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">Visible</animation>
 					<animation effect="slide" start="0,0" end="0,450" time="500" tween="sine" easing="in">Hidden</animation>
@@ -800,7 +798,6 @@
 						<!-- AS Albums count was container 50 -->
 						<posx>45</posx>
 						<posy>-12</posy>
-						<!-- was 8 -->
 						<width>975</width>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -810,18 +807,6 @@
 						<scroll>true</scroll>
 						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 					</control>
-					<!-- <control type="label">
-						<posx>45</posx>
-						<posy>38</posy>
-						<width>600</width>
-						<height>40</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>Font_15</font>
-						<textcolor>$VAR[value_flagscolor]</textcolor>
-						<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
-						<visible>!String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
-					</control> -->
 					<control type="label">
 						<!-- Nome do album was container 50 -->
 						<posx>472</posx>
@@ -995,7 +980,7 @@
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
 						</item>
 						<item id="2">
-							<!-- Set Art-->
+							<!-- Set Art -->
 							<label>31702</label>
 							<onclick>SendClick(musicinformation,10)</onclick>
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
@@ -1020,11 +1005,7 @@
 							<onclick>Action(close)</onclick>
 							<visible>String.IsEqual(ListItem.DBType,album) + System.HasAddon(script.playalbum)</visible>
 						</item>
-						<!-- <item id="5">
-							<label>31885</label>
-							<onclick>RunScript(script.metadata.actors,$INFO[Listitem.Artist])</onclick>
-							<visible>System.HasAddon(script.metadata.actors)</visible>
-						</item> -->
+						<!-- <item id="5">  -->
 						<item id="6">
 							<!-- Roles for album Container 50 track -->
 							<label>$LOCALIZE[29994] $LOCALIZE[31799] $INFO[Container(50).ListItem.TrackNumber]</label>
@@ -1042,8 +1023,6 @@
 						<item id="19">
 							<!-- Artist Video Clips -->
 							<label>31950</label>
-							<!-- <onclick>Dialog.Close(musicinformation)</onclick> -->
-							<!-- <onclick>Action(close)</onclick> -->
 							<onclick>Skin.SetBool(musictrailers)</onclick>
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist])</onclick>
 							<visible>System.HasAddon(script.extendedinfo)</visible>					
@@ -1051,7 +1030,6 @@
 						<item id="8">
 							<!-- Song Video Clip -->
 							<label>31951</label>
-							<!-- <onclick>Dialog.Close(musicinformation)</onclick> -->
 							<onclick>Action(close)</onclick>
 							<onclick>Skin.SetBool(musictrailers)</onclick>
 							<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
@@ -1115,7 +1093,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<!-- <posx>136</posx> -->
 							<posy>-2</posy>
 							<height>38</height>
 							<width>273</width>
@@ -1162,7 +1139,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<!-- <posx>136</posx> -->
 							<posy>-2</posy>
 							<height>38</height>
 							<width>273</width>
@@ -1175,7 +1151,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<!-- <posx>136</posx> -->
 							<posy>-2</posy>
 							<height>38</height>
 							<width>273</width>
@@ -1207,13 +1182,7 @@
 							<onclick condition="Window.IsActive(visualisation)">Action(setrating)</onclick>
 							<visible>!Skin.HasSetting(kioskininfo)</visible>
 						</item>
-						<!-- Artist Info 
-						<item id="4">
-
-							<label>31885</label>
-							<onclick>RunScript(script.metadata.actors,$INFO[Listitem.Artist])</onclick>
-							<visible>System.HasAddon(script.metadata.actors)</visible>
-						</item> -->
+						<!-- Artist Info -->
 						<item id="5">
 							<!-- Artist Zoom -->
 							<label>31944</label>
@@ -1262,7 +1231,6 @@
 				<orientation>horizontal</orientation>
 				<scrolltime>400</scrolltime>
 				<focusposition>2</focusposition>
-				<!-- <visible>[!String.IsEqual(ListItem.DBType,song) + !Window.IsActive(visualisation)] | [String.IsEqual(ListItem.DBType,song) + [!Player.HasAudio | [Player.HasAudio + !String.IsEqual(MusicPlayer.Artist,ListItem.Artist)] | String.Contains(ListItem.Genre,classical)]] | [Window.IsActive(visualisation) + String.Contains(MusicPlayer.Genre,classical)]</visible> -->
 				<visible>String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | [String.IsEqual(ListItem.DBType,song) + !String.IsEqual(MusicPlayer.Artist,ListItem.Artist)] | [String.IsEqual(ListItem.DBType,song) + String.IsEqual(MusicPlayer.Artist,ListItem.Artist) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))] | [[String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) | String.Contains(MusicPlayer.genre,classical)] + Window.IsVisible(visualisation)] | String.IsEqual(ListItem.DBType,song) + String.Contains(ListItem.Genre,classical) + !Window.IsVisible(visualisation)</visible>
 				<itemlayout condition="String.IsEqual(ListItem.DBType,artist)" height="255" width="372"> <!-- ARTIST INFO container 50 for artists currently empty was scraped discography -->
 					<control type="image">

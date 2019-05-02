@@ -24,8 +24,6 @@
 				<width>1920</width>
 				<control type="button" id="10">
 					<!-- no -->
-					<!-- <posx>735</posx> -->
-					<!-- <posy>45</posy> -->
 					<height>44</height>
 					<width>225</width>
 					<align>center</align>
@@ -45,8 +43,6 @@
 				</control>
 				<control type="button" id="11">
 					<!-- yes -->
-					<!-- <posx>960</posx> -->
-					<!-- <posy>45</posy> -->
 					<height>44</height>
 					<width>225</width>
 					<align>center</align>

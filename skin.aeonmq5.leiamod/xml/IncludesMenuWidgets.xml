@@ -132,7 +132,6 @@
 		<animation effect="fade" start="100" end="85" condition="true">conditional</animation>
 	</include>
 	<include name="widgets_selector">
-		<!-- <posx>735</posx> -->
 		<posx>703</posx>
 		<posy>774</posy>
 		<width>520</width>
@@ -247,7 +246,6 @@
 						<property name="Codec">$INFO[Window(home).Property(RecentMovie.1.VideoCodec)]</property>
 						<onclick>Skin.SetString(custom_id,$INFO[Window(home).Property(RecentMovie.1.DBID)])</onclick>
 						<onclick condition="!String.IsEmpty(Window(home).Property(RecentMovie.1.Trailer))">Skin.SetString(custom_trailer,$INFO[Window(home).Property(RecentMovie.1.Trailer)])</onclick>
-						<!-- <onclick>$INFO[Window(home).Property(RecentMovie.1.Play)]</onclick> -->
 						<onclick>ActivateWindow(639)</onclick>
 						<!-- custom trailer -->
 						<visible>!String.IsEmpty(Window(home).Property(RecentMovie.1.Title))</visible>
@@ -3659,13 +3657,11 @@
 			<!-- Fundo -->
 			<include>widgets_back</include>
 			<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
-			<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)] + !String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible> -->
 		</control>
 		<control type="group">
 			<!-- Seletor de lista -->
 			<include>Animation_Widgets</include>
 			<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
-			<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)] + !String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible> -->
 			<control type="button" id="5100">
 				<onclick>noop</onclick>
 				<include condition="!Skin.HasSetting(higherwidgets)">widgets_selector</include>
@@ -3680,7 +3676,6 @@
 			<control type="panel" id="510">
 				<include>panel_layout</include>
 				<visible>!String.IsEmpty(Window(home).Property(NextAired.1.NextTitle)) + [String.Contains(Container(9000).ListItem.Property(id),live) | String.Contains(Container(9000).ListItem.Property(id),tvguide)]</visible>
-				<!-- <visible>[String.Contains(Container(9000).ListItem.Property(id),livetv) | String.Contains(Container(9000).ListItem.Property(id),tvguide)] + !String.IsEmpty(Window(home).Property(NextAired.1.NextTitle))</visible> -->
 				<content>
 					<item>
 						<label>$INFO[Window(home).Property(NextAired.1.NextTitle)]</label>
@@ -3955,7 +3950,6 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>578</posy>
-				<!-- was 385 -->
 				<width>1920</width>
 				<height>45</height>
 				<texture flipy="true">shadow_h.png</texture>
@@ -3968,7 +3962,6 @@
 				<posy>0</posy>
 				<width>1920</width>
 				<height>578</height>
-				<!-- was 385 -->
 				<texture>details_back.png</texture>
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_HomeGlass2</include>
@@ -3990,10 +3983,8 @@
 				<visible>String.IsEqual(Container(9000).ListItem.Property(id),settings)</visible>
 				<control type="label">
 					<posx>60</posx>
-					<!-- was 270 -->
 					<posy>30</posy>
 					<width>570</width>
-					<!-- was 600 -->
 					<height>495</height>
 					<align>right</align>
 					<aligny>top</aligny>
@@ -4003,10 +3994,8 @@
 				</control>
 				<control type="label">
 					<posx>780</posx>
-					<!-- was 270 -->
 					<posy>218</posy>
 					<width>570</width>
-					<!-- was 600 -->
 					<height>495</height>
 					<align>right</align>
 					<aligny>top</aligny>
@@ -4016,7 +4005,6 @@
 				</control>
 				<control type="label">
 					<posx>60</posx>
-					<!-- was 320 -->
 					<posy>30</posy>
 					<width>900</width>
 					<height>495</height>
@@ -4028,7 +4016,6 @@
 				</control>
 				<control type="label">
 					<posx>788</posx>
-					<!-- was 320 -->
 					<posy>218</posy>
 					<width>900</width>
 					<height>495</height>
@@ -38952,7 +38939,6 @@
 		<posy>150</posy>
 		<height>120</height>
 		<width>195</width>
-		<!-- <height>287</height> -->
 		<aspectratio>keep</aspectratio>
 	</include>
 	<include name="Widget_WeatherTitleWeekend">
@@ -39160,7 +39146,6 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>Font_26A</font>
-				<!-- <scroll>false</scroll> -->
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<shadowcolor>grey</shadowcolor>
 				<label>$INFO[Window(Weather).Property(Location)][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][COLOR=50FFFAF0] | [/COLOR]$INFO[Window(Weather).Property(WeatherProvider)]</label>

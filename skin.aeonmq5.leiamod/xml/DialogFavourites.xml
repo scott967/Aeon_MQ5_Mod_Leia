@@ -3,7 +3,6 @@
 <!-- Jarvis 8.1.13 -->
 <window>
 	<defaultcontrol always="true">450</defaultcontrol>
-	<!-- <allowoverlay>no</allowoverlay> -->
 	<onunload condition="!Skin.HasSetting(nofavouriteswidget)">RunScript(script.favourites)</onunload>
 	<controls>
 		<control type="image">

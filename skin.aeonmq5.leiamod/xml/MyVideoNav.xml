@@ -23,11 +23,6 @@
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
 		</control>
-		<!-- <control type="multiimage" id="5021">
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
-			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control> -->
 		<control type="list" id="5021"> <!-- check if video seasons has extrafanartfanart -->
 			<posx>-500</posx>
 			<posy>-500</posy>
@@ -38,11 +33,6 @@
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
 		</control>
-		<!-- <control type="multiimage" id="5022">
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path,,../extrafanart/]</imagepath>
-			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control> -->
 		<control type="list" id="5022"> <!-- check if video episodes has extrafanart in parent folder (episodes in season folders) -->
 			<posx>-500</posx>
 			<posy>-500</posy>
@@ -71,12 +61,6 @@
 			<texture background="true">$VAR[value_defaultvideofanart]</texture>
 			<visible>!Container.Content(genres)</visible>
 		</control>
-		<!-- <control type="multiimage" id="5020">
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra) | Container.Content(sets) + String.Contains(skin.string(setsfanart),extra)] + !ListItem.IsParentFolder</visible>
-		</control> -->
-
 		<control type="multiimage">
 			<!-- Multi Fanart -->
 			<include>WindowBG</include>
@@ -187,8 +171,6 @@
 						<posy>968</posy>
 						<orientation>horizontal</orientation>
 						<itemgap>22</itemgap>
-						<!-- was 17 -->
-						<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 						<control type="image">
 							<!-- studio -->
 							<include>FlagImage</include>

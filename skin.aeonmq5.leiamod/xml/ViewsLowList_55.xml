@@ -228,7 +228,6 @@
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
 					<preloaditems>2</preloaditems>
-					<!-- <animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 					<itemlayout condition="Container.Content(artists) + !Skin.HasSetting(slimlowlistmusic)" height="45">
 						<control type="image">
 							<posx>0</posx>
@@ -478,9 +477,7 @@
 						<control type="label">
 							<description>IMDB rating</description>
 							<posx>728</posx>
-							<!-- 492 -->
 							<posy>53</posy>
-							<!-- 33 -->
 							<width>128</width>
 							<height>20</height>
 							<font>Font_14A</font>

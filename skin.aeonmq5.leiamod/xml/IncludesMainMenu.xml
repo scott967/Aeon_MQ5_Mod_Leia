@@ -36,10 +36,8 @@
 		<animation effect="fade" start="100" end="0" time="300" condition="Control.HasFocus(510) | Control.HasFocus(600)">Conditional</animation>
 		<posx>0</posx>
 		<posy>796</posy>
-		<!-- was 545 -->
 		<width>1920</width>
 		<height>120</height>
-		<!-- was 60 -->
 		<ondown condition="!Skin.HasSetting(highermainmenu)">Skin.SetBool(submode)</ondown>
 		<ondown condition="!Skin.HasSetting(highermainmenu)">ActivateWindow($VAR[Sub_GoTo])</ondown>
 		<ondown condition="Skin.HasSetting(highermainmenu) + [Control.IsVisible(604) + [String.IsEmpty(MusicPlayer.offset(1).Artist) | Skin.HasSetting(nonexttracks)] | !Control.IsVisible(604)]">Skin.SetBool(submode)</ondown>
@@ -457,10 +455,8 @@
 			</control>
 			<control type="label">
 				<left>3</left>
-				<!-- <posx>156</posx> -->
 				<posy>0</posy>
 				<height>50</height>
-				<!-- <width>286</width> -->
 				<width>314</width>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -480,7 +476,6 @@
 			</control>
 			<control type="label">
 				<left>3</left>
-				<!-- <posx>156</posx> -->
 				<posy>0</posy>
 				<height>50</height>
 				<width>314</width>

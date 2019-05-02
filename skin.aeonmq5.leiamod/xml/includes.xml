@@ -706,7 +706,6 @@
 				<onfocus>Skin.SetString(menu7.master,games)</onfocus>
 				<onfocus>Skin.SetString(gameswidget,true)</onfocus>
 				<onfocus>Skin.SetString(menu7.action,ActivateWindow(games))</onfocus>
-				<!-- <onfocus>Skin.SetString(menu7.action,RunScript(script.games.rom.collection.browser))</onfocus> -->
 				<onfocus>Skin.SetString(menu8.master,programs)</onfocus>
 				<onfocus condition="!System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs,Addons,return))</onfocus>
 				<onfocus condition="System.Platform.Android">Skin.SetString(menu8.action,ActivateWindow(Programs))</onfocus>
@@ -1407,7 +1406,6 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font_24</font>
-		<!-- <texture>settings_button.png</texture> -->
 		<texturefocus>settings_button.png</texturefocus>
 		<texturenofocus></texturenofocus>
 		<textcolor>E4101010</textcolor>
@@ -1648,7 +1646,6 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<!-- <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible> -->
 			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 		</control>
 		<control type="label">
@@ -1662,7 +1659,6 @@
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<!-- <visible>!Control.IsVisible(70) + !Skin.HasSetting(Use_lang_flags)</visible> -->
 			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
 		</control>
 		<control type="group">
@@ -1670,7 +1666,6 @@
 			<posy>0</posy>
 			<height>38</height>
 			<width>555</width>
-			<!-- <visible>!Control.IsVisible(70) + Skin.HasSetting(Use_lang_flags)</visible> -->
 			<visible>Skin.HasSetting(Use_lang_flags)</visible>
 			<control type="image">
 				<posx>0</posx>
@@ -1754,7 +1749,6 @@
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-			<!-- <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible> -->
 			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 		</control>
 		<control type="label">
@@ -1769,7 +1763,6 @@
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-			<!-- <visible>!Control.IsVisible(70) + !Skin.HasSetting(Use_lang_flags)</visible> -->
 			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
 		</control>
 		<control type="group">
@@ -1778,7 +1771,6 @@
 			<height>38</height>
 			<width>555</width>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(SubtitleLanguage.1))">Conditional</animation>
-			<!-- <visible>!Control.IsVisible(70) + Skin.HasSetting(Use_lang_flags)</visible> -->
 			<visible>Skin.HasSetting(Use_lang_flags)</visible>
 			<control type="image">
 				<posx>0</posx>
@@ -2095,14 +2087,6 @@
 		<texture flipx="true">divider.png</texture>
 		<colordiffuse>90FFFFFF</colordiffuse>
 	</include>
-	<!-- <include name="NextAiredLed">
-		<posx>15</posx>
-		<posy>56</posy>
-		<width>12</width>
-		<height>12</height>
-		<texture>settings_led_focus.gif</texture>
-		<include>Animation_Fade</include>
-	</include> -->
 	<!-- ######################################################################### Dialogs ######################################################################### -->
 	<include name="Dialogs_Bar">
 		<control type="image">
@@ -2174,7 +2158,7 @@
 		<posx>15</posx>
 		<posy>3</posy>
 		<width>750</width>
-		<height>40</height> <!-- was 52 -->
+		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textcolor>$VAR[value_headercolor]</textcolor>
@@ -2185,7 +2169,7 @@
 		<right>15</right>
 		<posy>3</posy>
 		<width>750</width>
-		<height>40</height> <!-- was 52 -->
+		<height>40</height>
 		<align>right</align>
 		<aligny>center</aligny>
 		<textcolor>FFFFFAF0</textcolor>
@@ -2196,7 +2180,7 @@
 		<posx>15</posx>
 		<posy>48</posy>
 		<width>705</width>
-		<height>40</height> <!-- was 52 -->
+		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textcolor>FFFFFAF0</textcolor>
@@ -2207,7 +2191,7 @@
 		<posx>1905</posx>
 		<posy>48</posy>
 		<width>705</width>
-		<height>40</height> <!-- was 52 -->
+		<height>40</height>
 		<align>right</align>
 		<aligny>center</aligny>
 		<textcolor>FFFFFAF0</textcolor>
@@ -2616,8 +2600,8 @@
 			</control>
 			<control type="label">
 				<posx>30</posx>
-				<posy>-2</posy>  <!-- 8 -->
-				<width>330</width> <!-- 390 -->
+				<posy>-2</posy>
+				<width>330</width>
 				<height>34</height>
 				<font>Font_23</font>
 				<align>left</align>
@@ -2628,8 +2612,8 @@
 			</control>
 			<control type="fadelabel">
 				<posx>30</posx>
-				<posy>42</posy>  <!-- 52 -->
-				<width>330</width> <!-- 390 -->
+				<posy>42</posy>
+				<width>330</width>
 				<height>30</height>
 				<font>Font_18A</font>
 				<align>left</align>
@@ -3694,7 +3678,6 @@
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_audio_mute),disable)">Skin.Reset(osd_audio_mute,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_audio_mute),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
-			<!-- Audio DSP is killed -->
 			<item id="1">
 				<!-- custom OSD settings -->
 				<label></label>
@@ -4448,18 +4431,6 @@
 		</content>
 	</include>
 	<include name="ContainerViewPage">
-		<!-- <control type="label">
-			<posx>1808</posx>
-			<posy>968</posy>
-			<width>112</width>
-			<height>75</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_18B</font>
-			<textcolor>$VAR[value_flagscolor]</textcolor>
-			<label>$INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
-			<visible>!String.IsEqual(Container.NumPages,1) + [Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(59) | Control.IsVisible(62) | Control.IsVisible(64) | Control.IsVisible(70)]</visible>
-		</control> -->
 		<control type="label">
 			<posx>1808</posx>
 			<posy>968</posy>
@@ -4470,7 +4441,6 @@
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumNonFolderItems]</label>
-			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + [String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
 			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 		<control type="label">
@@ -4483,7 +4453,6 @@
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<label>$INFO[Container.NumNonFolderItems]</label>
-			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + [String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
 			<visible>[String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 		<control type="label">
@@ -4496,7 +4465,6 @@
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<label>$INFO[Container.CurrentItem]/$INFO[Container.NumItems]</label>
-			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + ![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
 			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + !Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 		<control type="label">
@@ -4509,7 +4477,6 @@
 			<font>Font_18B</font>
 			<textcolor>$VAR[value_flagscolor]</textcolor>
 			<label>$INFO[Container.NumItems]</label>
-			<!-- <visible>[Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(60) | Control.IsVisible(61) | Control.IsVisible(63) | Control.IsVisible(66) | Control.IsVisible(67) | Control.IsVisible(69)] + ![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)]</visible> -->
 			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 	</include>

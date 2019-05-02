@@ -7,12 +7,6 @@
 			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
 			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation>
-			<!-- <control type="image">
-				<left>729</left>
-				<width>1950</width>
-				<height>1080</height>
-				<texture fallback="black.png">$INFO[Window.Property(ImageFilter)]</texture>
-			</control> -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -20,17 +14,8 @@
 				<height>1080</height>
 				<texture>black.png</texture>
 				<colordiffuse>D0FFFFFF</colordiffuse>
-				<!-- <include>Animation_Fade</include> -->
 				<include>Animation_VisibleChange</include>
 			</control>
-			<!-- <control type="image">
-				<left>729</left>
-				<width>1950</width>
-				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
-				<height>1080</height>
-				<aspectratio align="center">scale</aspectratio>
-				<texture colordiffuse="$INFO[Window(home).Property(ImageColor)]">diffuseoverlay.jpg</texture>
-			</control> -->
 			<control type="button" id="20000">
 				<height>0</height>
 				<width>0</width>
@@ -57,14 +42,6 @@
 					<top>184</top>
 					<itemgap>20</itemgap>
 					<ondown>noop</ondown>
-					<!-- <animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Down))" reversible="false">
-						<effect type="slide" end="0,20" time="60" tween="sine" />
-						<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-					</animation>
-					<animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Up))" reversible="false">
-						<effect type="slide" end="0,-20" time="60" tween="sine" />
-						<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-					</animation> -->
 					<width>2100</width>
 					<height>896</height>
 					<control type="group" id="140">
@@ -194,13 +171,6 @@
 									<onup>132</onup>
 									<ondown>1000</ondown>
 								</control>
-								<!-- <control type="image">
-									<left>100</left>
-									<top>10</top>
-									<texture>dialogs/circle/$INFO[Window.Property(PercentPlayed)].png</texture>
-									<width>80</width>
-									<height>80</height>
-								</control> -->
 							</control>
 							<control type="group" id="30000">
 								<left>0</left>
@@ -350,31 +320,6 @@
 								<visible>String.IsEmpty(Window.Property(tmdb_logged_in))</visible>
 								<visible>!String.IsEqual(Window.Property(type),season) + !String.IsEqual(Window.Property(type),TVShow)</visible>
 							</control>
-							<!-- <control type="radiobutton" id="100">
-								<width>280</width>
-								<height>140</height>
-								<textoffsetx>0</textoffsetx>
-								<align>center</align>
-								<texturefocus border="40" colordiffuse="$INFO[Window(home).Property(ImageColor)]">settings_button_focus.png</texturefocus>
-								<texturenofocus border="40" colordiffuse="$INFO[Window(home).Property(ImageColor)]">settings_button.png</texturenofocus>
-								<font>Font_14A</font>
-								<textcolor>FF999999</textcolor>
-								<focusedcolor>FFFAFAFA</focusedcolor>
-								<aligny>bottom</aligny>
-								<textoffsety>77</textoffsety>
-								<radioposx>118</radioposx>
-								<radioposy>30</radioposy>
-								<radiowidth>44</radiowidth>
-								<radioheight>44</radioheight>
-								<label>$ADDON[script.extendedinfo 32132]</label>
-								<onclick>XBMC.RunScript(script.videoextras,display,"$INFO[Window.Property(FilenameAndPath)]")</onclick>
-								<visible>System.HasAddon(script.videoextras) + String.IsEmpty(Window(movieinformation).Property(HideVideoExtrasButton))</visible>
-								<visible>!String.IsEmpty(Window.Property(FilenameAndPath))</visible>
-								<textureradioonfocus colordiffuse="FFFAFAFA">icons/plus2.png</textureradioonfocus>
-								<textureradioofffocus colordiffuse="FFFAFAFA">icons/plus2.png</textureradioofffocus>
-								<textureradiooffnofocus colordiffuse="FF999999">icons/plus2.png</textureradiooffnofocus>
-								<textureradioonnofocus colordiffuse="FF999999">icons/plus2.png</textureradioonnofocus>
-							</control> -->
 							<control type="radiobutton" id="445"> <!-- manage -->
 								<width>280</width>
 								<height>140</height>
@@ -489,15 +434,6 @@
 									<align>left</align>
 									<itemgap>4</itemgap>
 									<orientation>horizontal</orientation>
-									<!-- <control type="label">
-										<width>110</width>
-										<height>24</height>
-										<align>right</align>
-										<aligny>center</aligny>
-										<textoffsetx>10</textoffsetx>
-										<label>$LOCALIZE[445]:</label>
-										<font>Font_14A</font>
-									</control> -->
 									<control type="image">
 										<width>28</width>
 										<height>28</height>
@@ -590,15 +526,6 @@
 									<align>left</align>
 									<itemgap>2</itemgap>
 									<orientation>horizontal</orientation>
-									<!-- <control type="label">
-										<width>110</width>
-										<height>24</height>
-										<align>right</align>
-										<textoffsetx>10</textoffsetx>
-										<aligny>center</aligny>
-										<label>$LOCALIZE[287]:</label>
-										<font>Font_14A</font>
-									</control> -->
 									<control type="image">
 										<width>28</width>
 										<height>28</height>

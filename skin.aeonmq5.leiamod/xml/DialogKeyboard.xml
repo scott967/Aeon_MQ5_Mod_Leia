@@ -61,14 +61,6 @@
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
 			</control>
-			<!-- <control type="image">
-				<left>130</left>
-				<top>110</top>
-				<width>600</width>
-				<height>30</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>DialogHeader.png</texture>
-			</control> -->
 			<control type="group">
 				<left>45</left>
 				<top>210</top>

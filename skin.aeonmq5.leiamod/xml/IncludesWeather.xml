@@ -131,7 +131,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Font_23</font>
-						<!-- <scroll>false</scroll> -->
 						<textcolor>FFFFFAF0</textcolor>
 						<label>[UPPERCASE]$INFO[Window(Weather).Property(Location)][/UPPERCASE]</label>
 						<scrollout>false</scrollout>
@@ -5316,8 +5315,6 @@
 		<radioheight>75</radioheight>
 		<align>left</align>
 		<aligny>center</aligny>
-		<!-- <textureradiofocus>settings_radiobuttononfocus.png</textureradiofocus> -->
-		<!-- <textureradioon>settings_radiobuttonon.png</textureradioon> -->
 		<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 		<textureradioonfocus>radiobutton_on.png</textureradioonfocus>
 	</include>
@@ -5388,7 +5385,7 @@
 				<control type="radiobutton" id="5201">
 					<description>Map List Button</description>
 					<include>MapsRadioButton</include>
-					<posx>-650</posx> <!-- was -135 -->
+					<posx>-650</posx>
 					<posy>630</posy>
 					<label>$INFO[Window.Property(Map.1.Heading)]</label>
 					<onleft>51</onleft>
@@ -5465,8 +5462,6 @@
 						<height>825</height>
 						<texture>$INFO[Window.Property(Map.1.Area)]</texture>
 						<aspectratio>scale</aspectratio>
-					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>map</description>
@@ -5477,8 +5472,6 @@
 						<texture>$INFO[Window.Property(Map.1.Layer)]</texture>
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
-				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>legend image</description>
@@ -5491,8 +5484,6 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>BFFFFFFF</colordiffuse>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 				</control>
 				<control type="group"> <!-- Map 2 -->
@@ -5505,8 +5496,6 @@
 						<height>825</height>
 						<texture>$INFO[Window.Property(Map.2.Area)]</texture>
 						<aspectratio>scale</aspectratio>
-					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>map</description>
@@ -5517,8 +5506,6 @@
 						<texture>$INFO[Window.Property(Map.2.Layer)]</texture>
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>legend image</description>
@@ -5531,8 +5518,6 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>BFFFFFFF</colordiffuse>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 				</control>
 				<control type="group"> <!-- Map 3 -->
@@ -5545,8 +5530,6 @@
 						<height>825</height>
 						<texture>$INFO[Window.Property(Map.3.Area)]</texture>
 						<aspectratio>scale</aspectratio>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>map</description>
@@ -5557,8 +5540,6 @@
 						<texture>$INFO[Window.Property(Map.3.Layer)]</texture>
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
-				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>legend image</description>
@@ -5571,8 +5552,6 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>BFFFFFFF</colordiffuse>
-				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 				</control>
 				<control type="group"> <!-- Map 4 -->
@@ -5585,8 +5564,6 @@
 						<height>825</height>
 						<texture>$INFO[Window.Property(Map.4.Area)]</texture>
 						<aspectratio>scale</aspectratio>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>map</description>
@@ -5597,8 +5574,6 @@
 						<texture>$INFO[Window.Property(Map.4.Layer)]</texture>
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
-					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>legend image</description>
@@ -5611,8 +5586,6 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>BFFFFFFF</colordiffuse>
-						<!-- <animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 				</control>
 				<control type="group"> <!-- Map 5 -->
@@ -5625,8 +5598,6 @@
 						<height>825</height>
 						<texture>$INFO[Window.Property(Map.5.Area)]</texture>
 						<aspectratio>scale</aspectratio>
-					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>map</description>
@@ -5637,8 +5608,6 @@
 						<texture>$INFO[Window.Property(Map.5.Layer)]</texture>
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
-				<!-- 		<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 					<control type="image">
 						<description>legend image</description>
@@ -5651,282 +5620,12 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>BFFFFFFF</colordiffuse>
-					<!-- 	<animation effect="fade" time="200" start="100" end="15" condition="Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus">Conditional</animation>
-						<animation effect="zoom" reversible="true" center="488,540" start="100" end="117" time="100" condition="Skin.HasSetting(TWC.ZoomWeatherMap)">Conditional</animation> -->
 					</control>
 				</control>
 			</control>
 			<!-- Category Lists  -->
-<!-- 			<control type="group" id="5100">
-				<posx>180</posx>
-				<posy>52</posy>
-				<visible>!String.Contains(Window.Property(WeatherProvider),Weatherbit) + [Control.HasFocus(5201) | Control.HasFocus(5202) | Control.HasFocus(5203) | ControlGroup(5100).HasFocus]</visible>
-				<control type="group">
-					<visible>String.IsEqual(Window.Property(CurrentMapList),1)</visible>
-					<control type="label">
-						<include>TWC.Maps.ListTitleCommon</include>
-						<label>$INFO[Container(501).ListItem.Label]</label>
-					</control>
-					<control type="panel" id="501">
-						<include>MapsList1.Content</include>
-						<include>TWC.Maps.ListCommon</include>
-						<onright>5001</onright>
-						<onup>5200</onup>
-						<ondown>501</ondown>
-						<pagecontrol>5001</pagecontrol>
-					</control>
-					<control type="scrollbar" id="5001">
-						<description>Scroll Bar</description>
-						<include>TWC.ScrollbarCommon</include>
-						<onleft>501</onleft>
-						<onright>501</onright>
-					</control>
-				</control>
-
-				<control type="group">
-					<visible>!String.IsEmpty(Window.Property(MapIsFetched)) + String.Contains(Window.Property(WeatherProvider),Weatherbit)</visible>
-					<control type="label">
-						<include>TWC.Maps.ListTitleCommon</include>
-						<label>$INFO[Window.Property(Map.1.Heading)]</label>
-					</control>
-					<control type="image" id="501">
-						<posx>-120</posx>
-						<posy>75</posy>
-						<width>1058</width>
-						<height>698</height>
-						<texture>$INFO[window.Property(Map.1.Area)]</texture>
-					</control>
-					<control type="image" id="501">
-						<posx>-120</posx>
-						<posy>75</posy>
-						<width>1058</width>
-						<height>698</height>
-						<texture>$INFO[window.Property(Map.1.Layer)]</texture>
-					</control>
-				</control>
-
-				<control type="group">
-					<visible>String.IsEqual(Window.Property(CurrentMapList),2)</visible>
-					<control type="label">
-						<include>TWC.Maps.ListTitleCommon</include>
-						<label>$INFO[Container(502).ListItem.Label]</label>
-					</control>
-					<control type="panel" id="502">
-						<include>MapsList2.Content</include>
-						<include>TWC.Maps.ListCommon</include>
-						<onright>5020</onright>
-						<onup>5200</onup>
-						<ondown>502</ondown>
-						<pagecontrol>5020</pagecontrol>
-					</control>
-					<control type="scrollbar" id="5020">
-						<description>Scroll Bar</description>
-						<include>TWC.ScrollbarCommon</include>
-						<onleft>502</onleft>
-						<onright>502</onright>
-					</control>
-				</control>
-
-				<control type="group">
-					<visible>String.IsEqual(Window.Property(CurrentMapList),3)</visible>
-					<control type="label">
-						<include>TWC.Maps.ListTitleCommon</include>
-						<label>$INFO[Container(503).ListItem.Label]</label>
-					</control>
-					<control type="panel" id="503">
-						<include>MapsList3.Content</include>
-						<include>TWC.Maps.ListCommon</include>
-						<onright>5030</onright>
-						<onup>5200</onup>
-						<ondown>503</ondown>
-						<pagecontrol>5030</pagecontrol>
-					</control>
-					<control type="scrollbar" id="5030">
-						<description>Scroll Bar</description>
-						<include>TWC.ScrollbarCommon</include>
-						<onleft>503</onleft>
-						<onright>503</onright>
-					</control>
-				</control>
-			</control> -->
 		</control>
 		<!-- OpenWeatherMaps -->
-<!-- 		<control type="group">
-			<posx>435</posx>
-			<posy>90</posy>
-			<visible>String.IsEqual(Window.Property(Weather.CurrentView),maps) + String.IsEqual(Window.Property(WeatherProvider),OpenWeatherMap Extended)</visible>
-			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-			<control type="label">
-				<description>header label</description>
-				<left>30</left>
-				<top>22</top>
-				<width>915</width>
-				<height>45</height>
-				<font>Font13</font>
-				<label>31844</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="button" id="992">
-				<left>870</left>
-				<top>848</top>
-				<width>38</width>
-				<height>38</height>
-				<label></label>
-				<texturefocus>arrow_right.png</texturefocus>
-				<texturenofocus>arrow_right.png</texturenofocus>
-				<onleft>991</onleft>
-				<onright>51</onright>
-				<onclick>Control.Move(3053,1)</onclick>
-			</control>
-			<control type="button" id="991">
-				<left>68</left>
-				<top>848</top>
-				<width>38</width>
-				<height>38</height>
-				<label></label>
-				<texturefocus>arrow_left.png</texturefocus>
-				<texturenofocus>arrow_left.png</texturenofocus>
-				<onleft>51</onleft>
-				<onright>992</onright>
-				<onclick>Control.Move(3053,-1)</onclick>
-			</control>
-			<control type="label">
-				<description>heading label</description>
-				<left>112</left>
-				<top>848</top>
-				<width>750</width>
-				<height>45</height>
-				<font>Font13</font>
-				<label>$INFO[Container(3053).ListItem.Label]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="list" id="3053">
-				<left>45</left>
-				<top>105</top>
-				<width>885</width>
-				<height>705</height>
-				<onleft>51</onleft>
-				<onright>51</onright>
-				<onup>51</onup>
-				<ondown>51</ondown>
-				<viewtype label="535">list</viewtype>
-				<scrolltime>200</scrolltime>
-				<orientation>horizontal</orientation>
-				<itemlayout height="705" width="885">
-					<control type="image">
-						<description>area image</description>
-						<left>0</left>
-						<top>0</top>
-						<width>885</width>
-						<height>705</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
-					</control>
-					<control type="image">
-						<description>layer image</description>
-						<left>0</left>
-						<top>0</top>
-						<width>885</width>
-						<height>705</height>
-						<texture>$INFO[ListItem.Property(Layer)]</texture>
-						<aspectratio>scale</aspectratio>
-						<colordiffuse>70FFFFFF</colordiffuse>
-					</control>
-					<control type="image">
-						<description>legend image</description>
-						<left>540</left>
-						<top>645</top>
-						<width>336</width>
-						<height>52</height>
-						<texture>$INFO[ListItem.Label2]</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout height="705" width="885">
-					<control type="image">
-						<description>layer image</description>
-						<left>0</left>
-						<top>0</top>
-						<width>885</width>
-						<height>705</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio>scale</aspectratio>
-					</control>
-					<control type="image">
-						<description>area image</description>
-						<left>0</left>
-						<top>0</top>
-						<width>885</width>
-						<height>705</height>
-						<texture>$INFO[ListItem.Property(Layer)]</texture>
-						<aspectratio>scale</aspectratio>
-						<colordiffuse>70FFFFFF</colordiffuse>
-					</control>
-					<control type="image">
-						<description>legend image</description>
-						<left>540</left>
-						<top>645</top>
-						<width>336</width>
-						<height>52</height>
-						<texture>$INFO[ListItem.Label2]</texture>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>$INFO[Window.Property(Map.1.Heading)]</label>
-						<label2>$INFO[Window.Property(Map.1.Legend)]</label2>
-						<icon>$INFO[Window.Property(Map.1.Area)]</icon>
-						<property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
-						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.1.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-					</item>
-					<item>
-						<label>$INFO[Window.Property(Map.2.Heading)]</label>
-						<label2>$INFO[Window.Property(Map.2.Legend)]</label2>
-						<icon>$INFO[Window.Property(Map.2.Area)]</icon>
-						<property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
-						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.2.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-					</item>
-					<item>
-						<label>$INFO[Window.Property(Map.3.Heading)]</label>
-						<label2>$INFO[Window.Property(Map.3.Legend)]</label2>
-						<icon>$INFO[Window.Property(Map.3.Area)]</icon>
-						<property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
-						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.3.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-					</item>
-					<item>
-						<label>$INFO[Window.Property(Map.4.Heading)]</label>
-						<label2>$INFO[Window.Property(Map.4.Legend)]</label2>
-						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
-						<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
-						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.4.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-					</item>
-					<item>
-						<label>$INFO[Window.Property(Map.5.Heading)]</label>
-						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
-						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
-						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
-						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.5.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-					</item>
-				</content>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>825</top>
-				<width>975</width>
-				<height>6</height>
-				<texture>separator.png</texture>
-			</control>
-		</control> -->
 	</include>
 	<!-- ######################################################################### Maps Content #########################################################################-->
 	<include name="MapsList1.Content">

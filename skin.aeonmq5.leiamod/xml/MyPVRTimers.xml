@@ -123,7 +123,6 @@
 			<!-- ViewTypes -->
 			<control type="group">
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-				<!-- <visible>Control.IsVisible(14)</visible> -->
 				<include>EPGMenu</include>
 				<control type="image">
 					<posx>360</posx>

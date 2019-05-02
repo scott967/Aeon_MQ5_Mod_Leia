@@ -29,14 +29,6 @@
 				<font>Font_32</font>
 				<textcolor>FFFFFAF0</textcolor>
 			</control>
-			<!-- <control type="image">
-				<description>separator</description>
-				<posx>210</posx>
-				<posy>120</posy>
-				<width>1500</width>
-				<height>3</height>
-				<texture>common_divider.png</texture>
-			</control> -->
 			<control type="textbox" id="5">
 				<posx>210</posx>
 				<posy>180</posy>

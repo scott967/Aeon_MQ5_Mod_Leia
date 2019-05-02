@@ -9,9 +9,7 @@
 			<posy>0</posy>
 			<width>1920</width>
 			<height>240</height>
-			<!-- <animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">WindowOpen</animation> -->
 			<animation effect="slide" time="400" start="0,-255" end="0,0" easing="out" tween="cubic">Visible</animation>
-			<!-- <animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">WindowClose</animation> -->
 			<animation effect="slide" time="400" start="0,0" end="0,-255" easing="in" tween="cubic">Hidden</animation>
 			<visible>String.IsEmpty(Player.SeekNumeric) + ![ Window.IsVisible(seekbar) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsActive(fullscreeninfo) | Window.IsActive(videoosd) | Skin.HasSetting(customosd)]</visible>
 			<control type="image">
@@ -58,9 +56,7 @@
 			<posy>0</posy>
 			<width>1920</width>
 			<height>240</height>
-			<!-- <animation effect="slide" time="400" start="0,-188" end="0,0" easing="out" tween="cubic">WindowOpen</animation> -->
 			<animation effect="slide" time="400" start="0,-255" end="0,0" easing="out" tween="cubic">Visible</animation>
-			<!-- <animation effect="slide" time="400" start="0,0" end="0,-188" easing="in" tween="cubic">WindowClose</animation> -->
 			<animation effect="slide" time="400" start="0,0" end="0,-255" easing="in" tween="cubic">Hidden</animation>
 			<visible>![String.IsEmpty(Player.SeekNumeric) + String.IsEmpty(PVR.ChannelNumberInput)] + ![ Window.IsVisible(seekbar) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsActive(videoosd) | Skin.HasSetting(customosd)]</visible>
 			<control type="image">
@@ -116,23 +112,6 @@
 				<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
 			</control>
 		</control>
-		<!-- <control type="group">
-			<posx>0</posx>
-			<posy>1040</posy>
-			<width>748</width>
-			<height>42</height>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>748</width>
-				<height>42</height>
-				<texture flipy="true">osd_button_reverse.png</texture>
-			</control>
-			<control type="label">
-				<include>Objects_OSDSeekForward</include>
-				<label>$VAR[value_seekforward]</label>
-			</control>
-		</control> -->
 		<!-- Buffering Dialog -->
 		<control type="label" id="24">
 			<description>buffering label</description>

@@ -68,7 +68,6 @@
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">Hidden</animation>
-				<!-- <animation effect="slide" start="0,0" end="450,0" time="0" easing="in" tween="cubic" condition="Control.IsVisible(11) | Control.IsVisible(12)">Conditional</animation> -->
 				<animation effect="slide" start="0,0" end="450,0" time="0" easing="in" tween="cubic" condition="Control.IsVisible(51)">Conditional</animation>
 				<visible>[PVR.IsRecording | PVR.HasNonRecordingTimer] + ![Player.HasMedia | Control.HasFocus(9920) | ControlGroup(9000).HasFocus]</visible>
 				<control type="image">
@@ -113,7 +112,6 @@
 			</control>
 			<control type="group">
 				<!-- Mobilia furniture -->
-				<!-- <visible>Control.IsVisible(51) | Control.IsVisible(12)</visible> -->
 				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
@@ -152,17 +150,6 @@
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(51)</visible>
 				</control>
-				<!-- <control type="image">
-					<posx>522</posx>
-					<posy>642</posy>
-					<width>338</width>
-					<height>338</height>
-					<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(12).ListItem.Icon]</texture>
-					<bordertexture border="-25">musicframe.png</bordertexture>
-					<fadetime>FanartCrossFadeTime</fadetime>
-					<aspectratio>keep</aspectratio>
-					<visible>Control.IsVisible(12)</visible>
-				</control> -->
 				<control type="label">
 					<!-- Nome do canal -->
 					<posx>922</posx>
@@ -327,7 +314,6 @@
 								<!-- - canal -->
 								<label></label>
 								<icon>osd_menu_skipbwd_channeldown.png</icon>
-								<!-- <onclick>PlayerControl(Previous)</onclick> -->
 								<onclick>Action(ChannelDown)</onclick>
 								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
@@ -349,7 +335,6 @@
 								<!-- + canal -->
 								<label></label>
 								<icon>osd_menu_skipfwd_channelup.png</icon>
-								<!-- <onclick>PlayerControl(Next)</onclick> -->
 								<onclick>Action(ChannelUp)</onclick>
 								<visible>PVR.IsPlayingTV | PVR.IsPlayingRadio</visible>
 							</item>
@@ -395,7 +380,6 @@
 					<align>left</align>
 					<textcolor>E4101010</textcolor>
 					<include>Animation_Fade</include>
-					<!-- <label>[UPPERCASE]$INFO[Control.GetLabel(29)][COLOR=80ffffff] | [/COLOR]$INFO[Control.GetLabel(30)][COLOR=80ffffff] | [/COLOR]$VAR[value_pvrnumitems][/UPPERCASE]</label> -->
 					<label>[UPPERCASE]$VAR[value_pvrnumitems][/UPPERCASE]</label>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
@@ -406,7 +390,7 @@
 					<posx>0</posx>
 					<posy>98</posy>
 					<width>450</width>
-					<height>890</height>  <!-- was 874 -->
+					<height>890</height>
 					<onleft>9900</onleft>
 					<onright condition="[Player.HasVideo + VideoPlayer.Content(liveTV)] | [Player.HasAudio + !String.IsEmpty(MusicPlayer.ChannelName)]">600</onright>
 					<ondown>51</ondown>

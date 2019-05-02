@@ -80,17 +80,6 @@
 				<shadowcolor>grey</shadowcolor>
 				<visible>![Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation)]</visible>
 			</control>
-			<!-- <control type="label">
-				<posx>45</posx>
-				<posy>82</posy>
-				<width>1650</width>
-				<height>38</height>
-				<font>Font_18A</font>
-				<label>$VAR[value_gameosdtag]</label>
-				<textcolor>90FFFFFF</textcolor>
-				<scroll>true</scroll>
-				<shadowcolor>grey</shadowcolor>
-			</control> -->
 		</control>
 		<control type="group">
 			<posy>780</posy>

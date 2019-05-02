@@ -29,7 +29,7 @@
 	<include name="MidListInfoTitle">
 		<posx>0</posx>
 		<height>33</height>
-		<width>150</width>  <!-- was 105 -->
+		<width>150</width>
 		<font>Font_17A</font>
 		<aligny>center</aligny>
 		<align>left</align>
@@ -50,142 +50,6 @@
 		<scroll>true</scroll>
 		<scrollspeed>30</scrollspeed>
 	</include>
-	<!-- 	<include name="MidList_Data_Labels">
-		<param name="Label_Posy" value="600"/>
-		<definition>
-			<control type="grouplist">
-				<posx>1428</posx>
-				<posy>600</posy>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<control type="label">
-					<description>MOVIES</description>
-					<include>MidListInfoTitle</include>
-					<label>$LOCALIZE[342]</label>
-					<visible>ListItem.IsCollection</visible>
-				</control>
-				<control type="label">
-					<description>DURATION</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground16_label]</label>
-					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-				</control>
-				<control type="label">
-					<description>YEAR (artist active years)</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground17_label]</label>
-				</control>
-				<control type="label">
-					<description>DIRECTOR/Album</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground14_label]</label>
-					<visible>![String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType, musicvideo) | [Window.IsVisible(videoplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)]]</visible>
-				</control>
-				<control type="label">
-					<description>Mood</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground13_label]</label>
-					<visible>String.IsEqual(ListItem.DBType,album)</visible>
-				</control>
-				<control type="label">
-					<description>MV Title</description>
-					<include>MidListInfoTitle</include>
-					<label>$LOCALIZE[369]</label>
-					<visible>Window.IsVisible(videoplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)</visible>
-				</control>
-				<control type="label">
-					<description>Album</description>
-					<include>MidListInfoTitle</include>
-					<label>$LOCALIZE[558]</label>
-					<visible>String.IsEqual(ListItem.DBType,musicvideo) | [Window.IsVisible(videoplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)]</visible>
-				</control>
-				<control type="label">
-					<description>WRITER</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground15_label]</label>
-					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-				</control>
-				<control type="label">
-					<description>COUNTRY</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground11_label]</label>
-				</control>
-				<control type="label">
-					<description>GENRE</description>
-					<include>MidListInfoTitle</include>
-					<label>$VAR[value_ground12_label]</label>
-				</control>
-			</control>
-		</definition>
-	</include> -->
-	<!-- 	<include name="MidList_Data_Values">
-		<param name="Value_Posy" value="600"/>
-		<definition>
-			<control type="grouplist">
-				<posx>1539</posx>
-				<posy>682</posy>
-				<orientation>vertical</orientation>
-				<itemgap>0</itemgap>
-				<control type="label">
-					<description>MOVIE COUNT</description>
-					<include>MidListInfo</include>
-					<label>$INFO[Window(home).Property(Set.Movies.Count)]</label>
-					<visible>ListItem.IsCollection</visible>
-				</control>
-				<control type="label">
-					<description>DURATION</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground16_value]</label>
-					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-				</control>
-				<control type="label">
-					<description>YEAR (artist active years)</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground17_value]</label>
-				</control>
-				<control type="label">
-					<description>DIRECTOR/Album</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground14_value]</label>
-					<visible>![String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType, musicvideo) | [Window.IsVisible(videoplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)]]</visible>
-				</control>
-				<control type="label">
-					<description>Mood</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground13_value]</label>
-					<visible>String.IsEqual(ListItem.DBType,album)</visible>
-				</control>
-				<control type="label">
-					<description>MV Title</description>
-					<include>MidListInfo</include>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>Window.IsVisible(videoplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)</visible>
-				</control>
-				<control type="label">
-					<description>Album</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_midlist_album]</label>
-					<visible>String.IsEqual(ListItem.DBType,musicvideo) | [Window.IsVisible(videoplaylist) + Player.HasVideo+ VideoPlayer.Content(musicvideos)]</visible>
-				</control>
-				<control type="label">
-					<description>WRITER</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground15_value]</label>
-					<visible>String.IsEqual(ListItem.DBType,movie)</visible>
-				</control>
-				<control type="label">
-					<description>COUNTRY</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground11_value]</label>
-				</control>
-				<control type="label">
-					<description>GENRE</description>
-					<include>MidListInfo</include>
-					<label>$VAR[value_ground12_value]</label>
-				</control>
-			</control>
-		</definition>
-	</include> -->
 	<!-- ##########       END INCLUDES USED LATER IN THIS FILE       ########## -->
 	<include name="ViewMidList">
 		<control type="group">
@@ -299,7 +163,6 @@
 						<description>MUSIC CLEARLOGO - listitem</description>
 						<posx>1440</posx>
 						<posy>750</posy>
-						<!-- was 380 -->
 						<width>450</width>
 						<height>195</height>
 						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(artist.clearlogo)]</texture>
@@ -311,20 +174,17 @@
 						<description>MUSIC CLEARLOGO - listitem</description>
 						<posx>1440</posx>
 						<posy>750</posy>
-						<!-- was 380 -->
 						<width>450</width>
 						<height>195</height>
 						<texture background="true" fallback="transparent.png">$INFO[ListItem.Art(clearlogo)]</texture>
 						<aspectratio align="right" aligny="bottom">keep</aspectratio>
 						<fadetime>FanartCrossFadeTime</fadetime>
-						<!-- <visible>[Window.IsVisible(music) | [Window.IsVisible(musicplaylist) + !Player.HasAudio]] + [String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,musicvideo)]</visible> -->
 						<visible>[Window.IsVisible(music) | [Window.IsVisible(musicplaylist) + !Player.HasAudio]] + String.IsEqual(ListItem.DBType,artist)</visible>
 					</control>
 					<control type="image">
 						<description>MUSIC CLEARLOGO - music player and video player</description>
 						<posx>1440</posx>
 						<posy>750</posy>
-						<!-- was 380 -->
 						<width>450</width>
 						<height>195</height>
 						<texture background="true" fallback="transparent.png">$INFO[Player.Art(artist.clearlogo)]</texture>
@@ -452,10 +312,8 @@
 				<visible>!Control.HasFocus(9915) + ![Container.content(genres) | Container.Content(roles) | Container.Content(sources)]</visible>
 				<control type="image">
 					<description>CLEARART DISPLAY VIDEO 1000x562 / 500x281 - listitem</description>
-					<!-- <posx>1323</posx> -->
 					<posx>1402</posx>
 					<posy>13</posy>
-					<!-- <width>630</width> -->
 					<width>480</width>
 					<height>270</height>
 					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
@@ -516,27 +374,15 @@
 					<texture>darkgrey.png</texture>					
 					<aspectratio>stretch</aspectratio>
 				</control>
-			<!-- 	<control type="image">
-					<description>FANART WINDOW BORDER</description>
-					<posx>1402</posx>
-					<posy>288</posy>
-					<width>480</width>
-					<height>270</height>
-					<texture>banner_glass.png</texture>
-					<bordersize>5</bordersize>
-					<aspectratio>stretch</aspectratio>
-				</control> -->
 				<control type="image">
 					<description>FANART WINDOW DEFAULT</description>
 					<posx>1402</posx>
 					<posy>288</posy>
 					<width>480</width>
 					<height>270</height>
-					<!-- <aspectratio>stretch</aspectratio> -->
 					<aspectratio>stretch</aspectratio>
 					<bordertexture border="5">banner_glass.png</bordertexture>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<!-- <bordersize>3,2,3,2</bordersize> -->
 					<bordersize>2</bordersize>
 					<fadetime>FanartCrossFadeTime</fadetime>
 				</control>
@@ -564,14 +410,11 @@
 					<fadetime>2000</fadetime>
 					<randomize>true</randomize>
 					<loop>yes</loop>
-					<!-- <visible>[String.IsEqual(ListItem.DBType,song) + [Window.IsVisible(music) | [Window.IsVisible(musicplaylist) + !Player.HasAudio]]] + String.Contains(skin.string(musicfanart),extra)</visible> -->
-					<!-- <visible>String.IsEqual(ListItem.DBType,artist) + String.Contains(skin.string(musicfanart),extra) + !Skin.HasSetting(musiclogo)</visible> -->
 					<visible>String.IsEqual(ListItem.DBType,movie) + String.Contains(skin.string(moviesfanart),extra) + ![Window.IsVisible(videoplaylist) + Player.HasVideo] |
 					String.IsEqual(ListItem.DBType,tvshow) + String.Contains(skin.string(tvshowsfanart),extra) + ![Window.IsVisible(videoplaylist) + Player.HasVideo] |
 					String.IsEqual(ListItem.DBType,season) + String.Contains(skin.string(seasonsfanart),extra) + ![Window.IsVisible(videoplaylist) + Player.HasVideo] |
 					String.IsEqual(ListItem.DBType,episode) + String.Contains(skin.string(episodesfanart),extra) + ![Window.IsVisible(videoplaylist) + Player.HasVideo] |
 					String.IsEqual(ListItem.DBType,musicvideo) + String.Contains(skin.string(musicvideosfanart),extra) + ![Window.IsVisible(videoplaylist) + Player.HasVideo]</visible>
-					<!-- <visible>String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)</visible>  musicvideos in m3u playlists -->
 				</control>
 				<control type="multiimage">
 					<description>FANART WINDOW EXTRA CROSSFADE - listitem song</description>
@@ -664,58 +507,6 @@
 					<posy>578</posy>
 					<visible>!Skin.HasSetting(nolanguageflags) + ![Window.IsVisible(videoplaylist) + Player.HasVideo] + ![Window.Isvisible(musicplaylist) + [Player.HasAudio | [Player.HasVideo + VideoPlayer.Content(musicvideos)]]] + !String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<include>AudioandSub</include>
-					<!-- <control type="image">
-						<description>AUDIO ICON</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>osd_audio.png</texture>
-						<colordiffuse>CCCCCCCC</colordiffuse>
-						<aspectratio>keep</aspectratio>
-						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
-					</control>
-					<control type="label">
-						<description>AUDIO LANGUAGES</description>
-						<posx>60</posx>
-						<posy>0</posy>
-						<width>345</width>
-						<height>38</height>
-						<aligny>center</aligny>
-						<font>Font_17A</font>
-						<label>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ]$INFO[ListItem.Property(AudioLanguage.3), / ]$INFO[ListItem.Property(AudioLanguage.4), / ]$INFO[ListItem.Property(AudioLanguage.5), / ]$INFO[ListItem.Property(AudioLanguage.6), / ]$INFO[ListItem.Property(AudioLanguage.7), / ]$INFO[ListItem.Property(AudioLanguage.8), / ]$INFO[ListItem.Property(AudioLanguage.9), / ]$INFO[ListItem.Property(AudioLanguage.10), / ]</label>
-						<textcolor>CCCCCCCC</textcolor>
-						<scroll>true</scroll>
-						<scrollout>false</scrollout>
-					</control>
-					<control type="image">
-						<description>SUBTITLE ICON</description>
-						<posx>0</posx>
-						<posy>45</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>osd_subtitle.png</texture>
-						<colordiffuse>CCCCCCCC</colordiffuse>
-						<aspectratio>keep</aspectratio>
-						<fadetime>FanartCrossFadeTime</fadetime>
-						<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-						<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
-					</control>
-					<control type="label">
-						<description>SUBTITLE LANGUAGES</description>
-						<posx>60</posx>
-						<posy>45</posy>
-						<width>345</width>
-						<height>38</height>
-						<aligny>center</aligny>
-						<font>Font_17A</font>
-						<label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label>
-						<textcolor>CCCCCCCC</textcolor>
-						<scroll>true</scroll>
-						<scrollout>false</scrollout>
-						<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-					</control> -->
 				</control>
 				<!-- ##########         AUDIO / LANGUAGE FLAGS  - Video now playing (video player)         ########## -->
 				<control type="group" id="7014">
@@ -723,58 +514,6 @@
 					<posy>578</posy>
 					<visible>!Skin.HasSetting(nolanguageflags) + Player.HasVideo + [Window.IsVisible(videoplaylist) | [Window.IsVisible(musicplaylist) + VideoPlayer.Content(musicvideos)]] </visible>
 					<include>AudioandSubNowPlaying</include>
-					<!-- <control type="image">
-						<description>AUDIO ICON</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>osd_audio.png</texture>
-						<colordiffuse>CCCCCCCC</colordiffuse>
-						<aspectratio>keep</aspectratio>
-						<fadetime>FanartCrossFadeTime</fadetime>
-						<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-					</control>
-					<control type="label">
-						<description>AUDIO LANGUAGE</description>
-						<posx>60</posx>
-						<posy>0</posy>
-						<width>345</width>
-						<height>38</height>
-						<aligny>center</aligny>
-						<font>Font_17A</font>
-						<label>$INFO[VideoPlayer.AudioLanguage]</label>
-						<textcolor>CCCCCCCC</textcolor>
-						<scroll>true</scroll>
-						<scrollout>false</scrollout>
-					</control>
-					<control type="image">
-						<description>SUBTITLE ICON</description>
-						<posx>0</posx>
-						<posy>45</posy>
-						<width>38</width>
-						<height>38</height>
-						<texture>osd_subtitle.png</texture>
-						<colordiffuse>CCCCCCCC</colordiffuse>
-						<aspectratio>keep</aspectratio>
-						<fadetime>FanartCrossFadeTime</fadetime>
-						<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
-						<visible>!String.IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
-					</control>
-					<control type="label">
-						<description>SUBTITLE LANGUAGE</description>
-						<posx>60</posx>
-						<posy>45</posy>
-						<width>345</width>
-						<height>38</height>
-						<aligny>center</aligny>
-						<font>Font_17A</font>
-						<label>$INFO[VideoPlayer.SubtitleLanguage]</label>
-						<textcolor>CCCCCCCC</textcolor>
-						<scroll>true</scroll>
-						<scrollout>false</scrollout>
-						<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
-					</control> -->
 				</control>
 				<!-- ##########          END AUDIO / LANGUAGE FLAGS          ########## -->
 				<!-- ##########          MINI DISC COLLECTION (RIGHT COLUMN) DISPLAY         ########## -->
@@ -954,7 +693,6 @@
 			<control type="group">
 				<visible>$EXP[HasDetailInfo]</visible>
 				<control type="grouplist"> <!-- high labels -->
-					<!-- <visible>Skin.HasSetting(nolanguageflags) | [String.IsEmpty(ListItem.Property(AudioLanguage.1)) + ![Window.IsVisible(videoplaylist) + Player.HasVideo]] | [String.IsEmpty(VideoPlayer.AudioLanguage) + Window.IsVisible(videoplaylist) + Player.HasVideo]</visible> -->
 					<visible>![Control.IsVisible(7013) | Control.IsVisible(7014)]</visible>
 					<posx>1428</posx>
 					<posy>600</posy>
@@ -1026,7 +764,6 @@
 					</control>
 				</control>
 				<control type="grouplist"> <!-- low labels -->
-					<!-- <visible>!Skin.HasSetting(nolanguageflags) + [[!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + ![Window.IsVisible(videoplaylist) + Player.HasVideo]] | [!String.IsEmpty(VideoPlayer.AudioLanguage) + Window.IsVisible(videoplaylist) + Player.HasVideo]]</visible> -->
 					<visible>[Control.IsVisible(7013) | Control.IsVisible(7014)]</visible>
 					<posx>1428</posx>
 					<posy>682</posy>
@@ -1098,7 +835,6 @@
 					</control>
 				</control>
 				<control type="grouplist"> <!-- high values -->
-					<!-- <visible>Skin.HasSetting(nolanguageflags) | [String.IsEmpty(ListItem.Property(AudioLanguage.1)) + ![Window.IsVisible(videoplaylist) + Player.HasVideo]] | [String.IsEmpty(VideoPlayer.AudioLanguage) + Window.IsVisible(videoplaylist) + Player.HasVideo]</visible> -->
 					<visible>![Control.IsVisible(7013) | Control.IsVisible(7014)]</visible>
 					<posx>1579</posx>
 					<posy>600</posy>
@@ -1163,7 +899,6 @@
 					</control>
 				</control>
 				<control type="grouplist"> <!-- low values -->
-					<!-- <visible>!Skin.HasSetting(nolanguageflags) + [[!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + ![Window.IsVisible(videoplaylist) + Player.HasVideo]] | [!String.IsEmpty(VideoPlayer.AudioLanguage) + Window.IsVisible(videoplaylist) + Player.HasVideo]]</visible> -->
 					<visible>[Control.IsVisible(7013) | Control.IsVisible(7014)]</visible>
 					<posx>1579</posx>
 					<posy>682</posy>
@@ -1227,12 +962,6 @@
 						<label>$VAR[value_ground12_value]</label>
 					</control>
 				</control>
-				<!-- <include content="MidList_Data_Labels">
-					<param name="Label_Posy" value="$VAR[MidList_Data_Posy]"/>
-				</include>
-				<include content="MidList_Data_Values">
-					<param name="Value_Posy" value="$VAR[MidList_Data_Posy]"/>
-				</include> -->
 			</control>
 			<!-- ##########        END ITEM INFORMATION LIST (RIGHT COLUMN ALWAYS VISIBLE)        ########## -->
 			<!-- ##########          MAIN ITEM LIST          ########## -->
@@ -1252,7 +981,6 @@
 				<orientation>vertical</orientation>
 				<scrolltime>450</scrolltime>
 				<preloaditems>2</preloaditems>
-				<!-- <animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 				<itemlayout condition="Container.Content(artists) + [Window.IsActive(musicplaylist) | Window.IsActive(music)] + !Skin.HasSetting(slimmidlistmusic)" height="45">
 					<description>ARTIST LIST ITEMS WITH NO SLIM LIST</description>
 					<control type="image">
@@ -1325,7 +1053,6 @@
 						<height>20</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<!-- <visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible> -->
 						<visible>$EXP[HasUserRating]</visible>
 					</control>
 					<control type="image">
@@ -1761,7 +1488,6 @@
 						<posy>-225</posy>
 						<width>375</width>
 						<height>375</height>
-						<!-- <texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(poster)]</texture> -->
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>

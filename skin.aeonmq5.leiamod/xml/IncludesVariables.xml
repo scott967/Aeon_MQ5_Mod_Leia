@@ -1835,7 +1835,6 @@
 	</variable>
 	<variable name="value_codecdefault0">
 		<value condition="!String.Contains(skin.string(codec_default),default)">$VAR[value_codecdefault]</value>
-		<!-- <value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value> -->
 		<value condition="String.Contains(skin.string(codec_default),default)">$INFO[ListItem(0).VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_codecdefault1">
@@ -3095,10 +3094,8 @@
 		<value condition="Container.Content(episodes) + String.Contains(skin.string(episodesfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
 		<value condition="Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + Integer.IsGreater(Container(5022).NumItems,0)">$INFO[ListItem.Path,,../extrafanart/]</value>
 		<value condition="Container.Content(episodes) + String.Contains(skin.string(episodesfanart),seasons)">$INFO[ListItem.Path,,fanart.jpg]</value>
-		<!-- <value condition="Container.Content(episodes) + String.Contains(skin.string(tvshowsfanart),extra) + Integer.IsGreater(Container(5020).NumItems,0)">$INFO[ListItem.Path]extrafanart/</value> -->
 		<value condition="Container.Content(sets) + String.Contains(skin.string(setsfanart),fallback)">$INFO[Skin.String(CustomFallbackSetsBG)]</value>
 		<value condition="Container.Content(sets) + String.Contains(skin.string(setsfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
-		<!-- <value condition="Container.Content(sets) + String.Contains(skin.string(setsfanart),extra) + Integer.IsGreater(Container(5020).NumItems,0)">$INFO[ListItem.Path]extrafanart/</value> -->
 	</variable>
 	<variable name="value_defaultvideofanart">
 		<value condition="String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(genres)">special://skin/backgrounds/movies.jpg</value>
@@ -3756,7 +3753,6 @@
 		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(movies)">$INFO[VideoPlayer.Country]</value> <!-- movie playing country -->
 		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Premiered]</value> <!-- episode playing premiered -->
 		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_track]</value>
-		<!-- <value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Artist]</value> -->
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Style)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Theme)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist)">$INFO[ListItem.Country]$INFO[Window(home).Property(Set.Movies.Country)]</value>
@@ -3786,7 +3782,6 @@
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Type)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.Genre]$INFO[Window(home).Property(Set.Movies.Genre)]</value>
-		<!-- <value condition="Window.IsVisible(VideoPlaylist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Genre]</value> -->
 		<value condition="String.IsEqual(ListItem.DBType,set)">$INFO[Window(home).Property(Set.Movies.Genre)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.director]</value>
 		<value condition="Window.IsActive(programs) + !Container.Content(Addons)">$INFO[ListItem.Genre]</value>
@@ -3805,7 +3800,6 @@
 		<value condition="[Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.album]</value>
 		<value condition="Window.IsVisible(VideoPlaylist) + Player.HasVideo + [VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">$INFO[VideoPlayer.Studio]</value>
 		<value condition="String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)">$VAR[value_songinfo_title]</value>
-		<!-- <value condition="Window.IsVisible(VideoPlaylist) + !String.IsEmpty(ListItem.Artist) + MusicPartyMode.Enabled">$INFO[Container.ListItemAbsolute(0).Album]</value> -->
 		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Property(Artist_Mood)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album)">$INFO[ListItem.Property(Album_Mood)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) | Window.IsVisible(VideoPlaylist) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)">$INFO[ListItem.Studio]$INFO[Window(home).Property(Set.Movies.Studio)]</value>
@@ -3860,7 +3854,6 @@
 	<variable name="value_ground16_value">
 		<value condition="Container.content(musicvideos) | String.IsEqual(ListItem.DBType,musicvideo)">$INFO[ListItem.Duration]</value>
 		<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(sets)]">$INFO[ListItem.Duration(mins),, $LOCALIZE[31961]] $INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[31961]]</value>
-		<!-- <value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(sets)] + String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration]$INFO[Window(home).Property(Set.Movies.Runtime)]</value> -->
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[Window(home).Property(NextAired.Status)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Formed)]$INFO[ListItem.Property(Artist_Disbanded), / ]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Label)]</value>
@@ -3875,11 +3868,9 @@
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Year]</value>  <!-- now playing song in playlist-->
 		<value condition="Window.IsVisible(musicplaylist) + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Year]</value>  <!-- now playing song or MV n playlist-->
 		<value condition="Window.IsVisible(videoplaylist) + Player.HasVideo">$INFO[VideoPlayer.Year]</value>
-		<!-- <value condition="!ListItem.IsCollection + !String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.Year]</value> -->
 		<value condition="ListItem.IsCollection">$INFO[Window(home).Property(Set.Movies.Years)]</value>	
 		<value condition="Window.IsVisible(videos) + [String.IsEqual(ListItem.DBtype,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">$INFO[ListItem.Premiered]</value>
 		<value condition="!ListItem.IsCollection">$INFO[ListItem.Year]</value>
-		<!-- <value condition="String.IsEqual(ListItem.DBType,song) + [Window.IsVisible(music) | [Window.IsVisible(musicplaylist) + !Player.HasAudio]]">$INFO[ListItem.Year]</value> -->		
 	</variable>
 	<variable name="value_midlist_album">
 		<value condition="[Window.IsVisible(videoplaylist) | Window.IsVisible(musicplaylist)] + Player.HasVideo + VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Album]</value>
@@ -4561,17 +4552,6 @@
 		<value condition="[Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos)] + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(songinformation)]">$INFO[ListItem.Label]</value>
 		<value condition="String.IsEqual(Container.FolderName,Music Videos) | String.IsEqual(Container.FolderName,Roles)">$INFO[Container.FolderName]</value>
 	</variable>
-	<!-- 	<variable name="value_music_role">
-		<value conditon="String.Contains(Container.FolderPath,=composer)">$LOCALIZE[29989]</value>
-		<value conditon="String.Contains(Container.FolderPath,=conductor)">$LOCALIZE[29990]</value>
-		<value conditon="String.Contains(Container.FolderPath,=orchestra)">$LOCALIZE[29993]</value>
-		<value conditon="String.Contains(Container.FolderPath,=lyricist)">$LOCALIZE[29992]</value>
-		<value conditon="String.Contains(Container.FolderPath,=arranger)">$LOCALIZE[29988]</value>
-		<value conditon="String.Contains(Container.FolderPath,=djmixer)">$LOCALIZE[29991]</value>
-		<value conditon="String.Contains(Container.FolderPath,=remixer)">$LOCALIZE[38036]</value>
-		<value conditon="String.Contains(Container.FolderPath,=-1000)">All contributors</value>
-		<value>$LOCALIZE[29994]</value>
-	</variable> -->
 	<variable name="value_music_subtitle">
 		<value condition="String.Contains(ListItem.Label,all albums) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[Container.FolderName]</value>
 		<value condition="String.IsEqual(ListItem.DBType,album) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(musicinformation)]">$INFO[ListItem.AlbumArtist]</value>
@@ -4625,17 +4605,14 @@
 	<variable name="value_songinfo_duration">
 		<value condition="Window.IsActive(visualisation) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 		<value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)]">$INFO[ListItem.Duration]</value>
-		<!-- <value condition="[!Window.IsActive(musicplaylist) | Window.IsVisible(songinformation)] + !String.Contains(ListItem.Duration,min)">$INFO[ListItem.Duration]</value> -->
 		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist)">$INFO[ListItem.Duration]</value>
-		<!-- <value condition="!String.Contains(ListItem.Duration,min) + Window.IsActive(musicplaylist)">$INFO[ListItem.Duration] $LOCALIZE[31961]</value> -->
 	</variable>
 	<variable name="value_songplaying_duration">
 		<value condition="Window.IsActive(musicplaylist) + Player.HasAudio">$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist) + !String.IsEmpty(VideoPlayer.Artist)">$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</value>
 		<value condition="Window.IsActive(musicplaylist)">$INFO[ListItem.Duration]</value>
-		<!-- <value condition="!String.Contains(ListItem.Duration,min) + Window.IsActive(musicplaylist)">$INFO[ListItem.Duration] $LOCALIZE[31961]</value> -->
 	</variable>
 	<variable name="value_songinfo_plot">
 		<value condition="Window.IsActive(visualisation) + String.Contains(MusicPlayer.Genre,classical)">$INFO[MusicPlayer.Comment]</value>

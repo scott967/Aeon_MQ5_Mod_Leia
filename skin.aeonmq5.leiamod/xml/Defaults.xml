@@ -153,7 +153,6 @@
 		<texturedownfocus></texturedownfocus>
 		<image></image>
 		<textcolor>FFFFFAF0</textcolor>
-		<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 	</default>
 	<default type="spincontrol">
 		<pulseonselect>false</pulseonselect>

@@ -109,12 +109,10 @@
 				</control>
 				<control type="button" id="6">
 					<!-- lyrics set script if script is "none" turn off lyrics-->
-					<!-- <radioposx>894</radioposx> -->
 					<label>$LOCALIZE[31725]  $INFO[System.AddonTitle($INFO[Skin.String(LyricScript_Path)]),($LOCALIZE[31843] - ,)]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
 					<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
-					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Skin.SetBool(nolyrics_on)</onclick>
-					<!-- <enable>![Skin.HasSetting(nolyrics_on) | Skin.HasSetting(novisfurniture)]</enable> -->
+					<onclick condition="String.IsEmpty(Skin.String(LyricScript_Path))">Skin.SetBool(nolyrics_on)</onclick>>
 				</control>
 				<control type="radiobutton" id="7">
 					<!-- next tracks -->
@@ -225,25 +223,19 @@
 					<textcolor>$VAR[value_headercolor]</textcolor>
 				</control>
 				<control type="button" id="19">
-					<!-- select vis -->
-					<!-- <label>$LOCALIZE[457]</label> -->
+					<!-- select vis -->>
 					<label>$LOCALIZE[12006] ($LOCALIZE[31843] - $INFO[Visualisation.Name])</label>
-					<!-- <onclick>ActivateWindowAndFocus(musicsettings, -99,0, -72,0)</onclick> -->
-					<!-- 	<onclick>ActivateWindow(musicosd)</onclick> -->
 					<onclick>Control.Message(500,click,120)</onclick>
 					<enable>String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),vis)</enable>
 				</control>
 				<control type="button" id="20">
 					<!-- preset -->
-					<!-- <radioposx>894</radioposx> -->
-					<!-- <label>$LOCALIZE[13388]</label> -->
 					<label>$LOCALIZE[10122]</label>
 					<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 					<enable>String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),vis)</enable>
 				</control>
 				<control type="button" id="21">
 					<!-- presetsettings -->
-					<!-- <radioposx>894</radioposx> -->
 					<label>31261</label>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 					<enable>String.IsEqual(skin.string(vis_bg),fanartmix) | String.IsEqual(skin.string(vis_bg),slideshowmix) | String.IsEqual(skin.string(vis_bg),vis)</enable>

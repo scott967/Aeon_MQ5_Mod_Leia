@@ -41,7 +41,6 @@
 		<scrolltime>400</scrolltime>
 		<preloaditems>2</preloaditems>
 		<animation effect="slide" start="0,0" end="0,-48" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
-		<!-- <animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 		<visible>![Container.Content(sets) | Container.Content(years) | Container.Content(genres) | Container.Content(actors)]</visible>
 		<itemlayout width="360" height="450">
 			<control type="image">

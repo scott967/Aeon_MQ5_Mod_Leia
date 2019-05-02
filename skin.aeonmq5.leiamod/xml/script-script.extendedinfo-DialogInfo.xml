@@ -17,14 +17,6 @@
 			</control>
 		<control type="group">
 			<!-- left side -->
-			<!-- <animation effect="slide" start="-1500,0" end="0,0" delay="600" time="900" tween="sine">WindowOpen</animation>
-			<animation effect="slide" end="-1500,0" time="900" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation> -->
-			<!-- <control type="image">
-				<width>729</width>
-				<height>1080</height>
-				<texture>info/movieinfogradient.png</texture>
-			</control> -->
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -51,26 +43,6 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
 		<control type="group">
-			<!-- <animation effect="slide" start="5042,0" end="0,0" time="1500" tween="sine">WindowOpen</animation>
-			<animation effect="slide" end="1242,0" time="450" tween="sine" condition="Control.HasFocus(132) | ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="0,1080" time="450" tween="sine" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">WindowClose</animation>
-			<animation effect="slide" end="-749,0" time="450" tween="sine" easing="inout" condition="!Control.HasFocus(132) + !ControlGroup(5000).HasFocus">Conditional</animation -->>
-			<!-- right side -->
-			<!-- <control type="image"> -->
-				<!-- <left>729</left> -->
-				<!-- <width>1950</width> -->
-				<!-- <height>1080</height> -->
-				<!-- <aspectratio align="center">scale</aspectratio> -->
-				<!-- <texture fallback="common/black.png">$INFO[Window.Property(ImageFilter)]</texture> -->
-			<!-- </control> -->
-			<!-- <control type="image">
-				<left>729</left>
-				<width>1950</width>
-				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
-				<height>1080</height>
-				<aspectratio align="center">scale</aspectratio>
-				<texture colordiffuse="$INFO[Window(home).Property(ImageColor)]">diffuseoverlay.jpg</texture>
-			</control> -->
 			<control type="group" id="33000">
 				<left>825</left>
 				<top>22</top>
@@ -116,14 +88,6 @@
 					<width>2000</width>
 					<itemgap>15</itemgap>
 					<height>1000</height>
-					<!-- <animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Down))" reversible="false">
-						<effect type="slide" end="0,20" time="60" tween="sine" />
-						<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
-					</animation>
-					<animation type="Conditional" condition="!String.IsEmpty(Window.Property(Bounce.Up))" reversible="false">
-						<effect type="slide" end="0,-20" time="60" tween="sine" />
-						<effect type="slide" end="0,20" time="180" tween="sine" delay="80" />
-					</animation> -->
 					<scrolltime tween="sine">400</scrolltime>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
@@ -272,7 +236,7 @@
 						<control type="panel" id="150">
 							<top>40</top>
 							<left>-45</left>
-							<width>1180</width><!-- was 1950 -->
+							<width>1180</width>
 							<height>600</height>
 							<onleft>150</onleft>
 							<onright>150</onright>
@@ -300,14 +264,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -379,14 +335,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -487,14 +435,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -566,14 +506,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -673,14 +605,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -752,14 +676,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -860,14 +776,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-										<!-- <control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>
@@ -939,14 +847,6 @@
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
-									<!-- 	<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control> -->
 										<control type="image">
 											<top>310</top>
 											<width>83</width>

@@ -150,8 +150,6 @@
 				<!-- custom views programs -->
 				<onclick condition="Window.IsActive(games)">ActivateWindow(1105)</onclick>
 				<!-- custom views games -->
-				<ondown>SetFocus(51)</ondown>
-				<!-- <visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible> -->
 				<visible>![Window.IsActive(pictures)]</visible>
 			</control>
 			<control type="label">
@@ -165,7 +163,6 @@
 				<label>31141</label>
 				<textcolor>FFFFFAF0</textcolor>
 				<include>Animation_Fade</include>
-				<!-- <visible>Control.HasFocus(9940) + ![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible> -->
 				<visible>Control.HasFocus(9940) + ![Window.IsActive(pictures)]</visible>
 			</control>
 			<control type="label">
@@ -1659,13 +1656,6 @@
 					<visible>Container.Content(sets) + String.Contains(skin.string(setsfanart),fallback)</visible>
 				</control>
 				<!-- Extra Fanart Sets -->
-				<!--<control type="radiobutton" id="9437">
-	<include>TopMenuRadioButton</include>
-	<label>31498</label>
-	<onclick>Skin.SetString(setsfanart,extra)</onclick>
-	<selected>String.Contains(skin.string(setsfanart),extra)</selected>
-	<visible>Container.Content(sets)</visible>
-	</control>-->
 				<!-- Genero Fanart -->
 				<control type="radiobutton" id="9451">
 					<!-- Curtains -->
@@ -2213,7 +2203,6 @@
 				<control type="radiobutton" id="9365">
 					<include>TopMenuRadioButton</include>
 					<!--  Use Artist info folder was SHOW ARTIST/ALBUM ART -->
-					<!-- <label>31557</label> -->
 					<label>$LOCALIZE[21480] $LOCALIZE[20223]</label>
 					<onclick>Skin.ToggleSetting(musiclogo)</onclick>
 					<selected>Skin.HasSetting(musiclogo)</selected>

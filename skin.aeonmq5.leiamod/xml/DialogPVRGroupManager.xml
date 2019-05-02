@@ -449,7 +449,6 @@
 					<!-- OK -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
-					<!-- <onclick>PreviousMenu</onclick>  -->
 					<label>186</label>
 				</control>
 				<control type="button" id="5">

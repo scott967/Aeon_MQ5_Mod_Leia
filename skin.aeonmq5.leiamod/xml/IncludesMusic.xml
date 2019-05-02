@@ -11,7 +11,6 @@
 		<menucontrol>9900</menucontrol>
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 		<onunload>ClearProperty(mv_artist,music)</onunload>
-		<!-- <allowoverlay>no</allowoverlay> -->
 		<views>51,54,55,56,58,59,62,70,71</views>
 		<controls>
 		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
@@ -52,7 +51,6 @@
 				<!-- Multi Fanart -->
 				<include>WindowBG</include>
 				<imagepath background="true">$VAR[value_musicfanart]</imagepath>
-				<!-- <imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_musicfanart]</imagepath> -->
 				<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
 			</control>
 			<control type="image">
@@ -61,18 +59,6 @@
 				<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
 				<visible>Container.Content(genres) | Container.Content(roles)</visible>
 			</control>
-			<!-- <control type="multiimage">  --><!-- set if 5032 has files -->
-				<!-- Artist Info Extra Fanart Artist/Album -->
-				<!-- <include>WindowBG</include>
-				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-				<visible>[String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)] + String.Contains(skin.string(musicfanart),extra) + Skin.HasSetting(musiclogo) + Integer.IsGreater(Container(5032).NumItems,0)</visible>
-			</control> -->
-			<!-- <control type="multiimage"> -->  <!-- set if 5033 has files -->
-				<!-- Extra Fanart Musicvideo -->
-				<!-- <include>WindowBG</include>
-				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-				<visible>String.IsEqual(ListItem.DBType,musicvideo) + String.Contains(skin.string(musicfanart),extra) + Integer.IsGreater(Container(5033).NumItems,0)</visible>
-			</control> -->
 			<control type="multiimage">  <!-- set if 5034 has files -->
 				<!-- Extra Fanart Song -->
 				<include>WindowBG</include>
@@ -125,7 +111,6 @@
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
 					<visible>![[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(70) | Control.IsVisible(71)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922)]</visible>
-					<!-- <visible>![Control.IsVisible(51) | [Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(1108)]</visible> -->
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -140,13 +125,11 @@
 						<posy>27</posy>
 						<width>1650</width>
 						<height>60</height>
-						<!-- <font>Font_40</font> -->
 						<font>Font_40A</font>
 						<label>$VAR[value_music_title]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<scroll>true</scroll>
 						<scrollout>false</scrollout>
-						<!-- <visible>!Container.Content(albums)</visible> -->
 					</control>
 					<control type="label">
 						<posx>45</posx>
@@ -253,7 +236,6 @@
 									<aligny>center</aligny>
 									<font>Font_20B</font>
 									<textcolor>$VAR[value_flagscolor]</textcolor>
-									<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 									<label>$VAR[value_drive]</label>
 								</control>
 								<control type="image">
@@ -272,7 +254,6 @@
 								<font>Font_20B</font>
 								<label>$INFO[ListItem.Genre]</label>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<scroll>true</scroll>
 							</control>
 							<control type="label">
@@ -286,7 +267,6 @@
 								<font>Font_20B</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<scroll>true</scroll>
 								<visible>String.StartsWith(Container.FolderName,Role)</visible>
 							</control>
@@ -301,7 +281,6 @@
 								<font>Font_20B</font>
 								<label>$VAR[value_music_roles]</label>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<scroll>true</scroll>
 								<visible>String.Contains(Container.FolderPath,role=) | String.Contains(Container.FolderPath,roleid=-1000)</visible>
 							</control>
@@ -319,7 +298,6 @@
 							<posy>968</posy>
 							<orientation>horizontal</orientation>
 							<itemgap>26</itemgap>
-							<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 							<control type="image">
 								<!-- studio -->
 								<include>FlagImage</include>
@@ -358,7 +336,6 @@
 									<aligny>center</aligny>
 									<font>Font_20B</font>
 									<textcolor>$VAR[value_flagscolor]</textcolor>
-									<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 									<label fallback="NR">$INFO[ListItem.Rating]</label>
 								</control>
 								<control type="image">
@@ -434,7 +411,6 @@
 									<aligny>center</aligny>
 									<font>Font_20B</font>
 									<textcolor>$VAR[value_flagscolor]</textcolor>
-									<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 									<label>$VAR[value_drive]</label>
 								</control>
 								<control type="image">
@@ -469,7 +445,6 @@
 									<aligny>center</aligny>
 									<font>Font_20B</font>
 									<textcolor>$VAR[value_flagscolor]</textcolor>
-									<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 									<label>$INFO[ListItem.PercentPlayed]%</label>
 								</control>
 							</control>
@@ -523,7 +498,7 @@
 				<control type="image">
 					<!-- Logo -->
 					<posx>1402</posx>
-					<posy>489</posy> <!-- 962 -->
+					<posy>489</posy>
 					<width>300</width>
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
@@ -543,12 +518,6 @@
 		</controls>
 	</include>
 	<include name="MusicPLWindow">
-		<!-- <defaultcontrol always="true">51</defaultcontrol> -->
-		<!-- <menucontrol>9000</menucontrol> -->
-		<!-- <onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload> -->
-		<!-- <allowoverlay>no</allowoverlay> -->
-		<!-- 	<views>51,54,55,56,58,59,62,70</views> -->
-		<!-- <controls> -->
 		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
 			<posx>-500</posx>
 			<posy>-500</posy>
@@ -595,16 +564,6 @@
 			<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
 			<visible>Container.Content(genres) | Container.Content(roles)</visible>
 		</control>
-		<!-- <control type="multiimage" id="5032">
-			<include>WindowBG</include>
-			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-			<visible>[[Container.Content(artists) | Container.Content(albums)] | [String.IsEmpty(Control.GetLabel(5033)) + [Container.Content(songs) | Container.Content(playlists)]]] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control>
-		<control type="multiimage" id="5033">
-			<include>WindowBG</include>
-			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-			<visible>[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control> -->
 		<control type="image" id="9924">
 			<!-- record label control -->
 			<include>InvisibleButton</include>
@@ -671,7 +630,6 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<scroll>true</scroll>
 					<scrollout>false</scrollout>
-					<!-- <visible>!Container.Content(albums)</visible> -->
 				</control>
 				<control type="label">
 					<posx>45</posx>
@@ -778,7 +736,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label>$VAR[value_drive]</label>
 							</control>
 							<control type="image">
@@ -797,7 +754,6 @@
 							<font>Font_20B</font>
 							<label>$INFO[ListItem.Genre]</label>
 							<textcolor>$VAR[value_flagscolor]</textcolor>
-							<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -811,7 +767,6 @@
 							<font>Font_20B</font>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[value_flagscolor]</textcolor>
-							<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 							<scroll>true</scroll>
 							<visible>String.IsEqual(Container.FolderName,Roles)</visible>
 						</control>
@@ -829,7 +784,6 @@
 						<posy>968</posy>
 						<orientation>horizontal</orientation>
 						<itemgap>26</itemgap>
-						<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 						<control type="image">
 							<!-- studio -->
 							<include>FlagImage</include>
@@ -868,7 +822,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label fallback="NR">$INFO[ListItem.Rating]</label>
 							</control>
 							<control type="image">
@@ -944,7 +897,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label>$VAR[value_drive]</label>
 							</control>
 							<control type="image">
@@ -979,7 +931,6 @@
 								<aligny>center</aligny>
 								<font>Font_20B</font>
 								<textcolor>$VAR[value_flagscolor]</textcolor>
-								<!-- <fadetime>FanartCrossFadeTime</fadetime> -->
 								<label>$INFO[ListItem.PercentPlayed]%</label>
 							</control>
 						</control>
@@ -1047,6 +998,5 @@
 			<include>TopMenu_Audio</include>
 			<include>BGBlack</include>
 		</control>
-		<!-- </controls> -->
 	</include>
 </includes>
