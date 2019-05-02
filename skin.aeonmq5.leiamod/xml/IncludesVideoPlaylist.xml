@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ5 Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0/10.4.0/10.6.1 -->
+<!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2 -->
 <includes>
 	<include name="VideoPLWindow">
 		<control type="image">
@@ -144,7 +144,8 @@
 				<include>AudioandSub</include>
 			</control>
 			<control type="group">
-				<!-- Video Flags -->
+				<!-- Video Flags and views -->
+				<posy>45</posy>
 				<include>Animation_HiddenView</include>
 				<control type="group">
 					<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
@@ -304,6 +305,10 @@
 				<!-- Midlist Mod -->
 			</control>
 			<!-- Furniture -->
+			<control type="group">
+				<posy>45</posy>
+				<include>ContainerViewPage</include>
+			</control>
 			<include>TouchScreen</include>
 			<include>ScrollLabel</include>
 			<include condition="Skin.HasSetting(vplaylistinfobar)">MultiData</include>
