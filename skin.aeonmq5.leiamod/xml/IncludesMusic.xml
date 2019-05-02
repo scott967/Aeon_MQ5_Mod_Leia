@@ -89,7 +89,7 @@
 					<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 					<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-					<visible>![[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(70) | Control.IsVisible(71)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(1108)]</visible>
+					<visible>![[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(70) | Control.IsVisible(71)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922)]</visible>
 					<!-- <visible>![Control.IsVisible(51) | [Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(1108)]</visible> -->
 					<control type="image">
 						<posx>0</posx>
@@ -284,7 +284,7 @@
 							<posy>968</posy>
 							<orientation>horizontal</orientation>
 							<itemgap>26</itemgap>
-							<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation>
+							<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 							<control type="image">
 								<!-- studio -->
 								<include>FlagImage</include>
@@ -590,7 +590,7 @@
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">WindowClose</animation>
 				<animation effect="slide" time="400" start="0,0" end="0,-375" easing="inout" tween="cubic">Hidden</animation>
-				<visible>![Control.IsVisible(51) | [Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922) | Window.IsVisible(1108)]</visible>
+				<visible>![Control.IsVisible(51) | [Control.IsVisible(55) | Control.IsVisible(70)] + [Container.Content(artists) | Container.Content(songs)] | ControlGroup(9000).HasFocus | Control.HasFocus(9920) | Control.IsVisible(9922)]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -768,7 +768,7 @@
 						<posy>968</posy>
 						<orientation>horizontal</orientation>
 						<itemgap>26</itemgap>
-						<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation>
+						<!-- <animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(1108)">Conditional</animation> -->
 						<control type="image">
 							<!-- studio -->
 							<include>FlagImage</include>

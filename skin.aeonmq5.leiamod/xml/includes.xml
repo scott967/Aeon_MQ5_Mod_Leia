@@ -2238,7 +2238,7 @@
 			<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">Hidden</animation>
 			<animation effect="slide" end="0,-105" time="500" tween="sine" easing="out" condition="Control.IsVisible(79)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-105" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(608) | ControlGroup(9000).HasFocus | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(1108) | Window.IsVisible(641) | Window.IsVisible(1103)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-105" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(608) | ControlGroup(9000).HasFocus | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(641) | Window.IsVisible(1103)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-105" time="50" tween="cubic" easing="in" condition="Control.HasFocus(160)">Conditional</animation>
 			<control type="image">
 				<posx>0</posx>
@@ -2270,7 +2270,7 @@
 			<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 			<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">Hidden</animation>
 			<animation effect="slide" end="0,-105" time="500" tween="sine" easing="out" condition="Control.IsVisible(79)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-105" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(608) | ControlGroup(9000).HasFocus | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(1108) | Window.IsVisible(641) | Window.IsVisible(1103) | [[Window.IsActive(tvchannels) | Window.IsActive(radiochannels)] + [Player.HasMedia + System.IdleTime(8)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-105" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(608) | ControlGroup(9000).HasFocus | Window.IsVisible(volumebar) | Window.IsVisible(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Window.IsVisible(641) | Window.IsVisible(1103) | [[Window.IsActive(tvchannels) | Window.IsActive(radiochannels)] + [Player.HasMedia + System.IdleTime(8)]]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-105" time="50" tween="cubic" easing="in" condition="Control.HasFocus(160)">Conditional</animation>
 			<control type="image">
 				<posx>1170</posx>

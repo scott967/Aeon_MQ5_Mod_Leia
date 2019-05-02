@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.0 / 6.1.3  -->
 <!-- Krypton 9.2.1 window ids -->
-<!-- Leaimod 10.2.3 -->
-<window id="637" type="dialog">
+<!-- Leaimod 10.2.3/10.6.2 -->
+<window id="1108" type="dialog">
 	<!-- safe id was 621 -->
 	<defaultcontrol></defaultcontrol>
 	<onload condition="String.Contains(skin.string(gamevideo_seconds),0)">SetFocus(9061)</onload>
@@ -20,49 +20,49 @@
 				<width>681</width>
 				<height max="1005">auto</height>
 				<itemgap>0</itemgap>
-				<onleft>Dialog.Close(637)</onleft>
-				<onright>Dialog.Close(637)</onright>
+				<onleft>Dialog.Close(1108)</onleft>
+				<onright>Dialog.Close(1108)</onright>
 				<control type="radiobutton" id="9061">
 					<!-- 0s -->
 					<include>DialogContext_Button</include>
 					<label>31692</label>
 					<onclick>Skin.SetString(gamevideo_seconds,0)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 				<control type="radiobutton" id="9062">
 					<!-- 1s -->
 					<include>DialogContext_Button</include>
 					<label>31465</label>
 					<onclick>Skin.SetString(gamevideo_seconds,1)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 				<control type="radiobutton" id="9063">
 					<!-- 2s -->
 					<include>DialogContext_Button</include>
 					<label>31466</label>
 					<onclick>Skin.SetString(gamevideo_seconds,2)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 				<control type="radiobutton" id="9064">
 					<!-- 3s -->
 					<include>DialogContext_Button</include>
 					<label>31467</label>
 					<onclick>Skin.SetString(gamevideo_seconds,3)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 				<control type="radiobutton" id="9065">
 					<!-- 4s -->
 					<include>DialogContext_Button</include>
 					<label>31468</label>
 					<onclick>Skin.SetString(gamevideo_seconds,4)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 				<control type="radiobutton" id="9066">
 					<!-- 5s -->
 					<include>DialogContext_Button</include>
 					<label>31469</label>
 					<onclick>Skin.SetString(gamevideo_seconds,5)</onclick>
-					<onclick>Dialog.Close(637)</onclick>
+					<onclick>Dialog.Close(1108)</onclick>
 				</control>
 			</control>
 		</control>
