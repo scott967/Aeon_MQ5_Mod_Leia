@@ -2249,6 +2249,36 @@
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<include>Animation_HomeGlass</include>
 			</control>
+			<control type="grouplist">
+				<posx>40</posx>
+				<posy>5</posy>
+				<width>750</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<visible>Window.IsVisible(musicplaylist) | Window.IsVisible(videoplaylist) | Window.IsVisible(music) | Window.IsVisible(videos)</visible>
+				<control type="image">
+					<width>30</width>
+					<height>30</height>
+					<texture>osd_menu_random_on_square.png</texture>
+					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+					<visible>Playlist.IsRandom</visible>
+				</control>
+				<control type="image">
+					<width>30</width>
+					<height>30</height>
+					<texture>osd_menu_repeat_one_square.png</texture>
+					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+					<visible>Playlist.IsRepeatOne</visible>
+				</control>
+				<control type="image">
+					<width>30</width>
+					<height>30</height>
+					<texture>osd_menu_repeat_square.png</texture>
+					<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+					<visible>Playlist.IsRepeat</visible>
+				</control>
+			</control>
 			<control type="label">
 				<posx>705</posx>
 				<posy>3</posy>
