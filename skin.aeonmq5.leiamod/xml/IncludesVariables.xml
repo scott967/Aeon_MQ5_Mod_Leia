@@ -2834,9 +2834,10 @@
 		<value condition="Player.HasAudio + !Control.HasFocus(603)">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,[COLOR=80FFFFFF] | [/COLOR]]$INFO[MusicPlayer.Year,[COLOR=80FFFFFF] | [/COLOR]]</value>
 		<value condition="Player.HasAudio + Control.HasFocus(603)">$INFO[Container(603).ListItem.Label2]</value>
 	</variable>
-	<variable name="value_playerating">
+	<variable name="value_playerrating">
 		<value condition="Player.HasVideo">$INFO[VideoPlayer.Rating]</value>
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Rating]</value>
+		<value condition="Player.HasAudio + !Control(603).HasFocus">$INFO[MusicPlayer.UserRating, | ]</value>
+		<value condition="Player.HasAudio + Control(603).HasFocus">$INFO[Container(603).ListItem.Property(UserRating), | ]</value>
 	</variable>
 	<variable name="value_playerduration">
 		<value condition="Player.HasVideo + !Player.Paused">$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</value>
