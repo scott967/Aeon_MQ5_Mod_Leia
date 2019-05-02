@@ -2,7 +2,7 @@
 <!-- Aeon MQ 5 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.4 -->
-<!-- Leia 10.2.6/10.6.0 -->
+<!-- Leia 10.2.6/10.6.0/10.6.2 -->
 <window id="1106" type="dialog">
 	<!-- was safe id 627  -->
 	<defaultcontrol always="true">9030</defaultcontrol>
@@ -123,6 +123,13 @@
 					<onclick>Skin.ToggleSetting(nonexttracks_on)</onclick>
 					<selected>!Skin.HasSetting(nonexttracks_on)</selected>
 					<enable>![Skin.HasSetting(novisfurniture)  | String.IsEqual(skin.string(vis_layout),karaoke)]</enable>
+				</control>
+				<control type="radiobutton" id="24">
+					<!-- show artist sortname in fadelabel -->
+					<radioposx>1341</radioposx>
+					<label>$LOCALIZE[557] $LOCALIZE[39027]</label>
+					<onclick>Skin.ToggleSetting(viz_artist_sortname)</onclick>
+					<selected>Skin.HasSetting(viz_artist_sortname)</selected>
 				</control>
 				<control type="label" id="8">
 					<!-- Backgrounds (options) -->
