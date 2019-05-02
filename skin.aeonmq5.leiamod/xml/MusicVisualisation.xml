@@ -249,6 +249,23 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<scroll>true</scroll>
+					<visible>!Skin.HasSetting(viz_artist_sortname) | String.IsEmpty(MusicPlayer.Property(Artist_Sortname)</visible>
+				</control>
+				<control type="fadelabel">
+					<posx>622</posx>
+					<posy>-50</posy> <!-- was -30 -->
+					<width>690</width>
+					<height>45</height>
+					<align>center</align>
+					<font>Font_32</font>
+					<textcolor>FFFFFAF0</textcolor>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<label>($INFO[MusicPlayer.Property(Artist_Sortname)])</label>
+					<pauseatend>10000</pauseatend>
+					<scroll>true</scroll>
+					<scrollout>false</scrollout>
+					<scrollspeed>25</scrollspeed>
+					<visible>Skin.HasSetting(viz_artist_sortname) + !String.IsEmpty(MusicPlayer.Property(Artist_Sortname)</visible>
 				</control>
 				<control type="fadelabel">
 					<posx>622</posx>
