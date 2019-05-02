@@ -309,7 +309,7 @@
 						<align>left</align>
 						<font>Font_18</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
-						<label>[UPPERCASE]$VAR[value_playerheader][/UPPERCASE]</label>
+						<label>[UPPERCASE]$VAR[value_playerheader][/UPPERCASE]$VAR[value_playerrating]</label>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
