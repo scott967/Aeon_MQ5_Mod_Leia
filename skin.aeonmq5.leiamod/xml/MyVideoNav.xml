@@ -18,7 +18,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)] + !ListItem.IsParentFolder</visible>
+			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)] + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
@@ -33,7 +33,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
@@ -48,7 +48,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + !ListItem.IsParentFolder</visible>
+			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
