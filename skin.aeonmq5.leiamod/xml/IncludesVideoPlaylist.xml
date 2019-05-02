@@ -11,6 +11,12 @@
 		</control>
 		<include>LiveBG</include>
 		<!-- video window on black -->
+		<control type="image">
+			<!-- Single Fanart -->
+			<include>WindowBG</include>
+			<texture background="true">$VAR[value_defaultvideofanart]</texture>
+			<visible>!Player.HasVideo</visible>
+		</control>
 		<control type="group">
 			<!-- default group -->
 			<include>Animation_Window</include>

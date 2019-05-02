@@ -2,12 +2,40 @@
 <!-- Aeon MQ 5 Helix 6.1.0 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0 -->
+<!-- Leia 10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.4.0/10.5.2/10.6.0/10.6.2 -->
 <window>
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow) + Player.HasAudio + !Window(Visualisation).Property(ArtistSlideshowRunning)">RunScript(script.artistslideshow)</onload>
 	<!-- <onload condition="Window.Is(musicinformation)">ClearProperty(script.metadata.actors.isactive)</onload> -->
 	<controls>
+	<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Skin.hasSetting(musiclogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
+		</control>
+		<control type="list" id="5033"> <!-- check if mv lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]extrafanart/]</content>
+		</control>
+		<control type="list" id="5034"> <!-- check if song lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
+		</control>
 		<control type="group">  			<!-- default group -->
 			<include>Animation_Window</include>
 			<animation effect="slide" start="0" end="-1920" time="400" tween="cubic" easing="inout" condition="String.IsEqual(Window(home).Property(extendedinfo_running),true)">Conditional</animation>
@@ -23,17 +51,23 @@
 				<include>WindowBG</include>
 				<texture background="true">$VAR[value_defaultmusicfanart]</texture>
 			</control>
-			<control type="multiimage" id="5032">
-				<!-- Extra Fanart Artist/Album -->
+			<control type="multiimage">
+				<!-- Artist Info Extra Fanart Artist/Album -->
 				<include>WindowBG</include>
 				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-				<visible>[String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+				<visible>[String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)] + String.Contains(skin.string(musicfanart),extra) + Skin.HasSetting(musiclogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
 			</control>
-			<control type="multiimage" id="5033">
-				<!-- Extra Fanart Song -->
+			<control type="multiimage">
+				<!-- Lib Extra Fanart Song -->
 				<include>WindowBG</include>
 				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-				<visible>[String.IsEqual(ListItem.DBType,song) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+				<visible>![Window.IsVisible(visualisation) + Window.IsVisible(songinformation)] + [String.IsEqual(ListItem.DBType,song) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+			</control>
+			<control type="multiimage">
+				<!-- Lib Extra Fanart Song for song info in visualisation -->
+				<include>WindowBG</include>
+				<imagepath background="true">$INFO[Player.FolderPath],,../extrafanart/</imagepath>
+				<visible>Window.IsVisible(visualisation) + Window.IsVisible(songinformation)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>

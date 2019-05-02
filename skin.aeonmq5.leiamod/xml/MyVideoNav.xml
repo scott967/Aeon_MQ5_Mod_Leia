@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 25/9.2.2/9.2.3 -->
-<!-- Leia 10.3.0/10.4.0/10.6.1 -->
+<!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
@@ -13,16 +13,74 @@
 	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
 	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70</views>
 	<controls>
-		<control type="multiimage">
-			<!-- Multi Fanart -->
-			<include>WindowBG</include>
-			<imagepath background="true">$VAR[value_videofanart]</imagepath>
-			<visible>!Container.Content(genres)</visible>
+		<control type="list" id="5020"> <!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)] + !ListItem.IsParentFolder</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
+		</control>
+		<!-- <control type="multiimage" id="5021">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
+			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + !ListItem.IsParentFolder</visible>
+		</control> -->
+		<control type="list" id="5021"> <!-- check if video seasons has extrafanartfanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + !ListItem.IsParentFolder</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path,,extrafanart/]</content>
+		</control>
+		<!-- <control type="multiimage" id="5022">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[ListItem.Path,,../extrafanart/]</imagepath>
+			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + !ListItem.IsParentFolder</visible>
+		</control> -->
+		<control type="list" id="5022"> <!-- check if video episodes has extrafanart in parent folder (episodes in season folders) -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + !ListItem.IsParentFolder</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path,,../extrafanart/]</content>
+		</control>
+		<control type="image" id="5023">
+			<!-- Season single Fanart -->
+			<include>InvisibleButton</include>
+			<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
+			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),seasons)</visible>
+		</control>
+		<control type="image" id="5024">
+			<!-- Season single Fanart/episodes -->
+			<include>InvisibleButton</include>
+			<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
+			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),seasons)</visible>
 		</control>
 		<control type="image">
 			<!-- Single Fanart -->
 			<include>WindowBG</include>
 			<texture background="true">$VAR[value_defaultvideofanart]</texture>
+			<visible>!Container.Content(genres)</visible>
+		</control>
+		<!-- <control type="multiimage" id="5020">
+			<include>InvisibleButton</include>
+			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
+			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra) | Container.Content(sets) + String.Contains(skin.string(setsfanart),extra)] + !ListItem.IsParentFolder</visible>
+		</control> -->
+
+		<control type="multiimage">
+			<!-- Multi Fanart -->
+			<include>WindowBG</include>
+			<imagepath background="true">$VAR[value_videofanart]</imagepath>
 			<visible>!Container.Content(genres)</visible>
 		</control>
 		<control type="image">
@@ -31,36 +89,7 @@
 			<texture fallback="special://skin/backgrounds/movies.jpg" background="true">$VAR[value_defaultvideofanart]</texture>
 			<visible>Container.Content(genres)</visible>
 		</control>
-		<control type="multiimage" id="5020">
-			<!-- Extra Fanart Movies/TvShows/MusicVideos/Sets -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra) | Container.Content(sets) + String.Contains(skin.string(setsfanart),extra)] + !ListItem.IsParentFolder</visible>
-		</control>
-		<control type="multiimage" id="5021">
-			<!-- Extra Fanart Seasons -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
-			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control>
-		<control type="multiimage" id="5022">
-			<!-- Extra Fanart Episodes -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[ListItem.Path,,../extrafanart/]</imagepath>
-			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control>
-		<control type="image" id="5023">
-			<!-- Season Fanart -->
-			<include>InvisibleButton</include>
-			<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
-			<visible>Container.Content(seasons) + String.Contains(skin.string(seasonsfanart),seasons)</visible>
-		</control>
-		<control type="image" id="5024">
-			<!-- Season Fanart/episodes -->
-			<include>InvisibleButton</include>
-			<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
-			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),seasons)</visible>
-		</control>
+
 		<!-- end background fanart display control -->
 		<!-- currently playing video in background -->
 		<include>LiveBG</include>

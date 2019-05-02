@@ -39,20 +39,35 @@
 			<onclick>SetFocus(9000)</onclick>
 			<onfocus>$INFO[Skin.String(submenu_action)]</onfocus>
 		</control>
-		<control type="multiimage" id="5044">
-			<!-- Extra Fanart Artist -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+		<control type="list" id="7044"> <!-- was invisible button 5044 check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Player.HasAudio + Skin.HasSetting(customlogo) +  !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
 		</control>
-		<control type="multiimage" id="5045">
-			<!-- Extra Fanart -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Player.FolderPath]extrafanart/</imagepath>
+		<control type="list" id="7045"> <!-- was 5045 check if video has extrafanartfanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Player.HasVideo</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Player.FolderPath]extrafanart/</content>
 		</control>
-		<control type="multiimage" id="5046">
-			<!-- Extra Fanart -->
-			<include>InvisibleButton</include>
-			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
+		<control type="list" id="7046"> <!-- was 5046 check if video parent has extrafanart (MVs/episodes in seasons)  -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Player.HasVideo</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
 		</control>
 		<control type="multiimage">
 			<include>HomeBG</include>
@@ -68,15 +83,15 @@
 			<!-- Audio Fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
-			<texture background="true">$INFO[MusicPlayer.Property(fanart_image)]</texture>
-			<visible>Player.HasAudio + System.IdleTime(8) + String.IsEmpty(Control.GetLabel(5044))</visible>
+			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<visible>Player.HasAudio + System.IdleTime(8) + !Integer.IsGreater(Container(7044).NumItems,0)</visible>
 		</control>
 		<control type="multiimage">
 		<!-- Audio fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-			<visible>Player.HasAudio + System.IdleTime(8) + !String.IsEmpty(Control.GetLabel(5044))</visible>
+			<visible>Player.HasAudio + System.IdleTime(8) + Integer.IsGreater(Container(7044).NumItems,0)</visible>
 		</control>
 		<control type="multiimage">
 		<!-- Widget fanart -->

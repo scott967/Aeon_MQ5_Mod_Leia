@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2/10.6.0/10.6.1 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
@@ -14,16 +14,45 @@
 		<!-- <allowoverlay>no</allowoverlay> -->
 		<views>51,54,55,56,58,59,62,70,71</views>
 		<controls>
-			<control type="multiimage">
-				<!-- Multi Fanart -->
-				<include>WindowBG</include>
-				<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_musicfanart]</imagepath>
-				<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
-			</control>
-			<control type="image">
+		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Skin.HasSetting(musiclogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
+		</control>
+		<control type="list" id="5033"> <!-- check if mv lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]extrafanart/]</content>
+		</control>
+		<control type="list" id="5034"> <!-- check if song lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
+		</control>
+		<control type="image">
 				<!-- Single Fanart -->
 				<include>WindowBG</include>
-				<texture background="true">$VAR[value_defaultmusicfanart]</texture>
+				<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
+				<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
+			</control>
+		<control type="multiimage">
+				<!-- Multi Fanart -->
+				<include>WindowBG</include>
+				<imagepath background="true">$VAR[value_musicfanart]</imagepath>
+				<!-- <imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_musicfanart]</imagepath> -->
 				<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
 			</control>
 			<control type="image">
@@ -32,17 +61,23 @@
 				<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
 				<visible>Container.Content(genres) | Container.Content(roles)</visible>
 			</control>
-			<control type="multiimage" id="5032">
-				<!-- Extra Fanart Artist/Album -->
-				<include>WindowBG</include>
+			<!-- <control type="multiimage">  --><!-- set if 5032 has files -->
+				<!-- Artist Info Extra Fanart Artist/Album -->
+				<!-- <include>WindowBG</include>
 				<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
-				<visible>[Container.Content(artists) | Container.Content(albums)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
-			</control>
-			<control type="multiimage" id="5033">
+				<visible>[String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album)] + String.Contains(skin.string(musicfanart),extra) + Skin.HasSetting(musiclogo) + Integer.IsGreater(Container(5032).NumItems,0)</visible>
+			</control> -->
+			<!-- <control type="multiimage"> -->  <!-- set if 5033 has files -->
+				<!-- Extra Fanart Musicvideo -->
+				<!-- <include>WindowBG</include>
+				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
+				<visible>String.IsEqual(ListItem.DBType,musicvideo) + String.Contains(skin.string(musicfanart),extra) + Integer.IsGreater(Container(5033).NumItems,0)</visible>
+			</control> -->
+			<control type="multiimage">  <!-- set if 5034 has files -->
 				<!-- Extra Fanart Song -->
 				<include>WindowBG</include>
-				<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-				<visible>[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
+				<imagepath background="true">$INFO[ListItem.Path]../extrafanart/</imagepath>
+				<visible>String.IsEqual(ListItem.DBType,song) + String.Contains(skin.string(musicfanart),extra) + Integer.IsGreater(Container(5034).NumItems,0) + [!Skin.HasSetting(musiclogo) | [Skin.HasSetting(musiclogo) + String.IsEmpty(Skin.String(CustomMusicLogoPath))]]</visible>
 			</control>
 			<control type="image" id="9924">
 				<!-- record label control -->
@@ -514,16 +549,44 @@
 		<!-- <allowoverlay>no</allowoverlay> -->
 		<!-- 	<views>51,54,55,56,58,59,62,70</views> -->
 		<!-- <controls> -->
-		<control type="multiimage">
-			<!-- Multi Fanart -->
-			<include>WindowBG</include>
-			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_musicfanart]</imagepath>
-			<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
+		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<visible>Skin.HasSetting(musiclogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
 		</control>
+		<control type="list" id="5033"> <!-- check if mv lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]extrafanart/]</content>
+		</control>
+		<control type="list" id="5034"> <!-- check if song lib path has extrafanart -->
+			<posx>-500</posx>
+			<posy>-500</posy>
+			<height>400</height>
+			<width>50</width>
+			<itemlayout />
+			<focusedlayout />
+			<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
+		</control>		
 		<control type="image">
 			<!-- Single Fanart -->
 			<include>WindowBG</include>
-			<texture background="true">$VAR[value_defaultmusicfanart]</texture>
+			<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
+			<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
+		</control>
+		<control type="multiimage">
+			<!-- Multi Fanart -->
+			<include>WindowBG</include>
+			<imagepath background="true">$VAR[value_musicfanart]</imagepath>
 			<visible>![Container.Content(genres) | Container.Content(roles)]</visible>
 		</control>
 		<control type="image">
@@ -532,18 +595,16 @@
 			<texture fallback="special://skin/backgrounds/music.jpg" background="true">$VAR[value_defaultmusicfanart]</texture>
 			<visible>Container.Content(genres) | Container.Content(roles)</visible>
 		</control>
-		<control type="multiimage" id="5032">
-			<!-- Extra Fanart Artist/Album -->
+		<!-- <control type="multiimage" id="5032">
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/extrafanart/]</imagepath>
 			<visible>[[Container.Content(artists) | Container.Content(albums)] | [String.IsEmpty(Control.GetLabel(5033)) + [Container.Content(songs) | Container.Content(playlists)]]] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
 		</control>
 		<control type="multiimage" id="5033">
-			<!-- Extra Fanart Song -->
 			<include>WindowBG</include>
 			<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
 			<visible>[Container.Content(songs) | Container.Content(playlists)] + String.Contains(skin.string(musicfanart),extra) + !ListItem.IsParentFolder</visible>
-		</control>
+		</control> -->
 		<control type="image" id="9924">
 			<!-- record label control -->
 			<include>InvisibleButton</include>
