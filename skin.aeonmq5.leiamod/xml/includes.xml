@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -1648,20 +1648,100 @@
 			<colordiffuse>FFFFFAF0</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
-			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible>
+			<!-- <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !Control.IsVisible(70)</visible> -->
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 		</control>
 		<control type="label">
 			<posx>60</posx>
 			<posy>-6</posy>
 			<width>555</width>
 			<height>38</height>
-			<font>Font_18A</font>
+			<font>Font_17A</font>
 			<aligny>center</aligny>
 			<label>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ]$INFO[ListItem.Property(AudioLanguage.3), / ]$INFO[ListItem.Property(AudioLanguage.4), / ]$INFO[ListItem.Property(AudioLanguage.5), / ]$INFO[ListItem.Property(AudioLanguage.6), / ]$INFO[ListItem.Property(AudioLanguage.7), / ]$INFO[ListItem.Property(AudioLanguage.8), / ]$INFO[ListItem.Property(AudioLanguage.9), / ]$INFO[ListItem.Property(AudioLanguage.10), / ]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<visible>!Control.IsVisible(70)</visible>
+			<!-- <visible>!Control.IsVisible(70) + !Skin.HasSetting(Use_lang_flags)</visible> -->
+			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<height>38</height>
+			<width>555</width>
+			<!-- <visible>!Control.IsVisible(70) + Skin.HasSetting(Use_lang_flags)</visible> -->
+			<visible>Skin.HasSetting(Use_lang_flags)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>38</height>
+				<width>38</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.1),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>45</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.2),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>90</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.3),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>135</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.4),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>180</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.5),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>225</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.6),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>270</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.7),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>315</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.8),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.9),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>405</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(AudioLanguage.10),flags/countries/,.png]</texture>
+			</control>
 		</control>
 		<control type="image">
 			<!-- Legenda -->
@@ -1674,7 +1754,178 @@
 			<aspectratio>keep</aspectratio>
 			<fadetime>FanartCrossFadeTime</fadetime>
 			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible>
+			<!-- <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) + !Control.IsVisible(70)</visible> -->
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>39</posy>
+			<width>555</width>
+			<height>38</height>
+			<font>Font_17A</font>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label>
+			<textcolor>FFFFFAF0</textcolor>
+			<scroll>true</scroll>
+			<scrollout>false</scrollout>
+			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
+			<!-- <visible>!Control.IsVisible(70) + !Skin.HasSetting(Use_lang_flags)</visible> -->
+			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>45</posy>
+			<height>38</height>
+			<width>555</width>
+			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(SubtitleLanguage.1))">Conditional</animation>
+			<!-- <visible>!Control.IsVisible(70) + Skin.HasSetting(Use_lang_flags)</visible> -->
+			<visible>Skin.HasSetting(Use_lang_flags)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.1),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>45</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.2),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>90</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.3),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>135</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.4),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>180</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.5),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>225</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.6),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>270</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.7),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>315</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.8),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>360</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.9),flags/countries/,.png]</texture>
+			</control>
+			<control type="image">
+				<posx>405</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[ListItem.Property(SubtitleLanguage.10),flags/countries/,.png]</texture>
+			</control>
+		</control>
+	</include>
+<!-- #########################################################################  Audio and Subtitles Tags Now Playing ######################################################################### -->
+	<include name="AudioandSubNowPlaying">
+		<control type="image">
+			<posx>0</posx>
+			<posy>-60</posy>
+			<height>225</height>
+			<width>1920</width>
+			<texture flipy="true">shadow_mask.png</texture>
+			<colordiffuse>85000000</colordiffuse>
+			<animation effect="slide" end="-45,-22" time="0" condition="Control.IsVisible(55)">Conditional</animation>
+			<animation effect="slide" end="-540,-22" time="0" condition="Control.IsVisible(57)">Conditional</animation>
+			<animation effect="slide" end="-45,-22" time="0" condition="Control.IsVisible(59)">Conditional</animation>
+			<visible>Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
+		</control>
+		<control type="image">
+			<posx>-22</posx>
+			<posy>0</posy>
+			<width>3</width>
+			<height>90</height>
+			<texture>line_v.png</texture>
+			<colordiffuse>FFFFFAF0</colordiffuse>
+			<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)]</visible>
+		</control>
+		<control type="image">
+			<!-- Audio -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>38</width>
+			<height>38</height>
+			<texture>osd_audio.png</texture>
+			<colordiffuse>FFFFFAF0</colordiffuse>
+			<aspectratio>keep</aspectratio>
+			<fadetime>FanartCrossFadeTime</fadetime>
+			<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>-6</posy>
+			<width>555</width>
+			<height>38</height>
+			<font>Font_18A</font>
+			<aligny>center</aligny>
+			<label>$INFO[VideoPlayer.AudioLanguage]</label>
+			<textcolor>FFFFFAF0</textcolor>
+			<scroll>true</scroll>
+			<scrollout>false</scrollout>
+			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+			<height>38</height>
+			<width>555</width>
+			<visible>Skin.HasSetting(Use_lang_flags)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[VideoPlayer.AudioLanguage,flags/countries/,.png]</texture>
+			</control>
+		</control>
+		<control type="image">
+			<!-- Legenda -->
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>38</width>
+			<height>38</height>
+			<texture>osd_subtitle.png</texture>
+			<colordiffuse>FFFFFAF0</colordiffuse>
+			<aspectratio>keep</aspectratio>
+			<fadetime>FanartCrossFadeTime</fadetime>
+			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
+			<visible>!String.IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
 		</control>
 		<control type="label">
 			<posx>60</posx>
@@ -1683,12 +1934,27 @@
 			<height>38</height>
 			<font>Font_18A</font>
 			<aligny>center</aligny>
-			<label>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label>
+			<label>$INFO[VideoPlayer.SubtitleLanguage]</label>
 			<textcolor>FFFFFAF0</textcolor>
 			<scroll>true</scroll>
 			<scrollout>false</scrollout>
-			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(ListItem.Property(AudioLanguage.1))">Conditional</animation>
-			<visible>!Control.IsVisible(70)</visible>
+			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.AudioLanguage)">Conditional</animation>
+			<visible>!Skin.HasSetting(Use_lang_flags)</visible>
+		</control>
+		<control type="group">
+			<posx>60</posx>
+			<posy>45</posy>
+			<height>38</height>
+			<width>555</width>
+			<animation effect="slide" end="0,-42" time="0" tween="sine" easing="out" condition="String.IsEmpty(VideoPlayer.SubtitleLanguage)">Conditional</animation>
+			<visible>Skin.HasSetting(Use_lang_flags)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-2</posy>
+				<height>43</height>
+				<width>43</width>
+				<texture>$INFO[VideoPlayer.SubtitleLanguage,flags/countries/,.png]</texture>
+			</control>
 		</control>
 	</include>
 	<!-- #########################################################################  Para tela de toque ######################################################################### -->

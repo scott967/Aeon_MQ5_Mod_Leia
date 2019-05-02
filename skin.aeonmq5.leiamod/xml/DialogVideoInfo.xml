@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.13 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.18/9.1.19/9.2.1 window IDs 2003/9.2.2 -->
-<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1 -->
+<!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
@@ -231,7 +231,7 @@
 				<itemgap>2</itemgap>
 				<pagecontrol></pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="30">
+				<itemlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 					<control type="label">
 						<left>0</left>
 						<posx>255</posx>
@@ -260,7 +260,106 @@
 						<scroll>true</scroll>
 					</control>
 				</itemlayout>
-				<focusedlayout height="30">
+				<itemlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
+					<control type="label">
+						<left>0</left>
+						<posx>255</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<posx>300</posx>
+						<posy>0</posy>
+						<width>735</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>E4101010</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>true</scroll>
+					</control>
+						<control type="image">
+							<posx>300</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang1)]</texture>
+						</control>
+						<control type="image">
+							<posx>345</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang2)]</texture>
+						</control>
+						<control type="image">
+							<posx>390</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang3)]</texture>
+						</control>
+						<control type="image">
+							<posx>435</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang4)]</texture>
+						</control>
+						<control type="image">
+							<posx>480</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang5)]</texture>
+						</control>
+						<control type="image">
+							<posx>525</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang6)]</texture>
+						</control>
+						<control type="image">
+							<posx>570</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang7)]</texture>
+						</control>
+						<control type="image">
+							<posx>615</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang8)]</texture>
+						</control>
+						<control type="image">
+							<posx>660</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang9)]</texture>
+						</control>
+						<control type="image">
+							<posx>705</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang10)]</texture>
+						</control>
+				</itemlayout>
+				<focusedlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 					<control type="image">
 						<left>0</left>
 						<posx>285</posx>
@@ -310,6 +409,126 @@
 						<visible>Control.HasFocus(49)</visible>
 					</control>
 				</focusedlayout>
+				<focusedlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
+					<control type="image">
+						<left>0</left>
+						<posx>285</posx>
+						<posy>0</posy>
+						<width>765</width>
+						<height>30</height>
+						<texture>settings_button_focus.png</texture>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<posx>255</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>30</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>$VAR[value_headercolor]</textcolor>
+						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>300</posx>
+						<posy>0</posy>
+						<width>735</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>FFFFFAF0</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!Control.HasFocus(49)</visible>
+					</control>
+					<control type="label">
+						<posx>300</posx>
+						<posy>0</posy>
+						<width>735</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_18A</font>
+						<textcolor>E4101010</textcolor>
+						<selectedcolor>$VAR[value_headercolorfocus]</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Control.HasFocus(49)</visible>
+					</control>
+					<control type="image">
+							<posx>300</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang1)]</texture>
+						</control>
+						<control type="image">
+							<posx>345</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang2)]</texture>
+						</control>
+						<control type="image">
+							<posx>390</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang3)]</texture>
+						</control>
+						<control type="image">
+							<posx>435</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang4)]</texture>
+						</control>
+						<control type="image">
+							<posx>480</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang5)]</texture>
+						</control>
+						<control type="image">
+							<posx>525</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang6)]</texture>
+						</control>
+						<control type="image">
+							<posx>570</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang7)]</texture>
+						</control>
+						<control type="image">
+							<posx>615</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang8)]</texture>
+						</control>
+						<control type="image">
+							<posx>660</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang9)]</texture>
+						</control>
+						<control type="image">
+							<posx>705</posx>
+							<posy>-2</posy>
+							<height>35</height>
+							<width>35</width>
+							<texture>$INFO[ListItem.Property(lang10)]</texture>
+						</control>
+				</focusedlayout>
 				<content>
 					<!--  edited in IncludeVariables for MV -->
 					<item>
@@ -351,17 +570,50 @@
 						<onclick>noop</onclick>
 					</item>
 					<item>
-						<label>31179</label>
+						<label>$LOCALIZE[31179]</label>
 						<!-- Audio Language -->
 						<label2>$INFO[ListItem.Property(AudioLanguage.1)]$INFO[ListItem.Property(AudioLanguage.2), / ]$INFO[ListItem.Property(AudioLanguage.3), / ]$INFO[ListItem.Property(AudioLanguage.4), / ]$INFO[ListItem.Property(AudioLanguage.5), / ]$INFO[ListItem.Property(AudioLanguage.6), / ]$INFO[ListItem.Property(AudioLanguage.7), / ]$INFO[ListItem.Property(AudioLanguage.8), / ]$INFO[ListItem.Property(AudioLanguage.9), / ]$INFO[ListItem.Property(AudioLanguage.10), / ]</label2>
 						<onclick>noop</onclick>
+						<visible>!Skin.HasSetting(Use_lang_flags)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31179]</label>
+						<!-- Audio Language flags -->
+						<property name="lang1">$INFO[ListItem.Property(AudioLanguage.1),flags/countries/,.png]</property>
+						<property name="lang2">$INFO[ListItem.Property(AudioLanguage.2),flags/countries/,.png]</property>
+						<property name="lang3">$INFO[ListItem.Property(AudioLanguage.3),flags/countries/,.png]</property>
+						<property name="lang4">$INFO[ListItem.Property(AudioLanguage.4),flags/countries/,.png]</property>
+						<property name="lang5">$INFO[ListItem.Property(AudioLanguage.5),flags/countries/,.png]</property>
+						<property name="lang6">$INFO[ListItem.Property(AudioLanguage.6),flags/countries/,.png]</property>
+						<property name="lang7">$INFO[ListItem.Property(AudioLanguage.7),flags/countries/,.png]</property>
+						<property name="lang8">$INFO[ListItem.Property(AudioLanguage.8),flags/countries/,.png]</property>
+						<property name="lang9">$INFO[ListItem.Property(AudioLanguage.9),flags/countries/,.png]</property>
+						<property name="lang10">$INFO[ListItem.Property(AudioLanguage.10),flags/countries/,.png]</property>
+						<onclick>noop</onclick>
+						<visible>Skin.HasSetting(Use_lang_flags)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[287]</label>
 						<!-- Subtitile Language -->
 						<label2>$INFO[ListItem.Property(SubtitleLanguage.1)]$INFO[ListItem.Property(SubtitleLanguage.2), / ]$INFO[ListItem.Property(SubtitleLanguage.3), / ]$INFO[ListItem.Property(SubtitleLanguage.4), / ]$INFO[ListItem.Property(SubtitleLanguage.5), / ]$INFO[ListItem.Property(SubtitleLanguage.6), / ]$INFO[ListItem.Property(SubtitleLanguage.7), / ]$INFO[ListItem.Property(SubtitleLanguage.8), / ]$INFO[ListItem.Property(SubtitleLanguage.9), / ]$INFO[ListItem.Property(SubtitleLanguage.10), / ]</label2>
 						<onclick>noop</onclick>
-						<visible>!String.IsEmpty(ListItem.Duration)</visible>
+						<visible>!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Use_lang_flags)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[287]</label>
+						<!-- Subtitle Language flags -->
+						<property name="lang1">$INFO[ListItem.Property(SubtitleLanguage.1),flags/countries/,.png]</property>
+						<property name="lang2">$INFO[ListItem.Property(SubtitleLanguage.2),flags/countries/,.png]</property>
+						<property name="lang3">$INFO[ListItem.Property(SubtitleLanguage.3),flags/countries/,.png]</property>
+						<property name="lang4">$INFO[ListItem.Property(SubtitleLanguage.4),flags/countries/,.png]</property>
+						<property name="lang5">$INFO[ListItem.Property(SubtitleLanguage.5),flags/countries/,.png]</property>
+						<property name="lang6">$INFO[ListItem.Property(SubtitleLanguage.6),flags/countries/,.png]</property>
+						<property name="lang7">$INFO[ListItem.Property(SubtitleLanguage.7),flags/countries/,.png]</property>
+						<property name="lang8">$INFO[ListItem.Property(SubtitleLanguage.8),flags/countries/,.png]</property>
+						<property name="lang9">$INFO[ListItem.Property(SubtitleLanguage.9),flags/countries/,.png]</property>
+						<property name="lang10">$INFO[ListItem.Property(SubtitleLanguage.10),flags/countries/,.png]</property>
+						<onclick>noop</onclick>
+						<visible>!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Use_lang_flags)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[573]</label>

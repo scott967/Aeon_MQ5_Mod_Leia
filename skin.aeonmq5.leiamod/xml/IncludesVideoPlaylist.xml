@@ -124,7 +124,7 @@
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 				<animation effect="slide" end="-675,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + !Skin.HasSetting(vplaylistinfobar)</visible>
+				<visible>![Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + !Skin.HasSetting(vplaylistinfobar)</visible>
 				<posx>1215</posx>
 				<posy>22</posy>
 				<include>AudioandSub</include>
@@ -138,7 +138,7 @@
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(55)">Conditional</animation>
 				<animation effect="slide" end="-675,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
-				<visible>![Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + Skin.HasSetting(vplaylistinfobar)</visible>
+				<visible>![Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(movieinformation)] + Skin.HasSetting(vplaylistinfobar)</visible>
 				<posx>1215</posx>
 				<posy>52</posy>
 				<include>AudioandSub</include>

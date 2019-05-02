@@ -2872,6 +2872,13 @@
 					<label2>$INFO[Skin.String(custom_styles.name)]</label2>
 					<onclick>RunScript(script.image.resource.select,type=resource.images.skinstyles&amp;property=custom_styles)</onclick>
 				</control>
+				<control type="radiobutton" id="3511">
+					<label>$LOCALIZE[31620]</label>
+					<textureradioon>radiobutton_on.png</textureradioon>
+					<textureradiooff>radiobutton.png</textureradiooff>
+					<selected>Skin.HasSetting(Use_lang_flags)</selected>
+					<onclick>Skin.ToggleSetting(Use_lang_flags)</onclick>
+				</control>
 			</control>
 			<control type="group">
 				<!-- Estilos -->
