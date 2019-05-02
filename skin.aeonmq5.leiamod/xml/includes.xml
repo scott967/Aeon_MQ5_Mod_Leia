@@ -3443,7 +3443,7 @@
 			</item>
 		</content>
 	</include>
-	<include name="NextTracksContent">
+	<include name="NextTracksContent">  <!-- used in home window top right next tracks -->
 		<content>
 			<item>
 				<label>1:</label>
@@ -4217,7 +4217,7 @@
 			<visible>![String.IsEqual(Container.Content,songs) | String.IsEqual(Container.Content,musicvideos) | String.IsEqual(Container.Content,movies) | String.IsEqual(Container.Content,episodes)] + Integer.IsEqual(Container.CurrentItem,0)</visible>
 		</control>
 	</include>
-		<!-- ######################################################################### Game OSD ######################################################################### -->
+<!-- ######################################################################### Game OSD ######################################################################### -->
 	<include name="GameOSDFixedList">
 		<control type="list" id="100">
 			<include>GameOSD_Content</include>
