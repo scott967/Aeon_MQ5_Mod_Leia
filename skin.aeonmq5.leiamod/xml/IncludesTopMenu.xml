@@ -2239,7 +2239,7 @@
 				<onup>9400</onup>
 				<ondown>9401</ondown>
 				<onleft>9300</onleft>
-				<onleft>51</onleft>
+				<onright>SetFocus(51)</onright>
 				<itemgap>0</itemgap>
 				<focusposition>1</focusposition>
 				<scrolltime>450</scrolltime>
