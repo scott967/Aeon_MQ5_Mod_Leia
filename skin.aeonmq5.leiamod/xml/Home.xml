@@ -83,14 +83,14 @@
 			<!-- Audio Fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
-			<texture background="true">$INFO[Player.Art(fanart)]</texture>
+			<texture background="true">$INFO[Player.Art(artist.fanart)]</texture>
 			<visible>Player.HasAudio + System.IdleTime(8) + !Integer.IsGreater(Container(7044).NumItems,0)</visible>
 		</control>
 		<control type="multiimage">
 		<!-- Audio fanart -->
 			<include>HomeBG</include>
 			<include>Animation_Fade</include>
-			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
+			<imagepath background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist]/extrafanart/</imagepath>
 			<visible>Player.HasAudio + System.IdleTime(8) + Integer.IsGreater(Container(7044).NumItems,0)</visible>
 		</control>
 		<control type="multiimage">
