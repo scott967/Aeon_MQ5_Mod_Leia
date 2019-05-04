@@ -1281,7 +1281,7 @@
 				<texture>darkgrey.png</texture>
 				<bordersize>1</bordersize>
 				<aspectratio>stretch</aspectratio>
-				<visible>Window.IsActive(videos) + !String.IsEmpty(ListItem.Art(banner))</visible>
+				<visible>[Window.IsActive(videos) | Window.IsVisible(music) + String.IsEqual(ListItem.DBType,artist)] + !String.IsEmpty(ListItem.Art(banner))</visible>
 			</control>
 			<control type="image">
 				<description>BANNER BORDER</description>
@@ -1291,7 +1291,7 @@
 				<height>159</height>
 				<texture>banner_glass.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>Window.IsActive(videos) + !String.IsEmpty(ListItem.Art(banner)) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+				<visible>[Window.IsActive(videos) | Window.IsVisible(music)] + !String.IsEmpty(ListItem.Art(banner)) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,artist)]</visible>
 			</control>
 			<control type="image">
 				<description>BANNER BORDER</description>
@@ -1313,7 +1313,7 @@
 				<texture background="true">$INFO[ListItem.Art(banner)]</texture>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>FanartCrossFadeTime</fadetime>
-				<visible>Window.IsActive(videos) + !String.IsEmpty(ListItem.Art(banner)) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+				<visible>[Window.IsActive(videos) | Window.IsVisible(music)] + !String.IsEmpty(ListItem.Art(banner)) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,artist)]</visible>
 			</control>
 			<control type="image">
 				<description>BANNER IMAGE</description>
