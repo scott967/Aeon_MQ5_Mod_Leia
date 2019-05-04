@@ -2869,6 +2869,7 @@
 	</variable>
 	<variable name="value_playerthumb">  <!-- show AS fanart if avail else fanart else default background -->
 		<value condition="![String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.Contains(Window(Visualisation).Property(ArtistSlideshow),transparent)]">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+		<value condition="!String.IsEmpty(Player.Art(artist.fanart))">$INFO[Player.Art(artist.fanart)]</value>
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value>$VAR[value_menubg]</value>
 	</variable>
