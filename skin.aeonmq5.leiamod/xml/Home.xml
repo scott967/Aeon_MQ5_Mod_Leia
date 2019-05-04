@@ -47,14 +47,14 @@
 			<visible>Player.HasAudio + Skin.HasSetting(customlogo) +  !String.IsEmpty(Skin.String(CustomMusicLogoPath))</visible>
 			<itemlayout />
 			<focusedlayout />
-			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</content>
+			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[MusicPlayer.Artist]/extrafanart/</content>
 		</control>
 		<control type="list" id="7045"> <!-- was 5045 check if video has extrafanartfanart -->
 			<posx>-500</posx>
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin)</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[Player.FolderPath]extrafanart/</content>
@@ -64,7 +64,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !String.StartsWith(Player.FolderPath,Plugin)</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[Player.FolderPath,,../extrafanart/]</content>
@@ -281,7 +281,7 @@
 					<visible>Player.HasAudio + !Control.HasFocus(603) | Player.HasVideo + !Skin.HasSetting(homevisvideo)</visible>
 				</control>
 				<control type="multiimage">
-				<!-- show AS fanart if avail else fanart else default background -->
+				<!-- show AS fanart if avail else player artist fanart else default background -->
 					<posx>52</posx>
 					<posy>141</posy>
 					<width>666</width>
