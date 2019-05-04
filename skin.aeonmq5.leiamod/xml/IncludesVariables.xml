@@ -4203,6 +4203,7 @@
 		<value condition="Container.Content(episodes) + ![Window.IsActive(selectdialog) | Skin.HasSetting(playlists)]">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20360]:[/COLOR] $INFO[Window(home).Property(Episodes.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16102]:[/COLOR] $INFO[Window(home).Property(Episodes.Watched)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window(home).Property(Episodes.UnWatched)]</value>
 		<value condition="Window.IsActive(musicplaylist) + MusicPartyMode.Enabled + !Window.IsActive(selectdialog)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[589] $LOCALIZE[31210]: [/COLOR]$INFO[MusicPartyMode.SongsPlayed] / $INFO[MusicPartyMode.MatchingSongs]</value>
 		<value condition="Window.IsActive(musicplaylist) + !MusicPartyMode.Enabled + !Window.IsActive(selectdialog)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[559] $LOCALIZE[31582]: [/COLOR]$INFO[Container.NumItems]</value>
+		<value condition="Container.Content(artists) + String.IsEqual(Container.SortMethod,$LOCALIZE[557]) + System.GetBool(musiclibrary.useartistsortname) + !Window.IsActive(selectdialog)">[COLOR=$VAR[value_headercolor]]$INFO[Container.SortMethod] $LOCALIZE[39027]$VAR[multilabel_sortdir] / $LOCALIZE[133]: [/COLOR]$INFO[Container.NumItems]</value>
 		<value condition="Container.Content(artists) + !Window.IsActive(selectdialog)">[COLOR=$VAR[value_headercolor]]$INFO[Container.SortMethod]$VAR[multilabel_sortdir] / $LOCALIZE[133]: [/COLOR]$INFO[Container.NumItems]</value>
 		<value condition="Container.Content(albums) + ![Window.IsActive(selectdialog) | !String.IsEmpty(skin.string(playlists))]">[COLOR=$VAR[value_headercolor]]$INFO[Container.SortMethod]$VAR[multilabel_sortdir] / [/COLOR]$INFO[Container.NumItems] [COLOR=$VAR[value_headercolor]]$LOCALIZE[132][/COLOR]</value>
 		<value condition="Container.Content(mixed) + ![Window.IsActive(selectdialog) | !String.IsEmpty(skin.string(playlists))]">[COLOR=$VAR[value_headercolor]]$INFO[Container.SortMethod]$VAR[multilabel_sortdir] / $LOCALIZE[182]: [/COLOR]$INFO[Container.NumItems]</value>
@@ -4544,7 +4545,7 @@
 	</variable>
 	<variable name="value_music_title">
 		<value condition="Window.IsActive(visualisation) + Player.HasAudio">$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</value>
-		<value condition="Container.Content(artists) + String.IsEqual(Container.SortMethod,artist) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname)) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
+		<value condition="Container.Content(artists) + String.IsEqual(Container.SortMethod,$LOCALIZE[557]) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname)) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
 		<value condition="Container.Content(artists) + !String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62) | Window.IsActive(musicinformation)]">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(artists) + String.IsEmpty(ListItem.Artist) + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
 		<value condition="[String.Contains(ListItem.Label,all albums) | String.IsEqual(ListItem.Label,..) | String.Contains(Container.FolderPath,musicvideos)] + [Control.IsVisible(54) | Control.IsVisible(56) | Control.IsVisible(58) | Control.IsVisible(62)]">$INFO[ListItem.Label]</value>
@@ -5043,7 +5044,7 @@
 		<value condition="Window.IsActive(gamevideorotation)">$INFO[Player.Title] - $LOCALIZE[35227]</value>
 	</variable>
 	<variable name="artist_label">
-		<value condition="String.IsEqual(Container.SortMethod,artist) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname))">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
+		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[557]) + System.GetBool(musiclibrary.useartistsortname) + !String.IsEmpty(ListItem.Property(Artist_Sortname))">$INFO[ListItem.Property(Artist_Sortname)] ($INFO[ListItem.Label])</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<expression name="Can_record">Player.CanRecordPlayingChannel | Player.IsRecordingPlayingChannel | Pvr.IsRecording</expression>
