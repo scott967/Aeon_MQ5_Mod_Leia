@@ -330,7 +330,7 @@
 					<control type="label">
 						<!-- Titulo -->
 						<posx>0</posx>
-						<posy>172</posy>
+						<posy>174</posy>
 						<width>525</width>
 						<height>45</height>
 						<align>left</align>
@@ -343,7 +343,7 @@
 					<control type="label">
 						<!-- Titulo -->
 						<posx>0</posx>
-						<posy>172</posy>
+						<posy>174</posy>
 						<width>825</width>
 						<height>45</height>
 						<align>left</align>
@@ -356,7 +356,7 @@
 					<control type="label">
 						<!-- Subtitulo -->
 						<posx>0</posx>
-						<posy>218</posy>
+						<posy>220</posy>
 						<width>525</width>
 						<height>30</height>
 						<align>left</align>
@@ -369,7 +369,7 @@
 					<control type="label">
 						<!-- Subtitulo -->
 						<posx>0</posx>
-						<posy>218</posy>
+						<posy>220</posy>
 						<width>825</width>
 						<height>30</height>
 						<align>left</align>
@@ -394,7 +394,7 @@
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>255</posy>
+						<posy>268</posy>
 						<width>525</width>
 						<height>3</height>
 						<align>left</align>
@@ -403,7 +403,7 @@
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>255</posy>
+						<posy>268</posy>
 						<width>825</width>
 						<height>3</height>
 						<align>left</align>
@@ -413,9 +413,9 @@
 					<control type="textbox">
 						<!-- Plot -->
 						<posx>0</posx>
-						<posy>270</posy>
+						<posy>272</posy>
 						<width>525</width>
-						<height>240</height>
+						<height>245</height>
 						<label>$VAR[value_playerplot]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
@@ -425,9 +425,9 @@
 					<control type="textbox">
 						<!-- Plot -->
 						<posx>0</posx>
-						<posy>270</posy>
+						<posy>272</posy>
 						<width>825</width>
-						<height>240</height>
+						<height>245</height>
 						<label>$VAR[value_playerplot]</label>
 						<textcolor>FFFFFAF0</textcolor>
 						<font>Font_18A</font>
