@@ -57,11 +57,11 @@
 				<width>1560</width>
 				<height>891</height>
 				<onleft>9100</onleft>
-				<onright>80</onright>
+				<onright>85</onright>
 				<onup>9001</onup>
 				<ondown>9001</ondown>
 				<itemgap>0</itemgap>
-				<pagecontrol></pagecontrol>
+				<pagecontrol>85</pagecontrol>
 				<control type="radiobutton" id="1012">
 					<label>31601</label>
 					<onclick>Skin.ToggleSetting(kiosk)</onclick>
@@ -132,6 +132,11 @@
 				<control type="button" id="1026">
 					<label>$LOCALIZE[31177] - $LOCALIZE[31143]</label>
 					<onclick>ActivateWindowAndFocus(SystemSettings, -96,0, -78,0)</onclick>
+				</control>
+				<control type="radiobutton" id="1027">
+					<label>$LOCALIZE[13392]</label>
+					<onclick>Skin.ToggleSetting(loadviz)</onclick>
+					<selected>Skin.HasSetting(loadviz)</selected>
 				</control>
 			</control>
 			<control type="grouplist" id="9002">
@@ -2277,6 +2282,17 @@
 				<animation effect="fade" time="200">Visible</animation>
 				<animation effect="fade" time="50">Hidden</animation>
 				<visible allowhiddenfocus="true">Container(9100).HasFocus(35)</visible>
+			</control>
+			<control type="scrollbar" id="85">
+				<include>ScrollBar_Vertical</include>
+				<posx>1860</posx>
+				<posy>202</posy>
+				<height>698</height>
+				<onleft>9001</onleft>
+				<onright>9100</onright>
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="50">Hidden</animation>
+				<visible allowhiddenfocus="true">Control.IsVisible(9001)</visible>
 			</control>
 			<control type="grouplist" id="9004">
 				<!-- Themes -->
