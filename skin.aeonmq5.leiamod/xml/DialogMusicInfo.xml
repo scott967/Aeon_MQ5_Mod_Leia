@@ -24,7 +24,7 @@
 			<width>50</width>
 			<itemlayout />
 			<focusedlayout />
-			<content target="filemanager">$INFO[ListItem.Path]extrafanart/]</content>
+			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
 		</control>
 		<control type="list" id="5034"> <!-- check if song lib path has extrafanart -->
 			<posx>-500</posx>
