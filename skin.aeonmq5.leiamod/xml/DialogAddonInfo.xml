@@ -244,10 +244,10 @@
 				</control>
 				<control type="radiobutton" id="13">
 					<!-- Autoupdate -->
-					<colordiffuse>FFFFFFFF</colordiffuse>
+					<textureradioonfocus colordiffuse="FFFFFFFF">radiobutton_on.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="C0FFFFFF">radiobutton.png</textureradioofffocus>
 					<include>SettingsButton</include>
-					<colordiffuse>FFFFFFFF</colordiffuse>
-					<radioposx>230</radioposx>
+					<radioposx>245</radioposx>
 					<visible>Control.IsEnabled(13)</visible>
 				</control>
 				<control type="button" id="8">
