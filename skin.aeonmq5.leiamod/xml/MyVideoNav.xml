@@ -120,7 +120,7 @@
 				<!-- refresh das vistas/refresh view -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="3000">Hidden</animation>
-				<visible>Window.IsVisible(641)</visible>
+				<visible>Window.IsVisible(1110)</visible>
 			</control>
 			<control type="image" id="9923">
 				<!-- delay da arte de disco -->
@@ -554,7 +554,7 @@
 				<animation effect="slide" end="-675,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 				<animation effect="slide" end="0,-30" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
-				<visible>![Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | IsEmpty(ListItem.Property(AudioLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation) | Window.IsVisible(641)]</visible>
+				<visible>![Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | IsEmpty(ListItem.Property(AudioLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation) | Window.IsVisible(1110)]</visible>
 				<posx>1215</posx>
 				<posy>52</posy>
 				<include>AudioandSub</include>
