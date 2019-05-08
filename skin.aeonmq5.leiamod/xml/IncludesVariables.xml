@@ -4994,9 +4994,9 @@
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[31997]</value>
 	</variable>
 	<variable name="User_Rating_Stars">
-		<value condition="[!Window.IsActive(visualisation) + String.IsEmpty(ListItem.UserRating)] | [Window.IsActive(visualisation) + String.IsEmpty(MusicPlayer.UserRating)]">hrating0.png</value>
-		<value condition="!Window.IsActive(visualisation)">$INFO[ListItem.UserRating,hrating,.png]</value>
-		<value condition="Window.IsActive(visualisation)">$INFO[MusicPlayer.UserRating,hrating,.png]</value>
+		<value condition="[![Window.IsActive(visualisation) | Window.IsActive(home)] + String.IsEmpty(ListItem.UserRating)] | [[Window.IsActive(visualisation) | Window.IsActive(home)] + String.IsEmpty(MusicPlayer.UserRating)]">hrating0.png</value>
+		<value condition="![Window.IsActive(visualisation) | Window.IsActive(home)]">$INFO[ListItem.UserRating,hrating,.png]</value>
+		<value condition="Window.IsActive(visualisation) | Window.IsActive(home)">$INFO[MusicPlayer.UserRating,hrating,.png]</value>
 	</variable>
 		<variable name="value_gameosdtitle">
 		<value>$INFO[Player.Title]</value>

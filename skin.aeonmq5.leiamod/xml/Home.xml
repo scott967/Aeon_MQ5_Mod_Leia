@@ -324,8 +324,26 @@
 						<align>left</align>
 						<font>Font_18</font>
 						<textcolor>$VAR[value_headercolor]</textcolor>
-						<label>[UPPERCASE]$VAR[value_playerheader][/UPPERCASE]$VAR[value_playerrating]</label>
+						<label>[UPPERCASE]$VAR[value_playerheader][/UPPERCASE]</label>
 						<scroll>true</scroll>
+					</control>
+					<control type="image">
+						<posx>200</posx>
+						<posy>133</posy>
+						<width>225</width>
+						<height>45</height>
+						<texture>$VAR[User_Rating_Stars]</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible>
+					</control>
+					<control type="image">
+						<posx>200</posx>
+						<posy>133</posy>
+						<width>150</width>
+						<height>30</height>
+						<texture>$VAR[User_Rating_Stars]</texture>
+						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+						<visible>!String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible>
 					</control>
 					<control type="label">
 						<!-- Titulo -->
