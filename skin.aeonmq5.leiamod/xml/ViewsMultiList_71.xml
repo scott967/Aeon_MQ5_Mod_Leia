@@ -59,7 +59,7 @@
 					<include>InvisibleButton</include>
 					<onright>9920</onright>
 					<onleft condition="Container.Content(albums)">711</onleft>
-					<onleft condition="Container.Content(artists) + String.IsEmpty(Window(music).Property(mv_artist))">712</onleft>
+					<onleft condition="[Container.Content(artists) | Container.Content(years)] + String.IsEmpty(Window(music).Property(mv_artist))">712</onleft>
 					<onleft condition="Container.Content(artists) + !String.IsEmpty(Window(music).Property(mv_artist))">713</onleft>
 					<onleft>71</onleft>
 					<onup>71</onup>
@@ -75,7 +75,7 @@
 					<pagecontrol>80</pagecontrol>
 					<onleft>80</onleft>
 					<onright condition="Container.Content(albums)">711</onright>
-					<onright condition="Container.Content(artists) + String.IsEmpty(Window(music).Property(mv_artist))">712</onright>  <!-- album list for an artist -->
+					<onright condition="[Container.Content(artists) | Container.Content(years)] + String.IsEmpty(Window(music).Property(mv_artist))">712</onright>  <!-- album list for an artist  or year-->
 					<onright condition="Container.Content(artists) + !String.IsEmpty(Window(music).Property(mv_artist))">713</onright>  <!-- song list for selected mv artist album -->
 					<onright>562</onright>
 					<orientation>vertical</orientation>
@@ -129,7 +129,7 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo)]</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo) | String.Contains(ListItem.DBType,year)]</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -140,7 +140,7 @@
 							<aligny>center</aligny>
 							<include>listcolor</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre)</visible>
+							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType,year)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -153,6 +153,7 @@
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(mixed) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<visible>!Container.Content(years)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -173,7 +174,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(roles)  | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(roles) | Container.Content(years) | Container.Content(genres) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -280,7 +281,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre) + !String.Contains(ListItem.DBType,year)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -302,7 +303,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre)</visible>
+							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType,year)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -315,7 +316,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>!String.IsEqual(Skin.Font,Massive)</visible>
+							<visible>!String.IsEqual(Skin.Font,Massive) + !Container.Content(years)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -328,7 +329,7 @@
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
-							<visible>String.IsEqual(Skin.Font,Massive)</visible>
+							<visible>String.IsEqual(Skin.Font,Massive) + !Container.Content(years)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -361,7 +362,7 @@
 							<height>15</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(roles) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(roles) | Container.Content(years) | Container.Content(genres) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -392,7 +393,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.IsEqual(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre)</visible>
+							<visible>!String.IsEmpty(ListItem.DBType) + !String.IsEqual(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre) + !String.Contains(ListItem.DBType,year)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -414,7 +415,7 @@
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre)</visible>
+							<visible>String.IsEmpty(ListItem.DBType) | String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType,year)</visible>
 						</control>
 						<control type="label">
 							<posx>68</posx>
@@ -438,6 +439,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
+							<visible>!Container.Content(years)</visible>
 						</control>
 						<control type="label">
 							<posx>772</posx>
@@ -458,7 +460,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(roles) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(artists) | Container.Content(roles) | Container.Content(years) | Container.Content(genres) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -650,7 +652,7 @@
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture fallback="DefaultAudioCover.png" background="true">$INFO[Container(712).ListItem(0).thumb]</texture>
-							<visible>Skin.HasSetting(nomultiaudiocase) + Container.Content(artists)</visible>
+							<visible>Skin.HasSetting(nomultiaudiocase) + [Container.Content(artists) | Container.Content(years)]</visible>
 						</control>
 						<control type="image">
 							<!-- Music Album cover with CD Case per artist -->
@@ -661,7 +663,7 @@
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[Container(712).ListItem(0).thumb]</texture>
-							<visible>!Skin.HasSetting(nomultiaudiocase) + Container.Content(artists)</visible>
+							<visible>!Skin.HasSetting(nomultiaudiocase) + [Container.Content(artists) | Container.Content(years)]</visible>
 						</control>
 						<control type="image">
 							<!-- CD case -->
@@ -671,7 +673,7 @@
 							<height>271</height>
 							<texture>thumb_box_cd.png</texture>
 							<colordiffuse>DEFFFFFF</colordiffuse>
-							<visible>!Skin.HasSetting(nomultiaudiocase) + Container.Content(artists)</visible>
+							<visible>!Skin.HasSetting(nomultiaudiocase) + [Container.Content(artists) | Container.Content(years)]</visible>
 						</control>	
 					</control>
 					</control>
@@ -907,7 +909,7 @@
 				</control>
 			</control>
 <!-- End song list 711 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<!-- Album list 712 for artists -->
+<!-- Album list 712 for artists and years -->
 			<control type="group">
 				<control type="fixedlist" id="712">
 					<posx>970</posx>
@@ -918,14 +920,14 @@
 					<onright>562</onright>
 					<orientation>vertical</orientation>
 					<scrolltime>450</scrolltime>
-					<visible>Container.Content(artists) + !ListItem.IsParentFolder + !Control.HasFocus(562) + String.IsEmpty(Window(music).Property(mv_artist))</visible>
+					<visible>[Container.Content(artists) | Container.Content(years)] + !ListItem.IsParentFolder + !Control.HasFocus(562) + String.IsEmpty(Window(music).Property(mv_artist))</visible>
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 					<focusposition>3</focusposition>
 					<movement>4</movement>
 					<onclick condition="!String.Contains(Container.FolderPath,musicvideos)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.Contains(Container.FolderPath,musicvideos)">SetProperty(mv_artist,true,music)</onclick>
 					<onclick condition="String.Contains(Container.FolderPath,musicvideos)">SetFocus(713,0)</onclick>
-					<itemlayout height="60" condition="Container.Content(artists)">
+					<itemlayout height="60" condition="Container.Content(artists) | Container.Content(years)">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -956,7 +958,7 @@
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(artists)">Conditional</animation>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" condition="Container.Content(artists)">
+					<focusedlayout height="60" condition="Container.Content(artists) | Container.Content(years)">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
