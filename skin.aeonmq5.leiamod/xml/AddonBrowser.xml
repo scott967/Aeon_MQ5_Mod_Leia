@@ -199,7 +199,6 @@
 							<aligny>center</aligny>
 							<font>Font_20</font>
 							<textcolor>FFFFFAF0</textcolor>
-							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>!Control.HasFocus(55) + [String.IsEqual(ListItem.Label2,disabled) | !Skin.HasSetting(show_disabled)]</visible>
 						</control>

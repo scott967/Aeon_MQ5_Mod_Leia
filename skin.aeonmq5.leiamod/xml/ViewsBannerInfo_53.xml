@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
-<!-- Krypton 9.1.19/9.2.1 -->
+<!-- Krypton 9.1.19/9.2.1/10.6.2 -->
 <includes>
 	<!--##################################################################################   VISTA BANNER - ID 53   ##################################################################################-->
 	<include name="BannerInfoLabel">
@@ -110,7 +110,6 @@
 				<pagecontrol>80</pagecontrol>
 				<scrolltime>450</scrolltime>
 				<preloaditems>2</preloaditems>
-				<animation effect="fade" start="100" end="20" time="200" condition="Window.IsVisible(706)">Conditional</animation>
 				<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
 				<itemlayout height="134" width="550">
 					<control type="image">

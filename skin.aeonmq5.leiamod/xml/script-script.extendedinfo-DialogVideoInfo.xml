@@ -275,9 +275,9 @@
 							<control type="radiobutton" id="6002">
 								<label>$ADDON[script.extendedinfo 32130]</label>  <!-- show lists -->
 								<textureradioonfocus colordiffuse="FFFAFAFA">osd_menu_playlist.png</textureradioonfocus>
-								<textureradioofffocus colordiffuse="FFFAFAFA">iosd_menu_playlist.png</textureradioofffocus>
+								<textureradioofffocus colordiffuse="FFFAFAFA">osd_menu_playlist.png</textureradioofffocus>
 								<textureradiooffnofocus colordiffuse="FF999999">osd_menu_playlist.png</textureradiooffnofocus>
-								<textureradioonnofocus colordiffuse="FF999999">iosd_menu_playlist.png</textureradioonnofocus>
+								<textureradioonnofocus colordiffuse="FF999999">osd_menu_playlist.png</textureradioonnofocus>
 								<width>280</width>
 								<height>140</height>
 								<textoffsetx>0</textoffsetx>

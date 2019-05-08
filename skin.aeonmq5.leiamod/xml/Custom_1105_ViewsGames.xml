@@ -3,7 +3,7 @@
 
 <window id="1105" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
-	<onunload conditon="Container.Content(games)">AlarmClock(refreshview,ActivateWindowAndFocus(games, 9940,0),0:01,true)</onunload>
+	<onunload condition="Container.Content(games)">AlarmClock(refreshview,ActivateWindowAndFocus(games, 9940,0),0:01,true)</onunload>
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>

@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.17/9.1.19 -->
-<!-- Leai 10.2.4/10.3.0 -->
+<!-- Leai 10.2.4/10.3.0/10.6.2 -->
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<onload condition="!String.IsEqual(skin.string(defaultsettings),2)">AlarmClock(firstfocus,SetFocus(900),0:10,true)</onload>
@@ -68,18 +68,7 @@
 			<control type="button" id="7"></control>
 			<control type="radiobutton" id="8"></control>
 			<control type="spincontrolex" id="9"></control>
-			<control type="sliderex" id="13">
-				<description>Default Slider</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>60</height>
-				<font>font13</font>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<aligny>center</aligny>
-			</control>
+			<control type="sliderex" id="13"></control>
 			<control type="label" id="14">
 				<height>45</height>
 				<align>center</align>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.1/Orby -->
 <!-- Krypton 9.2.1 window IDs -->
-<!-- Leia 10.4.0/10.5.2/10.6.0 -->
+<!-- Leia 10.4.0/10.5.2/10.6.0/10.6.2 -->
 <includes>
 	<!-- ######################################################################### Letras layout estilo default ######################################################################### -->
 	<include name="LyricsDefault">
@@ -41,10 +41,10 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>FFFFFAF0</textcolor>
-				<annimation type="Visible" reversible="false">
+<!-- 				<annimation type="Visible" reversible="false">
 					<effect effect="fade" start="0" end="100" time="500" delay="700"/>
 					<effect effect="fade" start="100" end="50" time="500" delay="700"/>
-				</annimation>
+				</annimation> -->
 				<animation effect="fade" start="50" end="0" time="200">Hidden</animation>
 			</control>
 			<control type="image">

@@ -946,7 +946,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>0</left>
 							<posy>-2</posy>
 							<height>38</height>
 							<width>273</width>
