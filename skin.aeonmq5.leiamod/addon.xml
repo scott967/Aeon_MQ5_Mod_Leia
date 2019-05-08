@@ -65,12 +65,20 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.6.1 - RELEASE DATE 03/12/2019 for Kodi LEIA 18.0/18.1+[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.6.2 - RELEASE DATE 05/12/2019 for Kodi LEIA 18.2[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
-Fixed:  Correct and update PVR views
-Fixed:  Correctly display "top date and weather" in some views
-Improved:  Add some missing defualt icons
-Improved:  Various layout issues in windows and dialogs
+New:  Showcase view for music
+New:  Show user rating stars for now-playing media on home window
+New:  New option in General Skin Settings to force the music full-screen visualisation window when play starts
+New:  Skin settings option to show audio/subtitle languages as flags instead of 3-letter text
+New:  Option in music visualisation window to show artist sortname in a fade label with the regular name
+Improved:  Display of background extrafanarts
+Improved:  Mid-list view has many improvements and enhancements
+Improved:  When media is playing, the video and music playlists show details on playing media (not focused)
+Improved:  Current sortmethod and direction are shown on certain top multi-info panels
+Improved:  When media is playing the current playlist settings (random/repeat) are shown as icons on multi-info panels
+Improved:  In Skin settings the discart rotation options now show speed
+Fixes:  Many layout and navigation tweaks for a better experience
 		</news>
 	</extension>
 

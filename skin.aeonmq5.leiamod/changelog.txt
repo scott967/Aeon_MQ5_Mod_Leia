@@ -1,28 +1,48 @@
+[B][COLOR=FFFF8C00]BUILD 10.6.2 - RELEASE DATE 05/12/2019[/COLOR][/B]
+
+New:  Showcase view for music
+New:  Show user rating stars for now-playing media on home window
+New:  New option in General Skin Settings to force the music full-screen visualisation window when play starts
+New:  Skin settings option to show audio/subtitle languages as flags instead of 3-letter text
+New:  Option in music visualisation window to show artist sortname in a fade label with the regular name
+Improved:  Display of background extrafanarts
+Improved:  Mid-list view has many improvements and enhancements
+Improved:  When media is playing, the video and music playlists show details on playing media (not focused)
+Improved:  Current sortmethod and direction are shown on certain top multi-info panels
+Improved:  When media is playing the current playlist settings (random/repeat) are shown as icons on multi-info panels
+Improved:  In Skin settings the discart rotation options now show speed
+Fixes:  Many layout and navigation tweaks for a better experience
+
+
 [B][COLOR=FFFF8C00]BUILD 10.6.1 - RELEASE DATE 03/12/2019[/COLOR][/B]
+
 Fixed:  Correct and update PVR views
 Fixed:  Correctly display "top date and weather" in some views
-Improved:  Add some missing defualt icons
+Improved:  Add some missing default icons
 Improved:  Various layout issues in windows and dialogs
 
+
 [B][COLOR=FFFF8C00]BUILD 10.5.0 - RELEASE DATE 09/15/2018[/COLOR][/B]
+
 New:  Complete implementation of Retroplayer.  "Games" menu default is to
 support retroplayer.  Rom collection Browser is available as a custom menu entry
 New:  Support for media cases / codec display for 4K, UHD, HDR media types
 New:  System menu (key "s") now has log off current profile as option
 New:  Support new library-managed art types such as discart, clearlogo, etc
-New:  Custom home menu allows option to crate menu to clean specific videeo library type
-New:  New Kodi susbtitle settings on Full Screen Video OSD menu
-Improved:  In media views, the nomber off list items / total number of list items is shown
+New:  Custom home menu allows option to crate menu to clean specific video library type
+New:  New Kodi subtitle settings on Full Screen Video OSD menu
+Improved:  In media views, the number of list items / total number of list items is shown
 Improved:  Aeon MQ fonts now support Arabic, Thai, and Devanagari scripts
 Improved:  Layout of labels when the "Massive" fontset option is selected in settings
 Improved:  Using Full Screen video OSD, you can turn off all overlays for paused and frame-advance video
 Improved:  Various changes in how addons are presented in lists.
 Improved:  Hungarian virtual keyboard
-Improved:  Varioous fixes to the music and song info dialogs
+Improved:  Various fixes to the music and song info dialogs
 Fixed:  Numeric Seek and Numeric LiveTV channel input now supported in Full Screen Video
 
 
 [B][COLOR=FFFF8C00]BUILD 10.2.5 - RELEASE DATE 09/15/2017[/COLOR][/B]
+
 New:  Retroplayer support (Games OSD / Games settings)
 Improved:  Use mixed case font in media lists
 Improved:  Reduce scrollspeed for readability
@@ -30,44 +50,54 @@ Improved:  Tweak positioning of various labels
 Improved:  Update music and song information for Leia
 Improved:  Skin is now designed @ 1920x1080 resolution
 
+
 [B][COLOR=FFFF8C00]BUILD 10.2.3 - RELEASE DATE 01/09/2017[/COLOR][/B]
+
 New:  Initial release for Leia
 
+
 [B][COLOR=FFFF8C00]BUILD 9.2.0 - RELEASE DATE 08/30/2016[/COLOR][/B]
+
 New:  Skin files are now stored in addon folder skin.aeonmq5 (due to Kodi change) 
 Fixed:  Top Menu and Main menu for Video Add-ons now works
 Fixed:  Obsolete System.GetBool(PVRManager.enabled) removed (use PVR.HasTVChannels)
 New:  InfoLabel Addonsummary is now Label2
 New:  Media settings
 New:  DialogPlayerProgressInfo (key O in video/live tv)
-New:  Support for videospeedup (Player.IsTempo)  new buttons on fullscreen OSD for CMS
+New:  Support for video speedup (Player.IsTempo)  new buttons on fullscreen OSD for CMS
 New:  Show Kodi privacy notice
-Mew:  Play album from music infof (requirtes script playalbum)
-Improved:  display of usseratings (now using half-stars)
+Mew:  Play album from music info (requires script playalbum)
+Improved:  display of userratings (now using half-stars)
 New:  Display music roles in music visualisation via <I> key
 Improved:  Music top menu can now reset the path for music logo images
 
+
 [B][COLOR=FFFF8C00]BUILD 9.1.18 - RELEASE DATE 06/30/2016[/COLOR][/B]
+
 Fixed:  Lower textbox in right list view
 Fixed:  Musicinformation dialog
 Fixed:  Doubled plot in musicinformation for music videos
 New:  Default slider orientation is horizontal (new Krypton setting)
 New:  AudioDSP labels
 
+
 [B][COLOR=FFFF8C00]BUILD 9.1.17 - RELEASE DATE 05/09/2016[/COLOR][/B]
+
 New:  Support for Music roles
 Improved:  Updated xbmc.gui to 5.12.0 (Krypton A2 builds)
 Improved:  Updated Settings window for new Krypton settings layout
 Fixed:  Recorded TV program start times now show
 
+
 [B][COLOR=FFFF8C00]BUILD 9.1.16 - RELEASE DATE 03/15/2016[/COLOR][/B]
+
 New:  Support for music and video genre icons / fanart from resource add-ons
 New:  Support for studio and record label icons from resource add-ons
 Improved:  Layout for massive font option
 Improved:  Rightlist view for now-playing video playlist
 Improved:  TVShow poster now is shown for Midlist view with episodes
 Improved:  New EPG TimeLine low view (thanks to RjSachse)
-Improved:  Now weather, studio, recordlabel, and genre icons/fnart are providee by resource add-ons
+Improved:  Now weather, studio, recordlabel, and genre icons/fanart are provided by resource add-ons
 Improved:  Studio and record Label icons used in the flags bar
 Improved:  Removed wrap option for EPGtimeline view (use <m>enu key instead)
 Improved:  Add reset skin button on skin settings
@@ -75,16 +105,22 @@ Improved:  Show background in VideoPlaylist when not playing
 Fixed:  Krypton change ListItem.Property(Addon.*)
 Fixed:  Krypton DialogSettings
 
+
 [B][COLOR=FFFF8C00]BUILD 9.1.15 - RELEASE DATE 02/11/2016[/COLOR][/B]
+
 Fixed:  ListItem(StarRating) is now ListItem(Rating)
 Fixed:  Dialog Select Content
-Fixed:  Compatability mods for Krypton 0129 nightly 
+Fixed:  Compatibility mods for Krypton 0129 nightly 
+
 
 [B][COLOR=FFFF8C00]BUILD 9.1.14 - RELEASE DATE 01/11/2016[/COLOR][/B]
-New:  Inital Krypton release
+
+New:  Initial Krypton release
+
 
 [B][COLOR=FFFF8C00]BUILD 8.1.14 - RELEASE DATE 01/11/2016[/COLOR][/B]
-Improved:  Adjust text postion for Massive font
+
+Improved:  Adjust text position for Massive font
 Fixed:  OSD audio settings now allow dialog select
 New:  Support for Audio DSP add-ons
 New:  Weather icons now come from resource add-on
@@ -98,7 +134,9 @@ New:  New skin setting to select icon packs
 Improved:  Aeon flags font has coverage for more languages (used in the flags bar) 
 New:  Support for video user star ratings (0-10)
 
+
 [B][COLOR=FFFF8C00]BUILD 8.1.13 - RELEASE DATE 10/15/2015[/COLOR][/B]
+
 New:  Events window (Jarvis addition)
 New:  PVRInfo (Jarvis addition)
 New: Support for Cinema Vision add-on
@@ -109,7 +147,7 @@ Improved:  Video playlist buttons now available on top menu (like audio playlist
 Improved:  Select dialog shows "now playing" video in background
 Improved:  Midlist view now allows optional use of clearart on right
 Improved:  Main menu label text vertical position
-Fixed:  Removed opensubtitles and cinema experience from rquired addons
+Fixed:  Removed opensubtitles and cinema experience from required addons
 Improved:  Cinema Experience submenu item will now request user to install it (if not already installed)
 Improved:  OK dialog now has visible OK button to click/close dialog
 Fixed:  Vertical alignment of main menu items
@@ -118,6 +156,7 @@ Fixed:  Tag cleanup
 Fixed:  English label translation musics -- music
 
 [B][COLOR=FFFF8C00]BUILD 7.1.12 - RELEASE DATE 09/01/2015[/COLOR][/B]
+
 Fix:  Low List view options missing for videos
 Fix:  Music video poster when opening from music library
 Fix:  Dialog Add Source
@@ -125,27 +164,36 @@ Fix:  Bad text label string assignment for "MID LIST"
 Added:  Option to allow/prevent display of pseudo-discart for TV Shows and Seasons
 Improved:  OSD menu for repeating the playlist label is changed from REPEAT to REPEAT OFF when off
 
+
 [B][COLOR=FFFF8C00]BUILD 7.1.11 - RELEASE DATE 08/15/2015[/COLOR][/B]
-Added:  Support for Hungarian language charaters in all caps font
+
+Added:  Support for Hungarian language characters in all caps font
 Fixed:  Advanced Filter radio button in top menu
 Fixed:  Subtitles - manual search button
 Added:  Mid List viewmode for video and audio
 Added:  For videos, if there is no disc art available, the poster (if assigned) will be used as a "pseudo-discart"
 
+
 [B][COLOR=FFFF8C00]BUILD 7.1.10 - RELEASE DATE 07/15/2015[/COLOR][/B]
-Added:  Music case view now avalable in wall view
+
+Added:  Music case view now available in wall view
 Fixed:  Corrected labels for Rom Collection Browser
 Fixed:  Incorrect art in low list view
 Fixed:  Shelfcase view did not wrap properly
 Added:  PVR info shows when opening CodecInfo in FullScreenVideo and Live TV is playing
 Fixed:  Advance Filter (top menu) now is a radio button (ON=filter active) 
+
+
 [B][COLOR=FFFF8C00]BUILD 7.1.9 - RELEASE DATE 05/25/2015[/COLOR][/B]
+
 Added:  New video view "shelfcase"
 Fixed:  During video playback, SEEKING setting will only display during active Seek
 Fixed:  Additional Isengard GUI mods
 Fixed:  Genre icon issue in Panel View
 
+
 [B][COLOR=FFFF8C00]BUILD 7.1.8 - RELEASE DATE 05/01/2015[/COLOR][/B]
+
 Added:  Live TV recordings is now available to be added to the main menu via customize main menu
 Improved:  Now recording/Next recording slide in popup provided for both Live TV-EPG and Live TV-Recordings when set as main menu items
 Improved:  Added MPAA flags for French video
@@ -153,6 +201,8 @@ Fixed:  Multiplex view panel display time brought up wrong dialog window
 Fixed:  Live TV Recordings wide view now has correct focus shading and scrollbar 
 Fixed:  Recently added movies widgets now bring up dialog on click to play/resume/launch cinema experience
 Fixed:  It is now possible to set episode bookmarks for tv shows with multiple episodes per file
+
+
 [B][COLOR=FFFF8C00]BUILD 7.1.7 - INITIAL RELEASE FOR ISENGARD DATE 03/05/2015[/COLOR][/B]
 
 Added:  Live TV EPG is now available to be added to the main menu via customize main menu
@@ -174,6 +224,7 @@ Fixed:  Restored Panel View for Movies, TV Shows and Music Videos to Gotham beha
 Fixed:  Addon browser will now properly display addon status (enabled/disabled/downloading)
 Added:  New radio button in Panel View / View Options (top menu) for Music Videos (Concerts: Big Icon when selected will give 6.1.5 style larger icons for Music Videos regardless of "use cases".  Un-selected will give Gotham performance.)
 
+
 [B][COLOR=FFFF8C00]BUILD 6.1.5 - RELEASE DATE 01/25/2015[/COLOR][/B]
 
 Added:  Support for TV Channels and Guide dialog from full screen video OSD
@@ -188,7 +239,6 @@ Improved:  Video thumb size in Panel View when media cases not used
 Fixed:  Skin Widgets label display positioning
  
 
-
 [B][COLOR=FFFF8C00]BUILD 6.1.4 - RELEASE DATE 12/18/2014[/COLOR][/B]
 
 Improved:  Video source content settings dialog allows better navigation/scraper settings fixed
@@ -199,6 +249,7 @@ Added:  The PVR EPG now has "view setting" top menu to add/display Now/Next/Chan
 Added:  PVR sort/direction/group options
 Added:  PVR Recordings views
 
+
 [B][COLOR=FFFF8C00]BUILD 6.1.3 - RELEASE DATE 12/01/2014[/COLOR][/B]
 
 Improved:  Revised Live TV Top Menu to allow switching into EPG/Timers/Recordings/Search/Channels
@@ -206,17 +257,19 @@ Improved:  Layout changes for PVR Recordings with help from lizard
 Fixed:  Correct a bug from Gotham that resulted in both current PVR recording and scheduled PVR recording icons showing
 Fixed:  Minor bugs on windows IDs used in Custom dialogs 
 
+
 [B][COLOR=FFFF8C00]BUILD 6.1.2 - RELEASE DATE 11/24/2014[/COLOR][/B]
 
 Improved:  Revised Glass list and Wide list views per Orby
 Improved:  Revised Right list vier per lizard
 Improved:  Revised Picture Info dialog for Helix
 Improved:  Revised Audio Next Tracks dialog for Helix
-Improved:  PVR Channel View top menu TV Channel Groups now brings up slection list dialog instead of cycling through channel groups
+Improved:  PVR Channel View top menu TV Channel Groups now brings up selection list dialog instead of cycling through channel groups
 Improved:  PVR Channel View now uses Helix ChannelNumberLabel (allows channel numbers of the form x.y when supported by backend)
-Added/Improved:  addon script.skin.info.service now suuported to provide movie set collection details (function removed from current script.extendedinfo by the author).  New addon must be downloaded separately.
+Added/Improved:  addon script.skin.info.service now supported to provide movie set collection details (function removed from current script.extendedinfo by the author).  New addon must be downloaded separately.
 Fixed:  Media controls for Live TV not in full screen should allow for channel up and channel down
 Fixed:  When lyrics and next tracks are on for Music Viz, button allows return from next tracks to active lyrics
+
 
 [B][COLOR=FFFF8C00]BUILD 6.1.1 - RELEASE DATE 11/17/2014[/COLOR][/B]
 
@@ -225,6 +278,7 @@ Added:  Ability to switch channel groups in PVR Channel view
 Fixed:  Right list view
 Fixed:  Dialog for connecting to SMB sources
 Fixed:  Lyrics display (Orby)
+
 
 [B][COLOR=FFFF8C00]BUILD 6.1.0 - RELEASE DATE 11/11/2014[/COLOR][/B]
 
@@ -239,13 +293,14 @@ Improved:  Concerts (music video) info displays
 Improved:  New default fonts with support for CJK characters
 Improved:  New font set options for large and huge fonts
 
+
 [B][COLOR=FFFF8C00]BUILD 2.0.2 - RELEASE DATE 2/7/2014[/COLOR][/B]
 
 Added: Support to Themes of Textures - created by users. See forum for more info.
 Improved: Media Flag for Drive Storage - Support up to 30 drivers.
 Fixed: Video Media Case number 8 - digital - in wrong color.
 Fixed: Missing option to customize Media Case in top menu for View Right List.
-Fixed: Missing Weather information in some languages non-english.
+Fixed: Missing Weather information in some languages non-English.
 Fixed: Missing Cdart animation in pause screen.
 
 
@@ -279,7 +334,7 @@ Fixed: Overlapping in Music Playlist Editor.
 Added: Media Flag for Drive Storage - Support up to 20 drivers. (use tag in drive like as "hd01, ext01, volume01, hd02, ext02, volume02...")
 Added: Greek Fonts. (thanks to CutSickAss) 
 Added: Hebrew Fonts. (thanks to Idan)  
-Added: Auto instalation for Cinema Experience script.
+Added: Auto installation for Cinema Experience script.
 Added: Widgets popup (play movie) - Option to play by Cinema Experience.
 Added: TvShow Poster in Pause Screen. 
 Added: Sets View - Available for movies. 
@@ -351,7 +406,7 @@ Added: ShowArt view - Support to episodes.
 Added: ShowArt view - option to fixed list.
 Added: CleartLogo and ClearArt - Support to Season level and Episodes level.
 Added: 3D Wall view - Watched Flag.
-Added: RCB - Auto instalation. 
+Added: RCB - Auto installation. 
 Added: RCB - Multiplex view.
 Added: Button to reset the default settings - Just re-apply major settings, is not a full reset.
 Added: Video Furniture - option to show full, partial or hidden mode.
@@ -373,7 +428,7 @@ Fixed: RightList view - Overlapping in information panel.
 Added: New Watched Flag.
 Added: Greek Fonts. (thanks to CutSickAss) 
 Added: TvTunes script - Button in Video Info to get Movie Themes and Tv Show Themes/solo mode.
-Added: Widgets - Option to set between 4/8 or 12 itens.
+Added: Widgets - Option to set between 4/8 or 12 items.
 Added: Season info for all List views.
 Improved: Watched flag and Scroll Bar - Skin respects the color used in color selector.
 Improved: Font used in main menu - Skin respects the font style used in main menu/widget title/playback time.
@@ -382,13 +437,13 @@ Changed: Logo and Clearart in full screen mode to prevent missing art.
 Changed: TvTunes - is activated by default.
 Changed: TvTunes - removed the button for get themes within the collection.
 Changed: Removed the limitation in Top Menu/Sort/Music. Now is available outside of library mode.
-Fixed: Widgets - Option to show 4 or 8 itens caused displacement in My Menu. 
+Fixed: Widgets - Option to show 4 or 8 items caused displacement in My Menu. 
 Fixed: Main Menu/Widgets Title - Scroll to accommodate large titles.
 Fixed: Showcase view/Watched Flag - does not respect the color used in color selector.
 Fixed: Media case 3D - displayed to non-3d content (like AC3D)
 Fixed: Missing 4K flag in Media Case selector in some cases.
-Fixed: Right List view - missing information about Music/Albuns.
-Fixed: Low List view - missing information about Music/Albuns.
+Fixed: Right List view - missing information about Music/Albums.
+Fixed: Low List view - missing information about Music/Albums.
 Fixed: Low List view - Layout details.
 Fixed: Widgets for Next Aired and Favourites are not displayed correctly.
 Fixed: Music/submenu - Clean Library and Update Library.
@@ -403,8 +458,8 @@ Fixed: Missing Rating Flag in some cases.
 
 Added: Hebrew Fonts. (thanks to Idan) 
 Added: Widgets 'In Progress' for Video Playlists.
-Added: Auto instalation for ExtraPack script. 
-Added: Auto instalation for XBMC Subtitle script. 
+Added: Auto installation for ExtraPack script. 
+Added: Auto installation for XBMC Subtitle script. 
 Added: Submenu Season in Weather Menu to facilitate change between year seasons.
 Added: Support to trakt script - button in Context Menu to access trakt options.
 Improved: Font size for Dialogs Info.
@@ -431,7 +486,7 @@ Improved: Font size for Skin Settings.
 
 [B][COLOR=FFFF8C00]BUILD 1.1.4 Beta 6 - RELEASE DATE 9/12/2013[/COLOR][/B]
 
-Added: Transparecy selector to Media Flags Bar.
+Added: Transparency selector to Media Flags Bar.
 Added: RCB - Panel view.
 Added: Submenu for Live TV menu.
 Added: Next Aired - Widgets for TV Guide menu.
@@ -454,7 +509,7 @@ Added: Gotham version/video osd - button to access 3D mode.
 Improved: PVR status - Recording/Timer - in Main Menu.
 Changed: Action for shutdown menu to prevent errors on some systems.
 Fixed: Random Themes does not work properly.
-Fixed: System Menu/Buttton Shutdown - action respect the settings in XBMC shutdown.
+Fixed: System Menu/Button Shutdown - action respect the settings in XBMC shutdown.
 Fixed: Missing widgets for Vplaylist 1.
 Fixed: CoverFlow view - appears to wrong content in some cases.
 Fixed: Main Menu Customization - pressing the left in an empty item is not possible to return to the menu.
@@ -469,7 +524,7 @@ Fixed: Button to access Extrapack accusing the lack of Ace extrapack script.
 Fixed: Minor details in Main Menu/Furniture Selector.
 Fixed: Viewtype appears to wrong content in some cases.
 Fixed: Wall view/Music - Cannot change the grid size.
-Fixed: Missing Brazilan Mpaa Flag 18.
+Fixed: Missing Brazilian Mpaa Flag 18.
 
 
 [B][COLOR=FFFF8C00]BUILD 1.0.0 Beta 3 - RELEASE DATE 8/22/2013[/COLOR][/B]
@@ -557,7 +612,7 @@ Improved: Font style selector.
 [B][COLOR=FFFF8C00]BUILD 0.5.0 - RELEASE DATE 7/22/2013[/COLOR][/B]
 
 Added: Font style selector.
-Added: Info Panel mode auto - views ShowCase/Multiplex/Glaslist/Showart.
+Added: Info Panel mode auto - views ShowCase/Multiplex/Glasslist/Showart.
 
 
 [B][COLOR=FFFF8C00]BUILD 0.4.1 - RELEASE DATE 7/18/2013[/COLOR][/B]
