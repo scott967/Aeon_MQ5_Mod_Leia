@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Aeon MQ 5 Leia 10.2.3/10.5.0 -->
+<!-- Aeon MQ 5 Leia 10.2.3/10.5.0/10.6.2 -->
 <window>
 	<defaultcontrol>51</defaultcontrol>
 	<menucontrol>9000</menucontrol>
@@ -48,7 +48,7 @@
 				<!-- refresh views -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="3000">Hidden</animation>
-				<visible>Window.IsVisible(631)</visible>
+				<visible>Window.IsVisible(1105)</visible>
 			</control>
 			<control type="group">
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
