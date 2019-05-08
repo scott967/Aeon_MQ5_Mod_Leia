@@ -138,6 +138,14 @@
 					<onclick>Skin.ToggleSetting(viewmultilist_music)</onclick>
 					<selected>Skin.HasSetting(viewmultilist_music)</selected>
 				</control>
+				<control type="radiobutton" id="19272">
+					<!-- Shelf Case-->
+					<!-- 69 -->
+					<radioposx>1341</radioposx>
+					<label>$LOCALIZE[31878]</label>
+					<onclick>Skin.ToggleSetting(viewshelfcase_music)</onclick>
+					<selected>Skin.HasSetting(viewshelfcase_music)</selected>
+				</control>
 			</control>
 		</control>
 	</controls>

@@ -11,7 +11,7 @@
 		<menucontrol>9900</menucontrol>
 		<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 		<onunload>ClearProperty(mv_artist,music)</onunload>
-		<views>51,54,55,56,58,59,62,70,71</views>
+		<views>51,54,55,56,58,59,62,69,70,71</views>
 		<controls>
 		<control type="list" id="5032"> <!-- check if artist info has extrafanart note: if artist info entry is normalized it isn't found -->
 			<posx>-500</posx>
@@ -494,6 +494,8 @@
 					<!-- 70-->
 					<include condition="Skin.HasSetting(viewmultilist_music)">ViewMultiList</include>
 					<!-- 71 -->
+					<include condition="Skin.HasSetting(viewshelfcase_music)">ViewShelfCase</include>
+					<!-- 69-->
 				</control>
 				<control type="image">
 					<!-- Logo -->
@@ -977,6 +979,8 @@
 				<!-- 62 -->
 				<include condition="Skin.HasSetting(viewmidlist_music)">ViewMidList</include>
 				<!-- 70-->
+				<include condition="Skin.HasSetting(viewshelfcase_music)">ViewShelfCase</include>
+				<!-- 69-->
 			</control>
 			<control type="image">
 				<!-- Logo -->

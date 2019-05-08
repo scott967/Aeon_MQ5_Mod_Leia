@@ -191,23 +191,24 @@
 						<control type="group">
 							<posx>225</posx>
 							<posy>90</posy>
-							<control type="image">
+							<!-- <control type="image">
 								<posx>-224</posx>
 								<posy>196</posy>
 								<width>243</width>
 								<height>243</height>
 								<texture>thumb_cdmask_diffuse.png</texture>
-							</control>
+							</control> -->
 							<control type="image">
 								<posx>-224</posx>
 								<posy>196</posy>
 								<width>243</width>
 								<height>243</height>
-								<texture diffuse="thumb_cdmask_diffuse.png" background="true">$VAR[value_poster]</texture>
+								<!-- <texture diffuse="thumb_cdmask_diffuse.png" background="true">$VAR[value_poster]</texture> -->
+								<texture background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
-							<control type="image">
+							<!-- <control type="image">
 								<posx>-225</posx>
 								<posy>435</posy>
 								<width>243</width>
@@ -217,7 +218,7 @@
 								<colordiffuse>89FFFFFF</colordiffuse>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
-							</control>
+							</control> -->
 							<control type="image">
 								<posx>-225</posx>
 								<posy>435</posy>
@@ -235,7 +236,7 @@
 						<control type="group">
 							<posx>210</posx>
 							<posy>90</posy>
-							<control type="image">
+							<!-- <control type="image">
 								<posx>-222</posx>
 								<posy>135</posy>
 								<width>316</width>
@@ -246,7 +247,7 @@
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="90,357" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
-							</control>
+							</control> -->
 							<control type="image">
 								<posx>-222</posx>
 								<posy>453</posy>
@@ -265,7 +266,8 @@
 								<posy>135</posy>
 								<width>316</width>
 								<height>316</height>
-								<texture diffuse="thumb_cdmask_diffuse.png" background="true">$VAR[value_poster]</texture>
+								<!-- <texture diffuse="thumb_cdmask_diffuse.png" background="true">$VAR[value_poster]</texture> -->
+								<texture background="true">$VAR[value_poster]</texture>
 								<fadetime>200</fadetime>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
