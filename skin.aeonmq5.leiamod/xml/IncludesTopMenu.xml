@@ -142,11 +142,11 @@
 				<animation effect="fade" start="20" end="40" time="700" condition="true" pulse="true">Conditional</animation>
 				<onleft>SetFocus(9940)</onleft>
 				<onright>SetFocus(9940)</onright>
-				<onclick condition="Window.IsActive(videoplaylist) | Window.IsActive(videos)">ActivateWindow(641)</onclick>
+				<onclick condition="Window.IsActive(videoplaylist) | Window.IsActive(videos)">ActivateWindow(1110)</onclick>
 				<!-- custom views videos -->
 				<onclick condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onclick>
 				<!-- custom views music -->
-				<onclick condition="Window.IsActive(programs)">ActivateWindow(631)</onclick>
+				<onclick condition="Window.IsActive(programs)">ActivateWindow(1111)</onclick>
 				<!-- custom views programs -->
 				<onclick condition="Window.IsActive(games)">ActivateWindow(1105)</onclick>
 				<!-- custom views games -->
@@ -222,11 +222,11 @@
 				<include>InvisibleButton</include>
 				<onleft>SetFocus(9941)</onleft>
 				<onright>SetFocus(9942)</onright>
-				<onup condition="Window.IsActive(videoplaylist) | Window.IsActive(videos)">ActivateWindow(641)</onup>
+				<onup condition="Window.IsActive(videoplaylist) | Window.IsActive(videos)">ActivateWindow(1110)</onup>
 				<!-- custom views videos -->
 				<onup condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onup>
 				<!-- custom views music -->
-				<onup condition="Window.IsActive(programs)">ActivateWindow(631)</onup>
+				<onup condition="Window.IsActive(programs)">ActivateWindow(1111)</onup>
 				<!-- custom views programs -->
 				<onup condition="Window.IsActive(games)">ActivateWindow(1105)</onup>
 				<!-- custom views games -->
@@ -269,10 +269,10 @@
 				<animation effect="fade" start="20" end="40" time="700" condition="true" pulse="true">Conditional</animation>
 				<onleft>SetFocus(2)</onleft>
 				<onright>SetFocus(2)</onright>
-				<onclick condition="Window.IsActive(videos)">ActivateWindow(641)</onclick>
+				<onclick condition="Window.IsActive(videos)">ActivateWindow(1110)</onclick>
 				<!-- custom views video -->
 				<onclick condition="Window.IsActive(musicplaylist) | Window.IsActive(music)">ActivateWindow(1103)</onclick>
-				<onclick condition="Window.IsActive(programs)">ActivateWindow(631)</onclick>
+				<onclick condition="Window.IsActive(programs)">ActivateWindow(1111)</onclick>
 				<!-- custom views programs -->
 				<ondown>SetFocus(51)</ondown>
 				<visible>![Skin.HasSetting(rcbgames) | Window.IsActive(pictures)]</visible>
