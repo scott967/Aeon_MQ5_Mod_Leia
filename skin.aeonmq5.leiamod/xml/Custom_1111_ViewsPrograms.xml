@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.7 -->
 <!-- Krypton 9.2.1 window IDs -->
-<!-- Leia 10.2.3 -->
-<window id="631" type="dialog">
+<!-- Leia 10.2.3/10.6.2 -->
+<window id="1111" type="dialog">
 	<!-- safe id -->
+	<!-- Leia 10.6.2 was window id 631 -->
 	<defaultcontrol always="true">9030</defaultcontrol>
-	<onunload conditon="Container.Content(programs)">AlarmClock(refreshview,ActivateWindowAndFocus(programs, 9940,0),0:01,true)</onunload>
-	<onunload conditon="Container.Content(games)">AlarmClock(refreshview,ActivateWindowAndFocus(games, 9940,0),0:01,true)</onunload>
+	<onunload condition="Container.Content(programs)">AlarmClock(refreshview,ActivateWindowAndFocus(programs, 9940,0),0:01,true)</onunload>
+	<onunload condition="Container.Content(games)">AlarmClock(refreshview,ActivateWindowAndFocus(games, 9940,0),0:01,true)</onunload>
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>
@@ -71,8 +72,8 @@
 				<width>1500</width>
 				<height>900</height>
 				<itemgap>0</itemgap>
-				<onleft>Dialog.Close(631)</onleft>
-				<onright>Dialog.Close(631)</onright>
+				<onleft>Dialog.Close(1111)</onleft>
+				<onright>Dialog.Close(1111)</onright>
 				<control type="radiobutton" id="19254">
 					<!-- Poster -->
 					<!-- 54 -->
