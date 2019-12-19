@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.9 Shelfcase/7.1.10/7.1.11 MidList/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2 -->
+<!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2/10.6.3 -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -465,6 +465,21 @@
 		<aspectratio>keep</aspectratio>
 		<fadetime>FanartCrossFadeTime</fadetime>
 		<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+		<animation effect="zoom" start="0" end="100" center="auto" easing="out" tween="sine" time="700" delay="1000">WindowOpen</animation>
+		<animation effect="zoom" start="0" end="100" center="auto" easing="out" tween="sine" time="700" delay="1000">Visible</animation>
+		<animation effect="zoom" start="100" end="0" center="auto" easing="in" tween="sine" time="300">WindowClose</animation>
+		<animation effect="zoom" start="100" end="0" center="auto" easing="in" tween="sine" time="300">Hidden</animation>
+		<animation effect="fade" start="100" end="50" time="400" condition="String.IsEqual(skin.string(vis_bg),slideshowmosaicmix)">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_panscan) + !Window.IsActive(visualisation)">Conditional</animation>
+		<animation effect="slide" start="-15,-15" end="15,15" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_panscan) + !Window.IsActive(visualisation)">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(visualisation)">Conditional</animation>
+		<animation effect="slide" start="-15,-15" end="15,15" time="5000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(visanimation_panscan) + Window.IsActive(visualisation)">Conditional</animation>
+	</include>
+	<include name="MosaicBGNew">
+		<width>640</width>
+		<height>540</height>
+		<aspectratio>keep</aspectratio>
+		<texture background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow.Image)]</texture>
 		<animation effect="zoom" start="0" end="100" center="auto" easing="out" tween="sine" time="700" delay="1000">WindowOpen</animation>
 		<animation effect="zoom" start="0" end="100" center="auto" easing="out" tween="sine" time="700" delay="1000">Visible</animation>
 		<animation effect="zoom" start="100" end="0" center="auto" easing="in" tween="sine" time="300">WindowClose</animation>

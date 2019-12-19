@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 windowIDs/9.2.2 -->
-<!-- Leia 10.3.0/10.5.1 /10.6.0/10.6.2-->
+<!-- Leia 10.3.0/10.5.1 /10.6.0/10.6.2/10.6.3-->
 <!-- Includes:  Quickfix InvisibleButton Playlists HomeBG Animation_Fade LiveBG Animation_Window HomeRSS Animation_HomeGlass Animation_CDart  Animation_HomeNowPlaying Animation_Widgets Animation_HomeGlass2 Animation_HomeFade -->
 <!-- NextTracksContent Animation_HomePanel HomeFlagSeparator HomeFlagLabel mf_contentmovies -->
 <window>
@@ -281,7 +281,7 @@
 					<visible>Player.HasAudio + !Control.HasFocus(603) | Player.HasVideo + !Skin.HasSetting(homevisvideo)</visible>
 				</control>
 				<control type="multiimage">
-				<!-- show AS fanart if avail else player artist fanart else default background -->
+				<!-- show AS 2.X fanart if avail else player artist fanart else default background -->
 					<posx>52</posx>
 					<posy>141</posy>
 					<width>666</width>
@@ -291,7 +291,17 @@
 					<aspectratio>keep</aspectratio>
 					<imagepath fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</imagepath>
 					<fadetime>FanartCrossFadeTime</fadetime>
-					<visible>Player.HasAudio + !Control.HasFocus(603)</visible>
+					<visible>Player.HasAudio + !Control.HasFocus(603) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
+				</control>
+				<control type="image">
+				<!-- show AS 3.X fanart if avail else player artist fanart else default background -->
+					<posx>52</posx>
+					<posy>141</posy>
+					<width>666</width>
+					<height>375</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultExtraThumbs.png" background="true">$VAR[value_playerthumb]</texture>
+					<visible>Player.HasAudio + !Control.HasFocus(603) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.Image))</visible>
 				</control>
 				<control type="image">
 					<!-- Logo -->
