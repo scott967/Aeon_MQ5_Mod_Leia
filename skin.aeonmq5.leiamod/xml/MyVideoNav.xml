@@ -22,7 +22,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra) | Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)] + ![ListItem.IsParentFolder | String.StartsWith(ListItem.Path,Plugin)]</visible>
+			<visible>![String.StartsWith(ListItem.Path,Plugin) | ListItem.IsParentFolder] + [[Container.Content(movies) + !Skin.HasSetting(trailers) + String.Contains(skin.string(moviesfanart),extra)] | [Container.Content(tvshows) + String.Contains(skin.string(tvshowsfanart),extra)] | [Container.Content(musicvideos) + String.Contains(skin.string(musicvideosfanart),extra)]]</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
@@ -59,6 +59,12 @@
 			<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
 			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),seasons)</visible>
 		</control>
+		<control type="label" id="5025">
+			<!-- Season single Fanart/episodes -->
+			<include>InvisibleButton</include>
+			<label>$VAR[value_videofanart]</label>
+			<visible>Container.Content(episodes) + String.Contains(skin.string(episodesfanart),seasons)</visible>
+		</control>
 		<control type="image">
 			<!-- Single Fanart -->
 			<include>WindowBG</include>
@@ -69,7 +75,7 @@
 			<!-- Multi Fanart -->
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_videofanart]</imagepath>
-			<visible>!Container.Content(genres)</visible>
+			<visible>!Container.Content(genres) + !String.IsEmpty(Control.GetLabel(5025))</visible>
 		</control>
 		<control type="image">
 			<!-- Single Fanart Genre -->
