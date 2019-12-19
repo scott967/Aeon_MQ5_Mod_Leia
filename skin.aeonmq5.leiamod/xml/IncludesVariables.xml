@@ -4268,6 +4268,10 @@
 		<value condition="System.HasAddon(script.artwork.downloader)">$LOCALIZE[31438] - $LOCALIZE[31343]</value>
 		<value condition="!System.HasAddon(script.artwork.downloader)">[COLOR=FFB20000]$LOCALIZE[31435]: Artwork Downloader[/COLOR]</value>
 	</variable>
+	<variable name="value_addon2">
+		<value condition="System.HasAddon(service.tvtunes) + System.AddonIsEnabled(service.tvtunes)">$LOCALIZE[31440]</value>
+		<value condition="!System.HasAddon(service.tvtunes) | !System.AddonIsEnabled(service.tvtunes)">[COLOR=FFB20000]$LOCALIZE[31440] | $LOCALIZE[31435]: TvTunes[/COLOR]</value>
+	</variable>
 	<variable name="value_addon3">
 		<value condition="System.HasAddon(plugin.moviesets)">$LOCALIZE[31029]</value>
 		<value condition="!System.HasAddon(plugin.moviesets)">[COLOR=FFB20000]$LOCALIZE[31029] | $LOCALIZE[31435]: Movie Sets[/COLOR]</value>

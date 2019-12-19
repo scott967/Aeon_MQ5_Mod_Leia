@@ -3,14 +3,18 @@
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.16/9.1.19/9.2.1 window IDs 25/9.2.2/9.2.3 -->
-<!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2 -->
+<!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2/10.6.3 -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
+	<!-- <onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(service.tvtunes)">RunScript(script.tvtunes,backend=True)</onload> -->
+	<onload condition="!Skin.HasSetting(ontvtunes) + System.HasAddon(service.tvtunes)">SetProperty(TvTunesBlocked,true)</onload>
+	<onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(service.tvtunes)">ClearProperty(TvTunesBlocked)</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<onunload condition="Skin.HasSetting(trailers)">Skin.Reset(trailers)</onunload>
 	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
+	<onunload condition="!Skin.HasSetting(ontvtunes) + System.HasAddon(service.tvtunes)">ClearProperty(TvTunesBlocked)</onunload>
 	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70</views>
 	<controls>
 		<control type="list" id="5020"> <!-- check if video movies tvshows musicvideos sets has extrafanartfanart -->
