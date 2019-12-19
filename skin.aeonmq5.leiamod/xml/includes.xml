@@ -695,6 +695,7 @@
 				<onfocus>Skin.SetString(mediaflags,on)</onfocus>
 				<onfocus>Skin.SetBool(visanimation_panscan)</onfocus>
 				<onfocus>Skin.SetBool(darkbar)</onfocus>
+				<onfocus>Skin.SetBool(ontvtunes)</onfocus>
 				<onfocus>AlarmClock(nextstep,SetFocus(901),0:03,true)</onfocus>
 			</control>
 			<control type="button" id="901">
@@ -3744,6 +3745,7 @@
 				<label2>$INFO[MusicPlayer.offset(1).Title]$INFO[MusicPlayer.offset(1).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(1).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(1).Album][CR]$INFO[MusicPlayer.offset(1).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(1).UserRating]</property>
 				<onclick>Playlist.PlayOffset(1)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(1).Artist)</visible>
 			</item>
@@ -3752,6 +3754,7 @@
 				<label2>$INFO[MusicPlayer.offset(2).Title]$INFO[MusicPlayer.offset(2).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(2).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(2).Album][CR]$INFO[MusicPlayer.offset(2).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(2).UserRating]</property>
 				<onclick>Playlist.PlayOffset(2)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(2).Artist)</visible>
 			</item>
@@ -3760,6 +3763,7 @@
 				<label2>$INFO[MusicPlayer.offset(3).Title]$INFO[MusicPlayer.offset(3).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(3).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(3).Album][CR]$INFO[MusicPlayer.offset(3).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(3).UserRating]</property>
 				<onclick>Playlist.PlayOffset(3)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(3).Artist)</visible>
 			</item>
@@ -3768,6 +3772,7 @@
 				<label2>$INFO[MusicPlayer.offset(4).Title]$INFO[MusicPlayer.offset(4).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(4).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(4).Album][CR]$INFO[MusicPlayer.offset(4).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(4).UserRating]</property>
 				<onclick>Playlist.PlayOffset(4)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(4).Artist)</visible>
 			</item>
@@ -3776,6 +3781,7 @@
 				<label2>$INFO[MusicPlayer.offset(5).Title]$INFO[MusicPlayer.offset(5).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(5).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(5).Album][CR]$INFO[MusicPlayer.offset(5).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(5).UserRating]</property>
 				<onclick>Playlist.PlayOffset(5)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(5).Artist)</visible>
 			</item>
@@ -3784,6 +3790,7 @@
 				<label2>$INFO[MusicPlayer.offset(6).Title]$INFO[MusicPlayer.offset(6).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(6).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(6).Album][CR]$INFO[MusicPlayer.offset(6).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(6).UserRating]</property>
 				<onclick>Playlist.PlayOffset(6)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(6).Artist)</visible>
 			</item>
@@ -3792,6 +3799,7 @@
 				<label2>$INFO[MusicPlayer.offset(7).Title]$INFO[MusicPlayer.offset(7).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(7).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(7).Album][CR]$INFO[MusicPlayer.offset(7).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(7).UserRating]</property>
 				<onclick>Playlist.PlayOffset(7)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(7).Artist)</visible>
 			</item>
@@ -3800,6 +3808,7 @@
 				<label2>$INFO[MusicPlayer.offset(8).Title]$INFO[MusicPlayer.offset(8).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(8).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(8).Album][CR]$INFO[MusicPlayer.offset(8).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(8).UserRating]</property>
 				<onclick>Playlist.PlayOffset(8)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(8).Artist)</visible>
 			</item>
@@ -3808,6 +3817,7 @@
 				<label2>$INFO[MusicPlayer.offset(9).Title]$INFO[MusicPlayer.offset(9).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(9).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(9).Album][CR]$INFO[MusicPlayer.offset(9).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(9).UserRating]</property>
 				<onclick>Playlist.PlayOffset(9)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(9).Artist)</visible>
 			</item>
@@ -3816,6 +3826,7 @@
 				<label2>$INFO[MusicPlayer.offset(10).Title]$INFO[MusicPlayer.offset(10).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(10).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(10).Album][CR]$INFO[MusicPlayer.offset(10).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(10).UserRating]</property>
 				<onclick>Playlist.PlayOffset(10)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(10).Artist)</visible>
 			</item>
@@ -3824,6 +3835,7 @@
 				<label2>$INFO[MusicPlayer.offset(11).Title]$INFO[MusicPlayer.offset(11).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(11).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(11).Album][CR]$INFO[MusicPlayer.offset(11).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(11).UserRating]</property>
 				<onclick>Playlist.PlayOffset(11)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(11).Artist)</visible>
 			</item>
@@ -3832,6 +3844,7 @@
 				<label2>$INFO[MusicPlayer.offset(12).Title]$INFO[MusicPlayer.offset(12).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(12).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(12).Album][CR]$INFO[MusicPlayer.offset(12).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(12).UserRating]</property>
 				<onclick>Playlist.PlayOffset(12)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(12).Artist)</visible>
 			</item>
@@ -3840,6 +3853,7 @@
 				<label2>$INFO[MusicPlayer.offset(13).Title]$INFO[MusicPlayer.offset(13).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(13).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(13).Album][CR]$INFO[MusicPlayer.offset(13).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(13).UserRating]</property>
 				<onclick>Playlist.PlayOffset(13)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(13).Artist)</visible>
 			</item>
@@ -3848,6 +3862,7 @@
 				<label2>$INFO[MusicPlayer.offset(14).Title]$INFO[MusicPlayer.offset(14).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(14).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(14).Album][CR]$INFO[MusicPlayer.offset(14).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(14).UserRating]</property>
 				<onclick>Playlist.PlayOffset(14)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(14).Artist)</visible>
 			</item>
@@ -3856,6 +3871,7 @@
 				<label2>$INFO[MusicPlayer.offset(15).Title]$INFO[MusicPlayer.offset(15).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(15).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(15).Album][CR]$INFO[MusicPlayer.offset(15).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(15).UserRating]</property>
 				<onclick>Playlist.PlayOffset(15)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(15).Artist)</visible>
 			</item>
@@ -3864,6 +3880,7 @@
 				<label2>$INFO[MusicPlayer.offset(16).Title]$INFO[MusicPlayer.offset(16).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(16).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(16).Album][CR]$INFO[MusicPlayer.offset(16).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(16).UserRating]</property>
 				<onclick>Playlist.PlayOffset(16)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(16).Artist)</visible>
 			</item>
@@ -3872,6 +3889,7 @@
 				<label2>$INFO[MusicPlayer.offset(17).Title]$INFO[MusicPlayer.offset(17).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(17).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(17).Album][CR]$INFO[MusicPlayer.offset(17).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(17).UserRating]</property>
 				<onclick>Playlist.PlayOffset(17)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(17).Artist)</visible>
 			</item>
@@ -3880,6 +3898,7 @@
 				<label2>$INFO[MusicPlayer.offset(18).Title]$INFO[MusicPlayer.offset(18).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(18).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(18).Album][CR]$INFO[MusicPlayer.offset(18).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(18).UserRating]</property>
 				<onclick>Playlist.PlayOffset(18)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(18).Artist)</visible>
 			</item>
@@ -3888,6 +3907,7 @@
 				<label2>$INFO[MusicPlayer.offset(19).Title]$INFO[MusicPlayer.offset(19).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(19).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(19).Album][CR]$INFO[MusicPlayer.offset(19).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(19).UserRating]</property>
 				<onclick>Playlist.PlayOffset(19)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(19).Artist)</visible>
 			</item>
@@ -3896,6 +3916,7 @@
 				<label2>$INFO[MusicPlayer.offset(20).Title]$INFO[MusicPlayer.offset(20).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(20).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(20).Album][CR]$INFO[MusicPlayer.offset(20).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(20).UserRating]</property>
 				<onclick>Playlist.PlayOffset(20)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(20).Artist)</visible>
 			</item>
@@ -3904,6 +3925,7 @@
 				<label2>$INFO[MusicPlayer.offset(21).Title]$INFO[MusicPlayer.offset(21).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(21).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(21).Album][CR]$INFO[MusicPlayer.offset(21).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(21).UserRating]</property>
 				<onclick>Playlist.PlayOffset(21)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(21).Artist)</visible>
 			</item>
@@ -3912,6 +3934,7 @@
 				<label2>$INFO[MusicPlayer.offset(22).Title]$INFO[MusicPlayer.offset(22).artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(22).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(22).Album][CR]$INFO[MusicPlayer.offset(22).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(22).UserRating]</property>
 				<onclick>Playlist.PlayOffset(22)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(22).Artist)</visible>
 			</item>
@@ -3920,6 +3943,7 @@
 				<label2>$INFO[MusicPlayer.offset(23).Title]$INFO[MusicPlayer.offset(23).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(23).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(23).Album][CR]$INFO[MusicPlayer.offset(23).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(23).UserRating]</property>
 				<onclick>Playlist.PlayOffset(23)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(23).Artist)</visible>
 			</item>
@@ -3928,6 +3952,7 @@
 				<label2>$INFO[MusicPlayer.offset(24).Title]$INFO[MusicPlayer.offset(24).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(24).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(24).Album][CR]$INFO[MusicPlayer.offset(24).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(24).UserRating]</property>
 				<onclick>Playlist.PlayOffset(24)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(24).Artist)</visible>
 			</item>
@@ -3936,6 +3961,7 @@
 				<label2>$INFO[MusicPlayer.offset(25).Title]$INFO[MusicPlayer.offset(25).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(25).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(25).Album][CR]$INFO[MusicPlayer.offset(25).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(25).UserRating]</property>
 				<onclick>Playlist.PlayOffset(25)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(25).Artist)</visible>
 			</item>
@@ -3944,6 +3970,7 @@
 				<label2>$INFO[MusicPlayer.offset(26).Title]$INFO[MusicPlayer.offset(26).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(26).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(26).Album][CR]$INFO[MusicPlayer.offset(26).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(26).UserRating]</property>
 				<onclick>Playlist.PlayOffset(26)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(26).Artist)</visible>
 			</item>
@@ -3952,6 +3979,7 @@
 				<label2>$INFO[MusicPlayer.offset(27).Title]$INFO[MusicPlayer.offset(27).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(27).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(27).Album][CR]$INFO[MusicPlayer.offset(27).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(27).UserRating]</property>
 				<onclick>Playlist.PlayOffset(27)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(27).Artist)</visible>
 			</item>
@@ -3960,6 +3988,7 @@
 				<label2>$INFO[MusicPlayer.offset(28).Title]$INFO[MusicPlayer.offset(28).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(28).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(28).Album][CR]$INFO[MusicPlayer.offset(28).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(28).UserRating]</property>
 				<onclick>Playlist.PlayOffset(28)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(28).Artist)</visible>
 			</item>
@@ -3968,6 +3997,7 @@
 				<label2>$INFO[MusicPlayer.offset(29).Title]$INFO[MusicPlayer.offset(29).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(29).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(29).Album][CR]$INFO[MusicPlayer.offset(29).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(29).UserRating]</property>
 				<onclick>Playlist.PlayOffset(29)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(29).Artist)</visible>
 			</item>
@@ -3976,6 +4006,7 @@
 				<label2>$INFO[MusicPlayer.offset(30).Title]$INFO[MusicPlayer.offset(30).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(30).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(30).Album][CR]$INFO[MusicPlayer.offset(30).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(30).UserRating]</property>
 				<onclick>Playlist.PlayOffset(30)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(30).Artist)</visible>
 			</item>
@@ -3984,6 +4015,7 @@
 				<label2>$INFO[MusicPlayer.offset(31).Title]$INFO[MusicPlayer.offset(31).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(31).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(31).Album][CR]$INFO[MusicPlayer.offset(31).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(31).UserRating]</property>
 				<onclick>Playlist.PlayOffset(31)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(31).Artist)</visible>
 			</item>
@@ -3992,6 +4024,7 @@
 				<label2>$INFO[MusicPlayer.offset(32).Title]$INFO[MusicPlayer.offset(32).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(32).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(32).Album][CR]$INFO[MusicPlayer.offset(32).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(32).UserRating]</property>
 				<onclick>Playlist.PlayOffset(32)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(32).Artist)</visible>
 			</item>
@@ -4000,6 +4033,7 @@
 				<label2>$INFO[MusicPlayer.offset(33).Title]$INFO[MusicPlayer.offset(33).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(33).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(33).Album][CR]$INFO[MusicPlayer.offset(33).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(33).UserRating]</property>
 				<onclick>Playlist.PlayOffset(33)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(33).Artist)</visible>
 			</item>
@@ -4008,6 +4042,7 @@
 				<label2>$INFO[MusicPlayer.offset(34).Title]$INFO[MusicPlayer.offset(34).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(34).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(34).Album][CR]$INFO[MusicPlayer.offset(34).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(34).UserRating]</property>
 				<onclick>Playlist.PlayOffset(34)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(34).Artist)</visible>
 			</item>
@@ -4016,6 +4051,7 @@
 				<label2>$INFO[MusicPlayer.offset(35).Title]$INFO[MusicPlayer.offset(35).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(35).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(35).Album][CR]$INFO[MusicPlayer.offset(35).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(35).UserRating]</property>
 				<onclick>Playlist.PlayOffset(35)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(35).Artist)</visible>
 			</item>
@@ -4024,6 +4060,7 @@
 				<label2>$INFO[MusicPlayer.offset(36).Title]$INFO[MusicPlayer.offset(36).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(36).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(36).Album][CR]$INFO[MusicPlayer.offset(36).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(36).UserRating]</property>
 				<onclick>Playlist.PlayOffset(36)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(36).Artist)</visible>
 			</item>
@@ -4032,6 +4069,7 @@
 				<label2>$INFO[MusicPlayer.offset(37).Title]$INFO[MusicPlayer.offset(37).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(37).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(37).Album][CR]$INFO[MusicPlayer.offset(37).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(37).UserRating]</property>
 				<onclick>Playlist.PlayOffset(37)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(37).Artist)</visible>
 			</item>
@@ -4040,6 +4078,7 @@
 				<label2>$INFO[MusicPlayer.offset(38).Title]$INFO[MusicPlayer.offset(38).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(38).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(38).Album][CR]$INFO[MusicPlayer.offset(38).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(38).UserRating]</property>
 				<onclick>Playlist.PlayOffset(38)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(38).Artist)</visible>
 			</item>
@@ -4048,6 +4087,7 @@
 				<label2>$INFO[MusicPlayer.offset(39).Title]$INFO[MusicPlayer.offset(39).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(39).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(39).Album][CR]$INFO[MusicPlayer.offset(39).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(39).UserRating]</property>
 				<onclick>Playlist.PlayOffset(39)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(39).Artist)</visible>
 			</item>
@@ -4056,6 +4096,7 @@
 				<label2>$INFO[MusicPlayer.offset(40).Title]$INFO[MusicPlayer.offset(40).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(40).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(40).Album][CR]$INFO[MusicPlayer.offset(40).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(40).UserRating]</property>
 				<onclick>Playlist.PlayOffset(40)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(40).Artist)</visible>
 			</item>
@@ -4064,6 +4105,7 @@
 				<label2>$INFO[MusicPlayer.offset(41).Title]$INFO[MusicPlayer.offset(41).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(41).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(41).Album][CR]$INFO[MusicPlayer.offset(41).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(41).UserRating]</property>
 				<onclick>Playlist.PlayOffset(41)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(41).Artist)</visible>
 			</item>
@@ -4072,6 +4114,7 @@
 				<label2>$INFO[MusicPlayer.offset(42).Title]$INFO[MusicPlayer.offset(42).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(42).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(42).Album][CR]$INFO[MusicPlayer.offset(42).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(42).UserRating]</property>
 				<onclick>Playlist.PlayOffset(42)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(42).Artist)</visible>
 			</item>
@@ -4080,6 +4123,7 @@
 				<label2>$INFO[MusicPlayer.offset(43).Title]$INFO[MusicPlayer.offset(43).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(43).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(43).Album][CR]$INFO[MusicPlayer.offset(43).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(43).UserRating]</property>
 				<onclick>Playlist.PlayOffset(43)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(43).Artist)</visible>
 			</item>
@@ -4088,6 +4132,7 @@
 				<label2>$INFO[MusicPlayer.offset(44).Title]$INFO[MusicPlayer.offset(44).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(44).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(44).Album][CR]$INFO[MusicPlayer.offset(44).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(44).UserRating]</property>
 				<onclick>Playlist.PlayOffset(44)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(44).Artist)</visible>
 			</item>
@@ -4096,6 +4141,7 @@
 				<label2>$INFO[MusicPlayer.offset(45).Title]$INFO[MusicPlayer.offset(45).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(45).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(45).Album][CR]$INFO[MusicPlayer.offset(45).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(45).UserRating]</property>
 				<onclick>Playlist.PlayOffset(45)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(45).Artist)</visible>
 			</item>
@@ -4104,6 +4150,7 @@
 				<label2>$INFO[MusicPlayer.offset(46).Title]$INFO[MusicPlayer.offset(46).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(46).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(46).Album][CR]$INFO[MusicPlayer.offset(46).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(46).UserRating]</property>
 				<onclick>Playlist.PlayOffset(46)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(46).Artist)</visible>
 			</item>
@@ -4112,6 +4159,7 @@
 				<label2>$INFO[MusicPlayer.offset(47).Title]$INFO[MusicPlayer.offset(47).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(47).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(47).Album][CR]$INFO[MusicPlayer.offset(47).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(47).UserRating]</property>
 				<onclick>Playlist.PlayOffset(47)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(47).Artist)</visible>
 			</item>
@@ -4120,6 +4168,7 @@
 				<label2>$INFO[MusicPlayer.offset(48).Title]$INFO[MusicPlayer.offset(48).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(48).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(48).Album][CR]$INFO[MusicPlayer.offset(48).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(48).UserRating]</property>
 				<onclick>Playlist.PlayOffset(48)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(48).Artist)</visible>
 			</item>
@@ -4128,6 +4177,7 @@
 				<label2>$INFO[MusicPlayer.offset(49).Title]$INFO[MusicPlayer.offset(49).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(49).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(49).Album][CR]$INFO[MusicPlayer.offset(49).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(49).UserRating]</property>
 				<onclick>Playlist.PlayOffset(49)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(49).Artist)</visible>
 			</item>
@@ -4136,6 +4186,7 @@
 				<label2>$INFO[MusicPlayer.offset(50).Title]$INFO[MusicPlayer.offset(50).Artist, | ]</label2>
 				<icon>$INFO[MusicPlayer.offset(50).Cover]</icon>
 				<property name="Details">$INFO[MusicPlayer.offset(50).Album][CR]$INFO[MusicPlayer.offset(50).Duration]</property>
+				<property name="URating">$INFO[MusicPlayer.offset(50).UserRating]</property>
 				<onclick>Playlist.PlayOffset(50)</onclick>
 				<visible>!String.IsEmpty(MusicPlayer.offset(50).Artist)</visible>
 			</item>
