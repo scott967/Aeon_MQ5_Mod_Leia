@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.1.19/9.2.1 window IDs -->
-<!-- Leia 10.3.0/10.4.0/10.5.2 -->
+<!-- Leia 10.3.0/10.4.0/10.5.2/10.6.3 -->
 <includes>
 	<!--##################################################################################   VISTA SETS - ID 65   ##################################################################################-->
 	<include name="SetsLabel">
@@ -102,7 +102,7 @@
 					<include>SetsValue</include>
 					<posx>45</posx>
 					<posy>578</posy>
-					<label>$INFO[ListItem.Country]$INFO[Window(home).Property(Set.Movies.Country)]</label>
+					<label>$INFO[ListItem.Country]$INFO[Window(home).Property(SkinInfo.Set.Movies.Country)]</label>
 				</control>
 				<control type="label">
 					<include>SetsLabel</include>
@@ -114,7 +114,7 @@
 					<include>SetsValue</include>
 					<posx>528</posx>
 					<posy>504</posy>
-					<label>$INFO[ListItem.Genre]$INFO[Window(home).Property(Set.Movies.Genre)]</label>
+					<label>$INFO[ListItem.Genre]$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</label>
 				</control>
 				<control type="label">
 					<include>SetsLabel</include>
@@ -126,7 +126,7 @@
 					<include>SetsValue</include>
 					<posx>528</posx>
 					<posy>578</posy>
-					<label>$INFO[ListItem.studio]$INFO[Window(home).Property(Set.Movies.Studio)]</label>
+					<label>$INFO[ListItem.studio]$INFO[Window(home).Property(SkinInfo.Set.Movies.Studio)]</label>
 				</control>
 			</control>
 			<control type="image">
@@ -462,204 +462,204 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.1.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.1.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.1.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.1.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.1.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.1.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.1.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.1.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.1.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.2.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.2.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.2.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.2.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.2.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.2.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.2.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.2.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.2.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.3.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.3.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.3.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.3.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.3.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.3.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.3.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.3.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.3.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.4.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.4.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.4.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.4.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.4.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.4.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.4.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.4.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.4.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.5.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.5.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.5.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.5.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.5.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.5.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.5.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.5.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.5.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.6.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.6.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.6.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.6.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.6.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.6.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.6.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.6.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.6.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.7.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.7.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.7.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.7.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.7.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.7.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.7.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.7.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.7.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.8.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.8.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.8.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.8.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.8.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.8.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.8.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.8.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.8.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.9.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.9.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.9.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.9.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.9.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.9.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.9.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.9.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.9.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.10.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.10.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.10.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.10.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.10.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.10.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.10.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.10.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.10.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.10.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.11.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.11.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.11.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.11.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.11.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.11.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.11.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.11.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.11.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.11.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.11.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.12.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.12.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.12.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.12.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.12.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.12.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.12.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.12.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.12.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.12.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.12.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.13.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.13.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.13.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.13.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.13.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.13.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.13.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.13.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.13.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.13.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.13.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.14.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.14.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.14.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.14.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.14.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.14.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.14.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.14.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.14.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.14.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.14.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.15.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.15.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.15.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.15.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.15.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.15.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.15.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.15.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.15.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.15.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.15.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.16.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.16.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.16.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.16.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.16.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.16.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.16.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.16.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.16.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.16.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.16.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.17.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.17.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.17.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.17.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.17.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.17.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.17.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.17.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.17.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.17.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.17.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.18.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.18.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.18.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.18.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.18.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.18.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.18.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.18.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.18.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.18.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.18.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.19.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.19.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.19.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.19.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.19.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.19.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.19.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.19.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.19.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.19.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.19.Art(poster)))</visible>
 					</item>
 					<item>
-						<label>$INFO[Window(home).Property(Set.Movie.20.Title)]</label>
-						<icon>$INFO[Window(home).Property(Set.Movie.20.Art(poster))]</icon>
-						<property name="Disc">$INFO[Window(home).Property(Set.Movie.20.Art(discart))]</property>
-						<property name="Fanart">$INFO[Window(home).Property(Set.Movie.20.Art(fanart))]</property>
-						<property name="Plot">$INFO[Window(home).Property(Set.Movie.20.Plot)]</property>
-						<property name="Year">$INFO[Window(home).Property(Set.Movie.20.Year)]</property>
-						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(Set.Movie.20.DBID)])</onclick>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.20.Art(poster)))</visible>
+						<label>$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Title)]</label>
+						<icon>$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Art(poster))]</icon>
+						<property name="Disc">$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Art(discart))]</property>
+						<property name="Fanart">$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Art(fanart))]</property>
+						<property name="Plot">$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Plot)]</property>
+						<property name="Year">$INFO[Window(home).Property(SkinInfo.Set.Movie.20.Year)]</property>
+						<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(home).Property(SkinInfo.Set.Movie.20.DBID)])</onclick>
+						<visible>!String.IsEmpty(Window(home).Property(SkinInfo.Set.Movie.20.Art(poster)))</visible>
 					</item>
 				</content>
 			</control>
