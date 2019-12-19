@@ -3,7 +3,7 @@
 <!-- Isengardmod 7.1.11/7/1/12 -->
 <!-- Jarvis 8.1.3 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0/10.5.0/10.5.2/10.6.1/10.6.2 -->
+<!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0/10.5.0/10.5.2/10.6.1/10.6.2/10.6.3 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
@@ -228,7 +228,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -451,7 +451,7 @@
 							<height>15</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(files) | Container.Content(addons) | Container.Content(years) | Container.Content(genres) | Container.Content(images) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -557,7 +557,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(files) | Container.Content(addons) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
+							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(years) | Container.Content(files) | Container.Content(addons) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | Container.Content() | Container.Content(playlists) | String.IsEqual(ListItem.Label,..) | String.StartsWith(ListItem.Label,* all)]</visible>
 						</control>
 						<control type="image">
 							<posx>903</posx>
@@ -811,7 +811,7 @@
 					<control type="group">
 						<!-- EPISODIOS -->
 						<include>Animation_Fade</include>
-						<visible>![Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+						<visible>![String.IsEqual(Listitem.DBType,movie) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(genres) | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 						<control type="image">
 							<!-- episodios reflexo -->
 							<posx>30</posx>
@@ -836,10 +836,10 @@
 						</control>
 					</control>
 					<control type="group">
-						<!-- VIDEO SEM ESTOJO -->
+						<!-- VIDEO No case -->
 						<include>Animation_Fade</include>
 						<animation effect="slide" start="0,0" end="-68,0" time="500" delay="50" tween="cubic" easing="in" condition="!Skin.HasSetting(nowidediscart) + !String.IsEmpty(ListItem.Art(discart)) + Control.IsVisible(9923)">Conditional</animation>
-						<visible>Skin.HasSetting(nowidevideocase) + [Container.Content(movies) + String.Contains(skin.string(widemovies.art),poster) | Container.Content(musicvideos)  | Container.Content(sets)] | Container.Content(tvshows) + String.Contains(skin.string(widetvshows.art),poster) | Container.Content(seasons) | Container.Content(genres) | Container.Content(roles)</visible>
+						<visible>Skin.HasSetting(nowidevideocase) + [String.IsEqual(Listitem.DBType,movie) + String.Contains(skin.string(widemovies.art),poster) | Container.Content(musicvideos)  | Container.Content(sets)] | Container.Content(tvshows) + String.Contains(skin.string(widetvshows.art),poster) | Container.Content(seasons) | Container.Content(genres) | Container.Content(roles)</visible>
 						<control type="image">
 							<!-- Filmes/Fotos/Arquivos reflexo -->
 							<posx>30</posx>
@@ -864,10 +864,11 @@
 						</control>
 					</control>
 					<control type="group">
-						<!-- FILMES ESTOJO -->
+						<!-- Movies w case -->
 						<include>Animation_Fade</include>
 						<animation effect="slide" start="0,0" end="-50,0" time="500" delay="50" tween="cubic" easing="in" condition="!Skin.HasSetting(nowidediscart) + !String.IsEmpty(ListItem.Art(discart)) + Control.IsVisible(9923)">Conditional</animation>
-						<visible>!Skin.HasSetting(nowidevideocase) + Container.Content(movies) + String.Contains(skin.string(widemovies.art),poster) | !Skin.HasSetting(nowidevideocase) + [Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+						<visible>!Skin.HasSetting(nowidevideocase) + String.IsEqual(Listitem.DBType,movie) + String.Contains(skin.string(widemovies.art),poster) | !Skin.HasSetting(nowidevideocase) + [Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+						<!-- <visible>!Skin.HasSetting(nowidevideocase) + Container.Content(movies) + String.Contains(skin.string(widemovies.art),poster) | !Skin.HasSetting(nowidevideocase) + [Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible> -->
 						<control type="image">
 							<!-- Poster reflexo -->
 							<posx>308</posx>
@@ -999,7 +1000,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | ![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | ![Control.HasFocus(562) | String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
 					<!-- Video and audio for when there is no logo -->
@@ -1011,7 +1012,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>[!Control.HasFocus(562) + [String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + Window.IsActive(videos) | [!Control.HasFocus(562) + String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>[!Control.HasFocus(562) + [String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | [!Control.HasFocus(562) + String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
 					<!-- Video e audio para quando tem logo + foco no painel -->
@@ -1023,7 +1024,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>[Control.HasFocus(562) + ![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + Window.IsActive(videos) | [Control.HasFocus(562) + !String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>[Control.HasFocus(562) + ![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | [Control.HasFocus(562) + !String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
 					<!-- Video e audio para quando nao tem logo + foco no painel -->
@@ -1035,7 +1036,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>[Control.HasFocus(562) + [String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + Window.IsActive(videos) | [Control.HasFocus(562) + String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>[Control.HasFocus(562) + [String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] + [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | [Control.HasFocus(562) + String.IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
 					<!-- Addons -->
@@ -1047,7 +1048,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>![Control.HasFocus(562) | Window.IsActive(videos) | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>![Control.HasFocus(562) | [Window.IsActive(videos) | Window.IsActive(videoplaylist)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="textbox">
 					<!-- Addons + foco no painel -->
@@ -1059,7 +1060,7 @@
 					<label>$VAR[value_plot]</label>
 					<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<include>Animation_Fade</include>
-					<visible>Control.HasFocus(562) + ![Window.IsActive(videos) | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
+					<visible>Control.HasFocus(562) + ![[Window.IsActive(videos) | Window.IsActive(videoplaylist)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="image">
 					<posx>15</posx>

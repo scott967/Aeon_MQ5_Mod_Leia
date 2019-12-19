@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.10/7.1.11/7.1.12 -->
 <!-- Jarvis 8.1.13 -->
 <!-- Krypton 9.1.15/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.5/10.3.0/10.5.0/10.5.1/10.5.2/10.6.1/10.6.2 -->
+<!-- Leia 10.2.5/10.3.0/10.5.0/10.5.1/10.5.2/10.6.1/10.6.2/10.6.3 -->
 <includes>
 	<!--##################################################################################   VISTA LOW LIST - ID 55   ##################################################################################-->
 	<include name="LowListLabel">
@@ -494,7 +494,7 @@
 							<height>20</height>
 							<texture>$VAR[User_Rating_Stars]</texture>
 							<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-							<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
+							<visible>![Container.Content(sets) | Container.Content(artists) | Container.Content(years) | Container.Content(genres) | Container.Content(roles) | Container.Content(sources) | Container.Content(seasons) | String.IsEqual(ListItem.Label,..)]</visible>
 						</control>
 						<control type="image">
 							<posx>848</posx>
