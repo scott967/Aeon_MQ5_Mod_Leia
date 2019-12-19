@@ -232,6 +232,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<shadowcolor>grey</shadowcolor>
 				<label>[B]$VAR[value_osd_timeduration][/B]</label>
+				<visible>!Control.HasFocus(888)</visible>
 			</control>
 			<control type="label">
 				<!-- icons label -->
