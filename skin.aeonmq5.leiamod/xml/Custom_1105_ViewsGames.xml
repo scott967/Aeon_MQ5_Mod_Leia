@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Leia 10.5.0/10.6.2 -->
+<!-- Leia 10.6.3 -->
 
 <window id="1105" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
@@ -70,6 +71,15 @@
 				<itemgap>0</itemgap>
 				<onleft>Dialog.Close(1105)</onleft>
 				<onright>Dialog.Close(1105)</onright>
+				<control type="button" id="19299">
+					<!-- Enable all -->
+					<include content="content_views_games">
+						<param name="content">$INFO[Container.Content]</param>
+					</include>
+					<radioposx>1341</radioposx>
+					<label>188</label>
+					<selected>Skin.HasSetting(viewsets_video)</selected>
+				</control>
 				<control type="radiobutton" id="19254">
 					<!-- Poster -->
 					<!-- 54 -->

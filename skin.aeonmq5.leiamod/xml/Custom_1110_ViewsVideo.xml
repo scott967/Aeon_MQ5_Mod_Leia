@@ -3,6 +3,7 @@
 <!-- Isengard 7.1.9 ShelfCase/7.1.11 MidList -->
 <!-- Krypton 9.2.1 window IDs -->
 <!-- Leia 10.3.0/10.6.2 was window 641 -->
+<!-- Leia 10.6.3 -->
 <window id="1110" type="dialog">
 	<defaultcontrol always="true">9030</defaultcontrol>
 	<controls>
@@ -71,6 +72,15 @@
 				<itemgap>0</itemgap>
 				<onleft>Dialog.Close(1110)</onleft>
 				<onright>Dialog.Close(1110)</onright>
+				<control type="button" id="19299">
+					<!-- Enable all -->
+					<include content="content_views_video">
+						<param name="content">$INFO[Container.Content]</param>
+					</include>
+					<radioposx>1341</radioposx>
+					<label>188</label>
+					<selected>Skin.HasSetting(viewsets_video)</selected>
+				</control>
 				<control type="radiobutton" id="19265">
 					<!-- Sets -->
 					<!-- 65 -->
@@ -131,7 +141,7 @@
 					<label>31806</label>
 					<onclick>Skin.ToggleSetting(view3dwall_video)</onclick>
 					<selected>Skin.HasSetting(view3dwall_video)</selected>
-					<visible>![Container.Content(sets) | Container.Content(years)]</visible>
+					<visible>![Container.Content(episodes) | Container.Content(sets) | Container.Content(years)]</visible>
 				</control>
 				<control type="radiobutton" id="19257">
 					<!-- GlassList -->

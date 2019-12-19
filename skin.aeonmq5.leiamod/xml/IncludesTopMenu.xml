@@ -3,8 +3,79 @@
 <!-- Isengard 7.1.10 wall audiocover/7.1.11/MidList mod/7.1.12 -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.15/9.1.16/9.1.17/9.1.18/9.1.19/9.2.1 window IDs/9.2.2/9.2.3 -->
-<!-- Leia 10.2.3/10.2.6/10.2.7/10.3.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2 -->
+<!-- Leia 10.2.3/10.2.6/10.2.7/10.3.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2/10.6.3 -->
 <includes>
+	<include name="content_views_video">
+		<param name="content"></param>
+		<definition>
+			<onclick condition="String.IsEqual(Container.Content, movies) | String.IsEqual(Container.Content, sets)">Skin.SetBool(viewsets_video)</onclick>
+			<onclick condition="String.IsEqual(Container.Content, movies) | String.IsEqual(Container.Content, sets)">Skin.SetBool(viewbanner_video)</onclick>
+			<onclick condition="String.IsEqual(Container.Content, movies) | String.IsEqual(Container.Content, tvshows)">Skin.SetBool(viewbannerinfo_video)</onclick>
+			<onclick condition="!String.IsEqual(Container.Content, years">Skin.SetBool(viewposter_video)</onclick>
+			<onclick>Skin.SetBool(viewlowlist_video)</onclick>
+			<onclick condition="String.IsEqual(Container.Content, movies) | String.IsEqual(Container.Content, sets)">Skin.SetBool(viewsets_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, sets) | String.IsEqual(Container.Content, years)]">Skin.SetBool(viewwall_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, sets) | String.IsEqual(Container.Content, years)]">Skin.SetBool(view3dwall_video)</onclick>
+			<onclick condition="!String.IsEqual(Container.Content, years)">Skin.SetBool(viewglasslist_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, years) | String.IsEqual(Container.Content, genres)) | String.IsEqual(Container.Content, actors)]">Skin.SetBool(viewcoverflow_video)</onclick>
+			<onclick condition="!String.IsEqual(Container.Content, years)">Skin.SetBool(viewrightlist_video)</onclick>
+			<onclick condition="![String.IsEqual1{(Container.Content, sets) | String.IsEqual(Container.Content, years) | String.IsEqual(Container.Content, genres) | String.IsEqual(Container.Content, actors)]">Skin.SetBool(viewshowart_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, years)]">Skin.SetBool(viewmultiplex_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, years)]">Skin.SetBool(viewshowcase_video)</onclick>
+			<onclick condition="!String.IsEqual(Container.Content, years)">Skin.SetBool(viewpanel_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, years)]">Skin.SetBool(viewshelf_video)</onclick>
+			<onclick condition="String.IsEqual(Container.Content, tvshows) | String.IsEqual(Container.Content, episodes)">Skin.SetBool(viewlandscapex_video)</onclick>
+			<onclick condition="![String.IsEqual(Container.Content, episodes) | String.IsEqual(Container.Content, years)]">Skin.SetBool(viewshelfcase_video)</onclick>
+			<onclick>Skin.SetBool(viewmidlist_video)</onclick>
+		</definition>
+	</include>
+	<include name="content_views_music">
+		<param name="content"></param>
+		<definition>
+			<onclick>Skin.SetBool(viewposter_music)</onclick>
+			<onclick>Skin.SetBool(viewlowlist_music)</onclick>
+			<onclick>Skin.SetBool(viewwall_music)</onclick>
+			<onclick>Skin.SetBool(viewcoverflow_music)</onclick>
+			<onclick>Skin.SetBool(viewrightlist_music)</onclick>
+			<onclick>Skin.SetBool(viewpanel_music)</onclick>
+			<onclick>Skin.SetBool(viewmidlist_music)</onclick>
+			<onclick>Skin.SetBool(viewmultilist_music)</onclick>
+			<onclick>Skin.SetBool(viewshelfcase_music)</onclick>
+		</definition>
+	</include>
+	<include name="content_views_recordings">
+		<param name="content"></param>
+		<definition>
+			<onclick>Skin.SetBool(viewposter_recordings)</onclick>
+			<onclick>Skin.SetBool(viewlowlist_recordings)</onclick>
+			<onclick>Skin.SetBool(viewwall_recordings)</onclick>
+			<onclick>Skin.SetBool(viewglasslist_recordings)</onclick>
+			<onclick>Skin.SetBool(viewrightlist_recordings)</onclick>
+			<onclick>Skin.SetBool(viewpanel_recordings)</onclick>
+		</definition>
+	</include>
+	<include name="content_views_games">
+		<param name="content"></param>
+		<definition>
+			<onclick>Skin.SetBool(viewposter_games)</onclick>
+			<onclick>Skin.SetBool(viewlowlist_games)</onclick>
+			<onclick>Skin.SetBool(viewwall_games)</onclick>
+			<onclick>Skin.SetBool(viewcoverflow_games)</onclick>
+			<onclick>Skin.SetBool(viewrightlist_games)</onclick>
+			<onclick>Skin.SetBool(viewpanel_games)</onclick>
+		</definition>
+	</include>
+	<include name="content_views_programs">
+		<param name="content"></param>
+		<definition>
+			<onclick>Skin.SetBool(viewposter_programs)</onclick>
+			<onclick>Skin.SetBool(viewlowlist_programs)</onclick>
+			<onclick>Skin.SetBool(viewwall_programs)</onclick>
+			<onclick>Skin.SetBool(viewcoverflow_programs)</onclick>
+			<onclick>Skin.SetBool(viewrightlist_programs)</onclick>
+			<onclick>Skin.SetBool(viewpanel_programs)</onclick>
+		</definition>
+	</include>
 	<include name="TopMenuTopButton">
 		<posy>32</posy>
 		<height>42</height>
@@ -1374,6 +1445,16 @@
 					<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=custom, dbid=$INFO[ListItem.DBID], poster, fanart, extrafanart, extrathumbs, clearlogo, clearart, discart)</onclick>
 					<onclick>SetFocus(51)</onclick>
 					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)]</visible>
+				</control>
+				<control type="radiobutton" id="9323">
+					<include>TopMenuRadioButton</include>
+					<label>$VAR[value_addon2]</label>
+					<onclick condition="System.HasAddon(service.tvtunes)">Skin.ToggleSetting(ontvtunes)</onclick>
+					<onclick condition="System.HasAddon(service.tvtunes) + !Skin.HasSetting(ontvtunes)">SetProperty(TvTunesBlocked,true)</onclick>
+					<onclick condition="System.HasAddon(service.tvtunes) + Skin.HasSetting(ontvtunes)">ClearProperty(TvTunesBlocked)</onclick>
+					<onclick condition="!System.HasAddon(service.tvtunes)">ActivateWindow(Programs,Addons,return)</onclick>
+					<selected>System.HasAddon(service.tvtunes) + Skin.HasSetting(ontvtunes)</selected>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 				</control>
 				<include condition="Window.IsActive(videoplaylist)">TopMenu_Playlist</include>
 			</control>
