@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.6.2">
+<addon id="skin.aeonmq5.leiamod" name="Aeon MQ 5 Leiamod" provider-name="MarcosQui" version="10.6.3">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0" />
 		<import addon="script.favourites" version="4.0.4" />
@@ -65,20 +65,11 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 10.6.2 - RELEASE DATE 05/12/2019 for Kodi LEIA 18.2[/COLOR][/B]
+		<news>[B][COLOR=FFFF8C00]BUILD 10.6.3 - RELEASE DATE 12/20/2019 for Kodi LEIA 18.2[/COLOR][/B]
 This is a MOD of Aeon MQ5 by user Scott967
-New:  Showcase view for music
-New:  Show user rating stars for now-playing media on home window
-New:  New option in General Skin Settings to force the music full-screen visualisation window when play starts
-New:  Skin settings option to show audio/subtitle languages as flags instead of 3-letter text
-New:  Option in music visualisation window to show artist sortname in a fade label with the regular name
-Improved:  Display of background extrafanarts
-Improved:  Mid-list view has many improvements and enhancements
-Improved:  When media is playing, the video and music playlists show details on playing media (not focused)
-Improved:  Current sortmethod and direction are shown on certain top multi-info panels
-Improved:  When media is playing the current playlist settings (random/repeat) are shown as icons on multi-info panels
-Improved:  In Skin settings the discart rotation options now show speed
-Fixes:  Many layout and navigation tweaks for a better experience
+New:  Compatible with Artist Slideshow script version 2 and 3
+New:  Yo\u can now enable all views from a single action in the top menu
+New:  Add support for the new tvtunes script
 		</news>
 	</extension>
 
