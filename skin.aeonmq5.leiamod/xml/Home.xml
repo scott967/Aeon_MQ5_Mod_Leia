@@ -344,7 +344,8 @@
 						<height>45</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible>
+						<visible>String.IsEqual(skin.font,Massive)</visible>
+						<!-- <visible>String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible> -->
 					</control>
 					<control type="image">
 						<posx>200</posx>
@@ -353,7 +354,8 @@
 						<height>30</height>
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-						<visible>!String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible>
+						<visible>!String.IsEqual(skin.font,Massive)</visible>
+						<!-- <visible>!String.IsEqual(skin.font,Massive) + !Control.HasFocus(603)</visible> -->
 					</control>
 					<control type="label">
 						<!-- Titulo -->
