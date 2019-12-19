@@ -623,7 +623,7 @@
 				</content>
 			</control>
 			<control type="image">
-				<posx>308</posx>
+				<posx>317</posx>  <!-- was 308 -->
 				<posy>120</posy>
 				<height>345</height>
 				<width>3</width>
@@ -631,7 +631,7 @@
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>204</posy>
+				<posy>209</posy> <!-- was 205 -->
 				<height>3</height>
 				<width>1080</width>
 				<texture>separator.png</texture>
@@ -1159,7 +1159,7 @@
 							<!-- Artist Video Clips -->
 							<label>31950</label>
 							<onclick>RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[Container(50).ListItem.Label])</onclick>
-							<visible>System.HasAddon(script.extendedinfo) + String.IsEqual(ListItem.DBType,musicvideo)</visible>					
+							<visible>System.HasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DBType,musicvideo | String.IsEqual(ListItem.DBType,movie)]</visible>					
 					</item>
 					</content>
 				</control>
