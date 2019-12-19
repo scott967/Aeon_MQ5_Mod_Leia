@@ -3,7 +3,7 @@
 <!-- Isengard 7.1.11 Mid List -->
 <!-- Jarvis 8.1.13/8.1.14 -->
 <!-- Krypton 9.1.16/9.1.17/9.1.19/9.2.1 window IDs/9.2.3 -->
-<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
+<!-- Leia 10.2.4/10.3.0/10.4.0/10.5.0/10.5.2/10.6.0/10.6.1/10.6.2/10.6.3 -->
 <includes>
 	<!-- ######################################################################### Music Window #########################################################################-->
 	<include name="MusicWindow">
@@ -18,7 +18,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
-			<visible>Skin.HasSetting(musiclogo) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
+			<visible>Skin.HasSetting(musiclogo) + String.Contains(skin.string(musicfanart),extra) + !String.IsEmpty(Skin.String(CustomMusicLogoPath)) + ![String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.Actor)]</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[Skin.String(CustomMusicLogoPath)]$VAR[value_musicartist]/extrafanart/</content>
@@ -28,6 +28,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
+			<visible>String.Contains(skin.string(musicfanart),extra)</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path]extrafanart/</content>
@@ -37,6 +38,7 @@
 			<posy>-500</posy>
 			<height>400</height>
 			<width>50</width>
+			<visible>String.Contains(skin.string(musicfanart),extra)</visible>
 			<itemlayout />
 			<focusedlayout />
 			<content target="filemanager">$INFO[ListItem.Path]../extrafanart/</content>
@@ -120,7 +122,7 @@
 						<colordiffuse>75000000</colordiffuse>
 					</control>
 					<control type="label">
-						<!-- Artist -->
+						<!-- Content set per view and listItem in focus -->
 						<posx>45</posx>
 						<posy>27</posy>
 						<width>1650</width>
