@@ -13,6 +13,7 @@
 		<import addon="script.toolbox" version="1.0.1" />
 		<import addon="script.image.resource.select" version="0.0.5" />
 		<import addon="script.playalbum" version="0.0.2" />
+		<import addon="script.skin.info.service" version="1.0.7" optional="true" />
 	</requires>
 	<extension debugging="false" effectslowdown="0.75" point="xbmc.gui.skin">
 		<res aspect="4:3" default="false" folder="xml" height="1440" width="1920" />

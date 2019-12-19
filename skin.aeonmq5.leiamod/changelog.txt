@@ -1,3 +1,9 @@
+[B][COLOR=FFFF8C00]BUILD 10.6.3 - RELEASE DATE 12/20/2019[/COLOR][/B]
+
+New:  Support Artist Slideshow 3.0+
+New:  Support new tvtunes addon
+New:  Add "enable all views" button on the top menu views enable window
+
 [B][COLOR=FFFF8C00]BUILD 10.6.2 - RELEASE DATE 05/12/2019[/COLOR][/B]
 
 New:  Showcase view for music
